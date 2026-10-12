@@ -160,3 +160,12 @@ td .from { display: block; font-family: var(--mono); font-size: 11px; letter-spa
 .shots .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .shots .pair .shot { font-size: 11px; }
 @media (max-width: 820px) { .kit { grid-template-columns: 1fr; } }
+
+/* Discord chip */
+a.discord { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; color: var(--fg); padding: 6px 14px 6px 12px; border: 1px solid rgba(88,101,242,.75); background: rgba(88,101,242,.12); clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); }
+a.discord svg { width: 16px; height: 16px; color: #8c97ff; flex: none; }
+a.discord:hover { background: rgba(88,101,242,.28); color: #fff; }
+footer { align-items: center; }
+footer .brandline { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.btn.ico { display: inline-flex; align-items: center; gap: 10px; }
+.btn.ico svg { width: 18px; height: 18px; flex: none; }

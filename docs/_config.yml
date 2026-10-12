@@ -7,6 +7,8 @@ title: EDGEmodders
 url: https://edgemodders.ai
 baseurl: ""
 repo: https://github.com/Edgemodders/EDGEweb
+# Community Discord invite. index.html and platform.html hard-code the same URL: update all three together.
+discord: https://discord.gg/RyytadVJH
 
 markdown: kramdown
 kramdown:
@@ -25,5 +27,7 @@ nav:
     url: /
   - title: Get involved
     url: /community.html
+  - title: Discord
+    url: https://discord.gg/RyytadVJH
   - title: GitHub
     url: https://github.com/Edgemodders
