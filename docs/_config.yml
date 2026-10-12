@@ -1,0 +1,29 @@
+# GitHub Pages (Jekyll) settings for edgemodders.ai.
+# index.html is a standalone landing page and is served as-is.
+# Every markdown page in docs/ renders with the HUD layout in _layouts/default.html.
+# Built and deployed by .github/workflows/pages.yml. The custom domain is set in Settings > Pages.
+
+title: EDGEmodders
+url: https://edgemodders.ai
+baseurl: ""
+repo: https://github.com/Edgemodders/EDGEweb
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Status bar links, in order.
+nav:
+  - title: Home
+    url: /
+  - title: Get involved
+    url: /community.html
+  - title: GitHub
+    url: https://github.com/Edgemodders

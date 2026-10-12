@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EDGEmodders · Anyone can mod</title>
+<meta name="description" content="EDGEmodders is a new Cyberpunk 2077 modding community building AI-first tools, so anyone can mod: describe the mod you want and build it with an AI assistant.">
+<meta property="og:title" content="EDGEmodders · Anyone can mod">
+<meta property="og:description" content="A new Cyberpunk 2077 modding community. AI-first tools so anyone can mod, not only people who can code.">
+<meta property="og:image" content="https://edgemodders.ai/assets/brand/social.png">
+<meta property="og:url" content="https://edgemodders.ai/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/brand/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: the HUD landing page. Same tokens as the RED* design docs: sticky status bar, cut-corner panels, one column. */
+:root {
+  --bg: #08090d; --panel: #10131b; --panel-2: #151925; --line: #262c3d;
+  --fg: #e3e6ee; --dim: #8a93a8; --yellow: #fcee0a; --cyan: #19f3ff; --red: #ff2a52; --green: #5dffa1;
+  --display: "Chakra Petch", "Arial Narrow", sans-serif; --body: "Rajdhani", "Segoe UI", sans-serif; --mono: "JetBrains Mono", "Consolas", monospace;
+  --cut: 14px; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 18px; line-height: 1.5;
+  padding-inline: 16px; padding-block: 0 64px;
+  background-image: linear-gradient(rgba(25,243,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(25,243,255,.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.wrap { max-width: 1040px; margin-inline: auto; }
+a { color: var(--cyan); }
+:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(8,9,13,.92); border-bottom: 1px solid var(--line); margin-inline: -16px; padding: 8px 16px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+.bar .wrap { display: flex; gap: 8px 20px; flex-wrap: wrap; align-items: center; }
+.bar b { color: var(--yellow); font-weight: 500; }
+.dot { display: inline-block; width: 8px; height: 8px; background: var(--green); margin-right: 6px; }
+.bar nav { margin-left: auto; display: flex; gap: 14px; flex-wrap: wrap; }
+.bar nav a { color: var(--dim); text-decoration: none; }
+.bar nav a:hover { color: var(--cyan); }
+
+/* hero */
+header.hero { position: relative; padding-block: 72px 48px; }
+header.hero::before, header.hero::after { content: ""; position: absolute; width: 36px; height: 36px; border: 2px solid var(--yellow); }
+header.hero::before { top: 28px; left: -4px; border-right: 0; border-bottom: 0; }
+header.hero::after { bottom: 8px; right: -4px; border-left: 0; border-top: 0; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); }
+h1 { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(44px, 10vw, 104px); line-height: .92; letter-spacing: .01em; margin: 14px 0 20px; text-wrap: balance; }
+h1 span { color: var(--yellow); }
+.lede { max-width: 60ch; color: #c3c9d8; font-size: 22px; margin: 0; text-wrap: pretty; }
+.lede b { color: #fff; font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.btn { display: inline-block; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 12px 22px; border: 1px solid var(--line); color: var(--fg); background: var(--panel); clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
+.btn:hover { border-color: var(--cyan); color: var(--cyan); }
+.btn.go { background: var(--yellow); color: #08090d; border-color: var(--yellow); font-weight: 500; }
+.btn.go:hover { background: #fff36a; color: #08090d; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.tag { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 3px 10px; border: 1px solid var(--line); color: var(--dim); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); }
+.tag.y { color: var(--yellow); border-color: rgba(252,238,10,.5); } .tag.c { color: var(--cyan); border-color: rgba(25,243,255,.5); } .tag.r { color: var(--red); border-color: rgba(255,42,82,.5); } .tag.g { color: var(--green); border-color: rgba(93,255,161,.5); }
+
+/* sections */
+section { margin-top: 56px; scroll-margin-top: 60px; }
+h2 { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: 28px; margin: 0 0 6px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; text-wrap: balance; }
+h2 .id { font-family: var(--mono); font-size: 13px; color: var(--yellow); letter-spacing: .12em; font-weight: 400; }
+.rule { height: 2px; background: linear-gradient(90deg, var(--yellow) 0 56px, var(--line) 56px); margin-bottom: 22px; }
+h3 { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: .05em; text-transform: uppercase; color: var(--cyan); margin: 0 0 8px; }
+p { margin: 0 0 14px; max-width: 72ch; }
+ul { margin: 0 0 14px; padding-left: 20px; max-width: 72ch; }
+li { margin-bottom: 4px; }
+li::marker { color: var(--yellow); }
+code { font-family: var(--mono); font-size: .8em; color: var(--yellow); background: rgba(252,238,10,.08); padding: 1px 5px; }
+.panel { background: var(--panel); border: 1px solid var(--line); padding: 18px 20px; clip-path: polygon(0 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% 100%, var(--cut) 100%, 0 calc(100% - var(--cut))); }
+.panel.warn { border-color: rgba(255,42,82,.5); background: linear-gradient(180deg, rgba(255,42,82,.07), var(--panel)); }
+.panel.ok { border-color: rgba(93,255,161,.45); background: linear-gradient(180deg, rgba(93,255,161,.06), var(--panel)); }
+.panel .label { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--dim); margin-bottom: 8px; }
+.panel.warn .label { color: var(--red); } .panel.ok .label { color: var(--green); }
+.panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+.grid { display: grid; gap: 14px; }
+.g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); }
+.g3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
+.grid > * { min-width: 0; }
+
+/* before / now */
+.vs li { margin-bottom: 6px; }
+.panel.warn li::marker { color: var(--red); content: "✕  "; }
+.panel.ok li::marker { color: var(--green); content: "→  "; }
+
+/* the loop, as a transcript */
+.term { background: #0b0d13; border: 1px solid var(--line); border-left: 3px solid var(--cyan); font-family: var(--mono); font-size: 14px; line-height: 1.65; padding: 18px 20px; overflow-x: auto; }
+.term .who { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-top: 14px; }
+.term .who:first-child { margin-top: 0; }
+.term .you { color: var(--yellow); } .term .ai { color: var(--cyan); }
+.term .say { color: var(--fg); font-family: var(--body); font-size: 19px; line-height: 1.4; margin: 2px 0 0; }
+.term .step { color: #cfd6e6; white-space: pre; }
+.term .step i { font-style: normal; color: var(--dim); }
+.term .step b { font-weight: 400; color: var(--green); }
+.term .step u { text-decoration: none; color: var(--cyan); }
+.note { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--dim); margin-top: 10px; }
+
+/* steps */
+.steps { counter-reset: s; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+.steps .panel { position: relative; padding-top: 52px; }
+.steps .panel::before { counter-increment: s; content: "0" counter(s); position: absolute; top: 14px; left: 20px; font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1; color: var(--yellow); }
+
+/* tool cards */
+.tool { display: flex; flex-direction: column; gap: 10px; }
+.tool .head { display: flex; gap: 14px; align-items: center; }
+.tool img { width: 56px; height: 56px; flex: none; }
+.tool .name { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1; text-transform: uppercase; letter-spacing: .02em; }
+.tool .name span { color: var(--yellow); }
+.tool .role { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin-top: 4px; }
+.tool p { margin: 0; color: #c3c9d8; }
+.tool .status { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--dim); border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; }
+.tool .status b { font-weight: 500; }
+.tool .links { display: flex; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.tool .links a { text-decoration: none; }
+.tool .links a:hover { text-decoration: underline; }
+
+/* how the tools fit */
+.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 14px; }
+.flow > div { background: var(--panel); border: 1px solid var(--line); padding: 14px; min-width: 0; position: relative; }
+.flow > div + div { border-left: 0; }
+.flow h4 { margin: 0 0 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--yellow); }
+.flow p { margin: 0; font-size: 16px; color: #c3c9d8; }
+.flow small { display: block; font-family: var(--mono); font-size: 11px; color: var(--dim); margin-top: 8px; letter-spacing: .04em; }
+.flow > div:not(:last-child)::after { content: "▶"; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); color: var(--cyan); font-size: 12px; z-index: 1; }
+.ai-rail { border: 1px dashed rgba(25,243,255,.5); padding: 10px 14px; text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+.ai-rail b { color: var(--cyan); font-weight: 500; }
+
+/* join */
+.join h3 { color: var(--yellow); }
+.big { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(30px, 5vw, 48px); line-height: 1; margin: 0 0 14px; text-wrap: balance; }
+.big span { color: var(--yellow); }
+
+footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 12px; color: var(--dim); letter-spacing: .06em; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+footer p { margin: 0; max-width: 90ch; }
+
+@media (max-width: 760px) {
+  .flow { grid-template-columns: 1fr; }
+  .flow > div + div { border-left: 1px solid var(--line); border-top: 0; }
+  .flow > div:not(:last-child)::after { content: "▼"; right: 50%; top: auto; bottom: -9px; transform: translateX(50%); }
+}
+@media (max-width: 640px) { body { font-size: 17px; } .bar nav { margin-left: 0; } .lede { font-size: 20px; } header.hero::before, header.hero::after { display: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span><span class="dot"></span><b>EDGEMODDERS</b> / CYBERPUNK 2077 / AI-FIRST MODDING</span>
+  <nav>
+    <a href="#why">Why</a><a href="#loop">The loop</a><a href="#tools">Tools</a><a href="#principles">Principles</a><a href="#join">Join</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">// edgemodders.ai &middot; a new modding crew for Night City</div>
+  <h1>Anyone <span>can mod.</span></h1>
+  <p class="lede">Modding Cyberpunk 2077 used to mean years of learning file formats, scripting languages and toolchains. <b>EDGEmodders</b> is a new community building AI-first tools, so you describe the mod you want in plain words and build it together with an AI assistant. You don't need to code or know modding to start.</p>
+  <div class="cta">
+    <a class="btn go" href="#join">Join the crew</a>
+    <a class="btn" href="#tools">See the tools</a>
+  </div>
+  <div class="meta">
+    <span class="tag y">AI-first</span>
+    <span class="tag c">Open source</span>
+    <span class="tag g">Built with Claude</span>
+    <span class="tag">Works with WolvenKit</span>
+    <span class="tag r">Early days: tools in active development</span>
+  </div>
+</header>
+
+<section id="why">
+  <h2><span class="id">01</span>Modding, then and now</h2><div class="rule"></div>
+  <p>Night City has one of the best modding communities in gaming. It's also one of the hardest to join. A good idea for a mod usually stalls at the first file format.</p>
+  <div class="grid g2 vs">
+    <div class="panel warn"><div class="label">Before</div>
+      <ul>
+        <li>Learn WolvenKit, CR2W files, archives and hashes</li>
+        <li>Learn redscript, Lua, TweakDB records and YAML tweaks</li>
+        <li>Pack, copy files by hand, restart the game, repeat</li>
+        <li>Fight load orders and conflicts you can't see</li>
+        <li>Ask on a forum and wait</li>
+      </ul></div>
+    <div class="panel ok"><div class="label">With EDGEmodders</div>
+      <ul>
+        <li>Say what you want: <em>"make the Mantis Blades glow cyan"</em></li>
+        <li>An assistant reads the game files as plain text and finds what to change</li>
+        <li>It writes the change, packs it and deploys it for you</li>
+        <li>You see the result in game and say what to tweak next</li>
+        <li>Every step is visible, and every deploy can be undone</li>
+      </ul></div>
+  </div>
+</section>
+
+<section id="loop">
+  <h2><span class="id">02</span>The loop</h2><div class="rule"></div>
+  <p>Every EDGEmodders tool exposes what it does as text and as calls an AI assistant can make. Here's the kind of session the toolkit is built for:</p>
+  <div class="term" role="figure" aria-label="Example session between a modder and an AI assistant">
+    <div class="who you">&gt; you</div>
+    <p class="say">Make Mantis Blades do 50% more damage, and give the mod a name I can share.</p>
+    <div class="who ai">&gt; assistant</div>
+<div class="step"><i>01</i> <u>tweakdb.query</u>   Items.MantisBlades*          <b>found 6 records</b>
+<i>02</i> <u>write</u>           tweaks/sharper-mantis.yaml   <b>damage × 1.5</b>
+<i>03</i> <u>modkit.pack</u>     sharper-mantis               <b>packed</b>
+<i>04</i> <u>reddeck.deploy</u>  sharper-mantis  on           <b>1 mod deployed, 0 conflicts</b></div>
+    <p class="say">Done. "Sharper Mantis" is on. Load a save and try it. Say the word and I'll undo it.</p>
+  </div>
+  <p class="note">// Illustrative. The calls are the shape of the REDbridge and REDdeck APIs; the full loop is still being built.</p>
+
+  <div class="steps" style="margin-top:22px">
+    <div class="panel"><h3>Describe it</h3><p>Plain words. No file formats, no jargon.</p></div>
+    <div class="panel"><h3>Build it together</h3><p>Your assistant works in the same project you can see in REDcode.</p></div>
+    <div class="panel"><h3>Try it live</h3><p>Deploy to the game, and with REDnode, change it while it runs.</p></div>
+    <div class="panel"><h3>Share it</h3><p>Pack it, publish it, and help the next modder start.</p></div>
+  </div>
+</section>
+
+<section id="tools">
+  <h2><span class="id">03</span>The toolkit</h2><div class="rule"></div>
+  <p>Four open-source projects that work alone and work better together. Each one has its own docs site.</p>
+  <div class="grid g2">
+
+    <article class="panel tool">
+      <div class="head"><img src="assets/tools/redcode.png" alt=""><div><div class="name">RED<span>code</span></div><div class="role">The editor</div></div></div>
+      <p>A Cyberpunk 2077 modding IDE built on VS Code. Browse the game's archives, open any game file as readable JSON, add it to a project and edit it, with an AI assistant working beside you.</p>
+      <div class="status"><b class="c">Status:</b> browsing and editing work; more editors in progress</div>
+      <div class="links"><a href="https://edgemodders.github.io/REDcode/">Docs</a><a href="https://github.com/Edgemodders/REDcode">GitHub</a></div>
+    </article>
+
+    <article class="panel tool">
+      <div class="head"><img src="assets/tools/reddeck.png" alt=""><div><div class="name">RED<span>deck</span></div><div class="role">The mod manager</div></div></div>
+      <p>One list of mods and four verbs: add, on/off, deploy, remove. Every deploy can be undone, and REDdeck shows conflicts <em>inside</em> mod archives, which file-level managers can't see.</p>
+      <div class="status"><b class="g">Status:</b> core features built; waiting on real-game testing</div>
+      <div class="links"><a href="https://edgemodders.github.io/REDdeck/">Docs</a><a href="https://edgemodders.github.io/REDdeck/design.html">Design</a><a href="https://github.com/Edgemodders/REDdeck">GitHub</a></div>
+    </article>
+
+    <article class="panel tool">
+      <div class="head"><img src="assets/tools/redbridge.png" alt=""><div><div class="name">RED<span>bridge</span></div><div class="role">The engine &amp; AI bridge</div></div></div>
+      <p>Runs WolvenKit's proven C# engine as a local service. The same calls power REDcode and an MCP server, so AI assistants like Claude can browse archives, convert files and pack mods directly.</p>
+      <div class="status"><b class="y">Status:</b> core bridge works against a real game install</div>
+      <div class="links"><a href="https://edgemodders.github.io/REDbridge/">Docs</a><a href="https://github.com/Edgemodders/REDbridge">GitHub</a></div>
+    </article>
+
+    <article class="panel tool">
+      <div class="head"><img src="assets/tools/rednode.png" alt=""><div><div class="name">RED<span>node</span></div><div class="role">The live runtime</div></div></div>
+      <p>Script Cyberpunk 2077 in TypeScript and JavaScript with npm. Mods attach to the running game, reload without a restart, and can be debugged live from VS Code.</p>
+      <div class="status"><b class="r">Status:</b> design phase; first in-game proof pending</div>
+      <div class="links"><a href="https://edgemodders.github.io/REDnode/">Docs</a><a href="https://edgemodders.github.io/REDnode/design.html">Design</a><a href="https://github.com/Edgemodders/REDnode">GitHub</a></div>
+    </article>
+
+  </div>
+
+  <h3 style="margin-top:32px">How they fit</h3>
+  <div class="flow">
+    <div><h4>Describe</h4><p>You and your assistant</p><small>Claude, over MCP</small></div>
+    <div><h4>Edit</h4><p>REDcode</p><small>project, game files as JSON</small></div>
+    <div><h4>Build</h4><p>REDbridge</p><small>WolvenKit engine: convert, pack</small></div>
+    <div><h4>Play</h4><p>REDdeck + REDnode</p><small>deploy, undo, live reload</small></div>
+  </div>
+  <div class="ai-rail">One API, two clients: <b>every tool the modder uses, the AI can use too</b></div>
+</section>
+
+<section id="principles">
+  <h2><span class="id">04</span>What we stand for</h2><div class="rule"></div>
+  <div class="grid g3">
+    <div class="panel"><div class="label">Anyone can mod</div><p>Ideas matter more than syntax. If you can describe a mod, you should be able to make one.</p></div>
+    <div class="panel"><div class="label">You stay in control</div><p>AI does the busywork in the open. Every file is readable, every change is visible, every deploy can be undone.</p></div>
+    <div class="panel"><div class="label">Everything is text</div><p>Game files as JSON, tweaks as YAML, scripts as TypeScript. Anything a person can see, an assistant can read, and the other way round.</p></div>
+    <div class="panel"><div class="label">Build on the community</div><p>We work with WolvenKit, RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL and TweakXL, not against them, and we credit the people who built them.</p></div>
+    <div class="panel"><div class="label">Open source</div><p>MIT where we can, GPL-3.0 where WolvenKit requires it. Read it, fork it, improve it.</p></div>
+    <div class="panel"><div class="label">Veterans welcome</div><p>Experienced modders are the people who make this work. AI makes your knowledge go further, and helps you teach the next wave.</p></div>
+  </div>
+</section>
+
+<section id="join" class="join">
+  <h2><span class="id">05</span>Join the crew</h2><div class="rule"></div>
+  <p class="big">Night City needs <span>more modders.</span></p>
+  <p>EDGEmodders is just getting started. Whoever shows up now shapes what the community becomes.</p>
+  <div class="grid g3">
+    <div class="panel"><h3>Players with ideas</h3><p>Never modded? Perfect. Try the tools, tell us where you got stuck, and share what you made.</p></div>
+    <div class="panel"><h3>Modders</h3><p>Bring your knowledge of the game's files and frameworks. Help us get the details right and teach the AI to work the way you do.</p></div>
+    <div class="panel"><h3>Tool builders</h3><p>TypeScript, C#, VS Code, MCP. Pick an issue in any of the four repos and send a pull request.</p></div>
+  </div>
+  <div class="cta">
+    <a class="btn go" href="https://github.com/Edgemodders">Find us on GitHub</a>
+    <a class="btn" href="community.html">How to get involved</a>
+  </div>
+</section>
+
+<footer>
+  <span><span class="dot"></span>EDGEMODDERS &middot; EDGEMODDERS.AI</span>
+  <span><a href="https://github.com/Edgemodders/EDGEweb">Site source</a></span>
+  <p>A fan community, not affiliated with or endorsed by CD PROJEKT RED. Cyberpunk 2077 is a trademark of CD PROJEKT S.A. Built on the work of the WolvenKit team and the wider Cyberpunk 2077 modding community.</p>
+</footer>
+
+</div>
+</body>
+</html>
