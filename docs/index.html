@@ -14,137 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-/* Layout: the HUD landing page. Same tokens as the RED* design docs: sticky status bar, cut-corner panels, one column. */
-:root {
-  --bg: #08090d; --panel: #10131b; --panel-2: #151925; --line: #262c3d;
-  --fg: #e3e6ee; --dim: #8a93a8; --yellow: #fcee0a; --cyan: #19f3ff; --red: #ff2a52; --green: #5dffa1;
-  --display: "Chakra Petch", "Arial Narrow", sans-serif; --body: "Rajdhani", "Segoe UI", sans-serif; --mono: "JetBrains Mono", "Consolas", monospace;
-  --cut: 14px; color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 18px; line-height: 1.5;
-  padding-inline: 16px; padding-block: 0 64px;
-  background-image: linear-gradient(rgba(25,243,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(25,243,255,.035) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-.wrap { max-width: 1040px; margin-inline: auto; }
-a { color: var(--cyan); }
-:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(8,9,13,.92); border-bottom: 1px solid var(--line); margin-inline: -16px; padding: 8px 16px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
-.bar .wrap { display: flex; gap: 8px 20px; flex-wrap: wrap; align-items: center; }
-.bar b { color: var(--yellow); font-weight: 500; }
-.dot { display: inline-block; width: 8px; height: 8px; background: var(--green); margin-right: 6px; }
-.bar nav { margin-left: auto; display: flex; gap: 14px; flex-wrap: wrap; }
-.bar nav a { color: var(--dim); text-decoration: none; }
-.bar nav a:hover { color: var(--cyan); }
-
-/* hero */
-header.hero { position: relative; padding-block: 72px 48px; }
-header.hero::before, header.hero::after { content: ""; position: absolute; width: 36px; height: 36px; border: 2px solid var(--yellow); }
-header.hero::before { top: 28px; left: -4px; border-right: 0; border-bottom: 0; }
-header.hero::after { bottom: 8px; right: -4px; border-left: 0; border-top: 0; }
-.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); }
-h1 { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(44px, 10vw, 104px); line-height: .92; letter-spacing: .01em; margin: 14px 0 20px; text-wrap: balance; }
-h1 span { color: var(--yellow); }
-.lede { max-width: 60ch; color: #c3c9d8; font-size: 22px; margin: 0; text-wrap: pretty; }
-.lede b { color: #fff; font-weight: 600; }
-.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-.btn { display: inline-block; font-family: var(--mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 12px 22px; border: 1px solid var(--line); color: var(--fg); background: var(--panel); clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
-.btn:hover { border-color: var(--cyan); color: var(--cyan); }
-.btn.go { background: var(--yellow); color: #08090d; border-color: var(--yellow); font-weight: 500; }
-.btn.go:hover { background: #fff36a; color: #08090d; }
-.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
-.tag { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 3px 10px; border: 1px solid var(--line); color: var(--dim); clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); }
-.tag.y { color: var(--yellow); border-color: rgba(252,238,10,.5); } .tag.c { color: var(--cyan); border-color: rgba(25,243,255,.5); } .tag.r { color: var(--red); border-color: rgba(255,42,82,.5); } .tag.g { color: var(--green); border-color: rgba(93,255,161,.5); }
-
-/* sections */
-section { margin-top: 56px; scroll-margin-top: 60px; }
-h2 { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: 28px; margin: 0 0 6px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; text-wrap: balance; }
-h2 .id { font-family: var(--mono); font-size: 13px; color: var(--yellow); letter-spacing: .12em; font-weight: 400; }
-.rule { height: 2px; background: linear-gradient(90deg, var(--yellow) 0 56px, var(--line) 56px); margin-bottom: 22px; }
-h3 { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: .05em; text-transform: uppercase; color: var(--cyan); margin: 0 0 8px; }
-p { margin: 0 0 14px; max-width: 72ch; }
-ul { margin: 0 0 14px; padding-left: 20px; max-width: 72ch; }
-li { margin-bottom: 4px; }
-li::marker { color: var(--yellow); }
-code { font-family: var(--mono); font-size: .8em; color: var(--yellow); background: rgba(252,238,10,.08); padding: 1px 5px; }
-.panel { background: var(--panel); border: 1px solid var(--line); padding: 18px 20px; clip-path: polygon(0 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% 100%, var(--cut) 100%, 0 calc(100% - var(--cut))); }
-.panel.warn { border-color: rgba(255,42,82,.5); background: linear-gradient(180deg, rgba(255,42,82,.07), var(--panel)); }
-.panel.ok { border-color: rgba(93,255,161,.45); background: linear-gradient(180deg, rgba(93,255,161,.06), var(--panel)); }
-.panel .label { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--dim); margin-bottom: 8px; }
-.panel.warn .label { color: var(--red); } .panel.ok .label { color: var(--green); }
-.panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
-.grid { display: grid; gap: 14px; }
-.g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); }
-.g3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
-.grid > * { min-width: 0; }
-
-/* before / now */
-.vs li { margin-bottom: 6px; }
-.panel.warn li::marker { color: var(--red); content: "✕  "; }
-.panel.ok li::marker { color: var(--green); content: "→  "; }
-
-/* the loop, as a transcript */
-.term { background: #0b0d13; border: 1px solid var(--line); border-left: 3px solid var(--cyan); font-family: var(--mono); font-size: 14px; line-height: 1.65; padding: 18px 20px; overflow-x: auto; }
-.term .who { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-top: 14px; }
-.term .who:first-child { margin-top: 0; }
-.term .you { color: var(--yellow); } .term .ai { color: var(--cyan); }
-.term .say { color: var(--fg); font-family: var(--body); font-size: 19px; line-height: 1.4; margin: 2px 0 0; }
-.term .step { color: #cfd6e6; white-space: pre; }
-.term .step i { font-style: normal; color: var(--dim); }
-.term .step b { font-weight: 400; color: var(--green); }
-.term .step u { text-decoration: none; color: var(--cyan); }
-.note { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--dim); margin-top: 10px; }
-
-/* steps */
-.steps { counter-reset: s; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
-.steps .panel { position: relative; padding-top: 52px; }
-.steps .panel::before { counter-increment: s; content: "0" counter(s); position: absolute; top: 14px; left: 20px; font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1; color: var(--yellow); }
-
-/* tool cards */
-.tool { display: flex; flex-direction: column; gap: 10px; }
-.tool .head { display: flex; gap: 14px; align-items: center; }
-.tool img { width: 56px; height: 56px; flex: none; }
-.tool .name { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1; text-transform: uppercase; letter-spacing: .02em; }
-.tool .name span { color: var(--yellow); }
-.tool .role { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--cyan); margin-top: 4px; }
-.tool p { margin: 0; color: #c3c9d8; }
-.tool .status { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--dim); border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; }
-.tool .status b { font-weight: 500; }
-.tool .links { display: flex; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
-.tool .links a { text-decoration: none; }
-.tool .links a:hover { text-decoration: underline; }
-
-/* how the tools fit */
-.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 14px; }
-.flow > div { background: var(--panel); border: 1px solid var(--line); padding: 14px; min-width: 0; position: relative; }
-.flow > div + div { border-left: 0; }
-.flow h4 { margin: 0 0 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--yellow); }
-.flow p { margin: 0; font-size: 16px; color: #c3c9d8; }
-.flow small { display: block; font-family: var(--mono); font-size: 11px; color: var(--dim); margin-top: 8px; letter-spacing: .04em; }
-.flow > div:not(:last-child)::after { content: "▶"; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); color: var(--cyan); font-size: 12px; z-index: 1; }
-.ai-rail { border: 1px dashed rgba(25,243,255,.5); padding: 10px 14px; text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
-.ai-rail b { color: var(--cyan); font-weight: 500; }
-
-/* join */
-.join h3 { color: var(--yellow); }
-.big { font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(30px, 5vw, 48px); line-height: 1; margin: 0 0 14px; text-wrap: balance; }
-.big span { color: var(--yellow); }
-
-footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 12px; color: var(--dim); letter-spacing: .06em; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
-footer p { margin: 0; max-width: 90ch; }
-
-@media (max-width: 760px) {
-  .flow { grid-template-columns: 1fr; }
-  .flow > div + div { border-left: 1px solid var(--line); border-top: 0; }
-  .flow > div:not(:last-child)::after { content: "▼"; right: 50%; top: auto; bottom: -9px; transform: translateX(50%); }
-}
-@media (max-width: 640px) { body { font-size: 17px; } .bar nav { margin-left: 0; } .lede { font-size: 20px; } header.hero::before, header.hero::after { display: none; } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-</style>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
@@ -164,6 +34,7 @@ footer p { margin: 0; max-width: 90ch; }
   <div class="cta">
     <a class="btn go" href="#join">Join the crew</a>
     <a class="btn" href="#tools">See the tools</a>
+    <a class="btn" href="platform.html">Read more</a>
   </div>
   <div class="meta">
     <span class="tag y">AI-first</span>
@@ -253,8 +124,8 @@ footer p { margin: 0; max-width: 90ch; }
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/rednode.png" alt=""><div><div class="name">RED<span>node</span></div><div class="role">The live runtime</div></div></div>
-      <p>Script Cyberpunk 2077 in TypeScript and JavaScript with npm. Mods attach to the running game, reload without a restart, and can be debugged live from VS Code.</p>
-      <div class="status"><b class="r">Status:</b> design phase; first in-game proof pending</div>
+      <p>Script Cyberpunk 2077 in TypeScript and JavaScript with npm, and build in-game HTML overlay apps. Mods attach to the running game, reload without a restart, and can be debugged live from VS Code.</p>
+      <div class="status"><b class="y">Status:</b> HTML overlay apps run in game; Node mod runtime in progress</div>
       <div class="links"><a href="https://edgemodders.github.io/REDnode/">Docs</a><a href="https://edgemodders.github.io/REDnode/design.html">Design</a><a href="https://github.com/Edgemodders/REDnode">GitHub</a></div>
     </article>
 

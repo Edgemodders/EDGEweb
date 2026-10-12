@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EDGE platform · EDGEmodders</title>
+<meta name="description" content="EDGE is a next-generation, agentic modding platform for Cyberpunk 2077: native performance, isolated mods, HTML overlay apps, Claude agent tooling, live reload and debugging, VS Code and WolvenKit compatibility.">
+<meta property="og:title" content="Next-generation modding · EDGE">
+<meta property="og:description" content="An agentic modding platform for Cyberpunk 2077: create, test, deploy and run mods in one open platform, with an AI agent at your side.">
+<meta property="og:image" content="https://edgemodders.ai/assets/brand/social.png">
+<meta property="og:url" content="https://edgemodders.ai/platform.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/brand/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span><a href="./" style="color:inherit;text-decoration:none"><span class="dot"></span><b>EDGEMODDERS</b></a> / EDGE PLATFORM</span>
+  <nav>
+    <a href="./">Home</a><a href="#benefits">Benefits</a><a href="#redcode">REDcode</a><a href="#reddeck">REDdeck</a><a href="#redbridge">REDbridge</a><a href="#rednode">REDnode</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+<header class="hero short">
+  <div class="eyebrow">// The EDGE platform &middot; for Cyberpunk 2077</div>
+  <h1>Next-generation <span>modding.</span></h1>
+  <p class="lede">We are building <b>EDGE</b>, a next-generation <b>agentic</b> modding platform. You and an AI agent work on the same mod, with the same tools, from the first idea to a running game. Creating, testing, deploying and running a mod all happen in one open platform, instead of a dozen separate tools and manual steps.</p>
+  <div class="cta">
+    <a class="btn go" href="#benefits">Why EDGE</a>
+    <a class="btn" href="#toolkits">The toolkits</a>
+  </div>
+</header>
+
+<section id="benefits">
+  <h2><span class="id">01</span>What EDGE gives you</h2><div class="rule"></div>
+  <p>EDGE is early and moving fast. Each benefit below is labelled honestly with where it stands today.</p>
+  <div class="legend"><span><span class="st on">Working</span> runs today</span><span><span class="st wip">In progress</span> partly built</span><span><span class="st plan">Planned</span> designed, not built</span></div>
+  <div class="tw"><table>
+    <thead><tr><th>Benefit</th><th>What it means for you</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Native engine, bare-metal performance<span class="from">REDnode &middot; REDbridge</span></td><td>No emulation layer. REDnode is a native RED4ext plugin that draws with the game's own Direct3D 12 device, and simple rules run inside the game's hooks with no round trip. REDbridge runs WolvenKit's compiled C# engine directly.</td><td><span class="st wip">In progress</span></td></tr>
+      <tr><td>Mod isolation and crash protection<span class="from">REDnode</span></td><td>Mods and overlay apps run in their own process, outside the game. If one crashes, your game keeps running. The small amount of code that must run inside the game is sandboxed and time-limited.</td><td><span class="st wip">In progress</span></td></tr>
+      <tr><td>HTML overlay apps with a UI kit<span class="from">REDnode</span></td><td>Build in-game windows and HUD widgets with HTML, CSS and JavaScript, styled with a ready-made UI kit. Use any web framework, browser dev tools and npm packages instead of Lua and ImGui.</td><td><span class="st on">Working</span></td></tr>
+      <tr><td>Integrated Claude agent tooling<span class="from">REDbridge &middot; REDdeck</span></td><td>Every tool exposes what it does as calls an AI agent can make. Through MCP, Claude can browse archives, convert files, query TweakDB, pack and deploy, alongside you.</td><td><span class="st plan">Planned</span></td></tr>
+      <tr><td>Real-time hot-loading and live debugging<span class="from">REDnode &middot; REDcode</span></td><td>Change a mod and see it in the running game without a restart. Set breakpoints and evaluate code against the live game from VS Code's debugger.</td><td><span class="st plan">Planned</span></td></tr>
+      <tr><td>Full VS Code and extension ecosystem<span class="from">REDcode &middot; REDdeck</span></td><td>EDGE lives in VS Code, so you keep its editor, Git, themes, AI assistants and thousands of extensions, including the existing redscript tooling.</td><td><span class="st on">Working</span></td></tr>
+      <tr><td>WolvenKit compatible<span class="from">REDcode &middot; REDbridge</span></td><td>Opens and builds WolvenKit projects. Game files convert to JSON and back byte for byte, using WolvenKit's own engine. Move between tools freely.</td><td><span class="st on">Working</span></td></tr>
+      <tr><td>Game API built for agents<span class="from">REDnode</span></td><td>A typed API generated from the game's own type system, with a published reference. Agents and people get the same completion and docs, so an assistant writes code against real game types instead of guessing.</td><td><span class="st wip">In progress</span></td></tr>
+      <tr><td>Safe, undoable deployment<span class="from">REDdeck</span></td><td>Mods deploy with a manifest of every file placed. One click undoes it. Conflicts are shown even inside mod archives, with who wins and why.</td><td><span class="st on">Working</span></td></tr>
+      <tr><td>Open source, community first<span class="from">All toolkits</span></td><td>MIT where we can, GPL-3.0 where WolvenKit requires it. EDGE works alongside RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL and TweakXL.</td><td><span class="st on">Working</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="toolkits">
+  <h2><span class="id">02</span>The toolkits</h2><div class="rule"></div>
+  <p>EDGE is four open-source toolkits. Each works alone; together they cover the whole life of a mod.</p>
+  <div class="flow">
+    <div><h4>Create</h4><p>REDcode</p><small>edit with your agent</small></div>
+    <div><h4>Build</h4><p>REDbridge</p><small>convert, pack</small></div>
+    <div><h4>Deploy</h4><p>REDdeck</p><small>install, undo</small></div>
+    <div><h4>Run</h4><p>REDnode</p><small>live in game</small></div>
+  </div>
+</section>
+
+<section id="redcode">
+  <h2><span class="id">03</span>Create with REDcode</h2><div class="rule"></div>
+  <div class="kit">
+    <div>
+      <div class="head"><img src="assets/tools/redcode.png" alt=""><div><div class="name">RED<span>code</span></div><div class="role">The editor</div></div></div>
+      <p>A Cyberpunk 2077 modding IDE built on VS Code. It brings WolvenKit's workflows into the editor, where your AI agent already works.</p>
+      <ul>
+        <li>Browse the game's archives folder by folder</li>
+        <li>Open any game file as readable JSON, edit it, save it back</li>
+        <li>Texture viewer and TweakXL language support</li>
+        <li>Opens and packs WolvenKit projects</li>
+        <li>Your agent sees the same project you do</li>
+      </ul>
+      <div class="links"><a href="https://edgemodders.github.io/REDcode/">Docs</a><a href="https://github.com/Edgemodders/REDcode">GitHub</a></div>
+    </div>
+    <div class="shots">
+      <div class="shot"><div><b>Screenshot</b>Game Assets tree and a file open as JSON</div></div>
+      <div class="pair">
+        <div class="shot"><div><b>Screenshot</b>Texture viewer</div></div>
+        <div class="shot"><div><b>Screenshot</b>Agent editing a tweak</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reddeck">
+  <h2><span class="id">04</span>Deploy with REDdeck</h2><div class="rule"></div>
+  <div class="kit">
+    <div>
+      <div class="head"><img src="assets/tools/reddeck.png" alt=""><div><div class="name">RED<span>deck</span></div><div class="role">The mod manager</div></div></div>
+      <p>A mod manager that lives inside VS Code. One list of mods and four verbs: add, on/off, deploy, remove.</p>
+      <ul>
+        <li>Add mods from zip, 7z, rar, folders or Nexus links</li>
+        <li>Recognises RED4ext, CET, redscript, ArchiveXL, TweakXL and REDmod</li>
+        <li>Hardlink deploys with a manifest; undo removes exactly what it placed</li>
+        <li>Shows conflicts inside mod archives, with a "let this one win" button</li>
+        <li>Loadouts, Vortex import and a command line for agents</li>
+      </ul>
+      <div class="links"><a href="https://edgemodders.github.io/REDdeck/">Docs</a><a href="https://edgemodders.github.io/REDdeck/design.html">Design</a><a href="https://github.com/Edgemodders/REDdeck">GitHub</a></div>
+    </div>
+    <div class="shots">
+      <div class="shot"><div><b>Screenshot</b>Mods view with the Deploy button</div></div>
+      <div class="pair">
+        <div class="shot"><div><b>Screenshot</b>Conflicts page</div></div>
+        <div class="shot"><div><b>Screenshot</b>Mod detail panel</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="redbridge">
+  <h2><span class="id">05</span>Build with REDbridge</h2><div class="rule"></div>
+  <div class="kit">
+    <div>
+      <div class="head"><img src="assets/tools/redbridge.png" alt=""><div><div class="name">RED<span>bridge</span></div><div class="role">The engine &amp; agent bridge</div></div></div>
+      <p>The engine room. REDbridge runs WolvenKit's proven C# libraries as a local service, so EDGE never has to reinvent the game's file formats.</p>
+      <ul>
+        <li>Indexes a game install and searches its archives in seconds</li>
+        <li>Converts game files to JSON and back, byte for byte</li>
+        <li>Decodes textures, resolves hashes, reads mod archives without the game</li>
+        <li>One API for the editor and for AI agents (MCP planned)</li>
+      </ul>
+      <div class="links"><a href="https://edgemodders.github.io/REDbridge/">Docs</a><a href="https://github.com/Edgemodders/REDbridge">GitHub</a></div>
+    </div>
+    <div class="shots">
+      <div class="shot"><div><b>Screenshot</b>Claude working a mod project through the bridge</div></div>
+      <div class="pair">
+        <div class="shot"><div><b>Screenshot</b>Archive search</div></div>
+        <div class="shot"><div><b>Screenshot</b>Probe run against a real install</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rednode">
+  <h2><span class="id">06</span>Run with REDnode</h2><div class="rule"></div>
+  <div class="kit">
+    <div>
+      <div class="head"><img src="assets/tools/rednode.png" alt=""><div><div class="name">RED<span>node</span></div><div class="role">The live runtime</div></div></div>
+      <p>The runtime that puts mods in the game. Script Cyberpunk 2077 in TypeScript and JavaScript with npm, and draw HTML apps on top of the game.</p>
+      <ul>
+        <li>HTML overlay apps and HUD widgets, tested in game</li>
+        <li>A UI kit in the HUD style, plus the game's own UI sounds</li>
+        <li>Overlay host runs outside the game, so a crash can't take it down</li>
+        <li>Game API reference generated from the game's type system</li>
+        <li>Coming: Node mods with hot reload and live debugging</li>
+      </ul>
+      <div class="links"><a href="https://edgemodders.github.io/REDnode/">Docs</a><a href="https://edgemodders.github.io/REDnode/overlay-apps.html">Overlay apps</a><a href="https://github.com/Edgemodders/REDnode">GitHub</a></div>
+    </div>
+    <div class="shots">
+      <div class="shot"><div><b>Screenshot</b>An overlay app running in game</div></div>
+      <div class="pair">
+        <div class="shot"><div><b>Screenshot</b>HUD widget</div></div>
+        <div class="shot"><div><b>Screenshot</b>Game API reference</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join" class="join">
+  <h2><span class="id">07</span>Build it with us</h2><div class="rule"></div>
+  <p class="big">Bring your <span>mod ideas.</span></p>
+  <p>Veterans and beginners alike: try the toolkits, tell us what's missing, and help shape EDGE.</p>
+  <div class="cta">
+    <a class="btn go" href="community.html">Get involved</a>
+    <a class="btn" href="https://github.com/Edgemodders">Find us on GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <span><span class="dot"></span>EDGEMODDERS &middot; EDGEMODDERS.AI</span>
+  <span><a href="https://github.com/Edgemodders/EDGEweb">Site source</a></span>
+  <p>A fan community, not affiliated with or endorsed by CD PROJEKT RED. Cyberpunk 2077 is a trademark of CD PROJEKT S.A. Built on the work of the WolvenKit team and the wider Cyberpunk 2077 modding community.</p>
+</footer>
+
+</div>
+</body>
+</html>
