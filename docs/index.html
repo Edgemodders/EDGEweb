@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=2">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
 </head>
 <body>
 
@@ -75,31 +75,38 @@
 
 <section id="loop">
   <h2><span class="id">03</span>The loop</h2><div class="rule"></div>
-  <p>Every EDGEmodders tool exposes what it does as text and as calls an AI assistant can make. Here's the kind of session the toolkit is built for:</p>
+  <p>Every EDGEmodders tool exposes what it does as text and as calls an AI agent can make. Here's a session with REDagent, the assistant inside the game:</p>
   <div class="term" role="figure" aria-label="Example session between a modder and an AI assistant">
     <div class="who you">&gt; you</div>
-    <p class="say">Make Mantis Blades do 50% more damage, and give the mod a name I can share.</p>
-    <div class="who ai">&gt; assistant</div>
-<div class="step"><i>01</i> <u>tweakdb.query</u>   Items.MantisBlades*          <b>found 6 records</b>
-<i>02</i> <u>write</u>           tweaks/sharper-mantis.yaml   <b>damage × 1.5</b>
-<i>03</i> <u>modkit.pack</u>     sharper-mantis               <b>packed</b>
-<i>04</i> <u>reddeck.deploy</u>  sharper-mantis  on           <b>1 mod deployed, 0 conflicts</b></div>
-    <p class="say">Done. "Sharper Mantis" is on. Load a save and try it. Say the word and I'll undo it.</p>
+    <p class="say">Make a mod that shows a warning when V's health drops below 30%.</p>
+    <div class="who ai">&gt; redagent</div>
+<div class="step"><i>01</i> <u>gameapi_lookup</u>  player health          <b>found the health functions</b>
+<i>02</i> <u>write</u>           low-health/main.mjs     <b>you pressed Allow</b>
+<i>03</i> <u>apps</u>            low-health              <b>loaded by hot reload</b>
+<i>04</i> <u>logs</u>            low-health              <b>running, no errors</b></div>
+    <p class="say">Done. Your low-health warning is running. Take some damage to see it, or press Undo to remove it.</p>
   </div>
-  <p class="note">// Illustrative. The calls are the shape of the REDbridge and REDdeck APIs; the full loop is still being built.</p>
+  <p class="note">// Simplified from REDagent's in-game test on 2026-10-12. The tool names are REDagent's real tools.</p>
 
   <div class="steps" style="margin-top:22px">
     <div class="panel"><h3>Describe it</h3><p>Plain words. No file formats, no jargon.</p></div>
-    <div class="panel"><h3>Build it together</h3><p>Your assistant works in the same project you can see in REDcode.</p></div>
-    <div class="panel"><h3>Try it live</h3><p>Deploy to the game, and with REDnode, change it while it runs.</p></div>
+    <div class="panel"><h3>Build it together</h3><p>REDagent writes it while you play, or works beside you in REDcode.</p></div>
+    <div class="panel"><h3>Try it live</h3><p>REDnode loads it into the running game. Change it without a restart.</p></div>
     <div class="panel"><h3>Share it</h3><p>Pack it, publish it, and help the next modder start.</p></div>
   </div>
 </section>
 
 <section id="tools">
   <h2><span class="id">04</span>The toolkit</h2><div class="rule"></div>
-  <p>Four open-source projects that work alone and work better together. Each one has its own docs site.</p>
+  <p>Five open-source projects that work alone and work better together. Each one has its own docs site.</p>
   <div class="grid g2">
+
+    <article class="panel tool feature">
+      <div class="head"><img src="assets/tools/redagent.png" alt=""><div><div class="name">RED<span>agent</span> <span class="tag y new">New</span></div><div class="role">The modding agent &middot; powered by Claude</div></div></div>
+      <p>An AI assistant inside Cyberpunk 2077. Ask for a mod in a chat window over the game, and REDagent writes it, runs it, reads its log, checks the game's answers and fixes what's wrong, while you play. Every change is shown to you first and can be undone. Uses your own Anthropic API key.</p>
+      <div class="status"><b class="g">Status:</b> writes and fixes mods in game; early developer build</div>
+      <div class="links"><a href="https://edgemodders.github.io/REDagent/">Docs</a><a href="https://github.com/Edgemodders/REDagent">GitHub</a></div>
+    </article>
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/redcode.png" alt=""><div><div class="name">RED<span>code</span></div><div class="role">The editor</div></div></div>
@@ -124,8 +131,8 @@
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/rednode.png" alt=""><div><div class="name">RED<span>node</span></div><div class="role">The live runtime</div></div></div>
-      <p>Script Cyberpunk 2077 in TypeScript and JavaScript with npm, and build in-game HTML overlay apps. Mods attach to the running game, reload without a restart, and can be debugged live from VS Code.</p>
-      <div class="status"><b class="y">Status:</b> HTML overlay apps run in game; Node mod runtime in progress</div>
+      <p>Script Cyberpunk 2077 in TypeScript and JavaScript with npm, and build in-game HTML overlay apps. Mods attach to the running game and reload without a restart. Live debugging from VS Code is next.</p>
+      <div class="status"><b class="g">Status:</b> Node mods, overlay apps and the MCP server for agents run in game</div>
       <div class="links"><a href="https://edgemodders.github.io/REDnode/">Docs</a><a href="https://edgemodders.github.io/REDnode/design.html">Design</a><a href="https://github.com/Edgemodders/REDnode">GitHub</a></div>
     </article>
 
@@ -133,7 +140,7 @@
 
   <h3 style="margin-top:32px">How they fit</h3>
   <div class="flow">
-    <div><h4>Describe</h4><p>You and your assistant</p><small>Claude, over MCP</small></div>
+    <div><h4>Describe</h4><p>You + REDagent</p><small>Claude, over MCP</small></div>
     <div><h4>Edit</h4><p>REDcode</p><small>project, game files as JSON</small></div>
     <div><h4>Build</h4><p>REDbridge</p><small>WolvenKit engine: convert, pack</small></div>
     <div><h4>Play</h4><p>REDdeck + REDnode</p><small>deploy, undo, live reload</small></div>
@@ -160,7 +167,7 @@
   <div class="grid g3">
     <div class="panel"><h3>Players with ideas</h3><p>Never modded? Perfect. Try the tools, tell us where you got stuck, and share what you made.</p></div>
     <div class="panel"><h3>Modders</h3><p>Bring your knowledge of the game's files and frameworks. Help us get the details right and teach the AI to work the way you do.</p></div>
-    <div class="panel"><h3>Tool builders</h3><p>TypeScript, C#, VS Code, MCP. Pick an issue in any of the four repos and send a pull request.</p></div>
+    <div class="panel"><h3>Tool builders</h3><p>TypeScript, C#, VS Code, MCP. Pick an issue in any of the five repos and send a pull request.</p></div>
   </div>
   <div class="cta">
     <a class="btn go ico" href="https://discord.gg/63qP3Erw43"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128c-.598.349-1.22.645-1.873.891a.077.077 0 0 0-.041.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.029 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.182 0-2.157-1.086-2.157-2.42 0-1.332.956-2.418 2.157-2.418 1.21 0 2.176 1.095 2.157 2.419 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.086-2.157-2.42 0-1.332.955-2.418 2.157-2.418 1.21 0 2.176 1.095 2.157 2.419 0 1.333-.946 2.419-2.157 2.419z"/></svg>Join our Discord</a>

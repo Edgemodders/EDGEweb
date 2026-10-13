@@ -103,7 +103,7 @@ code { font-family: var(--mono); font-size: .8em; color: var(--yellow); backgrou
 .tool .links a:hover { text-decoration: underline; }
 
 /* how the tools fit */
-.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 14px; }
+.flow { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 0; margin-bottom: 14px; }
 .flow > div { background: var(--panel); border: 1px solid var(--line); padding: 14px; min-width: 0; position: relative; }
 .flow > div + div { border-left: 0; }
 .flow h4 { margin: 0 0 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--yellow); }
@@ -122,7 +122,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 footer p { margin: 0; max-width: 90ch; }
 
 @media (max-width: 760px) {
-  .flow { grid-template-columns: 1fr; }
+  .flow { grid-auto-flow: row; }
   .flow > div + div { border-left: 1px solid var(--line); border-top: 0; }
   .flow > div:not(:last-child)::after { content: "▼"; right: 50%; top: auto; bottom: -9px; transform: translateX(50%); }
 }
@@ -169,3 +169,5 @@ footer { align-items: center; }
 footer .brandline { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
 .btn.ico { display: inline-flex; align-items: center; gap: 10px; }
 .btn.ico svg { width: 18px; height: 18px; flex: none; }
+.tool.feature { grid-column: 1 / -1; border-color: rgba(252,238,10,.45); background: linear-gradient(180deg, rgba(252,238,10,.06), var(--panel)); }
+.tool .tag.new { font-size: 11px; vertical-align: middle; margin-left: 6px; position: relative; top: -4px; }

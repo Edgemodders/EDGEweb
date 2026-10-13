@@ -10,10 +10,11 @@
 
 The website for [edgemodders.ai](https://edgemodders.ai/), home of EDGEmodders: a new Cyberpunk 2077 modding community that brings AI to modding, so anyone can mod, not only people who already code.
 
-The site pitches the four EDGEmodders tools and links to their docs:
+The site pitches the five EDGEmodders tools and links to their docs:
 
 | Tool | Role | Docs |
 |---|---|---|
+| [REDagent](https://github.com/Edgemodders/REDagent) | Modding agent inside the game, powered by Claude | [edgemodders.github.io/REDagent](https://edgemodders.github.io/REDagent/) |
 | [REDcode](https://github.com/Edgemodders/REDcode) | Modding IDE on VS Code | [edgemodders.github.io/REDcode](https://edgemodders.github.io/REDcode/) |
 | [REDdeck](https://github.com/Edgemodders/REDdeck) | Mod manager | [edgemodders.github.io/REDdeck](https://edgemodders.github.io/REDdeck/) |
 | [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host, JSON-RPC and MCP | [edgemodders.github.io/REDbridge](https://edgemodders.github.io/REDbridge/) |

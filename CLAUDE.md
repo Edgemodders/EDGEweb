@@ -1,6 +1,6 @@
 # EDGEweb: notes for Claude sessions
 
-EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a new Cyberpunk 2077 modding community whose message is **"Anyone can mod"**. AI assistants (Claude first) make modding possible for people without coding or modding skills. The site is a landing page that pitches the four tools and links to their Pages sites. It is one of five repos by the same owner: REDnode (runtime), REDcode (IDE), REDbridge (engine host, GPL-3.0), REDdeck (mod manager) and this one. REDnode's `CLAUDE.md` sets the shared conventions.
+EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a new Cyberpunk 2077 modding community whose message is **"Anyone can mod"**. AI assistants (Claude first) make modding possible for people without coding or modding skills. The site is a landing page that pitches the five tools and links to their Pages sites. It is one of six repos by the same owner: REDagent (in-game modding agent), REDnode (runtime), REDcode (IDE), REDbridge (engine host, GPL-3.0), REDdeck (mod manager) and this one. REDnode's `CLAUDE.md` sets the shared conventions.
 
 ## Site
 
