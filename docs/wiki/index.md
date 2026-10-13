@@ -3,7 +3,7 @@ title: The EDGE platform
 nav_title: The EDGE platform
 section: Start here
 order: 0
-description: An introduction to EDGE, the agent-based modding platform for Cyberpunk 2077, and the EDGEmodders wiki.
+description: "An introduction to EDGE, the agent-based modding platform for Cyberpunk 2077, and the EDGEmodders wiki."
 reviewed: 2026-10-13
 ---
 

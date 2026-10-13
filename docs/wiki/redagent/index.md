@@ -3,7 +3,7 @@ title: REDagent
 nav_title: Overview
 section: REDagent
 order: 0
-description: REDagent, the modding agent inside Cyberpunk 2077, powered by Claude. What it does, what it needs, and where to start.
+description: "REDagent, the modding agent inside Cyberpunk 2077, powered by Claude. What it does, what it needs, and where to start."
 reviewed: 2026-10-13
 ---
 

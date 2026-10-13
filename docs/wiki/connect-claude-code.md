@@ -3,7 +3,7 @@ title: Connect Claude Code to the EDGE tools
 nav_title: Connect Claude Code
 section: Start here
 order: 4
-description: Give Claude Code on your PC the EDGE tools over MCP, so it can read game files, manage mods and call the running game.
+description: "Give Claude Code on your PC the EDGE tools over MCP, so it can read game files, manage mods and call the running game."
 reviewed: 2026-10-13
 ---
 

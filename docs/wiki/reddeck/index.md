@@ -3,7 +3,7 @@ title: REDdeck
 nav_title: Overview
 section: REDdeck
 order: 0
-description: REDdeck, EDGE's mod manager for Cyberpunk 2077 inside VS Code. One list of mods, four verbs, every deploy undoable.
+description: "REDdeck, EDGE's mod manager for Cyberpunk 2077 inside VS Code. One list of mods, four verbs, every deploy undoable."
 reviewed: 2026-10-13
 ---
 

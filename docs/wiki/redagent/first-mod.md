@@ -3,7 +3,7 @@ title: Your first mod with REDagent
 nav_title: Your first mod
 section: REDagent
 order: 1
-description: Make a working Cyberpunk 2077 mod with REDagent, from setup to undo, without writing code.
+description: "Make a working Cyberpunk 2077 mod with REDagent, from setup to undo, without writing code."
 reviewed: 2026-10-13
 ---
 

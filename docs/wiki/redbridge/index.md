@@ -3,7 +3,7 @@ title: REDbridge
 nav_title: Overview
 section: REDbridge
 order: 0
-description: REDbridge, EDGE's engine host: WolvenKit's C# engine as a local service for REDcode, REDdeck and AI agents.
+description: "REDbridge, EDGE's engine host: WolvenKit's C# engine as a local service for REDcode, REDdeck and AI agents."
 reviewed: 2026-10-13
 ---
 

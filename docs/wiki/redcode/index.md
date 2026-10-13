@@ -3,7 +3,7 @@ title: REDcode
 nav_title: Overview
 section: REDcode
 order: 0
-description: REDcode, EDGE's Cyberpunk 2077 modding IDE built on VS Code, with WolvenKit compatibility and an MCP server for AI agents.
+description: "REDcode, EDGE's Cyberpunk 2077 modding IDE built on VS Code, with WolvenKit compatibility and an MCP server for AI agents."
 reviewed: 2026-10-13
 ---
 

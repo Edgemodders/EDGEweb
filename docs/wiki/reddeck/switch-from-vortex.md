@@ -3,7 +3,7 @@ title: Switch from Vortex to REDdeck
 nav_title: Switch from Vortex
 section: REDdeck
 order: 1
-description: Move your Cyberpunk 2077 mods from Vortex to REDdeck without losing anything.
+description: "Move your Cyberpunk 2077 mods from Vortex to REDdeck without losing anything."
 reviewed: 2026-10-13
 ---
 

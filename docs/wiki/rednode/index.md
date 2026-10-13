@@ -3,7 +3,7 @@ title: REDnode
 nav_title: Overview
 section: REDnode
 order: 0
-description: REDnode, EDGE's runtime for Cyberpunk 2077: Node mods, HTML overlay apps, a typed game API and an MCP server for AI agents.
+description: "REDnode, EDGE's runtime for Cyberpunk 2077: Node mods, HTML overlay apps, a typed game API and an MCP server for AI agents."
 reviewed: 2026-10-13
 ---
 

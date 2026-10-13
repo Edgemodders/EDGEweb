@@ -2,7 +2,7 @@
 title: Glossary
 section: Start here
 order: 3
-description: Plain-language definitions of Cyberpunk 2077 modding terms and EDGE terms.
+description: "Plain-language definitions of Cyberpunk 2077 modding terms and EDGE terms."
 reviewed: 2026-10-13
 ---
 

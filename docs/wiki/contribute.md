@@ -3,7 +3,7 @@ title: Contribute to the wiki
 nav_title: Contribute
 section: Start here
 order: 9
-description: How to suggest a wiki page, report a mistake or share a tip.
+description: "How to suggest a wiki page, report a mistake or share a tip."
 reviewed: 2026-10-13
 ---
 
@@ -33,7 +33,7 @@ title: Switch from Vortex to REDdeck
 nav_title: Switch from Vortex
 section: REDdeck
 order: 2
-description: One sentence for search results.
+description: "One sentence for search results."
 reviewed: 2026-10-13
 ---
 ```
