@@ -1,0 +1,10 @@
+{%- comment -%}
+  A screenshot, or a placeholder until one exists.
+  {% include shot.html caption="The Mods view" shows="What the screenshot should show." %}
+  Add src="/assets/shots/<tool>/<name>.png" once the image is in docs/assets/shots/.
+{%- endcomment -%}
+{%- if include.src -%}
+<figure class="shot"><img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption }}" loading="lazy"><figcaption>{{ include.caption }}</figcaption></figure>
+{%- else -%}
+<figure class="shot placeholder"><div class="ph"><b>Screenshot coming</b><span>{{ include.caption }}</span></div><figcaption>{{ include.shows }}</figcaption></figure>
+{%- endif -%}

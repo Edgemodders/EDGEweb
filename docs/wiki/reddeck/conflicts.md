@@ -1,0 +1,54 @@
+---
+title: Conflicts
+section: REDdeck
+order: 6
+description: "What mod conflicts are in Cyberpunk 2077, how REDdeck finds them by file and inside archives, and how to choose the winner."
+reviewed: 2026-10-13
+---
+
+# <span class="y">Conflicts</span>
+
+Two mods **conflict** when they both change the same thing. Only one version can reach the game, so one mod **wins** and the other **loses** that file.
+
+Conflicts are information, not errors. Most are on purpose: a texture mod that changes a body mod's skin is meant to win over it. REDdeck shows them, explains who wins, and never blocks a deploy because of them.
+
+## Who wins
+
+**The mod higher in the list wins.** To change the winner, move a mod up or down: hover its row and use the arrow buttons, or use **Let ... win** on the Conflicts page.
+
+## Two kinds of conflict
+
+| Kind | Example | How REDdeck finds it |
+|---|---|---|
+| **By file path** | Two mods both ship `r6/scripts/HUD/hud.reds` | From the library alone. Always on |
+| **Inside archives** | Two `.archive` files with different names both contain the same character mesh | Needs [REDbridge](../redbridge/), which reads inside archives |
+
+Conflicts inside archives are the ones most mod managers can't see. Two archive files with different names don't look like a conflict on disk, but in the game only one of them provides that mesh or texture. REDdeck opens every archive that's on, lists the resources inside, and compares them. If you don't have REDbridge, click **Get REDbridge** in the Set up group or the `...` menu.
+
+## The Conflicts page
+
+The deploy message says how many conflicts there are. **Show conflicts** opens a page with every one.
+
+{% include shot.html caption="The Conflicts page" shows="The Conflicts page with the file-path table above and the inside-archives table below, each row naming the winner and the losers, with Let ... win and Turn off buttons." %}
+
+- The **upper table** lists conflicts by file path.
+- The **lower table** lists conflicts inside archives. Its heading names the REDbridge in use.
+- Each row shows the file or resource, the winner, and the mods that lose it.
+- **Let ... win** moves that mod above the current winner.
+- **Turn off** switches the losing mod off.
+- **Deploy now** applies what you decided.
+
+## Conflicts on a single mod
+
+A mod's detail panel shows the same conflicts for that mod only. Its status line says, for example, `loses 3 archive files` or `overrides 2 archive files`.
+
+## Deciding who should win
+
+| Situation | Usually |
+|---|---|
+| A texture, colour or appearance mod over a base mod it's made for | The add-on wins: put it **higher** in the list than the base mod |
+| Two mods that do the same job (two HUD overhauls) | Pick one and turn the other off |
+| A fix or patch made for another mod | The patch wins |
+| A framework conflicting with anything | Something is wrong. Check the mod pages on Nexus for compatibility notes |
+
+When unsure, read both mods' Nexus pages: authors usually say what their mod should load before or after.

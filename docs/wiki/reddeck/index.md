@@ -3,36 +3,69 @@ title: REDdeck
 nav_title: Overview
 section: REDdeck
 order: 0
-description: "REDdeck, EDGE's mod manager for Cyberpunk 2077 inside VS Code. One list of mods, four verbs, every deploy undoable."
+description: "REDdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, and why you might want it."
 reviewed: 2026-10-13
 ---
 
 # RED<span class="y">deck</span>
 
-REDdeck is EDGE's mod manager. It runs inside VS Code and REDcode: one list of mods and four verbs, **add**, **turn on or off**, **deploy**, **remove**.
+REDdeck is the EDGE platform's mod manager for Cyberpunk 2077. It runs inside VS Code (and inside REDcode, which is built on VS Code) and looks after the mods you download: it keeps them, puts the ones you want into the game, takes them out again, and tells you when two of them fight over the same thing.
 
-## Benefits
+{% include shot.html caption="REDdeck in VS Code" shows="The REDdeck Mods view in VS Code's sidebar with a typical list of mods, the Frameworks group at the top, and the REDdeck page open beside it." %}
 
-- **Simple.** One list, four verbs, plain words. It decides where files go and asks only when a wrong guess could lose data.
-- **Undoable.** Your mods live in a library outside the game. Deploys are hardlinked and recorded in a manifest, and **Undo deploy** removes exactly those files.
-- **Sees deeper conflicts.** With REDbridge, REDdeck shows conflicts between files *inside* mod archives, with a "Let ... win" button.
-- **Knows the frameworks.** Recognises RED4ext, CET, redscript, ArchiveXL, TweakXL, REDmod and more, and warns after a game patch.
-- **Nexus Mods built in.** Daily update checks, version switching and **Mod manager download** links.
-- **Moves in from Vortex.** Imports your Vortex mods and leaves Vortex's copies alone.
-- **Agent-ready.** A command line and an MCP server with the same verbs, so an assistant can manage your mods. It asks before deploying.
+## What it's for
 
-## Install
+Cyberpunk 2077 has no built-in list of mods. A mod is a set of files dropped into the right folders inside the game folder: archives in one place, scripts in another, plugins in a third. Doing that by hand works for two or three mods. With twenty, you lose track of which file came from which mod, removing a mod means hunting for its files, and a game update can quietly break everything.
 
-Download `reddeck-<version>.vsix` from the [releases page](https://github.com/Edgemodders/REDdeck/releases) and install it in VS Code with **Install from VSIX...**. A **Set up** group then walks you through finding the game, getting REDbridge, Nexus sign-in and Vortex import.
+A mod manager does that bookkeeping for you. REDdeck:
 
-## In this wiki
+- **keeps your mods in a library** outside the game folder, so turning a mod off doesn't mean deleting it;
+- **deploys** the mods you switch on into the game folder, and records every file it puts there;
+- **undoes** a deploy exactly, removing only the files it placed;
+- **shows conflicts** when two mods change the same thing, and lets you choose the winner;
+- **checks Nexus Mods** for updates and downloads them for you.
+
+## Why you might want it
+
+| If you... | REDdeck gives you |
+|---|---|
+| Find other mod managers confusing | One list of mods and four verbs: **add**, **turn on or off**, **deploy**, **remove**. Plain words, and no profiles, staging, purges or rules to learn |
+| Worry about breaking your game | Every deploy is recorded in a manifest and can be undone. REDdeck never deletes a file it didn't put there |
+| Have mods that clash in strange ways | REDdeck sees conflicts *inside* mod archives, which file-based managers like Vortex can't see, and explains who wins |
+| Already use Vortex | A one-click import of your Vortex mods. Vortex keeps its copies, so you can go back |
+| Want an AI assistant to manage mods for you | A command line and an MCP server with the same verbs, so Claude or another agent can list, add, switch and deploy mods, asking you before it touches the game |
+| Make mods in REDcode | Your project's packed output becomes a mod that refreshes every time you pack |
+
+## How it fits into EDGE
+
+REDdeck is the **Deploy** stage of the EDGE platform. It works on its own, and other toolkits add to it when they're present:
+
+| Toolkit | What it adds to REDdeck |
+|---|---|
+| [REDbridge](../redbridge/) | Reads inside mod archives, so REDdeck can show archive-level conflicts. REDdeck downloads and updates it for you |
+| [REDcode](../redcode/) | A REDcode project can become a REDdeck mod, and REDdeck mods can feed files back into a project |
+| Claude and other agents | REDdeck's MCP server lets an AI assistant manage your mods |
+
+## Status
+
+REDdeck is at version 0.19 and manages its developer's game on two PCs. It isn't on the VS Code Marketplace yet; it installs from a file on its [releases page](https://github.com/Edgemodders/REDdeck/releases). Nexus sign-in through the browser is built and waits for Nexus to register REDdeck; until then you paste a personal API key, which works the same way.
+
+## In this section
 
 | Page | |
 |---|---|
-| [Switch from Vortex to REDdeck](switch-from-vortex.html) | Move your existing mods over safely |
+| [Install and set up](install.html) | Requirements, installing, the Set up steps, updating and uninstalling |
+| [Switch from Vortex](switch-from-vortex.html) | Move your mods over safely |
+| [The Mods view and the REDdeck page](mods-view.html) | Find your way around |
+| [Adding mods](adding-mods.html) | From files, folders and Nexus, and how REDdeck decides where files go |
+| [Deploying and undo](deploying.html) | What deploy does, hardlinks, changes outside REDdeck, undo |
+| [Conflicts](conflicts.html) | What they are, who wins, and how to choose |
+| [Nexus Mods](nexus.html) | Signing in, download links, updates and versions |
+| [Frameworks and game patches](frameworks.html) | RED4ext, CET, redscript and friends, and what to do after a game update |
+| [Library, disk space and loadouts](library.html) | Where everything is kept, what uses space, saved lists |
+| [REDdeck and REDcode](redcode.html) | Testing your own mods, and borrowing files from installed ones |
+| [Assistants and the command line](assistants.html) | Let Claude manage your mods, or script REDdeck |
+| [Settings and commands](settings.html) | Every setting and command |
+| [Troubleshooting](troubleshooting.html) | Symptoms and fixes |
 
-## Reference
-
-- [REDdeck guide](https://edgemodders.github.io/REDdeck/guide.html): every view, setting and command, plus troubleshooting
-- [Design](https://edgemodders.github.io/REDdeck/design.html)
-- [Releases](https://github.com/Edgemodders/REDdeck/releases), [source and issues](https://github.com/Edgemodders/REDdeck)
+The [REDdeck guide](https://edgemodders.github.io/REDdeck/guide.html) and [design](https://edgemodders.github.io/REDdeck/design.html) on REDdeck's own docs site are the reference this section draws on.
