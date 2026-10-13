@@ -1,0 +1,57 @@
+---
+title: The EDGE platform
+nav_title: The EDGE platform
+section: Start here
+order: 0
+description: An introduction to EDGE, the agent-based modding platform for Cyberpunk 2077, and the EDGEmodders wiki.
+reviewed: 2026-10-13
+---
+
+# The EDGE <span class="y">platform</span>
+
+**EDGE** is an open, agent-based modding platform for Cyberpunk 2077, built by the EDGEmodders community. It brings creating, testing, deploying and running mods into one platform. An AI agent works through it with you, using the same tools you do.
+
+Modding Cyberpunk used to mean learning file formats, scripting languages and a toolchain of separate programs before you could make anything. EDGE's goal is that **anyone can mod**. Describe what you want in plain words, see every change before it happens, and try it in the running game straight away.
+
+## The toolkits
+
+EDGE is five open-source toolkits. Each works on its own; together they cover the whole life of a mod.
+
+| Stage | Toolkit | What it does |
+|---|---|---|
+| Ask | [REDagent](redagent/) | A modding agent inside the game, powered by Claude. Writes, runs, checks and fixes mods with you while you play |
+| Create | [REDcode](redcode/) | A modding IDE built on VS Code. Browse the game's archives and edit game files as JSON |
+| Build | [REDbridge](redbridge/) | WolvenKit's engine as a local service, for the editor and for AI agents |
+| Deploy | [REDdeck](reddeck/) | A mod manager inside VS Code. Add, turn on or off, deploy, remove, and undo |
+| Run | [REDnode](rednode/) | The runtime. Node mods and HTML overlay apps in the running game, with hot reload |
+
+## Platform benefits
+
+Together, the toolkits' benefits add up to these. Each toolkit's page lists its own.
+
+| Benefit | What it means | From |
+|---|---|---|
+| **Anyone can mod** | Describe a mod in plain words; an agent writes, runs and fixes it | [REDagent](redagent/) |
+| **Agent-ready everywhere** | Every toolkit offers its tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop | [REDnode](rednode/), [REDcode](redcode/), [REDdeck](reddeck/) |
+| **You stay in control** | Every file change is shown before it happens, and agent changes and deploys can be undone | [REDagent](redagent/), [REDdeck](reddeck/) |
+| **Live in the game** | Mods hot-reload into the running game; overlay apps draw HTML windows and HUD widgets over it | [REDnode](rednode/) |
+| **Crash isolation** | Mods and overlay apps run outside the game process, so a crash doesn't take the game down | [REDnode](rednode/) |
+| **Everything is text** | Game files as JSON, tweaks as YAML, mods in JavaScript and TypeScript, with a typed game API | [REDcode](redcode/), [REDnode](rednode/) |
+| **WolvenKit inside** | WolvenKit's engine does the file work; WolvenKit projects open and pack as they are | [REDbridge](redbridge/), [REDcode](redcode/) |
+| **Simple mod management** | One list, four verbs, conflicts even inside archives, Nexus updates, Vortex import | [REDdeck](reddeck/) |
+| **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |
+
+> **Status:** EDGE is early and moving fast. REDagent writes working mods in game, REDnode mods and overlay apps pass in-game tests, and REDdeck manages its developer's own game, but most toolkits still install from source or release files. The [platform page](/platform.html) shows where each feature stands.
+
+## About this wiki
+
+Each toolkit's docs site is its reference: every setting, the design, the API. This wiki sits on top of them, written for people. It covers how to start, how to do common things, and what to do when something goes wrong.
+
+| Start with | If |
+|---|---|
+| [Getting started](getting-started.html) | You're new and want to know which toolkit to use for what |
+| [FAQ](faq.html) | You have a quick question about cost, safety or compatibility |
+| [Glossary](glossary.html) | A word like CR2W, TweakDB or MCP stopped you |
+| [Connect Claude Code](connect-claude-code.html) | You want an AI agent on your PC to use the EDGE tools |
+
+The wiki is curated: pages are checked against each toolkit's docs, and each one shows when it was last reviewed. To suggest a page or report a mistake, see [Contribute](contribute.html), or come and talk on [Discord]({{ site.discord }}).

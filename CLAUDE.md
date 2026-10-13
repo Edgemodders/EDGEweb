@@ -11,6 +11,15 @@ EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a ne
 - Deployed by `.github/workflows/pages.yml`. Custom domain `edgemodders.ai` is set in Settings > Pages, not with a CNAME file (Actions deploys ignore it).
 - Tool status lines on the cards come from each tool's README and CLAUDE.md. Keep them current and honest; mark anything unbuilt as such. The transcript in "The loop" is labelled illustrative and must stay labelled until the loop works end to end.
 
+## Wiki (curated by Claude sessions)
+
+- `docs/wiki/` is the EDGEmodders wiki at https://edgemodders.ai/wiki/. Claude sessions write and curate it; the community suggests changes on Discord or in issues (see `docs/wiki/contribute.md`). Terminology: the whole suite is the **EDGE platform**; REDagent, REDnode, REDcode, REDdeck and REDbridge are its toolkits.
+- The wiki home (`docs/wiki/index.md`) introduces the EDGE platform. Its Platform benefits table is a summary of the Benefits lists on the toolkit pages: when a toolkit page's benefits change, update the summary too.
+- Layout: `docs/_layouts/wiki.html` (sidebar built from page front matter) and the wiki rules at the end of `docs/assets/css/hud.css`. Sidebar groups are `wiki_sections` in `docs/_config.yml`.
+- Every page needs front matter: `title`, `nav_title` (optional, sidebar label), `section` (one of `wiki_sections`), `order`, `description`, `reviewed` (date of the last check). One folder per toolkit, `index.md` as its overview.
+- Sources of truth are the toolkits' own docs and CLAUDE.md files (read them with `gh api repos/Edgemodders/<repo>/contents/...` or the sibling checkouts, after a pull). The wiki explains and links; it does not copy reference material. Never state a feature works unless its repo says it passed or shipped; say "planned" or "untested" otherwise.
+- When curating: re-check each page touched against its sources, update `reviewed`, keep the toolkit statuses on `index.html` and `platform.html` consistent with the wiki, and answer recurring Discord or issue questions with FAQ entries or new pages.
+
 ## Conventions
 
 - Commit straight to `main` and push, in small logical commits. Agree the plan in chat first.

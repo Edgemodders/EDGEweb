@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{%- assign wiki = site.pages | where_exp: "p", "p.url contains '/wiki/'" -%}
+<div class="wiki">
+  <nav class="wiki-nav" aria-label="Wiki pages">
+    <a class="wiki-home" href="{{ '/wiki/' | relative_url }}">// EDGEmodders wiki</a>
+    {%- for section in site.wiki_sections %}
+    {%- assign items = wiki | where: "section", section | sort: "order", "last" %}
+    {%- if items.size > 0 %}
+    <h4>{{ section }}</h4>
+    <ul>
+      {%- for p in items %}
+      <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.nav_title | default: p.title }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    {%- endfor %}
+  </nav>
+  <article class="wiki-body">
+    <div class="crumbs"><a href="{{ '/wiki/' | relative_url }}">Wiki</a>{% if page.url != "/wiki/" %} / {{ page.section }}{% endif %}</div>
+{{ content }}
+    {%- if page.reviewed %}
+    <p class="wiki-meta">Last reviewed {{ page.reviewed }}. Something wrong or missing? Tell us on <a href="{{ site.discord }}">Discord</a> or <a href="{{ site.repo }}/issues">open an issue</a>.</p>
+    {%- endif %}
+  </article>
+</div>
