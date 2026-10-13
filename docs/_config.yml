@@ -10,6 +10,10 @@ repo: https://github.com/Edgemodders/EDGEweb
 # Community Discord invite. index.html and platform.html hard-code the same URL: update all three together.
 discord: https://discord.gg/63qP3Erw43
 
+# Screenshots waiting to be checked are never published.
+exclude:
+  - assets/shots/inbox
+
 markdown: kramdown
 kramdown:
   input: GFM
