@@ -3,7 +3,7 @@ title: Getting started
 section: Start here
 order: 1
 description: "Which EDGE tool to use for what, and what you need before you start."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Getting <span class="y">started</span>

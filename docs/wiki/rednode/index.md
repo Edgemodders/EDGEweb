@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDnode
 order: 0
 description: "REDnode, EDGE's runtime for Cyberpunk 2077: Node mods, HTML overlay apps, a typed game API and an MCP server for AI agents."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # RED<span class="y">node</span>
@@ -18,7 +18,7 @@ REDnode is EDGE's runtime. It attaches to Cyberpunk 2077 as a RED4ext plugin and
 - **Hot reload.** Change a mod and REDnode restarts it in the running game, with no game restart.
 - **Crash isolation.** Mods and overlay apps run in their own process, outside the game. If one crashes, the game keeps running.
 - **A typed game API.** Call any game function, with types generated from the game's own type system and a published reference.
-- **Agent-ready.** An MCP server gives AI agents mod logs, overlay windows, game types and live game calls, asking you before calls that change the game.
+- **Agent-ready.** An MCP server gives AI agents mod logs, overlay windows, pictures of the game's screen, game types, TweakDB and live game calls, asking you before calls that change the game.
 - **Native where it counts.** The overlay is drawn with the game's own Direct3D 12 device.
 
 ## Status
@@ -28,10 +28,10 @@ REDnode is EDGE's runtime. It attaches to Cyberpunk 2077 as a RED4ext plugin and
 | HTML overlay apps, UI kit, HUD widgets | Passed in game |
 | Node mods and the typed game API | Passed in game |
 | MCP server for agents | Passed in game |
+| Debugger for apps and Node mods, in the game | Passed in game. A Node mod in debug mode also shows an address VS Code can attach to |
 | In-game sandboxed code (Tier 1), declarative rules | Not started |
-| Live debugging from VS Code | Planned |
 
-REDnode installs from source for now, following its [developer setup](https://edgemodders.github.io/REDnode/dev-setup.html).
+The current version is REDnode 0.21.0. There is no packaged release yet: REDnode installs from source, following its [developer setup](https://edgemodders.github.io/REDnode/dev-setup.html).
 
 ## Good to know
 

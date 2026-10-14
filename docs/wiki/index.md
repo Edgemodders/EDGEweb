@@ -4,7 +4,7 @@ nav_title: The EDGE platform
 section: Start here
 order: 0
 description: "An introduction to EDGE, the agent-based modding platform for Cyberpunk 2077, and the EDGEmodders wiki."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # The EDGE <span class="y">platform</span>
@@ -32,7 +32,7 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | Benefit | What it means | From |
 |---|---|---|
 | **Anyone can mod** | Describe a mod in plain words; an agent writes, runs and fixes it | [REDagent](redagent/) |
-| **Agent-ready everywhere** | Every toolkit offers its tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop | [REDnode](rednode/), [REDcode](redcode/), [REDdeck](reddeck/) |
+| **Agent-ready everywhere** | REDnode, REDcode and REDdeck offer their tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop | [REDnode](rednode/), [REDcode](redcode/), [REDdeck](reddeck/) |
 | **You stay in control** | Every file change is shown before it happens, and agent changes and deploys can be undone | [REDagent](redagent/), [REDdeck](reddeck/) |
 | **Live in the game** | Mods hot-reload into the running game; overlay apps draw HTML windows and HUD widgets over it | [REDnode](rednode/) |
 | **Crash isolation** | Mods and overlay apps run outside the game process, so a crash doesn't take the game down | [REDnode](rednode/) |

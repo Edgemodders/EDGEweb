@@ -4,7 +4,7 @@ nav_title: Connect Claude Code
 section: Start here
 order: 4
 description: "Give Claude Code on your PC the EDGE tools over MCP, so it can read game files, manage mods and call the running game."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Connect <span class="y">Claude Code</span>
@@ -13,8 +13,8 @@ REDagent is the agent inside the game. On your desktop, [Claude Code](https://cl
 
 | MCP server | From | Gives the agent | Setup |
 |---|---|---|---|
-| REDnode kernel | REDnode | Mod logs, overlay windows (text and image), game types, live calls into the running game | [REDnode MCP docs](https://edgemodders.github.io/REDnode/mcp.html) |
-| `redcode-mcp` | REDcode | The game's archives, game files as JSON, textures, hashes, node-by-node file editing (through REDbridge) | [REDcode MCP docs](https://edgemodders.github.io/REDcode/mcp.html) |
+| REDnode kernel | REDnode | Mod logs, overlay windows (text, image and console), pictures of the game's screen, game types, TweakDB reads, live calls into the running game | [REDnode MCP docs](https://edgemodders.github.io/REDnode/mcp.html) |
+| `redcode-mcp` | REDcode | The game's archives, game files as JSON, textures, hashes, node-by-node file editing, project export and import (through REDbridge) | [REDcode MCP docs](https://edgemodders.github.io/REDcode/mcp.html) |
 | REDdeck | REDdeck | The mod library: list, add, turn on or off, reorder, remove, deploy, undo, conflicts, loadouts, Vortex import | [REDdeck guide, section 13](https://edgemodders.github.io/REDdeck/guide.html) |
 
 ## In short

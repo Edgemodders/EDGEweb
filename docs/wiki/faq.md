@@ -3,7 +3,7 @@ title: FAQ
 section: Start here
 order: 2
 description: "Quick answers about EDGE, REDagent, cost, safety and compatibility with other Cyberpunk 2077 modding tools."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # <span class="y">FAQ</span>

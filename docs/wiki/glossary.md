@@ -3,7 +3,7 @@ title: Glossary
 section: Start here
 order: 3
 description: "Plain-language definitions of Cyberpunk 2077 modding terms and EDGE terms."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # <span class="y">Glossary</span>
@@ -27,7 +27,7 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | redscript | A language for scripting the game, compiled into the game's own scripts |
 | RTTI | The game's type system: the classes, functions and enums it knows about at runtime. REDnode's game API is generated from it |
 | TweakDB | The game's database of item stats, characters and settings |
-| TweakXL | A framework that changes TweakDB with simple YAML files (`.yaml` or `.tweak`) |
+| TweakXL | A framework that changes TweakDB with simple text files: YAML (`.yaml`) or the game's own tweak format (`.tweak`) |
 | Vortex | A general-purpose mod manager. REDdeck can import its mods |
 | WolvenKit | The community's main Cyberpunk modding tool. EDGE builds on its engine |
 
