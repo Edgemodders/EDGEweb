@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/brand/banner.png" alt="EDGEmodders: Anyone can mod. AI-first, open-source tools for Night City. Editor REDcode, manager REDdeck, engine REDbridge, runtime REDnode." width="100%">
+  <img src="docs/assets/brand/banner.png" alt="EDGEmodders: Anyone can mod. AI-first, open-source tools for Night City. Agent REDagent, editor REDcode, manager REDdeck, engine REDbridge, runtime REDnode." width="100%">
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@ The site pitches the five EDGEmodders tools and links to their docs:
 | [REDagent](https://github.com/Edgemodders/REDagent) | Modding agent inside the game, powered by Claude | [edgemodders.github.io/REDagent](https://edgemodders.github.io/REDagent/) |
 | [REDcode](https://github.com/Edgemodders/REDcode) | Modding IDE on VS Code | [edgemodders.github.io/REDcode](https://edgemodders.github.io/REDcode/) |
 | [REDdeck](https://github.com/Edgemodders/REDdeck) | Mod manager | [edgemodders.github.io/REDdeck](https://edgemodders.github.io/REDdeck/) |
-| [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host, JSON-RPC and MCP | [edgemodders.github.io/REDbridge](https://edgemodders.github.io/REDbridge/) |
+| [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host over JSON-RPC (its MCP server is in REDcode) | [edgemodders.github.io/REDbridge](https://edgemodders.github.io/REDbridge/) |
 | [REDnode](https://github.com/Edgemodders/REDnode) | Node.js runtime scripting | [edgemodders.github.io/REDnode](https://edgemodders.github.io/REDnode/) |
 
 ## Repository layout
@@ -25,6 +25,8 @@ The site pitches the five EDGEmodders tools and links to their docs:
 | Path | Contents |
 |---|---|
 | `docs/index.html` | The landing page, standalone HTML in the HUD style |
+| `docs/platform.html` | The EDGE platform page, standalone HTML sharing `docs/assets/css/site.css` with the landing page |
+| `docs/wiki/` | The EDGEmodders wiki, rendered with `docs/_layouts/wiki.html` |
 | `docs/*.md` | Further pages, rendered by Jekyll with `docs/_layouts/default.html` and `docs/assets/css/hud.css` |
 | `docs/assets/tools/` | Tool icons, copied from each tool's `docs/assets/brand/icon.png` |
 | `tools/brand/` | Generates the banner, social preview, icon and badges |

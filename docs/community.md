@@ -43,14 +43,14 @@ You know things no model knows yet: which records matter, which frameworks clash
 
 ### Tool builders
 
-The stack is TypeScript, Node, VS Code extensions, C# (.NET) and MCP. Each repo has a `docs/dev-setup.md` with every install step.
+The stack is TypeScript, JavaScript, Node, VS Code extensions, C# (.NET), C++ and MCP. Each repo has its install steps in `docs/dev-setup.md`, or in its README for REDagent.
 
 | Repo | What it is | Language |
 |---|---|---|
 | [REDagent](https://github.com/Edgemodders/REDagent) | Modding agent inside the game, powered by Claude | JavaScript |
 | [REDcode](https://github.com/Edgemodders/REDcode) | Modding IDE built on VS Code | TypeScript |
 | [REDdeck](https://github.com/Edgemodders/REDdeck) | Mod manager inside VS Code | TypeScript |
-| [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host, JSON-RPC and MCP | C# |
+| [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host over JSON-RPC | C# |
 | [REDnode](https://github.com/Edgemodders/REDnode) | Node.js runtime scripting for the game | C++, TypeScript |
 
 ## Ground rules
