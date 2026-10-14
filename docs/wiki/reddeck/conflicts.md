@@ -3,7 +3,7 @@ title: Conflicts
 section: REDdeck
 order: 6
 description: "What mod conflicts are in Cyberpunk 2077, how REDdeck finds them by file and inside archives, and how to choose the winner."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # <span class="y">Conflicts</span>
@@ -14,7 +14,7 @@ Conflicts are information, not errors. Most are on purpose: a texture mod that c
 
 ## Who wins
 
-**The mod higher in the list wins.** To change the winner, move a mod up or down: hover its row and use the arrow buttons, or use **Let ... win** on the Conflicts page.
+**The mod higher in the list wins.** To change the winner, move a mod up or down: hover its row and use the arrow buttons, or choose **Let ... win** on the Conflicts page.
 
 ## Two kinds of conflict
 
@@ -33,9 +33,11 @@ The deploy message says how many conflicts there are. **Show conflicts** opens a
 
 - The **upper table** lists conflicts by file path.
 - The **lower table** lists conflicts inside archives. Its heading names the REDbridge in use.
-- Each row shows the file or resource, the winner, and the mods that lose it.
-- **Let ... win** moves that mod above the current winner.
-- **Turn off** switches the losing mod off.
+- Each row is one pair of mods, with the files or resources they share folded inside, the winner and the loser.
+- Each row has one **Choose** menu, and a choice settles every file of that pair:
+  - **Let ... win** moves that mod just above the other.
+  - **Turn off ...** switches one of the two off.
+  - **Use only ...** keeps one version, when the pair is two versions of the same mod.
 - **Deploy now** applies what you decided.
 
 ## Conflicts on a single mod

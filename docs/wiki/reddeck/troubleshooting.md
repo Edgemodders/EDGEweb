@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: REDdeck
 order: 13
 description: "Fixes for common REDdeck problems: game not found, Vortex, missing conflicts, changed files, Nexus downloads, and a game that won't start."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Troubleshooting <span class="y">REDdeck</span>

@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: REDdeck
 order: 12
 description: "Every REDdeck setting with its default and when to change it, and every REDdeck command."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Settings and <span class="y">commands</span>
@@ -24,12 +24,13 @@ Open VS Code's settings (`Ctrl+,`) and search for `reddeck`. Most people never c
 | `reddeck.nexusCheckUpdatesOnStart` | on | Asks Nexus once a day whether your mods have newer files. Needs a Nexus sign-in | You don't want daily update checks |
 | `reddeck.nexusClientId` | empty | The sign-in id Nexus assigns to REDdeck. With it, sign-in happens in your browser and renews itself | Only when told to in REDdeck's release notes |
 | `reddeck.nexusApplication` | empty | The application name for Nexus's older sign-in, used when there's no client id | Only when told to in REDdeck's release notes |
+| `reddeck.vortexStagingPath` | empty | Where Vortex keeps its Cyberpunk mods, for **Import from Vortex**. Empty means REDdeck looks in the usual places and asks when it finds none | Vortex keeps its mods somewhere unusual. Import sets it for you when it asks |
 
 > **Never set `DOTNET_ROOT` for your whole Windows account.** Every .NET program then looks only there, and it breaks other tools, Vortex among them. If REDbridge needs a different .NET, use `reddeck.dotnetRoot`, which applies to REDbridge alone.
 
 ## Commands
 
-Open the command palette (`Ctrl+Shift+P`) and type `REDdeck` to see them all. Most are also buttons in the Mods view, the REDdeck page or a mod's right-click menu.
+Open the command palette (`Ctrl+Shift+P`) and type `REDdeck` to see them. Most are also buttons in the Mods view, the REDdeck page or a mod's right-click menu. Most single-mod commands, and Not now, appear only there, not in the palette.
 
 ### Everyday
 
@@ -52,7 +53,8 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDdeck` to see them all. Mo
 | Switch version... | Makes another version of the mod the active one |
 | Open on Nexus Mods | Opens its Nexus page |
 | Reveal in File Explorer | Opens its library folder |
-| Add to Project | Copies its files into the open REDcode project |
+| Reveal in Game Folder | Shows where the mod, folder or file sits in the game folder, in File Explorer |
+| Add to Project | Copies its files into the open REDcode project. For an archive, REDcode extracts the resources you pick |
 | Remove | Deletes it from the library |
 
 ### Nexus Mods
@@ -72,12 +74,17 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDdeck` to see them all. Mo
 | Command | Does |
 |---|---|
 | REDdeck: Set up... | Lists every setup step, done or not, and brings hidden ones back |
+| Not now | The **x** on a Set up row. Hides that step |
 | Pick the game folder... | Chooses the game folder by hand |
 | Get REDbridge | Downloads REDbridge for conflicts inside archives |
 | Update REDbridge | Checks for and installs a newer REDbridge |
 | Import from Vortex | Copies Vortex's mods into the library |
 | Add from REDcode project | Adds a project's packed output as a mod |
-| Save loadout, Load loadout | Saves or applies a list of mods |
+| Switch loadout... | Makes another loadout active. Deploy afterwards |
+| Save as new loadout... | Saves the mods as they are now as a new loadout. The active one stays active |
+| Export the active loadout... | Writes the active loadout to a file, to share or keep |
+| Import a loadout... | Adds a loadout file as a new loadout |
 | Open library folder | Opens the library in File Explorer |
 | Show log | Opens REDdeck's log |
 | REDdeck: Connect an assistant (MCP)... | Sets up Claude Code or another assistant |
+| Suggest the HUD theme | Offers REDnode HUD, the colour theme REDdeck's pages are drawn for. REDdeck offers it once by itself |

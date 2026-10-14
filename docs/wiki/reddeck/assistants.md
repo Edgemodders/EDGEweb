@@ -4,7 +4,7 @@ nav_title: Assistants and CLI
 section: REDdeck
 order: 11
 description: "Let Claude or another AI assistant manage your mods through REDdeck's MCP server, or script REDdeck from the command line."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Assistants and the <span class="y">command line</span>
@@ -25,7 +25,7 @@ Once an assistant is connected, ask in plain words:
 
 > Save my current setup as a loadout called "photo mode".
 
-The assistant uses REDdeck's tools: list and inspect mods, add, turn on or off, reorder, remove, show pending changes, deploy, undo, changes in the game folder, conflicts, loadouts and Vortex import.
+The assistant uses REDdeck's tools: list and inspect mods, add, install a REDcode project, turn on or off, reorder, remove, show pending changes, deploy, undo, changes in the game folder, conflicts, loadouts and Vortex import.
 
 {% include shot.html caption="An assistant managing mods" shows="Claude Code in a terminal answering &quot;which of my mods conflict?&quot; using REDdeck's tools, and the Mods view updating on its own." %}
 
@@ -54,15 +54,16 @@ The same engine runs from a terminal, for your own scripts. It comes with REDdec
 | `list [--size]` | What's in the library, with sizes and status. `--size` sorts by size |
 | `mod <id>` | One mod in full: files, sizes, source, Nexus data, conflicts |
 | `add <file or folder> [--name N] [--option FOLDER]` | Add a mod. `--option` picks one of a download's option folders |
+| `install-project <.cpmodproj>` | Add a REDcode or WolvenKit project's packed output, or refresh it, and turn it on |
 | `on <id>`, `off <id>` | Turn a mod on or off |
 | `up <id>`, `down <id>` | Move it in the order (first wins conflicts) |
 | `remove <id>` | Remove it from the library |
-| `deploy [--keep PATH...] [--restore PATH...]` | Deploy. `--keep` and `--restore` answer the "changed in game folder" question per file |
+| `deploy [--keep PATH...] [--restore PATH...]` | Deploy. `--keep` and `--restore` answer the "changed in game folder" question per file. Writes a deploy report and prints where |
 | `undo` | Undo deploy |
 | `changes` | Files changed in the game folder since the last deploy |
 | `pending` | What the next deploy would do, and why |
 | `conflicts` | Conflicts by file path |
-| `loadout save <name>`, `loadout load <file>`, `loadout list` | Loadouts |
+| `loadout save <name>`, `loadout load <name or file>`, `loadout list` | Loadouts. `load` makes one active (a file is imported first); `list` marks the active one |
 | `vortex list`, `vortex import` | See and import Vortex's mods |
 | `mcp` | Start the MCP server |
 

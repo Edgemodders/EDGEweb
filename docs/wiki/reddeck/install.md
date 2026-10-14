@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: REDdeck
 order: 1
 description: "Install REDdeck in VS Code, walk through its Set up steps, and keep it updated."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Install and set up <span class="y">REDdeck</span>
@@ -28,10 +28,10 @@ REDdeck isn't on the VS Code Marketplace yet. It installs from a `.vsix` file, w
 3. Press the **`...`** menu at the top right of the view and choose **Install from VSIX...**. Pick the file you downloaded.
 4. Run **Developer: Reload Window** from the command palette (`Ctrl+Shift+P`).
 
-If you prefer a terminal:
+If you prefer a terminal (use the name of the file you downloaded):
 
 ```powershell
-code --install-extension reddeck-0.19.0.vsix
+code --install-extension reddeck-<version>.vsix
 ```
 
 A REDdeck icon appears in the activity bar on the left of VS Code. Click it to open the **Mods** view.
@@ -48,7 +48,7 @@ The first time you open REDdeck, the Mods view shows a **Set up** group with one
 | **Get REDbridge** | Downloads REDbridge, and the .NET 10 runtime for your user account if you don't have it, so REDdeck can see conflicts inside mod archives | Recommended |
 | **Sign in to Nexus Mods** | For update checks and downloads from Nexus | Optional |
 | **Handle Nexus download links** | Makes the **Mod manager download** button on Nexus send files to REDdeck | Optional |
-| **Import from Vortex** | Copies your Vortex mods into REDdeck's library. Shown only when Vortex has Cyberpunk mods | Optional |
+| **Import from Vortex** | Copies your Vortex mods into REDdeck's library. Shown only when Vortex has Cyberpunk mods and the library has none from it yet | Optional |
 
 **REDdeck: Set up...** in the command palette lists every step, done or not, and brings hidden rows back.
 

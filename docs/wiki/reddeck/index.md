@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDdeck
 order: 0
 description: "REDdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, and why you might want it."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # RED<span class="y">deck</span>
@@ -29,7 +29,7 @@ A mod manager does that bookkeeping for you. REDdeck:
 
 | If you... | REDdeck gives you |
 |---|---|
-| Find other mod managers confusing | One list of mods and four verbs: **add**, **turn on or off**, **deploy**, **remove**. Plain words, and no profiles, staging, purges or rules to learn |
+| Find other mod managers confusing | One list of mods and four verbs: **add**, **turn on or off**, **deploy**, **remove**. Plain words, and no staging, purges or rules to learn |
 | Worry about breaking your game | Every deploy is recorded in a manifest and can be undone. REDdeck never deletes a file it didn't put there |
 | Have mods that clash in strange ways | REDdeck sees conflicts *inside* mod archives, which file-based managers like Vortex can't see, and explains who wins |
 | Already use Vortex | A one-click import of your Vortex mods. Vortex keeps its copies, so you can go back |
@@ -48,7 +48,7 @@ REDdeck is the **Deploy** stage of the EDGE platform. It works on its own, and o
 
 ## Status
 
-REDdeck is at version 0.19 and manages its developer's game on two PCs. It isn't on the VS Code Marketplace yet; it installs from a file on its [releases page](https://github.com/Edgemodders/REDdeck/releases). Nexus sign-in through the browser is built and waits for Nexus to register REDdeck; until then you paste a personal API key, which works the same way.
+REDdeck is at version 0.26 and manages its developer's game on two PCs. It isn't on the VS Code Marketplace yet; it installs from a file on its [releases page](https://github.com/Edgemodders/REDdeck/releases). Nexus sign-in through the browser is built and waits for Nexus to register REDdeck; until then you paste a personal API key, which works the same way.
 
 ## In this section
 
@@ -62,7 +62,7 @@ REDdeck is at version 0.19 and manages its developer's game on two PCs. It isn't
 | [Conflicts](conflicts.html) | What they are, who wins, and how to choose |
 | [Nexus Mods](nexus.html) | Signing in, download links, updates and versions |
 | [Frameworks and game patches](frameworks.html) | RED4ext, CET, redscript and friends, and what to do after a game update |
-| [Library, disk space and loadouts](library.html) | Where everything is kept, what uses space, saved lists |
+| [Library, disk space and loadouts](library.html) | Where everything is kept, what uses space, loadouts you switch between |
 | [REDdeck and REDcode](redcode.html) | Testing your own mods, and borrowing files from installed ones |
 | [Assistants and the command line](assistants.html) | Let Claude manage your mods, or script REDdeck |
 | [Settings and commands](settings.html) | Every setting and command |

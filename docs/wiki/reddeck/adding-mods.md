@@ -4,7 +4,7 @@ nav_title: Adding mods
 section: REDdeck
 order: 4
 description: "Add mods to REDdeck from zip, 7z and rar files, folders, Nexus Mods and Vortex, and how REDdeck decides where each file goes."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Adding <span class="y">mods</span>
@@ -14,7 +14,7 @@ Adding a mod puts it in your [library](library.html). It doesn't touch the game:
 ## From a file or folder
 
 1. Press **Add mod** in the Mods view's title bar, or on the REDdeck page's toolbar.
-2. Pick a `.zip`, `.7z` or `.rar` file, or a folder.
+2. Pick a `.zip`, `.7z` or `.rar` file, or a folder. A `.rar` needs [7-Zip](https://7-zip.org) or WinRAR installed; zip and 7z work on their own.
 
 REDdeck unpacks it, works out what kind of mod it is and where each file belongs in the game folder, and adds it to the list. It asks you only when it can't tell, for example when the download contains a choice of options.
 
@@ -33,6 +33,7 @@ Mod downloads from Nexus aren't consistent. Some are laid out from the game fold
 | `r6/scripts/` or `.reds` files | `reds` | `r6/scripts/<mod name>/` |
 | `r6/tweaks/` or TweakXL `.yaml` files | `tweak` | `r6/tweaks/<mod name>/` |
 | `init.lua` or a `cyber_engine_tweaks/mods/` folder | `cet` | `bin/x64/plugins/cyber_engine_tweaks/mods/<mod name>/` |
+| A `rednode-app.json` (a REDnode app or mod) | `rednode` | `red4ext/plugins/REDnode/apps/<id>/` |
 | `red4ext/plugins/`, or a `.dll` with no `.exe` beside it | `red4ext` | `red4ext/plugins/<mod name>/` |
 | `r6/audioware/`, `r6/input/`, `r6/config/`, `engine/config/` or `.asi` files | `audioware`, `input`, `config`, `asi` | The same path in the game folder |
 | A framework's own files (RED4ext, CET, redscript, ArchiveXL, TweakXL and others) | `framework` | The same path, shown in the Frameworks group |
@@ -55,7 +56,7 @@ Mods added from Nexus remember their Nexus id, so REDdeck can check them for upd
 
 ## From Vortex
 
-**Import from Vortex** copies the mods Vortex has for Cyberpunk into the library, with their names, versions and Nexus ids. Vortex keeps its own copies. See [Switch from Vortex](switch-from-vortex.html).
+**Import from Vortex** lists the mods Vortex has for Cyberpunk. Tick the ones you want, and REDdeck copies them into the library with their names, versions and Nexus ids. Vortex keeps its own copies. See [Switch from Vortex](switch-from-vortex.html).
 
 ## From a REDcode project
 
@@ -63,7 +64,7 @@ Mods added from Nexus remember their Nexus id, so REDdeck can check them for upd
 
 ## Versions
 
-A mod has one row however many of its versions are in the library. The newest, or the one that's on, stands for it. The others wait in the version dropdown on the REDdeck page and in **Switch version...** on the right-click menu. Adding a version the library already has does nothing.
+A mod has one row however many of its versions are in the library. The newest, or the one that's on, stands for it. The others wait in the version dropdown on the REDdeck page and in **Switch version...**, which appears when you hover the mod's row in the Mods view. Adding a version the library already has does nothing. Adding a newer version takes the old one's place in the order, on if the old one was on, and turns the old one off; an older version arrives switched off.
 
 To go back to an older version, switch to it and deploy. To clear out old versions, see [Library, disk space and loadouts](library.html).
 

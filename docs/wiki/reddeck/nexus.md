@@ -4,7 +4,7 @@ nav_title: Nexus Mods
 section: REDdeck
 order: 7
 description: "Sign REDdeck in to Nexus Mods, handle Mod manager download links, check for updates and switch versions."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Nexus <span class="y">Mods</span>
@@ -52,7 +52,7 @@ The old version stays in the library until you remove it, so you can switch back
 
 ## Switching versions
 
-On the REDdeck page, a mod's version cell is a dropdown when the library holds more than one version or Nexus has a newer one. Pick a version to make it the active one, or **Get x.y from Nexus**. In the Mods view, right-click and choose **Switch version...**. Deploy afterwards.
+On the REDdeck page, a mod's version cell is a dropdown when the library holds more than one version or Nexus has a newer one. Pick a version to make it the active one, or **Get x.y from Nexus**. In the Mods view, hover the mod's row and choose **Switch version...**. Deploy afterwards.
 
 ## Open on Nexus
 

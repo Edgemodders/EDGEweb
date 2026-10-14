@@ -3,18 +3,19 @@ title: Deploying and undo
 section: REDdeck
 order: 5
 description: "What REDdeck's Deploy does, hardlinks and copies, load order, REDmod, files changed outside REDdeck, and Undo deploy."
-reviewed: 2026-10-13
+reviewed: 2026-10-14
 ---
 
 # Deploying and <span class="y">undo</span>
 
-**Deploy** is the one REDdeck word worth learning. Turning mods on and off only changes your list. Deploy makes the game folder match it.
+**Deploy** is the one REDdeck word worth learning. Turning mods on and off only changes your list, the active [loadout](library.html#loadouts). Deploy makes the game folder match it.
 
 ## Turn on, then deploy
 
 1. Tick the mods you want, untick the ones you don't.
 2. The **Deploy** button counts the changes waiting, for example **Deploy (3 changes)**.
-3. Press **Deploy**. Progress shows in the status bar; a short message says what happened and how many conflicts there are.
+3. Press **Deploy**. Progress shows in the status bar; a short message says how many files went in for how many mods, how many mods are in the game now, and how many conflicts there are.
+4. **View** on that message opens a report of every file the deploy added, replaced or removed, mod by mod. The last 30 reports stay in the library's `deploys` folder.
 
 {% include shot.html caption="Deploy waiting" shows="The Mods view with a few mods switched on, their status not deployed yet, and the Deploy button counting the changes waiting." %}
 
