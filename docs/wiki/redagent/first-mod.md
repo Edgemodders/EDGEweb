@@ -4,7 +4,7 @@ nav_title: Your first mod
 section: REDagent
 order: 1
 description: "Make a working Cyberpunk 2077 mod with REDagent, from setup to undo, without writing code."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # Your first mod with <span class="y">REDagent</span>
@@ -39,7 +39,7 @@ REDagent looks up the game's health functions, then plans the files. Before it w
 | Button | What happens |
 |---|---|
 | **Allow** | This one change is made |
-| **Allow all in this chat** | This and every later change in this chat are made without asking, until you start a new chat with **New** |
+| **Allow all in this chat** | This and every later change in this chat are made without asking. A new chat (**New**) asks again |
 | **Deny** | Nothing changes; REDagent asks what you want instead |
 
 Press **Allow** on the first card. Once you trust where it's going, **Allow all in this chat** saves clicks.
@@ -56,6 +56,7 @@ REDnode starts the new mod a moment after its files exist. REDagent checks the m
 
 ## Tips
 
+- **Your chat is saved.** Quit the game and it comes back next time, Undo included. **Chats** lists your earlier chats. See [Using REDagent](using.html#saved-chats).
 - **Start a new chat (New) when you change topic.** The whole chat is sent with each question, so long chats cost more per answer.
 - **Sonnet for quick questions,** Opus (the default) for writing and fixing mods.
-- **Something wrong?** Open the REDnode Mod log app. REDagent's lines start with `[redagent]`. The [guide's troubleshooting table](https://edgemodders.github.io/REDagent/guide.html#when-something-goes-wrong) covers common messages.
+- **Something wrong?** Open the REDnode Mod log app. REDagent's lines start with `[redagent]`. [Using REDagent](using.html#when-something-goes-wrong) covers common messages.
