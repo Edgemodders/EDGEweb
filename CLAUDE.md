@@ -1,6 +1,6 @@
 # EDGEweb: notes for Claude sessions
 
-EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a new Cyberpunk 2077 modding community whose message is **"Anyone can mod"**. AI assistants (Claude first) make modding possible for people without coding or modding skills. The site is a landing page that pitches the five tools and links to their Pages sites. It is one of the EDGE platform's repos by the same owner, all at https://github.com/Edgemodders. The site covers five of them so far: REDagent (in-game modding agent), REDnode (runtime), REDcode (IDE), REDbridge (engine host, GPL-3.0) and REDdeck (mod manager). REDnode's `CLAUDE.md` sets the shared conventions.
+EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a new Cyberpunk 2077 modding community whose message is **"Anyone can mod"**. AI assistants (Claude first) make modding possible for people without coding or modding skills. The site is a landing page that pitches the tools and links to their Pages sites. It is one of the EDGE platform's repos by the same owner, all at https://github.com/Edgemodders. The site covers nine of them: the five core toolkits REDagent (in-game modding agent), REDnode (runtime), REDcode (IDE), REDbridge (engine host, GPL-3.0) and REDdeck (mod manager), and the specialist toolkits EDGEbuilder (world builder on REDnode), EDGEwave (sound studio), EDGEmat (material editor, planned) and EDGEkit (the editor app and its extension pack). Not covered yet: EDGEplugin (Claude Code plugin, scaffold only) and EDGEmods (empty). REDnode's `CLAUDE.md` sets the shared conventions.
 
 ## Site
 
@@ -13,7 +13,7 @@ EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a ne
 
 ## Wiki (curated by Claude sessions)
 
-- `docs/wiki/` is the EDGEmodders wiki at https://edgemodders.ai/wiki/. Claude sessions write and curate it; the community suggests changes on Discord or in issues (see `docs/wiki/contribute.md`). Terminology: the whole suite is the **EDGE platform**; REDagent, REDnode, REDcode, REDdeck and REDbridge are its toolkits.
+- `docs/wiki/` is the EDGEmodders wiki at https://edgemodders.ai/wiki/. Claude sessions write and curate it; the community suggests changes on Discord or in issues (see `docs/wiki/contribute.md`). Terminology: the whole suite is the **EDGE platform**; REDagent, REDnode, REDcode, REDdeck and REDbridge are its core toolkits; EDGEbuilder, EDGEwave, EDGEmat and EDGEkit build on them.
 - The wiki home (`docs/wiki/index.md`) introduces the EDGE platform. Its Platform benefits table is a summary of the Benefits lists on the toolkit pages: when a toolkit page's benefits change, update the summary too.
 - Layout: `docs/_layouts/wiki.html` (sidebar built from page front matter) and the wiki rules at the end of `docs/assets/css/hud.css`. Sidebar groups are `wiki_sections` in `docs/_config.yml`.
 - Every page needs front matter (quote `description` and any value containing ": ", or YAML breaks and the page drops out of the sidebar): `title`, `nav_title` (optional, sidebar label), `section` (one of `wiki_sections`), `order`, `description`, `reviewed` (date of the last check). One folder per toolkit, `index.md` as its overview.

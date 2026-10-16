@@ -10,7 +10,7 @@
 
 The website for [edgemodders.ai](https://edgemodders.ai/), home of EDGEmodders: a new Cyberpunk 2077 modding community that brings AI to modding, so anyone can mod, not only people who already code.
 
-The site pitches the five EDGEmodders tools and links to their docs:
+The site pitches the EDGEmodders tools and links to their docs:
 
 | Tool | Role | Docs |
 |---|---|---|
@@ -19,6 +19,10 @@ The site pitches the five EDGEmodders tools and links to their docs:
 | [REDdeck](https://github.com/Edgemodders/REDdeck) | Mod manager | [edgemodders.github.io/REDdeck](https://edgemodders.github.io/REDdeck/) |
 | [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host over JSON-RPC (its MCP server is in REDcode) | [edgemodders.github.io/REDbridge](https://edgemodders.github.io/REDbridge/) |
 | [REDnode](https://github.com/Edgemodders/REDnode) | Node.js runtime scripting | [edgemodders.github.io/REDnode](https://edgemodders.github.io/REDnode/) |
+| [EDGEbuilder](https://github.com/Edgemodders/EDGEbuilder) | World builder inside the game, on REDnode | [edgemodders.github.io/EDGEbuilder](https://edgemodders.github.io/EDGEbuilder/) |
+| [EDGEwave](https://github.com/Edgemodders/EDGEwave) | Sound studio beside REDcode (in development) | [edgemodders.github.io/EDGEwave](https://edgemodders.github.io/EDGEwave/) |
+| [EDGEmat](https://github.com/Edgemodders/EDGEmat) | Material editor (planned) | [edgemodders.github.io/EDGEmat](https://edgemodders.github.io/EDGEmat/) |
+| [EDGEkit](https://github.com/Edgemodders/EDGEkit) | The EDGEmodders editor and its extension pack | [edgemodders.github.io/EDGEkit](https://edgemodders.github.io/EDGEkit/) |
 
 ## Repository layout
 
