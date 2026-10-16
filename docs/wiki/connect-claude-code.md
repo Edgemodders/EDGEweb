@@ -4,7 +4,7 @@ nav_title: Connect Claude Code
 section: Start here
 order: 4
 description: "Give Claude Code on your PC the EDGE tools over MCP, so it can read game files, manage mods and call the running game."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # Connect <span class="y">Claude Code</span>
@@ -14,13 +14,13 @@ REDagent is the agent inside the game. On your desktop, [Claude Code](https://cl
 | MCP server | From | Gives the agent | Setup |
 |---|---|---|---|
 | REDnode kernel | REDnode | Mod logs, overlay windows (text, image and console), pictures of the game's screen, game types, TweakDB reads, live calls into the running game | [REDnode MCP docs](https://edgemodders.github.io/REDnode/mcp.html) |
-| `redcode-mcp` | REDcode | The game's archives, game files as JSON, textures, hashes, node-by-node file editing, project export and import (through REDbridge) | [REDcode MCP docs](https://edgemodders.github.io/REDcode/mcp.html) |
+| `redcode-mcp` | REDcode | The game's archives, game files as JSON, textures, hashes, node-by-node file editing, TweakDB, game sounds, pack, export and import (through REDbridge) | [REDcode wiki: assistants](redcode/assistants.html) |
 | REDdeck | REDdeck | The mod library: list, add, turn on or off, reorder, remove, deploy, undo, conflicts, loadouts, Vortex import | [REDdeck guide, section 13](https://edgemodders.github.io/REDdeck/guide.html) |
 
 ## In short
 
 1. **REDnode:** in the game, press **F10** to open the REDnode launcher. On the REDNODE tab, switch **MCP server** on, press **Copy setup**, and run the copied command in a terminal.
-2. **REDcode:** build the server in your REDcode checkout and register it with `claude mcp add`. The exact commands are in the REDcode MCP docs.
+2. **REDcode:** run `claude mcp add redcode -- npx -y @edgemodders/redcode-mcp` in a terminal once. It needs Node, the .NET 10 runtime and REDbridge 0.8.0 or newer (REDcode's **Install REDbridge** fetches it). The [REDcode assistants page](redcode/assistants.html) has the details, including the form Windows sometimes needs.
 3. **REDdeck:** in VS Code, run **REDdeck: Connect an assistant (MCP)...** from the command palette, pick "Copy the Claude Code command" and run it in a terminal once. Agents inside VS Code 1.101 and later see REDdeck's tools with no setup.
 
 Then start Claude Code and ask, for example:

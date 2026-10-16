@@ -37,6 +37,10 @@ wiki_sections:
   - REDcode
   - REDdeck
   - REDbridge
+  - EDGEbuilder
+  - EDGEwave
+  - EDGEmat
+  - EDGEkit
 
 # Status bar links, in order.
 nav:
