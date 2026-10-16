@@ -1,0 +1,80 @@
+---
+title: Game Assets
+section: REDcode
+order: 3
+description: "Browse the game's archives in REDcode's Game Assets view, filter and search them, open any file read-only, and add files to your project."
+reviewed: 2026-10-16
+---
+
+# Game <span class="y">Assets</span>
+
+The game keeps its files in hundreds of [archives](../glossary.html#game-and-modding-terms). The **Game Assets** view shows what's inside them as one folder tree, as if they were unpacked: `base\characters`, `base\gameplay`, `ep1\...` and so on. Nothing is unpacked on disk: REDbridge reads the archives as you go.
+
+{% include shot.html caption="The Game Assets view" shows="The Game Assets view with base expanded a few levels, folders showing their file counts, and the hover buttons on one file row." %}
+
+## Browsing
+
+Folders open when you expand them and show how many files they hold. Click a file to open it, straight from the game:
+
+| File | Opens in |
+|---|---|
+| A texture (`.xbm`) | The [texture viewer](viewers.html#textures) |
+| A mesh (`.mesh`) | The CR2W editor's [3D view](viewers.html#meshes-in-3d) |
+| A sound (`.wem`) | The [audio player](viewers.html#sounds) |
+| The sound effect index (`sfx_container.opusinfo`) | The [game sound list](viewers.html#the-games-sound-effects) |
+| Any other game file | The [CR2W editor](editing.html) |
+
+Files opened from Game Assets are **read-only**, and a banner says so. The game's own files are never changed. To change a file, add it to your project first.
+
+## Add to Project
+
+**Add to Project** copies a game file, or a whole folder of them, into your project's `source/archive`, at the same game path. It's the hover button on every row, and the first item in the right-click menu.
+
+- REDcode then shows what it added in the Project view, opened down to the file, because editing it is usually the next step.
+- For a folder, REDcode asks first and says how many files it will add.
+- It needs a project open. Without one, make one with **REDcode: New Project**. See [Projects](projects.html).
+
+Only add the files you mean to change. Every file in `source/archive` goes into your mod and replaces the game's copy.
+
+## Right-click menu
+
+| Command | Does |
+|---|---|
+| Add to Project | Copies the file or folder into the project, as above |
+| Extract to... | Copies the file or folder to any folder you choose, as it is in the archive. For a look in another tool, not for your mod |
+| Open Texture | On a texture: opens it in the texture viewer |
+| Open in Editor | Opens the file read-only in its editor or viewer, as a click does |
+| Open as JSON | Opens a copy of the file as WolvenKit JSON text, for reading. Changes to that copy go nowhere: to change the file, add it to your project. See [Editing as JSON](editing.html#editing-as-json) |
+| Copy Game Path | Copies the path inside the game, such as `base\gameplay\...`. Also a hover button. The status bar shows what was copied |
+
+## Filter
+
+The **Filter Game Assets** button in the view's title bar narrows the tree to matching files while you type.
+
+- A pattern is **words separated by spaces**, and a file must match all of them. A plain word matches anywhere in the path, so `osprey mesh` finds the Nokota Osprey's meshes.
+- `*` and `?` are wildcards: `ep1\weapons\*.xbm` or `*.inkatlas`. `/` works as well as `\`, and case doesn't matter.
+- The folders on the way to the matches open by themselves, and a chain of single folders shows as one row.
+- **Enter** keeps the filter. The message above the tree shows the pattern and how many files match. **Clear the Game Assets Filter**, the button next to it, brings the full tree back.
+- Game Assets shows at most 5,000 matches, and says so when there are more. Add words to narrow it down.
+- **Add to Project** on a folder in a filtered tree takes only the matching files under it.
+
+{% include shot.html caption="A filtered tree" shows="Game Assets filtered with a pattern such as osprey mesh, the message above the tree showing the pattern and match count, and the matching mesh files with their folders opened." %}
+
+## Search
+
+The **Search game files** button (the magnifier) opens a search box that finds files across all archives as you type. Pick a file and choose what to do with it: **Open as JSON**, **Add to project** or **Copy path**.
+
+**REDcode: Open game file as JSON**, from the command palette, is the same search, and opens the file you pick as JSON straight away.
+
+Filter or search? The filter keeps you in the tree, so you can see where files sit and add whole folders. Search is quicker when you know part of a file's name.
+
+## Sounds and TweakDB
+
+Two more ways into the game's data sit next to Game Assets:
+
+- **Browse Game Sounds**, in the Game Assets **`...`** menu, opens the game's 73,000 sound effects as a list you can filter and play. See [Textures, meshes and sounds](viewers.html#the-games-sound-effects).
+- The **TweakDB** view lists the game's database records. See [TweakDB and tweaks](tweakdb.html).
+
+## When the view is empty
+
+Game Assets shows **Set Game Folder**, **Show REDbridge log** and **Restart REDbridge** when REDbridge isn't running or has no game loaded. See [Troubleshooting](troubleshooting.html#game-assets-is-empty).

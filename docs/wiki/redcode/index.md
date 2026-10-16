@@ -3,29 +3,92 @@ title: REDcode
 nav_title: Overview
 section: REDcode
 order: 0
-description: "REDcode, EDGE's Cyberpunk 2077 modding IDE built on VS Code, with WolvenKit compatibility and an MCP server for AI agents."
-reviewed: 2026-10-14
+description: "REDcode, the EDGE platform's Cyberpunk 2077 modding workspace in VS Code: what it is, what it's for, and why you might want it."
+reviewed: 2026-10-16
 ---
 
 # RED<span class="y">code</span>
 
-REDcode is EDGE's editor: a Cyberpunk 2077 modding IDE built on VS Code. It brings WolvenKit's workflows into VS Code, where your AI agent already works. WolvenKit's own engine does the file work through [REDbridge](../redbridge/).
+REDcode is the EDGE platform's modding workspace for Cyberpunk 2077. It is an extension for VS Code, listed as **REDcode for Cyberpunk 2077**, that brings WolvenKit's way of making mods into the editor where your AI assistant already works. You browse the game's files, add the ones you want to a project, change them, look at them in 3D or listen to them, and pack the result into a mod, all in one window.
 
-## Benefits
+REDcode doesn't reinvent the hard part. Every game file is read and written by [WolvenKit](https://github.com/WolvenKit/WolvenKit)'s own libraries, which run in [REDbridge](../redbridge/), a small helper program REDcode starts for you.
 
-- **Browse the game.** A Game Assets tree over the game's archives, folder by folder.
-- **Game files as readable JSON.** Open any game file as JSON, edit it and save it back into your project.
-- **A real file editor.** A tree and property grid for game files, with undo and redo, backups, and search across a whole file.
-- **Viewers and language support.** A texture viewer, a 3D mesh viewer and TweakXL language support.
-- **WolvenKit compatible.** Opens and packs WolvenKit projects (`.cpmodproj`). A project made in REDcode opens and packs in WolvenKit.
-- **Agent-ready.** `redcode-mcp` gives AI agents the same engine: archives, files as JSON, textures, node-by-node editing, packing, export and import.
-- **All of VS Code.** Git, themes, AI assistants and the existing redscript tooling, in one place.
+{% include shot.html caption="REDcode in VS Code" shows="VS Code with the REDcode sidebar open (Project, Game Assets, TweakDB and Properties views), a game file open in the CR2W editor, and the REDcode status bar item at the bottom." %}
+
+## What it's for
+
+A Cyberpunk 2077 mod is mostly game files that have been changed: an item's appearance, a texture, a sound, a line of text, a stat in the game's database. Those files live inside the game's [archives](../glossary.html#game-and-modding-terms) in a binary format called CR2W, which no ordinary editor can open. Modders use WolvenKit to get them out, change them and pack them back.
+
+REDcode does that work inside VS Code:
+
+- **browse the game** in a folder tree, with a filter and a search;
+- **keep your work in a project**, the same `.cpmodproj` project WolvenKit uses;
+- **edit game files** in a tree and property grid, or as readable JSON text;
+- **look and listen**: textures, atlases, 3D meshes, voice lines and the game's sound effects;
+- **look things up** in TweakDB, the game's database of items and stats, and start a tweak from any record;
+- **export and import** to formats other tools edit, such as PNG and glTF;
+- **pack, install and run**: build the mod, put it in the game (through [REDdeck](../reddeck/) when you have it) and start the game.
+
+## Why you might want it
+
+| If you... | REDcode gives you |
+|---|---|
+| Want an AI assistant to help you mod | Everything is text or a click away from text. `redcode-mcp` gives Claude Code and other assistants the same engine, so they can read and edit game files with you |
+| Already use WolvenKit | Your projects open in REDcode as they are, and a project made in REDcode opens in WolvenKit. Switch back and forth freely |
+| Find big modding tools intimidating | One sidebar, three trees and a handful of buttons. Plain messages that say what went wrong and offer the fix |
+| Want to look before you change | Textures, meshes in 3D, sounds and TweakDB records open with a click, straight from the game, without extracting anything |
+| Like VS Code already | Git, themes, extensions, search and your assistant, next to your mod |
+| Use REDdeck | Install hands your mod to REDdeck, so one tool keeps track of everything in the game folder |
+
+## How it fits into EDGE
+
+REDcode is the **Create** stage of the EDGE platform. It works on its own, and other toolkits add to it when they're present:
+
+| Toolkit | What it adds to REDcode |
+|---|---|
+| [REDbridge](../redbridge/) | Needed. It runs WolvenKit's engine. REDcode downloads and updates it for you |
+| [REDdeck](../reddeck/) | Install goes through REDdeck, with its record of every file and its undo. REDdeck can also copy files from installed mods into your project |
+| Claude and other agents | `redcode-mcp` lets an assistant browse the archives, read and patch game files, query TweakDB, export, import and pack |
+| EDGEwave | Open in EDGEwave hands a sound to the EDGE sound studio. EDGEwave is still in development |
+| [REDnode](../rednode/) | Planned: edit a REDnode mod in REDcode and send it into the running game. Not built yet |
 
 ## Status
 
-REDcode 0.7.0 is released. Browsing, editing, packing, installing through REDdeck, export and import, and the mesh viewer were each tested by hand; browsing and packing were checked against WolvenKit. Next: an audio player. Install the `.vsix` from the [releases page](https://github.com/Edgemodders/REDcode/releases) with **Extensions: Install from VSIX...** in VS Code. It needs REDbridge 0.7.0 or newer: **REDcode: Install REDbridge** fetches it.
+REDcode **0.9.0** is the latest release (15 October 2026). It's on the **VS Code Marketplace** as a Preview and on **Open VSX**, under the id `edgemodders.redcode-cyberpunk`. It runs on Windows and needs REDbridge 0.8.0 or newer, which it fetches for you.
 
-## Reference
+| Area | State |
+|---|---|
+| Projects, Game Assets, filter and search | Released. The filter was tested by hand |
+| CR2W editor: tree, property grid, search, table, atlas and texture views, Properties view | Released, each part tested by hand on the developer's game |
+| Texture viewer, 3D mesh viewer, audio player, game sound list | Released and tested by hand. Meshes show flat colours for now, not their textures |
+| TweakDB view, record page, New Tweak and hover | Released in 0.9.0 and tested by hand |
+| Pack | Released and tested by hand: the archive matched a WolvenKit pack of the same project |
+| Install through REDdeck, Uninstall, Run Game | Released and tested by hand |
+| Install without REDdeck | Released, tested only against a stand-in game folder |
+| Install to the Hot Folder (Red Hot Tools) | Released, **untested**: the developer doesn't have Red Hot Tools |
+| Export and import | Released and tested by hand. Sounds can be exported but not imported |
+| `redcode-mcp` for assistants | 0.2.0 on npm (16 October 2026) |
+| LocKey browser | Planned, next after a REDbridge change shared with REDdeck |
+| The REDnode loop (live testing in the running game) | Planned, waits for REDnode |
+| Graph editors for quests and scenes, ink widget preview, a branded REDcode app | Planned, later |
 
-- [REDcode docs](https://edgemodders.github.io/REDcode/), including its [MCP server](https://edgemodders.github.io/REDcode/mcp.html)
-- [Source and issues](https://github.com/Edgemodders/REDcode)
+## In this section
+
+| Page | |
+|---|---|
+| [Install and set up](install.html) | Requirements, installing, REDbridge, the HUD theme, updating |
+| [Projects](projects.html) | New projects, the Project view, and how a project is laid out |
+| [Game Assets](game-assets.html) | Browsing, filtering and searching the game, and taking files out |
+| [Editing game files](editing.html) | The CR2W editor, the Properties view, and editing as JSON |
+| [Textures, meshes and sounds](viewers.html) | The texture viewer, the 3D mesh viewer, the audio player and the game's sound effects |
+| [TweakDB and tweaks](tweakdb.html) | Looking up records, starting a tweak from one, and `.tweak` files |
+| [Export and import](export-import.html) | Out to PNG, glTF and Ogg, and back into the game's formats |
+| [Pack, install and run](pack-install.html) | Turning a project into a mod and trying it in the game |
+| [Assistants and MCP](assistants.html) | Let Claude work on your mod with you |
+| [Working with other tools](other-tools.html) | REDdeck, WolvenKit, EDGEwave, redscript, and REDcode's API |
+| [Settings and commands](settings.html) | Every setting and command |
+| [Troubleshooting](troubleshooting.html) | Symptoms and fixes |
+
+The [REDcode docs](https://edgemodders.github.io/REDcode/) are the developer reference this section draws on: the [design](https://edgemodders.github.io/REDcode/design.html), the [MCP server](https://edgemodders.github.io/REDcode/mcp.html) and the [extension API](https://edgemodders.github.io/REDcode/api.html). Source and issues are on [GitHub](https://github.com/Edgemodders/REDcode).
+
+REDcode stands on WolvenKit. Credit for the file formats, the archive reader, the importers and exporters, and years of research belongs to the WolvenKit team and contributors.
