@@ -3,42 +3,105 @@ title: REDnode
 nav_title: Overview
 section: REDnode
 order: 0
-description: "REDnode, EDGE's runtime for Cyberpunk 2077: Node mods, HTML overlay apps, a typed game API and an MCP server for AI agents."
-reviewed: 2026-10-14
+description: "REDnode, the EDGE platform's runtime for Cyberpunk 2077: what it is, what it's for, and why you might want it."
+reviewed: 2026-10-16
 ---
 
 # RED<span class="y">node</span>
 
-REDnode is EDGE's runtime. It attaches to Cyberpunk 2077 as a RED4ext plugin and lets mods written in JavaScript or TypeScript, and small web apps drawn over the game, talk to the running game. REDagent writes its mods for REDnode.
+REDnode is the EDGE platform's runtime. It plugs into Cyberpunk 2077 and lets two new kinds of mod run beside the game: **Node mods**, written in JavaScript or TypeScript, and **overlay apps**, small web pages drawn on top of the game. Both can read and change the running game. REDagent, EDGE's in-game assistant, is itself a REDnode package, and it writes its mods for REDnode.
 
-## Benefits
+{% include shot.html caption="REDnode in the game" shows="Gameplay with the REDnode launcher open at the lower left, the Mod Manager in the middle, and a couple of HUD widgets (Coords HUD at the top, Vitals under it)." %}
 
-- **Mods in JavaScript and TypeScript,** with npm packages, instead of a game-specific language.
-- **HTML overlay apps.** Build in-game windows and HUD widgets with HTML, CSS and JavaScript, with a UI kit in the house style and the game's own UI sounds.
-- **Hot reload.** Change a mod and REDnode restarts it in the running game, with no game restart.
-- **Crash isolation.** Mods and overlay apps run in their own process, outside the game. If one crashes, the game keeps running.
-- **A typed game API.** Call any game function, with types generated from the game's own type system and a published reference.
-- **Agent-ready.** An MCP server gives AI agents mod logs, overlay windows, pictures of the game's screen, game types, TweakDB and live game calls, asking you before calls that change the game.
-- **Native where it counts.** The overlay is drawn with the game's own Direct3D 12 device.
+## What it's for
+
+Most Cyberpunk mods today are archives (replaced game files), redscript (scripts compiled into the game) or Lua for Cyber Engine Tweaks. Each needs its own tools and its own language, and a mistake in a script can stop the game from starting.
+
+REDnode adds a different way in:
+
+- **Mods in JavaScript or TypeScript,** the most widely known programming languages, with npm's packages and normal web tooling.
+- **In-game windows and HUD widgets made from web pages,** in any look CSS can draw, including one that looks like the game's own UI.
+- **The whole game in reach.** A mod can call any function the game exposes, typed from the game's own type data, and read or change TweakDB, the game's database of items and stats.
+- **Safe to experiment.** Mods run in their own processes outside the game. If one crashes or hangs, the game keeps running, and you restart the mod with one click.
+- **Change it while you play.** With hot reload, saving a mod's file restarts it in the running game. No game restart.
+
+## Why you might want it
+
+| If you... | REDnode gives you |
+|---|---|
+| Play, and want REDagent | REDagent runs on REDnode. Install REDnode first |
+| Want useful windows over the game | HUD widgets and tool windows, switched on and off in the Mod Manager, sorted into [spaces](spaces.html) you flip between |
+| Want to make a mod but don't know redscript or Lua | Write it in JavaScript or TypeScript, or ask REDagent to write it with you |
+| Know web development | Build in-game UI with HTML and CSS, with a ready-made UI kit in the HUD look |
+| Make tools for other modders | Overlay apps can use REDbridge to read the game's archives, and the [world API](game-api.html#placing-things-in-the-world) to place objects, as EDGEbuilder does |
+| Want Claude to see and call the game | An MCP server gives Claude Code your mod logs, your overlay windows, pictures of the game and live game calls, asking you before calls that change the game |
+
+## How it fits into EDGE
+
+REDnode is the **Run** stage of the EDGE platform: the part that is in the game while you play.
+
+| Toolkit | How it works with REDnode |
+|---|---|
+| [REDagent](../redagent/) | A REDnode package: the chat window in the game, and the agent that writes REDnode mods |
+| [REDbridge](../redbridge/) | REDnode packages can use it to read the game's archives and files. REDnode uses the copy REDdeck or REDcode downloaded |
+| [REDdeck](../reddeck/) | Manages your *game* mods (archives, frameworks) before the game starts. REDnode's Mod Manager manages REDnode packages *in* the game. They are separate |
+| [REDcode](../redcode/) | Where you edit REDnode mods. Its REDnode HUD colour theme comes from REDnode's look |
+| Claude Code | Connects to REDnode's [MCP server](agents.html) |
 
 ## Status
 
+REDnode is at version 0.23.1 and in development. Every part listed below as passed was tested in the developer's modded game (Cyberpunk 2077 2.31). The overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
+
+There is **no packaged release yet**. REDnode installs from its source code, which means installing developer tools and building it. See [Install and set up](install.html).
+
 | Part | Status |
 |---|---|
-| HTML overlay apps, UI kit, HUD widgets | Passed in game |
-| Node mods and the typed game API | Passed in game |
-| MCP server for agents | Passed in game |
-| Debugger for apps and Node mods, in the game | Passed in game. A Node mod in debug mode also shows an address VS Code can attach to |
-| In-game sandboxed code (Tier 1), declarative rules | Not started |
+| Overlay windows, the launcher, F10 modes, HUD widgets | Passed in game |
+| Node mods, hot reload, the Mod log | Passed in game |
+| The game API (call any game function, typed) | Passed in game |
+| Mod Manager, Pin to launcher, Pin to HUD | Passed in game |
+| Debugger for windows and Node mods, in the game | Passed in game |
+| Tool layer and solo mode | Passed in game |
+| Spaces (sets of windows, like virtual desktops) | Passed in game |
+| Pointer lock (holding the cursor for a 3D camera) | Passed in game |
+| MCP server for AI agents | Passed in game |
+| Asking REDagent from other mods | Passed in game |
+| World API (placing objects; needs Codeware) | Passed in game |
+| TweakDB: reading, and changing through TweakXL | Passed in game |
+| TweakDB without the game running | Not built yet. REDbridge 0.8.0 now has what it was waiting for |
+| Sound: the game's own UI sounds | Passed in game |
+| Sound: playing your own audio files | Planned. A first research build is waiting for its in-game test |
+| Display: HDR, frame generation, ultrawide | Planned |
+| Console (type JavaScript in the game, like CET's console) | Proposed, not scheduled |
+| Code that runs inside the game (Tier 1), declarative rules | Not started |
 
-The current version is REDnode 0.21.0. There is no packaged release yet: REDnode installs from source, following its [developer setup](https://edgemodders.github.io/REDnode/dev-setup.html).
+## In this section
 
-## Good to know
+**Using REDnode**
 
-- **F10** in the game opens the REDnode launcher and cycles overlay modes: passive (you see the apps, the game gets input), interactive (the apps get input) and hidden. **Esc** returns input to the game.
-- REDnode was tested side by side with Cyber Engine Tweaks and other RED4ext plugins.
+| Page | |
+|---|---|
+| [Install and set up](install.html) | What you need, building and deploying, first start, updating and removing |
+| [Using the overlay](overlay.html) | F10 and the three modes, the launcher, moving windows, themes, keys |
+| [Mod Manager](mod-manager.html) | Every package in one table: on and off, pins, permissions, restart |
+| [Spaces and layers](spaces.html) | Sets of windows you switch between, the tool layer, solo mode |
 
-## Reference
+**Making mods and apps**
 
-- [REDnode docs](https://edgemodders.github.io/REDnode/), including the [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html) with tested examples, and the [MCP server](https://edgemodders.github.io/REDnode/mcp.html)
-- [Source and issues](https://github.com/Edgemodders/REDnode)
+| Page | |
+|---|---|
+| [Making mods and apps](making-mods.html) | Package kinds, the manifest, the apps folder, permissions and requirements |
+| [Node mods](node-mods.html) | Mods in Node, windows without HTML, logs, isolation, hot reload |
+| [Overlay apps](overlay-apps.html) | Web pages over the game, the UI kit, HUD widgets, sounds, pointer lock |
+| [Game API and TweakDB](game-api.html) | Calling the game, TweakDB, placing objects, the game's files, sound |
+| [Debugging](debugging.html) | The Mod log, Developer mode, DevTools in the game, attaching VS Code |
+| [Agents and MCP](agents.html) | Claude Code and the MCP server, and asking REDagent from a mod |
+
+**Reference**
+
+| Page | |
+|---|---|
+| [Settings and controls](settings.html) | Every switch, key, permission and manifest field |
+| [Troubleshooting](troubleshooting.html) | Logs, symptoms and fixes |
+
+The [REDnode docs](https://edgemodders.github.io/REDnode/) are the developer reference this section draws on: the [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html), the [API reference](https://edgemodders.github.io/REDnode/api/), the [game API reference](https://edgemodders.github.io/REDnode/game/) and the [design](https://edgemodders.github.io/REDnode/design.html).
