@@ -4,7 +4,7 @@ nav_title: Assistants and CLI
 section: REDdeck
 order: 11
 description: "Let Claude or another AI assistant manage your mods through REDdeck's MCP server, or script REDdeck from the command line."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # Assistants and the <span class="y">command line</span>
@@ -41,7 +41,7 @@ Outside VS Code, REDdeck's MCP server runs with Node. If the copied command fail
 
 ## Safety
 
-- **Deploy and undo ask first.** Those tools change the game folder, so they're marked for the assistant to ask you before using them.
+- **Deploy and undo ask first.** Those tools change the game folder, so they're marked for the assistant to ask you before using them. They also refuse while the game is running, as the buttons do.
 - **What you see stays true.** The Mods view reloads by itself when an assistant changes your library or deploys.
 - **Same rules as you.** An assistant goes through REDdeck, so it can only remove files REDdeck placed, and everything it deploys can be undone.
 
@@ -53,13 +53,13 @@ The same engine runs from a terminal, for your own scripts. It comes with REDdec
 |---|---|
 | `list [--size]` | What's in the library, with sizes and status. `--size` sorts by size |
 | `mod <id>` | One mod in full: files, sizes, source, Nexus data, conflicts |
-| `add <file or folder> [--name N] [--option FOLDER]` | Add a mod. `--option` picks one of a download's option folders |
+| `add <file or folder> [--name N] [--option FOLDER]` | Add a mod from a zip, 7z or rar, a single mod file or a folder. `--option` picks one of a download's option folders |
 | `install-project <.cpmodproj>` | Add a REDcode or WolvenKit project's packed output, or refresh it, and turn it on |
 | `on <id>`, `off <id>` | Turn a mod on or off |
 | `up <id>`, `down <id>` | Move it in the order (first wins conflicts) |
 | `remove <id>` | Remove it from the library |
-| `deploy [--keep PATH...] [--restore PATH...]` | Deploy. `--keep` and `--restore` answer the "changed in game folder" question per file. Writes a deploy report and prints where |
-| `undo` | Undo deploy |
+| `deploy [--keep PATH...] [--restore PATH...]` | Deploy. `--keep` and `--restore` answer the "changed in game folder" question per file. Writes a deploy report and prints where. Refuses while the game is running |
+| `undo` | Undo deploy. Refuses while the game is running |
 | `changes` | Files changed in the game folder since the last deploy |
 | `pending` | What the next deploy would do, and why |
 | `conflicts` | Conflicts by file path |

@@ -4,7 +4,7 @@ nav_title: Nexus Mods
 section: REDdeck
 order: 7
 description: "Sign REDdeck in to Nexus Mods, handle Mod manager download links, check for updates and switch versions."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # Nexus <span class="y">Mods</span>

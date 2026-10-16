@@ -4,7 +4,7 @@ nav_title: Library and loadouts
 section: REDdeck
 order: 9
 description: "Where REDdeck keeps your mods, what uses disk space and what's safe to delete, and loadouts you switch between."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # Library, disk space and <span class="y">loadouts</span>

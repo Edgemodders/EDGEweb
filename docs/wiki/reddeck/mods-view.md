@@ -3,8 +3,8 @@ title: The Mods view and the REDdeck page
 nav_title: The Mods view
 section: REDdeck
 order: 3
-description: "Find your way around REDdeck: the Mods view in the sidebar, the wide REDdeck page, the detail panel and the status bar."
-reviewed: 2026-10-14
+description: "Find your way around REDdeck: the Mods view in the sidebar, the wide REDdeck page, sections, the order that decides conflicts, the detail panel and the status bar."
+reviewed: 2026-10-16
 ---
 
 # The Mods view and the <span class="y">REDdeck page</span>
@@ -21,14 +21,14 @@ The list has these groups:
 |---|---|
 | **Set up** | Steps still to do. Disappears when there are none. See [Install and set up](install.html) |
 | **Frameworks** | RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL, Codeware, Audioware, input_loader and mod_settings. Pinned at the top because most mods need them. The header shows the game version, for example `3, 3 on · game 2.31`. See [Frameworks and game patches](frameworks.html) |
-| **Your sections** | Sections you make on the REDdeck page, between Frameworks and Mods. They only group the list |
-| **Mods** | Everything else, in order. A mod higher in the list wins conflicts |
+| **Your sections** | Sections you make on the REDdeck page, between Frameworks and Mods. They only group the list. See [Sections](#sections) |
+| **Mods** | Everything else, in order. Within a group, the mod higher up wins a conflict. See [Order: who wins](#order-who-wins) |
 
 ### A mod's row
 
 - **The checkbox** turns the mod on or off. Nothing changes in the game until you [deploy](deploying.html).
 - **After the name:** the version, how many other versions of the mod the library holds, its size, and its status.
-- **Hover the row** for the move-up and move-down buttons and **Switch version...**. Higher in the list wins a [conflict](conflicts.html).
+- **Hover the row** for the move-up and move-down buttons and **Switch version...**. Moving a mod up makes it win a [conflict](conflicts.html) against the mod shown above it.
 - **Hover anything** for a card with its size, dates, where it deploys and where it came from.
 - **Expand a mod** to see the folders it deploys into (such as `archive/pc/mod` or a CET mod folder) and the files in each. Click a file to open it in the editor.
 - **Click the name** to open the mod's detail panel.
@@ -72,7 +72,7 @@ It shows the files the mod deploys and their sizes, folder by folder, and its co
 | **Search** | Matches name, version, kind and status |
 | **Facet chips** | Narrow the list to On, Off, Deployed, Not deployed, Needs deploy, Changed in game folder, Conflicts or Update available. Each shows its count |
 | **Largest first** | Sorts every mod by size, across every section |
-| **Sections** | Frameworks, sections of your own, and Mods. **+ Section** makes one; drag a row onto a header, or use the row's Section button, to put a mod in it. Click a section's name to fold it. The box on a header turns its mods on or off, and two header buttons move or remove all the mods it shows. The order still decides who wins a conflict |
+| **Sections** | Frameworks, sections of your own, and Mods, each in its own box. See [Sections](#sections) below |
 | **Loadout** | A dropdown of your [loadouts](library.html#loadouts). Pick one that isn't active to edit it here without touching the game; **Make active** switches to it. Buttons beside it make, rename, export, import and delete loadouts |
 | **The version cell** | A dropdown when the library holds several versions of a mod, or Nexus has a newer one. Pick a version to switch to it, or **Get x.y from Nexus** |
 | **Status links** | When a deploy is waiting for a mod, its status opens the list of files the next deploy will add, replace, put back or remove for it, and why |
@@ -80,6 +80,39 @@ It shows the files the mod deploys and their sizes, folder by folder, and its co
 | **Footer** | The library folder and whether deploy uses hardlinks or copies, the last deploy, disk use, and which REDbridge is running |
 
 The page remembers your search and filters.
+
+## Sections
+
+Sections let you group a long list your way: "Visuals", "Gameplay", "Testing", whatever helps you find things. Frameworks and Mods are built in; your own sections sit between them, on the REDdeck page and in the Mods view.
+
+{% include shot.html caption="Sections on the REDdeck page" shows="The REDdeck page with a section of your own between Frameworks and Mods: its header with the on/off box, the move and remove buttons, and one folded section below it." %}
+
+| To... | Do this on the REDdeck page |
+|---|---|
+| Make a section | Press **+ Section** and give it a name |
+| Put a mod in a section | Press the mod's **Section** button and pick one, or drag the mod's row onto the section's header |
+| Rename, move or delete a section | Use the buttons on its header. Deleting it (the **X**) sends its mods back to Mods, or Frameworks, and removes nothing |
+| Fold a section | Click its name or its arrow. It stays folded after a restart. A search or a filter opens it while it lasts, so nothing hides from a search |
+| Turn a whole section on or off | Tick or untick the box on its header. It shows a dash when only some of its mods are on |
+| Move all of a section's mods to another section | The move button on its header |
+| Remove all of a section's mods from the library | The remove button on its header. REDdeck asks once, listing them, and every version of each goes |
+
+The two buttons that move or remove act on the mods the section *shows*, after your search and filter chips. That makes cleaning up easy: filter to **Off**, then remove on a section, to clear out the mods you no longer use there.
+
+Sections follow a mod across versions: a new version lands in the same section as the old one. Every [loadout](library.html#loadouts) shares the same sections.
+
+## Order: who wins
+
+When two mods change the same thing, the one earlier in REDdeck's order wins. Underneath the groups, that order is **one list for all your mods**. Sections and groups only decide where a mod is *shown*.
+
+| Action | What it does to the order |
+|---|---|
+| **Move up**, **Move down** | Moves the mod past its neighbour in its own section. Up makes it win against the mod shown above it |
+| **Drag a row onto another row** | Puts the mod directly above or below that mod in the order, and in that mod's section |
+| **Let ... win** on the [Conflicts](conflicts.html) page | Puts that mod just above the other one in the order. Both stay in their sections |
+| **Putting a mod in a section** | Doesn't change the order |
+
+So a mod in a section shown near the top of the page doesn't win over a mod in a lower section just because of where its section sits. When it matters, the [Conflicts page](conflicts.html) always says who wins, and **Let ... win** settles it.
 
 ## Kinds
 

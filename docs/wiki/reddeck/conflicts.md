@@ -3,7 +3,7 @@ title: Conflicts
 section: REDdeck
 order: 6
 description: "What mod conflicts are in Cyberpunk 2077, how REDdeck finds them by file and inside archives, and how to choose the winner."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # <span class="y">Conflicts</span>
@@ -14,7 +14,9 @@ Conflicts are information, not errors. Most are on purpose: a texture mod that c
 
 ## Who wins
 
-**The mod higher in the list wins.** To change the winner, move a mod up or down: hover its row and use the arrow buttons, or choose **Let ... win** on the Conflicts page.
+**The mod earlier in REDdeck's order wins:** higher in the list, within a section. To change the winner, choose **Let ... win** on the Conflicts page, or move a mod up or down with the arrow buttons on its row.
+
+The order is one list for all your mods, whatever [section](mods-view.html#sections) they're shown in. A section near the top of the page doesn't make its mods win over mods in a lower section. **Let ... win** always works, wherever the two mods are shown. See [Order: who wins](mods-view.html#order-who-wins).
 
 ## Two kinds of conflict
 
@@ -29,7 +31,7 @@ Conflicts inside archives are the ones most mod managers can't see. Two archive 
 
 The deploy message says how many conflicts there are. **Show conflicts** opens a page with every one.
 
-{% include shot.html caption="The Conflicts page" shows="The Conflicts page with the file-path table above and the inside-archives table below, each row naming the winner and the losers, with Let ... win and Turn off buttons." %}
+{% include shot.html caption="The Conflicts page" shows="The Conflicts page with the file-path table above and the inside-archives table below: one row per pair of mods naming the winner and the loser, with its shared files folded inside and the Choose menu open on one row." %}
 
 - The **upper table** lists conflicts by file path.
 - The **lower table** lists conflicts inside archives. Its heading names the REDbridge in use.
@@ -38,7 +40,8 @@ The deploy message says how many conflicts there are. **Show conflicts** opens a
   - **Let ... win** moves that mod just above the other.
   - **Turn off ...** switches one of the two off.
   - **Use only ...** keeps one version, when the pair is two versions of the same mod.
-- **Deploy now** applies what you decided.
+- A line above the table says what your last choice did.
+- **Deploy now** applies what you decided. Until you deploy, the choices only change your list.
 
 ## Conflicts on a single mod
 

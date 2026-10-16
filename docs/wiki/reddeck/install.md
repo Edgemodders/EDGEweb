@@ -3,8 +3,8 @@ title: Install and set up REDdeck
 nav_title: Install and set up
 section: REDdeck
 order: 1
-description: "Install REDdeck in VS Code, walk through its Set up steps, and keep it updated."
-reviewed: 2026-10-14
+description: "Install REDdeck in VS Code from the Marketplace, walk through its Set up steps, and keep it updated."
+reviewed: 2026-10-16
 ---
 
 # Install and set up <span class="y">REDdeck</span>
@@ -21,18 +21,24 @@ reviewed: 2026-10-14
 
 ## Install REDdeck
 
-REDdeck isn't on the VS Code Marketplace yet. It installs from a `.vsix` file, which is VS Code's extension package format.
+REDdeck is on the VS Code Marketplace, published by **Edgemodders** and marked **Preview** (young, and Windows only).
 
-1. Download the newest `reddeck-<version>.vsix` from the [REDdeck releases page](https://github.com/Edgemodders/REDdeck/releases).
-2. In VS Code, open the **Extensions** view (`Ctrl+Shift+X`).
-3. Press the **`...`** menu at the top right of the view and choose **Install from VSIX...**. Pick the file you downloaded.
-4. Run **Developer: Reload Window** from the command palette (`Ctrl+Shift+P`).
+1. In VS Code, open the **Extensions** view (`Ctrl+Shift+X`).
+2. Search for `REDdeck`.
+3. Pick **REDdeck** by Edgemodders and press **Install**.
 
-If you prefer a terminal (use the name of the file you downloaded):
+The same listing is on the web: [REDdeck on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.reddeck). If you prefer a terminal:
 
 ```powershell
-code --install-extension reddeck-<version>.vsix
+code --install-extension edgemodders.reddeck
 ```
+
+### Other ways to install
+
+| Way | When | How |
+|---|---|---|
+| **Open VSX** | Editors built on VS Code that use Open VSX instead of Microsoft's Marketplace, such as VSCodium | Search for `REDdeck` in the editor's Extensions view, or see [REDdeck on Open VSX](https://open-vsx.org/extension/edgemodders/reddeck) |
+| **A `.vsix` file** | No store access, or you want one exact version | Download `reddeck-<version>.vsix` from the [releases page](https://github.com/Edgemodders/REDdeck/releases). In the Extensions view, press the **`...`** menu at the top right, choose **Install from VSIX...** and pick the file. Then run **Developer: Reload Window** from the command palette (`Ctrl+Shift+P`) |
 
 A REDdeck icon appears in the activity bar on the left of VS Code. Click it to open the **Mods** view.
 
@@ -80,7 +86,7 @@ Your mods go in a **library** folder, `%USERPROFILE%\REDdeck` by default. For de
 
 ## Updating REDdeck
 
-Install the newer `.vsix` the same way you installed the first one. Your library, settings and Nexus sign-in stay.
+Installed from the Marketplace or Open VSX, REDdeck updates like any other extension: VS Code fetches new versions by itself unless you turned automatic updates off. Each version's changes are in REDdeck's [changelog](https://github.com/Edgemodders/REDdeck/blob/main/CHANGELOG.md) and on its [releases page](https://github.com/Edgemodders/REDdeck/releases). If you installed from a `.vsix` file, install the newer file the same way. Your library, settings and Nexus sign-in stay either way.
 
 ## Uninstalling
 

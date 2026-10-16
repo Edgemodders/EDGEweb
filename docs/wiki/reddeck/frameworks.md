@@ -4,7 +4,7 @@ nav_title: Frameworks and patches
 section: REDdeck
 order: 8
 description: "How REDdeck handles RED4ext, CET, redscript, ArchiveXL, TweakXL and other frameworks, and what to do after a Cyberpunk 2077 update."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # Frameworks and <span class="y">game patches</span>

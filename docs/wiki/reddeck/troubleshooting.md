@@ -3,8 +3,8 @@ title: Troubleshooting REDdeck
 nav_title: Troubleshooting
 section: REDdeck
 order: 13
-description: "Fixes for common REDdeck problems: game not found, Vortex, missing conflicts, changed files, Nexus downloads, and a game that won't start."
-reviewed: 2026-10-14
+description: "Fixes for common REDdeck problems: game not found, the game still running, Vortex, missing conflicts, changed files, Nexus downloads, what a deploy changed, and a game that won't start."
+reviewed: 2026-10-16
 ---
 
 # Troubleshooting <span class="y">REDdeck</span>
@@ -23,6 +23,14 @@ REDdeck couldn't find Cyberpunk 2077 in your Steam libraries, GOG or Epic.
 2. Pick the folder that contains `bin`, `archive` and `r6`.
 
 If the game *is* in one of the Steam libraries the log lists, please [report it](https://github.com/Edgemodders/REDdeck/issues) with those log lines.
+
+### "Cyberpunk 2077 is running"
+
+Deploy and Undo deploy wait while the game runs, because the game keeps mod files open and Windows won't let REDdeck change them. Quit the game, then press **The game is closed now**. See [Deploying and undo](deploying.html#close-the-game-first).
+
+### A deploy stopped: a file "is in use"
+
+Another program has a file in the game folder open, and the message names it. Close that program (or the game, if it's still shutting down) and deploy again. What the deploy finished before it stopped is kept; the rest is still waiting, and the Deploy button counts it.
 
 ### "Vortex manages the game"
 
@@ -47,6 +55,14 @@ Nexus gives direct downloads to Premium members only. REDdeck opens the file's N
 
 Vortex takes the download links back every time it starts. Use **Nexus: handle download links (nxm)**, or the row that reappears in the Set up group.
 
+### What did my last deploy change?
+
+Every deploy writes a report: each mod's files added, replaced or removed, with their paths in the game folder. **View** on the deploy message opens it. Earlier reports, the newest 30, are in the `deploys` folder of your library (**Open library folder** in the Mods view's `...` menu). For what the *next* deploy will do, use **Show pending changes**. See [Deploying and undo](deploying.html#deploy-reports).
+
+### An archive mod is on but doesn't load
+
+Check that it says `deployed`. Archives load in the order of `modlist.txt`, which REDdeck rewrites whenever the archives that are on change. If your library is from before REDdeck 0.26.1, the file may be out of date: it shows as one change waiting, and the next deploy fixes it. If it's deployed and still loses, look for a [conflict](conflicts.html) inside archives.
+
 ### Deploy copies files instead of using hardlinks
 
 Your library is on a different drive from the game. Hardlinks only work on the same drive. Move the library: set `reddeck.libraryPath` to a folder on the game's drive. See [Library, disk space and loadouts](library.html#moving-the-library).
@@ -58,10 +74,10 @@ A framework probably needs updating for the new game version. Check the Framewor
 ### The game won't start, or crashes, after adding mods
 
 1. Press **Undo deploy** and start the game. If it works, a mod is the cause.
-2. Turn half your mods off and deploy. Start the game. Keep halving until you find the mod.
-3. Check that mod's Nexus page for its requirements: a framework it needs may be missing or out of date.
-
-A [loadout](library.html#loadouts) saved before you start makes it easy to get back to your full list afterwards.
+2. Keep your full setup safe: **Save as new loadout...** under a name like "testing", then **Switch loadout...** to it. Your changes from now on go into "testing", and your usual loadout stays as it was.
+3. Turn half your mods off and deploy. Start the game. Keep halving until you find the mod. Leave the frameworks on: other mods need them.
+4. Check that mod's Nexus page for its requirements: a framework it needs may be missing or out of date.
+5. When you're done, **Switch loadout...** back to your usual loadout and deploy. See [Loadouts](library.html#loadouts).
 
 ### Something else
 

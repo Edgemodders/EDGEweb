@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDdeck
 order: 0
 description: "REDdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, and why you might want it."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # RED<span class="y">deck</span>
@@ -48,7 +48,7 @@ REDdeck is the **Deploy** stage of the EDGE platform. It works on its own, and o
 
 ## Status
 
-REDdeck is at version 0.26 and manages its developer's game on two PCs. It isn't on the VS Code Marketplace yet; it installs from a file on its [releases page](https://github.com/Edgemodders/REDdeck/releases). Nexus sign-in through the browser is built and waits for Nexus to register REDdeck; until then you paste a personal API key, which works the same way.
+REDdeck is at version 0.26.3 and manages its developer's game on two PCs. It's on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.reddeck) and [Open VSX](https://open-vsx.org/extension/edgemodders/reddeck) since 0.26.0 (14 October 2026), marked **Preview**: young, and Windows only. Deploy, undo and the library are in daily use; Nexus downloads and REDmod deploys have had little real-world use so far. Nexus sign-in through the browser is built and waits for Nexus to register REDdeck; until then you paste a personal API key, which works the same way.
 
 ## In this section
 
@@ -56,9 +56,9 @@ REDdeck is at version 0.26 and manages its developer's game on two PCs. It isn't
 |---|---|
 | [Install and set up](install.html) | Requirements, installing, the Set up steps, updating and uninstalling |
 | [Switch from Vortex](switch-from-vortex.html) | Move your mods over safely |
-| [The Mods view and the REDdeck page](mods-view.html) | Find your way around |
+| [The Mods view and the REDdeck page](mods-view.html) | Find your way around, group mods in sections, and set who wins |
 | [Adding mods](adding-mods.html) | From files, folders and Nexus, and how REDdeck decides where files go |
-| [Deploying and undo](deploying.html) | What deploy does, hardlinks, changes outside REDdeck, undo |
+| [Deploying and undo](deploying.html) | What deploy does, closing the game first, hardlinks, changes outside REDdeck, deploy reports, undo |
 | [Conflicts](conflicts.html) | What they are, who wins, and how to choose |
 | [Nexus Mods](nexus.html) | Signing in, download links, updates and versions |
 | [Frameworks and game patches](frameworks.html) | RED4ext, CET, redscript and friends, and what to do after a game update |

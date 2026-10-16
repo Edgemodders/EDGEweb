@@ -3,8 +3,8 @@ title: Adding mods to REDdeck
 nav_title: Adding mods
 section: REDdeck
 order: 4
-description: "Add mods to REDdeck from zip, 7z and rar files, folders, Nexus Mods and Vortex, and how REDdeck decides where each file goes."
-reviewed: 2026-10-14
+description: "Add mods to REDdeck from zip, 7z and rar files, single mod files, folders, Nexus Mods and Vortex, and how REDdeck decides where each file goes."
+reviewed: 2026-10-16
 ---
 
 # Adding <span class="y">mods</span>
@@ -14,9 +14,11 @@ Adding a mod puts it in your [library](library.html). It doesn't touch the game:
 ## From a file or folder
 
 1. Press **Add mod** in the Mods view's title bar, or on the REDdeck page's toolbar.
-2. Pick a `.zip`, `.7z` or `.rar` file, or a folder. A `.rar` needs [7-Zip](https://7-zip.org) or WinRAR installed; zip and 7z work on their own.
+2. Pick a `.zip`, `.7z` or `.rar` file, a single mod file, or a folder. A `.rar` needs [7-Zip](https://7-zip.org) or WinRAR installed; zip and 7z work on their own.
 
 REDdeck unpacks it, works out what kind of mod it is and where each file belongs in the game folder, and adds it to the list. It asks you only when it can't tell, for example when the download contains a choice of options.
+
+**A single mod file** works too: some mods are just one `.archive`, `.reds` or `.lua` file, with no zip around it. REDdeck puts it where its type goes, and asks when it can't tell.
 
 {% include shot.html caption="Adding a mod" shows="Add mod's file picker, then the new mod in the list with its kind chips and the status not deployed yet." %}
 
@@ -56,7 +58,7 @@ Mods added from Nexus remember their Nexus id, so REDdeck can check them for upd
 
 ## From Vortex
 
-**Import from Vortex** lists the mods Vortex has for Cyberpunk. Tick the ones you want, and REDdeck copies them into the library with their names, versions and Nexus ids. Vortex keeps its own copies. See [Switch from Vortex](switch-from-vortex.html).
+**Import from Vortex** lists the mods Vortex has for Cyberpunk. Tick the ones you want, and REDdeck copies them into the library with their names, versions and Nexus ids. Common frameworks show under their usual names, such as Cyber Engine Tweaks rather than the download's file name. Vortex keeps its own copies. See [Switch from Vortex](switch-from-vortex.html).
 
 ## From a REDcode project
 

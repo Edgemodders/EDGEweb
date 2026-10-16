@@ -2,8 +2,8 @@
 title: Deploying and undo
 section: REDdeck
 order: 5
-description: "What REDdeck's Deploy does, hardlinks and copies, load order, REDmod, files changed outside REDdeck, and Undo deploy."
-reviewed: 2026-10-14
+description: "What REDdeck's Deploy does, why the game must be closed, hardlinks and copies, load order, REDmod, files changed outside REDdeck, deploy reports and Undo deploy."
+reviewed: 2026-10-16
 ---
 
 # Deploying and <span class="y">undo</span>
@@ -14,8 +14,18 @@ reviewed: 2026-10-14
 
 1. Tick the mods you want, untick the ones you don't.
 2. The **Deploy** button counts the changes waiting, for example **Deploy (3 changes)**.
-3. Press **Deploy**. Progress shows in the status bar; a short message says how many files went in for how many mods, how many mods are in the game now, and how many conflicts there are.
+3. **Close the game**, then press **Deploy**. Progress shows in the status bar; a short message says how many files went in for how many mods, how many mods are in the game now, and how many conflicts there are.
 4. **View** on that message opens a report of every file the deploy added, replaced or removed, mod by mod. The last 30 reports stay in the library's `deploys` folder.
+
+### Close the game first
+
+Cyberpunk 2077 keeps mod files open while it runs, and Windows won't let anything replace or delete an open file. So if the game is running when you press **Deploy** or **Undo deploy**, REDdeck says so and waits: quit the game, then press **The game is closed now**. The command line, and an assistant working through REDdeck, refuse with the same reason until the game is closed.
+
+Rarely, another program holds a file in the game folder open. Then the deploy stops at that file, and the message names it. Close what has it open and deploy again: what the deploy already finished is kept, and the rest is still waiting.
+
+### Deploy reports
+
+Every deploy writes a report: each mod's files added, replaced or removed, with their paths in the game folder, and anything skipped. **View** on the deploy message opens it. To look back at an earlier one, open the `deploys` folder in your [library](library.html); the newest 30 are kept. It's the quickest answer to "what did my last deploy change?".
 
 {% include shot.html caption="Deploy waiting" shows="The Mods view with a few mods switched on, their status not deployed yet, and the Deploy button counting the changes waiting." %}
 
@@ -41,8 +51,8 @@ On the REDdeck page, a mod's status links to the same list for that mod only.
     - If your library is on the **same drive** as the game, REDdeck uses **hardlinks**: the file appears in the game folder without taking any extra space, because it's the same file as the one in your library.
     - If the library is on **another drive**, REDdeck **copies** the files instead.
     - The REDdeck page's footer says which one it's using.
-2. **Writes the archive load order** to `modlist.txt` in `archive/pc/mod`, from the order of your list.
-3. **Prepares REDmod packages** with the game's own `redMod.exe` when any REDmod mods are on. You don't have to run REDmod's deploy step yourself.
+2. **Writes the archive load order** to `modlist.txt` in `archive/pc/mod`, from the order of your list. It rewrites the file whenever the archives that are on change, so an archive you add later is in the list too.
+3. **Prepares REDmod packages** with the game's own `redMod.exe` when any REDmod mods are on. You don't have to run REDmod's deploy step yourself. REDmod mods need the game started with `-modded`; the deploy message reminds you.
 4. **Records everything** in a manifest in the game folder: every file it placed, and the game version.
 
 ## Changes made outside REDdeck
@@ -64,7 +74,7 @@ If a file that REDdeck needs to place is already in the game folder and isn't RE
 
 ## Undo deploy
 
-**Undo deploy** removes every file in the manifest, and nothing else. It then puts back any files deploy moved aside and removes folders it emptied. Your library isn't touched: turn the mods on again and deploy to bring them back.
+**Undo deploy** removes every file in the manifest, and nothing else. Like Deploy, it waits until the game is closed. It then puts back any files deploy moved aside and removes folders it emptied. Your library isn't touched: turn the mods on again and deploy to bring them back.
 
 Use it to:
 

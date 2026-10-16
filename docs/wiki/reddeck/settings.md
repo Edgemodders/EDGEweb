@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: REDdeck
 order: 12
 description: "Every REDdeck setting with its default and when to change it, and every REDdeck command."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # Settings and <span class="y">commands</span>
@@ -37,9 +37,9 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDdeck` to see them. Most a
 | Command | Does |
 |---|---|
 | Open REDdeck | Opens the wide REDdeck page |
-| Add mod | Adds a mod from a zip, 7z, rar or folder |
-| Deploy | Makes the game folder match your list |
-| Undo deploy | Removes everything REDdeck deployed |
+| Add mod | Adds a mod from a zip, 7z or rar, a single mod file such as an `.archive`, or a folder |
+| Deploy | Makes the game folder match your list. Waits until the game is closed |
+| Undo deploy | Removes everything REDdeck deployed. Waits until the game is closed |
 | Show pending changes | Lists what the next deploy will do, and why |
 | Show conflicts | Opens the Conflicts page |
 | Refresh | Re-reads the library and the game folder |

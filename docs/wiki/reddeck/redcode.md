@@ -3,7 +3,7 @@ title: REDdeck and REDcode
 section: REDdeck
 order: 10
 description: "Test your own REDcode or WolvenKit project as a REDdeck mod, and copy files from installed mods into a project."
-reviewed: 2026-10-14
+reviewed: 2026-10-16
 ---
 
 # REDdeck and <span class="y">REDcode</span>
@@ -40,6 +40,6 @@ Without a project open, REDdeck says so and offers REDcode's **New Project**.
 
 > **Respect the author.** Another modder's files are theirs. Check the mod's permissions on its Nexus page before you publish anything that includes them.
 
-## Still to come
+## Installing from REDcode
 
-Packing, installing and running the game now work from inside REDcode: its **Install** goes through REDdeck when REDdeck is installed, so REDdeck stays the one tool that writes to the game folder. See [REDcode](../redcode/). REDnode packages are a REDdeck mod kind of their own since 0.20 (see [Adding mods](adding-mods.html)).
+Packing, installing and running the game also work from inside REDcode: its **Install** goes through REDdeck when REDdeck is installed, so REDdeck stays the one tool that writes to the game folder. REDcode is a separate extension: search the Extensions view for **REDcode for Cyberpunk 2077** by Edgemodders (its id is `edgemodders.redcode-cyberpunk`). See [REDcode](../redcode/). REDnode packages are a REDdeck mod kind of their own since 0.20 (see [Adding mods](adding-mods.html)).
