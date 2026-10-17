@@ -11,7 +11,7 @@ reviewed: 2026-10-16
 
 The Mod Manager is a window built into REDnode that lists every REDnode package you have: apps, Node mods and HUD widgets. The launcher is for the few you use often; the Mod Manager is where you find, switch and inspect any of them.
 
-> **Not the same as REDdeck.** [REDdeck](../reddeck/) manages your game mods (archives, frameworks, scripts) before the game starts. The Mod Manager manages REDnode packages, inside the running game. You'll often use both.
+> **Not the same as EDGEdeck.** [EDGEdeck](../edgedeck/) manages your game mods (archives, frameworks, scripts) before the game starts. The Mod Manager manages REDnode packages, inside the running game. You'll often use both.
 
 ## Open it
 
@@ -97,7 +97,7 @@ A package can say it needs other mods, such as Codeware or TweakXL. REDnode chec
 - shows **NEEDS** in the Mod Manager, and lists what's missing under **Requires**;
 - says "Needs ..." in the launcher.
 
-It still runs, so it can tell you itself what's missing. Install the missing mod (with [REDdeck](../reddeck/) or your mod manager), restart the game, and the mark goes away.
+It still runs, so it can tell you itself what's missing. Install the missing mod (with [EDGEdeck](../edgedeck/) or your mod manager), restart the game, and the mark goes away.
 
 ## Node mods: restart and shared process
 

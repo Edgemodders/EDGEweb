@@ -87,9 +87,9 @@ Most likely it was inside `compiledData` in an `.ent` or `.app` file, which is r
 
 Sounds can be exported, but not imported yet: WolvenKit's library can't import them. See [Export and import](export-import.html#what-converts).
 
-### Install doesn't use REDdeck
+### Install doesn't use EDGEdeck
 
-Install uses REDdeck when REDdeck 0.21.0 or later is installed in the same VS Code. Update REDdeck, and reload the window.
+Install uses EDGEdeck when EDGEdeck 0.21.0 or later is installed in the same VS Code. Update EDGEdeck, and reload the window.
 
 ### The Hot Folder button is missing
 
@@ -98,8 +98,8 @@ It shows only when the game has Red Hot Tools, in `red4ext/plugins`. Install Red
 ### My mod doesn't show in the game
 
 1. Look in the Project view under **Packed**. If it's empty, **Pack** again and read any warning.
-2. Make sure you pressed **Install**, or **Pack and Install**. With REDdeck, check the mod is on and deployed in REDdeck.
-3. A tweak needs TweakXL in the game, and an `.xl` file needs ArchiveXL. Install the frameworks your mod uses (see [REDdeck's frameworks page](../reddeck/frameworks.html)).
+2. Make sure you pressed **Install**, or **Pack and Install**. With EDGEdeck, check the mod is on and deployed in EDGEdeck.
+3. A tweak needs TweakXL in the game, and an `.xl` file needs ArchiveXL. Install the frameworks your mod uses (see [EDGEdeck's frameworks page](../edgedeck/frameworks.html)).
 4. A REDmod needs the game started with `-modded`. **Run Game** adds it when `redcode.pack.redmod` is on.
 5. Check REDcode's log for paths with capital letters or spaces, which Pack reports.
 

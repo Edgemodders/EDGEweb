@@ -3,7 +3,7 @@ title: Install and set up EDGEbuilder
 nav_title: Install and set up
 section: EDGEbuilder
 order: 1
-description: "What EDGEbuilder needs, installing it with REDdeck, allowing REDbridge, and opening it in the game."
+description: "What EDGEbuilder needs, installing it with EDGEdeck, allowing REDbridge, and opening it in the game."
 reviewed: 2026-10-16
 ---
 
@@ -16,25 +16,25 @@ reviewed: 2026-10-16
 | Cyberpunk 2077 on Windows | And a save to load: EDGEbuilder works in the world, not in the menus |
 | [REDnode](../rednode/) 0.17 or later | Runs EDGEbuilder in the game. Version 0.22.0 or later also holds the cursor still while you look around. REDnode has no packaged release yet: it installs from source, following its [developer setup](https://edgemodders.github.io/REDnode/dev-setup.html) |
 | [Codeware](https://www.nexusmods.com/cyberpunk2077/mods/7780) 1.14 or later | REDnode's world calls, which spawn and move objects, need it. EDGEbuilder says so in its manifest, and REDnode's Mod Manager checks it |
-| [REDbridge](../redbridge/) 0.6.0 or later | Reads the game's files to build the asset list. The easiest way to get it is REDdeck's **Get REDbridge** |
-| [REDdeck](../reddeck/) 0.20.0 or later | Installs EDGEbuilder. From 0.21.1, a new EDGEbuilder version takes the old one's place in the same row |
+| [REDbridge](../redbridge/) 0.6.0 or later | Reads the game's files to build the asset list. The easiest way to get it is EDGEdeck's **Get REDbridge** |
+| [EDGEdeck](../edgedeck/) 0.20.0 or later | Installs EDGEbuilder. From 0.21.1, a new EDGEbuilder version takes the old one's place in the same row |
 | A 16:9 screen | The editor covers a 1920 x 1080 area, scaled to your screen. Ultrawide screens aren't covered yet |
 
-Codeware is a framework mod: add it to REDdeck like any other mod and deploy. RED4ext, which REDnode and Codeware both need, goes in the same way. See [Frameworks and game patches](../reddeck/frameworks.html).
+Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. RED4ext, which REDnode and Codeware both need, goes in the same way. See [Frameworks and game patches](../edgedeck/frameworks.html).
 
 ## Install EDGEbuilder
 
 1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.3.2.
-2. In REDdeck, press **Add mod** and pick the zip. REDdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../reddeck/adding-mods.html).
+2. In EDGEdeck, press **Add mod** and pick the zip. EDGEdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../edgedeck/adding-mods.html).
 3. Make sure it's ticked, and press **Deploy**.
 
 Do this with the game closed. REDnode must already be deployed in the game folder.
 
-{% include shot.html caption="EDGEbuilder in REDdeck" shows="The REDdeck Mods view with EDGEbuilder added from its zip, its kind chip showing rednode, and the Deploy button counting the change." %}
+{% include shot.html caption="EDGEbuilder in EDGEdeck" shows="The EDGEdeck Mods view with EDGEbuilder added from its zip, its kind chip showing rednode, and the Deploy button counting the change." %}
 
 ## Allow REDbridge
 
-EDGEbuilder asks REDnode for the REDbridge that REDdeck downloaded. REDnode hands it over only once you allow it, because REDbridge can read and write files.
+EDGEbuilder asks REDnode for the REDbridge that EDGEdeck downloaded. REDnode hands it over only once you allow it, because REDbridge can read and write files.
 
 1. Start the game and load a save.
 2. Press **F10** to open the REDnode launcher, and open the **Mod Manager**.
@@ -68,13 +68,13 @@ EDGEbuilder keeps its settings, the asset index and your working scene in a data
 
 ## Updating
 
-Add the newer zip to REDdeck the same way and deploy. With REDdeck 0.21.1 or later, the new version replaces the old one in the same row. With an older REDdeck, untick the old EDGEbuilder first, or both deploy the same files and conflict.
+Add the newer zip to EDGEdeck the same way and deploy. With EDGEdeck 0.21.1 or later, the new version replaces the old one in the same row. With an older EDGEdeck, untick the old EDGEbuilder first, or both deploy the same files and conflict.
 
 Your settings, index and scene stay.
 
 ## Uninstalling
 
 1. If Edit is on, switch it off, so V's own camera and HUD are back.
-2. In REDdeck, untick EDGEbuilder, or remove it, and deploy.
+2. In EDGEdeck, untick EDGEbuilder, or remove it, and deploy.
 
 Your scene stays in EDGEbuilder's data folder in case you come back. The previews leave the world the next time a save loads.

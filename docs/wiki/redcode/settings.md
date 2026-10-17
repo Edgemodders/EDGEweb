@@ -56,7 +56,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | New Project | Asks for a name and a folder, creates a WolvenKit project and opens it |
 | Pack | Builds the project's `packed` folder. Also `Ctrl+Shift+B` |
 | Pack and Install | Packs, then installs |
-| Install | Puts the packed mod in the game, through REDdeck when it's installed |
+| Install | Puts the packed mod in the game, through EDGEdeck when it's installed |
 | Uninstall | Takes the mod out of the game again |
 | Install to the Hot Folder (Red Hot Tools) | Copies the packed archive to `archive/pc/hot`. Shown only when the game has Red Hot Tools. Untested |
 | Run Game | Starts the game |
@@ -124,7 +124,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 
 | Command | Does |
 |---|---|
-| Extract from a Mod Archive into the Project | Not for typing: REDdeck calls it for its **Add to Project** on a mod's `.archive` |
+| Extract from a Mod Archive into the Project | Not for typing: EDGEdeck calls it for its **Add to Project** on a mod's `.archive` |
 
 ## Editors under Open With
 

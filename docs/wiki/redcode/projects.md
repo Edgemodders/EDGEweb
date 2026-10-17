@@ -22,7 +22,7 @@ A project is any folder with a `.cpmodproj` file in it. That file names the mod 
 | `source/resources` | **Resources** | Files the mod ships as they are: TweakXL tweaks, ArchiveXL `.xl` files, scripts, CET mods. They keep their place under the game folder, so `r6/tweaks/my.yaml` lands in the game's `r6/tweaks` |
 | `packed` | **Packed** | The finished mod, laid out like the game folder. Pack rebuilds it. See [Pack, install and run](pack-install.html) |
 
-REDcode adds one folder of its own, `.redcode`, only when it installs a mod without REDdeck. It records which files it put in the game.
+REDcode adds one folder of its own, `.redcode`, only when it installs a mod without EDGEdeck. It records which files it put in the game.
 
 ## Make a new project
 
@@ -81,7 +81,7 @@ Hover over a file or folder and buttons appear on the right of its row. Right-cl
 | From | How |
 |---|---|
 | The game | **Add to Project** in [Game Assets](game-assets.html#add-to-project). The file lands under Archive at its game path |
-| A mod you have installed in REDdeck | REDdeck's **Add to Project**. See [REDdeck and REDcode](../reddeck/redcode.html) |
+| A mod you have installed in EDGEdeck | EDGEdeck's **Add to Project**. See [EDGEdeck and REDcode](../edgedeck/redcode.html) |
 | TweakDB | **New Tweak from This Record** writes a tweak file under Resources. See [TweakDB and tweaks](tweakdb.html) |
 | Another tool | Save it under Raw and use **Import from Raw**, or put it under Resources by hand |
 

@@ -193,7 +193,7 @@ const bridge = await kernel.bridge(); // fails until the player allows it, or if
 const found = await bridge.call('archive.search', { query: 'player_ma_tpp', limit: 5 });
 ```
 
-REDnode doesn't ship REDbridge. It uses the copy [REDdeck](../reddeck/) (**Get REDbridge**) or REDcode downloaded. One REDbridge serves every package: it starts on the first call, takes about three seconds to load the game's archive index, and stops after 10 minutes without calls. The method names are in [REDbridge's docs](https://edgemodders.github.io/REDbridge/).
+REDnode doesn't ship REDbridge. It uses the copy [EDGEdeck](../edgedeck/) (**Get REDbridge**) or REDcode downloaded. One REDbridge serves every package: it starts on the first call, takes about three seconds to load the game's archive index, and stops after 10 minutes without calls. The method names are in [REDbridge's docs](https://edgemodders.github.io/REDbridge/).
 
 ## Sound
 

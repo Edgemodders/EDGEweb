@@ -23,8 +23,8 @@ EDGEkit comes in two forms:
 | If you... | EDGEkit gives you |
 |---|---|
 | Are new to modding and to VS Code | One install instead of a list of extensions to find and set up (the app, when it's ready) |
-| Already use VS Code | The extension pack: REDcode, REDdeck and the HUD theme in one click |
-| Want your tools to stay current | Each EDGE extension updates on its own, so a fix in REDdeck reaches you without waiting for a new EDGEkit |
+| Already use VS Code | The extension pack: REDcode, EDGEdeck and the HUD theme in one click |
+| Want your tools to stay current | Each EDGE extension updates on its own, so a fix in EDGEdeck reaches you without waiting for a new EDGEkit |
 | Want to stay offline | The app is planned to work on first start with no network, since its extensions are built in |
 
 ## What the app will be
@@ -34,7 +34,7 @@ These are decisions from EDGEkit's design, for an app that isn't built yet:
 | Decision | What it means for you |
 |---|---|
 | Built on Code - OSS | It looks and works like VS Code, but is called EDGEkit everywhere, with its own icon and settings folder. It sits beside an installed VS Code without touching it |
-| The EDGE extensions built in | REDcode, REDdeck, the REDnode HUD theme (the default theme), REDscript IDE, and later REDagent's editor view, EDGEmat and EDGEwave |
+| The EDGE extensions built in | REDcode, EDGEdeck, the REDnode HUD theme (the default theme), REDscript IDE, and later REDagent's editor view, EDGEmat and EDGEwave |
 | Extensions from Open VSX | VS Code's own Marketplace is only for Microsoft's products, so EDGEkit uses [Open VSX](https://open-vsx.org/), as VSCodium does |
 | Windows x64 only, for now | Linux may come later |
 | Unsigned at first | Windows SmartScreen may warn. The download page will say how to get past it |

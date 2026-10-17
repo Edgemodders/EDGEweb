@@ -1,14 +1,14 @@
 ---
 title: Deploying and undo
-section: REDdeck
+section: EDGEdeck
 order: 5
-description: "What REDdeck's Deploy does, why the game must be closed, hardlinks and copies, load order, REDmod, files changed outside REDdeck, deploy reports and Undo deploy."
+description: "What EDGEdeck's Deploy does, why the game must be closed, hardlinks and copies, load order, REDmod, files changed outside EDGEdeck, deploy reports and Undo deploy."
 reviewed: 2026-10-16
 ---
 
 # Deploying and <span class="y">undo</span>
 
-**Deploy** is the one REDdeck word worth learning. Turning mods on and off only changes your list, the active [loadout](library.html#loadouts). Deploy makes the game folder match it.
+**Deploy** is the one EDGEdeck word worth learning. Turning mods on and off only changes your list, the active [loadout](library.html#loadouts). Deploy makes the game folder match it.
 
 ## Turn on, then deploy
 
@@ -19,7 +19,7 @@ reviewed: 2026-10-16
 
 ### Close the game first
 
-Cyberpunk 2077 keeps mod files open while it runs, and Windows won't let anything replace or delete an open file. So if the game is running when you press **Deploy** or **Undo deploy**, REDdeck says so and waits: quit the game, then press **The game is closed now**. The command line, and an assistant working through REDdeck, refuse with the same reason until the game is closed.
+Cyberpunk 2077 keeps mod files open while it runs, and Windows won't let anything replace or delete an open file. So if the game is running when you press **Deploy** or **Undo deploy**, EDGEdeck says so and waits: quit the game, then press **The game is closed now**. The command line, and an assistant working through EDGEdeck, refuse with the same reason until the game is closed.
 
 Rarely, another program holds a file in the game folder open. Then the deploy stops at that file, and the message names it. Close what has it open and deploy again: what the deploy already finished is kept, and the rest is still waiting.
 
@@ -37,27 +37,27 @@ Every deploy writes a report: each mod's files added, replaced or removed, with 
 |---|---|
 | Added | A mod you turned on puts this file in the game |
 | Replaced | A mod higher in the list wins this file |
-| Put back | A file REDdeck moved aside earlier comes back |
+| Put back | A file EDGEdeck moved aside earlier comes back |
 | Relinked | The library copy was rebuilt (for example a REDcode project packed again) |
 | Removed | A mod you turned off or removed takes this file out |
 
-On the REDdeck page, a mod's status links to the same list for that mod only.
+On the EDGEdeck page, a mod's status links to the same list for that mod only.
 
 {% include shot.html caption="Pending changes" shows="The pending-changes list before a deploy: each file with its reason (added, replaced, put back, removed) and the mod it belongs to." %}
 
 ## What deploy does
 
 1. **Places the files** of every mod that's on into the game folder.
-    - If your library is on the **same drive** as the game, REDdeck uses **hardlinks**: the file appears in the game folder without taking any extra space, because it's the same file as the one in your library.
-    - If the library is on **another drive**, REDdeck **copies** the files instead.
-    - The REDdeck page's footer says which one it's using.
+    - If your library is on the **same drive** as the game, EDGEdeck uses **hardlinks**: the file appears in the game folder without taking any extra space, because it's the same file as the one in your library.
+    - If the library is on **another drive**, EDGEdeck **copies** the files instead.
+    - The EDGEdeck page's footer says which one it's using.
 2. **Writes the archive load order** to `modlist.txt` in `archive/pc/mod`, from the order of your list. It rewrites the file whenever the archives that are on change, so an archive you add later is in the list too.
 3. **Prepares REDmod packages** with the game's own `redMod.exe` when any REDmod mods are on. You don't have to run REDmod's deploy step yourself. REDmod mods need the game started with `-modded`; the deploy message reminds you.
 4. **Records everything** in a manifest in the game folder: every file it placed, and the game version.
 
-## Changes made outside REDdeck
+## Changes made outside EDGEdeck
 
-Other things touch the game folder too: a Steam **Verify integrity of game files**, a game update, a framework's own updater, or you editing a file by hand. REDdeck notices when a file it deployed has changed, and the mod shows `changed in game folder`.
+Other things touch the game folder too: a Steam **Verify integrity of game files**, a game update, a framework's own updater, or you editing a file by hand. EDGEdeck notices when a file it deployed has changed, and the mod shows `changed in game folder`.
 
 At the next deploy it asks **one question per file**:
 
@@ -70,7 +70,7 @@ If a deployed file has simply gone missing, deploy puts it back without asking.
 
 ### Files in the way
 
-If a file that REDdeck needs to place is already in the game folder and isn't REDdeck's, deploy moves it into the library's `backup` folder first. **Undo deploy** puts it back.
+If a file that EDGEdeck needs to place is already in the game folder and isn't EDGEdeck's, deploy moves it into the library's `backup` folder first. **Undo deploy** puts it back.
 
 ## Undo deploy
 
@@ -80,19 +80,19 @@ Use it to:
 
 - go back to a clean game, for example to check whether a problem comes from a mod;
 - hand the game back to another mod manager;
-- prepare to uninstall REDdeck.
+- prepare to uninstall EDGEdeck.
 
-> **REDdeck never deletes a file it didn't put there.** Everything it removes is in its manifest, and hardlinks are checked to be the very same file before they're removed.
+> **EDGEdeck never deletes a file it didn't put there.** Everything it removes is in its manifest, and hardlinks are checked to be the very same file before they're removed.
 
 ## Living with Vortex
 
-While Vortex has files deployed in the game folder, REDdeck refuses to deploy. Purge in Vortex first (**Mods**, **Purge**). After that, both can be installed side by side, as long as only one of them has deployed. See [Switch from Vortex](switch-from-vortex.html).
+While Vortex has files deployed in the game folder, EDGEdeck refuses to deploy. Purge in Vortex first (**Mods**, **Purge**). After that, both can be installed side by side, as long as only one of them has deployed. See [Switch from Vortex](switch-from-vortex.html).
 
 ## Load order, in short
 
 - **Your list is the load order.** Higher wins.
-- For **archives**, REDdeck writes `modlist.txt`, which tells the game which archives to load first. You don't need to rename archives with `#` or `00_` prefixes to control order.
-- For **REDmod packages**, REDdeck passes the same order to `redMod.exe`.
+- For **archives**, EDGEdeck writes `modlist.txt`, which tells the game which archives to load first. You don't need to rename archives with `#` or `00_` prefixes to control order.
+- For **REDmod packages**, EDGEdeck passes the same order to `redMod.exe`.
 - **Scripts, CET mods and plugins** have no load order: they all load together.
 
 See [Conflicts](conflicts.html) for choosing who wins.

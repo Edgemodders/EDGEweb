@@ -27,7 +27,7 @@ REDcode does that work inside VS Code:
 - **look and listen**: textures, atlases, 3D meshes, voice lines and the game's sound effects;
 - **look things up** in TweakDB, the game's database of items and stats, and start a tweak from any record;
 - **export and import** to formats other tools edit, such as PNG and glTF;
-- **pack, install and run**: build the mod, put it in the game (through [REDdeck](../reddeck/) when you have it) and start the game.
+- **pack, install and run**: build the mod, put it in the game (through [EDGEdeck](../edgedeck/) when you have it) and start the game.
 
 ## Why you might want it
 
@@ -38,7 +38,7 @@ REDcode does that work inside VS Code:
 | Find big modding tools intimidating | One sidebar, three trees and a handful of buttons. Plain messages that say what went wrong and offer the fix |
 | Want to look before you change | Textures, meshes in 3D, sounds and TweakDB records open with a click, straight from the game, without extracting anything |
 | Like VS Code already | Git, themes, extensions, search and your assistant, next to your mod |
-| Use REDdeck | Install hands your mod to REDdeck, so one tool keeps track of everything in the game folder |
+| Use EDGEdeck | Install hands your mod to EDGEdeck, so one tool keeps track of everything in the game folder |
 
 ## How it fits into EDGE
 
@@ -47,7 +47,7 @@ REDcode is the **Create** stage of the EDGE platform. It works on its own, and o
 | Toolkit | What it adds to REDcode |
 |---|---|
 | [REDbridge](../redbridge/) | Needed. It runs WolvenKit's engine. REDcode downloads and updates it for you |
-| [REDdeck](../reddeck/) | Install goes through REDdeck, with its record of every file and its undo. REDdeck can also copy files from installed mods into your project |
+| [EDGEdeck](../edgedeck/) | Install goes through EDGEdeck, with its record of every file and its undo. EDGEdeck can also copy files from installed mods into your project |
 | Claude and other agents | `redcode-mcp` lets an assistant browse the archives, read and patch game files, query TweakDB, export, import and pack |
 | EDGEwave | Open in EDGEwave hands a sound to the EDGE sound studio. EDGEwave is still in development |
 | [REDnode](../rednode/) | Planned: edit a REDnode mod in REDcode and send it into the running game. Not built yet |
@@ -63,12 +63,12 @@ REDcode **0.9.0** is the latest release (15 October 2026). It's on the **VS Code
 | Texture viewer, 3D mesh viewer, audio player, game sound list | Released and tested by hand. Meshes show flat colours for now, not their textures |
 | TweakDB view, record page, New Tweak and hover | Released in 0.9.0 and tested by hand |
 | Pack | Released and tested by hand: the archive matched a WolvenKit pack of the same project |
-| Install through REDdeck, Uninstall, Run Game | Released and tested by hand |
-| Install without REDdeck | Released, tested only against a stand-in game folder |
+| Install through EDGEdeck, Uninstall, Run Game | Released and tested by hand |
+| Install without EDGEdeck | Released, tested only against a stand-in game folder |
 | Install to the Hot Folder (Red Hot Tools) | Released, **untested**: the developer doesn't have Red Hot Tools |
 | Export and import | Released and tested by hand. Sounds can be exported but not imported |
 | `redcode-mcp` for assistants | 0.2.0 on npm (16 October 2026) |
-| LocKey browser | Planned, next after a REDbridge change shared with REDdeck |
+| LocKey browser | Planned, next after a REDbridge change shared with EDGEdeck |
 | The REDnode loop (live testing in the running game) | Planned, waits for REDnode |
 | Graph editors for quests and scenes, ink widget preview, a branded REDcode app | Planned, later |
 
@@ -85,7 +85,7 @@ REDcode **0.9.0** is the latest release (15 October 2026). It's on the **VS Code
 | [Export and import](export-import.html) | Out to PNG, glTF and Ogg, and back into the game's formats |
 | [Pack, install and run](pack-install.html) | Turning a project into a mod and trying it in the game |
 | [Assistants and MCP](assistants.html) | Let Claude work on your mod with you |
-| [Working with other tools](other-tools.html) | REDdeck, WolvenKit, EDGEwave, redscript, and REDcode's API |
+| [Working with other tools](other-tools.html) | EDGEdeck, WolvenKit, EDGEwave, redscript, and REDcode's API |
 | [Settings and commands](settings.html) | Every setting and command |
 | [Troubleshooting](troubleshooting.html) | Symptoms and fixes |
 

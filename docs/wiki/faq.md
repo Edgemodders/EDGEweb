@@ -19,7 +19,7 @@ REDagent itself is free and open source. It calls Claude with your own Anthropic
 ## Is it safe for my game and my files?
 
 - **REDagent** only writes inside REDnode's apps folders, shows each change as a diff before it is made, and backs up every file it changes so you can **Undo**.
-- **REDdeck** records every file it deploys in a manifest. **Undo deploy** removes exactly those files and nothing else.
+- **EDGEdeck** records every file it deploys in a manifest. **Undo deploy** removes exactly those files and nothing else.
 - **REDnode** runs mods and overlay apps in their own process, outside the game. If one crashes, the game keeps running.
 
 ## Does it work with WolvenKit, CET, RED4ext and my other mods?
@@ -31,8 +31,8 @@ EDGE is built to work alongside them, not replace them.
 | WolvenKit | REDcode opens and packs WolvenKit projects. REDbridge uses WolvenKit's own engine |
 | RED4ext | REDnode is a RED4ext plugin |
 | Cyber Engine Tweaks | REDnode's overlay was tested in game side by side with CET |
-| redscript, ArchiveXL, TweakXL, REDmod | REDdeck recognises and deploys them. REDcode has TweakXL language support |
-| Vortex | REDdeck can import your Vortex mods. Use one manager at a time: see [Switch from Vortex](reddeck/switch-from-vortex.html) |
+| redscript, ArchiveXL, TweakXL, REDmod | EDGEdeck recognises and deploys them. REDcode has TweakXL language support |
+| Vortex | EDGEdeck can import your Vortex mods. Use one manager at a time: see [Switch from Vortex](edgedeck/switch-from-vortex.html) |
 
 ## Can I use it online or for cheats?
 
@@ -40,7 +40,7 @@ No. Cyberpunk 2077 is single-player, and EDGE is for single-player modding only.
 
 ## Does EDGE need the internet?
 
-REDagent needs it to talk to Claude. REDdeck uses it for Nexus Mods updates and downloads, which are optional. Everything else runs on your PC.
+REDagent needs it to talk to Claude. EDGEdeck uses it for Nexus Mods updates and downloads, which are optional. Everything else runs on your PC.
 
 ## Is EDGEmodders part of CD PROJEKT RED or Anthropic?
 

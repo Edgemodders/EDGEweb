@@ -29,13 +29,13 @@ Each page starts with front matter like this:
 
 ```yaml
 ---
-title: Switch from Vortex to REDdeck
+title: Switch from Vortex to EDGEdeck
 nav_title: Switch from Vortex
-section: REDdeck
+section: EDGEdeck
 order: 2
 description: "One sentence for search results."
 reviewed: 2026-10-13
 ---
 ```
 
-`section` is the sidebar group, one of: Start here, REDagent, REDnode, REDcode, REDdeck, REDbridge. `order` sorts pages within it.
+`section` is the sidebar group, one of: Start here, REDagent, REDnode, REDcode, EDGEdeck, REDbridge. `order` sorts pages within it.

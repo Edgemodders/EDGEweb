@@ -49,7 +49,7 @@ The stack is TypeScript, JavaScript, Node, VS Code extensions, C# (.NET), C++ an
 |---|---|---|
 | [REDagent](https://github.com/Edgemodders/REDagent) | Modding agent inside the game, powered by Claude | JavaScript |
 | [REDcode](https://github.com/Edgemodders/REDcode) | Modding IDE built on VS Code | TypeScript |
-| [REDdeck](https://github.com/Edgemodders/REDdeck) | Mod manager inside VS Code | TypeScript |
+| [EDGEdeck](https://github.com/Edgemodders/EDGEdeck) | Mod manager inside VS Code | TypeScript |
 | [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host over JSON-RPC | C# |
 | [REDnode](https://github.com/Edgemodders/REDnode) | Node.js runtime scripting for the game | C++, TypeScript |
 

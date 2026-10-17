@@ -28,7 +28,7 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 
 | Setting | Default | What it does |
 |---|---|---|
-| **REDbridge.exe** | Empty: the copy REDdeck fetched | A path to a REDbridge of your choice. Leave it empty in nearly every case |
+| **REDbridge.exe** | Empty: the copy EDGEdeck fetched | A path to a REDbridge of your choice. Leave it empty in nearly every case |
 | **Game folder** | Empty: found from where REDnode runs | The game folder, for when EDGEbuilder can't find it |
 | **Use EDGEbuilder's own camera (V stays put)** | On | Off: Edit works from V's own view instead, as in 0.2 |
 | **Hide the game's HUD** | On | Off: the HUD stays on screen while Edit is on |

@@ -18,7 +18,7 @@ reviewed: 2026-10-16
 | [VS Code](https://code.visualstudio.com/) 1.70 or later | REDcode is a VS Code extension. It's also on Open VSX, the store editors such as VSCodium use |
 | The .NET 10 runtime | REDbridge runs on it. If it's missing, REDcode says so and offers to install it |
 | REDbridge 0.8.0 or later | REDcode downloads it for you on first start |
-| Optional: [REDdeck](../reddeck/) 0.21.0 or later | So Install puts your mod in the game through REDdeck, with its undo |
+| Optional: [EDGEdeck](../edgedeck/) 0.21.0 or later | So Install puts your mod in the game through EDGEdeck, with its undo |
 | Optional: Node.js 20 or later | Only for `redcode-mcp`, the server for AI assistants. See [Assistants and MCP](assistants.html) |
 
 ## Install REDcode
@@ -63,7 +63,7 @@ REDcode looks for Cyberpunk 2077 in every Steam library, in GOG and in the Epic 
 
 > REDcode found Cyberpunk 2077 at ... Use it?
 
-Press **Use It**. If it found more than one install, or the wrong one, **Choose Another...** lists them all or lets you browse. If REDdeck is running, REDcode offers the game folder REDdeck uses.
+Press **Use It**. If it found more than one install, or the wrong one, **Choose Another...** lists them all or lets you browse. If EDGEdeck is running, REDcode offers the game folder EDGEdeck uses.
 
 You can change it any time with **REDcode: Set Game Folder**, which is also a button in the empty Game Assets view. The folder you pick must contain `bin\x64\Cyberpunk2077.exe`.
 
@@ -90,7 +90,7 @@ The EDGE tools are drawn for a dark colour theme called **REDnode HUD**: near-bl
 1. In the Extensions view, search for **REDnode HUD** (publisher Edgemodders) and install it. It's on the Marketplace and Open VSX.
 2. Press `Ctrl+K` then `Ctrl+T` and choose **REDnode HUD**.
 
-A theme can't set fonts. To match the EDGE docs, install [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) and set it as `editor.fontFamily` in VS Code's settings. REDdeck's **Suggest the HUD theme** command offers the same theme.
+A theme can't set fonts. To match the EDGE docs, install [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) and set it as `editor.fontFamily` in VS Code's settings. EDGEdeck's **Suggest the HUD theme** command offers the same theme.
 
 {% include shot.html caption="The REDnode HUD theme" shows="VS Code in the REDnode HUD theme, with a .tweak file open to show the yellow and cyan syntax colours." %}
 

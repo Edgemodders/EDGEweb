@@ -28,7 +28,7 @@ MCP, the Model Context Protocol, is the standard way to give an AI agent tools. 
 
 `claude mcp list` shows `rednode` as connected while the game runs, and as failing while it's closed, which is normal: the server lives in the overlay host, which runs with the game.
 
-[Connect Claude Code](../connect-claude-code.html) covers REDnode beside the REDcode and REDdeck servers.
+[Connect Claude Code](../connect-claude-code.html) covers REDnode beside the REDcode and EDGEdeck servers.
 
 {% include shot.html caption="MCP server switch" shows="The bottom of the REDnode launcher with the MCP server switch on and the Copy setup button." %}
 

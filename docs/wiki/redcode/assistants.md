@@ -61,7 +61,7 @@ claude mcp add redcode -- cmd /c npx -y @edgemodders/redcode-mcp
 
 Then start Claude Code and ask away. Other MCP clients take the same command: `npx -y @edgemodders/redcode-mcp`.
 
-See [Connect Claude Code](../connect-claude-code.html) for the other EDGE servers, REDnode and REDdeck, which add powers of their own.
+See [Connect Claude Code](../connect-claude-code.html) for the other EDGE servers, REDnode and EDGEdeck, which add powers of their own.
 
 ### How it finds REDbridge and the game
 

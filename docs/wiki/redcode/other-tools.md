@@ -2,7 +2,7 @@
 title: Working with other tools
 section: REDcode
 order: 10
-description: "How REDcode works with REDdeck, WolvenKit, EDGEwave, the redscript extension and REDnode, and the API it offers other VS Code extensions."
+description: "How REDcode works with EDGEdeck, WolvenKit, EDGEwave, the redscript extension and REDnode, and the API it offers other VS Code extensions."
 reviewed: 2026-10-16
 ---
 
@@ -10,19 +10,19 @@ reviewed: 2026-10-16
 
 REDcode does one job, making mods, and leaves the rest to tools that do theirs well. This page covers each of them.
 
-## REDdeck
+## EDGEdeck
 
-[REDdeck](../reddeck/), the EDGE mod manager, is REDcode's partner. Both run in the same VS Code window.
+[EDGEdeck](../edgedeck/), the EDGE mod manager, is REDcode's partner. Both run in the same VS Code window.
 
 | From | To | What happens |
 |---|---|---|
-| REDcode's **Install** | REDdeck | Your packed project becomes a REDdeck mod, version `dev`, and REDdeck deploys it. Each later Install refreshes the same mod. See [Pack, install and run](pack-install.html#install) |
-| REDdeck's **Add from REDcode project** | REDdeck | The same, started from REDdeck's side |
-| REDdeck's **Add to Project** | REDcode | Copies files from a mod you have installed into your project. For a mod's `.archive`, REDcode extracts the resources you pick into `source/archive`. Needs REDcode 0.6.1 and REDbridge 0.7.1 or later |
+| REDcode's **Install** | EDGEdeck | Your packed project becomes a EDGEdeck mod, version `dev`, and EDGEdeck deploys it. Each later Install refreshes the same mod. See [Pack, install and run](pack-install.html#install) |
+| EDGEdeck's **Add from REDcode project** | EDGEdeck | The same, started from EDGEdeck's side |
+| EDGEdeck's **Add to Project** | REDcode | Copies files from a mod you have installed into your project. For a mod's `.archive`, REDcode extracts the resources you pick into `source/archive`. Needs REDcode 0.6.1 and REDbridge 0.7.1 or later |
 
-All of this is in [REDdeck and REDcode](../reddeck/redcode.html), from REDdeck's side.
+All of this is in [EDGEdeck and REDcode](../edgedeck/redcode.html), from EDGEdeck's side.
 
-Today REDcode and REDdeck each download their own copy of REDbridge. Sharing one copy is the next planned change to REDcode.
+Today REDcode and EDGEdeck each download their own copy of REDbridge. Sharing one copy is the next planned change to REDcode.
 
 ## WolvenKit
 

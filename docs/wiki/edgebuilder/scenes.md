@@ -51,7 +51,7 @@ Phase B4, **Bake**, is what turns a scene into a real mod. The plan:
 
 1. You name the scene, pick a [REDcode](../redcode/) project and press **Bake**.
 2. [REDbridge](../redbridge/) writes the game files that add the objects to the world: a **streaming sector** (the game's own format for a piece of the world), a streaming block that tells the game where it is, and an [ArchiveXL](../glossary.html) file that loads it.
-3. REDcode packs the project into a mod, and [REDdeck](../reddeck/) deploys it.
+3. REDcode packs the project into a mod, and [EDGEdeck](../edgedeck/) deploys it.
 4. On the next game start, the objects are part of Night City, with EDGEbuilder off.
 
 | Part | Status |
@@ -59,7 +59,7 @@ Phase B4, **Bake**, is what turns a scene into a real mod. The plan:
 | REDbridge writing the sector from a scene | Built in REDbridge 0.6.0 and checked outside the game. Whether the game streams it in is untested |
 | The Bake panel in EDGEbuilder | Not started |
 | Scenes in a REDcode project | Not started; asked of REDcode |
-| Installing the baked mod with REDdeck | REDdeck can add a REDcode project as a mod already. The full loop is untested |
+| Installing the baked mod with EDGEdeck | EDGEdeck can add a REDcode project as a mod already. The full loop is untested |
 
 A baked scene will need **ArchiveXL** in the game, as every mod that adds world sectors does.
 

@@ -1,8 +1,8 @@
 ---
 title: Conflicts
-section: REDdeck
+section: EDGEdeck
 order: 6
-description: "What mod conflicts are in Cyberpunk 2077, how REDdeck finds them by file and inside archives, and how to choose the winner."
+description: "What mod conflicts are in Cyberpunk 2077, how EDGEdeck finds them by file and inside archives, and how to choose the winner."
 reviewed: 2026-10-16
 ---
 
@@ -10,22 +10,22 @@ reviewed: 2026-10-16
 
 Two mods **conflict** when they both change the same thing. Only one version can reach the game, so one mod **wins** and the other **loses** that file.
 
-Conflicts are information, not errors. Most are on purpose: a texture mod that changes a body mod's skin is meant to win over it. REDdeck shows them, explains who wins, and never blocks a deploy because of them.
+Conflicts are information, not errors. Most are on purpose: a texture mod that changes a body mod's skin is meant to win over it. EDGEdeck shows them, explains who wins, and never blocks a deploy because of them.
 
 ## Who wins
 
-**The mod earlier in REDdeck's order wins:** higher in the list, within a section. To change the winner, choose **Let ... win** on the Conflicts page, or move a mod up or down with the arrow buttons on its row.
+**The mod earlier in EDGEdeck's order wins:** higher in the list, within a section. To change the winner, choose **Let ... win** on the Conflicts page, or move a mod up or down with the arrow buttons on its row.
 
 The order is one list for all your mods, whatever [section](mods-view.html#sections) they're shown in. A section near the top of the page doesn't make its mods win over mods in a lower section. **Let ... win** always works, wherever the two mods are shown. See [Order: who wins](mods-view.html#order-who-wins).
 
 ## Two kinds of conflict
 
-| Kind | Example | How REDdeck finds it |
+| Kind | Example | How EDGEdeck finds it |
 |---|---|---|
 | **By file path** | Two mods both ship `r6/scripts/HUD/hud.reds` | From the library alone. Always on |
 | **Inside archives** | Two `.archive` files with different names both contain the same character mesh | Needs [REDbridge](../redbridge/), which reads inside archives |
 
-Conflicts inside archives are the ones most mod managers can't see. Two archive files with different names don't look like a conflict on disk, but in the game only one of them provides that mesh or texture. REDdeck opens every archive that's on, lists the resources inside, and compares them. If you don't have REDbridge, click **Get REDbridge** in the Set up group or the `...` menu.
+Conflicts inside archives are the ones most mod managers can't see. Two archive files with different names don't look like a conflict on disk, but in the game only one of them provides that mesh or texture. EDGEdeck opens every archive that's on, lists the resources inside, and compares them. If you don't have REDbridge, click **Get REDbridge** in the Set up group or the `...` menu.
 
 ## The Conflicts page
 

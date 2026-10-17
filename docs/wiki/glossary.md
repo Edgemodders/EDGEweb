@@ -33,7 +33,7 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | Sector | A streaming sector: a game file that lists the objects in one part of the world, loaded as you get near. EDGEbuilder will bake scenes into one |
 | TweakDB | The game's database of item stats, characters and settings |
 | TweakXL | A framework that changes TweakDB with simple text files: YAML (`.yaml`) or the game's own tweak format (`.tweak`) |
-| Vortex | A general-purpose mod manager. REDdeck can import its mods |
+| Vortex | A general-purpose mod manager. EDGEdeck can import its mods |
 | WolvenKit | The community's main Cyberpunk modding tool. EDGE builds on its engine |
 
 ## EDGE terms
@@ -43,11 +43,11 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | EDGE | The platform: the EDGE toolkits working together |
 | Agent | An AI that can use tools, not only chat. REDagent is one; Claude Code is another |
 | Change card | REDagent's preview of a file change, as a diff, with Allow and Deny |
-| Deploy | REDdeck putting your switched-on mods into the game folder, with hardlinks, recorded in a manifest |
+| Deploy | EDGEdeck putting your switched-on mods into the game folder, with hardlinks, recorded in a manifest |
 | Extension pack | A VS Code extension that only installs other extensions. EDGEkit's pack installs the EDGE tools in one go |
 | Hot reload | REDnode restarting a changed mod in the running game, without a game restart |
-| Library | Where REDdeck keeps your mods, outside the game folder |
-| MCP (Model Context Protocol) | The standard that lets AI agents use tools. REDnode, REDdeck and REDcode each offer an MCP server |
+| Library | Where EDGEdeck keeps your mods, outside the game folder |
+| MCP (Model Context Protocol) | The standard that lets AI agents use tools. REDnode, EDGEdeck and REDcode each offer an MCP server |
 | Node mod | A REDnode mod written in JavaScript or TypeScript, running in its own Node process |
 | Package | Anything REDnode runs: a Node mod, an overlay app, or both. EDGEbuilder and REDagent are packages |
 | Overlay app | A small web app (HTML, CSS, JavaScript) that REDnode draws on top of the game |

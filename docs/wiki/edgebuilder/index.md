@@ -37,7 +37,7 @@ Until Bake exists, what you place is a **preview**: it's in the world while you 
 - **Precise placement.** A gizmo, the keys G, R and S with axis locks and typed numbers, snapping, drop to floor, and exact X, Y, Z and heading fields.
 - **A free camera that leaves V alone.** Fly anywhere to place objects from any angle; V stays where V stood, and the game's HUD gets out of the way.
 - **Easy to back out of.** Previews go away when a save loads, and come back only when you ask. Switch Edit off and the view, the HUD and the mouse are the game's again.
-- **Part of EDGE, end to end.** REDnode runs it, REDbridge reads the game's files, REDdeck installs it. Baked scenes are planned to land in a REDcode project.
+- **Part of EDGE, end to end.** REDnode runs it, REDbridge reads the game's files, EDGEdeck installs it. Baked scenes are planned to land in a REDcode project.
 
 ## How it fits into EDGE
 
@@ -47,7 +47,7 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 |---|---|
 | [REDnode](../rednode/) | Runs it. Draws the editor over the game, and gives it the game calls that spawn, move and remove objects |
 | [REDbridge](../redbridge/) | Reads the game's archives to build the list of assets, with each one's size and appearances. It will also write the baked files |
-| [REDdeck](../reddeck/) | Installs EDGEbuilder from its release zip. Later it will install what you bake, too |
+| [EDGEdeck](../edgedeck/) | Installs EDGEbuilder from its release zip. Later it will install what you bake, too |
 | [REDcode](../redcode/) | Planned: holds your scenes in a project, and packs the bake into a mod |
 
 ## Status
@@ -71,7 +71,7 @@ EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks m
 
 | Page | |
 |---|---|
-| [Install and set up](install.html) | What you need, installing with REDdeck, allowing REDbridge, opening it in the game |
+| [Install and set up](install.html) | What you need, installing with EDGEdeck, allowing REDbridge, opening it in the game |
 | [Browsing and dropping](browsing.html) | The asset index, search, appearances, dropping objects, the Scene tab |
 | [Positioning objects](positioning.html) | The Edit switch, the gizmo, G R S, typed numbers, snapping, drop to floor, scale |
 | [The camera and builder mode](camera.html) | Flying the editor camera, orbit, pan, frame, and the hidden HUD |

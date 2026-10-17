@@ -43,8 +43,8 @@ REDnode is the **Run** stage of the EDGE platform: the part that is in the game 
 | Toolkit | How it works with REDnode |
 |---|---|
 | [REDagent](../redagent/) | A REDnode package: the chat window in the game, and the agent that writes REDnode mods |
-| [REDbridge](../redbridge/) | REDnode packages can use it to read the game's archives and files. REDnode uses the copy REDdeck or REDcode downloaded |
-| [REDdeck](../reddeck/) | Manages your *game* mods (archives, frameworks) before the game starts. REDnode's Mod Manager manages REDnode packages *in* the game. They are separate |
+| [REDbridge](../redbridge/) | REDnode packages can use it to read the game's archives and files. REDnode uses the copy EDGEdeck or REDcode downloaded |
+| [EDGEdeck](../edgedeck/) | Manages your *game* mods (archives, frameworks) before the game starts. REDnode's Mod Manager manages REDnode packages *in* the game. They are separate |
 | [REDcode](../redcode/) | Where you edit REDnode mods. Its REDnode HUD colour theme comes from REDnode's look |
 | Claude Code | Connects to REDnode's [MCP server](agents.html) |
 

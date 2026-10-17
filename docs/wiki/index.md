@@ -22,7 +22,7 @@ EDGE is a family of open-source toolkits. Five of them cover the whole life of a
 | Ask | [REDagent](redagent/) | A modding agent inside the game, powered by Claude. Writes, runs, checks and fixes mods with you while you play |
 | Create | [REDcode](redcode/) | A modding IDE built on VS Code. Browse the game's archives and edit game files as JSON |
 | Build | [REDbridge](redbridge/) | WolvenKit's engine as a local service, for the editor and for AI agents |
-| Deploy | [REDdeck](reddeck/) | A mod manager inside VS Code. Add, turn on or off, deploy, remove, and undo |
+| Deploy | [EDGEdeck](edgedeck/) | A mod manager inside VS Code. Add, turn on or off, deploy, remove, and undo |
 | Run | [REDnode](rednode/) | The runtime. Node mods and HTML overlay apps in the running game, with hot reload |
 
 More toolkits build on those five for particular jobs:
@@ -41,18 +41,18 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | Benefit | What it means | From |
 |---|---|---|
 | **Anyone can mod** | Describe a mod in plain words; an agent writes, runs and fixes it | [REDagent](redagent/) |
-| **Agent-ready everywhere** | REDnode, REDcode and REDdeck offer their tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop | [REDnode](rednode/), [REDcode](redcode/), [REDdeck](reddeck/) |
-| **You stay in control** | Every file change is shown before it happens, and agent changes and deploys can be undone | [REDagent](redagent/), [REDdeck](reddeck/) |
+| **Agent-ready everywhere** | REDnode, REDcode and EDGEdeck offer their tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop | [REDnode](rednode/), [REDcode](redcode/), [EDGEdeck](edgedeck/) |
+| **You stay in control** | Every file change is shown before it happens, and agent changes and deploys can be undone | [REDagent](redagent/), [EDGEdeck](edgedeck/) |
 | **Live in the game** | Mods hot-reload into the running game; overlay apps draw HTML windows and HUD widgets over it | [REDnode](rednode/) |
 | **Crash isolation** | Mods and overlay apps run outside the game process, so a crash doesn't take the game down | [REDnode](rednode/) |
 | **Everything is text** | Game files as JSON, tweaks as YAML, mods in JavaScript and TypeScript, with a typed game API | [REDcode](redcode/), [REDnode](rednode/) |
 | **WolvenKit inside** | WolvenKit's engine does the file work; WolvenKit projects open and pack as they are | [REDbridge](redbridge/), [REDcode](redcode/) |
-| **Simple mod management** | One list, four verbs, conflicts even inside archives, Nexus updates, Vortex import | [REDdeck](reddeck/) |
+| **Simple mod management** | One list, four verbs, conflicts even inside archives, Nexus updates, Vortex import | [EDGEdeck](edgedeck/) |
 | **Build where you see it** | Place the game's own objects in the running game with a gizmo and a free camera, instead of typing coordinates | [EDGEbuilder](edgebuilder/) |
-| **One install** | One extension pack puts REDcode, REDdeck and the HUD theme into VS Code; it keeps them updated | [EDGEkit](edgekit/) |
+| **One install** | One extension pack puts REDcode, EDGEdeck and the HUD theme into VS Code; it keeps them updated | [EDGEkit](edgekit/) |
 | **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |
 
-> **Status:** EDGE is early and moving fast. REDagent writes working mods in game, REDnode mods and overlay apps pass in-game tests, and EDGEbuilder places objects in the running game. REDcode and REDdeck are on the VS Code Marketplace as previews; the other toolkits still install from source or release files, and EDGEwave and EDGEmat are not released yet. The [platform page](/platform.html) shows where each feature stands.
+> **Status:** EDGE is early and moving fast. REDagent writes working mods in game, REDnode mods and overlay apps pass in-game tests, and EDGEbuilder places objects in the running game. REDcode and EDGEdeck are on the VS Code Marketplace as previews; the other toolkits still install from source or release files, and EDGEwave and EDGEmat are not released yet. The [platform page](/platform.html) shows where each feature stands.
 
 ## About this wiki
 

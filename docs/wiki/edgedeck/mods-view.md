@@ -1,15 +1,15 @@
 ---
-title: The Mods view and the REDdeck page
+title: The Mods view and the EDGEdeck page
 nav_title: The Mods view
-section: REDdeck
+section: EDGEdeck
 order: 3
-description: "Find your way around REDdeck: the Mods view in the sidebar, the wide REDdeck page, sections, the order that decides conflicts, the detail panel and the status bar."
+description: "Find your way around EDGEdeck: the Mods view in the sidebar, the wide EDGEdeck page, sections, the order that decides conflicts, the detail panel and the status bar."
 reviewed: 2026-10-16
 ---
 
-# The Mods view and the <span class="y">REDdeck page</span>
+# The Mods view and the <span class="y">EDGEdeck page</span>
 
-REDdeck shows your mods in two places. The **Mods view** in VS Code's sidebar is the compact everyday list. The **REDdeck page** is a wide table in the editor area for bigger jobs: searching, filtering, sorting by size. Both show the same library, and a change in one appears in the other.
+EDGEdeck shows your mods in two places. The **Mods view** in VS Code's sidebar is the compact everyday list. The **EDGEdeck page** is a wide table in the editor area for bigger jobs: searching, filtering, sorting by size. Both show the same library, and a change in one appears in the other.
 
 ## The Mods view
 
@@ -21,7 +21,7 @@ The list has these groups:
 |---|---|
 | **Set up** | Steps still to do. Disappears when there are none. See [Install and set up](install.html) |
 | **Frameworks** | RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL, Codeware, Audioware, input_loader and mod_settings. Pinned at the top because most mods need them. The header shows the game version, for example `3, 3 on · game 2.31`. See [Frameworks and game patches](frameworks.html) |
-| **Your sections** | Sections you make on the REDdeck page, between Frameworks and Mods. They only group the list. See [Sections](#sections) |
+| **Your sections** | Sections you make on the EDGEdeck page, between Frameworks and Mods. They only group the list. See [Sections](#sections) |
 | **Mods** | Everything else, in order. Within a group, the mod higher up wins a conflict. See [Order: who wins](#order-who-wins) |
 
 ### A mod's row
@@ -42,7 +42,7 @@ The list has these groups:
 | `not deployed yet` | On, but you haven't deployed since turning it on | Deploy |
 | `off` | Off, and not in the game | Nothing |
 | `off, still deployed` | You turned it off, but its files are still in the game | Deploy to take them out |
-| `changed in game folder` | Something outside REDdeck changed one of its deployed files | Deploy; REDdeck asks what to keep. See [Deploying](deploying.html#changes-made-outside-reddeck) |
+| `changed in game folder` | Something outside EDGEdeck changed one of its deployed files | Deploy; EDGEdeck asks what to keep. See [Deploying](deploying.html#changes-made-outside-edgedeck) |
 | `changed, deploy again` | Its files in the game no longer match the library | Deploy |
 | `update 1.2 available` | Nexus has a newer version | Click it to update. See [Nexus Mods](nexus.html) |
 | `loses 3 archive files` | Another mod overrides 3 resources inside its archives | Check [Conflicts](conflicts.html) if that's not what you want |
@@ -50,7 +50,7 @@ The list has these groups:
 
 ### The view's buttons
 
-The title bar has **Open REDdeck**, **Add mod**, **Deploy**, **Nexus: check for updates**, **Switch loadout** and **Refresh**. The view's header names the active [loadout](library.html#loadouts). The **`...`** menu holds the rest: Show conflicts, Show pending changes, Import from Vortex, Undo deploy, Nexus sign in, Nexus: add from a link, Add from REDcode project, Get REDbridge, Pick the game folder, Open library folder, Show log, Switch loadout, Save as new loadout, Export the active loadout and Import a loadout.
+The title bar has **Open EDGEdeck**, **Add mod**, **Deploy**, **Nexus: check for updates**, **Switch loadout** and **Refresh**. The view's header names the active [loadout](library.html#loadouts). The **`...`** menu holds the rest: Show conflicts, Show pending changes, Import from Vortex, Undo deploy, Nexus sign in, Nexus: add from a link, Add from REDcode project, Get REDbridge, Pick the game folder, Open library folder, Show log, Switch loadout, Save as new loadout, Export the active loadout and Import a loadout.
 
 ## The detail panel
 
@@ -60,11 +60,11 @@ Click a mod's name for its detail panel, which opens in the editor area.
 
 It shows the files the mod deploys and their sizes, folder by folder, and its conflicts, both by file path and inside archives. Its buttons turn the mod on, move it, open its folder, open it on Nexus, update it and remove it.
 
-## The REDdeck page
+## The EDGEdeck page
 
-**Open REDdeck**, the first button in the view's title bar, opens the wide table.
+**Open EDGEdeck**, the first button in the view's title bar, opens the wide table.
 
-{% include shot.html caption="The REDdeck page" shows="The full-width REDdeck table with search, the facet chips (On, Off, Needs deploy, Conflicts, Update available) and their counts, the toolbar, and the footer with disk use and the running REDbridge." %}
+{% include shot.html caption="The EDGEdeck page" shows="The full-width EDGEdeck table with search, the facet chips (On, Off, Needs deploy, Conflicts, Update available) and their counts, the toolbar, and the footer with disk use and the running REDbridge." %}
 
 | Part | What it does |
 |---|---|
@@ -83,11 +83,11 @@ The page remembers your search and filters.
 
 ## Sections
 
-Sections let you group a long list your way: "Visuals", "Gameplay", "Testing", whatever helps you find things. Frameworks and Mods are built in; your own sections sit between them, on the REDdeck page and in the Mods view.
+Sections let you group a long list your way: "Visuals", "Gameplay", "Testing", whatever helps you find things. Frameworks and Mods are built in; your own sections sit between them, on the EDGEdeck page and in the Mods view.
 
-{% include shot.html caption="Sections on the REDdeck page" shows="The REDdeck page with a section of your own between Frameworks and Mods: its header with the on/off box, the move and remove buttons, and one folded section below it." %}
+{% include shot.html caption="Sections on the EDGEdeck page" shows="The EDGEdeck page with a section of your own between Frameworks and Mods: its header with the on/off box, the move and remove buttons, and one folded section below it." %}
 
-| To... | Do this on the REDdeck page |
+| To... | Do this on the EDGEdeck page |
 |---|---|
 | Make a section | Press **+ Section** and give it a name |
 | Put a mod in a section | Press the mod's **Section** button and pick one, or drag the mod's row onto the section's header |
@@ -95,7 +95,7 @@ Sections let you group a long list your way: "Visuals", "Gameplay", "Testing", w
 | Fold a section | Click its name or its arrow. It stays folded after a restart. A search or a filter opens it while it lasts, so nothing hides from a search |
 | Turn a whole section on or off | Tick or untick the box on its header. It shows a dash when only some of its mods are on |
 | Move all of a section's mods to another section | The move button on its header |
-| Remove all of a section's mods from the library | The remove button on its header. REDdeck asks once, listing them, and every version of each goes |
+| Remove all of a section's mods from the library | The remove button on its header. EDGEdeck asks once, listing them, and every version of each goes |
 
 The two buttons that move or remove act on the mods the section *shows*, after your search and filter chips. That makes cleaning up easy: filter to **Off**, then remove on a section, to clear out the mods you no longer use there.
 
@@ -103,7 +103,7 @@ Sections follow a mod across versions: a new version lands in the same section a
 
 ## Order: who wins
 
-When two mods change the same thing, the one earlier in REDdeck's order wins. Underneath the groups, that order is **one list for all your mods**. Sections and groups only decide where a mod is *shown*.
+When two mods change the same thing, the one earlier in EDGEdeck's order wins. Underneath the groups, that order is **one list for all your mods**. Sections and groups only decide where a mod is *shown*.
 
 | Action | What it does to the order |
 |---|---|
@@ -133,4 +133,4 @@ Each mod shows **kind** chips that say what's inside it. A mod can be several ki
 
 ## The status bar
 
-The status bar at the bottom of VS Code shows REDdeck in one line: how many mods are on, whether a deploy is waiting, or that the game wasn't found. Click it to deploy, or to pick the game folder.
+The status bar at the bottom of VS Code shows EDGEdeck in one line: how many mods are on, whether a deploy is waiting, or that the game wasn't found. Click it to deploy, or to pick the game folder.

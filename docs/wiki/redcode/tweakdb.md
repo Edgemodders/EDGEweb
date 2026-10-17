@@ -48,7 +48,7 @@ The record page shows every flat of a record, with its type and value.
 
 The file goes under your project's `source/resources/r6/tweaks/<mod name>/`, and REDcode shows it in the Project view. Every flat is listed with its current value, **commented out**: uncomment the lines you want to change and edit their values. When you [pack](pack-install.html), the file goes to the game's `r6/tweaks` folder, where TweakXL loads it.
 
-It needs a project open. Your mod also needs TweakXL installed in the game, like any tweak mod; [REDdeck](../reddeck/frameworks.html) manages it as a framework.
+It needs a project open. Your mod also needs TweakXL installed in the game, like any tweak mod; [EDGEdeck](../edgedeck/frameworks.html) manages it as a framework.
 
 {% include shot.html caption="A new tweak" shows="The YAML file New Tweak from This Record wrote, open in the editor with its flats commented out, and the file selected in the Project view under Resources." %}
 

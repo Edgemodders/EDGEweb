@@ -1,4 +1,4 @@
-/* EDGEmodders house style (shared with REDnode, REDcode, REDbridge, REDdeck) for Pages. Same tokens as design.html.
+/* EDGEmodders house style (shared with REDnode, REDcode, REDbridge, EDGEdeck) for Pages. Same tokens as design.html.
    Layout: single-column HUD console with a sticky status bar. Markdown content is styled directly. */
 :root {
   --bg: #08090d;

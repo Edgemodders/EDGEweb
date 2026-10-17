@@ -2,7 +2,7 @@
 title: Pack, install and run
 section: REDcode
 order: 8
-description: "Turn a REDcode project into a mod with Pack, put it in the game through REDdeck or directly, take it out again, and start the game."
+description: "Turn a REDcode project into a mod with Pack, put it in the game through EDGEdeck or directly, take it out again, and start the game."
 reviewed: 2026-10-16
 ---
 
@@ -36,29 +36,29 @@ Turn on `redcode.pack.redmod` to pack the project as a [REDmod](../glossary.html
 
 ## Install
 
-**Install** is in the Project view's **`...`** menu; **Pack and Install** (the rocket) packs first. What Install does depends on whether you have REDdeck.
+**Install** is in the Project view's **`...`** menu; **Pack and Install** (the rocket) packs first. What Install does depends on whether you have EDGEdeck.
 
 | With | Install does |
 |---|---|
-| [REDdeck](../reddeck/) 0.21.0 or later | Hands the project to REDdeck. The first time, it becomes a mod named after the project, version `dev`. After that, the same mod gets the new files and keeps its place in your list. REDdeck deploys it, with its record of every file, its conflict check and its undo |
-| No REDdeck | Copies `packed` into the game folder and records every file in the project's `.redcode/installed.json` |
+| [EDGEdeck](../edgedeck/) 0.21.0 or later | Hands the project to EDGEdeck. The first time, it becomes a mod named after the project, version `dev`. After that, the same mod gets the new files and keeps its place in your list. EDGEdeck deploys it, with its record of every file, its conflict check and its undo |
+| No EDGEdeck | Copies `packed` into the game folder and records every file in the project's `.redcode/installed.json` |
 
-With REDdeck, if other mods also have changes waiting to deploy, REDcode asks before the deploy takes them along.
+With EDGEdeck, if other mods also have changes waiting to deploy, REDcode asks before the deploy takes them along.
 
-Without REDdeck, if a file is already in the game, REDcode asks, then backs it up before replacing it. Installing again first removes the previous set of files, so a file you dropped from the project doesn't stay behind. This path has only been tested against a stand-in game folder, not a real install.
+Without EDGEdeck, if a file is already in the game, REDcode asks, then backs it up before replacing it. Installing again first removes the previous set of files, so a file you dropped from the project doesn't stay behind. This path has only been tested against a stand-in game folder, not a real install.
 
-> **Use REDdeck if you use any mod manager.** A tool that copies files into the game behind a mod manager's back confuses it. Through REDdeck, your own mod sits in the same list as everything else, and conflicts with other mods show up. See [REDdeck and REDcode](../reddeck/redcode.html).
+> **Use EDGEdeck if you use any mod manager.** A tool that copies files into the game behind a mod manager's back confuses it. Through EDGEdeck, your own mod sits in the same list as everything else, and conflicts with other mods show up. See [EDGEdeck and REDcode](../edgedeck/redcode.html).
 
 If the project hasn't been packed yet, Install says so and offers **Pack and Install**.
 
-{% include shot.html caption="Your mod in REDdeck" shows="REDdeck's Mods view after Install from REDcode: the project listed as a mod with version dev, switched on and deployed." %}
+{% include shot.html caption="Your mod in EDGEdeck" shows="EDGEdeck's Mods view after Install from REDcode: the project listed as a mod with version dev, switched on and deployed." %}
 
 ## Uninstall
 
 **Uninstall**, in the same **`...`** menu, takes your mod out of the game again:
 
-- with REDdeck, it turns the mod off in REDdeck and deploys;
-- without REDdeck, it removes exactly the files listed in `.redcode/installed.json`, and puts back anything it backed up.
+- with EDGEdeck, it turns the mod off in EDGEdeck and deploys;
+- without EDGEdeck, it removes exactly the files listed in `.redcode/installed.json`, and puts back anything it backed up.
 
 ## Install to the Hot Folder
 

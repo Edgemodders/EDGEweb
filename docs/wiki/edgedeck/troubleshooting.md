@@ -1,32 +1,32 @@
 ---
-title: Troubleshooting REDdeck
+title: Troubleshooting EDGEdeck
 nav_title: Troubleshooting
-section: REDdeck
+section: EDGEdeck
 order: 13
-description: "Fixes for common REDdeck problems: game not found, the game still running, Vortex, missing conflicts, changed files, Nexus downloads, what a deploy changed, and a game that won't start."
+description: "Fixes for common EDGEdeck problems: game not found, the game still running, Vortex, missing conflicts, changed files, Nexus downloads, what a deploy changed, and a game that won't start."
 reviewed: 2026-10-16
 ---
 
-# Troubleshooting <span class="y">REDdeck</span>
+# Troubleshooting <span class="y">EDGEdeck</span>
 
 ## Start with the log
 
-**Show log** in the Mods view's `...` menu, or **View**, **Output**, then **REDdeck** in the dropdown. The first lines say where the library and the game are and how the game was found. When you ask for help, include them.
+**Show log** in the Mods view's `...` menu, or **View**, **Output**, then **EDGEdeck** in the dropdown. The first lines say where the library and the game are and how the game was found. When you ask for help, include them.
 
 ## Problems and fixes
 
 ### "Game not found" in the status bar
 
-REDdeck couldn't find Cyberpunk 2077 in your Steam libraries, GOG or Epic.
+EDGEdeck couldn't find Cyberpunk 2077 in your Steam libraries, GOG or Epic.
 
 1. Click the status bar, or the **Find the game folder** row in the Set up group.
 2. Pick the folder that contains `bin`, `archive` and `r6`.
 
-If the game *is* in one of the Steam libraries the log lists, please [report it](https://github.com/Edgemodders/REDdeck/issues) with those log lines.
+If the game *is* in one of the Steam libraries the log lists, please [report it](https://github.com/Edgemodders/EDGEdeck/issues) with those log lines.
 
 ### "Cyberpunk 2077 is running"
 
-Deploy and Undo deploy wait while the game runs, because the game keeps mod files open and Windows won't let REDdeck change them. Quit the game, then press **The game is closed now**. See [Deploying and undo](deploying.html#close-the-game-first).
+Deploy and Undo deploy wait while the game runs, because the game keeps mod files open and Windows won't let EDGEdeck change them. Quit the game, then press **The game is closed now**. See [Deploying and undo](deploying.html#close-the-game-first).
 
 ### A deploy stopped: a file "is in use"
 
@@ -34,24 +34,24 @@ Another program has a file in the game folder open, and the message names it. Cl
 
 ### "Vortex manages the game"
 
-Vortex has mods deployed in the game folder, and two managers can't deploy into one folder. Purge in Vortex (**Mods**, **Purge**), then deploy in REDdeck. See [Switch from Vortex](switch-from-vortex.html).
+Vortex has mods deployed in the game folder, and two managers can't deploy into one folder. Purge in Vortex (**Mods**, **Purge**), then deploy in EDGEdeck. See [Switch from Vortex](switch-from-vortex.html).
 
 ### No conflicts inside archives
 
-Those need REDbridge. Look at the REDdeck page's footer:
+Those need REDbridge. Look at the EDGEdeck page's footer:
 
 - A **green dot** and a REDbridge version: it's running. If you still see no archive conflicts, you may simply have none.
 - A **Get REDbridge** button: click it. REDbridge also needs the .NET 10 runtime, which Get REDbridge installs for your user account.
 
 ### A mod says "changed in game folder" or "changed, deploy again"
 
-Something outside REDdeck changed or replaced its files, usually a Steam **Verify integrity of game files** or a game update. Deploy. REDdeck asks about each changed file whether to keep the change or put the mod's file back. See [Deploying and undo](deploying.html#changes-made-outside-reddeck).
+Something outside EDGEdeck changed or replaced its files, usually a Steam **Verify integrity of game files** or a game update. Deploy. EDGEdeck asks about each changed file whether to keep the change or put the mod's file back. See [Deploying and undo](deploying.html#changes-made-outside-edgedeck).
 
 ### "Premium only" when updating
 
-Nexus gives direct downloads to Premium members only. REDdeck opens the file's Nexus page instead; press **Mod manager download** there and the file arrives through the download link. See [Nexus Mods](nexus.html#premium-and-free-accounts).
+Nexus gives direct downloads to Premium members only. EDGEdeck opens the file's Nexus page instead; press **Mod manager download** there and the file arrives through the download link. See [Nexus Mods](nexus.html#premium-and-free-accounts).
 
-### Mod manager download on Nexus opens Vortex, not REDdeck
+### Mod manager download on Nexus opens Vortex, not EDGEdeck
 
 Vortex takes the download links back every time it starts. Use **Nexus: handle download links (nxm)**, or the row that reappears in the Set up group.
 
@@ -61,11 +61,11 @@ Every deploy writes a report: each mod's files added, replaced or removed, with 
 
 ### An archive mod is on but doesn't load
 
-Check that it says `deployed`. Archives load in the order of `modlist.txt`, which REDdeck rewrites whenever the archives that are on change. If your library is from before REDdeck 0.26.1, the file may be out of date: it shows as one change waiting, and the next deploy fixes it. If it's deployed and still loses, look for a [conflict](conflicts.html) inside archives.
+Check that it says `deployed`. Archives load in the order of `modlist.txt`, which EDGEdeck rewrites whenever the archives that are on change. If your library is from before EDGEdeck 0.26.1, the file may be out of date: it shows as one change waiting, and the next deploy fixes it. If it's deployed and still loses, look for a [conflict](conflicts.html) inside archives.
 
 ### Deploy copies files instead of using hardlinks
 
-Your library is on a different drive from the game. Hardlinks only work on the same drive. Move the library: set `reddeck.libraryPath` to a folder on the game's drive. See [Library, disk space and loadouts](library.html#moving-the-library).
+Your library is on a different drive from the game. Hardlinks only work on the same drive. Move the library: set `edgedeck.libraryPath` to a folder on the game's drive. See [Library, disk space and loadouts](library.html#moving-the-library).
 
 ### The game won't start after a game update
 
@@ -81,4 +81,4 @@ A framework probably needs updating for the new game version. Check the Framewor
 
 ### Something else
 
-Ask on [Discord]({{ site.discord }}) with your log's first lines, or [open an issue](https://github.com/Edgemodders/REDdeck/issues) on REDdeck's repo.
+Ask on [Discord]({{ site.discord }}) with your log's first lines, or [open an issue](https://github.com/Edgemodders/EDGEdeck/issues) on EDGEdeck's repo.

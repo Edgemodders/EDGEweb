@@ -82,11 +82,11 @@ Only that mod is affected; the game and other mods keep running. Read **Last err
 
 ### A package says NEEDS, or "Needs ..."
 
-It requires a mod your game doesn't have, or has in an older version. The Mod Manager's **Requires** list says which and what version. Install it with [REDdeck](../reddeck/) or your mod manager and restart the game.
+It requires a mod your game doesn't have, or has in an older version. The Mod Manager's **Requires** list says which and what version. Install it with [EDGEdeck](../edgedeck/) or your mod manager and restart the game.
 
 ### A package's feature does nothing
 
-It may be waiting for a permission. Look for **Asks for ...** in its launcher row or Mod Manager details, and switch **Allowed** on if you trust it. Features that need REDbridge also need REDbridge installed: use **Get REDbridge** in [REDdeck](../reddeck/install.html#getting-redbridge).
+It may be waiting for a permission. Look for **Asks for ...** in its launcher row or Mod Manager details, and switch **Allowed** on if you trust it. Features that need REDbridge also need REDbridge installed: use **Get REDbridge** in [EDGEdeck](../edgedeck/install.html#getting-redbridge).
 
 ### "That game object no longer exists"
 

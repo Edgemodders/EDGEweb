@@ -33,7 +33,7 @@ When you ask for help, include the `[edgebuilder]` lines.
 
 ### The first pill says "Needs Codeware 1.14+"
 
-REDnode's world calls need Codeware 1.14 or later. Add Codeware to REDdeck, deploy, and start the game again. REDnode's Mod Manager shows EDGEbuilder's **Requires** line with a tick when it's right.
+REDnode's world calls need Codeware 1.14 or later. Add Codeware to EDGEdeck, deploy, and start the game again. REDnode's Mod Manager shows EDGEbuilder's **Requires** line with a tick when it's right.
 
 ### The second pill says "Allow REDbridge"
 
@@ -41,8 +41,8 @@ You haven't allowed EDGEbuilder to use REDbridge yet. Press **F10**, open the **
 
 ### The second pill says "No REDbridge" or "REDbridge failed"
 
-- **No REDbridge**: none was found. In REDdeck, use **Get REDbridge** in the Set up group. See [Install REDdeck](../reddeck/install.html#getting-redbridge).
-- **REDbridge failed**: it started and stopped. Hover the pill for its last words. Try **Restart REDbridge** in the Settings tab. If you set a path in **REDbridge.exe**, empty it and press **Save and restart REDbridge**, so EDGEbuilder uses REDdeck's copy.
+- **No REDbridge**: none was found. In EDGEdeck, use **Get REDbridge** in the Set up group. See [Install EDGEdeck](../edgedeck/install.html#getting-redbridge).
+- **REDbridge failed**: it started and stopped. Hover the pill for its last words. Try **Restart REDbridge** in the Settings tab. If you set a path in **REDbridge.exe**, empty it and press **Save and restart REDbridge**, so EDGEbuilder uses EDGEdeck's copy.
 
 If the message says the game folder wasn't found, put it in **Game folder** in the Settings tab.
 

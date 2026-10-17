@@ -24,9 +24,9 @@ If you only want to try REDagent or a REDnode mod and the steps below look like 
 | [redscript](https://github.com/jac3km4/redscript/releases) | Required. REDnode adds a few small scripts to the game |
 | [Codeware](https://github.com/psiberx/cp2077-codeware) 1.14 or later | Optional. Only packages that place objects in the world need it |
 | [TweakXL](https://github.com/psiberx/cp2077-tweak-xl) 1.10 or later | Optional. Only packages that change TweakDB need it |
-| [REDbridge](../redbridge/) | Optional. Only packages that read the game's archives need it. REDnode uses the copy [REDdeck](../reddeck/install.html#getting-redbridge) or REDcode downloaded |
+| [REDbridge](../redbridge/) | Optional. Only packages that read the game's archives need it. REDnode uses the copy [EDGEdeck](../edgedeck/install.html#getting-redbridge) or REDcode downloaded |
 
-You can install RED4ext, redscript, Codeware and TweakXL with [REDdeck](../reddeck/) or another mod manager. Match their versions to your game version.
+You can install RED4ext, redscript, Codeware and TweakXL with [EDGEdeck](../edgedeck/) or another mod manager. Match their versions to your game version.
 
 ### On your PC
 

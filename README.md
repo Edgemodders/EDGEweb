@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/brand/banner.png" alt="EDGEmodders: Anyone can mod. AI-first, open-source tools for Night City. Agent REDagent, editor REDcode, manager REDdeck, engine REDbridge, runtime REDnode." width="100%">
+  <img src="docs/assets/brand/banner.png" alt="EDGEmodders: Anyone can mod. AI-first, open-source tools for Night City. Agent REDagent, editor REDcode, manager EDGEdeck, engine REDbridge, runtime REDnode." width="100%">
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@ The site pitches the EDGEmodders tools and links to their docs:
 |---|---|---|
 | [REDagent](https://github.com/Edgemodders/REDagent) | Modding agent inside the game, powered by Claude | [edgemodders.github.io/REDagent](https://edgemodders.github.io/REDagent/) |
 | [REDcode](https://github.com/Edgemodders/REDcode) | Modding IDE on VS Code | [edgemodders.github.io/REDcode](https://edgemodders.github.io/REDcode/) |
-| [REDdeck](https://github.com/Edgemodders/REDdeck) | Mod manager | [edgemodders.github.io/REDdeck](https://edgemodders.github.io/REDdeck/) |
+| [EDGEdeck](https://github.com/Edgemodders/EDGEdeck) | Mod manager | [edgemodders.github.io/EDGEdeck](https://edgemodders.github.io/EDGEdeck/) |
 | [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host over JSON-RPC (its MCP server is in REDcode) | [edgemodders.github.io/REDbridge](https://edgemodders.github.io/REDbridge/) |
 | [REDnode](https://github.com/Edgemodders/REDnode) | Node.js runtime scripting | [edgemodders.github.io/REDnode](https://edgemodders.github.io/REDnode/) |
 | [EDGEbuilder](https://github.com/Edgemodders/EDGEbuilder) | World builder inside the game, on REDnode | [edgemodders.github.io/EDGEbuilder](https://edgemodders.github.io/EDGEbuilder/) |
