@@ -56,7 +56,7 @@ The title bar has **Open EDGEdeck**, **Add mod**, **Deploy**, **Nexus: check for
 
 Click a mod's name for its detail panel, which opens in the editor area.
 
-{% include shot.html caption="A mod's detail panel" shows="The detail panel for one mod: its version and source, the files it deploys with their sizes per folder, its conflicts by file path and inside archives, and the action buttons." %}
+{% include shot.html caption="A mod's detail panel" src="/assets/shots/edgedeck/mods-view-detail-panel.png" alt="The detail panel for TweakXL beside the Mods view: its kind, file count, size and on chips, the Turn off, Move up, Move down, Open folder and Remove buttons, no conflicts by file path or inside archives, and its seven files under red4ext/plugins." shows="The detail panel for one mod: its version and source, the files it deploys with their sizes per folder, its conflicts by file path and inside archives, and the action buttons." %}
 
 It shows the files the mod deploys and their sizes, folder by folder, and its conflicts, both by file path and inside archives. Its buttons turn the mod on, move it, open its folder, open it on Nexus, update it and remove it.
 
