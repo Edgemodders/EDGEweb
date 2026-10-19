@@ -23,7 +23,7 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | Hash | A number that stands for a file path inside an archive. Tools turn hashes back into paths when they know them |
 | Load order | Which mod wins when two mods change the same file |
 | Mesh | A `.mesh` file: the 3D shape of an object, with its materials |
-| Multilayered material | How the game colours most clothing and many objects: up to 20 layers, each with a surface, a colour and a mask, stored in an `.mlsetup` file. EDGEmat edits these |
+| Multilayered material | How the game colours most clothing and many objects: up to 20 layers, each with a surface, a colour and a mask, stored in an `.mlsetup` file. EDGEmat shows them in plain words, and will edit them |
 | Nexus Mods | The main site where Cyberpunk mods are published |
 | RED4ext | The framework that loads native plugins into the game. REDnode is one of them |
 | REDengine | The game's engine. The source of "RED" in the tool names |
