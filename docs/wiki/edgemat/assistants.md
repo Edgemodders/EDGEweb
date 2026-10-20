@@ -19,10 +19,11 @@ You need [Node.js](https://nodejs.org/) 20 or later, and Cyberpunk 2077 and REDb
 2. In a terminal, run once (with your path):
 
    ```powershell
-   claude mcp add edgemat -- node "C:\Users\<you>\EDGE\edgemat-mcp-0.2.0.cjs"
+   claude mcp add --scope user edgemat -- node "C:\Users\<you>\EDGE\edgemat-mcp-0.2.0.cjs"
    ```
 
-3. Start a new Claude Code session. It sees EDGEmat's tools.
+   `--scope user` makes EDGEmat available in every folder. Without it, Claude Code only sees EDGEmat in the folder where you ran the command.
+3. Start a new Claude Code session. It sees EDGEmat's tools. To check, run `claude mcp list`: EDGEmat shows as connected.
 
 The server finds the game and REDbridge from your VS Code settings, the same way the extension does (EDGEmat's settings, then REDcode's), so on a PC with REDcode set up it needs nothing more. It shares the extension's material library; with none built yet, ask the assistant to build it first. It starts its own REDbridge while it runs.
 
