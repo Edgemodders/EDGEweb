@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEmat
 order: 9
 description: "Connect Claude Code to EDGEmat's MCP server, so an assistant can find a garment's materials, describe and recolor its layers, and make new materials for you."
-reviewed: 2026-10-20
+reviewed: 2026-10-21
 ---
 
 # EDGEmat and <span class="y">assistants</span>
@@ -13,17 +13,23 @@ EDGEmat comes with an **MCP server**, so an AI assistant such as [Claude Code](h
 
 ## Connect Claude Code
 
-You need [Node.js](https://nodejs.org/) 20 or later, and Cyberpunk 2077 and REDbridge as for the extension ([Install and set up](install.html)).
+The server comes with the extension (from version 0.3.1): installing EDGEmat puts it at `%LOCALAPPDATA%\EDGEmat\mcp\edgemat-mcp.cjs`, the same path for every version, and each update refreshes it.
 
-1. From EDGEmat's [releases page](https://github.com/Edgemodders/EDGEmat/releases), download `edgemat-mcp-<version>.cjs`, the server in one file, and keep it somewhere stable, such as `%USERPROFILE%\EDGE\`.
-2. In a terminal, run once (with your path):
+1. In VS Code, open EDGEmat's Library view, press **`...`** at its top right and choose **Connect an Assistant (MCP)...** (or run it from the command palette, `Ctrl+Shift+P`).
+2. Choose **Connect Claude Code**. If you set an image service key in EDGEmat, it asks whether to give Claude Code the key too: say yes to let Claude make materials from words (`mat_generate`). Claude Code keeps the key in its own settings file, in plain text.
+3. Start a new Claude Code session. It sees EDGEmat's tools. To check, run `claude mcp list` in a terminal: `edgemat` shows as connected.
 
-   ```powershell
-   claude mcp add --scope user edgemat -- node "C:\Users\<you>\EDGE\edgemat-mcp-0.3.0.cjs"
-   ```
+The command registers EDGEmat for every folder (`--scope user`) and replaces an older registration, such as one for 0.3.0's downloaded file. Claude Code runs the server with [Node.js](https://nodejs.org/) 20 or later when you have it, else with VS Code's own program. If Claude Code's `claude` command isn't found, the command offers to copy the line instead.
 
-   `--scope user` makes EDGEmat available in every folder. Without it, Claude Code only sees EDGEmat in the folder where you ran the command.
-3. Start a new Claude Code session. It sees EDGEmat's tools. To check, run `claude mcp list`: EDGEmat shows as connected.
+{% include shot.html caption="Connect an Assistant" shows="The Connect an Assistant (MCP) list in VS Code: Connect Claude Code, Copy the Claude Code command, Copy a JSON entry, Reveal the server file, and the hint at the top." %}
+
+### Other assistants
+
+| Assistant | How |
+|---|---|
+| Agents inside VS Code 1.101 or later | Nothing to do: VS Code lists EDGEmat among its MCP servers, with your image service keys from EDGEmat. Editors without MCP support of their own skip this |
+| Another MCP client | **Connect an Assistant (MCP)...** › **Copy a JSON entry**, for the client's settings file |
+| Without VS Code (EDGEchat, REDagent, another PC) | The same server on npm: `claude mcp add --scope user edgemat -- cmd /c npx -y \edgemodders/edgemat-mcp` ([the package](https://www.npmjs.com/package/\edgemodders/edgemat-mcp)). It needs Node.js 20 or later |
 
 The server finds the game and REDbridge from your VS Code settings, the same way the extension does (EDGEmat's settings, then REDcode's), so on a PC with REDcode set up it needs nothing more. It shares the extension's material library; with none built yet, ask the assistant to build it first. It starts its own REDbridge while it runs.
 
@@ -37,13 +43,7 @@ To point it elsewhere, add options after the file name, or set environment varia
 
 ### A key for new materials
 
-`mat_generate` calls an AI image service with your own key. The server can't read VS Code's secret storage, so give it the key in its environment, with `-e` (Gemini, OpenAI, or both):
-
-```powershell
-claude mcp add --scope user edgemat -e GEMINI_API_KEY=<your key> -e OPENAI_API_KEY=<your key> -- node "C:\Users\<you>\EDGE\edgemat-mcp-0.3.0.cjs"
-```
-
-To change it, run `claude mcp remove --scope user edgemat` and add it again. Every other tool, `mat_from_image` included, works without a key.
+`mat_generate` calls an AI image service with your own key. Claude Code runs the server outside VS Code, so it can't read VS Code's secret storage: **Connect Claude Code** offers to pass your key in the server's environment. To change the key later, set it in EDGEmat (**Set Image Service Key...**) and run **Connect Claude Code** again. By hand, add `-e GEMINI_API_KEY=<your key>` or `-e OPENAI_API_KEY=<your key>` before `--`. Every other tool, `mat_from_image` included, works without a key.
 
 For the other EDGE tools' servers, see [Connect Claude Code](../connect-claude-code.html).
 

@@ -21,16 +21,13 @@ In this tutorial you don't press a button in EDGEmat at all: you ask [Claude Cod
 | A WolvenKit project made with REDcode | **REDcode: New Project**, for example `MyMaterials`. Note its folder |
 | [REDcode](../redcode/) to pack it, and [Cyber Engine Tweaks](https://www.nexusmods.com/cyberpunk2077/mods/107) | As in [Your mod in the game](in-the-game.html) |
 
-## 1. Give the server your key
+## 1. Connect Claude Code, with your key
 
-The MCP server can't read VS Code's secret storage, so it takes the image service key from its environment. Register it with `-e` and your key (see [Assistants](assistants.html#connect-claude-code) for the file):
+1. In VS Code, run **EDGEmat: Set Image Service Key...** from the command palette (`Ctrl+Shift+P`) and paste your Gemini or OpenAI key, if you haven't yet.
+2. In EDGEmat's Library view, press **`...`** at its top right and choose **Connect an Assistant (MCP)...** › **Connect Claude Code**.
+3. When it asks whether to give Claude Code your key too, choose **Yes**.
 
-```powershell
-claude mcp remove --scope user edgemat
-claude mcp add --scope user edgemat -e GEMINI_API_KEY=<your key> -- node "C:\Users\<you>\EDGE\edgemat-mcp-0.3.0.cjs"
-```
-
-For OpenAI, use `OPENAI_API_KEY` instead. Run the `remove` line only if EDGEmat was registered before. Then start a **new** Claude Code session, so it sees the change.
+Then start a **new** Claude Code session, so it sees EDGEmat. More on this: [Assistants](assistants.html#connect-claude-code).
 
 ## 2. Ask
 

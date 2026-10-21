@@ -40,6 +40,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEmat`. Most are also butt
 | Rebuild Library | Library title bar (refresh) | Builds the library again from the game |
 | Set Game Folder | Library's **`...`** menu | Picks the Cyberpunk 2077 install EDGEmat reads, from the ones it found or a folder you browse to |
 | Show Log | Library's **`...`** menu | EDGEmat's log in the Output panel |
+| Connect an Assistant (MCP)... | Library's **`...`** menu | Connects Claude Code to EDGEmat's MCP server, or copies the command or a JSON entry for another client ([Assistants](assistants.html#connect-claude-code)) |
 | Open | Clicking a surface or microblend | Its [surface page](surfaces.html) |
 | Copy Game Path | Hover a row (copy icon), or right-click | The file's game path to the clipboard |
 
