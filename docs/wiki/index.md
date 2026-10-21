@@ -31,7 +31,7 @@ More toolkits build on those five for particular jobs:
 |---|---|---|
 | Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props, drop them where you look, and position them |
 | Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade and shape it, and save it into your mod. In development |
-| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, being prepared for release |
+| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, 0.3.0 on the Marketplace |
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor. Today an extension pack that installs the EDGE tools in VS Code in one go; a full app is being built |
 
 ## Platform benefits
@@ -52,7 +52,7 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | **One install** | One extension pack puts REDcode, EDGEdeck and the HUD theme into VS Code; it keeps them updated | [EDGEkit](edgekit/) |
 | **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |
 
-> **Status:** EDGE is early and moving fast. REDagent writes working mods in game, REDnode mods and overlay apps pass in-game tests, and EDGEbuilder places objects in the running game. REDcode and EDGEdeck are on the VS Code Marketplace as previews; the other toolkits still install from source or release files, and EDGEwave and EDGEmat are not released yet. The [platform page](/platform.html) shows where each feature stands.
+> **Status:** EDGE is early and moving fast. REDagent writes working mods in game, REDnode mods and overlay apps pass in-game tests, and EDGEbuilder places objects in the running game. REDcode, EDGEdeck and EDGEmat are on the VS Code Marketplace as previews; the other toolkits still install from source or release files, and EDGEwave is not released yet. The [platform page](/platform.html) shows where each feature stands.
 
 ## About this wiki
 

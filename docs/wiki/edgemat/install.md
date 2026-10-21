@@ -3,7 +3,7 @@ title: Install and set up EDGEmat
 nav_title: Install and set up
 section: EDGEmat
 order: 1
-description: "What EDGEmat needs, installing the preview from its GitHub release, and the first build of the material library from your game."
+description: "What EDGEmat needs, installing it from the VS Code Marketplace, and the first build of the material library from your game."
 reviewed: 2026-10-20
 ---
 
@@ -23,21 +23,30 @@ reviewed: 2026-10-20
 
 ## Install EDGEmat
 
-The preview is a download from EDGEmat's [releases page](https://github.com/Edgemodders/EDGEmat/releases) on GitHub. It is not on the VS Code Marketplace yet; that comes with the full release.
+EDGEmat is on the VS Code Marketplace, published by **Edgemodders** and marked **Preview** (young, and Windows only).
 
-1. On the releases page, under the newest release, download `edgemat-<version>.vsix`.
-2. In VS Code, open the **Extensions** view (`Ctrl+Shift+X`).
-3. Press the **`...`** menu at the top right of the Extensions view, choose **Install from VSIX...** and pick the file.
+1. In VS Code, open the **Extensions** view (`Ctrl+Shift+X`).
+2. Search for `EDGEmat`.
+3. Pick **EDGEmat** by Edgemodders and press **Install**.
 
-If you prefer a terminal, in the folder you saved it to:
+The same listing is on the web: [EDGEmat on the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgemat). If you prefer a terminal:
 
 ```powershell
-code --install-extension edgemat-0.3.0.vsix
+code --install-extension edgemodders.edgemat
 ```
 
-To update later, install the next release's `.vsix` the same way; it replaces the old one. To remove EDGEmat, uninstall it in the Extensions view, or run `code --uninstall-extension edgemodders.edgemat`.
+{% include shot.html caption="EDGEmat in the Extensions view" shows="VS Code's Extensions view after searching EDGEmat: the EDGEmat listing by Edgemodders with its Preview badge and the Install button." %}
 
-{% include shot.html caption="Install from VSIX" shows="VS Code's Extensions view with its ... menu open and Install from VSIX... highlighted." %}
+### Other ways to install
+
+| Way | When | How |
+|---|---|---|
+| **Open VSX** | Editors built on VS Code that use Open VSX instead of Microsoft's Marketplace, such as VSCodium | Search for `EDGEmat` in the editor's Extensions view, or see [EDGEmat on Open VSX](https://open-vsx.org/extension/edgemodders/edgemat) |
+| **A `.vsix` file** | No store access, or you want one exact version | Download `edgemat-<version>.vsix` from the [releases page](https://github.com/Edgemodders/EDGEmat/releases). In the Extensions view, press the **`...`** menu at the top right, choose **Install from VSIX...** and pick the file. Or run `code --install-extension edgemat-<version>.vsix` |
+
+Installed from the Marketplace or Open VSX, EDGEmat updates like any other extension: VS Code fetches new versions by itself unless you turned automatic updates off. Each version's changes are on the [releases page](https://github.com/Edgemodders/EDGEmat/releases). If you installed from a `.vsix` file, install the newer file the same way. Your library and settings stay either way.
+
+To remove EDGEmat, uninstall it in the Extensions view, or run `code --uninstall-extension edgemodders.edgemat`.
 
 ## First start
 

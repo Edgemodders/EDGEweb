@@ -57,7 +57,7 @@ EDGEmat builds its material library from your own game the first time it runs, s
 
 ## Status
 
-As of 2026-10-20: version 0.3, the first preview, passed every test on the developer's PC and in the game, and is being prepared for release as a download on [GitHub](https://github.com/Edgemodders/EDGEmat/releases). It is not on the VS Code Marketplace yet; that comes with the full release. Windows only.
+Version 0.3.0, the first preview, was released on 2026-10-20, after every test passed on the developer's PC and in the game. It is on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgemat) and [Open VSX](https://open-vsx.org/extension/edgemodders/edgemat), and on [GitHub](https://github.com/Edgemodders/EDGEmat/releases) with the assistants' server file: [Install and set up](install.html). Windows only.
 
 | Phase | State |
 |---|---|
@@ -76,7 +76,7 @@ In plain words. Each phase ends with a test on the developer's PC, and in the ga
 | M4 Make | Materials for new meshes: from a model's own textures, from a photo, or generated from your words (that part is in 0.3 already). Materials picked from the game for new clothes and objects. A mesh's looks (appearances). This is what [EDGEfab](https://github.com/Edgemodders/EDGEfab) builds on |
 | M5 Preview | The full preview: shine, bumps, metal and detail on the model, not just colors, compared with the game |
 | M6 Beyond layers | Colors no surface offers, other kinds of material, several layers on a new mesh |
-| M7 Ship | The VS Code Marketplace and Open VSX, a Nexus Mods page, a place in EDGEkit. The goal: a non-coder recolors an item from the docs alone |
+| M7 Ship | The assistants' server on npm, a Nexus Mods page, a place in EDGEkit (the Marketplace and Open VSX came early, with 0.3.0). The goal: a non-coder recolors an item from the docs alone |
 
 A longer-term idea in the design: change materials in the running game by asking REDagent, for example looking at a crate and saying "make it blue".
 
