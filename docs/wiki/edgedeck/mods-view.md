@@ -13,7 +13,7 @@ EDGEdeck shows your mods in two places. The **Mods view** in VS Code's sidebar i
 
 ## The Mods view
 
-{% include shot.html caption="The Mods view" shows="The sidebar list with the Frameworks group (and its game version line) above the Mods group, checkboxes, the status text after each name, and one mod expanded to show its folders and files." %}
+{% include shot.html caption="The Mods view" src="/assets/shots/edgedeck/mods-view-sidebar.png" alt="The Mods view with Frameworks (game 2.31, two updates) above Mods, a checkbox and status on every row, and three mods expanded to their folders and files, one file's tooltip showing where it deploys and a TweakXL file open beside it." shows="The sidebar list with the Frameworks group (and its game version line) above the Mods group, checkboxes, the status text after each name, and one mod expanded to show its folders and files." %}
 
 The list has these groups:
 

@@ -13,7 +13,7 @@ EDGEdeck is the EDGE platform's mod manager for Cyberpunk 2077. It runs inside V
 
 **Used REDdeck?** EDGEdeck was called REDdeck up to version 0.26.6. It is a new extension, so nothing carries over: in REDdeck, turn every mod off and deploy, then uninstall REDdeck, install EDGEdeck and add your mods again. REDdeck kept the original downloads in `%USERPROFILE%\REDdeck\downloads`, so you can add them from there.
 
-{% include shot.html caption="EDGEdeck in VS Code" shows="The EDGEdeck Mods view in VS Code's sidebar with a typical list of mods, the Frameworks group at the top, and the EDGEdeck page open beside it." %}
+{% include shot.html caption="EDGEdeck in VS Code" src="/assets/shots/edgedeck/index-vscode.png" alt="VS Code with the Mods view in the sidebar, Frameworks above Mods, and the EDGEdeck page beside it: search, filter chips, and a table of fifteen mods with version, kind, size, status and action buttons, three of them with an update available." shows="The EDGEdeck Mods view in VS Code's sidebar with a typical list of mods, the Frameworks group at the top, and the EDGEdeck page open beside it." %}
 
 ## What it's for
 
