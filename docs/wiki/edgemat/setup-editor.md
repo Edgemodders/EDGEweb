@@ -3,13 +3,13 @@ title: EDGEmat's setup editor
 nav_title: The setup editor
 section: EDGEmat
 order: 4
-description: "Open any .mlsetup (from the game, a project, a file or another mod) and see each layer in plain words, a color map of where each layer goes, and what looks wrong."
-reviewed: 2026-10-19
+description: "Open any .mlsetup (from the game, a project, a file or another mod), see each layer in plain words and where it goes, change its surface, color and finish, and save it into your mod project."
+reviewed: 2026-10-20
 ---
 
 # The setup <span class="y">editor</span>
 
-A garment's look lives in its **setup**, an `.mlsetup` file: a stack of up to 20 layers, each with a surface, a color, finishes, tiling and a detail texture. The setup editor opens one and lays it out in plain words. In version 0.2 it is read-only: changing layers comes in the next phase (M3).
+A garment's look lives in its **setup**, an `.mlsetup` file: a stack of up to 20 layers, each with a surface, a color, finishes, tiling and a detail texture. The setup editor opens one, lays it out in plain words, lets you change any layer, and saves the result into your mod project. Recolors made this way were tested in the game on 2026-10-20.
 
 {% include shot.html caption="The setup editor" shows="The setup editor on the Sunny Ammo sneakers (ml_s1_055_pma_shoe__red_yellow_graphic): the header with '19 of 20 layers show', the color map on the left, and the layer list on the right with layer 7, the sole, selected and its details open." %}
 
@@ -62,6 +62,42 @@ A layer can be in the file and still not show. EDGEmat dims it and says why:
 | "not shown: covered by the layers above, or its mask is empty" | Nothing of it is left to see |
 | ⚠ a color the surface lacks "shows white" | The layer names a color its surface doesn't have, and the game draws such a color white. A common mistake in hand-edited setups |
 
+## Changing a layer
+
+Click a layer: its details turn into controls. Each change shows at once in the list and on the map, and the tab shows the unsaved dot.
+
+| Row | Control |
+|---|---|
+| Surface | **Change...** opens a searchable list of every surface. A new surface resets the layer's color and finish to that surface's defaults, and a line under the header says so |
+| Color | The surface's own colors as swatches, the current one outlined. Type in the filter box, such as `blue` or `dark red`, to narrow them. A layer can only take its surface's colors (see [Surface pages](surfaces.html)); for a color the surface lacks, try another surface |
+| Roughness, Roughness contrast, Metal, Metal contrast, Bumps | Drop-downs of the surface's presets, in plain words. With **Raw values** ticked they also show the game's names |
+| Tiling, Offset U and V, Opacity | Number boxes. Opacity 0 hides the layer |
+| Microblend | **Change...** for another detail texture, and boxes for its tiling, contrast and bump strength |
+
+**Undo and redo:** `Ctrl+Z` and `Ctrl+Y`, with the focus on the page (click an empty part of it first, not a box).
+
+A layer flagged "shows white" is fixed by picking one of its surface's colors.
+
+{% include shot.html caption="Editing a layer" shows="The setup editor on the Rocker's Heart bomber with its biggest layer selected: the color swatches filtered by 'blue', a blue swatch outlined, the layer blue on the map, and the unsaved dot on the tab." %}
+
+## Save to Project
+
+The game's files are never changed. **Save to Project** (the button top right, the icon in the editor's title bar, or `Ctrl+S` on a game file) saves the setup into a WolvenKit project: REDcode's open project, or one you pick. It offers three ways:
+
+| Choice | What it writes | In the game |
+|---|---|---|
+| **As a new setup** (recommended) | The setup beside the original under a new name (ending in your project's name), and a copy of every mesh that uses it, pointed at the new setup. EDGEmat lists the meshes it found, all ticked, before saving | Shows with no other mod. Only the meshes you tick change, even where other items share the game's setup |
+| **In place of the game's setup** | The setup at the game's own path | Needs the Material Texture Override mod, which lets a mod replace a game `.mlsetup`. Changes every item that uses the setup |
+| **At a game path you choose...** | The setup at your path | Up to you to point something at it |
+
+When it's done: "Saved into ... : the setup and 2 meshes pointed at it", with **Pack and Try** and **Open the Saved Setup**. Then see [Your mod in the game](in-the-game.html).
+
+Once saved, the project's copy is yours: open it, change it, and `Ctrl+S` saves straight into it, with no questions. Saving the game's setup again as a new setup updates the same files.
+
+Find the garment through [Find](find.html) first if you can: the setup then opens with the right mask set, and Save to Project finds its meshes for both bodies.
+
+{% include shot.html caption="Save to Project" shows="The Save to Project list for the project MyMaterials: As a new setup (recommended), In place of the game's setup, At a game path you choose." %}
+
 ## The mask set
 
 A setup doesn't say which masks it uses: the garment's mesh does. So:
@@ -76,4 +112,4 @@ Tick **Raw values** (top right) to see the game's names and numbers in blue besi
 
 ## For assistants
 
-The same view, as data, is the MCP tool `mat_describe`: "describe this jacket's layers". See [Assistants](assistants.html).
+The same view, as data, is the MCP tool `mat_describe`: "describe this jacket's layers". Editing and saving is `mat_edit`: "make the punk jeans dark green on both bodies". See [Assistants](assistants.html).

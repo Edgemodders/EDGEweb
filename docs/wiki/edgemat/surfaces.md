@@ -4,7 +4,7 @@ nav_title: Surface pages
 section: EDGEmat
 order: 3
 description: "A surface's page in EDGEmat: every color it offers as a named swatch, the closest color to one you name, its shine, metal and bumps in plain words, and its textures."
-reviewed: 2026-10-19
+reviewed: 2026-10-20
 ---
 
 # Surface <span class="y">pages</span>
@@ -37,7 +37,7 @@ A layer can only use a color its surface offers. Two boxes above the swatches he
 | **Filter** | Show only colors whose plain name matches, such as `red` or `pale`. The count says how many match ("12 of 750 colors") |
 | **Closest to** | Sort every color by how close it is to one you name: words such as `dark red` or `pale muted blue`, a hex value such as `#a03030`, or a pick from the color box beside it. The closest come first. A word EDGEmat doesn't know marks the box red |
 
-If none of the close colors is close enough, another surface may have a better one: the [setup editor](setup-editor.html) will let you swap surfaces in the next phase.
+If none of the close colors is close enough, another surface may have a better one: in the [setup editor](setup-editor.html#changing-a-layer), **Change...** in a layer's Surface row swaps it.
 
 **Good to know:** EDGEmat shows the preset values as screen colors. Some presets then look darker than the same color in the game; whether the game treats them differently is being checked against in-game screenshots (unverified). Very bright presets, with values above the normal range, are marked as bright.
 

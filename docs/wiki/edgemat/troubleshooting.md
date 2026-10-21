@@ -2,9 +2,9 @@
 title: Troubleshooting EDGEmat
 nav_title: Troubleshooting
 section: EDGEmat
-order: 9
-description: "Fixes for common EDGEmat problems: game or REDbridge not found, a library that won't build, a scrambled color map, View in 3D not opening, and Find finding nothing."
-reviewed: 2026-10-19
+order: 13
+description: "Fixes for common EDGEmat problems: game or REDbridge not found, a library that won't build, a scrambled color map, changes that don't show in the game, image service errors, View in 3D, and Find."
+reviewed: 2026-10-20
 ---
 
 # Troubleshooting <span class="y">EDGEmat</span>
@@ -39,7 +39,27 @@ The setup is probably drawn with the wrong mask set: a setup doesn't name its ma
 
 ### A layer says "shows white"
 
-The layer names a color its surface doesn't offer, and the game draws such a color white. That's in the file itself, often from hand editing. Editing comes in the next phase; until then, fix it in WolvenKit with a color from the surface's [page](surfaces.html).
+The layer names a color its surface doesn't offer, and the game draws such a color white. That's in the file itself, often from hand editing. Click the layer, pick one of its surface's colors, and [save it into your project](setup-editor.html#save-to-project).
+
+### My change doesn't show in the game
+
+Usually the archive isn't where the game loads it. With Red Hot Tools installed, Pack and Try only copies it to `archive\pc\hot`, which loads only into a running game; with the game closed, use **Pack and Install**. With `redcode.pack.redmod` on, the mod goes to `mods\` and needs a deploy and the `-modded` start. Also check the body, the look, and how you saved. All of it: [Your mod in the game](in-the-game.html#if-you-dont-see-your-change).
+
+### Save to Project finds no mesh
+
+The message says why. EDGEmat looks for meshes beside the setup that name it. A setup opened from a file with no game path, or one no mesh nearby uses, saves alone: point a mesh at it yourself, or open the garment through [Find](find.html) and save from there.
+
+### New Material: the service refuses or doesn't answer
+
+| Message | Means |
+|---|---|
+| "... refused the key" | The key is wrong, revoked, or for another service. **Set Image Service Key...** to enter it again |
+| "No answer from ... in ... s" | The service was slow or down. Try again; nothing was added |
+| The service says the request was blocked | It refused the words. Rephrase them, or edit **The words sent** |
+| OpenAI asks to verify your organization | OpenAI's rule for GPT Image: verify on platform.openai.com, or use Gemini |
+| "Cancelled." | You pressed Cancel. The service may still count the call |
+
+The services set prices and limits; a free key may have none for image models. **List models** shows what your key can use.
 
 ### Find finds nothing
 

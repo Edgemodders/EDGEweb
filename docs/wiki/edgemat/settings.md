@@ -2,9 +2,9 @@
 title: EDGEmat settings and commands
 nav_title: Settings and commands
 section: EDGEmat
-order: 8
+order: 12
 description: "Every EDGEmat setting with its default and when to change it, and every EDGEmat command and button."
-reviewed: 2026-10-19
+reviewed: 2026-10-20
 ---
 
 # Settings and <span class="y">commands</span>
@@ -33,6 +33,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEmat`. Most are also butt
 
 | Command | Where | Does |
 |---|---|---|
+| New Material... | Library title bar (sparkle icon) | Opens the [New Material](new-material.html) page, not aimed at a mesh |
 | Open Setup... | Library title bar (go-to-file icon) | Opens a setup from the game, a file on disk, or a mod's archive |
 | Search Library | Library title bar (magnifier) | Filters the Library by plain words |
 | Clear Search | Library title bar, while searching | Shows the full Library again |
@@ -50,10 +51,19 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEmat`. Most are also butt
 | Clear Find | Find's title bar, after a search | Empties the view |
 | Open Setup | Clicking a layered material | Its setup in the setup editor, with the mesh's own mask set |
 | View in 3D | Hover a mesh row (eye icon), or right-click | The mesh in REDcode's 3D viewer, with its colors from EDGEmat |
+| New Material Here... | Hover a material (sparkle icon), or right-click | The [New Material](new-material.html) page, aimed at that material on every body's mesh |
 | Copy Game Path | Hover a mesh or layered material (copy icon), or right-click | The mesh's path, or the material's setup path |
+
+### Saving and image services
+
+| Command | Where | Does |
+|---|---|---|
+| Save to Project... | The setup editor's title bar (save icon) and its **Save to Project** button; `Ctrl+S` on a game file | Saves the setup into a WolvenKit project ([Save to Project](setup-editor.html#save-to-project)) |
+| Set Image Service Key... | Command palette | Stores your Google Gemini or OpenAI key in VS Code's secret storage |
+| Clear Image Service Key... | Command palette | Removes it; the next Generate asks again |
 
 ### In the setup editor and surface pages
 
-These are buttons and switches on the page itself, not commands: **Keep open**, **Copy**, **Raw values**, **Hide unused slots**, **All layers** / **Selected layer**, **Change** (the mask set) and **Open** (a layer's surface or microblend). Each is explained on its page: [Surface pages](surfaces.html), [The setup editor](setup-editor.html).
+These are buttons and switches on the page itself, not commands: **Keep open**, **Copy**, **Raw values**, **Hide unused slots**, **All layers** / **Selected layer**, **Change** (the mask set, a layer's surface or microblend) and **Open** (a layer's surface or microblend). In the setup editor, `Ctrl+Z` and `Ctrl+Y` undo and redo. Each is explained on its page: [Surface pages](surfaces.html), [The setup editor](setup-editor.html), [New Material](new-material.html).
 
 The setup editor is also an editor you can pick for any `.mlsetup`: **Reopen Editor With...** › **EDGEmat Setup Editor**.

@@ -31,7 +31,7 @@ More toolkits build on those five for particular jobs:
 |---|---|---|
 | Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props, drop them where you look, and position them |
 | Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade and shape it, and save it into your mod. In development |
-| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name and see its layers in plain words and in 3D, or ask an agent. Recolouring is next. Preview, being prepared for release |
+| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, being prepared for release |
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor. Today an extension pack that installs the EDGE tools in VS Code in one go; a full app is being built |
 
 ## Platform benefits

@@ -4,7 +4,7 @@ nav_title: Find
 section: EDGEmat
 order: 5
 description: "EDGEmat's Find view: from a garment's in-game name to its looks for each body type, its meshes and its materials, with the setup and masks each one uses."
-reviewed: 2026-10-19
+reviewed: 2026-10-20
 ---
 
 # <span class="y">Find</span>
@@ -50,8 +50,9 @@ A mesh found by path opens the other way round: into its appearances (looks), ea
 |---|---|---|
 | **Eye** (View in 3D) | Mesh rows | Opens the mesh in REDcode's 3D viewer with its colors. See [View in 3D](view-in-3d.html) |
 | **Copy** (Copy Game Path) | Mesh rows and layered materials | Copies the mesh's path, or the material's setup path |
+| **Sparkle** (New Material Here) | Material rows | Opens [New Material](new-material.html), aimed at that material on every body's mesh of the garment |
 
-Both appear when you hover a row, and in its right-click menu.
+All appear when you hover a row, and in its right-click menu.
 
 ## Limits
 

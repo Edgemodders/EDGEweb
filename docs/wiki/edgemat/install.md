@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEmat
 order: 1
 description: "What EDGEmat needs, installing the preview from its GitHub release, and the first build of the material library from your game."
-reviewed: 2026-10-19
+reviewed: 2026-10-20
 ---
 
 # Install and set up <span class="y">EDGEmat</span>
@@ -17,6 +17,8 @@ reviewed: 2026-10-19
 | [VS Code](https://code.visualstudio.com/) 1.70 or later | EDGEmat is a VS Code extension. VSCodium and EDGEkit work too |
 | REDbridge 0.8.0 or later | The engine that reads the game's files. The easy way is [REDcode](../redcode/): its **Install REDbridge** fetches REDbridge and the .NET 10 runtime it needs, and EDGEmat then uses REDcode's copy |
 | Recommended: [REDcode](../redcode/) | With REDcode set up, EDGEmat needs no configuration at all: it takes REDcode's game folder and its running REDbridge. [View in 3D](view-in-3d.html) needs REDcode |
+| To save your changes: a WolvenKit project | REDcode's **New Project** makes one. EDGEmat saves into REDcode's open project, and REDcode packs it for the game ([Your mod in the game](in-the-game.html)) |
+| Optional: an image service key | Only to generate materials from words: your own Google Gemini or OpenAI key ([New Material](new-material.html)). Everything else works without one |
 | Some disk space | About 15 MB for the material library EDGEmat builds from your game, in `%LOCALAPPDATA%\EDGEmat`, growing a little as you open pages and setups (their images are kept there too). Safe to delete; EDGEmat builds it again |
 
 ## Install EDGEmat
@@ -30,7 +32,7 @@ The preview is a download from EDGEmat's [releases page](https://github.com/Edge
 If you prefer a terminal, in the folder you saved it to:
 
 ```powershell
-code --install-extension edgemat-0.2.0.vsix
+code --install-extension edgemat-0.3.0.vsix
 ```
 
 To update later, install the next release's `.vsix` the same way; it replaces the old one. To remove EDGEmat, uninstall it in the Extensions view, or run `code --uninstall-extension edgemodders.edgemat`.
