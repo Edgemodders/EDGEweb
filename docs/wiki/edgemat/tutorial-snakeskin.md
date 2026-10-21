@@ -11,7 +11,7 @@ reviewed: 2026-10-20
 
 In this tutorial you don't press a button in EDGEmat at all: you ask [Claude Code](https://claude.com/claude-code) for dark green snakeskin pants in one sentence, and it uses EDGEmat's tools to find the garment, generate the material and put it on. It is the test EDGEmat passed on 2026-10-20. The garment is the **Light Azure composite-lined slim-fits**.
 
-{% include shot.html caption="The result: snakeskin slim-fits, front" shows="V in the dark green snakeskin slim-fits, from the front: green scales with black edges over both legs, the pants' own folds kept." %}
+{% include shot.html caption="The result: snakeskin slim-fits, front" src="/assets/shots/edgemat/tutorial-snakeskin-front.png" shows="V in the dark green snakeskin slim-fits, from the front: green scales with black edges over both legs, the pants' own folds kept." %}
 
 ## What you need
 
@@ -63,9 +63,9 @@ You can name the settings too: "repeat 6, glossy, strong bumps". Or ask to see t
 
 3. Equip the pants; photo mode, front, side and back.
 
-{% include shot.html caption="Snakeskin, side" shows="V in the snakeskin slim-fits from the side: even scales down the leg, a sheen on the hip." %}
+{% include shot.html caption="Snakeskin, side" src="/assets/shots/edgemat/tutorial-snakeskin-side.png" shows="V in the snakeskin slim-fits from the side: even scales down the leg, a sheen on the hip." %}
 
-{% include shot.html caption="Snakeskin, back" shows="V in the snakeskin slim-fits from the back: a wet-look sheen on the seat and thighs, the scales in relief, the pants' folds behind the knees." %}
+{% include shot.html caption="Snakeskin, back" src="/assets/shots/edgemat/tutorial-snakeskin-back.png" shows="V in the snakeskin slim-fits from the back: a wet-look sheen on the seat and thighs, the scales in relief, the pants' folds behind the knees." %}
 
 ## What to look for
 

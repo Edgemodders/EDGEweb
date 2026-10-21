@@ -11,7 +11,7 @@ reviewed: 2026-10-20
 
 In this tutorial you turn the **Comfy rocker aramid-weave slim-fits** into worn brown leather pants, from one line of words, and wear them in the game. It is the test EDGEmat passed on 2026-10-20, written up so you can follow it. It takes about 15 minutes, most of it in the game.
 
-{% include shot.html caption="The result: worn leather slim-fits, front" shows="V in the worn leather slim-fits, from the front, in an indoor garage: warm brown leather with fine creases, the pants' own folds at the knees." %}
+{% include shot.html caption="The result: worn leather slim-fits, front" src="/assets/shots/edgemat/tutorial-worn-leather-front.png" shows="V in the worn leather slim-fits, from the front, in an indoor garage: warm brown leather with fine creases, the pants' own folds at the knees." %}
 
 ## What you need
 
@@ -73,9 +73,9 @@ Press **Add to Project**. The message says it saved `worn_leather` and put it on
 
 4. Equip the pants, and look in photo mode: front, side and back.
 
-{% include shot.html caption="Worn leather, side" shows="V in the worn leather slim-fits from the side: the leather texture follows the leg evenly, with soft highlights on the seat." %}
+{% include shot.html caption="Worn leather, side" src="/assets/shots/edgemat/tutorial-worn-leather-side.png" shows="V in the worn leather slim-fits from the side: the leather texture follows the leg evenly, with soft highlights on the seat." %}
 
-{% include shot.html caption="Worn leather, back" shows="V in the worn leather slim-fits from the back: fine creases, the pants' own folds behind the knees, panel lines reading as stitching." %}
+{% include shot.html caption="Worn leather, back" src="/assets/shots/edgemat/tutorial-worn-leather-back.png" shows="V in the worn leather slim-fits from the back: fine creases, the pants' own folds behind the knees, panel lines reading as stitching." %}
 
 ## What to look for
 
