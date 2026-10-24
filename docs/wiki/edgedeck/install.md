@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEdeck
 order: 1
 description: "Install EDGEdeck in VS Code from the Marketplace, walk through its Set up steps, and keep it updated."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Install and set up <span class="y">EDGEdeck</span>
@@ -38,6 +38,7 @@ code --install-extension edgemodders.edgedeck
 | Way | When | How |
 |---|---|---|
 | **Open VSX** | Editors built on VS Code that use Open VSX instead of Microsoft's Marketplace, such as VSCodium | Search for `EDGEdeck` in the editor's Extensions view, or see [EDGEdeck on Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) |
+| **The EDGEkit app** | You want one editor with the EDGE tools built in | [EDGEkit](../edgekit/#get-the-app) 1.140.1 comes with EDGEdeck 0.27.3, which then updates itself from Open VSX |
 | **A `.vsix` file** | No store access, or you want one exact version | Download `edgedeck-<version>.vsix` from the [releases page](https://github.com/Edgemodders/EDGEdeck/releases). In the Extensions view, press the **`...`** menu at the top right, choose **Install from VSIX...** and pick the file. Then run **Developer: Reload Window** from the command palette (`Ctrl+Shift+P`) |
 
 A EDGEdeck icon appears in the activity bar on the left of VS Code. Click it to open the **Mods** view.
@@ -57,6 +58,8 @@ The first time you open EDGEdeck, the Mods view shows a **Set up** group with on
 | **Import from Vortex** | Copies your Vortex mods into EDGEdeck's library. Shown only when Vortex has Cyberpunk mods and the library has none from it yet | Optional |
 
 **EDGEdeck: Set up...** in the command palette lists every step, done or not, and brings hidden rows back.
+
+The next version after 0.28.0 (built, not released yet) adds two rows: **Get the frameworks**, while any of RED4ext, CET, redscript, ArchiveXL, TweakXL or Codeware is missing (see [Frameworks and game patches](frameworks.html#getting-the-frameworks)), and **Move library...**, when the library and the game are on different drives (see [Library, disk space and loadouts](library.html#moving-the-library)).
 
 {% include shot.html caption="The Set up group" shows="The Set up group at the top of the Mods view, with the Get REDbridge, Sign in to Nexus Mods and Import from Vortex rows." %}
 
@@ -83,6 +86,12 @@ Follow [Switch from Vortex](switch-from-vortex.html). The one rule: only one man
 ## Where EDGEdeck keeps things
 
 Your mods go in a **library** folder, `%USERPROFILE%\EDGEdeck` by default. For deploys to cost no extra disk space, the library should be on the same drive as the game. If your game is on another drive, set `edgedeck.libraryPath` to a folder on that drive before you add mods. See [Library, disk space and loadouts](library.html).
+
+## Next steps
+
+1. Add the frameworks most mods need (RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL, Codeware). See [Frameworks and game patches](frameworks.html).
+2. [Add a mod](adding-mods.html), tick it, and [deploy](deploying.html).
+3. Press **Run game**, the play button in the Mods view's title bar, to start the game with your mods.
 
 ## Updating EDGEdeck
 

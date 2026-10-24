@@ -4,7 +4,7 @@ nav_title: Frameworks and patches
 section: EDGEdeck
 order: 8
 description: "How EDGEdeck handles RED4ext, CET, redscript, ArchiveXL, TweakXL and other frameworks, and what to do after a Cyberpunk 2077 update."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Frameworks and <span class="y">game patches</span>
@@ -24,8 +24,15 @@ Many Cyberpunk mods don't work alone. They're built on **frameworks**: community
 | Audioware | Adds custom sounds |
 | input_loader | Adds custom key bindings |
 | mod_settings | Gives mods a settings menu in the game |
+| [REDnode](../rednode/) | Runs Node.js mods and overlay apps. Shown with the frameworks because REDnode packages need it |
 
-In EDGEdeck, frameworks are mods like any other: you add them from Nexus, turn them on, and deploy. They're pinned in the **Frameworks** group at the top of the list because so much depends on them.
+In EDGEdeck, frameworks are mods like any other: you add them from Nexus (or as files), turn them on, and deploy. They're pinned in the **Frameworks** group at the top of the list because so much depends on them.
+
+## Getting the frameworks
+
+Today, add each framework from its Nexus page like any mod (see [Adding mods](adding-mods.html)). Most mods need at least RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and Codeware.
+
+**Get the frameworks** is built for the next version after 0.28.0 and not released yet. One button gets those six: on the Frameworks group's header, in the Set up group while any is missing, on the EDGEdeck page, and in the `...` menu. A list shows what the library has and what's out, with the missing and older ones ticked. The files come from each author's GitHub release, the same as on Nexus, so no Nexus account is needed. After a game patch, the page offers **Update the frameworks**. Then deploy.
 
 ## The game version
 

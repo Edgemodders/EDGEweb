@@ -4,7 +4,7 @@ nav_title: Adding mods
 section: EDGEdeck
 order: 4
 description: "Add mods to EDGEdeck from zip, 7z and rar files, single mod files, folders, Nexus Mods and Vortex, and how EDGEdeck decides where each file goes."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Adding <span class="y">mods</span>

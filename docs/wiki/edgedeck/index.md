@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdeck
 order: 0
 description: "EDGEdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, and why you might want it."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # EDGE<span class="y">deck</span>
@@ -50,7 +50,9 @@ EDGEdeck is the **Deploy** stage of the EDGE platform. It works on its own, and 
 
 ## Status
 
-EDGEdeck is at version 0.26.3 and manages its developer's game on two PCs. It's on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck) and [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) since 0.26.0 (14 October 2026), marked **Preview**: young, and Windows only. Deploy, undo and the library are in daily use; Nexus downloads and REDmod deploys have had little real-world use so far. Nexus sign-in through the browser is built and waits for Nexus to register EDGEdeck; until then you paste a personal API key, which works the same way.
+EDGEdeck is at version 0.28.0 (22 October 2026) and manages its developer's game on two PCs. It's on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck) and [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck), marked **Preview**: young, and Windows only. Its command line and MCP server are on npm as `@edgemodders/edgedeck-mcp`. Deploy, undo and the library are in daily use; Nexus downloads and REDmod deploys have had little real-world use so far. Nexus sign-in through the browser is built and waits for Nexus to register EDGEdeck; until then you paste a personal API key, which works the same way.
+
+Built for the next version, not released yet: **Get the frameworks** (RED4ext, CET, redscript, ArchiveXL, TweakXL and Codeware in one click, from their authors' GitHub releases) and **Move library...**. The pages below mark them.
 
 ## In this section
 
@@ -60,7 +62,7 @@ EDGEdeck is at version 0.26.3 and manages its developer's game on two PCs. It's 
 | [Switch from Vortex](switch-from-vortex.html) | Move your mods over safely |
 | [The Mods view and the EDGEdeck page](mods-view.html) | Find your way around, group mods in sections, and set who wins |
 | [Adding mods](adding-mods.html) | From files, folders and Nexus, and how EDGEdeck decides where files go |
-| [Deploying and undo](deploying.html) | What deploy does, closing the game first, hardlinks, changes outside EDGEdeck, deploy reports, undo |
+| [Deploying and undo](deploying.html) | What deploy does, closing the game first, Run game, hardlinks, changes outside EDGEdeck, deploy reports, undo |
 | [Conflicts](conflicts.html) | What they are, who wins, and how to choose |
 | [Nexus Mods](nexus.html) | Signing in, download links, updates and versions |
 | [Frameworks and game patches](frameworks.html) | RED4ext, CET, redscript and friends, and what to do after a game update |

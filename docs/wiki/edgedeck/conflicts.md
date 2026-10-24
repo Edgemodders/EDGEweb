@@ -3,7 +3,7 @@ title: Conflicts
 section: EDGEdeck
 order: 6
 description: "What mod conflicts are in Cyberpunk 2077, how EDGEdeck finds them by file and inside archives, and how to choose the winner."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # <span class="y">Conflicts</span>

@@ -4,7 +4,7 @@ nav_title: Switch from Vortex
 section: EDGEdeck
 order: 2
 description: "Move your Cyberpunk 2077 mods from Vortex to EDGEdeck without losing anything."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Switch from Vortex to <span class="y">EDGEdeck</span>

@@ -4,7 +4,7 @@ nav_title: The Mods view
 section: EDGEdeck
 order: 3
 description: "Find your way around EDGEdeck: the Mods view in the sidebar, the wide EDGEdeck page, sections, the order that decides conflicts, the detail panel and the status bar."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # The Mods view and the <span class="y">EDGEdeck page</span>
@@ -20,7 +20,7 @@ The list has these groups:
 | Group | Holds |
 |---|---|
 | **Set up** | Steps still to do. Disappears when there are none. See [Install and set up](install.html) |
-| **Frameworks** | RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL, Codeware, Audioware, input_loader and mod_settings. Pinned at the top because most mods need them. The header shows the game version, for example `3, 3 on · game 2.31`. See [Frameworks and game patches](frameworks.html) |
+| **Frameworks** | RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL, Codeware, Audioware, input_loader, mod_settings and REDnode. Pinned at the top because most mods need them. The header shows the game version, for example `3, 3 on · game 2.31`. See [Frameworks and game patches](frameworks.html) |
 | **Your sections** | Sections you make on the EDGEdeck page, between Frameworks and Mods. They only group the list. See [Sections](#sections) |
 | **Mods** | Everything else, in order. Within a group, the mod higher up wins a conflict. See [Order: who wins](#order-who-wins) |
 
@@ -32,7 +32,8 @@ The list has these groups:
 - **Hover anything** for a card with its size, dates, where it deploys and where it came from.
 - **Expand a mod** to see the folders it deploys into (such as `archive/pc/mod` or a CET mod folder) and the files in each. Click a file to open it in the editor.
 - **Click the name** to open the mod's detail panel.
-- **Right-click** for everything else: Details, Open on Nexus Mods, Reveal in File Explorer (the mod's library copy), Reveal in Game Folder (where it sits in the game), Remove, and Add to Project when a REDcode project is open. Folders and files have Reveal in Game Folder and Add to Project too.
+- **Right-click** for everything else: Details, Open on Nexus Mods, Switch version..., Reveal in File Explorer (the mod's library copy), Reveal in Game Folder (where it sits in the game), Rename..., Remove, and Add to REDcode project when a REDcode project is open. Folders and files have Reveal in Game Folder and Add to REDcode project too.
+- **Rename...** (or **F2** on the selected row) gives the mod a name of your own in EDGEdeck. Every version gets it, and new versions take it when they arrive. Its files and the game don't change. An empty name puts the first one back.
 
 ### What the status means
 
@@ -50,7 +51,7 @@ The list has these groups:
 
 ### The view's buttons
 
-The title bar has **Open EDGEdeck**, **Add mod**, **Deploy**, **Nexus: check for updates**, **Switch loadout** and **Refresh**. The view's header names the active [loadout](library.html#loadouts). The **`...`** menu holds the rest: Show conflicts, Show pending changes, Import from Vortex, Undo deploy, Nexus sign in, Nexus: add from a link, Add from REDcode project, Get REDbridge, Pick the game folder, Open library folder, Show log, Switch loadout, Save as new loadout, Export the active loadout and Import a loadout.
+The title bar has **Open EDGEdeck**, **Add mod**, **Deploy**, **Run game** (the play button; see [Deploying](deploying.html#start-the-game)), **Nexus: check for updates**, **Switch loadout** and **Refresh**. The view's header names the active [loadout](library.html#loadouts). The **`...`** menu holds the rest: Show conflicts, Show pending changes, Import from Vortex, Undo deploy, Nexus sign in, Nexus: add from a link, Add from REDcode project, Get REDbridge, Pick the game folder, Open library folder, Show log, Switch loadout, Save as new loadout, Export the active loadout and Import a loadout. The next version (built, not released yet) adds **Get the frameworks...** and **Move library...** there.
 
 ## The detail panel
 
@@ -58,7 +59,7 @@ Click a mod's name for its detail panel, which opens in the editor area.
 
 {% include shot.html caption="A mod's detail panel" src="/assets/shots/edgedeck/mods-view-detail-panel.png" alt="The detail panel for TweakXL beside the Mods view: its kind, file count, size and on chips, the Turn off, Move up, Move down, Open folder and Remove buttons, no conflicts by file path or inside archives, and its seven files under red4ext/plugins." shows="The detail panel for one mod: its version and source, the files it deploys with their sizes per folder, its conflicts by file path and inside archives, and the action buttons." %}
 
-It shows the files the mod deploys and their sizes, folder by folder, and its conflicts, both by file path and inside archives. Its buttons turn the mod on, move it, open its folder, open it on Nexus, update it and remove it.
+It shows the files the mod deploys and their sizes, folder by folder, and its conflicts, both by file path and inside archives. Its buttons turn the mod on, move it, open its folder, rename it, open it on Nexus, update it and remove it.
 
 ## The EDGEdeck page
 
@@ -76,7 +77,7 @@ It shows the files the mod deploys and their sizes, folder by folder, and its co
 | **Loadout** | A dropdown of your [loadouts](library.html#loadouts). Pick one that isn't active to edit it here without touching the game; **Make active** switches to it. Buttons beside it make, rename, export, import and delete loadouts |
 | **The version cell** | A dropdown when the library holds several versions of a mod, or Nexus has a newer one. Pick a version to switch to it, or **Get x.y from Nexus** |
 | **Status links** | When a deploy is waiting for a mod, its status opens the list of files the next deploy will add, replace, put back or remove for it, and why |
-| **Toolbar** | Add mod, Check updates (or Nexus sign in), Conflicts with a count, Undo deploy, the number of changes waiting, and Deploy |
+| **Toolbar** | Add mod, Check updates (or Nexus sign in), Conflicts with a count, Undo deploy, the number of changes waiting, Deploy, and Run game |
 | **Footer** | The library folder and whether deploy uses hardlinks or copies, the last deploy, disk use, and which REDbridge is running |
 
 The page remembers your search and filters.

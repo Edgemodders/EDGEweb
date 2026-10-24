@@ -4,7 +4,7 @@ nav_title: Nexus Mods
 section: EDGEdeck
 order: 7
 description: "Sign EDGEdeck in to Nexus Mods, handle Mod manager download links, check for updates and switch versions."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Nexus <span class="y">Mods</span>

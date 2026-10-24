@@ -3,7 +3,7 @@ title: Deploying and undo
 section: EDGEdeck
 order: 5
 description: "What EDGEdeck's Deploy does, why the game must be closed, hardlinks and copies, load order, REDmod, files changed outside EDGEdeck, deploy reports and Undo deploy."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Deploying and <span class="y">undo</span>
@@ -52,8 +52,16 @@ On the EDGEdeck page, a mod's status links to the same list for that mod only.
     - If the library is on **another drive**, EDGEdeck **copies** the files instead.
     - The EDGEdeck page's footer says which one it's using.
 2. **Writes the archive load order** to `modlist.txt` in `archive/pc/mod`, from the order of your list. It rewrites the file whenever the archives that are on change, so an archive you add later is in the list too.
-3. **Prepares REDmod packages** with the game's own `redMod.exe` when any REDmod mods are on. You don't have to run REDmod's deploy step yourself. REDmod mods need the game started with `-modded`; the deploy message reminds you.
+3. **Prepares REDmod packages** with the game's own `redMod.exe` when any REDmod mods are on. You don't have to run REDmod's deploy step yourself. REDmod mods need the game started with `-modded`; the deploy message reminds you, and **Run game** adds it for you (see [Start the game](#start-the-game)).
 4. **Records everything** in a manifest in the game folder: every file it placed, and the game version.
+
+## Start the game
+
+**Run game**, the play button in the Mods view's title bar (also on the EDGEdeck page's toolbar), starts Cyberpunk 2077 with `-modded`, so REDmod mods load. If changes are waiting, it deploys them first, so the game gets what your list shows. A game in a Steam library starts through Steam; any other starts from `bin\x64\Cyberpunk2077.exe`. The setting `edgedeck.launch` can force one way (see [Settings and commands](settings.html)). If the game is already running, it's left alone.
+
+## Deploying one mod
+
+REDcode's **Install** deploys only the project's own mod: its files go in, are refreshed or come out, and other mods' changes keep waiting for the next full Deploy. The message says how many are still waiting. The command line and assistants can do the same with `deploy --mod <id>` (see [Assistants and the command line](assistants.html)).
 
 ## Changes made outside EDGEdeck
 

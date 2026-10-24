@@ -4,7 +4,7 @@ nav_title: Library and loadouts
 section: EDGEdeck
 order: 9
 description: "Where EDGEdeck keeps your mods, what uses disk space and what's safe to delete, and loadouts you switch between."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Library, disk space and <span class="y">loadouts</span>
@@ -28,7 +28,10 @@ Because the library is plain folders and JSON files, you can look inside it with
 
 ## Moving the library
 
-Set `edgedeck.libraryPath` to the folder you want. Choose a folder on the **same drive as the game**, so deploy can use hardlinks and your mods don't take up space twice. See [Settings and commands](settings.html).
+Choose a folder on the **same drive as the game**, so deploy can use hardlinks and your mods don't take up space twice.
+
+- **In 0.28.0:** set `edgedeck.libraryPath` to the new folder, best before you add mods: 0.28.0 doesn't move an existing library for you. See [Settings and commands](settings.html).
+- **Next version (built, not released yet):** **Move library...** in the Mods view's `...` menu, or in the Set up group when the library and the game are on different drives, moves it to a folder you pick and sets the setting. On the same drive that's a rename; otherwise it copies, checks every file, then removes the old folder. The next deploy turns copies in the game into hardlinks.
 
 ## Disk space
 

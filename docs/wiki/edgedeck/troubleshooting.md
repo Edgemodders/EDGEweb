@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEdeck
 order: 13
 description: "Fixes for common EDGEdeck problems: game not found, the game still running, Vortex, missing conflicts, changed files, Nexus downloads, what a deploy changed, and a game that won't start."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Troubleshooting <span class="y">EDGEdeck</span>
@@ -65,7 +65,11 @@ Check that it says `deployed`. Archives load in the order of `modlist.txt`, whic
 
 ### Deploy copies files instead of using hardlinks
 
-Your library is on a different drive from the game. Hardlinks only work on the same drive. Move the library: set `edgedeck.libraryPath` to a folder on the game's drive. See [Library, disk space and loadouts](library.html#moving-the-library).
+Your library is on a different drive from the game. Hardlinks only work on the same drive. Put the library on the game's drive: set `edgedeck.libraryPath` to a folder there (the next version's **Move library...** does it for you). See [Library, disk space and loadouts](library.html#moving-the-library).
+
+### REDmod mods are deployed but don't load
+
+REDmod mods load only when the game starts with `-modded`. Start it with **Run game** in EDGEdeck, which adds it, or add `-modded` to the game's launch options in Steam, GOG or Epic.
 
 ### The game won't start after a game update
 
