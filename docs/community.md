@@ -52,6 +52,11 @@ The stack is TypeScript, JavaScript, Node, VS Code extensions, C# (.NET), C++ an
 | [EDGEdeck](https://github.com/Edgemodders/EDGEdeck) | Mod manager inside VS Code | TypeScript |
 | [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host over JSON-RPC | C# |
 | [REDnode](https://github.com/Edgemodders/REDnode) | Node.js runtime scripting for the game | C++, TypeScript |
+| [EDGEbuilder](https://github.com/Edgemodders/EDGEbuilder) | World builder inside the game, a REDnode package | TypeScript |
+| [EDGEwave](https://github.com/Edgemodders/EDGEwave) | Sound studio beside REDcode | TypeScript |
+| [EDGEmat](https://github.com/Edgemodders/EDGEmat) | Material editor | TypeScript |
+| [EDGEkit](https://github.com/Edgemodders/EDGEkit) | The EDGEmodders editor app (built from Code - OSS) and its extension pack | JavaScript |
+| [EDGEchat](https://github.com/Edgemodders/EDGEchat) | The EDGE plugin for Claude Code: skills and MCP servers (a preview) | Markdown |
 
 ## Ground rules
 
