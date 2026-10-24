@@ -4,12 +4,12 @@ nav_title: Overview
 section: REDbridge
 order: 0
 description: "REDbridge, EDGE's engine host: WolvenKit's C# engine as a local service for REDcode, EDGEdeck, REDnode packages and AI agents."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # RED<span class="y">bridge</span>
 
-REDbridge is EDGE's engine room. It runs [WolvenKit](https://github.com/WolvenKit/WolvenKit)'s proven C# libraries in a small local program and offers them to the other toolkits, so EDGE never has to reinvent the game's file formats. Most people never run it directly: REDcode, EDGEdeck and REDnode start it when they need it.
+REDbridge is EDGE's engine room. It runs [WolvenKit](https://github.com/WolvenKit/WolvenKit)'s proven C# libraries in a small local program and offers them to the other toolkits, so EDGE never has to reinvent the game's file formats. Most people never run it directly: REDcode, EDGEdeck, REDnode and the EDGE plugin for Claude Code start it when they need it.
 
 {% include shot.html caption="REDbridge at work" shows="The EDGEdeck page's footer with the green dot and the running REDbridge version, next to REDcode's status bar showing the bridge it uses." %}
 
@@ -22,9 +22,9 @@ You don't talk to REDbridge yourself. You notice it through what the other toolk
 | Toolkit | What REDbridge lets it do |
 |---|---|
 | [EDGEdeck](../edgedeck/) | See [conflicts inside mod archives](../edgedeck/conflicts.html), and list an archive's contents for Add to Project |
-| [REDcode](../redcode/) | Browse the game's archives, open and edit game files, view textures and meshes, play game sounds with their names, browse TweakDB, export, import and pack mods |
+| [REDcode](../redcode/) | Browse the game's archives, open and edit game files, view textures and meshes, play game sounds with their names, browse TweakDB and the game's on-screen texts (LocKeys), export, import and pack mods, replace game sound effects |
 | [REDnode](../rednode/) | Packages you allow can read the game's archives while you play |
-| AI assistants | REDcode's MCP server, `redcode-mcp`, gives Claude and other assistants the same abilities as tools |
+| AI assistants | REDcode's MCP server, `redcode-mcp`, gives Claude and other assistants the same abilities as tools. The EDGE plugin for Claude Code, a preview, sets it up for you |
 
 ## Benefits
 
@@ -33,11 +33,13 @@ You don't talk to REDbridge yourself. You notice it through what the other toolk
 - **Exact round trips.** Game files convert to JSON and back byte for byte.
 - **Works without the game running.** Reads any mod archive on disk, which is how EDGEdeck finds conflicts inside archives, and reads the game's TweakDB (its database of items, stats and more) straight from the game folder.
 - **One engine, many clients.** The same calls serve REDcode, EDGEdeck, REDnode packages and AI agents.
-- **Fetched for you.** EDGEdeck and REDcode download it, and the .NET runtime it needs, with one click, and offer updates.
+- **Fetched for you.** EDGEdeck, REDcode and REDnode's Mod Manager download it with one click, and offer updates. EDGEdeck and REDnode also install the .NET runtime it needs.
 
 ## Status
 
-The latest release is **0.8.0** (15 October 2026), built with WolvenKit 9.1.0. It added offline TweakDB reading, which REDcode's TweakDB view uses; 0.7.2 before it added the names of the game's sound events, for REDcode's sound browser. Since 15 October REDbridge takes WolvenKit from WolvenKit's own published packages, so it can follow each new WolvenKit release more easily.
+The latest release is **0.10.0** (16 October 2026), built with WolvenKit 9.1.0. It added the game's on-screen texts (LocKeys) in all 19 languages, which REDcode's LocKeys view uses. 0.9.0 before it added replacing game sound effects from WAV files, and turning a 3D model (GLB) into a new mesh from a game mesh. 0.8.0 added offline TweakDB reading. Since 15 October REDbridge takes WolvenKit from WolvenKit's own published packages, so it can follow each new WolvenKit release more easily.
+
+The next release adds the game's spoken lines (subtitles) and texture settings for image imports, for EDGEquest and EDGEmat. They are built but not released yet.
 
 REDbridge runs on Windows x64 and needs Microsoft's free .NET 10 runtime. It has no window and no settings of its own.
 

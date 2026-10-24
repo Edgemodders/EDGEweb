@@ -4,7 +4,7 @@ nav_title: Install and update
 section: REDbridge
 order: 1
 description: "How EDGEdeck, REDcode and REDnode get REDbridge for you, keeping it updated, the .NET 10 runtime, and installing it by hand."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Install and update <span class="y">REDbridge</span>
@@ -16,8 +16,8 @@ You almost never install REDbridge yourself. The toolkit that needs it fetches i
 | You need | Notes |
 |---|---|
 | Windows x64 | REDbridge is Windows only for now, because WolvenKit's texture tools are |
-| The .NET 10 runtime | Microsoft's free runtime for .NET programs. EDGEdeck installs it for you; REDcode offers to |
-| About 75 MB of disk per copy | The release download is a zip of about 73 MB |
+| The .NET 10 runtime | Microsoft's free runtime for .NET programs. EDGEdeck and REDnode install it for you; REDcode offers to |
+| Disk space for each copy | The release download is a zip of about 60 MB |
 | Cyberpunk 2077 | For anything that reads the game's own files. Reading a mod archive on disk works without it |
 
 ## How each toolkit gets it
@@ -26,10 +26,10 @@ You almost never install REDbridge yourself. The toolkit that needs it fetches i
 |---|---|---|
 | [EDGEdeck](../edgedeck/install.html#getting-redbridge) | **Get REDbridge** in the Set up group says what it will download, then fetches the latest release into EDGEdeck's own folder. If your PC has no .NET 10 runtime, it installs one for your user account only | EDGEdeck checks once a day and offers a newer release. **Update REDbridge** checks straight away and removes the old copy afterwards |
 | [REDcode](../redcode/) | On first start REDcode offers to download it. **REDcode: Install REDbridge** does the same at any time: it downloads the latest release into REDcode's storage and points REDcode at it | REDcode asks GitHub once per session and offers a newer release (setting `redcode.bridgeUpdateCheck`). **REDcode: Update REDbridge** stops the bridge, updates it and starts it again |
-| [REDnode](../rednode/) | REDnode doesn't ship REDbridge. It uses the newest copy that EDGEdeck or REDcode already fetched | Through EDGEdeck or REDcode |
-| AI assistants | REDcode's MCP server, `@edgemodders/redcode-mcp`, uses the copy REDcode set up | Through REDcode |
+| [REDnode](../rednode/) | REDnode doesn't ship REDbridge, and players don't need VS Code for it. When a package needs REDbridge and none is found, REDnode's Mod Manager shows **Get REDbridge**: it says what it will download, then fetches the latest release into `%LOCALAPPDATA%\REDnode\bridge`, with the .NET 10 runtime for your user account if it's missing. No admin rights. Otherwise REDnode uses the newest copy that it, EDGEdeck or REDcode already fetched | REDnode asks GitHub once per session and the Mod Manager offers **Update REDbridge**. Never automatic |
+| AI assistants | REDcode's MCP server, `@edgemodders/redcode-mcp`, uses the copy REDcode set up. With the EDGE plugin for Claude Code, you can instead download the zip yourself (see [Installing it by hand](#installing-it-by-hand)) and give the plugin the path of `REDbridge.exe` | Through REDcode, or by hand |
 
-Today EDGEdeck and REDcode each keep their own copy. Sharing one copy between them is planned on REDcode's side.
+Today EDGEdeck, REDcode and REDnode each keep their own copy. Sharing one copy between EDGEdeck and REDcode is planned on REDcode's side.
 
 ### REDnode packages
 
@@ -39,8 +39,9 @@ A REDnode package that wants REDbridge must ask for the **bridge** permission, a
 
 | Tool | Needs |
 |---|---|
-| REDcode 0.9.0 | REDbridge 0.8.0 or newer. If yours is older, REDcode's status bar says so and offers **REDcode: Update REDbridge** |
-| REDcode's MCP server 0.2.0 | REDbridge 0.8.0 or newer |
+| REDcode 0.10.0 and newer | REDbridge 0.10.0 or newer. If yours is older, REDcode says so and offers **REDcode: Update REDbridge** |
+| REDcode's MCP server 0.3.0 | REDbridge 0.10.0 for the `loc_*` tools, 0.9.0 for `sound_import` and mesh templates, 0.8.0 for the rest |
+| A REDnode package that names REDbridge | The version in the package's requirements, which the Mod Manager shows. REDnode's Get REDbridge fetches the newest |
 | EDGEdeck's Add to Project for archives | REDbridge 0.7.1 or newer |
 | EDGEdeck's archive conflicts | Any release from 0.4.0 |
 
@@ -50,7 +51,7 @@ The newest release covers everything.
 
 REDbridge is a .NET program, so it needs Microsoft's .NET 10 runtime.
 
-- **Through EDGEdeck:** Get REDbridge installs it for your user account when it's missing. Nothing else to do.
+- **Through EDGEdeck or REDnode:** Get REDbridge installs it for your user account when it's missing. Nothing else to do.
 - **Through REDcode:** if the bridge fails to start and no runtime is installed, REDcode says so and offers to run `winget install Microsoft.DotNet.Runtime.10` in a terminal, or to open the download page.
 - **By hand:** run `winget install Microsoft.DotNet.Runtime.10` in a terminal.
 
@@ -62,7 +63,7 @@ For a copy you manage yourself, for example on a PC without access to GitHub fro
 
 1. Download `REDbridge-<version>-win-x64.zip` from the [releases page](https://github.com/Edgemodders/REDbridge/releases).
 2. Unzip it anywhere.
-3. Point the tool at `REDbridge.exe`: the setting `edgedeck.bridgePath` for EDGEdeck, `redcode.bridgePath` for REDcode.
+3. Point the tool at `REDbridge.exe`: the setting `edgedeck.bridgePath` for EDGEdeck, `redcode.bridgePath` for REDcode, or the REDbridge setting of the EDGE plugin for Claude Code (`/plugin configure edge@edgemodders`).
 
 EDGEdeck's daily update check leaves a copy you set up yourself alone, so update it by hand too.
 
