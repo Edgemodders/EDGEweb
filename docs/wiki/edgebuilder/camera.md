@@ -4,7 +4,7 @@ nav_title: Camera and builder mode
 section: EDGEbuilder
 order: 4
 description: "EDGEbuilder's own camera: look, fly, orbit, pan, dolly and frame while V stays put, and builder mode, which hides the game's HUD while Edit is on."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # The camera and <span class="y">builder mode</span>
@@ -18,11 +18,11 @@ Placing things from V's eyes is awkward: you can't see behind a crate, or look d
 | The view | Switches to EDGEbuilder's camera, starting exactly where V's view is, so nothing jumps |
 | V | Stays where V was standing. Only the camera moves |
 | The HUD | The game's own HUD (minimap, quest tracker, crosshair) disappears |
-| The help line | At the bottom left, now also lists the camera keys |
+| The help line | At the bottom of the screen, now also lists the camera keys |
 
 Switch **Edit** off and the view snaps back to V's eyes and the HUD returns. Switch it on again and the camera starts from V's view again.
 
-Both halves can be switched off in the Settings tab, if one misbehaves. See [Settings and keys](settings.html).
+Both halves can be switched off in the Settings tab, if one misbehaves. See [Settings and keys](settings.html). From 0.3.3 the switches apply at once, even while Edit is on, and switching Edit on with one of them off says so in the message line.
 
 {% include shot.html caption="Builder mode" shows="The game with Edit on and the camera flown up above a street: no minimap, quest tracker or crosshair, V standing small in the distance, and the EDGEbuilder panel at the right." %}
 
@@ -44,15 +44,15 @@ The gizmo, the box and selecting by clicking all keep working from wherever the 
 
 ### The cursor while looking
 
-With **REDnode 0.22.0 or later** and EDGEbuilder 0.3.2, the cursor disappears and stays put while you hold the right or middle button. The view keeps turning however far you move the mouse. Let go and the cursor is back where it was. **Esc** while holding ends the lock without leaving Edit.
+With **REDnode 0.22.0 or later** and EDGEbuilder 0.3.2 or later, the cursor disappears and stays put while you hold the right or middle button. The view keeps turning however far you move the mouse. Let go and the cursor is back where it was. **Esc** while holding ends the lock without leaving Edit.
 
 With an older REDnode, the cursor moves while you look, and turning stops when it reaches the edge of the screen.
 
-> **Untested:** the cursor lock is in EDGEbuilder 0.3.2, whose in-game retest is still pending. REDnode's side of it passed its own test.
+The cursor lock passed its in-game retest on 2026-10-16 (EDGEbuilder 0.3.2 with REDnode 0.24.0).
 
 ## Dropping from the camera
 
-With the editor camera on, **Drop where I look** puts the asset on the first surface the camera looks at, up to 60 m away, turned to face the camera. That makes it easy to fly to a spot, look at it, and drop. See [Browsing and dropping](browsing.html#drop-it).
+With the editor camera on, **Drop where I look** puts the asset on the first surface the camera looks at, up to 60 m away, turned to face the camera. That makes it easy to fly to a spot, look at it, and drop. **Drop at click** (0.3.3, untested in game) drops it where you click instead. See [Browsing and dropping](browsing.html#drop-it).
 
 ## How far can the camera go?
 
@@ -62,7 +62,7 @@ In the in-game test, the camera flew about 200 m away from V and the world staye
 
 When a save loads, Edit stays on and the camera starts again from V's view.
 
-In 0.3.0, the game's HUD came back after the load. 0.3.1 fixes that: while builder mode is on, EDGEbuilder checks every second and hides the HUD again if the game brought it back. This fix waits for its in-game retest.
+In 0.3.0, the game's HUD came back after the load. 0.3.1 fixes that: while builder mode is on, EDGEbuilder checks every second and hides the HUD again if the game brought it back. The fix passed its in-game retest on 2026-10-16.
 
 ## If V's view gets stuck
 

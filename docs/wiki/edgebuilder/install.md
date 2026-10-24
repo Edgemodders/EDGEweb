@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEbuilder
 order: 1
 description: "What EDGEbuilder needs, installing it with EDGEdeck, allowing REDbridge, and opening it in the game."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Install and set up <span class="y">EDGEbuilder</span>
@@ -13,10 +13,10 @@ reviewed: 2026-10-16
 
 | You need | Notes |
 |---|---|
-| Cyberpunk 2077 on Windows | And a save to load: EDGEbuilder works in the world, not in the menus |
-| [REDnode](../rednode/) 0.17 or later | Runs EDGEbuilder in the game. Version 0.22.0 or later also holds the cursor still while you look around. REDnode has no packaged release yet: it installs from source, following its [developer setup](https://edgemodders.github.io/REDnode/dev-setup.html) |
+| Cyberpunk 2077 2.31 on Windows | And a save to load: EDGEbuilder works in the world, not in the menus. Game 2.5 isn't supported yet: REDnode stays on 2.31 until its frameworks support 2.5 |
+| [REDnode](../rednode/) 0.17 or later | Runs EDGEbuilder in the game. Version 0.22.0 or later also holds the cursor still while you look around. Use the newest release: see [Install REDnode](../rednode/install.html) |
 | [Codeware](https://www.nexusmods.com/cyberpunk2077/mods/7780) 1.14 or later | REDnode's world calls, which spawn and move objects, need it. EDGEbuilder says so in its manifest, and REDnode's Mod Manager checks it |
-| [REDbridge](../redbridge/) 0.6.0 or later | Reads the game's files to build the asset list. The easiest way to get it is EDGEdeck's **Get REDbridge** |
+| [REDbridge](../redbridge/) 0.6.0 or later | Reads the game's files to build the asset list. The easiest way to get it is EDGEdeck's **Get REDbridge**. A copy REDcode fetched works too |
 | [EDGEdeck](../edgedeck/) 0.20.0 or later | Installs EDGEbuilder. From 0.21.1, a new EDGEbuilder version takes the old one's place in the same row |
 | A 16:9 screen | The editor covers a 1920 x 1080 area, scaled to your screen. Ultrawide screens aren't covered yet |
 
@@ -24,7 +24,7 @@ Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. R
 
 ## Install EDGEbuilder
 
-1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.3.2.
+1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.3.3.
 2. In EDGEdeck, press **Add mod** and pick the zip. EDGEdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../edgedeck/adding-mods.html).
 3. Make sure it's ticked, and press **Deploy**.
 
@@ -48,7 +48,7 @@ While you're in the Mod Manager, EDGEbuilder's **Requires** line should list Cod
 
 ## Open EDGEbuilder
 
-EDGEbuilder doesn't open by itself. In the Mod Manager, switch **EDGEbuilder** on, and pin it to the launcher so it's one click away next time.
+EDGEbuilder doesn't open by itself, and a newly installed package isn't on the launcher yet: it shows only in the Mod Manager. In the Mod Manager, switch **EDGEbuilder** on, and pin it to the launcher so it's one click away next time. See [The Mod Manager](../rednode/mod-manager.html).
 
 The panel opens at the right of the screen. Three pills at its top say how things stand:
 

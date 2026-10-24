@@ -4,12 +4,12 @@ nav_title: Settings and keys
 section: EDGEbuilder
 order: 6
 description: "Every EDGEbuilder setting, button, key and mouse control, in one place."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Settings and <span class="y">keys</span>
 
-Everything in EDGEbuilder 0.3.2, in one place. The pages before this one explain each in context.
+Everything in EDGEbuilder 0.3.3, in one place. The pages before this one explain each in context.
 
 ## The panel
 
@@ -17,7 +17,7 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 
 | Tab | What's in it |
 |---|---|
-| **Assets** | Search, the **All**, **Meshes** and **Entities** filters, the results, and the **Picked** panel with **Drop where I look**. See [Browsing and dropping](browsing.html) |
+| **Assets** | Search, the **All**, **Meshes** and **Entities** filters, the results, and the **Picked** panel with **Drop where I look** and **Drop at click**. Typing anywhere on this tab searches. See [Browsing and dropping](browsing.html) |
 | **Scene** | Every object in the scene, and the **Selected** panel. See [Browsing and dropping](browsing.html#the-scene-tab) and [Positioning objects](positioning.html#typing-numbers) |
 | **Settings** | The settings below |
 | **About** | A short summary of the keys and what's next |
@@ -28,12 +28,12 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 
 | Setting | Default | What it does |
 |---|---|---|
-| **REDbridge.exe** | Empty: the copy EDGEdeck fetched | A path to a REDbridge of your choice. Leave it empty in nearly every case |
-| **Game folder** | Empty: found from where REDnode runs | The game folder, for when EDGEbuilder can't find it |
+| **REDbridge.exe** | Empty: found by itself | A path to a REDbridge of your choice. Leave it empty in nearly every case. When empty, the field shows `Automatic:` and the copy in use |
+| **Game folder** | Empty: found from where REDnode runs | The game folder, for when EDGEbuilder can't find it. When empty, the field shows `Automatic:` and the folder in use |
 | **Use EDGEbuilder's own camera (V stays put)** | On | Off: Edit works from V's own view instead, as in 0.2 |
 | **Hide the game's HUD** | On | Off: the HUD stays on screen while Edit is on |
 
-**Save and restart REDbridge** saves the two fields and restarts REDbridge if its path changed. The two switches apply as soon as you flip them; switch Edit off and on to see the change.
+**Save and restart REDbridge** saves the two fields and restarts REDbridge if its path changed. The two switches apply as soon as you flip them, even while Edit is on (from 0.3.3; before that, switch Edit off and on to see the change).
 
 Below them, the tab shows which REDbridge is in use, where the asset index is, and the path of the settings file.
 
@@ -61,6 +61,7 @@ Keys work while Edit is on and no text field in the panel has focus.
 | **Esc** or a right-click | Cancel: the object goes back |
 | **Ctrl+E** | Drop the selected object to the floor |
 | **Delete** | Remove the selected object |
+| Click, after **Drop at click** | Drop the picked asset there. **Esc** cancels |
 
 ### The camera
 
@@ -75,7 +76,7 @@ Keys work while Edit is on and no text field in the panel has focus.
 | **Shift** with the middle mouse button | Pan |
 | Mouse wheel | Move closer or further |
 | **F** | Frame the selection |
-| **Esc** while looking | End the cursor lock (REDnode 0.22.0 or later; untested in EDGEbuilder) |
+| **Esc** while looking | End the cursor lock without leaving Edit (REDnode 0.22.0 or later) |
 
 The camera keys need **Use EDGEbuilder's own camera** on.
 

@@ -4,14 +4,14 @@ nav_title: Overview
 section: EDGEbuilder
 order: 0
 description: "EDGEbuilder, a world builder that runs inside Cyberpunk 2077 on REDnode: what it is, what it's for, and where it stands."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # EDGE<span class="y">builder</span>
 
 EDGEbuilder is a world builder for Cyberpunk 2077 that runs inside the game. You search the game's own 3D models, drop one into the world in front of you, and move, turn and scale it until it sits right. Later phases will let you arrange whole scenes and bake them into the world, so they load like any other mod.
 
-{% include shot.html caption="EDGEbuilder in the game" shows="The game with Edit on: a cargo crate selected with its gizmo (red, green and blue arrows and a yellow ring), the EDGEbuilder panel on the right with the Assets tab open, and the help line at the bottom left." %}
+{% include shot.html caption="EDGEbuilder in the game" shows="The game with Edit on: a cargo crate selected with its gizmo (red, green and blue arrows and a yellow ring), the EDGEbuilder panel on the right with the Assets tab open, and the help line at the bottom centre." %}
 
 ## What it's for
 
@@ -22,7 +22,7 @@ EDGEbuilder lets you do it where you can see it: in the game, with the real ligh
 | Behaviour | What you do | Status |
 |---|---|---|
 | **Browse** | Search the game's meshes and entities by name | Passed in game |
-| **Drop** | Pick one and it appears where you look | Passed in game |
+| **Drop** | Pick one and it appears where you look, or where you click | Passed in game. Drop at click (0.3.3) is untested in game |
 | **Position** | Move, turn and scale it with a gizmo, keys or typed numbers; drop it to the floor | Passed in game |
 | **Arrange** | Group, duplicate, hide, undo and redo, save named scenes | Planned |
 | **Bake** | Turn a scene into a mod that puts the objects in the world for good | Planned |
@@ -56,14 +56,16 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 |---|---|
 | B1 Browse and drop | Passed in game on 2026-10-13 |
 | B2a Position | Passed in game on 2026-10-14 |
-| B2b Camera | Passed in game on 2026-10-14. The fixes in 0.3.1 and 0.3.2 (the HUD after a save loads, looking across the window, the cursor held still while looking) wait for their in-game retest |
+| B2b Camera | Passed in game on 2026-10-14. The fixes in 0.3.1 and 0.3.2 (the HUD after a save loads, looking across the window, the cursor held still while looking) passed their retest on 2026-10-16. 0.3.3's additions (Drop at click and others) wait for their in-game check |
+| B2c Mod assets | Planned: list the objects in your mods and your open project too, not only the base game's. Its plan is still to be agreed |
 | B3 Arrange and save | Not started |
+| B3c NPCs and scenes through REDnode | Agreed on 2026-10-23: place NPCs, and let REDnode load EDGEbuilder's scene files so other mods can use them. Waits for REDnode's world objects work |
 | B4 Bake | REDbridge's half is built but not yet tried in the game. EDGEbuilder's bake panel is not started |
 | B5 Lights and more kinds | Not started. Today you can place meshes and entities only |
 | B6 Comfort (favourites, prefabs, snapping) | Not started |
 | B7 Scenes in REDcode with the game closed | Not started |
 
-The latest release is **EDGEbuilder 0.3.2** (2026-10-15), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It needs REDnode, which has no packaged release yet and installs from source. See [Install and set up](install.html).
+The latest release is **EDGEbuilder 0.3.3** (2026-10-16), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). 0.3.4, which finds the REDbridge that EDGEdeck fetched under EDGEdeck's new name, is built and waits for its in-game check. EDGEbuilder is a test build: a first public preview is planned after B4 (Bake). It needs [REDnode](../rednode/), which installs from its release zip, and game version 2.31. See [Install and set up](install.html).
 
 EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks mod that showed a world editor can live inside the running game. EDGEbuilder is its own design and uses none of World Builder's code, files or data.
 

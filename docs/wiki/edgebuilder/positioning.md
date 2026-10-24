@@ -3,7 +3,7 @@ title: Positioning objects
 section: EDGEbuilder
 order: 3
 description: "Move, turn and scale objects in EDGEbuilder: the Edit switch, selecting in the world, the gizmo, G R S with axis locks and typed numbers, snapping, drop to floor and the number fields."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Positioning <span class="y">objects</span>
@@ -25,9 +25,9 @@ The **Edit** switch at the right end of the panel's title bar (the bar that says
 
 The overlay must be **interactive** for Edit to work: press **F10** until REDnode's windows take the mouse.
 
-A help line at the bottom left of the screen says what you can do next.
+A help line at the bottom of the screen says what you can do next. From 0.3.3 it sits at the bottom centre, clear of REDnode's launcher; before that, at the bottom left.
 
-{% include shot.html caption="The Edit switch" shows="The EDGEbuilder panel's title bar with the Edit switch at its right end turned on, and the help line at the bottom left of the screen." %}
+{% include shot.html caption="The Edit switch" shows="The EDGEbuilder panel's title bar with the Edit switch at its right end turned on, and the help line at the bottom centre of the screen." %}
 
 ## Selecting
 

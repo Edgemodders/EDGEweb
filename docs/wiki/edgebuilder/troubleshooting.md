@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEbuilder
 order: 7
 description: "Fixes for common EDGEbuilder problems: red status pills, REDbridge not allowed, drops that fail, a stuck camera, windows you can't click, and missing previews."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Troubleshooting <span class="y">EDGEbuilder</span>
@@ -41,7 +41,7 @@ You haven't allowed EDGEbuilder to use REDbridge yet. Press **F10**, open the **
 
 ### The second pill says "No REDbridge" or "REDbridge failed"
 
-- **No REDbridge**: none was found. In EDGEdeck, use **Get REDbridge** in the Set up group. See [Install EDGEdeck](../edgedeck/install.html#getting-redbridge).
+- **No REDbridge**: none was found. In EDGEdeck, use **Get REDbridge** in the Set up group. See [Install EDGEdeck](../edgedeck/install.html#getting-redbridge). If you have it and the pill still says so, update REDnode: EDGEdeck was called REDdeck before 2026-10-17, and REDnode releases from before then look for REDbridge under the old name.
 - **REDbridge failed**: it started and stopped. Hover the pill for its last words. Try **Restart REDbridge** in the Settings tab. If you set a path in **REDbridge.exe**, empty it and press **Save and restart REDbridge**, so EDGEbuilder uses EDGEdeck's copy.
 
 If the message says the game folder wasn't found, put it in **Game folder** in the Settings tab.
@@ -67,7 +67,7 @@ The message line under the pills says why:
 
 The overlay must be interactive. Press **F10** until REDnode's windows take the mouse, then switch **Edit** on.
 
-### "No camera yet" at the bottom left
+### "No camera yet" in the help line
 
 EDGEbuilder hasn't got the game's camera yet. Load a save if you haven't. After a save loads, it picks up the new camera by itself.
 
@@ -77,7 +77,7 @@ EDGEbuilder probably stopped while Edit was on. **Load a save**: that gives V's 
 
 ### The HUD came back after loading a save with Edit on
 
-That was the behaviour in 0.3.0. Update to 0.3.1 or later, which hides the HUD again when the game brings it back. That fix waits for its in-game retest: if you still see it, report it with the log.
+That was the behaviour in 0.3.0. Update to 0.3.1 or later, which hides the HUD again when the game brings it back (retested in game on 2026-10-16). If you still see it, check that **Hide the game's HUD** is on in the Settings tab, then report it with the log.
 
 ### I can't click other REDnode windows
 
@@ -85,7 +85,11 @@ While Edit is on, EDGEbuilder's layer covers them. Switch **Edit** off, use the 
 
 ### The cursor stops at the edge of the screen while looking around
 
-That's how looking works with REDnode older than 0.22.0. With 0.22.0 or later and EDGEbuilder 0.3.2, the cursor is held still while you look. Until then, let go of the button, move the mouse back, and carry on.
+That's how looking works with REDnode older than 0.22.0, or EDGEbuilder older than 0.3.2. Update both, and the cursor is held still while you look. Until then, let go of the button, move the mouse back, and carry on.
+
+### Right mouse does nothing, or the HUD stays on with Edit on
+
+One of the Settings tab's switches is off: **Use EDGEbuilder's own camera** or **Hide the game's HUD**. Switch it back on. From 0.3.3 the message line says so when Edit goes on with a switch off.
 
 ### Pressing S says "Only meshes scale"
 

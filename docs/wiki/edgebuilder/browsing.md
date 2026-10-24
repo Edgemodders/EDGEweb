@@ -3,7 +3,7 @@ title: Browsing and dropping
 section: EDGEbuilder
 order: 2
 description: "Search the game's meshes and entities in EDGEbuilder, pick an appearance, drop objects into the world, and manage them in the Scene tab."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Browsing and <span class="y">dropping</span>
@@ -30,7 +30,7 @@ The index is saved and loads at once on later starts. It's built again when the 
 ## Search
 
 1. Open the **Assets** tab.
-2. Type in the search box, for example `cargo crate`, `bench` or `vending`.
+2. Type in the search box, for example `cargo crate`, `bench` or `vending`. From 0.3.3, typing anywhere on the Assets tab goes to the search box.
 3. Narrow the list with the **All**, **Meshes** and **Entities** tabs under it.
 
 Results show the file name, with the kind at the right. **PL** before the kind marks an asset from Phantom Liberty. Hover a result for its full path. The count above the list shows how many matched. The list stops at 120 results (the count then shows **120+**), so a longer, more exact search works better than scrolling.
@@ -57,6 +57,14 @@ Press **Drop where I look**.
 |---|---|
 | EDGEbuilder's own camera ([Edit on](camera.html)) | On the first surface the camera looks at, up to 60 m away, turned to face the camera. With nothing in that range, 6 m ahead |
 | Edit off, or the editor camera switched off | About 3 m in front of V, facing V |
+
+### Drop at click
+
+From 0.3.3, **Drop at click** beside it lets you choose the spot. Press it (it switches [Edit](positioning.html#the-edit-switch) on if it's off), then click a spot in the world. The asset lands on the surface you clicked, turned to face the camera. **Esc** cancels, and nothing is dropped.
+
+> **Untested:** Drop at click is in EDGEbuilder 0.3.3, whose in-game check is still pending.
+
+### How long a drop takes
 
 A drop takes about half a second. The message line under the pills says how long it took. In the in-game test, crates and vending machines both landed in 0.36 to 0.44 s.
 

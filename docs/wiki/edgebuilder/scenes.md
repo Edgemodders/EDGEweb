@@ -3,7 +3,7 @@ title: Scenes and baking
 section: EDGEbuilder
 order: 5
 description: "What EDGEbuilder keeps today (one working scene, previews you rebuild), and what Arrange and Bake will add: named scenes, undo, and baking a scene into a mod."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Scenes and <span class="y">baking</span>
@@ -35,7 +35,7 @@ There is **one scene** for now, the working scene. You can't name, save as, or s
 
 ## Arrange: planned
 
-Phase B3, **Arrange and save**, is next on EDGEbuilder's roadmap. It is planned to add:
+Phase B3, **Arrange and save**, comes after B2c (listing the objects in your mods, not only the base game's). It is planned to add:
 
 - groups, to keep parts of a scene together;
 - selecting several objects at once;
@@ -44,6 +44,15 @@ Phase B3, **Arrange and save**, is next on EDGEbuilder's roadmap. It is planned 
 - named scene files you save and open again (the **Return** behaviour).
 
 Its plan is still to be agreed.
+
+## NPCs and scenes other mods can load: planned
+
+Phase B3c was agreed on 2026-10-23, together with [REDnode](../rednode/)'s work on world objects. It is planned to add:
+
+- **NPCs**, picked from the game's characters, standing friendly and idle where you place them;
+- **scene files REDnode can load by itself**, so another mod (a quest, for example) can bring an EDGEbuilder scene into the game without EDGEbuilder running.
+
+It waits for REDnode's side, which is still being tried out. Baking NPCs into the world is an open question.
 
 ## Bake: planned
 
