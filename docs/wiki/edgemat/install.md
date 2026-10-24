@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEmat
 order: 1
 description: "What EDGEmat needs, installing it from the VS Code Marketplace, and the first build of the material library from your game."
-reviewed: 2026-10-20
+reviewed: 2026-10-24
 ---
 
 # Install and set up <span class="y">EDGEmat</span>
@@ -42,9 +42,10 @@ code --install-extension edgemodders.edgemat
 | Way | When | How |
 |---|---|---|
 | **Open VSX** | Editors built on VS Code that use Open VSX instead of Microsoft's Marketplace, such as VSCodium | Search for `EDGEmat` in the editor's Extensions view, or see [EDGEmat on Open VSX](https://open-vsx.org/extension/edgemodders/edgemat) |
+| **The EDGEkit app** | You want one editor with the EDGE tools built in | [EDGEkit](../edgekit/#get-the-app) 1.140.1 comes with EDGEmat 0.3.1, which then updates itself from Open VSX |
 | **A `.vsix` file** | No store access, or you want one exact version | Download `edgemat-<version>.vsix` from the [releases page](https://github.com/Edgemodders/EDGEmat/releases). In the Extensions view, press the **`...`** menu at the top right, choose **Install from VSIX...** and pick the file. Or run `code --install-extension edgemat-<version>.vsix` |
 
-Installed from the Marketplace or Open VSX, EDGEmat updates like any other extension: VS Code fetches new versions by itself unless you turned automatic updates off. Each version's changes are on the [releases page](https://github.com/Edgemodders/EDGEmat/releases). If you installed from a `.vsix` file, install the newer file the same way. Your library and settings stay either way.
+Installed from the Marketplace or Open VSX, EDGEmat updates like any other extension: VS Code fetches new versions by itself unless you turned automatic updates off. Each version's changes are in EDGEmat's [changelog](https://edgemodders.github.io/EDGEmat/changelog.html) and on the [releases page](https://github.com/Edgemodders/EDGEmat/releases). If you installed from a `.vsix` file, install the newer file the same way. Your library and settings stay either way.
 
 To remove EDGEmat, uninstall it in the Extensions view, or run `code --uninstall-extension edgemodders.edgemat`.
 

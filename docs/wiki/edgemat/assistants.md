@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEmat
 order: 9
 description: "Connect Claude Code to EDGEmat's MCP server, so an assistant can find a garment's materials, describe and recolor its layers, and make new materials for you."
-reviewed: 2026-10-21
+reviewed: 2026-10-24
 ---
 
 # EDGEmat and <span class="y">assistants</span>
@@ -29,7 +29,7 @@ The command registers EDGEmat for every folder (`--scope user`) and replaces an 
 |---|---|
 | Agents inside VS Code 1.101 or later | Nothing to do: VS Code lists EDGEmat among its MCP servers, with your image service keys from EDGEmat. Editors without MCP support of their own skip this |
 | Another MCP client | **Connect an Assistant (MCP)...** › **Copy a JSON entry**, for the client's settings file |
-| Without VS Code (EDGEchat, REDagent, another PC) | The same server on npm: `claude mcp add --scope user edgemat -- cmd /c npx -y \edgemodders/edgemat-mcp` ([the package](https://www.npmjs.com/package/\edgemodders/edgemat-mcp)). It needs Node.js 20 or later |
+| Without VS Code (EDGEchat, REDagent, another PC) | The same server on npm: `claude mcp add --scope user edgemat -- cmd /c npx -y @edgemodders/edgemat-mcp` ([the package](https://www.npmjs.com/package/@edgemodders/edgemat-mcp)). It needs Node.js 20 or later |
 
 The server finds the game and REDbridge from your VS Code settings, the same way the extension does (EDGEmat's settings, then REDcode's), so on a PC with REDcode set up it needs nothing more. It shares the extension's material library; with none built yet, ask the assistant to build it first. It starts its own REDbridge while it runs.
 

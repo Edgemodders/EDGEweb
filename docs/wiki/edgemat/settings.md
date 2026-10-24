@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEmat
 order: 12
 description: "Every EDGEmat setting with its default and when to change it, and every EDGEmat command and button."
-reviewed: 2026-10-20
+reviewed: 2026-10-24
 ---
 
 # Settings and <span class="y">commands</span>
@@ -68,3 +68,12 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEmat`. Most are also butt
 These are buttons and switches on the page itself, not commands: **Keep open**, **Copy**, **Raw values**, **Hide unused slots**, **All layers** / **Selected layer**, **Change** (the mask set, a layer's surface or microblend) and **Open** (a layer's surface or microblend). In the setup editor, `Ctrl+Z` and `Ctrl+Y` undo and redo. Each is explained on its page: [Surface pages](surfaces.html), [The setup editor](setup-editor.html), [New Material](new-material.html).
 
 The setup editor is also an editor you can pick for any `.mlsetup`: **Reopen Editor With...** › **EDGEmat Setup Editor**.
+
+### Coming in the next version
+
+Built, not released yet (after 0.3.1):
+
+| Command | Where | Does |
+|---|---|---|
+| Open Material in EDGEmat... | Right-click a `.mlsetup`, `.mlsetup.json` or `.mltemplate` in the Explorer or on its tab; a `.mlsetup` in REDcode's Project view | A setup opens in the setup editor, a surface on its page |
+| Open Mesh in EDGEmat | Right-click a `.mesh` in the Explorer or on its tab | Find shows the mesh with the look on screen open, and each material's setup or New Material Here |

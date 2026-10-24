@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEmat
 order: 13
 description: "Fixes for common EDGEmat problems: game or REDbridge not found, a library that won't build, a scrambled color map, changes that don't show in the game, image service errors, View in 3D, and Find."
-reviewed: 2026-10-20
+reviewed: 2026-10-24
 ---
 
 # Troubleshooting <span class="y">EDGEmat</span>
@@ -44,6 +44,10 @@ The layer names a color its surface doesn't offer, and the game draws such a col
 ### My change doesn't show in the game
 
 Usually the archive isn't where the game loads it. With Red Hot Tools installed, Pack and Try only copies it to `archive\pc\hot`, which loads only into a running game; with the game closed, use **Pack and Install**. With `redcode.pack.redmod` on, the mod goes to `mods\` and needs a deploy and the `-modded` start. Also check the body, the look, and how you saved. All of it: [Your mod in the game](in-the-game.html#if-you-dont-see-your-change).
+
+### The game closes when Pack and Try swaps a new build
+
+With the official RED Hot Tools, swapping a new build of an archive whose name has capital letters can close the game. Use the Edgemodders build of RED Hot Tools, which fixes it: see [Your mod in the game](in-the-game.html#pack-and-install), pitfall 3.
 
 ### Save to Project finds no mesh
 

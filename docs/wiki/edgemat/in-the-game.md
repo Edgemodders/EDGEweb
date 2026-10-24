@@ -4,7 +4,7 @@ nav_title: Your mod in the game
 section: EDGEmat
 order: 8
 description: "From a saved recolor or new material to the game: pack and install with REDcode, the hot folder and REDmod pitfalls, and putting the item on V with Cyber Engine Tweaks."
-reviewed: 2026-10-20
+reviewed: 2026-10-24
 ---
 
 # Your mod <span class="y">in the game</span>
@@ -25,6 +25,8 @@ In REDcode, with the project open:
 **Pitfall 2: REDmod.** If REDcode's `redcode.pack.redmod` setting is on, the project packs as a REDmod into the game's `mods\` folder. REDmods need a deploy step (EDGEdeck's and REDcode's Deploy run it) and load only when the game starts with `-modded` (REDcode's Run Game does that). A material mod doesn't need REDmod: with the setting off, it goes to `archive\pc\mod` and simply loads.
 
 To check: after installing, `<game>\archive\pc\mod\<project>.archive` should exist (folder `mod`, singular).
+
+**Pitfall 3: capital letters in the archive's name.** The official RED Hot Tools can fail to swap in a new build of an archive whose name has capital letters (such as `MyMaterials.archive`) and close the game. The [Edgemodders build of RED Hot Tools](https://github.com/CyberbuildsAI/cp2077-red-hot-tools/releases/tag/v1.3.0%2Bedgemodders.1) (`1.3.0+edgemodders.1`) fixes it: extract its zip over the official files. An all-lowercase project name avoided the problem in REDnode's tests too.
 
 ## 2. Put the item on V
 

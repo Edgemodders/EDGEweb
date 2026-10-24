@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEmat
 order: 0
 description: "EDGEmat, the EDGE platform's material editor for Cyberpunk 2077: see what a garment is made of, in plain words and in 3D, recolor it, make new materials from your words, or ask an AI assistant to."
-reviewed: 2026-10-20
+reviewed: 2026-10-24
 ---
 
 # EDGE<span class="y">mat</span>
@@ -51,13 +51,15 @@ One thing to know: a layer's color isn't a free choice. Each surface offers a fi
 | [REDbridge](../redbridge/) | Reads every game file, using WolvenKit's engine. EDGEmat needs it |
 | [REDcode](../redcode/) | Recommended. With it, EDGEmat takes the game folder and REDbridge from REDcode, so there is nothing to set up. EDGEmat saves into REDcode's open project, and REDcode packs it for the game. REDcode's 3D viewer shows EDGEmat's colors |
 | Claude and other agents | EDGEmat's MCP server lets an AI assistant find, describe, recolor and make materials. Every feature comes to the buttons and the assistant together. EDGEmat makes no network calls of its own, except to an image service you chose, when you press Generate |
-| [EDGEkit](../edgekit/) | Will include EDGEmat once it is released |
+| [EDGEkit](../edgekit/) | The EDGEkit app (1.140.1) has EDGEmat 0.3.1 built in. In VS Code, install EDGEmat on its own for now: the extension pack adds it in its next version |
 
 EDGEmat builds its material library from your own game the first time it runs, so it ships no game data and stays current after game patches.
 
 ## Status
 
-Version 0.3.0, the first preview, was released on 2026-10-20, after every test passed on the developer's PC and in the game. It is on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgemat) and [Open VSX](https://open-vsx.org/extension/edgemodders/edgemat), and on [GitHub](https://github.com/Edgemodders/EDGEmat/releases) with the assistants' server file: [Install and set up](install.html). Windows only.
+Version 0.3.0, the first preview, was released on 2026-10-20, after every test passed on the developer's PC and in the game. The current version is **0.3.1** (2026-10-21), which brings the assistants' server inside the extension and puts it on npm. It is on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgemat), [Open VSX](https://open-vsx.org/extension/edgemodders/edgemat) and [GitHub](https://github.com/Edgemodders/EDGEmat/releases): [Install and set up](install.html). Windows only.
+
+Built for the next version, not released yet: **Open Material in EDGEmat...** and **Open Mesh in EDGEmat** on a right-click on a setup or mesh file (also from REDcode's Project view), and REDcode's 3D view redrawing after you save.
 
 | Phase | State |
 |---|---|
@@ -76,7 +78,7 @@ In plain words. Each phase ends with a test on the developer's PC, and in the ga
 | M4 Make | Materials for new meshes: from a model's own textures, from a photo, or generated from your words (that part is in 0.3 already). Materials picked from the game for new clothes and objects. A mesh's looks (appearances). This is what [EDGEfab](https://github.com/Edgemodders/EDGEfab) builds on |
 | M5 Preview | The full preview: shine, bumps, metal and detail on the model, not just colors, compared with the game |
 | M6 Beyond layers | Colors no surface offers, other kinds of material, several layers on a new mesh |
-| M7 Ship | The assistants' server on npm, a Nexus Mods page, a place in EDGEkit (the Marketplace and Open VSX came early, with 0.3.0). The goal: a non-coder recolors an item from the docs alone |
+| M7 Ship | A Nexus Mods page. Some parts came early: the Marketplace and Open VSX (0.3.0), the assistants' server on npm (0.3.1), and a place in the EDGEkit app (1.140.1). The goal: a non-coder recolors an item from the docs alone |
 
 A longer-term idea in the design: change materials in the running game by asking REDagent, for example looking at a crate and saying "make it blue".
 
