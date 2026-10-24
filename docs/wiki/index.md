@@ -4,7 +4,7 @@ nav_title: The EDGE platform
 section: Start here
 order: 0
 description: "An introduction to EDGE, the agent-based modding platform for Cyberpunk 2077, and the EDGEmodders wiki."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # The EDGE <span class="y">platform</span>
@@ -30,9 +30,9 @@ More toolkits build on those five for particular jobs:
 | Job | Toolkit | What it does |
 |---|---|---|
 | Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props, drop them where you look, and position them |
-| Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade and shape it, and save it into your mod. In development |
-| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, 0.3.0 on the Marketplace |
-| One install | [EDGEkit](edgekit/) | The EDGEmodders editor. Today an extension pack that installs the EDGE tools in VS Code in one go; a full app is being built |
+| Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade, mix and shape it, and put it into the game through your mod. Preview, 0.1.0 on the Marketplace |
+| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, 0.3.1 on the Marketplace |
+| One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE tools built in (preview, 1.140.1), or an extension pack that installs them in VS Code in one go |
 
 ## Platform benefits
 
@@ -41,18 +41,18 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | Benefit | What it means | From |
 |---|---|---|
 | **Anyone can mod** | Describe a mod in plain words; an agent writes, runs and fixes it | [REDagent](redagent/) |
-| **Agent-ready everywhere** | REDnode, REDcode and EDGEdeck offer their tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop | [REDnode](rednode/), [REDcode](redcode/), [EDGEdeck](edgedeck/) |
+| **Agent-ready everywhere** | REDnode, REDcode, EDGEdeck and EDGEmat offer their tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop. REDnode mods can offer tools of their own too | [REDnode](rednode/), [REDcode](redcode/), [EDGEdeck](edgedeck/), [EDGEmat](edgemat/) |
 | **You stay in control** | Every file change is shown before it happens, and agent changes and deploys can be undone | [REDagent](redagent/), [EDGEdeck](edgedeck/) |
-| **Live in the game** | Mods hot-reload into the running game; overlay apps draw HTML windows and HUD widgets over it | [REDnode](rednode/) |
+| **Live in the game** | Mods hot-reload into the running game, and changed archives swap into it; overlay apps draw HTML windows and HUD widgets over it | [REDnode](rednode/) |
 | **Crash isolation** | Mods and overlay apps run outside the game process, so a crash doesn't take the game down | [REDnode](rednode/) |
 | **Everything is text** | Game files as JSON, tweaks as YAML, mods in JavaScript and TypeScript, with a typed game API | [REDcode](redcode/), [REDnode](rednode/) |
 | **WolvenKit inside** | WolvenKit's engine does the file work; WolvenKit projects open and pack as they are | [REDbridge](redbridge/), [REDcode](redcode/) |
 | **Simple mod management** | One list, four verbs, conflicts even inside archives, Nexus updates, Vortex import | [EDGEdeck](edgedeck/) |
 | **Build where you see it** | Place the game's own objects in the running game with a gizmo and a free camera, instead of typing coordinates | [EDGEbuilder](edgebuilder/) |
-| **One install** | One extension pack puts REDcode, EDGEdeck and the HUD theme into VS Code; it keeps them updated | [EDGEkit](edgekit/) |
+| **One install** | The EDGEkit app comes with the EDGE tools built in and keeps them updated; in VS Code, one extension pack installs REDcode, EDGEdeck and the HUD theme | [EDGEkit](edgekit/) |
 | **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |
 
-> **Status:** EDGE is early and moving fast. REDagent writes working mods in game, REDnode mods and overlay apps pass in-game tests, and EDGEbuilder places objects in the running game. REDcode, EDGEdeck and EDGEmat are on the VS Code Marketplace as previews; the other toolkits still install from source or release files, and EDGEwave is not released yet. The [platform page](/platform.html) shows where each feature stands.
+> **Status:** EDGE is early and moving fast. REDnode (0.37.0) and REDagent (0.3.1) are released for **game version 2.31**; they move to 2.5 once RED4ext, redscript and Codeware support it. EDGEbuilder places objects in the running game (a test build). REDcode, EDGEdeck, EDGEmat and EDGEwave are on the VS Code Marketplace and Open VSX as previews, and the EDGEkit app is a preview for Windows. REDnode, REDagent, REDbridge and EDGEbuilder install from release files on GitHub. The [platform page](/platform.html) shows where each feature stands.
 
 ## About this wiki
 
