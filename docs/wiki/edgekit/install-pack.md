@@ -4,12 +4,12 @@ nav_title: Install the extension pack
 section: EDGEkit
 order: 1
 description: "Install the EDGEkit extension pack in VS Code or VSCodium to get REDcode, EDGEdeck and the REDnode HUD theme in one go. A preview."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Install the <span class="y">EDGEkit</span> extension pack
 
-The EDGEkit extension pack is one extension that installs the published EDGE extensions for you. It is for modders who use VS Code or VSCodium, until the EDGEkit app is ready. The pack itself has no features: it is a list, and installing it installs everything on the list.
+The EDGEkit extension pack is one extension that installs the published EDGE extensions for you. It is for modders who want to stay in VS Code or VSCodium. If you'd rather have one app with everything built in, [get the EDGEkit app](index.html#get-the-app) instead. The pack itself has no features: it is a list, and installing it installs everything on the list.
 
 **It is a preview**, like REDcode and EDGEdeck inside it. Expect rough edges, and tell us about them.
 
@@ -23,7 +23,7 @@ The EDGEkit extension pack is one extension that installs the published EDGE ext
 
 ## What it installs
 
-Checked on 2026-10-16, pack version 0.1.0:
+Checked on 2026-10-24, pack version 0.2.0 (the published one):
 
 | Extension | What it does | In VS Code | In VSCodium |
 |---|---|---|---|
@@ -32,7 +32,7 @@ Checked on 2026-10-16, pack version 0.1.0:
 | REDnode HUD | A dark theme in the EDGE house style | Yes | Yes |
 | REDscript IDE, by jac3km4 | Language support for redscript, the game's scripting language | Yes | No: it isn't on Open VSX |
 
-VS Code installs extensions from the Microsoft Marketplace, and VSCodium from Open VSX, so the pack lists only what each one can get. New EDGE extensions join the pack as they are published.
+VS Code installs extensions from the Microsoft Marketplace, and VSCodium from Open VSX, so the pack lists only what each one can get. New EDGE extensions join the pack as they are published: pack 0.3.0, built but not published yet, adds [EDGEmat](../edgemat/) and [EDGEwave](../edgewave/). Until it's out, install those two on their own from the Extensions view.
 
 ## Install it
 
