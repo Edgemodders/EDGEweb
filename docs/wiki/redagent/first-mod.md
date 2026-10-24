@@ -4,7 +4,7 @@ nav_title: Your first mod
 section: REDagent
 order: 1
 description: "Make a working Cyberpunk 2077 mod with REDagent, from setup to undo, without writing code."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Your first mod with <span class="y">REDagent</span>
@@ -13,13 +13,13 @@ This walkthrough follows REDagent's own in-game test. By the end you'll have a m
 
 ## Before you start
 
-- REDnode and REDagent are installed. See the [REDagent guide's install steps](https://edgemodders.github.io/REDagent/guide.html#install).
-- You have an Anthropic API key from [console.anthropic.com](https://console.anthropic.com/). Keys start with `sk-ant-`.
+- REDnode 0.32.1 or later and REDagent are installed, on game version 2.31. See [Install REDnode](../rednode/install.html) and the [REDagent guide's install steps](https://edgemodders.github.io/REDagent/guide.html#install).
+- You have an Anthropic API key from [console.anthropic.com](https://console.anthropic.com/), with some credit on it. Keys start with `sk-ant-`.
 
 ## 1. Set up once
 
-1. Start the game and load a save. The REDagent window opens on the right.
-2. Press **F10** to open the REDnode launcher. Find REDagent and switch **Allowed** on for "REDnode's tools for AI agents". Without this, REDagent can chat but can't see your mod log, the game or overlay windows.
+1. Start the game and load a save. The REDagent window opens on the right. The first time, press **Get the Agent SDK** in it and wait for the download (about 140 MB) to finish.
+2. Press **F10**, open the **Mod Manager** at the top of the REDnode launcher and select **REDagent**. Under its permissions, switch **Allowed** on for "REDnode's tools for AI agents". A new package is listed only in the Mod Manager until you press **Pin to launcher** there. Without this permission, REDagent can chat but can't see your mod log, the game or overlay windows.
 3. Click the key field in REDagent, press **Ctrl+V** to paste your key, then **Save key**. The chat appears.
 
 ## 2. Warm up

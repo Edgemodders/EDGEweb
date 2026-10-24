@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDagent
 order: 0
 description: "REDagent, the modding agent inside Cyberpunk 2077, powered by Claude. What it does, what it needs, and where to start."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # RED<span class="y">agent</span>
@@ -23,6 +23,7 @@ REDagent is EDGE's modding agent. It lives in a chat window drawn over Cyberpunk
 - **Chats are kept.** Close the game and carry on later: your last 30 chats are saved, with their changes.
 - **Clear costs.** Each answer shows what it cost. Pick Opus for building mods or Sonnet for quick questions.
 - **Other mods can ask it, on your terms.** A mod you allow can ask REDagent questions and show you the answers, read-only and within a daily spending limit you set.
+- **It uses other mods' tools.** Mods can offer tools to AI assistants through REDnode. REDagent uses them: tools that only read run at once, the rest ask you first.
 
 ## What it can't do
 
@@ -32,13 +33,14 @@ It sees REDnode's overlay windows, and sees the game's screen only when it takes
 
 | You need | Why |
 |---|---|
-| Cyberpunk 2077 on PC with REDnode | REDagent is a REDnode package |
+| Cyberpunk 2077 on PC, **game version 2.31**, with [REDnode](../rednode/install.html) 0.32.1 or later | REDagent is a REDnode package. Game version 2.5 is not supported yet: REDnode and REDagent move to it once RED4ext, redscript and Codeware support it |
 | Your own Anthropic API key | REDagent calls Claude with your key; Anthropic bills you per use. A Claude.ai subscription can't be used |
-| About 300 MB of disk and 120 MB of memory | Mostly the Claude Agent SDK. It runs in its own process, outside the game |
+| About 300 MB of disk, and a 140 MB download at first start | Mostly Anthropic's Claude Agent SDK. It is not in REDagent's zip: REDagent downloads it once, when you press **Get the Agent SDK** |
+| About 120 MB of memory while the game runs | REDagent runs in its own process, outside the game |
 
 ## Status
 
-An early developer build. Every phase so far has passed its in-game test:
+**Released.** REDagent 0.3.1 came out on 2026-10-24 (the first release, 0.3.0, on 2026-10-23), for game version 2.31. It is the last release for 2.31: the next one moves to game 2.5 with REDnode. Every phase passed its in-game test:
 
 | Phase | Passed in game |
 |---|---|
@@ -46,8 +48,9 @@ An early developer build. Every phase so far has passed its in-game test:
 | Writing and fixing mods, with change cards, backups and Undo | 2026-10-12 |
 | Saved chats, pictures of the game's screen, a waiting line | 2026-10-13 |
 | Other mods asking REDagent, with daily limits and the Mods view | 2026-10-13 |
+| Using other mods' tools (0.3.1) | 2026-10-24 |
 
-There is no packaged release yet: it installs from source, following the [REDagent guide](https://edgemodders.github.io/REDagent/guide.html#install). Next, not started: REDagent inside REDcode, with edits reviewed in VS Code.
+Download `REDagent-<version>.zip` from [REDagent's releases](https://github.com/Edgemodders/REDagent/releases) and follow the [install steps](https://edgemodders.github.io/REDagent/guide.html#install). Next, not started: REDagent inside REDcode, with edits reviewed in VS Code.
 
 ## In this section
 
@@ -60,5 +63,6 @@ There is no packaged release yet: it installs from source, following the [REDage
 ## Reference
 
 - [REDagent guide](https://edgemodders.github.io/REDagent/guide.html): install, first run, changes and undo, chats, your key and data, costs, troubleshooting
+- [Changelog](https://edgemodders.github.io/REDagent/changelog.html): what changed in each release
 - [Design and test results](https://edgemodders.github.io/REDagent/design.html)
 - [Source and issues](https://github.com/Edgemodders/REDagent)

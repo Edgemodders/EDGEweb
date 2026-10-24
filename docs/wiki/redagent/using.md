@@ -3,7 +3,7 @@ title: Using REDagent
 section: REDagent
 order: 2
 description: "Find your way around REDagent's chat window: what to ask, saved chats, changes and Undo, models and costs, your key and data, and what to do when something goes wrong."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Using <span class="y">REDagent</span>
@@ -12,7 +12,7 @@ New to REDagent? Start with [Your first mod](first-mod.html). This page is the t
 
 ## The window
 
-REDagent's window opens on the right of the game when it starts. If you close it, open it again from the REDnode launcher (**F10**).
+REDagent's window opens on the right of the game when it starts. If you close it, press **F10**, open the **Mod Manager** and press **Show** on REDagent. **Pin to launcher** there keeps it one press away.
 
 {% include shot.html caption="REDagent's window" shows="The REDagent window with a short chat, the changes strip above the input, and the footer: the Opus 5.5 / Sonnet 5.5 choice, the chat's total cost, and the Chats, New and Key buttons." %}
 
@@ -38,6 +38,8 @@ Plain words work. Some ideas:
 | "What are V's health, level and money?" | Looks up the game's functions and asks the running game. Before any call that could change the game, it asks you |
 | "What does the Hello mod window show?" | Captures that overlay window and reads it |
 | "What's on my screen?" | Takes a picture of the game's screen, with or without REDnode's windows, and describes it |
+| "Swap my changed archive into the game" | Swaps it into the running game through REDnode, so a changed mesh or texture shows without a restart. It asks you first |
+| "What tools do my mods offer?" | Lists the tools your installed mods offer to AI assistants through REDnode, and can use them. Tools that only read run at once; the rest ask you first |
 | "Why does the crash mod break?" | Reads the mod's files and explains the code |
 | "Make a mod that ..." | Writes a new REDnode mod, waits for it to load, checks it runs, and fixes it |
 | "Fix the Throw button" | Changes the file, then checks the log again |
@@ -98,11 +100,12 @@ Questions from [other mods](other-mods.html) always use Sonnet 5.5, and each mod
 
 | You see | Do this |
 |---|---|
-| "REDnode's tools are off" | Press **F10**, find REDagent in the launcher, and switch **Allowed** on |
+| "REDnode's tools are off" | Press **F10**, open the **Mod Manager**, select REDagent, and switch **Allowed** on for "REDnode's tools for AI agents" |
+| **Get the Agent SDK** fails | Check your connection and press it again. A partial or mismatched download is thrown away, never used |
 | "That does not look like an Anthropic API key" | Copy the whole key. Anthropic keys start with `sk-ant-` |
 | An error about your key or credit | Check the key and your credit at [console.anthropic.com](https://console.anthropic.com/), then press **Key** and save the key again |
 | REDagent asks for your key again | The saved key couldn't be read, for example after a Windows account change. Paste it again |
-| The window is gone | Open it again from the launcher (**F10**) |
+| The window is gone | **F10**, **Mod Manager**: check REDagent is switched on, and press **Show** if its window was closed |
 | Anything else | Open REDnode's Mod log app. REDagent's lines start with `[redagent]` |
 
 Still stuck? Ask on [Discord]({{ site.discord }}) or [open an issue](https://github.com/Edgemodders/REDagent/issues).

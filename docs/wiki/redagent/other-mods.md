@@ -4,7 +4,7 @@ nav_title: Mods that ask REDagent
 section: REDagent
 order: 3
 description: "Let other REDnode mods ask REDagent questions: the permission, what their questions can do, daily spending limits, and the Mods view."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Mods that ask <span class="y">REDagent</span>
@@ -15,8 +15,8 @@ Other REDnode mods can ask REDagent questions and show you the answers in their 
 
 A mod that wants to ask declares the **agent** permission. It can't ask anything until you allow it:
 
-1. Press **F10** for the REDnode launcher, or open REDnode's **Mod Manager**.
-2. Find the mod and allow its permission: "questions to the AI assistant (REDagent); each answer costs you a little".
+1. Press **F10** and open the **Mod Manager** at the top of the REDnode launcher.
+2. Select the mod and allow its permission: "questions to the AI assistant (REDagent); each answer costs you a little".
 
 REDagent itself must be installed and switched on. Withdraw the permission the same way, and the mod's questions are refused again.
 
@@ -28,7 +28,7 @@ REDnode comes with a sample to try it: the [Ask mod](https://github.com/Edgemodd
 
 | | |
 |---|---|
-| **Read only** | A mod's question can read logs, the game's state, the game's functions, the text of overlay windows and your mods' files. It never changes your files or your game |
+| **Read only** | A mod's question can read logs, the game's state, the game's functions, the text of overlay windows and your mods' files, and use other mods' tools that only read. It never changes your files or your game |
 | **Pictures** | Off for every mod. Pictures of windows and of your screen are allowed only for mods you switch **Pictures** on for |
 | **Model** | Always **Sonnet 5.5**, whatever your own chat uses, to keep answers cheap |
 | **One at a time** | REDagent answers mods' questions one after another |
