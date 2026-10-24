@@ -3,7 +3,7 @@ title: TweakDB and tweaks
 section: REDcode
 order: 6
 description: "Look up the game's TweakDB records in REDcode, start a TweakXL tweak from any record, and write .tweak and YAML tweak files with help from the editor."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # TweakDB and <span class="y">tweaks</span>
@@ -21,7 +21,7 @@ The **TweakDB** view in the REDcode sidebar lists the record types, such as `Clo
 - **Open TweakDB Record...**, the magnifier, searches as you type and opens the record you pick. It's in the command palette too.
 - Click a record to open its **record page**.
 
-REDcode reads TweakDB **as the game ships it**, from the game's files, without any mods. To see what a mod changes in the running game, you need REDnode's live tools, which aren't part of REDcode yet.
+REDcode reads TweakDB **as the game ships it**, from the game's files, without any mods. To see what a mod changes in the running game, use [REDnode](../rednode/)'s live TweakDB reads, from a REDnode app or an assistant connected to REDnode. They aren't part of REDcode.
 
 {% include shot.html caption="The TweakDB view" shows="The TweakDB view with record types and their counts, one type expanded to its records grouped by path, and the hover buttons on a record." %}
 

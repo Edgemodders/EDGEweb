@@ -3,7 +3,7 @@ title: Editing game files
 section: REDcode
 order: 4
 description: "Change game files in REDcode's CR2W editor: the tree and property grid, search, the table and atlas views, the Properties view, undo and save, and editing as JSON."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Editing game <span class="y">files</span>
@@ -58,6 +58,7 @@ Localization files, such as `onscreens.json` and subtitle files, open as a **Tab
 
 - Type in the filter box to narrow the rows by key or text.
 - Click a text to edit it in place.
+- To find a text by its words across the whole game, use the [LocKeys view](game-assets.html#the-lockeys-view). Its **Add to Project Onscreens** copies an entry into your project's file and opens this table on its row.
 - **Add row** adds a new entry and scrolls to it. Each row has a delete button.
 - **Tree** shows the same file as the normal tree.
 

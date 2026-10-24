@@ -4,7 +4,7 @@ nav_title: Projects
 section: REDcode
 order: 2
 description: "Make or open a WolvenKit project in REDcode, find your way around the Project view, and learn what goes in each folder."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # <span class="y">Projects</span>
@@ -21,6 +21,7 @@ A project is any folder with a `.cpmodproj` file in it. That file names the mod 
 | `source/raw` | **Raw** | Files exported to formats other tools edit: PNG, glTF, Ogg. See [Export and import](export-import.html) |
 | `source/resources` | **Resources** | Files the mod ships as they are: TweakXL tweaks, ArchiveXL `.xl` files, scripts, CET mods. They keep their place under the game folder, so `r6/tweaks/my.yaml` lands in the game's `r6/tweaks` |
 | `packed` | **Packed** | The finished mod, laid out like the game folder. Pack rebuilds it. See [Pack, install and run](pack-install.html) |
+| `source/customSounds` | **Custom Sounds** | Only in REDmod projects that add new sounds: the WAV files the mod's `info.json` lists. Shown only when the folder exists |
 
 REDcode adds one folder of its own, `.redcode`, only when it installs a mod without EDGEdeck. It records which files it put in the game.
 
@@ -37,6 +38,10 @@ REDcode creates the folders above and the `.cpmodproj` file, and opens the proje
 Open the project's folder in VS Code with **File**, **Open Folder...**. REDcode notices the `.cpmodproj` file and the Project view fills in. A project made in WolvenKit opens the same way.
 
 With no project open, the Project view shows **New Project** and **Open Folder** buttons.
+
+## Close a project
+
+**Close Project**, in the Project view's **`...`** menu or the command palette, closes the project's folder, and the Project view goes back to New Project. In a workspace with other folders, only the project's folder is removed. Nothing is deleted.
 
 ## The Project view
 
@@ -58,13 +63,14 @@ Click a file and REDcode opens it in the right place:
 
 ### Buttons and menus
 
-The view's title bar has the project buttons: **Pack** (the package), **Pack and Install** (the rocket), **Run Game** (the play button), **New Project**, **Refresh Project** and **Filter the Project**. **Install** and **Uninstall** are in its **`...`** menu. When the game has Red Hot Tools, a flame button, **Install to the Hot Folder**, appears too. See [Pack, install and run](pack-install.html).
+The view's title bar has the project buttons: **Pack** (the package), **Pack and Install** (the rocket), **Pack and Try** (a flame), **Run Game** (the play button), **New Project**, **Refresh Project** and **Filter the Project**. **Install**, **Uninstall** and **Close Project** are in its **`...`** menu. When the game has Red Hot Tools, a second flame button, **Install to the Hot Folder**, appears too. See [Pack, install and run](pack-install.html).
 
 Hover over a file or folder and buttons appear on the right of its row. Right-click for the full list:
 
 | Command | Does |
 |---|---|
 | Export to Raw, Import from Raw | Convert between game formats and editable ones. Shown only on files and folders that can be converted. See [Export and import](export-import.html) |
+| Edit in Blender | On a `.glb`, `.gltf` or `.mesh`: opens the model in Blender, and imports it back each time you save there. See [Edit in Blender](export-import.html#edit-in-blender) |
 | Open as JSON | Opens the game file as WolvenKit JSON text. See [Editing as JSON](editing.html#editing-as-json) |
 | Open in CR2W Editor | On a texture: opens it in the CR2W editor, with its image above the property grid |
 | Open With... | VS Code's list of editors that can open the file, as in the Explorer |

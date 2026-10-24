@@ -3,8 +3,8 @@ title: Troubleshooting REDcode
 nav_title: Troubleshooting
 section: REDcode
 order: 12
-description: "Fixes for common REDcode problems: REDbridge not found or too old, missing .NET, an empty Game Assets view, the old extension, slow TweakDB, and mods that don't show in the game."
-reviewed: 2026-10-16
+description: "Fixes for common REDcode problems: REDbridge not found or too old, missing .NET, an empty Game Assets view, the old extension, slow TweakDB, Blender, and mods that don't show in the game."
+reviewed: 2026-10-24
 ---
 
 # Troubleshooting <span class="y">REDcode</span>
@@ -47,7 +47,7 @@ If .NET 10 *is* installed, but for your user only, set `redcode.dotnetRoot` to i
 
 ### "REDbridge ... is older than this extension needs"
 
-A REDcode update needs a newer REDbridge. Press **Update REDbridge**, or run **REDcode: Update REDbridge**. REDcode 0.9.0 needs REDbridge 0.8.0 or later.
+A REDcode update needs a newer REDbridge. Press **Update REDbridge**, or run **REDcode: Update REDbridge**. REDcode 0.10.0 and later need REDbridge 0.10.0 or later.
 
 ### Game Assets is empty
 
@@ -77,7 +77,7 @@ Event names need REDbridge 0.7.2 or later. Run **REDcode: Update REDbridge**. Ev
 
 ### A mesh shows in flat colours
 
-Normal for now. The 3D view colours each part by its material name; textures on meshes come later.
+Normal for game meshes. The 3D view colours each part by its material. With EDGEmat installed it shows EDGEmat's colours for the materials, still approximate. A GLB that carries its own textures shows them, unless **Shading** is set to flat colours.
 
 ### My edit vanished after saving
 
@@ -85,15 +85,23 @@ Most likely it was inside `compiledData` in an `.ent` or `.app` file, which is r
 
 ### Import from Raw isn't offered on my sound
 
-Sounds can be exported, but not imported yet: WolvenKit's library can't import them. See [Export and import](export-import.html#what-converts).
+Only game sound effects import, from a WAV file named exactly after the sound's hash, such as `832549876.wav` (from **Copy Hash** in the game sound list). Voice lines (`.wem`) and WAVs with other names can't be imported. See [Replacing a sound](viewers.html#replacing-a-sound).
+
+### The game crashed after Pack and Try
+
+Swapping an archive that replaces game sounds into a running game crashes it: install sound mods with **Pack and Install** and restart the game. With the official Red Hot Tools, replacing an archive whose name has capital letters can also end the game. See [Pack and Try, and the Hot Folder](pack-install.html#pack-and-try-and-the-hot-folder).
+
+### Edit in Blender says it can't find Blender
+
+REDcode looks in Program Files and your Steam libraries. Press **Open Setting** and set `redcode.blenderPath` to `blender.exe` or its folder.
 
 ### Install doesn't use EDGEdeck
 
-Install uses EDGEdeck when EDGEdeck 0.21.0 or later is installed in the same VS Code. Update EDGEdeck, and reload the window.
+Install uses EDGEdeck when it's installed and enabled in the same VS Code. The old REDdeck doesn't count: install EDGEdeck instead (see [EDGEdeck](../edgedeck/)), and reload the window.
 
 ### The Hot Folder button is missing
 
-It shows only when the game has Red Hot Tools, in `red4ext/plugins`. Install Red Hot Tools first. This feature is untested; please report how it goes.
+It shows only when the game has Red Hot Tools, in `red4ext/plugins`. Install Red Hot Tools first, then reload the window. This feature is untested in REDcode; please report how it goes. **Pack and Try**, the other flame button, is always there.
 
 ### My mod doesn't show in the game
 
@@ -103,9 +111,9 @@ It shows only when the game has Red Hot Tools, in `red4ext/plugins`. Install Red
 4. A REDmod needs the game started with `-modded`. **Run Game** adds it when `redcode.pack.redmod` is on.
 5. Check REDcode's log for paths with capital letters or spaces, which Pack reports.
 
-### Open in EDGEwave offers an install that finds nothing
+### Open in EDGEwave offers to install EDGEwave
 
-EDGEwave has no release yet. See [EDGEwave](other-tools.html#edgewave).
+EDGEwave isn't installed. See [EDGEwave](../edgewave/) for how to get it.
 
 ### Something else
 

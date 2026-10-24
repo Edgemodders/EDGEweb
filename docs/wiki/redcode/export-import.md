@@ -3,7 +3,7 @@ title: Export and import
 section: REDcode
 order: 7
 description: "Export game files from a REDcode project to PNG, glTF and Ogg, edit them in other tools, and import them back with their settings kept."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Export and <span class="y">import</span>
@@ -28,10 +28,20 @@ Export and Import only show on files that can be converted. Both work on a folde
 |---|---|---|
 | Texture (`.xbm`) | An image: PNG by default, or TGA, DDS, BMP, JPG or TIFF (`redcode.export.textureFormat`) | Yes |
 | Mesh (`.mesh`) | glTF: one `.glb` file by default, or `.gltf` with a `.bin` beside it (`redcode.export.meshFormat`). Its materials and their textures come along (`redcode.export.meshMaterials`) | Yes |
-| Voice line or other sound (`.wem`) | Ogg | **No.** WolvenKit's library can't import sounds yet, so Import doesn't offer it |
+| Voice line or other sound (`.wem`) | Ogg | **No.** WolvenKit's library can't import them yet, so Import doesn't offer it |
+| A game sound effect | Save it from the [game sound list](viewers.html#the-games-sound-effects) | **Yes**, from a WAV file named after the sound's hash, such as `832549876.wav`. See [Replacing a sound](viewers.html#replacing-a-sound) |
+| A model from another tool (`.glb`, `.gltf`) with no `.mesh` at its path yet | | **Yes**, as a new mesh. REDcode asks for a **template**: a game mesh to start from, whose materials and appearances the new mesh keeps. The log lists what was sized to fit |
 | Masks, morph targets, animations, fonts, CSV and a few more | The format WolvenKit uses for each | Where WolvenKit can |
 
 Files with no such format, such as entities and appearances, aren't exported: edit them in the [CR2W editor](editing.html) or [as JSON](editing.html#editing-as-json) instead.
+
+## Edit in Blender
+
+For meshes there's a shortcut. Right-click a `.mesh` under Archive, or a `.glb` or `.gltf` under Raw, and choose **Edit in Blender**.
+
+- A `.mesh` is exported to Raw first.
+- Blender opens the model. Every time you save in Blender, it exports the GLB and REDcode imports it into Archive, until Blender closes. The status bar shows the watch while it runs; **Stop Watching Blender** ends it.
+- REDcode finds Blender in Program Files or a Steam library and writes the one it found to `redcode.blenderPath`. If it finds none, set that setting to `blender.exe` or its folder.
 
 ## Settings are kept on import
 

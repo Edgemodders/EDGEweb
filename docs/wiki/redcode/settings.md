@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: REDcode
 order: 11
 description: "Every REDcode setting with its default and when to change it, every REDcode command, and the editors it adds to Open With."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Settings and <span class="y">commands</span>
@@ -35,6 +35,7 @@ Open VS Code's settings (`Ctrl+,`) and search for `redcode`. Most people never c
 | `redcode.pack.clean` | on | Empties `packed` before packing, so a file you removed doesn't linger in the mod | Rarely. Keep it on |
 | `redcode.pack.redmod` | off | Packs the project as a REDmod under `packed/mods/<mod name>` | You want to ship a REDmod |
 | `redcode.launch` | `auto` | How Run Game starts the game: `auto` (through Steam for a Steam install, else the exe), `steam` or `exe` | Steam doesn't start the game the way you want |
+| `redcode.loc.language` | `en-us` | The language of the texts in the LocKeys view and the LocKey hover, and of the localization file Add to Project Onscreens writes to. **LocKey Language...** sets it | You mod in another language |
 
 ### Export and import
 
@@ -44,6 +45,7 @@ Open VS Code's settings (`Ctrl+,`) and search for `redcode`. Most people never c
 | `redcode.export.meshFormat` | `glb` | Meshes as one `.glb` file, or `gltf` for a `.gltf` with its `.bin` | Your 3D tool prefers `.gltf` |
 | `redcode.export.meshMaterials` | on | Exports a mesh's materials and their textures with it | You only want the shape |
 | `redcode.import.keepSettings` | on | Import keeps the settings of the file it replaces: a texture's format, compression and flags, a mesh's materials | You want WolvenKit's defaults instead |
+| `redcode.blenderPath` | empty | `blender.exe`, or its folder, for Edit in Blender. REDcode fills it in when it finds Blender | REDcode can't find your Blender |
 
 ## Commands
 
@@ -56,10 +58,12 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | New Project | Asks for a name and a folder, creates a WolvenKit project and opens it |
 | Pack | Builds the project's `packed` folder. Also `Ctrl+Shift+B` |
 | Pack and Install | Packs, then installs |
+| Pack and Try | Packs, then sends the archive to Red Hot Tools' hot folder for the running game. Without Red Hot Tools, Pack and Install |
 | Install | Puts the packed mod in the game, through EDGEdeck when it's installed |
 | Uninstall | Takes the mod out of the game again |
 | Install to the Hot Folder (Red Hot Tools) | Copies the packed archive to `archive/pc/hot`. Shown only when the game has Red Hot Tools. Untested |
 | Run Game | Starts the game |
+| Close Project | Closes the project's folder; the Project view goes back to New Project |
 | Refresh Project | Re-reads the project folder |
 | Filter the Project | Narrows the Project view to matching files |
 | Clear the Project Filter | Shows the whole project again |
@@ -69,7 +73,8 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Command | Does |
 |---|---|
 | Export to Raw | Converts a game file to PNG, glTF, Ogg and so on under Raw |
-| Import from Raw | Converts it back into the game's format under Archive |
+| Import from Raw | Converts it back into the game's format under Archive. Also takes sound effect WAVs named after their hash |
+| Edit in Blender | On a `.mesh` under Archive or a `.glb`/`.gltf` under Raw: opens it in Blender and imports each save |
 | Open as JSON | Opens the game file as WolvenKit JSON |
 | Open in CR2W Editor | On a texture: opens it in the CR2W editor |
 | Open With... | VS Code's list of editors for the file |
@@ -104,6 +109,18 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Filter TweakDB | Narrows the TweakDB view to records matching your words |
 | Clear TweakDB Filter | Shows the record types again |
 
+### LocKeys
+
+| Command | Does |
+|---|---|
+| Search LocKeys... | Finds the game's texts by key, secondary key or words |
+| LocKey Language... | Picks the language of the texts |
+| Clear LocKey Search *(menu only)* | Empties the LocKeys view |
+| Copy LocKey *(menu only)* | Copies the entry's key |
+| Copy Text *(menu only)* | Copies the entry's text |
+| Open in Its File *(menu only)* | Opens the entry on its row in its localization file, as a click does |
+| Add to Project Onscreens *(menu only)* | Copies the entry into the project's own localization file. Needs a project |
+
 ### Editing
 
 | Command | Does |
@@ -125,6 +142,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Command | Does |
 |---|---|
 | Extract from a Mod Archive into the Project | Not for typing: EDGEdeck calls it for its **Add to Project** on a mod's `.archive` |
+| Stop Watching Blender | Not in the palette: ends Edit in Blender's watch from the status bar |
 
 ## Editors under Open With
 

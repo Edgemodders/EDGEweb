@@ -3,7 +3,7 @@ title: Game Assets
 section: REDcode
 order: 3
 description: "Browse the game's archives in REDcode's Game Assets view, filter and search them, open any file read-only, and add files to your project."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Game <span class="y">Assets</span>
@@ -68,12 +68,28 @@ The **Search game files** button (the magnifier) opens a search box that finds f
 
 Filter or search? The filter keeps you in the tree, so you can see where files sit and add whole folders. Search is quicker when you know part of a file's name.
 
-## Sounds and TweakDB
+## Sounds, TweakDB and texts
 
-Two more ways into the game's data sit next to Game Assets:
+Three more ways into the game's data sit next to Game Assets:
 
 - **Browse Game Sounds**, in the Game Assets **`...`** menu, opens the game's 73,000 sound effects as a list you can filter and play. See [Textures, meshes and sounds](viewers.html#the-games-sound-effects).
 - The **TweakDB** view lists the game's database records. See [TweakDB and tweaks](tweakdb.html).
+- The **LocKeys** view finds the game's on-screen texts. See [The LocKeys view](#the-lockeys-view) below.
+
+## The LocKeys view
+
+The game doesn't store its texts where they're used. An item's name, for example, is a reference such as `LocKey#12345`, and the text for each language sits in the game's localization files. The **LocKeys** view in the REDcode sidebar finds them, for the base game and Phantom Liberty.
+
+- **Search LocKeys...**, the magnifier, takes a key such as `LocKey#12345` or a number, a secondary key, or words that must all be in the text.
+- **LocKey Language...** picks one of the game's 19 languages. The setting is `redcode.loc.language` (default `en-us`).
+- Click an entry to open it on its row in its localization file: the game's copy read-only, your project's to edit.
+- Hover buttons on each entry: **Copy LocKey** and **Add to Project Onscreens**. The right-click menu adds **Copy Text**.
+- **Add to Project Onscreens** copies the entry into your project's own localization file, creating it, and the `.xl` file that tells ArchiveXL about it, when there is none. It opens the file on that row, ready to change. Your mod then needs ArchiveXL in the game.
+- Your project's own entries count, and win over the game's, as they do in the game.
+
+Hover over `LocKey#...` in a tweak, YAML, JSON, Lua or redscript file to see its text. The CR2W editor shows the text beside `LocKey#...` values too.
+
+{% include shot.html caption="The LocKeys view" shows="The LocKeys view with a search for a word, entries with their keys and texts, and the hover buttons on one entry." %}
 
 ## When the view is empty
 

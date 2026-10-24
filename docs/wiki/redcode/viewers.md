@@ -3,7 +3,7 @@ title: Textures, meshes and sounds
 section: REDcode
 order: 5
 description: "See and hear what a mod is made of in REDcode: the texture viewer, the 3D mesh viewer, the audio player and the game's 73,000 sound effects."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Textures, meshes and <span class="y">sounds</span>
@@ -40,12 +40,14 @@ A mesh (`.mesh`) opens on a **3D view** inside the CR2W editor. **Tree** shows t
 - The toolbar picks the **LOD**, the level of detail. LOD 1 has the most detail.
 - It also turns on and off the **wireframe**, the **bounding box** and the **ground grid**, and shows the triangle count and the size in metres.
 - The list on the right turns each **submesh** on and off, with its material name and triangle count.
+- The **Appearance** list switches between the mesh's appearances. Each submesh then shows the material that appearance gives it.
 
 Good to know:
 
-- Submeshes are **coloured by material name**, not textured. Textures on meshes come later.
+- Game meshes are **coloured by material**, not textured.
+- With [EDGEmat](../edgemat/) installed, the view shows the materials as EDGEmat renders them: colours only, and approximate. See [EDGEmat in 3D](../edgemat/view-in-3d.html).
 - The view shows the **saved** file. Save to see your edits.
-- `.glb` and `.gltf` files, such as a mesh you exported to Raw, open in the same viewer.
+- `.glb` and `.gltf` files, such as a mesh you exported to Raw, open in the same viewer. A model that carries its own materials and textures, such as one from Blender, shows them; **Shading** switches to flat colours.
 
 {% include shot.html caption="The 3D mesh viewer" shows="A vehicle or weapon mesh from the game in the 3D view: the model coloured by material, the LOD picker and toggles in the toolbar, and the submesh list on the right." %}
 
@@ -72,7 +74,7 @@ The game's sound effects aren't separate files you can browse. About **73,000 so
 - Type in the filter box to narrow the list by event name, tag or hash. All the words must match, for example `revol reload`.
 - Click a row to play its first sound, or a number to play that variation.
 - The arrow keys step through the list and play as they go.
-- **Copy Hash** copies the hash of the sound that's playing. **Save...** writes it as an `.opus` file.
+- **Copy Hash** copies the hash of the sound that's playing. You need it to [replace the sound](#replacing-a-sound). **Save...** writes it as an `.opus` file.
 - **Open in EDGEwave** works here too.
 
 Event names come from WolvenKit's list of events for game version 1.6. It names about 10,900 of the 16,100 events that have sounds; the rest show only their hash.
@@ -81,4 +83,13 @@ Event names come from WolvenKit's list of events for game version 1.6. It names 
 
 ### Replacing a sound
 
-You can export a voice line (`.wem`) to Ogg to listen to or edit elsewhere. Putting a changed sound back into the game isn't possible from REDcode yet: WolvenKit's library can't import sounds, so **Import from Raw** doesn't offer it. See [Export and import](export-import.html#what-converts).
+You can replace any of the game's **sound effects** with your own sound:
+
+1. In the game sound list, play the sound you want to replace and press **Copy Hash**.
+2. Save your sound as a WAV file named after that hash, such as `832549876.wav`, under **Raw** in your project.
+3. Press **Import from Raw** on it. REDcode writes the changed sound packs and a new sound index into your project's Archive. Earlier replacements in the project stay.
+4. [Pack and install](pack-install.html), then **restart the game**. Don't use Pack and Try or the hot folder for sounds: swapping sound files into a running game through Red Hot Tools crashes it.
+
+**Voice lines** (`.wem`) can be exported to Ogg to listen to or edit elsewhere, but not imported back yet. See [Export and import](export-import.html#what-converts).
+
+[EDGEwave](../edgewave/), the EDGE sound studio, builds on this to edit and mix sounds.

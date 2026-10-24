@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: REDcode
 order: 1
 description: "Install REDcode from the VS Code Marketplace or Open VSX, let it find the game and fetch REDbridge, add the REDnode HUD theme, and keep everything updated."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Install and set up <span class="y">REDcode</span>
@@ -17,8 +17,9 @@ reviewed: 2026-10-16
 | Cyberpunk 2077 | Steam, GOG or Epic. REDcode finds all three on its own |
 | [VS Code](https://code.visualstudio.com/) 1.70 or later | REDcode is a VS Code extension. It's also on Open VSX, the store editors such as VSCodium use |
 | The .NET 10 runtime | REDbridge runs on it. If it's missing, REDcode says so and offers to install it |
-| REDbridge 0.8.0 or later | REDcode downloads it for you on first start |
-| Optional: [EDGEdeck](../edgedeck/) 0.21.0 or later | So Install puts your mod in the game through EDGEdeck, with its undo |
+| REDbridge 0.10.0 or later | REDcode downloads it for you on first start |
+| Optional: [EDGEdeck](../edgedeck/) | So Install puts your mod in the game through EDGEdeck, with its undo. Any EDGEdeck release works. The old REDdeck isn't used: REDcode then installs directly |
+| Optional: [Blender](https://www.blender.org/) | Only for **Edit in Blender**. REDcode finds it in Program Files or a Steam library |
 | Optional: Node.js 20 or later | Only for `redcode-mcp`, the server for AI assistants. See [Assistants and MCP](assistants.html) |
 
 ## Install REDcode

@@ -3,7 +3,7 @@ title: Assistants and MCP
 section: REDcode
 order: 9
 description: "Give Claude Code or another AI assistant REDcode's engine through redcode-mcp: what it can do, how to connect it, and what to ask."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Assistants and <span class="y">MCP</span>
@@ -35,7 +35,8 @@ Once it's connected, for example:
 | Textures and hashes | Decode a texture to PNG, and turn file hashes into paths |
 | Project | Export to Raw, import from Raw, and pack, as REDcode's buttons do |
 | TweakDB | List record types and records, read a record or one value, search by words |
-| Sounds | Find sound effect events by name or tag, and save their sounds as `.opus` files |
+| Texts | Find the game's on-screen texts (LocKeys) by key or words, in any of its languages, with your project's own over them |
+| Sounds | Find sound effect events by name or tag, save their sounds as `.opus` files, and replace sound effects in your project from WAV files |
 
 It never changes the game's archives. When it edits a game file, it writes a changed copy: into your project, or wherever you ask.
 
@@ -43,7 +44,9 @@ The [MCP docs](https://edgemodders.github.io/REDcode/mcp.html) and the [package 
 
 ## Connect Claude Code
 
-`redcode-mcp` is published on npm as [`@edgemodders/redcode-mcp`](https://www.npmjs.com/package/@edgemodders/redcode-mcp), version 0.2.0. It isn't part of the REDcode extension: you register it with your assistant once.
+`redcode-mcp` is published on npm as [`@edgemodders/redcode-mcp`](https://www.npmjs.com/package/@edgemodders/redcode-mcp), version 0.3.0. It isn't part of the REDcode extension: you register it with your assistant once.
+
+The easiest way is the **EDGE plugin for Claude Code**, which sets up `redcode-mcp` with the other EDGE servers in one install. It's a preview; see [Connect Claude Code](../connect-claude-code.html). To register `redcode-mcp` on its own, read on.
 
 **You need:** REDcode set up as on [Install and set up](install.html) (so REDbridge and the game are found), and [Node.js](https://nodejs.org/) 20 or later.
 
@@ -86,7 +89,7 @@ claude mcp add redcode -- npx -y @edgemodders/redcode-mcp --bridge "D:\Tools\RED
 - The server starts REDbridge on the first tool call. Loading the archive index takes about three seconds; after that it stays up for the session.
 - The first TweakDB call takes about 12 seconds, as in REDcode.
 - If REDbridge stops, the next call starts it again. Files the assistant had open for editing are closed by that, so it has to open them again.
-- It needs REDbridge 0.8.0 or later, the same as REDcode.
+- It needs REDbridge 0.10.0 or later for the text tools, 0.9.0 for sound import, and 0.8.0 for the rest. REDcode 0.10.0 and later need 0.10.0 anyway.
 - The tools never ship an API key. Claude Code uses your own account.
 
 ## Tips for working with an assistant
