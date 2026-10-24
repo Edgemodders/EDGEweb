@@ -4,7 +4,7 @@ nav_title: Mod Manager
 section: REDnode
 order: 3
 description: "REDnode's built-in Mod Manager: every package in one table, switching them on and off, Pin to launcher and Pin to HUD, permissions, requirements and restarts."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # The Mod <span class="y">Manager</span>
@@ -28,7 +28,7 @@ One row per package, about 14 to a page. **Prev** and **Next** page through them
 | (tick box) | Select the row for a [bulk action](#bulk-actions) |
 | **L** | Pinned to the launcher |
 | **H** | Pinned to the HUD: stays on screen during gameplay |
-| **Name** | With a **NEW** badge for packages you haven't seen yet, and **NEEDS** when a required mod is missing |
+| **Name** | With a **NEW** badge for packages you haven't seen yet, **NEEDS** when a required mod is missing, and **DEV** when it runs from a [development folder](settings.html#development-folders) |
 | **Kind** | App, Node mod, both, or HUD widget |
 | **Status** | Off, open, or for a Node mod **RUNNING**, **STARTING**, **CRASHED** or **NOT RESPONDING** |
 | **Space** | Which [space](spaces.html) its windows show in. Appears once you have two spaces |
@@ -54,7 +54,8 @@ Select a row to see its details on the right:
 | **Space** | Buttons for each space and **All**, to move the whole package's windows. Appears once you have two spaces |
 | A Node mod's state | Status, own or shared process, memory, **Shared process** and **Restart** |
 | Permissions | Each permission it asks for, with an **Allowed** switch |
-| **Requires** | The mods it needs, each found or missing, with the version found |
+| **Requires** | The mods it needs, each found or missing, with the version found. A **Get REDbridge** button when it needs REDbridge and none is found |
+| **Service** | For a package that offers [mod services](making-mods.html#mod-services): the functions other packages can call, with what each does, and which are tools for AI assistants |
 | "Window closed" with **Show** | Brings back a window you closed |
 | **Last error**, **Last lines** | What a Node mod printed most recently |
 | **Window debugger**, **Debug (Node inspector)** | For developers: see [Debugging](debugging.html) |
@@ -87,6 +88,8 @@ Some packages ask for powers beyond drawing a window and calling the game. Each 
 | REDbridge | Read the game's archives and files, and write files where it asks | It's a tool for making mods, such as EDGEbuilder |
 | Staying above other packages' windows | Join REDnode's own tools in the [tool layer](spaces.html#the-tool-layer) | It's something you must always reach, like the Test timer |
 | Hiding every other package's windows (solo mode) | Clear the screen of other packages while it works | It needs the whole screen, such as an editor. See [solo mode](spaces.html#solo-mode) |
+| Swapping archives in the game's mod folder while the game runs | Replace an archive in `archive\pc\mod` and swap it into the running game, through RED Hot Tools | It's a tool you use to build and test mods, such as the Sound Tools pack's Hot swap |
+| Managing REDnode | See what every package costs, end or restart any package, and switch AI assistants' tools on and off. The Mod Manager shows a warning under it | It's an admin tool you trust, such as the Task Manager and Tools Manager in the [Admin Tools pack](index.html#optional-packs) |
 
 A package that asks for a permission still runs without it; only the feature that needs it waits.
 
@@ -99,6 +102,8 @@ A package can say it needs other mods, such as Codeware or TweakXL. REDnode chec
 
 It still runs, so it can tell you itself what's missing. Install the missing mod (with [EDGEdeck](../edgedeck/) or your mod manager), restart the game, and the mark goes away.
 
+A package can also require a newer REDnode, or another REDnode package by its id. If it needs REDbridge, press **Get REDbridge** in its details: REDnode downloads REDbridge from GitHub, and .NET 10 for your Windows user if it's missing, with no admin rights. Once a session REDnode checks for a newer REDbridge and offers **Update REDbridge**; it never updates by itself.
+
 ## Node mods: restart and shared process
 
 Each Node mod runs in a process of its own, outside the game. If it crashes or hangs, only that mod stops:
@@ -108,6 +113,8 @@ Each Node mod runs in a process of its own, outside the game. If it crashes or h
 | **RUNNING** | Working | Nothing |
 | **CRASHED** | It stopped with an error. Its windows close. The error is in **Last error** and the [Mod log](debugging.html#the-mod-log) | **Restart**. If it crashes again, report it to its author with the error |
 | **NOT RESPONDING** | It hasn't answered for 10 seconds, often an endless loop | **Restart** stops it even mid-loop |
+
+To see what each running package costs in CPU, memory and game calls, and to end one, install the Task Manager from the [Admin Tools pack](index.html#optional-packs).
 
 **Shared process** saves memory: switched on for several mods, they share one process instead of one each. In the developer's tests three mods took about 150 MB shared against about 370 MB apart. The cost: a hard crash of the process stops every mod in it (they restart a couple of seconds later). Some mods insist on their own process; for them the switch is greyed out.
 

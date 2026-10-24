@@ -3,8 +3,8 @@ title: The game API, TweakDB and the world
 nav_title: Game API and TweakDB
 section: REDnode
 order: 8
-description: "How REDnode packages reach the game: the game helper, calling any game function, TweakDB reads and changes, placing objects in the world, the game's files through REDbridge, and sound."
-reviewed: 2026-10-16
+description: "How REDnode packages reach the game: the game helper, calling any game function, TweakDB reads and changes, placing objects in the world, the game's files through REDbridge, swapping archives, sound, and the newer APIs."
+reviewed: 2026-10-24
 ---
 
 # The game API, <span class="y">TweakDB</span> and the world
@@ -19,7 +19,10 @@ Everything here works the same in a Node mod and in an overlay app. Every call i
 | `tweakdb` | Change TweakDB, undone when your package stops | [TweakXL](https://github.com/psiberx/cp2077-tweak-xl) 1.10 or later | Passed in game |
 | `world` | Spawn, move and remove objects | [Codeware](https://github.com/psiberx/cp2077-codeware) 1.14 or later | Passed in game |
 | `kernel.bridge()` | The game's archives and files | [REDbridge](../redbridge/) and the `bridge` permission | Passed in game |
-| Sound | The game's UI sounds; your own audio files | Nothing | UI sounds passed; own files planned |
+| `archives` | Swap changed archives into the running game | [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools/releases) 1.3 or later and the `archives` permission | Passed in game |
+| `audio`, `game.audio` | The game's UI sounds; your own audio files | Nothing | Passed in game |
+| `ink`, `t` | The game's own UI widgets on the HUD; text in the player's language | Codeware | Passed in game. Experimental |
+| `quests`, `journal` | Quest facts and journal entries | Nothing | Passed in game |
 
 ## The game helper
 
@@ -58,7 +61,7 @@ This is cut down from the **Vitals** and **Game API mod** samples, which read V'
 | Call by full name (operators, overloads) | `api.$call('Name;Type;Type', ...)` |
 | Read or write a property | `obj.$get('name')`, `obj.$set('name', value)` |
 | Make a new game object | `api.$new('ClassName', { ...properties })` |
-| A function that writes into an argument | Pass `api.$out` in its place. New in REDnode 0.23.1, not yet tested in game |
+| A function that writes into an argument | Pass `api.$out` in its place (REDnode 0.23.1 or later) |
 
 ### How values look in JavaScript
 
@@ -80,7 +83,7 @@ This is cut down from the **Vitals** and **Game API mod** samples, which read V'
 | References die on save load | A game object you hold stops working when the game deletes it or a save loads: calls on it fail with "that game object no longer exists". Fetch fresh ones after `PlayerPuppet.OnGameAttached` |
 | Wrong arguments are refused | Arguments are checked against the function's types first. A wrong one fails with its name and type, and the game isn't touched |
 | Right types, wrong moment | The checks catch wrong types, not wrong values. Calling a function the game doesn't expect at that moment can still crash it, as with any script mod |
-| Batch by not waiting | Calls you start together, without awaiting each one, run in the same game frame (up to 256 a frame). In the developer's test, ten at a time gave 300 moves a second at 30 fps |
+| Batch by not waiting | Calls you start together, without awaiting each one, run in the same game frame (up to 256 a frame; the rest wait for the next frames, up to 4,096 waiting). In the developer's test, ten at a time gave 300 moves a second at 30 fps |
 | Not supported yet | Functions with `script_ref` parameters fail with a clear message |
 
 ### The game API reference
@@ -147,7 +150,7 @@ For fixed edits that don't need code, TweakXL's own `.yaml` and `.tweak` files a
 
 ### Without the game running
 
-Reading TweakDB with the game closed, through REDbridge, is planned for REDnode but not built. It was waiting for REDbridge's TweakDB methods, which arrived in REDbridge 0.8.0. REDcode's TweakDB browser already uses them.
+Reading TweakDB with the game closed, through REDbridge, is planned for REDnode but not built yet. REDcode's [TweakDB browser](../redcode/tweakdb.html) already reads it offline through REDbridge.
 
 ## Placing things in the world
 
@@ -193,17 +196,55 @@ const bridge = await kernel.bridge(); // fails until the player allows it, or if
 const found = await bridge.call('archive.search', { query: 'player_ma_tpp', limit: 5 });
 ```
 
-REDnode doesn't ship REDbridge. It uses the copy [EDGEdeck](../edgedeck/) (**Get REDbridge**) or REDcode downloaded. One REDbridge serves every package: it starts on the first call, takes about three seconds to load the game's archive index, and stops after 10 minutes without calls. The method names are in [REDbridge's docs](https://edgemodders.github.io/REDbridge/).
+REDnode doesn't ship REDbridge. If none is found, the [Mod Manager](mod-manager.html#requirements) shows **Get REDbridge** on the package: it downloads REDbridge from GitHub into `%LOCALAPPDATA%\REDnode\bridge`, and .NET 10 for your Windows user if missing, with no admin rights. A copy [EDGEdeck](../edgedeck/install.html#getting-redbridge) or REDcode downloaded works too; the newest wins. Add `"requires": { "redbridge": ">=0.10" }` so players see the button before your package runs. One REDbridge serves every package: it starts on the first call, takes about three seconds to load the game's archive index, and stops after 10 minutes without calls. The method names are in [REDbridge's docs](https://edgemodders.github.io/REDbridge/).
+
+## Swapping archives into the running game
+
+A tool that builds assets can show its result in the game without a restart. `archives.reload` swaps an `.archive` (or ArchiveXL's `.xl` or `.yaml`) into the running game and waits until it's done:
+
+```js
+import { archives } from 'rednode';
+
+const r = await archives.reload(['C:/Projects/MyJacket/packed/archive/pc/mod/MyJacket.archive']);
+console.log(`${r.reloaded.length} swapped in ${r.ms} ms`, r.failed);
+```
+
+| Good to know | |
+|---|---|
+| Needs | [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools/releases) 1.3 or later, which does the swap (`"requires": { "redhottools": ">=1.3" }`), and the `archives` permission |
+| Mixed-case names | The official RED Hot Tools can end the game when it replaces an archive whose folder has both upper- and lowercase names, so REDnode refuses such a swap with a message. The [Edgemodders build of RED Hot Tools](https://github.com/CyberbuildsAI/cp2077-red-hot-tools/releases) (`v1.3.0+edgemodders.1`) fixes it, and with it REDnode swaps them |
+| When | In a loaded save, one swap at a time. At the main menu it's refused |
+| Where it goes | It replaces the mounted archive of the same name and stays installed. A new one is added to `archive\pc\mod` |
+| What V wears | Shows the new version straight away, without taking it off (Equipment-EX's slots too). Other objects already in the world keep the old version until they load again |
+| Sound | Archives that change the game's sound paks (such as EDGEwave's sound overrides) swap too, with the game paused for a moment. A sound that just played may keep its old version until the game loads it again (for a weapon, equip it again) |
+| Risk | A broken archive, or a mod missing its other parts, can crash the game at the swap |
+
+The same swap is the MCP tool `archives_reload`, and the Sound Tools pack's **Hot swap** app. Details: [Swapping archives](https://edgemodders.github.io/REDnode/overlay-apps.html#swapping-archives-in-the-running-game).
 
 ## Sound
 
 | Want | Today |
 |---|---|
 | The game's own UI sounds | Works: `game.audio.play(name)`, or `sound` on UI kit buttons. See [Overlay apps](overlay-apps.html#game-sounds) |
-| The rest of the game's audio system (sounds on entities, parameters, radio) | Reachable through `api`, but untested beyond playing a sound |
-| Your own audio files (WAV, OGG, MP3, FLAC) following the game's volume, pause and position | **Planned.** REDnode will have its own audio engine. A first research build is in REDnode 0.23.0 and 0.23.1 and waits for its in-game test |
+| Your own audio files (WAV, OGG, MP3, FLAC) | Works: list them under `sounds` in the manifest and play them with `audio.play(name)`. They follow the game's volume sliders, pause in menus, go quiet when the game is in the background, and can be panned left and right. Passed in game in REDnode 0.24 |
+| Sound placed in the world, effects, voices | Planned (the next phases of REDnode's own audio engine) |
+| The game's own recordings and sound events | Experimental: `audio.playGame`, `audio.event`, `audio.searchSounds` and `audio.trace`, used by the [Sound Tools pack](index.html#optional-packs) |
+| The rest of the game's audio system (parameters, radio) | Reachable through `api`, but untested beyond playing a sound |
 
-The plan is on REDnode's [Sound API page](https://edgemodders.github.io/REDnode/sound.html).
+The plan and its tests are on REDnode's [Sound API page](https://edgemodders.github.io/REDnode/sound.html).
+
+## More of the game
+
+Newer parts of the `rednode` package, each tested in game. They have their own pages in REDnode's docs:
+
+| Part | Does | Needs | Docs |
+|---|---|---|---|
+| `ink` | Builds trees of the game's own UI widgets on the HUD from Node (`ink.mount`, `ink.text`, `ink.bar`, `ink.list`), drawn by the game in its own look, with game values bound to them and rebuilt after each save load. Experimental | Codeware | [Native game UI](https://edgemodders.github.io/REDnode/ink.html) |
+| `t()`, `game.language()` | Text in the player's language from your package's `locales/<language>.json`, with plurals and V's gender; follows a language change | Nothing | [Native game UI](https://edgemodders.github.io/REDnode/ink.html) |
+| `quests`, `journal` | Read, set and watch quest facts; read, change and track journal entries. `game.player.teleport` moves V. For testing quests | Nothing | [Quest API](https://edgemodders.github.io/REDnode/quests.html) |
+| `service` | Call other packages' functions, and offer your own | Nothing | [Mod services](making-mods.html#mod-services) |
+
+The **Ink Coords**, **Ink vitals** and **Quest test** samples show them.
 
 ## Not yet
 

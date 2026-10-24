@@ -3,8 +3,8 @@ title: Making mods and apps for REDnode
 nav_title: Making mods and apps
 section: REDnode
 order: 5
-description: "What a REDnode package is: Node mods, overlay apps and HUD widgets, the rednode-app.json manifest, the apps folder, permissions, requirements, and how to work on one."
-reviewed: 2026-10-16
+description: "What a REDnode package is: Node mods, overlay apps and HUD widgets, the rednode-app.json manifest, the apps folder, permissions, requirements, mod services, and how to work on one and share it."
+reviewed: 2026-10-24
 ---
 
 # Making mods and <span class="y">apps</span>
@@ -59,8 +59,9 @@ The fields you'll use most:
 | `open` | Start it on (true) until the player decides otherwise |
 | `permissions` | Powers the package asks the player for. See below |
 | `requires` | Other mods it needs, with versions |
+| `service` | Functions other packages can call. See [Mod services](#mod-services) |
 
-The full list, with window placement (`anchor`, `x`, `y`), `kind`, `hideWith` and `isolation`, is in [Settings and controls](settings.html#manifest-fields).
+The full list, with window placement (`anchor`, `x`, `y`), `kind`, `hideWith`, `sounds` and `isolation`, is in [Settings and controls](settings.html#manifest-fields).
 
 ## The apps folder
 
@@ -74,7 +75,9 @@ Packages live in `red4ext\plugins\REDnode\apps` in the game folder, one folder e
 | Delete the folder | Stops the package |
 | Save a manifest that names a file you haven't written yet | Skips the package until that file exists |
 
-So the loop is: game running, **Hot reload** switched on in the launcher, your package's folder open in an editor. Save, and look. No game restart.
+So the loop is: game running, **Hot reload** switched on in the launcher's Settings drawer (the gear), your package's folder open in an editor. Save, and look. No game restart.
+
+**Working outside the game folder.** With **Developer mode** on, add your project's folder under **Development folders** in the Settings drawer. Its packages run from there, with hot reload, instead of any installed copy, and the Mod Manager marks them **DEV**. See [Development folders](settings.html#development-folders).
 
 Write files your package keeps (settings, saves) to its data folder (`pkg.dataDir`), never into its own folder: hot reload watches that, and an update would overwrite it.
 
@@ -93,6 +96,8 @@ A package can ask for powers the player must allow, in its manifest:
 | `bridge` | REDbridge: the game's archives and files | [Game API](game-api.html#the-games-files-through-redbridge) |
 | `front` | Staying in the tool layer, above other packages | [Spaces and layers](spaces.html#the-tool-layer) |
 | `solo` | Solo mode | [Spaces and layers](spaces.html#solo-mode) |
+| `archives` | Swapping archives into the running game, through RED Hot Tools | [Game API](game-api.html#swapping-archives-into-the-running-game) |
+| `admin` | Managing REDnode: what every package costs, ending or restarting packages, switching AI assistants' tools | REDnode's [Admin Tools guide](https://edgemodders.github.io/REDnode/admin-tools.html#the-admin-permission) |
 
 The calls that need a permission reject until the player allows it. Explain in your description why you need it.
 
@@ -107,7 +112,7 @@ If your package needs another mod, say so:
 }
 ```
 
-REDnode checks the game folder: RED4ext plugins by folder or DLL, redscript modules in `r6/scripts`, Cyber Engine Tweaks mods, and `red4ext`, `cet` and `redscript` themselves. Versions come from the DLL where it has one. Ranges work the npm way (`>=1.16`, `^1.16`, `~1.16`, `*`). The player sees what's missing in the launcher and Mod Manager, and your code can ask with `kernel.requirements()`. Your package still runs, so it can explain.
+REDnode checks the game folder: RED4ext plugins by folder or DLL, redscript modules in `r6/scripts`, Cyber Engine Tweaks mods, and `red4ext`, `cet` and `redscript` themselves. `requires` can also name `rednode` (a REDnode new enough), `redbridge` (the Mod Manager then offers **Get REDbridge**), or another REDnode package by its id. Versions come from the DLL where it has one. Ranges work the npm way (`>=1.16`, `^1.16`, `~1.16`, `*`). The player sees what's missing in the launcher and Mod Manager, and your code can ask with `kernel.requirements()`. Your package still runs, so it can explain.
 
 The [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html#requirements) has every rule for names and ranges.
 
@@ -124,12 +129,46 @@ The [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html
 | `channel` | Messages between your page and your Node mod | [Node mods](node-mods.html#a-page-and-a-mod-together) |
 | `kernel` | Requirements, REDbridge, the MCP server | [Game API](game-api.html#the-games-files-through-redbridge), [Agents](agents.html) |
 | `agent` | Asking REDagent | [Agents and MCP](agents.html#asking-redagent-from-a-mod) |
+| `service` | Calling other packages, and offering your own functions | [Mod services](#mod-services) |
+| `audio` | Your own sound files, following the game's volume | [Game API](game-api.html#sound) |
+| `archives` | Swapping archives into the running game | [Game API](game-api.html#swapping-archives-into-the-running-game) |
+| `ink`, `t` | The game's own UI widgets on the HUD, and text in the player's language (experimental, needs Codeware) | [Game API](game-api.html#more-of-the-game) |
+| `quests`, `journal` | Quest facts and journal entries, for testing a quest | [Game API](game-api.html#more-of-the-game) |
+| `admin` | For admin tools: what every package costs, ending packages, AI tools' switches | [Admin Tools guide](https://edgemodders.github.io/REDnode/admin-tools.html#the-admin-permission) |
 
 The `rednode` package is written in TypeScript and carries types for every call, and for the game's 15,000-odd classes. An editor such as [REDcode](../redcode/) completes them as you type. The [API reference](https://edgemodders.github.io/REDnode/api/) lists every call with examples.
 
+## Mod services
+
+Packages can work together. A package names a **service file** in its manifest, and every function that file exports can be called by other packages, by the package's id:
+
+```json
+{ "id": "counter-service", "name": "Counter service", "version": "0.1.0", "service": "service.mjs" }
+```
+
+```js
+// In another package
+import { service } from 'rednode';
+
+const counter = await service.connect('counter-service');
+await counter.add(5);
+counter.$on('changed', (e) => console.log(e.count)); // its events
+```
+
+| Good to know | |
+|---|---|
+| Where it runs | In the package's Node mod, after `main`. A package can have a service and no `main`. Overlay pages can call services too |
+| What crosses | Plain values: numbers, strings, booleans, arrays, plain objects. Not game references |
+| Errors and waiting | A call fails with a reason when the package isn't installed, is off or crashed. Calls time out after 30 seconds unless you give a longer `timeoutMs` |
+| Descriptions | The JSDoc above each function describes it. REDnode checks each call's arguments against it, and the Mod Manager lists the functions |
+| Tools for AI assistants | A function marked `@tool` is offered to Claude Code and REDagent through the [MCP server](agents.html#mods-tools-for-ai-assistants). `@readonly` ones run without asking; the rest ask the player first |
+| Requirements | Name the other package in `requires`, so players see it's missing |
+
+REDnode 0.34.0 to 0.36.0 added these step by step; all are in 0.37.0. The **Counter service** and **Counter panel** samples in REDnode's repo show both sides. The full rules are in [Calling other packages](https://edgemodders.github.io/REDnode/overlay-apps.html#calling-other-packages) and [Describing a service](https://edgemodders.github.io/REDnode/overlay-apps.html#describing-a-service).
+
 ## Learn from the samples
 
-REDnode's deploy puts its sample packages in the apps folder. Each is small and readable:
+The release puts ten samples in the apps folder, switched off: Hello mod, Ask mod, UI kit, Vitals, Coords HUD, Perf, Test timer, Ink Coords, Ink vitals and Quest test. REDnode's repo has more, used for tests. Each is small and readable:
 
 | Sample | Shows |
 |---|---|
@@ -145,8 +184,12 @@ REDnode's deploy puts its sample packages in the apps folder. Each is small and 
 | Layers test, Pointer lock test, Test timer | Solo mode, holding the cursor, staying on top |
 | Ask mod | Asking REDagent and streaming the answer |
 | Packaging test | Requirements and REDbridge |
+| Ink Coords, Ink vitals | The game's own UI widgets on the HUD (need Codeware) |
+| Quest test | Reading and setting quest facts and journal entries |
+| Counter service, Counter panel | One package calling another's functions |
+| Live log mod | A Node mod window with a scrolling list |
 
-Their source is in REDnode's repo under [`packages/overlay/apps`](https://github.com/Edgemodders/REDnode/tree/main/packages/overlay/apps).
+Their source is in REDnode's repo under [`packages/overlay/apps`](https://github.com/Edgemodders/REDnode/tree/main/packages/overlay/apps), and the [example apps](https://edgemodders.github.io/REDnode/examples/) page shows each one running, with its files to copy.
 
 ## Or let REDagent write it
 
@@ -154,4 +197,6 @@ Their source is in REDnode's repo under [`packages/overlay/apps`](https://github
 
 ## Sharing your package
 
-There's no REDnode release for players yet, so there's no standard way to publish a package. For now, share the folder: players put it in their apps folder. When REDnode ships as a normal mod, packages are planned to be separate mods that list REDnode as a requirement, the way CET mods list CET.
+Share a package as a zip laid out like the game folder, with your package's folder at `red4ext\plugins\REDnode\apps\<your id>\`. Players install it with Vortex, EDGEdeck or by extracting it into the game folder, after REDnode, the same way REDagent and the optional packs install.
+
+On a mod site, list REDnode as a requirement, the way CET mods list CET, and say which game version you tested on (REDnode is for 2.31 today). In your manifest, add `"rednode": ">=<the version you tested>"` to `requires` so players with an older REDnode see it in the Mod Manager, and explain in `description` why you need any permission.

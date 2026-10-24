@@ -3,17 +3,17 @@ title: REDnode settings and controls
 nav_title: Settings and controls
 section: REDnode
 order: 11
-description: "Every REDnode launcher switch, key, permission and manifest field, and where REDnode keeps its files."
-reviewed: 2026-10-16
+description: "Every REDnode setting, key, permission and manifest field, and where REDnode keeps its files."
+reviewed: 2026-10-24
 ---
 
 # Settings and <span class="y">controls</span>
 
-## Launcher switches
+## Launcher settings
 
-All of REDnode's settings are at the bottom of the launcher (F10, then the REDNODE tab). REDnode saves them and remembers them across game starts.
+REDnode's settings are in the **Settings** drawer: press F10, open the launcher with the REDNODE tab, then press the gear at the right of the **Theme** row. The drawer opens beside the launcher, one setting a row with a line on what it does. REDnode saves them and remembers them across game starts.
 
-{% include shot.html caption="The launcher's settings" shows="The bottom of the REDnode launcher: the GPU sharing, Hot reload, MCP server and Developer mode switches, Copy setup, the Space row and the Theme buttons, and the version." %}
+{% include shot.html caption="The Settings drawer" shows="The REDnode launcher with the Settings drawer open beside it: GPU sharing, Hot reload, MCP server with Copy setup, Developer mode, Open at start and Tooltips." %}
 
 | Setting | Default | What it does | Change it when |
 |---|---|---|---|
@@ -21,9 +21,20 @@ All of REDnode's settings are at the bottom of the launcher (F10, then the REDNO
 | **Hot reload** | off for players | Restarts a mod, or reloads an app's page, when its files change | You're making or editing a package, or REDagent is |
 | **MCP server** | off for players | Lets Claude Code and other programs on your PC use REDnode's [MCP tools](agents.html) | You want Claude Code to see and call the game |
 | **Copy setup** | | Copies the command that adds REDnode to Claude Code | Once, after switching the MCP server on |
-| **Developer mode** | off | A debug button on every window's title bar | You're [debugging](debugging.html) a package |
-| **Space**: **New**, **Rename**, **Delete** | one space, Main | Your [spaces](spaces.html) | You want sets of windows to switch between |
-| **Theme**: **REDnode**, **HUD red**, **EDGE** | REDnode | The look of every UI kit window | To taste |
+| **Developer mode** | off | A debug button on every window's title bar, and the **Development folders** list | You're [debugging](debugging.html) or making a package |
+| **Open at start** | on | Off: the game starts with only HUD widgets showing, until your first F10 | You want a clean screen at start |
+| **Tooltips** | on | Hints when you hover a control, in every window | You know REDnode well and they get in the way |
+
+The bottom of the launcher itself has:
+
+| Setting | Default | What it does |
+|---|---|---|
+| **Space**: **New**, **Rename**, **Delete** | one space, Main | Your [spaces](spaces.html) |
+| **Theme**: **REDnode**, **HUD red**, **EDGE** | REDnode | The look of every UI kit window |
+
+### Development folders
+
+With **Developer mode** on, the Settings drawer lists **Development folders**: folders outside the game, such as your own project, whose packages run in the game with hot reload instead of their installed copies. Paste a folder's full path and press **Enter**; its packages start at once. A folder can be one package or hold several in subfolders. The Mod Manager marks such a package **DEV** and names the installed copy it hides. **Remove** takes a folder off the list. Folders are kept even with Developer mode off, but the list shows only with it on. REDagent may write inside these folders too, still showing you each change first.
 
 Per package, in the launcher or the [Mod Manager](mod-manager.html):
 
@@ -60,6 +71,8 @@ What a package can ask for in its manifest's `permissions`, and the name you see
 | `bridge` | REDbridge, WolvenKit's engine: reads the game's archives and files, and can write files where the package asks | `kernel.bridge()` |
 | `front` | staying above other packages' windows, with REDnode's own tools | The [tool layer](spaces.html#the-tool-layer) |
 | `solo` | hiding every other package's windows while it asks (solo mode) | `ui.solo()` |
+| `archives` | swapping archives in the game's mod folder while the game runs (hot-loading, through RED Hot Tools) | `archives.reload()` |
+| `admin` | managing REDnode: what every package costs, ending or restarting any package, and switching AI assistants' tools on and off | `admin`, as the [Admin Tools pack](index.html#optional-packs) uses. The Mod Manager shows a warning under it |
 
 ## Manifest fields
 
@@ -70,6 +83,8 @@ Every field of `rednode-app.json`:
 | `id` | All | Unique. Lowercase letters, digits, `-` and `_`. Settings and positions are saved under it |
 | `name`, `version`, `author`, `description` | All | Shown in the launcher and Mod Manager |
 | `main` | Node mods | The file to run, relative to the folder. `.mjs` for `import` syntax |
+| `service` | Node mods | A `.mjs` or `.js` file whose exported functions other packages can call. See [Mod services](making-mods.html#mod-services). A package may have a service and no `main` |
+| `sounds` | All | The package's own sound files, played by name with `audio.play`: `{ "alarm": "sounds/alarm.ogg" }`. `.wav`, `.ogg`, `.mp3` or `.flac` |
 | `entry` | Apps | The page to show, relative to the folder |
 | `width`, `height` | Apps | Window size in pixels at 1080p, 1 to 4096. Needed with `entry` |
 | `anchor` | Apps | `top-left` (default), `top`, `top-right`, `left`, `center`, `right`, `bottom-left`, `bottom`, `bottom-right` |
@@ -79,7 +94,7 @@ Every field of `rednode-app.json`:
 | `open` | All | Start open or running, until the player changes it |
 | `isolation` | Node mods | `process`: always its own process, never shared. For mods with native addons |
 | `permissions` | All | Powers to ask the player for (above) |
-| `requires` | All | Other mods it needs, with version ranges. See [Requirements](making-mods.html#requirements) |
+| `requires` | All | What it needs, with version ranges: game mods, `rednode`, `redbridge`, or another REDnode package by its id. See [Requirements](making-mods.html#requirements) |
 | `provides` | All | What it offers other packages. Today only `agent`, as REDagent does |
 
 ## Files and folders
@@ -88,8 +103,9 @@ Every field of `rednode-app.json`:
 |---|---|
 | REDnode | `red4ext\plugins\REDnode` in the game folder: `REDnode.dll`, `Scripts`, `host`, `apps` |
 | Packages | `red4ext\plugins\REDnode\apps`, one folder each |
-| Settings, positions, spaces, permissions, secrets, packages' data | `%APPDATA%\@rednode\overlay` |
-| Logs | `red4ext\logs` in the game folder: `rednode-overlay.log`, `rednode-mods.log`, the plugin's `rednode-*.log` |
+| Settings, positions, spaces, permissions, development folders, secrets, packages' data | `%APPDATA%\@rednode\overlay` |
+| REDbridge, when **Get REDbridge** installed it | `%LOCALAPPDATA%\REDnode\bridge` |
+| Logs | `red4ext\logs` in the game folder: `rednode-overlay.log` (and `rednode-overlay.prev.log`, the last session's), `rednode-mods.log`, the plugin's `rednode-*.log`, and `rednode-faults.log` around archive swaps |
 
 The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. Close the game first.
 

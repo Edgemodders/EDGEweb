@@ -3,7 +3,7 @@ title: Overlay apps
 section: REDnode
 order: 7
 description: "Build in-game windows and HUD widgets from web pages with REDnode: a first app, the UI kit and its themes, HUD widgets, game sounds, the title bar and pointer lock."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Overlay <span class="y">apps</span>
@@ -152,11 +152,11 @@ Overlay apps can play the game's own UI sounds, which mix with the game and foll
 RednodeUI.playSound('ui_jingle_quest_success');
 ```
 
-Names confirmed in game include `ui_menu_onpress`, `ui_menu_hover`, `ui_menu_tutorial_close`, `ui_loot_take_all`, `ui_menu_item_bought` and `ui_jingle_quest_success`. An unknown name plays nothing. The UI kit sample's **Sound** tab is a quick way to try names. Playing your own audio files is [planned](game-api.html#sound).
+Names confirmed in game include `ui_menu_onpress`, `ui_menu_hover`, `ui_menu_tutorial_close`, `ui_loot_take_all`, `ui_menu_item_bought` and `ui_jingle_quest_success`. An unknown name plays nothing. The UI kit sample's **Sound** tab is a quick way to try names. Your package can also play its own audio files: see [Sound](game-api.html#sound).
 
 ## Talking to the game
 
-Import `rednode` exactly as a Node mod does. Everything on [Game API and TweakDB](game-api.html) works in a page: `game`, `api`, `tweakdb`, `world`, `secrets`, `kernel`, `agent`. A Node mod's `pkg.dataDir` and the file system are Node-only; pair your page with a mod for those (see [a page and a mod together](node-mods.html#a-page-and-a-mod-together)).
+Import `rednode` exactly as a Node mod does. Everything on [Game API and TweakDB](game-api.html) works in a page: `game`, `api`, `tweakdb`, `world`, `audio`, `archives`, `secrets`, `kernel`, `agent`, and `service` to call other packages. A Node mod's `pkg.dataDir` and the file system are Node-only; pair your page with a mod for those (see [a page and a mod together](node-mods.html#a-page-and-a-mod-together)).
 
 Two events reach a page only through the older `window.rednode.on`: `focus` (your window gained or lost the keyboard; dim your title) and `overlay` (the mode changed: passive, interactive or hidden).
 
@@ -193,4 +193,6 @@ While locked, the cursor is hidden and stays where it was, and each movement arr
 - **Keep animation light.** Every repaint is copied to the game, at most 60 times a second. Many busy windows cost more.
 - **Each open window is a Chromium page** using roughly 60 to 100 MB.
 - **Hot reload** reloads your page when you save its files.
+- **Tooltips:** the UI kit shows an element's `title` as a tooltip in the game (Chromium's own tooltips don't show in overlay windows). Players can switch them off.
+- **Copying text:** use `ui.copy(text)` from the `rednode` package; a page's `navigator.clipboard` isn't reliable in overlay windows.
 - The developer reference, with every tested example, is the [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html).

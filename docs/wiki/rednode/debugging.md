@@ -4,7 +4,7 @@ nav_title: Debugging
 section: REDnode
 order: 9
 description: "Find out why a REDnode package misbehaves: the Mod log, Developer mode, Chromium's DevTools for windows, the Node debugger for mods, in the game or on the desktop, and attaching VS Code."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # <span class="y">Debugging</span>
@@ -17,7 +17,9 @@ REDnode gives you the same debugging tools web developers use, inside the game. 
 | Inspect a window's page: its HTML, styles, console | [The window debugger](#the-window-debugger) | Passed in game, in the overlay and on the desktop |
 | Stop a Node mod at a breakpoint and step through it | [The Node debugger](#the-node-debugger) | Passed in game, in the overlay |
 | Debug a Node mod from VS Code or REDcode | [Attach VS Code](#attach-vs-code-or-redcode) | Documented, not yet tested in game |
-| Let Claude read a window's console | The MCP server's `window_console` tool | Built in REDnode 0.16.0. See [Agents and MCP](agents.html) |
+| Let Claude read a window's console | The MCP server's `window_console` tool | Passed in game. See [Agents and MCP](agents.html) |
+| See what each package costs, and end a stuck one | The Task Manager, in the [Admin Tools pack](index.html#optional-packs) | Released |
+| Match log lines to what you did in the game | The **Test timer** sample: **Mark** after each step writes the step and time to the Mod log | Passed in game |
 
 ## The Mod log
 
@@ -37,7 +39,7 @@ Errors are red, and a crash shows only the stack lines from the mod's own code, 
 
 ## Developer mode
 
-**Developer mode** is a switch at the bottom of the launcher, off by default so players never see debug buttons. With it on, every window built with the UI kit's `rn-window`, and every Node mod's window, gets a **debug** button on its title bar (under **⋯** if the bar is full). It opens the right debugger for that window: the Node debugger if the window belongs to a mod running with **Debug** on, otherwise the window debugger.
+**Developer mode** is a switch in the launcher's Settings drawer (the gear at the right of the Theme row), off by default so players never see debug buttons. It also shows the [Development folders](settings.html#development-folders) list. With it on, every window built with the UI kit's `rn-window`, and every Node mod's window, gets a **debug** button on its title bar (under **⋯** if the bar is full). It opens the right debugger for that window: the Node debugger if the window belongs to a mod running with **Debug** on, otherwise the window debugger.
 
 An app can hide the button on a window with `no-debug`.
 
@@ -92,6 +94,8 @@ This is how REDnode's docs describe it, but it wasn't part of the in-game test, 
 | Overlay host | `rednode-overlay.log` | Packages found and started, permissions, spaces, the MCP server, performance lines |
 | Plugin | `rednode-*.log` | The in-game side: loading, game calls that failed, F10 and cursor changes |
 | RED4ext | `red4ext-*.log` | Whether REDnode loaded at all |
+| Last session's host | `rednode-overlay.prev.log` | The host log of the session before, kept so a crash's log survives the next start |
+| Faults | `rednode-faults.log` | What went wrong around an archive swap, for bug reports |
 | redscript | `r6\logs\redscript_rCURRENT.log` (not in `red4ext`) | Script errors, if REDnode's scripts failed to compile |
 
 Read them after the game has closed: some are only complete then.

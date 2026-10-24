@@ -3,7 +3,7 @@ title: Using the overlay
 section: REDnode
 order: 2
 description: "REDnode's overlay in the game: F10 and the three modes, the launcher, moving and closing windows, HUD widgets, themes and keys."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Using the <span class="y">overlay</span>
@@ -30,7 +30,7 @@ While a window has your input, the game doesn't get it: V doesn't move or shoot.
 
 The launcher is REDnode's home. Its tab sits at the lower left of the screen: **REDNODE** with a count, such as `· 9/20` (open packages out of all of them). Press F10, then click the tab to open the launcher; click it again to close it.
 
-{% include shot.html caption="The launcher" shows="The launcher opened above its tab: the GAME LINKED status, the Mod Manager first in the list, a few pinned packages with their switches, and the switches, Space row and Theme buttons at the bottom." %}
+{% include shot.html caption="The launcher" shows="The launcher opened above its tab: the GAME LINKED status, the Mod Manager first in the list, a few pinned packages with their switches, and the Space row, the Theme buttons with the gear and the version at the bottom." %}
 
 | Part | What it does |
 |---|---|
@@ -42,7 +42,9 @@ The launcher is REDnode's home. Its tab sits at the lower left of the screen: **
 | "Needs ..." | A mod the package requires that your game doesn't have |
 | For a Node mod | Its state (**RUNNING**, **STARTING**, **CRASHED**, **NOT RESPONDING**), own or shared process, memory, its last lines and last error, **Shared process** and **Restart** |
 | "Window closed" with **Show** | You closed one of the mod's windows. **Show** brings it back |
-| The bottom | The switches, the [Space row](spaces.html), the **Theme** buttons and the REDnode version. See [Settings and controls](settings.html) |
+| The bottom | The [Space row](spaces.html), the **Theme** buttons, the gear that opens the **Settings** drawer beside the launcher, and the REDnode version. See [Settings and controls](settings.html) |
+
+The first time REDnode starts, a **Welcome** window teaches these basics once. It also warns that **F9**, right beside F10, is the game's Quick Load: pressed by mistake, it loads your last save.
 
 The tab has a striped grip on its left: drag it to move the launcher. When you have more than one [space](spaces.html), the tab also shows **▾** and the current space's name; when a package is in [solo mode](spaces.html#solo-mode), it shows **SOLO**, the package's name and **End**.
 
@@ -56,6 +58,7 @@ In interactive mode:
 | Bring it to the front | Click it. Only the front window gets keyboard input |
 | Click what's behind a window | Click where the window is see-through: the click passes to the window behind, or to the game |
 | Close it | Its **✕**. For a Node mod's window, the mod keeps running; **Show** in the launcher or Mod Manager brings the window back |
+| See what a button does | Hover over it: a tooltip names it. The **Tooltips** setting switches them off |
 
 REDnode remembers where you put each window, and which windows you closed, across game starts. A saved position applies while the window keeps its size; if a mod changes the size, the window goes back to its default place.
 
@@ -106,10 +109,12 @@ An app can choose its own look; it then keeps it whatever you pick. The HUD samp
 | **Esc** | Interactive mode | Back to passive. Ends a held cursor first (pointer lock) |
 | **Ctrl+1** to **Ctrl+9** | While the overlay is open | Switches to that [space](spaces.html) |
 | **Ctrl+C**, **Ctrl+V**, **Ctrl+X**, **Ctrl+A**, **Ctrl+Z** | In the front window | Copy, paste, cut, select all, undo |
+| **F9** | Anywhere in the game | Not REDnode's: it is the game's Quick Load. Mind it, right beside F10 |
 
 ## Good to know
 
 - **REDnode's windows sit above everything,** game menus included, because they're drawn after the game's frame. Windows that hide with menus avoid the clash.
 - **The cost is small.** In the developer's tests the overlay took about 0.1 ms of each game frame with every sample open. Each open window does use memory in the host: roughly 60 to 100 MB.
 - **Alt+Tab** to the desktop and back keeps interactive mode.
+- **Open at start** in the Settings drawer: switch it off and the game starts with only HUD widgets showing, until your first F10.
 - **Not yet handled:** HDR brightness matching, frame generation, resolution and window-mode changes and ultrawide screens are planned work. Steam Deck is untested.

@@ -3,7 +3,7 @@ title: Node mods
 section: REDnode
 order: 6
 description: "Write REDnode mods in JavaScript that run in Node beside the game: a first mod, windows without HTML, game events, logs, isolation, hot reload, data and secrets."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Node <span class="y">mods</span>
@@ -54,6 +54,8 @@ setInterval(async () => {
 
 With the game running, REDnode finds the folder and starts the mod. Its window appears at the right edge. Press F10 and click **Beep**. This is a cut-down version of the Hello mod sample.
 
+A new package starts unpinned: it's listed in the [Mod Manager](mod-manager.html), not the launcher, until you press **Pin to launcher**. And its window shows only while you press F10 into interactive mode, unless you pin it to the HUD.
+
 Use the `.mjs` extension so `import` works, or add a `package.json` with `"type": "module"` beside your file.
 
 ## Windows without HTML
@@ -69,6 +71,7 @@ The `ui` builder makes windows from a few building blocks. REDnode draws them wi
 | `ui.slider(label, onChange, { min, max, step, value, unit })` | A slider |
 | `ui.input({ label, placeholder, value, onChange, onSubmit })` | A text field |
 | `ui.progress(value, { label, max })` | A progress bar |
+| `ui.list({ lines, keep, height, follow })` | A list of lines that scrolls on its own, for a log or a live feed. `push(...lines)` adds lines, `clear()` empties it |
 | `ui.row(...)`, `ui.column(...)` | Layout |
 | `ui.window({ title, width, height, anchor, x, y, children, onClose })` | Opens the window |
 
@@ -85,7 +88,7 @@ For anything richer, give your package a web page too: see [Overlay apps](overla
 | `game.on('PlayerPuppet.OnGameAttached', fn)` | Called at the main menu and on every save load |
 | `game.onState(fn)`, `game.state()` | Whether a menu, photo mode, a scene or the main menu is showing, the overlay mode, and whether REDnode is linked to the game |
 
-`OnGameAttached` is the moment to fetch fresh game objects: references from before a save load stop working. More events, from any game function, are planned but not built.
+`OnGameAttached` is the moment to fetch fresh game objects: references from before a save load stop working. Quest facts can be watched as they change with `quests.watch` (see [Game API](game-api.html#more-of-the-game)). More events, from any game function, are planned but not built.
 
 For calling the game, see [Game API and TweakDB](game-api.html).
 
@@ -114,7 +117,7 @@ A mod process uses about 80 to 100 MB. Players can put several mods in one **sha
 
 ## Hot reload
 
-With **Hot reload** on in the launcher, saving any file of your mod restarts it in about a second, with the game still running. Windows close and reopen with the new code. Hot reload is on by default for developers running the host from REDnode's repo, and off by default for players.
+With **Hot reload** on in the launcher's Settings drawer (the gear at the right of the Theme row), saving any file of your mod restarts it in about a second, with the game still running. Windows close and reopen with the new code. Hot reload is on by default for developers running the host from REDnode's repo, and off by default for players.
 
 Because a restart runs your mod from the top, write it so that starting twice is harmless: set your values when you start, rather than adding to them.
 
@@ -151,6 +154,8 @@ channel.post({ hello: 'from the other side' });
 ```
 
 So the page does the looks, and the mod does the work: files, npm packages, long calculations.
+
+To call *another* package's functions, or offer your own, see [Mod services](making-mods.html#mod-services).
 
 ## Good to know
 

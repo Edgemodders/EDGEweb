@@ -3,7 +3,7 @@ title: Spaces and layers
 section: REDnode
 order: 4
 description: "Sort REDnode's windows into spaces you switch between like virtual desktops, and how the tool layer and solo mode keep the right windows on top."
-reviewed: 2026-10-16
+reviewed: 2026-10-24
 ---
 
 # Spaces and <span class="y">layers</span>
@@ -67,7 +67,7 @@ REDnode keeps its windows in two layers:
 
 | Layer | Holds |
 |---|---|
-| **Tool layer** (on top) | The launcher, the Mod log, the Mod Manager, debuggers, and packages you allow to stay above others |
+| **Tool layer** (on top) | The launcher, the Mod log, the Mod Manager, debuggers, and packages you allow to stay above others, such as the Test timer and the Admin Tools pack's apps |
 | **Package layer** | Every other package's windows and widgets |
 
 Clicking a window brings it to the front of its own layer only. So a package that covers the whole screen, such as an editor's viewport, can never hide the launcher: you can always reach REDnode's controls.

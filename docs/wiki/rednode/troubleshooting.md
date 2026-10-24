@@ -3,8 +3,8 @@ title: Troubleshooting REDnode
 nav_title: Troubleshooting
 section: REDnode
 order: 12
-description: "Fixes for common REDnode problems: no launcher tab, build and deploy errors, missing windows, crashed mods, packages that need something, and Claude Code not connecting."
-reviewed: 2026-10-16
+description: "Fixes for common REDnode problems: no launcher tab, the wrong game version, missing windows, crashed mods, packages that need something, archive swaps, and Claude Code not connecting."
+reviewed: 2026-10-24
 ---
 
 # Troubleshooting <span class="y">REDnode</span>
@@ -16,8 +16,8 @@ REDnode writes its logs to `red4ext\logs` in the game folder. Close the game fir
 | Log | Look for |
 |---|---|
 | `red4ext-*.log` | A line saying REDnode `has been loaded`. If it's missing, REDnode never started |
-| `rednode-*.log` | The plugin: `REDnode 0.23.1 loading`, and that it started the host |
-| `rednode-overlay.log` | The overlay host: packages found, started and refused, permissions, the MCP server |
+| `rednode-*.log` | The plugin: `REDnode 0.37.0 loading`, and that it started the host |
+| `rednode-overlay.log` | The overlay host: packages found, started and refused, permissions, the MCP server. The last session's is kept as `rednode-overlay.prev.log` |
 | `rednode-mods.log` | What Node mods printed, and their crashes |
 | `r6\logs\redscript_rCURRENT.log` | Script errors, if the game stopped at startup |
 
@@ -27,10 +27,11 @@ When you ask for help, include the first lines of the plugin and host logs, and 
 
 ### No REDNODE tab at the main menu
 
-1. Check `red4ext-*.log` for REDnode. If RED4ext has no log at all, RED4ext itself isn't working: install or update it for your game version.
-2. If RED4ext loaded but REDnode isn't mentioned, the deploy went somewhere else. Run the deploy again with `-GameDir` set to your game folder.
-3. If REDnode loaded, check `rednode-overlay.log`. If it's missing or old, the host didn't start. Make sure `red4ext\plugins\REDnode\host\REDnode-overlay.exe` exists; if not, run `npm run overlay:package` and deploy again.
-4. Security software may stop a game plugin from starting another program. If the host is blocked, allow `REDnode-overlay.exe`.
+1. Check your game version. REDnode 0.37.0 is for game version **2.31 only**; on 2.5, RED4ext won't load it. The next REDnode release moves to 2.5 once RED4ext, redscript and Codeware support it.
+2. Check `red4ext-*.log` for REDnode. If RED4ext has no log at all, RED4ext itself isn't working: install or update it for your game version.
+3. If RED4ext loaded but REDnode isn't mentioned, REDnode went somewhere else. Check that `red4ext\plugins\REDnode\REDnode.dll` is inside your game folder; install the zip again if not.
+4. If REDnode loaded, check `rednode-overlay.log`. If it's missing or old, the host didn't start. Make sure `red4ext\plugins\REDnode\host\REDnode-overlay.exe` exists; if not, install the zip again.
+5. Security software may stop a game plugin from starting another program. If the host is blocked, allow `REDnode-overlay.exe`.
 
 ### The launcher says GAME OFF
 
@@ -38,9 +39,9 @@ The overlay host isn't connected to the game. It can show for a moment while the
 
 ### The game stops at startup after deploying
 
-Usually a script error: check `r6\logs\redscript_rCURRENT.log`. REDnode needs redscript installed. To check whether REDnode is the cause, remove it (`.\tools\deploy-native.ps1 -Remove`, after copying out packages you want to keep) and start the game again.
+Usually a script error: check `r6\logs\redscript_rCURRENT.log`. REDnode needs redscript installed. To check whether REDnode is the cause, move the `red4ext\plugins\REDnode` folder out of the game folder (it holds your packages too) and start the game again.
 
-### The deploy script stops
+### Building from source: the deploy script stops
 
 | Message | Fix |
 |---|---|
@@ -48,7 +49,7 @@ Usually a script error: check `r6\logs\redscript_rCURRENT.log`. REDnode needs re
 | `Close the game first.` | The game locks REDnode's files while it runs. Quit it, wait for it to close, and run the script again |
 | `Nothing staged. Run tools\build-native.ps1 first.` | Build first: `.\tools\build-native.ps1`, then `npm run overlay:package` |
 
-### The build fails
+### Building from source: the build fails
 
 | Problem | Fix |
 |---|---|
@@ -86,7 +87,18 @@ It requires a mod your game doesn't have, or has in an older version. The Mod Ma
 
 ### A package's feature does nothing
 
-It may be waiting for a permission. Look for **Asks for ...** in its launcher row or Mod Manager details, and switch **Allowed** on if you trust it. Features that need REDbridge also need REDbridge installed: use **Get REDbridge** in [EDGEdeck](../edgedeck/install.html#getting-redbridge).
+It may be waiting for a permission. Look for **Asks for ...** in its launcher row or Mod Manager details, and switch **Allowed** on if you trust it. Features that need REDbridge also need REDbridge installed: press **Get REDbridge** in the package's details in the Mod Manager.
+
+### An archive swap is refused
+
+| Message is about | Fix |
+|---|---|
+| The main menu | Load a save first |
+| RED Hot Tools | Install [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools/releases) 1.3 or later and restart the game |
+| Upper- and lowercase names | The official RED Hot Tools would end the game on this swap. Install the [Edgemodders build](https://github.com/CyberbuildsAI/cp2077-red-hot-tools/releases) over it, then restart the game |
+| A permission | Allow the package's "swapping archives" permission in the Mod Manager |
+
+After a swap, things already in the world can keep the old look until they load again; clothes V wears update straight away. A swapped archive stays installed: remove it from `archive\pc\mod` when you're done testing.
 
 ### "That game object no longer exists"
 
@@ -94,11 +106,11 @@ A mod used a game object from before a save load, or one the game removed. It's 
 
 ### Windows flicker, show garbage or don't update
 
-Switch **GPU sharing** off at the bottom of the launcher. Every window reopens with the other way of drawing. If that fixes it, report it with your graphics card and the host log.
+Switch **GPU sharing** off in the launcher's Settings drawer (the gear). Every window reopens with the other way of drawing. If that fixes it, report it with your graphics card and the host log.
 
 ### The cursor vanishes, or interactive mode ends by itself
 
-Press F10 to get back to interactive mode. Fixes for both went into earlier versions and passed their tests, so if it happens on 0.23.1, report it with the plugin log: it records when the game leaves and comes back to the front.
+Press F10 to get back to interactive mode. Fixes for both went into earlier versions and passed their tests, so if it happens on 0.37.0, report it with the plugin log: it records when the game leaves and comes back to the front. If the arrow blinks with DLSS on, update your GPU driver: an older NVIDIA driver caused it on one laptop.
 
 ### A HUD widget stays up in a cutscene, or hides in a conversation
 
@@ -113,13 +125,17 @@ The game alone needs 12 to 16 GB of RAM. Each open REDnode window adds roughly 6
 | Check | Fix |
 |---|---|
 | Is the game running? | The server only runs with the game. `claude mcp list` showing `rednode` failing while the game is closed is normal |
-| Is **MCP server** on? | Switch it on in the launcher |
+| Is **MCP server** on? | Switch it on in the launcher's Settings drawer (the gear) |
 | Did you run the setup command? | Press **Copy setup** and run the command in a terminal once |
 | Is it a new session? | Claude Code loads MCP servers when a session starts. Start a new one |
 
 ### Hot reload doesn't pick up my changes
 
-Switch **Hot reload** on in the launcher. Make sure you're editing the copy in the game's apps folder, not one elsewhere.
+Switch **Hot reload** on in the launcher's Settings drawer. Make sure you're editing the copy REDnode runs: the one in the game's apps folder, or one in a [development folder](settings.html#development-folders) you added. The Mod Manager marks a development copy **DEV**.
+
+### I pressed F9 and lost progress
+
+F9 is the game's Quick Load, not REDnode's: it loads your last save. It sits right beside F10, so mind it.
 
 ### Something else
 
