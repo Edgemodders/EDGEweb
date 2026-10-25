@@ -53,7 +53,7 @@ REDnode is the **Run** stage of the EDGE platform: the part that is in the game 
 
 **Released.** REDnode 0.37.0 came out on 2026-10-24, for **game version 2.31 only**. It is the last release for 2.31: game version 2.5 came out on 2026-10-22, and the next REDnode release moves to it once RED4ext, redscript and Codeware support 2.5. Until then, keep your game on 2.31 (RED4ext won't load REDnode on 2.5).
 
-Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and see [Install and set up](install.html). REDnode is not on Nexus Mods yet. It is still young: every part below as passed was tested in the developer's modded game, and the overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
+Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and see [Install and set up](install.html). It is also on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419), with the optional [Admin Tools](https://www.nexusmods.com/cyberpunk2077/mods/35793) pack and [REDagent](https://www.nexusmods.com/cyberpunk2077/mods/35670). It is still young: every part below as passed was tested in the developer's modded game, and the overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
 
 | Part | Status |
 |---|---|
