@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEbuilder
 order: 0
 description: "EDGEbuilder, a world builder that runs inside Cyberpunk 2077 on REDnode: what it is, what it's for, and where it stands."
-reviewed: 2026-10-24
+reviewed: 2026-10-26
 ---
 
 # EDGE<span class="y">builder</span>
@@ -65,7 +65,7 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 | B6 Comfort (favourites, prefabs, snapping) | Not started |
 | B7 Scenes in REDcode with the game closed | Not started |
 
-The latest release is **EDGEbuilder 0.3.3** (2026-10-16), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). 0.3.4, which finds the REDbridge that EDGEdeck fetched under EDGEdeck's new name, is built and waits for its in-game check. EDGEbuilder is a test build: a first public preview is planned after B4 (Bake). It needs [REDnode](../rednode/), which installs from its release zip, and game version 2.31. See [Install and set up](install.html).
+The latest release is **EDGEbuilder 0.3.3** (2026-10-16), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). 0.3.4, which finds the REDbridge that EDGEdeck fetched under EDGEdeck's new name, is built and waits for its in-game check. EDGEbuilder is a test build: a first public preview is planned after B4 (Bake). It needs [REDnode](../rednode/), which installs from its release zip. It was tested on game 2.31 with REDnode 0.37.0 or earlier; on 2.5 with REDnode 0.38.1 or later it is untested. See [Install and set up](install.html).
 
 EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks mod that showed a world editor can live inside the running game. EDGEbuilder is its own design and uses none of World Builder's code, files or data.
 

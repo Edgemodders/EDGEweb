@@ -4,12 +4,12 @@ nav_title: Install and set up
 section: REDnode
 order: 1
 description: "Install REDnode into Cyberpunk 2077 from its release zip, check it works, update or remove it, or build it from source."
-reviewed: 2026-10-24
+reviewed: 2026-10-26
 ---
 
 # Install and set up <span class="y">REDnode</span>
 
-REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.37.0**, for **game version 2.31 only**: RED4ext won't load it on 2.5. The next release moves to 2.5 once RED4ext, redscript and Codeware support it.
+REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.40.1**, for **game version 2.5**. On a game kept on 2.31, use **0.37.0**, the last release for 2.31: RED4ext won't load a 2.5 build on 2.31, nor 0.37.0 on 2.5.
 
 If the steps below look like too much, ask on [Discord]({{ site.discord }}): someone can walk you through it.
 
@@ -19,8 +19,8 @@ If the steps below look like too much, ask on [Discord]({{ site.discord }}): som
 
 | You need | Notes |
 |---|---|
-| Cyberpunk 2077 on Windows, **version 2.31** | Tested on Steam. Game version 2.5 is not supported yet |
-| [RED4ext](https://github.com/WopsS/RED4ext/releases) | Required. It loads REDnode into the game. Tested with 1.30 |
+| Cyberpunk 2077 on Windows, **version 2.5** | Tested on Steam. For 2.31, REDnode 0.37.0 |
+| [RED4ext](https://github.com/WopsS/RED4ext/releases) | Required. It loads REDnode into the game. 1.31 or later for game 2.5 |
 | [redscript](https://github.com/jac3km4/redscript/releases) | Required. REDnode adds a few small scripts to the game |
 | [Codeware](https://github.com/psiberx/cp2077-codeware) | Optional. Only packages that place objects in the world (1.14 or later) or draw the game's own UI (the Ink samples ask for 1.16 or later) need it |
 | [TweakXL](https://github.com/psiberx/cp2077-tweak-xl) 1.10 or later | Optional. Only packages that change TweakDB need it |
@@ -104,7 +104,7 @@ Your settings and packages' data are kept outside the game folder, so they survi
 
 This replaces REDnode's own files and the samples. Other packages in the apps folder, REDagent's included, stay, and so do your settings. The launcher shows the new version at the bottom.
 
-Before you update the game itself, check that REDnode supports the new game version. Today that is 2.31 only.
+Before you update the game itself, check that REDnode supports the new game version. Today that is 2.5 (REDnode 0.38.1 or later).
 
 ## Removing REDnode
 

@@ -4,7 +4,7 @@ nav_title: Game API and TweakDB
 section: REDnode
 order: 8
 description: "How REDnode packages reach the game: the game helper, calling any game function, TweakDB reads and changes, placing objects in the world, the game's files through REDbridge, swapping archives, sound, and the newer APIs."
-reviewed: 2026-10-24
+reviewed: 2026-10-26
 ---
 
 # The game API, <span class="y">TweakDB</span> and the world
@@ -88,7 +88,7 @@ This is cut down from the **Vitals** and **Game API mod** samples, which read V'
 
 ### The game API reference
 
-Every class, struct, enum and global function in the base game (2.31) is in REDnode's [game API reference](https://edgemodders.github.io/REDnode/game/), with REDnode's notes on how things behave. It's built from the game's own type data, like NativeDB. The same lookup is an [MCP tool](agents.html), so Claude can look things up too.
+Every class, struct, enum and global function in the base game (2.5) is in REDnode's [game API reference](https://edgemodders.github.io/REDnode/game/), with REDnode's notes on how things behave. It's built from the game's own type data, like NativeDB. The same lookup is an [MCP tool](agents.html), so Claude can look things up too.
 
 ## TweakDB
 

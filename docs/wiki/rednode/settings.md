@@ -4,7 +4,7 @@ nav_title: Settings and controls
 section: REDnode
 order: 11
 description: "Every REDnode setting, key, permission and manifest field, and where REDnode keeps its files."
-reviewed: 2026-10-24
+reviewed: 2026-10-26
 ---
 
 # Settings and <span class="y">controls</span>
@@ -20,7 +20,8 @@ REDnode's settings are in the **Settings** drawer: press F10, open the launcher 
 | **GPU sharing** | on | Windows reach the game as shared GPU textures, with no copying of pixels. Off, they're copied through the CPU instead. Switching reopens every window | A window looks wrong (garbage, flicker, stale pictures). If GPU sharing fails, REDnode switches it off by itself for that session |
 | **Hot reload** | off for players | Restarts a mod, or reloads an app's page, when its files change | You're making or editing a package, or REDagent is |
 | **MCP server** | off for players | Lets Claude Code and other programs on your PC use REDnode's [MCP tools](agents.html) | You want Claude Code to see and call the game |
-| **Copy setup** | | Copies the command that adds REDnode to Claude Code | Once, after switching the MCP server on |
+| **Copy setup** | | Copies a command that adds REDnode to Claude Code with a fixed token | For other MCP clients; Claude Code can [sign in](agents.html#connect-claude-code) instead (REDnode 0.40.1 or later) |
+| **Connected assistants** | | The assistants you allowed in the game, each with **Revoke** | You want to cut one off; it has to ask again |
 | **Developer mode** | off | A debug button on every window's title bar, and the **Development folders** list | You're [debugging](debugging.html) or making a package |
 | **Open at start** | on | Off: the game starts with only HUD widgets showing, until your first F10 | You want a clean screen at start |
 | **Tooltips** | on | Hints when you hover a control, in every window | You know REDnode well and they get in the way |
