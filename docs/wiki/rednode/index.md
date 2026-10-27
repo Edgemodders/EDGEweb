@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDnode
 order: 0
 description: "REDnode, the EDGE platform's runtime for Cyberpunk 2077: what it is, what it's for, and why you might want it."
-reviewed: 2026-10-26
+reviewed: 2026-10-27
 ---
 
 # RED<span class="y">node</span>
@@ -70,7 +70,7 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | World API (placing objects, people who stand still, EDGEbuilder scenes, what is near V; needs Codeware) | Passed in game |
 | TweakDB: reading, and changing through TweakXL | Passed in game |
 | Sound: the game's UI sounds, and packages' own audio files | Passed in game |
-| Swapping changed archives into the running game (needs RED Hot Tools), sound archives included | Passed in game on 2.31. On 2.5 it waits for a RED Hot Tools release for 2.5 |
+| Swapping changed archives into the running game, sound archives included | Passed in game on 2.31 through RED Hot Tools. On 2.5, through [REDswap](redswap.html): passed in game on 27 October 2026, ships with REDnode 0.41.0 (not released yet); sound archives untested on 2.5 |
 | The game's own UI from Node (ink; needs Codeware), in the player's language | Passed in game. Experimental |
 | Quest API (quest facts, the journal, moving V) | Passed in game |
 | Mod services (mods calling each other, and offering tools to AI assistants) | Passed in game |
@@ -108,6 +108,7 @@ Two app packs come as their own zips, attached to each REDnode release. Install 
 | [Making mods and apps](making-mods.html) | Package kinds, the manifest, the apps folder, permissions, requirements, mod services and sharing |
 | [Node mods](node-mods.html) | Mods in Node, windows without HTML, logs, isolation, hot reload |
 | [Overlay apps](overlay-apps.html) | Web pages over the game, the UI kit, HUD widgets, sounds, pointer lock |
+| [REDswap](redswap.html) | Swapping changed archives into the running game on 2.5, from REDnode, AI assistants and your own tools |
 | [Game API and TweakDB](game-api.html) | Calling the game, TweakDB, placing objects, the game's files, sound |
 | [Debugging](debugging.html) | The Mod log, Developer mode, DevTools in the game, attaching VS Code |
 | [Agents and MCP](agents.html) | Claude Code and the MCP server, and asking REDagent from a mod |

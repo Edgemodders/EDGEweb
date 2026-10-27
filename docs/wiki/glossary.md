@@ -3,7 +3,7 @@ title: Glossary
 section: Start here
 order: 3
 description: "Plain-language definitions of Cyberpunk 2077 modding terms and EDGE terms."
-reviewed: 2026-10-24
+reviewed: 2026-10-27
 ---
 
 # <span class="y">Glossary</span>
@@ -26,8 +26,9 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | Multilayered material | How the game colours most clothing and many objects: up to 20 layers, each with a surface, a colour and a mask, stored in an `.mlsetup` file. EDGEmat shows them in plain words and recolours them |
 | Nexus Mods | The main site where Cyberpunk mods are published |
 | RED4ext | The framework that loads native plugins into the game. REDnode is one of them |
-| RED Hot Tools | A plugin that loads changed archives into the running game. REDnode swaps archives through it |
+| RED Hot Tools | A plugin that loads changed archives into the running game. REDnode 0.40.1 and earlier swap archives through it |
 | REDengine | The game's engine. The source of "RED" in the tool names |
+| [REDswap](rednode/redswap.html) | REDnode's plugin that loads changed archives into the running game on version 2.5, ported from RED Hot Tools |
 | REDmod | CD PROJEKT RED's own mod format, deployed with their `redMod` tool |
 | redscript | A language for scripting the game, compiled into the game's own scripts |
 | RTTI | The game's type system: the classes, functions and enums it knows about at runtime. REDnode's game API is generated from it |

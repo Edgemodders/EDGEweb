@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: REDnode
 order: 1
 description: "Install REDnode into Cyberpunk 2077 from its release zip, check it works, update or remove it, or build it from source."
-reviewed: 2026-10-26
+reviewed: 2026-10-27
 ---
 
 # Install and set up <span class="y">REDnode</span>
@@ -24,7 +24,7 @@ If the steps below look like too much, ask on [Discord]({{ site.discord }}): som
 | [redscript](https://github.com/jac3km4/redscript/releases) | Required. REDnode adds a few small scripts to the game |
 | [Codeware](https://github.com/psiberx/cp2077-codeware) | Optional. Only packages that place objects in the world (1.14 or later) or draw the game's own UI (the Ink samples ask for 1.16 or later) need it |
 | [TweakXL](https://github.com/psiberx/cp2077-tweak-xl) 1.10 or later | Optional. Only packages that change TweakDB need it |
-| [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools/releases) 1.3 or later | Optional. Only packages that swap archives into the running game need it. The [Edgemodders build](https://github.com/CyberbuildsAI/cp2077-red-hot-tools/releases) fixes swaps of archives with mixed-case names, which REDnode otherwise refuses |
+| [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools/releases) 1.3 or later | Optional, and not needed from REDnode 0.41.0 (not released yet), which swaps through its own [REDswap](redswap.html). With 0.40.1 and earlier, only packages that swap archives into the running game need it. The [Edgemodders build](https://github.com/CyberbuildsAI/cp2077-red-hot-tools/releases) fixes swaps of archives with mixed-case names, which REDnode otherwise refuses |
 | [REDbridge](../redbridge/) | Optional. Only packages that read the game's archives need it. The Mod Manager's **Get REDbridge** button installs it for you; a copy [EDGEdeck](../edgedeck/install.html#getting-redbridge) or REDcode downloaded works too |
 
 You can install RED4ext, redscript, Codeware, TweakXL and RED Hot Tools with [EDGEdeck](../edgedeck/) or another mod manager. Match their versions to your game version. A package that needs one of them tells you in the Mod Manager.
