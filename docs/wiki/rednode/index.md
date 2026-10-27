@@ -51,7 +51,7 @@ REDnode is the **Run** stage of the EDGE platform: the part that is in the game 
 
 ## Status
 
-**Released.** REDnode 0.40.1 came out on 2026-10-26, for **game version 2.5**. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
+**Released.** REDnode 0.41.0 came out on 2026-10-27, for **game version 2.5**, with [REDswap](redswap.html) for swapping archives into the running game. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
 
 Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and see [Install and set up](install.html). It is also on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419), with the optional [Admin Tools](https://www.nexusmods.com/cyberpunk2077/mods/35793) pack and [REDagent](https://www.nexusmods.com/cyberpunk2077/mods/35670). It is still young: every part below as passed was tested in the developer's modded game, and the overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
 
@@ -70,7 +70,7 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | World API (placing objects, people who stand still, EDGEbuilder scenes, what is near V; needs Codeware) | Passed in game |
 | TweakDB: reading, and changing through TweakXL | Passed in game |
 | Sound: the game's UI sounds, and packages' own audio files | Passed in game |
-| Swapping changed archives into the running game, sound archives included | Passed in game on 2.31 through RED Hot Tools. On 2.5, through [REDswap](redswap.html): passed in game on 27 October 2026, ships with REDnode 0.41.0 (not released yet); sound archives untested on 2.5 |
+| Swapping changed archives into the running game, sound archives included | Passed in game on 2.31 through RED Hot Tools. On 2.5, through [REDswap](redswap.html): released in REDnode 0.41.0; sound archives untested on 2.5 |
 | The game's own UI from Node (ink; needs Codeware), in the player's language | Passed in game. Experimental |
 | Quest API (quest facts, the journal, moving V) | Passed in game |
 | Mod services (mods calling each other, and offering tools to AI assistants) | Passed in game |
