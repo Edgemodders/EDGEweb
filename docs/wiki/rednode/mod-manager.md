@@ -17,7 +17,7 @@ The Mod Manager is a window built into REDnode that lists every REDnode package 
 
 Press **F10**, open the launcher and switch on **Mod Manager**, the first entry. It's always there. Close it with its own **✕**.
 
-{% include shot.html caption="The Mod Manager" shows="The Mod Manager window: the search box and filter chips at the top, the table of packages with the L and H pin columns, and the details panel on the right for a selected Node mod." %}
+{% include shot.html caption="The Mod Manager" src="/assets/shots/rednode/mod-manager-the-mod-manager.png" alt="The Mod Manager: the search box and filter chips, the table of packages with the L and H pin columns, kind, status, space, memory, version and author, and the details panel for the Ask mod on the right." shows="The Mod Manager window: the search box and filter chips at the top, the table of packages with the L and H pin columns, and the details panel on the right for a selected Node mod." %}
 
 ## The table
 
@@ -60,7 +60,7 @@ Select a row to see its details on the right:
 | **Last error**, **Last lines** | What a Node mod printed most recently |
 | **Window debugger**, **Debug (Node inspector)** | For developers: see [Debugging](debugging.html) |
 
-{% include shot.html caption="A package's details" shows="The Mod Manager's details panel for the Hello mod: the Switches section with Pin to launcher and Pin to HUD, its RUNNING status, memory, Shared process and Restart, and its last lines." %}
+{% include shot.html caption="A package's details" src="/assets/shots/rednode/mod-manager-a-package-s-details.png" alt="The Mod Manager with the Hello mod selected: its details panel with the Running, Pin to launcher, Pin to HUD and Shared process switches, the Space buttons, RUNNING with its memory, Restart, the Debug switch and its last lines." shows="The Mod Manager's details panel for the Hello mod: the Switches section with Pin to launcher and Pin to HUD, its RUNNING status, memory, Shared process and Restart, and its last lines." %}
 
 ## Pin to launcher and Pin to HUD
 

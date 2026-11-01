@@ -22,7 +22,7 @@ REDagent itself must be installed and switched on. Withdraw the permission the s
 
 REDnode comes with a sample to try it: the [Ask mod](https://github.com/Edgemodders/REDnode/tree/main/packages/overlay/apps/ask-mod). Switch it on in the Mod Manager, allow its permission, and type a question in its window. The answer streams in with its cost.
 
-{% include shot.html caption="The Ask mod" shows="REDnode's Ask mod window with a question typed in and REDagent's answer streaming in below it, with its cost." %}
+{% include shot.html caption="The Ask mod" src="/assets/shots/redagent/other-mods-the-ask-mod.png" alt="The Ask mod window with the question How many eddies does V have?, the Ask and Stop buttons, and REDagent&rsquo;s answer with its cost." shows="REDnode's Ask mod window with a question typed in and REDagent's answer streaming in below it, with its cost." %}
 
 ## What a mod's question can do
 
@@ -43,7 +43,7 @@ Every mod has its own **daily limit**, **$0.25** unless you change it. Once a mo
 
 To see and control what mods spend, press **Chats** in REDagent's footer, then the **Mods** tab. It lists every mod that has asked REDagent anything:
 
-{% include shot.html caption="REDagent's Mods view" shows="The Mods tab in REDagent: the Ask mod with today's spending against its daily limit, its total, the limit field with Set, the Paused and Pictures switches, and its last questions." %}
+{% include shot.html caption="REDagent's Mods view" src="/assets/shots/redagent/other-mods-redagent-s-mods-view.png" alt="REDagent&rsquo;s Mods tab with the Ask mod and Wardrobe Designer, each with today&rsquo;s spending against its daily limit, its total, the daily limit field with Set, the Paused and Pictures switches, and its last questions." shows="The Mods tab in REDagent: the Ask mod with today's spending against its daily limit, its total, the limit field with Set, the Paused and Pictures switches, and its last questions." %}
 
 | You see | What it means or does |
 |---|---|

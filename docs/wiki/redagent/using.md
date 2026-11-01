@@ -14,7 +14,7 @@ New to REDagent? Start with [Your first mod](first-mod.html). This page is the t
 
 REDagent's window opens on the right of the game when it starts. If you close it, press **F10**, open the **Mod Manager** and press **Show** on REDagent. **Pin to launcher** there keeps it one press away.
 
-{% include shot.html caption="REDagent's window" shows="The REDagent window with a short chat, the changes strip above the input, and the footer: the Opus 5.5 / Sonnet 5.5 choice, the chat's total cost, and the Chats, New and Key buttons." %}
+{% include shot.html caption="REDagent's window" src="/assets/shots/redagent/using-redagent-s-window.png" alt="The REDagent window after it made a clock HUD widget: the two files it created, each with Undo, the tools it used to check its work, its answer with the cost, the changes strip with Show, and the footer with the model choice, the total, Chats, New and Key." shows="The REDagent window with a short chat, the changes strip above the input, and the footer: the Opus 5.5 / Sonnet 5.5 choice, the chat's total cost, and the Chats, New and Key buttons." %}
 
 | Part | What it does |
 |---|---|
@@ -68,7 +68,7 @@ Every chat is saved as it goes, with its changes, so closing the game loses noth
 
 **Chats** in the footer opens the list of your last 30 chats, each with its date and cost. **Open** one to carry on where you left off, or **Delete** it. The chat you're in says **This chat**. **Back** or **Close** returns to the chat.
 
-{% include shot.html caption="The Chats list" shows="REDagent's Chats tab: several saved chats with their titles, dates and costs, Open and Delete buttons, and This chat on the current one." %}
+{% include shot.html caption="The Chats list" src="/assets/shots/redagent/using-the-chats-list.png" alt="REDagent&rsquo;s Chats tab with three saved chats, each with its date and cost: the current one marked This chat, the others with Open and Delete." shows="REDagent's Chats tab: several saved chats with their titles, dates and costs, Open and Delete buttons, and This chat on the current one." %}
 
 **New** starts a fresh chat. Start one when you change topic: the whole chat is sent with each question, so long chats cost more per answer.
 

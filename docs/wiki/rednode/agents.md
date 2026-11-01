@@ -42,7 +42,7 @@ The connection stays across game restarts. The Settings drawer lists **Connected
 
 [Connect Claude Code](../connect-claude-code.html) covers REDnode beside the REDcode and EDGEdeck servers.
 
-{% include shot.html caption="MCP server switch" shows="The REDnode launcher's Settings drawer with the MCP server switch on, Copy setup, and Connected assistants with Revoke." %}
+{% include shot.html caption="MCP server switch" src="/assets/shots/rednode/agents-mcp-server-switch.png" alt="REDnode&rsquo;s Settings drawer with the MCP server switch on, the Copy setup button, and Claude Code under Connected assistants with Revoke." shows="The REDnode launcher's Settings drawer with the MCP server switch on, Copy setup, and Connected assistants with Revoke." %}
 
 ### What the tools do
 

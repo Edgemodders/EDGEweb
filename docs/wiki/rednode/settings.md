@@ -13,7 +13,7 @@ reviewed: 2026-10-26
 
 REDnode's settings are in the **Settings** drawer: press F10, open the launcher with the REDNODE tab, then press the gear at the right of the **Theme** row. The drawer opens beside the launcher, one setting a row with a line on what it does. REDnode saves them and remembers them across game starts.
 
-{% include shot.html caption="The Settings drawer" shows="The REDnode launcher with the Settings drawer open beside it: GPU sharing, Hot reload, MCP server with Copy setup, Developer mode, Open at start and Tooltips." %}
+{% include shot.html caption="The Settings drawer" src="/assets/shots/rednode/settings-the-settings-drawer.png" alt="The launcher with the Settings drawer open beside it: Keys, GPU sharing, Hot reload, MCP server with Copy setup and Connected assistants, and Developer mode." shows="The REDnode launcher with the Settings drawer open beside it: GPU sharing, Hot reload, MCP server with Copy setup, Developer mode, Open at start and Tooltips." %}
 
 | Setting | Default | What it does | Change it when |
 |---|---|---|---|

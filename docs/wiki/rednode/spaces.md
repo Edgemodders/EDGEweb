@@ -24,7 +24,7 @@ A space is like a virtual desktop: a named set of windows. You might keep a "Com
 
 Until you make a second space, nothing changes: everything is in **Main**, and there's no switcher and no extra title-bar button.
 
-{% include shot.html caption="Switching spaces" shows="The launcher tab showing ▾ Combat, with its list of spaces open: Main and Combat with their Ctrl+number." %}
+{% include shot.html caption="Switching spaces" src="/assets/shots/rednode/spaces-switching-spaces.png" alt="The launcher in the Combat space: the Space row reads Combat and the tab below shows the space switcher set to COMBAT." shows="The launcher tab showing ▾ Combat, with its list of spaces open: Main and Combat with their Ctrl+number." %}
 
 ### Make, rename and delete spaces
 
@@ -80,7 +80,7 @@ Some packages need the screen to themselves for a while, for example a world edi
 
 While solo mode is on, the launcher tab shows **SOLO**, the package's name and **End**.
 
-{% include shot.html caption="Solo mode" shows="The launcher tab showing SOLO with a package's name and the End button, with only the solo package's window and REDnode's own windows on screen." %}
+{% include shot.html caption="Solo mode" src="/assets/shots/rednode/spaces-solo-mode.png" alt="EDGEbuilder in Edit mode with solo mode on: the launcher tab at the lower left shows SOLO EDGEbuilder and End, and only EDGEbuilder&rsquo;s window and REDnode&rsquo;s launcher are on screen." shows="The launcher tab showing SOLO with a package's name and the End button, with only the solo package's window and REDnode's own windows on screen." %}
 
 Solo mode ends when:
 

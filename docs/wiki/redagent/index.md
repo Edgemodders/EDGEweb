@@ -11,7 +11,7 @@ reviewed: 2026-10-26
 
 REDagent is EDGE's modding agent. It lives in a chat window drawn over Cyberpunk 2077 and writes, runs, checks and fixes [REDnode](../rednode/) mods with you, while you play. It is powered by Claude.
 
-{% include shot.html caption="REDagent in the game" shows="The REDagent chat window on the right of the game screen, with a question, an answer with its cost in dim text, and the footer with the model choice, the chat total, Chats, New and Key." %}
+{% include shot.html caption="REDagent in the game" src="/assets/shots/redagent/index-redagent-in-the-game.png" alt="Gameplay with the REDagent window on the right: the question How many eddies does V have?, the game calls REDagent made, one of them allowed, the answer with its cost, and the footer with Opus 5.5 and Sonnet 5.5, the chat total, Chats, New and Key." shows="The REDagent chat window on the right of the game screen, with a question, an answer with its cost in dim text, and the footer with the model choice, the chat total, Chats, New and Key." %}
 
 ## Benefits
 

@@ -24,13 +24,13 @@ To leave interactive mode, press **Esc** or click empty screen, away from any wi
 
 While a window has your input, the game doesn't get it: V doesn't move or shoot. That's on purpose, the same as Cyber Engine Tweaks' windows.
 
-{% include shot.html caption="Interactive mode" shows="Gameplay in interactive mode: several REDnode windows open, the REDnode cursor over one of them, and the launcher tab at the lower left." %}
+{% include shot.html caption="Interactive mode" src="/assets/shots/rednode/overlay-interactive-mode.png" alt="Gameplay in interactive mode with several REDnode windows open: the launcher, Settings, the Mod Manager, the Counter panel, the Mod log and a round HUD widget, with REDnode&rsquo;s cursor over the Mod Manager." shows="Gameplay in interactive mode: several REDnode windows open, the REDnode cursor over one of them, and the launcher tab at the lower left." %}
 
 ## The launcher
 
 The launcher is REDnode's home. Its tab sits at the lower left of the screen: **REDNODE** with a count, such as `· 9/20` (open packages out of all of them). Press F10, then click the tab to open the launcher; click it again to close it.
 
-{% include shot.html caption="The launcher" shows="The launcher opened above its tab: the GAME LINKED status, the Mod Manager first in the list, a few pinned packages with their switches, and the Space row, the Theme buttons with the gear and the version at the bottom." %}
+{% include shot.html caption="The launcher" src="/assets/shots/rednode/overlay-the-launcher.png" alt="The launcher open above its tab: the GAME LINKED status, packages with their switches, the Space row, the Theme buttons with the gear, and the version." shows="The launcher opened above its tab: the GAME LINKED status, the Mod Manager first in the list, a few pinned packages with their switches, and the Space row, the Theme buttons with the gear and the version at the bottom." %}
 
 | Part | What it does |
 |---|---|

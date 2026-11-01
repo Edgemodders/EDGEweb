@@ -105,7 +105,7 @@ They work with the keyboard too: Tab between widgets, arrows in lists and menus,
 </rn-window>
 ```
 
-{% include shot.html caption="The UI kit" shows="The UI kit sample window in the REDnode theme, showing buttons, toggles, a slider, a text field and tabs." %}
+{% include shot.html caption="The UI kit" src="/assets/shots/rednode/overlay-apps-the-ui-kit.png" alt="The UI kit sample&rsquo;s Controls tab: Primary, Ghost, Danger, Disabled and Hover me buttons, a Freeze time toggle, a Rain slider, a Call sign text field and an Upload progress bar." shows="The UI kit sample window in the REDnode theme, showing buttons, toggles, a slider, a text field and tabs." %}
 
 ### Themes
 

@@ -35,7 +35,7 @@ The **Mod log** is a built-in window with every line every Node mod prints, live
 
 Errors are red, and a crash shows only the stack lines from the mod's own code, so you see the file and line that broke. The same lines are in `red4ext\logs\rednode-mods.log`, each tagged with the mod's id.
 
-{% include shot.html caption="The Mod log" shows="The Mod log window with lines from several mods, one crash in red with its file and line, and the Errors only and Copy controls." %}
+{% include shot.html caption="The Mod log" src="/assets/shots/rednode/debugging-the-mod-log.png" alt="The Mod log window with a filter button per mod, lines from EDGEbuilder and the World test, a crash from the Crash mod in red with its file and line, and the Errors only switch, Pause, Clear and Copy." shows="The Mod log window with lines from several mods, one crash in red with its file and line, and the Errors only and Copy controls." %}
 
 ## Developer mode
 
@@ -54,7 +54,7 @@ Open it from the window's debug button in Developer mode, or from the [Mod Manag
 | **In the game** | As an overlay window, dragged and closed like any other, with a REDnode title bar in your theme |
 | **On the desktop** | In a normal desktop window, without taking the game's focus. Alt+Tab to it. Useful with a second monitor |
 
-{% include shot.html caption="The window debugger in the game" shows="Chromium DevTools drawn as an overlay window in the game, inspecting the Coords HUD, with the Console tab open." %}
+{% include shot.html caption="The window debugger in the game" src="/assets/shots/rednode/debugging-the-window-debugger-in-the-game.png" alt="DevTools as an overlay window in the game, titled Debugger: Coords HUD, with the Elements tab inspecting the Coords HUD&rsquo;s page and its styles, and the inspected element highlighted on the Coords HUD at the top." shows="Chromium DevTools drawn as an overlay window in the game, inspecting the Coords HUD, with the Console tab open." %}
 
 ## The Node debugger
 

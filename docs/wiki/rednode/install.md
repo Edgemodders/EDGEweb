@@ -71,7 +71,7 @@ REDagent and the optional packs install into the same apps folder, after REDnode
 4. Press **F10** to make the windows take the mouse, then click the tab to open the launcher. See [Using the overlay](overlay.html).
 5. The samples start switched off. Open the **Mod Manager**, the first entry in the launcher, and switch on the ones you want to try, such as **Hello mod**, **Vitals** or the **UI kit**. Press **Pin to launcher** on any you want one click away.
 
-{% include shot.html caption="The first start" shows="The main menu with the Welcome window and the REDNODE tab at the lower left." %}
+{% include shot.html caption="The first start" src="/assets/shots/rednode/install-the-first-start.png" alt="The Welcome to REDnode window in the game, explaining F10&rsquo;s three modes and warning about F9, with the launcher open at the lower left above the REDNODE tab." shows="The main menu with the Welcome window and the REDNODE tab at the lower left." %}
 
 The release's samples are Hello mod, Ask mod, UI kit, Vitals, Coords HUD, Perf, Test timer, Ink Coords, Ink vitals and Quest test. They are there to try things and to learn from. The Ink samples need Codeware.
 

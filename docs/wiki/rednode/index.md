@@ -11,7 +11,7 @@ reviewed: 2026-10-27
 
 REDnode is the EDGE platform's runtime. It plugs into Cyberpunk 2077 and lets two new kinds of mod run beside the game: **Node mods**, written in JavaScript or TypeScript, and **overlay apps**, small web pages drawn on top of the game. Both can read and change the running game. REDagent, EDGE's in-game assistant, is itself a REDnode package, and it writes its mods for REDnode.
 
-{% include shot.html caption="REDnode in the game" shows="Gameplay with the REDnode launcher open at the lower left, the Mod Manager in the middle, and a couple of HUD widgets (Coords HUD at the top, Vitals under it)." %}
+{% include shot.html caption="REDnode in the game" src="/assets/shots/rednode/index-rednode-in-the-game.png" alt="Gameplay with REDnode&rsquo;s launcher open at the lower left, the Mod Manager in the middle with Vitals selected, and the Coords HUD and Vitals widgets at the top." shows="Gameplay with the REDnode launcher open at the lower left, the Mod Manager in the middle, and a couple of HUD widgets (Coords HUD at the top, Vitals under it)." %}
 
 ## What it's for
 
