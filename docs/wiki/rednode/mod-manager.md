@@ -4,7 +4,7 @@ nav_title: Mod Manager
 section: REDnode
 order: 3
 description: "REDnode's built-in Mod Manager: every package in one table, switching them on and off, Pin to launcher and Pin to HUD, permissions, requirements and restarts."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # The Mod <span class="y">Manager</span>
@@ -21,7 +21,7 @@ Press **F10**, open the launcher and switch on **Mod Manager**, the first entry.
 
 ## The table
 
-One row per package, about 14 to a page. **Prev** and **Next** page through them. Click a column header to sort by it, again to reverse.
+One row per package, as many to a page as fit. **Prev** and **Next** page through them. Click a column header to sort by it, again to reverse; drag the edge between two headers to resize a column. Resize the whole window by the grip in its bottom-right corner. REDnode keeps the size, the column widths and whether the details are shut for your next visit.
 
 | Column | Shows |
 |---|---|
@@ -45,7 +45,7 @@ One row per package, about 14 to a page. **Prev** and **Next** page through them
 
 ## A package's details
 
-Select a row to see its details on the right:
+Select a row to see its details on the right. The tab between the table and the details slides them shut, for a wider table, and opens them again.
 
 | Part | What it's for |
 |---|---|
@@ -56,6 +56,7 @@ Select a row to see its details on the right:
 | Permissions | Each permission it asks for, with an **Allowed** switch |
 | **Requires** | The mods it needs, each found or missing, with the version found. A **Get REDbridge** button when it needs REDbridge and none is found |
 | **Service** | For a package that offers [mod services](making-mods.html#mod-services): the functions other packages can call, with what each does, and which are tools for AI assistants |
+| **Provides** | The [roles](making-mods.html#roles) a package answers, such as `voice`. When two installed packages provide the same role, choose here which one answers |
 | "Window closed" with **Show** | Brings back a window you closed |
 | **Last error**, **Last lines** | What a Node mod printed most recently |
 | **Window debugger**, **Debug (Node inspector)** | For developers: see [Debugging](debugging.html) |
@@ -88,8 +89,9 @@ Some packages ask for powers beyond drawing a window and calling the game. Each 
 | REDbridge | Read the game's archives and files, and write files where it asks | It's a tool for making mods, such as EDGEbuilder |
 | Staying above other packages' windows | Join REDnode's own tools in the [tool layer](spaces.html#the-tool-layer) | It's something you must always reach, like the Test timer |
 | Hiding every other package's windows (solo mode) | Clear the screen of other packages while it works | It needs the whole screen, such as an editor. See [solo mode](spaces.html#solo-mode) |
-| Swapping archives in the game's mod folder while the game runs | Replace an archive in `archive\pc\mod` and swap it into the running game, through RED Hot Tools | It's a tool you use to build and test mods, such as the Sound Tools pack's Hot swap |
+| Swapping archives in the game's mod folder while the game runs | Replace an archive in `archive\pc\mod` and swap it into the running game, through [REDswap](redswap.html) | It's a tool you use to build and test mods, such as the Sound Tools pack's Hot swap |
 | Managing REDnode | See what every package costs, end or restart any package, and switch AI assistants' tools on and off. The Mod Manager shows a warning under it | It's an admin tool you trust, such as the Task Manager and Tools Manager in the [Admin Tools pack](index.html#optional-packs) |
+| Your *service* key, shared with every EDGE tool | Read your [shared key](settings.html#shared-keys) for an AI service, such as Anthropic. Calls with it may cost you | You trust the package with your key and your bill, such as REDagent with your Anthropic key |
 
 A package that asks for a permission still runs without it; only the feature that needs it waits.
 

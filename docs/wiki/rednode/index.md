@@ -51,7 +51,7 @@ REDnode is the **Run** stage of the EDGE platform: the part that is in the game 
 
 ## Status
 
-**Released.** REDnode 0.41.0 came out on 2026-10-27, for **game version 2.5**, with [REDswap](redswap.html) for swapping archives into the running game. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
+**Released.** REDnode 0.50.2 came out on 2026-11-01, for **game version 2.5**. 0.49.5 (2026-10-31) added the [Console](overlay.html#the-console), [shared keys](settings.html#shared-keys) and resizable windows; 0.50.2 added pages that cover the whole game view and frames from other addresses. [REDswap](redswap.html), for swapping archives into the running game, comes with it from 0.41.0. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
 
 Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and see [Install and set up](install.html). It is also on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419), with the optional [Admin Tools](https://www.nexusmods.com/cyberpunk2077/mods/35793) pack and [REDagent](https://www.nexusmods.com/cyberpunk2077/mods/35670). It is still young: every part below as passed was tested in the developer's modded game, and the overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
 
@@ -76,6 +76,12 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | Mod services (mods calling each other, and offering tools to AI assistants) | Passed in game |
 | Development folders (run a package from your own project folder) | Passed in game |
 | [Console](overlay.html#the-console) (type commands and JavaScript in the game, such as `addItem`, with no Cyber Engine Tweaks) | Passed in game. Released in REDnode 0.49.5 |
+| [Shared keys](settings.html#shared-keys) (your AI service keys, set once in the game for every EDGE tool) | Passed in game. Released in REDnode 0.49.5 |
+| [Roles](making-mods.html#roles) (reach a kind of service, such as a voice, whichever package provides it) | Passed in game. Released in REDnode 0.49.5 |
+| Editor channel (tools on your PC play a game sound in the running game, with the game's own mix) | Passed in game. Released in REDnode 0.49.5 |
+| [EDGEmat's material tools](agents.html#edgemats-tools-for-in-game-assistants) for in-game assistants such as REDagent | Passed in game. Released in REDnode 0.49.5 |
+| Resizable windows, and a resizable [Mod Manager](mod-manager.html) | Passed in game. Released in REDnode 0.49.5 |
+| [Pages that cover the whole game view](overlay-apps.html#window-size-and-the-whole-screen) at any aspect ratio, and [frames from other addresses](overlay-apps.html#frames-from-another-address) | Passed in game. Released in REDnode 0.50.2 |
 | Optional packs: [Admin Tools](#optional-packs) and [Sound Tools](#optional-packs) | Released |
 | TweakDB without the game running | Not built yet |
 | Display: HDR, frame generation, ultrawide | Planned |
@@ -88,7 +94,7 @@ Two app packs come as their own zips, attached to each REDnode release. Install 
 | Pack | Apps | For |
 |---|---|---|
 | **REDnode Admin Tools** 0.1.0 | Task Manager (what every package costs, **End task**, **Restart**), Tools Manager (every tool an AI assistant sees, switched on and off) | Players and modders who want to manage REDnode itself. Needs REDnode 0.37.0 and the `admin` permission. [Guide](https://edgemodders.github.io/REDnode/admin-tools.html) |
-| **REDnode Sound Tools** 0.1.0 | Sound Tracer, Sound Search, Hot swap | Sound modders: see and hear every sound the game plays, and swap a sound mod in without a restart. [Guide](https://edgemodders.github.io/REDnode/sound-tools.html) |
+| **REDnode Sound Tools** 0.1.1 | Sound Tracer, Sound Search, Hot swap | Sound modders: see and hear every sound the game plays, and swap a sound mod in without a restart, through REDswap. Needs REDnode 0.41.0 or later. [Guide](https://edgemodders.github.io/REDnode/sound-tools.html) |
 
 ## In this section
 
@@ -97,7 +103,7 @@ Two app packs come as their own zips, attached to each REDnode release. Install 
 | Page | |
 |---|---|
 | [Install and set up](install.html) | What you need, installing the release, first start, updating and removing, building from source |
-| [Using the overlay](overlay.html) | F10 and the three modes, the launcher, moving windows, themes, keys |
+| [Using the overlay](overlay.html) | F10 and the three modes, the launcher, moving windows, themes, the Console, keys |
 | [Mod Manager](mod-manager.html) | Every package in one table: on and off, pins, permissions, restart |
 | [Spaces and layers](spaces.html) | Sets of windows you switch between, the tool layer, solo mode |
 

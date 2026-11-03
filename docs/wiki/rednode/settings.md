@@ -4,7 +4,7 @@ nav_title: Settings and controls
 section: REDnode
 order: 11
 description: "Every REDnode setting, key, permission and manifest field, and where REDnode keeps its files."
-reviewed: 2026-10-26
+reviewed: 2026-11-03
 ---
 
 # Settings and <span class="y">controls</span>
@@ -17,6 +17,7 @@ REDnode's settings are in the **Settings** drawer: press F10, open the launcher 
 
 | Setting | Default | What it does | Change it when |
 |---|---|---|---|
+| **Keys** | | Opens the Keys panel beside the drawer: your AI service keys, shared by every EDGE tool on your PC. See [Shared keys](#shared-keys) | You set up REDagent, or another tool that uses an AI service |
 | **GPU sharing** | on | Windows reach the game as shared GPU textures, with no copying of pixels. Off, they're copied through the CPU instead. Switching reopens every window | A window looks wrong (garbage, flicker, stale pictures). If GPU sharing fails, REDnode switches it off by itself for that session |
 | **Hot reload** | off for players | Restarts a mod, or reloads an app's page, when its files change | You're making or editing a package, or REDagent is |
 | **MCP server** | off for players | Lets Claude Code and other programs on your PC use REDnode's [MCP tools](agents.html) | You want Claude Code to see and call the game |
@@ -49,6 +50,24 @@ Per package, in the launcher or the [Mod Manager](mod-manager.html):
 | Space | The space you were in when it first opened | Where its windows show |
 | **Debug (Node inspector)** | Off, not saved | Runs the Node mod with Node's inspector for debugging |
 
+### Shared keys
+
+Tools that use an AI service need your own key for it, such as an Anthropic key for REDagent. From REDnode 0.49.5 you set each key once, in the game, and every EDGE tool on your PC that supports shared keys can read it. REDagent does from 0.4.1. Open the Settings drawer and press **Open** on the **Keys** line: the Keys panel slides out beside it.
+
+{% include shot.html caption="The Keys panel" shows="The launcher's Settings drawer with the Keys panel open beside it: an Anthropic line showing four dots and the key's last four characters with Used by REDagent, other services Not set with Set, and Other service id at the bottom." %}
+
+| A line shows | Means |
+|---|---|
+| `•••• abcd` | Set: the key's last 4 characters. The key itself is never shown again |
+| From `GEMINI_API_KEY` | An environment variable holds the key, and wins over the saved one |
+| Unreadable here | Saved by another Windows user or on another PC: set it again |
+| Not set | No key yet |
+| Used by ... | The tools that have read it |
+
+**Set** and **Replace** open a box that shows dots: paste the key and press Enter. A key that doesn't look right for its service is refused: an Anthropic key starts with `sk-ant-`, an OpenAI key with `sk-`. **Remove** asks once more, because it removes the key for every tool. **Other service id** adds a line for any other service.
+
+Keys are kept encrypted for your Windows user, one file per service, in `%APPDATA%\Edgemodders\keys`. A package reads a key only when it asks for the `keys:<service>` permission and you allow it. It can open REDnode's own **Key request** window, so you paste the key into REDnode, never into the package. More in REDnode's [shared keys guide](https://edgemodders.github.io/REDnode/keys.html).
+
 ## Keys
 
 | Key | Where | Does |
@@ -72,7 +91,8 @@ What a package can ask for in its manifest's `permissions`, and the name you see
 | `bridge` | REDbridge, WolvenKit's engine: reads the game's archives and files, and can write files where the package asks | `kernel.bridge()` |
 | `front` | staying above other packages' windows, with REDnode's own tools | The [tool layer](spaces.html#the-tool-layer) |
 | `solo` | hiding every other package's windows while it asks (solo mode) | `ui.solo()` |
-| `archives` | swapping archives in the game's mod folder while the game runs (hot-loading, through RED Hot Tools) | `archives.reload()` |
+| `archives` | swapping archives in the game's mod folder while the game runs (hot-loading) | `archives.reload()`, through [REDswap](redswap.html) |
+| `keys:<service>`, such as `keys:anthropic` | your Anthropic key (or the service's), shared with every EDGE tool (calls with it may cost you) | `secrets.shared()` and `secrets.askShared()`: the player's [shared key](#shared-keys) |
 | `admin` | managing REDnode: what every package costs, ending or restarting any package, and switching AI assistants' tools on and off | `admin`, as the [Admin Tools pack](index.html#optional-packs) uses. The Mod Manager shows a warning under it |
 
 ## Manifest fields
@@ -91,12 +111,14 @@ Every field of `rednode-app.json`:
 | `anchor` | Apps | `top-left` (default), `top`, `top-right`, `left`, `center`, `right`, `bottom-left`, `bottom`, `bottom-right` |
 | `x`, `y` | Apps | Offset from the anchor in 1080p pixels. With `bottom-right`, `x: -40` is 40 px in from the right edge |
 | `kind` | Apps | `window` (default) or `hud`: drawn, never focused, never dragged |
+| `resizable`, `minWidth`, `minHeight` | Apps | The player can resize the window by a grip in its corner, down to the minimum size. See [Overlay apps](overlay-apps.html#window-size-and-the-whole-screen) |
+| `fill` | Apps | `screen`: the page covers the whole game view at any aspect ratio |
 | `hideWith` | Apps | Game states that hide the window: `menu`, `photo-mode`, `scene`, `main-menu` |
 | `open` | All | Start open or running, until the player changes it |
 | `isolation` | Node mods | `process`: always its own process, never shared. For mods with native addons |
 | `permissions` | All | Powers to ask the player for (above) |
 | `requires` | All | What it needs, with version ranges: game mods, `rednode`, `redbridge`, or another REDnode package by its id. See [Requirements](making-mods.html#requirements) |
-| `provides` | All | What it offers other packages. Today only `agent`, as REDagent does |
+| `provides` | All | [Roles](making-mods.html#roles) it answers for other packages through its service file, such as `voice`. `agent` is REDagent's |
 
 ## Files and folders
 
@@ -105,10 +127,12 @@ Every field of `rednode-app.json`:
 | REDnode | `red4ext\plugins\REDnode` in the game folder: `REDnode.dll`, `Scripts`, `host`, `apps` |
 | Packages | `red4ext\plugins\REDnode\apps`, one folder each |
 | Settings, positions, spaces, permissions, development folders, secrets, packages' data | `%APPDATA%\@rednode\overlay` |
+| Shared keys | `%APPDATA%\Edgemodders\keys`, one encrypted file per service |
+| The editor channel's port and token, rewritten each run | `%LOCALAPPDATA%\REDnode\editor.json` |
 | REDbridge, when **Get REDbridge** installed it | `%LOCALAPPDATA%\REDnode\bridge` |
 | Logs | `red4ext\logs` in the game folder: `rednode-overlay.log` (and `rednode-overlay.prev.log`, the last session's), `rednode-mods.log`, the plugin's `rednode-*.log`, and `rednode-faults.log` around archive swaps |
 
-The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. Close the game first.
+The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. In the same file, `"editorChannel": "off"` turns off the editor channel, which lets tools on your PC play game sounds in the running game, and `"edgematTools": "all"` also lists EDGEmat's tools to desktop assistants such as Claude Code. Close the game first.
 
 ## For developers: running the host by hand
 

@@ -3,7 +3,7 @@ title: Overlay apps
 section: REDnode
 order: 7
 description: "Build in-game windows and HUD widgets from web pages with REDnode: a first app, the UI kit and its themes, HUD widgets, game sounds, the title bar and pointer lock."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Overlay <span class="y">apps</span>
@@ -187,6 +187,19 @@ addEventListener('pointerup', (e) => {
 ```
 
 While locked, the cursor is hidden and stays where it was, and each movement arrives with `movementX` and `movementY`. The lock ends with `exitPointerLock()`, **Esc**, **F10**, or the window closing; `pointerlockchange` tells the page. Only the window in use can take the lock, and only in interactive mode. This passed its in-game test in REDnode 0.22.0. The **Pointer lock test** sample shows it.
+
+## Window size and the whole screen
+
+| Manifest | Does | Since |
+|---|---|---|
+| `"resizable": true`, with `minWidth` and `minHeight` | A grip in the window's bottom-right corner lets the player resize it, as the Mod Manager does. REDnode keeps the size with the window's place, and **Reset position and size** in the title bar goes back to the manifest's. Size your page with `100vw` and `100vh` so it follows | 0.49.5 |
+| `"fill": "screen"` | The page covers the whole game view at any aspect ratio: always 1080 high, and as wide as the view (1920 at 16:9, 2580 at 21:9, 3840 at 32:9). It follows a resolution change. For an editor's see-through canvas over the world. A `<rn-window draggable>` on such a page moves inside it, and the rest of the page stays put | 0.50.2 |
+
+Both passed in game. The **Fill test** sample shows a full-view page. Details in the guide: [Resizable windows](https://edgemodders.github.io/REDnode/overlay-apps.html#resizable-windows), [A page that covers the whole game view](https://edgemodders.github.io/REDnode/overlay-apps.html#a-page-that-covers-the-whole-game-view).
+
+## Frames from another address
+
+A page can show another page in an `<iframe>`: one served from `http://127.0.0.1:<port>`, another site, or a sandboxed frame. From REDnode 0.50.2 the frame gets real input in the game: clicks, the wheel, hover, drags and typing, through CSS transforms and frames inside frames. This passed in game with the **Frame test** sample. See [Frames from another address](https://edgemodders.github.io/REDnode/overlay-apps.html#frames-from-another-address).
 
 ## Good to know
 

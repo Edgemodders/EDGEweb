@@ -3,7 +3,7 @@ title: Agents and MCP
 section: REDnode
 order: 10
 description: "REDnode and AI agents: the MCP server that lets Claude Code see and call the running game, packages that use it, and asking REDagent from your own mod."
-reviewed: 2026-10-26
+reviewed: 2026-11-03
 ---
 
 # Agents and <span class="y">MCP</span>
@@ -77,6 +77,10 @@ A REDnode package can offer functions of its own as tools: the ones its [service
 
 To see every tool an assistant can reach, and switch any tool or any mod's tools off for all assistants, install the **Tools Manager** from the [Admin Tools pack](index.html#optional-packs). It also shows which assistants connected and their recent calls.
 
+### EDGEmat's tools for in-game assistants
+
+From REDnode 0.49.5, REDnode carries [EDGEmat](../edgemat/)'s MCP server and starts it the first time an in-game assistant such as REDagent needs it, with REDnode's own Node, your game folder and REDbridge. Its tools show as `edgemat__mat_*`: finding a garment's materials and describing them run without asking; edits and new materials ask you first. The **Tools Manager** switches them on and off. This passed in game with REDagent. Claude Code on your desktop gets EDGEmat through [EDGEchat](../connect-claude-code.html) instead. Details in REDnode's [MCP docs](https://edgemodders.github.io/REDnode/mcp.html#edgemats-tools-e1).
+
 ### Safety
 
 - The server listens only on your own PC (`127.0.0.1`, port 41820), and every request needs a token: the one Claude Code gets when you press **Allow** in the game, or the fixed one in **Copy setup**. Only someone at the game can allow a new assistant, and REDnode keeps only a hash of each token.
@@ -124,4 +128,4 @@ The **Ask mod** sample asks whatever you type and streams the answer. A package 
 
 ## REDagent
 
-REDagent is the agent that lives in the game: a chat window, powered by Claude, that writes, runs and fixes REDnode packages with you. It's a REDnode package with the `mcp` permission, released separately (0.3.2, for game 2.5). See the [REDagent section](../redagent/).
+REDagent is the agent that lives in the game: a chat window, powered by Claude, that writes, runs and fixes REDnode packages with you. It's a REDnode package with the `mcp` permission, released separately (0.4.1, for game 2.5, needs REDnode 0.50.2). See the [REDagent section](../redagent/).

@@ -19,7 +19,7 @@ Everything here works the same in a Node mod and in an overlay app. Every call i
 | `tweakdb` | Change TweakDB, undone when your package stops | [TweakXL](https://github.com/psiberx/cp2077-tweak-xl) 1.10 or later | Passed in game |
 | `world` | Spawn, move and remove objects | [Codeware](https://github.com/psiberx/cp2077-codeware) 1.14 or later | Passed in game |
 | `kernel.bridge()` | The game's archives and files | [REDbridge](../redbridge/) and the `bridge` permission | Passed in game |
-| `archives` | Swap changed archives into the running game | [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools/releases) 1.3 or later and the `archives` permission | Passed in game |
+| `archives` | Swap changed archives into the running game | [REDswap](redswap.html), installed with REDnode, and the `archives` permission | Passed in game |
 | `audio`, `game.audio` | The game's UI sounds; your own audio files | Nothing | Passed in game |
 | `ink`, `t` | The game's own UI widgets on the HUD; text in the player's language | Codeware | Passed in game. Experimental |
 | `quests`, `journal` | Quest facts and journal entries | Nothing | Passed in game |
@@ -85,7 +85,9 @@ This is cut down from the **Vitals** and **Game API mod** samples, which read V'
 | Wrong arguments are refused | Arguments are checked against the function's types first. A wrong one fails with its name and type, and the game isn't touched |
 | Right types, wrong moment | The checks catch wrong types, not wrong values. Calling a function the game doesn't expect at that moment can still crash it, as with any script mod |
 | Batch by not waiting | Calls you start together, without awaiting each one, run in the same game frame (up to 256 a frame; the rest wait for the next frames, up to 4,096 waiting). In the developer's test, ten at a time gave 300 moves a second at 30 fps |
-| Not supported yet | Functions with `script_ref` parameters fail with a clear message |
+| `script_ref` parameters | Pass the value itself: `api.GetLocalizedText("LocKey#10947")` (REDnode 0.49.5) |
+| No `null` for a needed object | A plain `null` for an object parameter the game doesn't mark optional is refused, naming the parameter, because many game functions crash on it. Pass `api.$null` when you mean no object on purpose (REDnode 0.49.5) |
+| Not while V is out of the world | While the game starts, at the main menu and during a load, the global and static functions that reach the world's systems (such as `GameInstance.GetWeatherSystem`) are refused with "V is not in the world yet", where some crashed the game. `GetPlayer` and `GetSettingsSystem` still work. Wait for `game.state().world` (REDnode 0.49.5) |
 
 ### The game API reference
 
@@ -227,7 +229,7 @@ The same swap is the MCP tool `archives_reload`, and the Sound Tools pack's **Ho
 | Want | Today |
 |---|---|
 | The game's own UI sounds | Works: `game.audio.play(name)`, or `sound` on UI kit buttons. See [Overlay apps](overlay-apps.html#game-sounds) |
-| Your own audio files (WAV, OGG, MP3, FLAC) | Works: list them under `sounds` in the manifest and play them with `audio.play(name)`. They follow the game's volume sliders, pause in menus, go quiet when the game is in the background, and can be panned left and right. Passed in game in REDnode 0.24 |
+| Your own audio files (WAV, OGG, MP3, FLAC) | Works: list them under `sounds` in the manifest and play them with `audio.play(name)`, or play a file your package made in its data folder by its full path (REDnode 0.49.5). They follow the game's volume sliders, pause in menus, go quiet when the game is in the background, and can be panned left and right. Passed in game in REDnode 0.24 |
 | Sound placed in the world, effects, voices | Planned (the next phases of REDnode's own audio engine) |
 | The game's own recordings and sound events | Experimental: `audio.playGame`, `audio.event`, `audio.searchSounds` and `audio.trace`, used by the [Sound Tools pack](index.html#optional-packs) |
 | The rest of the game's audio system (parameters, radio) | Reachable through `api`, but untested beyond playing a sound |
@@ -243,7 +245,9 @@ Newer parts of the `rednode` package, each tested in game. They have their own p
 | `ink` | Builds trees of the game's own UI widgets on the HUD from Node (`ink.mount`, `ink.text`, `ink.bar`, `ink.list`), drawn by the game in its own look, with game values bound to them and rebuilt after each save load. Experimental | Codeware | [Native game UI](https://edgemodders.github.io/REDnode/ink.html) |
 | `t()`, `game.language()` | Text in the player's language from your package's `locales/<language>.json`, with plurals and V's gender; follows a language change | Nothing | [Native game UI](https://edgemodders.github.io/REDnode/ink.html) |
 | `quests`, `journal` | Read, set and watch quest facts; read, change and track journal entries. `game.player.teleport` moves V. For testing quests | Nothing | [Quest API](https://edgemodders.github.io/REDnode/quests.html) |
-| `service` | Call other packages' functions, and offer your own | Nothing | [Mod services](making-mods.html#mod-services) |
+| `service`, `use` | Call other packages' functions, and offer your own; reach a package by its [role](making-mods.html#roles) | Nothing | [Mod services](making-mods.html#mod-services) |
+| `game.state().world`, `game.onState` | True only while V is in the world: false while the game starts, at the main menu and from the start of every load. Read the world's systems (time, weather, districts) only while it's true. REDnode 0.49.5 | Nothing | [Talking to the game](https://edgemodders.github.io/REDnode/overlay-apps.html#talking-to-the-game) |
+| `loc.text(key)`, `loc.language()` | The game's own text for a LocKey, such as a district's or an item's name, in the player's language: `await loc.text("LocKey#10963")` gives "Little China" in English. REDnode 0.49.5 | Nothing | [Talking to the game](https://edgemodders.github.io/REDnode/overlay-apps.html#talking-to-the-game) |
 
 The **Ink Coords**, **Ink vitals** and **Quest test** samples show them.
 

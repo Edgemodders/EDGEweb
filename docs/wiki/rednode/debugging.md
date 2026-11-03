@@ -4,7 +4,7 @@ nav_title: Debugging
 section: REDnode
 order: 9
 description: "Find out why a REDnode package misbehaves: the Mod log, Developer mode, Chromium's DevTools for windows, the Node debugger for mods, in the game or on the desktop, and attaching VS Code."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # <span class="y">Debugging</span>
@@ -32,6 +32,7 @@ The **Mod log** is a built-in window with every line every Node mod prints, live
 | **Pause** | Stop the list moving while you read |
 | **Clear** | Empty the window |
 | **Copy** | Put the lines shown on the clipboard, ready to paste into a bug report or a chat with Claude |
+| **✕** | Close the Mod log (REDnode 0.49.5) |
 
 Errors are red, and a crash shows only the stack lines from the mod's own code, so you see the file and line that broke. The same lines are in `red4ext\logs\rednode-mods.log`, each tagged with the mod's id.
 

@@ -3,7 +3,7 @@ title: Node mods
 section: REDnode
 order: 6
 description: "Write REDnode mods in JavaScript that run in Node beside the game: a first mod, windows without HTML, game events, logs, isolation, hot reload, data and secrets."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Node <span class="y">mods</span>
@@ -69,7 +69,7 @@ The `ui` builder makes windows from a few building blocks. REDnode draws them wi
 | `ui.button(label, onClick, { variant, sound })` | A button |
 | `ui.toggle(label, onChange, { checked })` | An on and off switch |
 | `ui.slider(label, onChange, { min, max, step, value, unit })` | A slider |
-| `ui.input({ label, placeholder, value, onChange, onSubmit })` | A text field |
+| `ui.input({ label, placeholder, value, onChange, onSubmit })` | A text field. `password: true` shows dots, for a key (REDnode 0.49.5) |
 | `ui.progress(value, { label, max })` | A progress bar |
 | `ui.list({ lines, keep, height, follow })` | A list of lines that scrolls on its own, for a log or a live feed. `push(...lines)` adds lines, `clear()` empties it |
 | `ui.row(...)`, `ui.column(...)` | Layout |
@@ -129,6 +129,7 @@ Because a restart runs your mod from the top, write it so that starting twice is
 | `pkg.dir` | Your package's folder in the apps folder. Read from it; don't write to it |
 | `pkg.dataDir` | A folder of your own, outside the apps folder, that survives updates. Write your files here |
 | `secrets.get(name)`, `secrets.set(name, value)`, `secrets.delete(name)` | Secrets such as an API key, encrypted with the player's Windows account. A package reads only its own |
+| `secrets.shared(service)`, `secrets.askShared(service, { reason })` | The player's [shared key](settings.html#shared-keys) for an AI service, such as `anthropic`, with the `keys:<service>` permission. `askShared` opens REDnode's **Key request** window, so the player pastes the key into REDnode, never into your package. REDnode 0.49.5 |
 
 ```js
 import { pkg, secrets } from 'rednode';

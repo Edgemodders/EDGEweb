@@ -4,14 +4,14 @@ nav_title: REDswap
 section: REDnode
 order: 8.5
 description: "REDswap, the plugin that loads a changed archive into the running game on version 2.5: what it does, how to use it from REDnode, AI assistants and your own tools, and what to do when a swap does not show."
-reviewed: 2026-10-27
+reviewed: 2026-11-03
 ---
 
 # RED<span class="y">swap</span>
 
 **REDswap** loads a changed `.archive` into the running game. Edit a mesh, a material or a texture, pack it, swap it in, and see it on V or in the world a moment later, with no restart. It is a small RED4ext plugin for game version **2.5**. REDnode installs it and uses it for every archive swap; it also has its own [Nexus page](https://www.nexusmods.com/cyberpunk2077/mods/36172) for tools and players who want it alone.
 
-> **Status:** released on 27 October 2026, in **REDnode 0.41.0** and as **REDswap 1.0.0** on its own. Passed in game on 2.5 (swaps of about 50 ms, no crash). REDnode 0.40.1 and earlier swapped through RED Hot Tools, which has no build for 2.5 yet.
+> **Status:** released on 27 October 2026, in **REDnode 0.41.0** and as **REDswap 1.0.0** on its own. The latest is **REDswap 1.0.3**, in REDnode 0.49.5 and later and attached on its own to REDnode's releases. Passed in game on 2.5 (swaps of about 50 ms, no crash; six restores in a row in 1.0.3's stress test). REDnode 0.40.1 and earlier swapped through RED Hot Tools, which has no build for 2.5 yet.
 
 ## Why you'd want it
 
@@ -58,7 +58,8 @@ Anything else already in the world keeps the old version until the game loads it
 | What you see | Why, and what to do |
 |---|---|
 | "cannot swap archives in this game" | REDswap's checks failed: usually a game patch REDswap does not know yet. Its log, `red4ext\logs\redswap-*.log`, says which check. Wait for an update |
-| The swap worked but nothing changed | The object loaded the old version before the swap. Clothing V wears refreshes on its own with REDnode; for anything else, make the game load it again |
+| The swap worked but nothing changed | The object loaded the old version before the swap. Clothing V wears refreshes on its own with REDnode, and from 0.49.5 so does the inventory's preview of V; for anything else, make the game load it again |
+| Files your new archive left out still look like the old archive's | Fixed in REDswap 1.0.3 (REDnode 0.49.5): files a new build leaves out load from the game, or another mod, again. So swapping a file out restores the game's own look. Update REDnode |
 | "Load a save first" | Swaps work in a loaded save, not at the main menu |
 | The game closed at the swap | A broken archive, or a mod missing its other parts, crashes the game at the swap as it would at start. Check the mod loads after a normal restart |
 | A sound mod | Archives with the game's sound swap through REDnode, which pauses the game for a moment around it. Untested on 2.5 so far |

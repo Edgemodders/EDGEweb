@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: REDnode
 order: 12
 description: "Fixes for common REDnode problems: no launcher tab, the wrong game version, missing windows, crashed mods, packages that need something, archive swaps, and Claude Code not connecting."
-reviewed: 2026-10-26
+reviewed: 2026-11-03
 ---
 
 # Troubleshooting <span class="y">REDnode</span>
@@ -103,6 +103,10 @@ After a swap, things already in the world can keep the old look until they load 
 ### "That game object no longer exists"
 
 A mod used a game object from before a save load, or one the game removed. It's the mod's mistake, not yours: it should fetch objects again after each load. Restarting the mod usually clears it.
+
+### "V is not in the world yet"
+
+A package called a game function that reaches the world (weather, time, districts) while the game was starting, at the main menu or during a load. From REDnode 0.49.5 REDnode refuses such calls instead of letting them crash the game. Load a save and try again. If a mod shows it often, tell its author: the mod should wait for `game.state().world` (see [Game API](game-api.html#rules-worth-knowing)).
 
 ### Windows flicker, show garbage or don't update
 

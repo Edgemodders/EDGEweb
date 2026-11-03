@@ -4,7 +4,7 @@ nav_title: Making mods and apps
 section: REDnode
 order: 5
 description: "What a REDnode package is: Node mods, overlay apps and HUD widgets, the rednode-app.json manifest, the apps folder, permissions, requirements, mod services, and how to work on one and share it."
-reviewed: 2026-10-26
+reviewed: 2026-11-03
 ---
 
 # Making mods and <span class="y">apps</span>
@@ -96,7 +96,8 @@ A package can ask for powers the player must allow, in its manifest:
 | `bridge` | REDbridge: the game's archives and files | [Game API](game-api.html#the-games-files-through-redbridge) |
 | `front` | Staying in the tool layer, above other packages | [Spaces and layers](spaces.html#the-tool-layer) |
 | `solo` | Solo mode | [Spaces and layers](spaces.html#solo-mode) |
-| `archives` | Swapping archives into the running game, through RED Hot Tools | [Game API](game-api.html#swapping-archives-into-the-running-game) |
+| `archives` | Swapping archives into the running game, through [REDswap](redswap.html) | [Game API](game-api.html#swapping-archives-into-the-running-game) |
+| `keys:<service>` | The player's [shared key](settings.html#shared-keys) for an AI service, such as `keys:anthropic`, with `secrets.shared` and `secrets.askShared` | [Node mods](node-mods.html#data-and-secrets) |
 | `admin` | Managing REDnode: what every package costs, ending or restarting packages, switching AI assistants' tools | REDnode's [Admin Tools guide](https://edgemodders.github.io/REDnode/admin-tools.html#the-admin-permission) |
 
 The calls that need a permission reject until the player allows it. Explain in your description why you need it.
@@ -165,6 +166,23 @@ counter.$on('changed', (e) => console.log(e.count)); // its events
 | Requirements | Name the other package in `requires`, so players see it's missing |
 
 REDnode 0.34.0 to 0.36.0 added these step by step; all are in 0.37.0. The **Counter service** and **Counter panel** samples in REDnode's repo show both sides. The full rules are in [Calling other packages](https://edgemodders.github.io/REDnode/overlay-apps.html#calling-other-packages) and [Describing a service](https://edgemodders.github.io/REDnode/overlay-apps.html#describing-a-service).
+
+### Roles
+
+Sometimes a mod wants a kind of service, not one package: a voice that speaks its lines, whichever voice package the player has. The provider names a **role** in its manifest, and callers ask for the role with `use`:
+
+```json
+{ "id": "my-voice", "name": "My voice", "version": "0.1.0", "service": "service.mjs", "provides": ["voice"] }
+```
+
+```js
+import { use } from 'rednode';
+
+const voice = await use('voice');   // the same handle as service.connect
+await voice.speak('Choom, you look like hell.', 'judy');
+```
+
+When two installed packages provide the same role, the player picks the one that answers in the Mod Manager's **Provides** section. With several and no choice, `use` fails with their names. `agent` is REDagent's role, reached with `agent.ask`. Released in REDnode 0.49.5; the **Roles test** sample passed in game. The rules are in [Roles](https://edgemodders.github.io/REDnode/overlay-apps.html#roles-a-service-found-by-what-it-does).
 
 ## Learn from the samples
 
