@@ -37,7 +37,7 @@ One row per package, as many to a page as fit. **Prev** and **Next** page throug
 
 ### Finding a package
 
-- **Search** matches the name, the id, the author and the description.
+- **Search** matches the name, the id, the author and the description, strongest matches first: names that start with what you typed, then names with a word that starts with it, then names that hold it, then matches by id, author or description. A column's sort orders each group, so the strong matches stay on top. The **✕** at the right of the box clears it.
 - The kind chips: **All**, **Apps**, **Mods**, **HUD**.
 - The state chips: **Any**, **On**, **Off**, **Errors**, **New**.
 
@@ -45,7 +45,7 @@ One row per package, as many to a page as fit. **Prev** and **Next** page throug
 
 ## A package's details
 
-Select a row to see its details on the right. The tab between the table and the details slides them shut, for a wider table, and opens them again.
+Select a row to see its details on the right. The tab between the table and the details slides them shut, for a wider table, and opens them again. Drag the edge between the table and the details to make them wider or narrower; REDnode keeps the width, and a double-click on the edge puts back the first width.
 
 | Part | What it's for |
 |---|---|
@@ -90,7 +90,7 @@ Some packages ask for powers beyond drawing a window and calling the game. Each 
 | Staying above other packages' windows | Join REDnode's own tools in the [tool layer](spaces.html#the-tool-layer) | It's something you must always reach, like the Test timer |
 | Hiding every other package's windows (solo mode) | Clear the screen of other packages while it works | It needs the whole screen, such as an editor. See [solo mode](spaces.html#solo-mode) |
 | Swapping archives in the game's mod folder while the game runs | Replace an archive in `archive\pc\mod` and swap it into the running game, through [REDswap](redswap.html) | It's a tool you use to build and test mods, such as the Sound Tools pack's Hot swap |
-| Managing REDnode | See what every package costs, end or restart any package, and switch AI assistants' tools on and off. The Mod Manager shows a warning under it | It's an admin tool you trust, such as the Task Manager and Tools Manager in the [Admin Tools pack](index.html#optional-packs) |
+| Managing REDnode | See what every package costs, end or restart any package, switch packages on and off, change the game's own UI widgets live, and switch AI assistants' tools on and off. The Mod Manager shows a warning under it | It's an admin tool you trust, such as the Task Manager and Tools Manager in the [Admin Tools pack](index.html#optional-packs), or the [UI Workbench](ui-tools.html#the-admin-permission) for Try, To source and its projects |
 | Your *service* key, shared with every EDGE tool | Read your [shared key](settings.html#shared-keys) for an AI service, such as Anthropic. Calls with it may cost you | You trust the package with your key and your bill, such as REDagent with your Anthropic key |
 
 A package that asks for a permission still runs without it; only the feature that needs it waits.

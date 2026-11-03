@@ -64,6 +64,8 @@ Tools that use an AI service need your own key for it, such as an Anthropic key 
 | Not set | No key yet |
 | Used by ... | The tools that have read it |
 
+The panel has a line for each service EDGE tools know: Anthropic, Google Gemini, OpenAI, ElevenLabs and, from REDnode 0.56.1, **Tripo** (the 3D service EDGEmat's Wardrobe Designer uses), so you can set a key before any tool asks for it.
+
 **Set** and **Replace** open a box that shows dots: paste the key and press Enter. A key that doesn't look right for its service is refused: an Anthropic key starts with `sk-ant-`, an OpenAI key with `sk-`. **Remove** asks once more, because it removes the key for every tool. **Other service id** adds a line for any other service.
 
 Keys are kept encrypted for your Windows user, one file per service, in `%APPDATA%\Edgemodders\keys`. A package reads a key only when it asks for the `keys:<service>` permission and you allow it. It can open REDnode's own **Key request** window, so you paste the key into REDnode, never into the package. More in REDnode's [shared keys guide](https://edgemodders.github.io/REDnode/keys.html).
@@ -73,10 +75,10 @@ Keys are kept encrypted for your Windows user, one file per service, in `%APPDAT
 | Key | Where | Does |
 |---|---|---|
 | **F10** | In the game | Passive, interactive, hidden, and round again |
-| **Esc** | Interactive mode | Back to passive. Ends a held cursor first |
+| **Esc** | Interactive mode | Back to passive. Ends a held cursor first. A page that asks for Esc, such as the UI Workbench while it picks, gets it instead; F10 always leaves |
 | Click empty screen | Interactive mode | Back to passive |
 | **Ctrl+1** to **Ctrl+9** | Overlay open | Switch [space](spaces.html) |
-| **Ctrl+C**, **Ctrl+V**, **Ctrl+X**, **Ctrl+A**, **Ctrl+Z** | The front window | Copy, paste, cut, select all, undo |
+| **Ctrl+C**, **Ctrl+V**, **Ctrl+X**, **Ctrl+A**, **Ctrl+Z**, **Ctrl+Y** | The front window | Copy, paste, cut, select all, undo, redo in a text field. From REDnode 0.56.1 they reach the page as keys, so a page with its own undo or copy, such as the UI Workbench's editor, takes them |
 
 The F10 key can't be changed yet.
 
@@ -93,7 +95,7 @@ What a package can ask for in its manifest's `permissions`, and the name you see
 | `solo` | hiding every other package's windows while it asks (solo mode) | `ui.solo()` |
 | `archives` | swapping archives in the game's mod folder while the game runs (hot-loading) | `archives.reload()`, through [REDswap](redswap.html) |
 | `keys:<service>`, such as `keys:anthropic` | your Anthropic key (or the service's), shared with every EDGE tool (calls with it may cost you) | `secrets.shared()` and `secrets.askShared()`: the player's [shared key](#shared-keys) |
-| `admin` | managing REDnode: what every package costs, ending or restarting any package, and switching AI assistants' tools on and off | `admin`, as the [Admin Tools pack](index.html#optional-packs) uses. The Mod Manager shows a warning under it |
+| `admin` | managing REDnode: what every package costs, ending or restarting any package, and switching AI assistants' tools on and off | `admin`, as the [Admin Tools pack](index.html#optional-packs) uses; also switching packages on and off (`admin.setOpen`), a projects folder under Documents (`admin.projectsFolder`) and changing the game's own UI widgets live (`ink.try`), as the [UI Workbench](ui-tools.html#the-admin-permission) uses. The Mod Manager shows a warning under it |
 
 ## Manifest fields
 
@@ -130,6 +132,7 @@ Every field of `rednode-app.json`:
 | Shared keys | `%APPDATA%\Edgemodders\keys`, one encrypted file per service |
 | The editor channel's port and token, rewritten each run | `%LOCALAPPDATA%\REDnode\editor.json` |
 | REDbridge, when **Get REDbridge** installed it | `%LOCALAPPDATA%\REDnode\bridge` |
+| The [UI Workbench](ui-tools.html)'s projects, and its exports | `Documents\REDnode\UI projects` (watched as a development folder) and `Documents\REDnode\UI exports` |
 | Logs | `red4ext\logs` in the game folder: `rednode-overlay.log` (and `rednode-overlay.prev.log`, the last session's), `rednode-mods.log`, the plugin's `rednode-*.log`, and `rednode-faults.log` around archive swaps |
 
 The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. In the same file, `"editorChannel": "off"` turns off the editor channel, which lets tools on your PC play game sounds in the running game, and `"edgematTools": "all"` also lists EDGEmat's tools to desktop assistants such as Claude Code. Close the game first.

@@ -3,7 +3,7 @@ title: The game API, TweakDB and the world
 nav_title: Game API and TweakDB
 section: REDnode
 order: 8
-description: "How REDnode packages reach the game: the game helper, calling any game function, TweakDB reads and changes, placing objects in the world, the game's files through REDbridge, swapping archives, sound, and the newer APIs."
+description: "How REDnode packages reach the game: the game helper, calling any game function, TweakDB reads and changes, placing objects in the world, the game's files through REDbridge, swapping archives, sound, the game's own UI, and the newer APIs."
 reviewed: 2026-11-03
 ---
 
@@ -21,7 +21,8 @@ Everything here works the same in a Node mod and in an overlay app. Every call i
 | `kernel.bridge()` | The game's archives and files | [REDbridge](../redbridge/) and the `bridge` permission | Passed in game |
 | `archives` | Swap changed archives into the running game | [REDswap](redswap.html), installed with REDnode, and the `archives` permission | Passed in game |
 | `audio`, `game.audio` | The game's UI sounds; your own audio files | Nothing | Passed in game |
-| `ink`, `t` | The game's own UI widgets on the HUD; text in the player's language | Codeware | Passed in game. Experimental |
+| `ink` | The game's own UI: panels on the HUD from code or [ink markup](ink-markup.html), and reading the game's UI | Codeware | Passed in game. Experimental |
+| `t` | Text in the player's language | Nothing | Passed in game |
 | `quests`, `journal` | Quest facts and journal entries | Nothing | Passed in game |
 
 ## The game helper
@@ -86,6 +87,7 @@ This is cut down from the **Vitals** and **Game API mod** samples, which read V'
 | Right types, wrong moment | The checks catch wrong types, not wrong values. Calling a function the game doesn't expect at that moment can still crash it, as with any script mod |
 | Batch by not waiting | Calls you start together, without awaiting each one, run in the same game frame (up to 256 a frame; the rest wait for the next frames, up to 4,096 waiting). In the developer's test, ten at a time gave 300 moves a second at 30 fps |
 | `script_ref` parameters | Pass the value itself: `api.GetLocalizedText("LocKey#10947")` (REDnode 0.49.5) |
+| Names (CNames) | Pass a plain string where the game wants a name. From REDnode 0.56.1 it also reads back as text; before, the game knew it only by its number |
 | No `null` for a needed object | A plain `null` for an object parameter the game doesn't mark optional is refused, naming the parameter, because many game functions crash on it. Pass `api.$null` when you mean no object on purpose (REDnode 0.49.5) |
 | Not while V is out of the world | While the game starts, at the main menu and during a load, the global and static functions that reach the world's systems (such as `GameInstance.GetWeatherSystem`) are refused with "V is not in the world yet", where some crashed the game. `GetPlayer` and `GetSettingsSystem` still work. Wait for `game.state().world` (REDnode 0.49.5) |
 
@@ -178,7 +180,9 @@ await world.remove(id);
 
 | Call | Does |
 |---|---|
-| `world.spawn(options)` | Spawns from a template or a TweakDB record, with components attached, and resolves once it's in the world |
+| `world.spawn(options)` | Spawns from a template or a TweakDB record, with components attached, and resolves once it's in the world. If it isn't in the world in time, REDnode removes it before the call fails, so a failed spawn leaves nothing behind |
+| `world.spawn({ ..., wait: false })` | Resolves as soon as the entity is made, without waiting for it to be in the world (far from V, or still streaming in). It is still your package's: move, remove and the clean-up when your package stops work as usual (REDnode 0.56.1) |
+| `world.spawned()` | Your package's spawns, each with `attached`: whether it's in the world now |
 | `world.move(id, position, orientation?, yaw?)` | Places it |
 | `world.remove(id)` | Removes it |
 | `world.watch(id)` | Events for an entity spawned some other way |
@@ -242,14 +246,50 @@ Newer parts of the `rednode` package, each tested in game. They have their own p
 
 | Part | Does | Needs | Docs |
 |---|---|---|---|
-| `ink` | Builds trees of the game's own UI widgets on the HUD from Node (`ink.mount`, `ink.text`, `ink.bar`, `ink.list`), drawn by the game in its own look, with game values bound to them and rebuilt after each save load. Experimental | Codeware | [Native game UI](https://edgemodders.github.io/REDnode/ink.html) |
+| `ink` | Builds trees of the game's own UI widgets on the HUD, from Node (`ink.mount`, `ink.text`, `ink.bar`, `ink.list`) or from [ink markup](ink-markup.html) files, drawn by the game in its own look, with game values bound to them and rebuilt after each save load; and reads the game's own UI. Experimental. See [below](#the-games-own-ui) | Codeware | [Native game UI](https://edgemodders.github.io/REDnode/ink.html) |
 | `t()`, `game.language()` | Text in the player's language from your package's `locales/<language>.json`, with plurals and V's gender; follows a language change | Nothing | [Native game UI](https://edgemodders.github.io/REDnode/ink.html) |
 | `quests`, `journal` | Read, set and watch quest facts; read, change and track journal entries. `game.player.teleport` moves V. For testing quests | Nothing | [Quest API](https://edgemodders.github.io/REDnode/quests.html) |
 | `service`, `use` | Call other packages' functions, and offer your own; reach a package by its [role](making-mods.html#roles) | Nothing | [Mod services](making-mods.html#mod-services) |
 | `game.state().world`, `game.onState` | True only while V is in the world: false while the game starts, at the main menu and from the start of every load. Read the world's systems (time, weather, districts) only while it's true. REDnode 0.49.5 | Nothing | [Talking to the game](https://edgemodders.github.io/REDnode/overlay-apps.html#talking-to-the-game) |
 | `loc.text(key)`, `loc.language()` | The game's own text for a LocKey, such as a district's or an item's name, in the player's language: `await loc.text("LocKey#10963")` gives "Little China" in English. REDnode 0.49.5 | Nothing | [Talking to the game](https://edgemodders.github.io/REDnode/overlay-apps.html#talking-to-the-game) |
 
-The **Ink Coords**, **Ink vitals** and **Quest test** samples show them.
+The **Ink markup**, **Ink Coords**, **Ink vitals** and **Quest test** samples show them.
+
+## The game's own UI
+
+The `ink` part of the package works with the game's own UI widgets, drawn by the game. It needs [Codeware](https://github.com/psiberx/cp2077-codeware) 1.16 or later.
+
+### Panels of your own
+
+Write a panel as an `.ink.html` file and load it from a Node mod. The markup says what the panel looks like; your script changes its data, and only what reads changed data is sent to the game:
+
+```js
+import { ink } from 'rednode';
+
+const board = await ink.load('board.ink.html', {}, { title: 'Contracts', contracts: [] });
+board.set({ contracts: [{ id: 1, name: 'Watson', reward: 1500 }] });
+```
+
+The newcomer's guide is [Native UI: ink markup](ink-markup.html). The **Ink markup** sample in the release shows a panel with a list and a health bar. The same panels can be built in code with `ink.mount`, `ink.column`, `ink.text`, `ink.bar` and `ink.list`. Panels go on the HUD; clicks on them come with a later phase (I3).
+
+### Reading the game's UI
+
+| Call | Gives | Since |
+|---|---|---|
+| `ink.layers()` | The game's UI layers, and each piece of the HUD with its controller | 0.56.1 |
+| `ink.read(from, { depth, max })` | A tree of widgets in one call: class, name, visibility, box on screen, controller, text. With `props: true`, each widget's layout and look too (anchor, margins, size, tint, opacity, font size and weight, an image's atlas and part) | 0.56.1 |
+| `ink.inspect(id)` | One widget in full: its path and parents, controllers, the `.inkwidget` file it came from, every property, and an `api` reference to it | 0.56.1 |
+| `ink.at(x, y)` | The drawn widgets under a point, smallest first | 0.56.1 |
+| `ink.boxes()` | Every drawn widget's box in one call, for a page that highlights what is under the cursor as it moves | 0.56.1 |
+| `ink.check(source)` | Checks ink markup without putting it on the UI: `null`, or the first mistake with its line and column | 0.56.1 |
+
+These only read. They passed in game with the UI Workbench: a pick looked at about 450 widgets in under 3 ms.
+
+### Changing the game's own widgets
+
+`ink.try(id, prop, value)` changes one property of one of the game's widgets live (`visible`, `opacity`, `tint`, `size`, `margin`, `padding`, `translation`, a text's `text` and `fontSize`) and keeps the value it had. `ink.reset()` puts it back, and REDnode puts back everything a package tried when it stops. It's for packages the player allowed the `admin` permission, such as the UI Workbench. Nothing is kept in the save.
+
+The [UI Tools](ui-tools.html) pack's UI Workbench is built on all of these: try them there first, with no code.
 
 ## Not yet
 

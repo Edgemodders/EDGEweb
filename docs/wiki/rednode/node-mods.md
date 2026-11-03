@@ -68,16 +68,31 @@ The `ui` builder makes windows from a few building blocks. REDnode draws them wi
 | `ui.heading(text)` | A heading |
 | `ui.button(label, onClick, { variant, sound })` | A button |
 | `ui.toggle(label, onChange, { checked })` | An on and off switch |
-| `ui.slider(label, onChange, { min, max, step, value, unit })` | A slider |
+| `ui.slider(label, onChange, { min, max, step, value, unit, live })` | A slider. `onChange` gets the value when the player lets go; with `live: true`, also while they drag, about 20 times a second, for a slider that drives something the player watches move (REDnode 0.56.1) |
 | `ui.input({ label, placeholder, value, onChange, onSubmit })` | A text field. `password: true` shows dots, for a key (REDnode 0.49.5) |
 | `ui.progress(value, { label, max })` | A progress bar |
 | `ui.list({ lines, keep, height, follow })` | A list of lines that scrolls on its own, for a log or a live feed. `push(...lines)` adds lines, `clear()` empties it |
+| `ui.image(src, { width, alt, onClick })` | A picture: a PNG, JPEG, WebP or GIF from your package's folder or its data folder (`pkg.dataDir`), a `data:` URL, or the picture's bytes. `set({ src })` shows another one, or the same file again after your mod wrote over it. A picture that can't be shown says why in the window and the Mod log (REDnode 0.56.1) |
 | `ui.row(...)`, `ui.column(...)` | Layout |
 | `ui.window({ title, width, height, anchor, x, y, children, onClose })` | Opens the window |
 
 Every block has `set(...)`, which changes it in the open window at once, as `where.set(...)` does above.
 
 The player can drag the window, close it and bring it back. If they close it, REDnode remembers and keeps it closed on the next start, until they press **Show**.
+
+A picture your mod made, such as a before and after, goes in a window like this:
+
+```js
+import { pkg, ui } from 'rednode';
+import path from 'node:path';
+
+const shot = ui.image(path.join(pkg.dataDir, 'after.png'), { width: 320, alt: 'After', onClick: () => console.log('clicked') });
+ui.window({ title: 'Before and after', width: 360, height: 300, children: [shot] });
+// Later, after writing a new after.png:
+shot.set({ src: path.join(pkg.dataDir, 'after.png') });
+```
+
+The **Image mod** sample in REDnode's repo shows pictures from the package, from bytes and drawn into the data folder (it isn't in the release zip; its source and a live preview are on the [example apps](https://edgemodders.github.io/REDnode/examples/) page).
 
 For anything richer, give your package a web page too: see [Overlay apps](overlay-apps.html) and [a page and a mod together](#a-page-and-a-mod-together).
 

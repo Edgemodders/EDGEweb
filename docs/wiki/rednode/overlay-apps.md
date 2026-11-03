@@ -2,13 +2,15 @@
 title: Overlay apps
 section: REDnode
 order: 7
-description: "Build in-game windows and HUD widgets from web pages with REDnode: a first app, the UI kit and its themes, HUD widgets, game sounds, the title bar and pointer lock."
+description: "Build in-game windows and HUD widgets from web pages with REDnode: a first app, the UI kit and its themes, HUD widgets, game sounds, the title bar, keys and modifiers, pointer lock and window sizes."
 reviewed: 2026-11-03
 ---
 
 # Overlay <span class="y">apps</span>
 
 An overlay app is a web page that REDnode draws on top of the game. If you can make a web page, you can make an in-game window: HTML for the content, CSS for the look, JavaScript for the behaviour. Any web framework works.
+
+For UI the game draws itself, in its own widgets on its HUD, see [Native UI: ink markup](ink-markup.html) instead.
 
 ## How it works
 
@@ -91,7 +93,7 @@ The UI kit is a set of ready-made widgets in the EDGE HUD look, written as HTML 
 | `rn-window` | A window with a title bar, close and the [title-bar buttons](overlay.html#title-bar-buttons) |
 | `rn-panel` | A titled section |
 | `rn-button` | A button, with optional `sound` and `hover-sound` |
-| `rn-toggle`, `rn-slider`, `rn-input` | Switch, slider, text field |
+| `rn-toggle`, `rn-slider`, `rn-input` | Switch, slider, text field. `<rn-input clearable>` shows a **✕** inside the field while it holds text, which empties it as typing it away would (REDnode 0.56.1) |
 | `rn-list`, `rn-menu`, `rn-tabs` | Lists, menus and tabs |
 | `rn-progress`, `rn-tooltip`, `rn-notification` | Progress bar, tooltip, pop-up message |
 
@@ -170,6 +172,33 @@ Two events reach a page only through the older `window.rednode.on`: `focus` (you
 
 Your package needs nothing to work with [spaces](spaces.html): its windows join the space the player is in.
 
+## Keys, modifiers and double-clicks
+
+Keys and the mouse reach the focused window much as in a browser. Since REDnode 0.56.1:
+
+| What | How it works |
+|---|---|
+| Ctrl, Shift and Alt on the mouse | Clicks, moves and the wheel carry `ctrlKey`, `shiftKey` and `altKey`, read from Windows at each event, so Ctrl+click, Shift+drag and Alt+click work |
+| Edit keys | Ctrl+Z, Ctrl+Y, Ctrl+Shift+Z, Ctrl+A, Ctrl+C, Ctrl+V and Ctrl+X arrive as `keydown` events. A text field edits as usual; a page with its own undo or copy takes the key with `preventDefault()` and nothing else happens. Before, the overlay ran the editing command itself and the page never heard the key |
+| Double-clicks | Two presses of the same button within 450 ms and 6 px count as a double-click, so `dblclick` reaches pages: a text field selects a word, and a page's own double-click actions work. Before, every press arrived as a single click |
+| Esc | Esc normally leaves interactive mode, so a page never hears it. A page in the middle of something (a drag, a pick, a move) can ask for it with the web's Keyboard Lock API; while it has focus, Esc then comes to it as a key. F10 always leaves interactive mode, so the player is never stuck |
+
+```js
+async function startMove() {
+  await navigator.keyboard.lock(['Escape']); // Esc now comes to this page
+  moving = true;
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && moving) cancelMove();
+});
+function endMove() {
+  moving = false;
+  navigator.keyboard.unlock(); // Esc leaves the overlay again
+}
+```
+
+The UI Workbench's Pick uses this: Esc ends a pick and leaves you in interactive mode. The **Input test** sample in REDnode's repo shows all of these. Details: [Keys and modifiers](https://edgemodders.github.io/REDnode/overlay-apps.html#keys-and-modifiers).
+
 ## Holding the cursor (pointer lock)
 
 A 3D editor's camera turns while you hold a mouse button and move: the cursor must stay put while the movement keeps coming. Pages use the web's own Pointer Lock API for this, and REDnode does the holding in the game:
@@ -194,8 +223,9 @@ While locked, the cursor is hidden and stays where it was, and each movement arr
 |---|---|---|
 | `"resizable": true`, with `minWidth` and `minHeight` | A grip in the window's bottom-right corner lets the player resize it, as the Mod Manager does. REDnode keeps the size with the window's place, and **Reset position and size** in the title bar goes back to the manifest's. Size your page with `100vw` and `100vh` so it follows | 0.49.5 |
 | `"fill": "screen"` | The page covers the whole game view at any aspect ratio: always 1080 high, and as wide as the view (1920 at 16:9, 2580 at 21:9, 3840 at 32:9). It follows a resolution change. For an editor's see-through canvas over the world. A `<rn-window draggable>` on such a page moves inside it, and the rest of the page stays put | 0.50.2 |
+| `<rn-window draggable resizable min-width="..." min-height="...">` on a `fill` page | The window resizes inside the page by its corner grip, down to its minimum (320 x 200 if not set). The page keeps its place and size, and **Reset position and size** in its title bar puts them back. Give the window a height and let its content fill it. The UI Workbench works this way | 0.56.1 |
 
-Both passed in game. The **Fill test** sample shows a full-view page. Details in the guide: [Resizable windows](https://edgemodders.github.io/REDnode/overlay-apps.html#resizable-windows), [A page that covers the whole game view](https://edgemodders.github.io/REDnode/overlay-apps.html#a-page-that-covers-the-whole-game-view).
+All three passed in game. The **Fill test** sample shows a full-view page, and the [UI Workbench](ui-tools.html) a resizable window on one. Details in the guide: [Resizable windows](https://edgemodders.github.io/REDnode/overlay-apps.html#resizable-windows), [A page that covers the whole game view](https://edgemodders.github.io/REDnode/overlay-apps.html#a-page-that-covers-the-whole-game-view).
 
 ## Frames from another address
 

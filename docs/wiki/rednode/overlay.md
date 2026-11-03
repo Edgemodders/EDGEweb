@@ -55,7 +55,7 @@ In interactive mode:
 | To | Do |
 |---|---|
 | Move a window | Drag its title bar, or the handle the app marks (for example a striped grip) |
-| Bring it to the front | Click it. Only the front window gets keyboard input |
+| Bring it to the front | Click it. Only the front window gets keyboard input. Double-clicks, and Ctrl, Shift or Alt with a click, reach windows too (REDnode 0.56.1) |
 | Click what's behind a window | Click where the window is see-through: the click passes to the window behind, or to the game |
 | Close it | Its **✕**. For a Node mod's window, the mod keeps running; **Show** in the launcher or Mod Manager brings the window back |
 | See what a button does | Hover over it: a tooltip names it. The **Tooltips** setting switches them off |
@@ -125,9 +125,9 @@ Up and Down bring back what you typed before, even after a restart, Tab complete
 | Key | Where | Does |
 |---|---|---|
 | **F10** | Anywhere in the game | Passive, interactive, hidden, and round again |
-| **Esc** | Interactive mode | Back to passive. Ends a held cursor first (pointer lock) |
+| **Esc** | Interactive mode | Back to passive. Ends a held cursor first (pointer lock). A window that asks for Esc, such as the UI Workbench while it picks, gets it instead |
 | **Ctrl+1** to **Ctrl+9** | While the overlay is open | Switches to that [space](spaces.html) |
-| **Ctrl+C**, **Ctrl+V**, **Ctrl+X**, **Ctrl+A**, **Ctrl+Z** | In the front window | Copy, paste, cut, select all, undo |
+| **Ctrl+C**, **Ctrl+V**, **Ctrl+X**, **Ctrl+A**, **Ctrl+Z**, **Ctrl+Y** | In the front window | Copy, paste, cut, select all, undo, redo. A window with its own undo or copy, such as an editor, handles them itself |
 | **F9** | Anywhere in the game | Not REDnode's: it is the game's Quick Load. Mind it, right beside F10 |
 
 ## Good to know

@@ -98,7 +98,7 @@ A package can ask for powers the player must allow, in its manifest:
 | `solo` | Solo mode | [Spaces and layers](spaces.html#solo-mode) |
 | `archives` | Swapping archives into the running game, through [REDswap](redswap.html) | [Game API](game-api.html#swapping-archives-into-the-running-game) |
 | `keys:<service>` | The player's [shared key](settings.html#shared-keys) for an AI service, such as `keys:anthropic`, with `secrets.shared` and `secrets.askShared` | [Node mods](node-mods.html#data-and-secrets) |
-| `admin` | Managing REDnode: what every package costs, ending or restarting packages, switching AI assistants' tools | REDnode's [Admin Tools guide](https://edgemodders.github.io/REDnode/admin-tools.html#the-admin-permission) |
+| `admin` | Managing REDnode: what every package costs, ending, restarting and switching packages on and off, switching AI assistants' tools, and trying changes on the game's own UI widgets (`ink.try`, as the [UI Workbench](ui-tools.html) does) | REDnode's [Admin Tools guide](https://edgemodders.github.io/REDnode/admin-tools.html#the-admin-permission) |
 
 The calls that need a permission reject until the player allows it. Explain in your description why you need it.
 
@@ -133,9 +133,9 @@ The [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html
 | `service` | Calling other packages, and offering your own functions | [Mod services](#mod-services) |
 | `audio` | Your own sound files, following the game's volume | [Game API](game-api.html#sound) |
 | `archives` | Swapping archives into the running game | [Game API](game-api.html#swapping-archives-into-the-running-game) |
-| `ink`, `t` | The game's own UI widgets on the HUD, and text in the player's language (experimental, needs Codeware) | [Game API](game-api.html#more-of-the-game) |
+| `ink`, `t` | The game's own UI: panels on the HUD from code or [ink markup](ink-markup.html), reading the game's UI, and text in the player's language (experimental, needs Codeware) | [Game API](game-api.html#the-games-own-ui) |
 | `quests`, `journal` | Quest facts and journal entries, for testing a quest | [Game API](game-api.html#more-of-the-game) |
-| `admin` | For admin tools: what every package costs, ending packages, AI tools' switches | [Admin Tools guide](https://edgemodders.github.io/REDnode/admin-tools.html#the-admin-permission) |
+| `admin` | For admin tools: what every package costs, ending and switching packages, AI tools' switches, trying changes on the game's widgets | [Admin Tools guide](https://edgemodders.github.io/REDnode/admin-tools.html#the-admin-permission) |
 
 The `rednode` package is written in TypeScript and carries types for every call, and for the game's 15,000-odd classes. An editor such as [REDcode](../redcode/) completes them as you type. The [API reference](https://edgemodders.github.io/REDnode/api/) lists every call with examples.
 
@@ -158,7 +158,7 @@ counter.$on('changed', (e) => console.log(e.count)); // its events
 
 | Good to know | |
 |---|---|
-| Where it runs | In the package's Node mod, after `main`. A package can have a service and no `main`. Overlay pages can call services too |
+| Where it runs | In the package's Node mod, after `main`. A package can have a service and no `main`. Overlay pages can call services too, their own package's included (REDnode 0.56.1): a page can keep its file work in its own service file, as the UI Workbench does |
 | What crosses | Plain values: numbers, strings, booleans, arrays, plain objects. Not game references |
 | Errors and waiting | A call fails with a reason when the package isn't installed, is off or crashed. Calls time out after 30 seconds unless you give a longer `timeoutMs` |
 | Descriptions | The JSDoc above each function describes it. REDnode checks each call's arguments against it, and the Mod Manager lists the functions |
@@ -186,7 +186,7 @@ When two installed packages provide the same role, the player picks the one that
 
 ## Learn from the samples
 
-The release puts ten samples in the apps folder, switched off: Hello mod, Ask mod, UI kit, Vitals, Coords HUD, Perf, Test timer, Ink Coords, Ink vitals and Quest test. REDnode's repo has more, used for tests. Each is small and readable:
+The release puts eleven samples in the apps folder, switched off: Hello mod, Ask mod, UI kit, Vitals, Coords HUD, Perf, Test timer, Ink Coords, Ink vitals, Ink markup and Quest test. REDnode's repo has more, used for tests. Each is small and readable:
 
 | Sample | Shows |
 |---|---|
@@ -203,6 +203,9 @@ The release puts ten samples in the apps folder, switched off: Hello mod, Ask mo
 | Ask mod | Asking REDagent and streaming the answer |
 | Packaging test | Requirements and REDbridge |
 | Ink Coords, Ink vitals | The game's own UI widgets on the HUD (need Codeware) |
+| Ink markup | A HUD panel written as an `.ink.html` file, with a list and a bound health bar. See [Native UI: ink markup](ink-markup.html) |
+| Image mod | Pictures in a Node mod's window with `ui.image` (in the repo, not the release zip) |
+| Input test | Ctrl, Shift and Alt on clicks, a page's own edit keys, and taking Esc (in the repo) |
 | Quest test | Reading and setting quest facts and journal entries |
 | Counter service, Counter panel | One package calling another's functions |
 | Live log mod | A Node mod window with a scrolling list |

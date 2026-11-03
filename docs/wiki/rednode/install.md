@@ -4,12 +4,12 @@ nav_title: Install and set up
 section: REDnode
 order: 1
 description: "Install REDnode into Cyberpunk 2077 from its release zip, check it works, update or remove it, or build it from source."
-reviewed: 2026-10-27
+reviewed: 2026-11-03
 ---
 
 # Install and set up <span class="y">REDnode</span>
 
-REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.41.0**, for **game version 2.5**. On a game kept on 2.31, use **0.37.0**, the last release for 2.31: RED4ext won't load a 2.5 build on 2.31, nor 0.37.0 on 2.5.
+REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.56.1** (2026-11-03), for **game version 2.5**. On a game kept on 2.31, use **0.37.0**, the last release for 2.31: RED4ext won't load a 2.5 build on 2.31, nor 0.37.0 on 2.5.
 
 If the steps below look like too much, ask on [Discord]({{ site.discord }}): someone can walk you through it.
 
@@ -22,7 +22,7 @@ If the steps below look like too much, ask on [Discord]({{ site.discord }}): som
 | Cyberpunk 2077 on Windows, **version 2.5** | Tested on Steam. For 2.31, REDnode 0.37.0 |
 | [RED4ext](https://github.com/WopsS/RED4ext/releases) | Required. It loads REDnode into the game. 1.31 or later for game 2.5 |
 | [redscript](https://github.com/jac3km4/redscript/releases) | Required. REDnode adds a few small scripts to the game |
-| [Codeware](https://github.com/psiberx/cp2077-codeware) | Optional. Only packages that place objects in the world (1.14 or later) or draw the game's own UI (the Ink samples ask for 1.16 or later) need it |
+| [Codeware](https://github.com/psiberx/cp2077-codeware) | Optional. Only packages that place objects in the world (1.14 or later) or work with the game's own UI (the Ink samples and the [UI Tools](ui-tools.html) pack ask for 1.16 or later) need it |
 | [TweakXL](https://github.com/psiberx/cp2077-tweak-xl) 1.10 or later | Optional. Only packages that change TweakDB need it |
 | [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools/releases) 1.3 or later | Optional, and not needed from REDnode 0.41.0, which swaps through its own [REDswap](redswap.html). With 0.40.1 and earlier, only packages that swap archives into the running game need it. The [Edgemodders build](https://github.com/CyberbuildsAI/cp2077-red-hot-tools/releases) fixes swaps of archives with mixed-case names, which REDnode otherwise refuses |
 | [REDbridge](../redbridge/) | Optional. Only packages that read the game's archives need it. The Mod Manager's **Get REDbridge** button installs it for you; a copy [EDGEdeck](../edgedeck/install.html#getting-redbridge) or REDcode downloaded works too |
@@ -40,7 +40,7 @@ You don't need Node.js or any developer tools: REDnode brings its own.
 
 ## Install the release
 
-1. **Download** `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases). The same page has the optional packs (`REDnode-Admin-Tools-...zip`, `REDnode-Sound-Tools-...zip`); you don't need them to start.
+1. **Download** `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases). The same page has the optional packs (`REDnode-Admin-Tools-...zip`, `REDnode-Sound-Tools-...zip`, `REDnode-UI-Tools-...zip`); you don't need them to start.
 2. **Close the game.**
 3. **Install the zip** in one of these ways:
     - Add it to Vortex or [EDGEdeck](../edgedeck/adding-mods.html) and deploy, like any other mod.
@@ -73,15 +73,15 @@ REDagent and the optional packs install into the same apps folder, after REDnode
 
 {% include shot.html caption="The first start" src="/assets/shots/rednode/install-the-first-start.png" alt="The Welcome to REDnode window in the game, explaining F10&rsquo;s three modes and warning about F9, with the launcher open at the lower left above the REDNODE tab." shows="The main menu with the Welcome window and the REDNODE tab at the lower left." %}
 
-The release's samples are Hello mod, Ask mod, UI kit, Vitals, Coords HUD, Perf, Test timer, Ink Coords, Ink vitals and Quest test. They are there to try things and to learn from. The Ink samples need Codeware.
+The release's samples are Hello mod, Ask mod, UI kit, Vitals, Coords HUD, Perf, Test timer, Ink Coords, Ink vitals, Ink markup and Quest test. They are there to try things and to learn from. The Ink samples need Codeware.
 
 ### Check it worked
 
 | Look at | You should see |
 |---|---|
-| The REDNODE tab | At the lower left of the main menu. Click it after pressing F10: the launcher says **GAME LINKED** and shows the version at the bottom, such as **Version 0.37.0** |
+| The REDNODE tab | At the lower left of the main menu. Click it after pressing F10: the launcher says **GAME LINKED** and shows the version at the bottom, such as **Version 0.56.1** |
 | `red4ext\logs\red4ext-*.log` | A line saying REDnode `has been loaded` |
-| `red4ext\logs\rednode-overlay.log` | The host's log, starting with `REDnode overlay host 0.37.0` |
+| `red4ext\logs\rednode-overlay.log` | The host's log, starting with `REDnode overlay host 0.56.1` (your version) |
 
 If the tab doesn't appear, see [Troubleshooting](troubleshooting.html).
 

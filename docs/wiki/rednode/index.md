@@ -33,6 +33,7 @@ REDnode adds a different way in:
 | Want useful windows over the game | HUD widgets and tool windows, switched on and off in the Mod Manager, sorted into [spaces](spaces.html) you flip between |
 | Want to make a mod but don't know redscript or Lua | Write it in JavaScript or TypeScript, or ask REDagent to write it with you |
 | Know web development | Build in-game UI with HTML and CSS, with a ready-made UI kit in the HUD look |
+| Want to change or add to the game's own UI | Panels the game draws on its HUD, written as [ink markup](ink-markup.html), and the [UI Tools](ui-tools.html) pack's Workbench to inspect the game's UI, try changes live and copy it into your own panel |
 | Make tools for other modders | Overlay apps can use REDbridge to read the game's archives, the [world API](game-api.html#placing-things-in-the-world) to place objects, as EDGEbuilder does, and swap changed archives into the running game |
 | Want mods that work together | A mod can offer functions to other mods, which call them by the mod's id: [mod services](making-mods.html#mod-services) |
 | Want Claude to see and call the game | An MCP server gives Claude Code your mod logs, your overlay windows, pictures of the game and live game calls, asking you before calls that change the game. Mods can offer it tools of their own |
@@ -51,9 +52,9 @@ REDnode is the **Run** stage of the EDGE platform: the part that is in the game 
 
 ## Status
 
-**Released.** REDnode 0.50.2 came out on 2026-11-01, for **game version 2.5**. 0.49.5 (2026-10-31) added the [Console](overlay.html#the-console), [shared keys](settings.html#shared-keys) and resizable windows; 0.50.2 added pages that cover the whole game view and frames from other addresses. [REDswap](redswap.html), for swapping archives into the running game, comes with it from 0.41.0. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
+**Released.** REDnode 0.56.1 came out on 2026-11-03, for **game version 2.5**, with the first release of the optional [UI Tools](ui-tools.html) pack. 0.49.5 (2026-10-31) added the [Console](overlay.html#the-console), [shared keys](settings.html#shared-keys) and resizable windows; 0.50.2 (2026-11-01) added pages that cover the whole game view and frames from other addresses; 0.56.1 added [ink markup](ink-markup.html) for native HUD panels, reading the game's own UI, pictures in Node mod windows, live sliders, double-clicks, Ctrl, Shift and Alt on clicks, and Esc for pages that ask for it. [REDswap](redswap.html), for swapping archives into the running game, comes with it from 0.41.0. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
 
-Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and see [Install and set up](install.html). It is also on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419), with the optional [Admin Tools](https://www.nexusmods.com/cyberpunk2077/mods/35793) pack and [REDagent](https://www.nexusmods.com/cyberpunk2077/mods/35670). It is still young: every part below as passed was tested in the developer's modded game, and the overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
+Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and see [Install and set up](install.html). It is also on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419), with the optional [UI Tools](https://www.nexusmods.com/cyberpunk2077/mods/36958), [Sound Tools](https://www.nexusmods.com/cyberpunk2077/mods/35537) and [Admin Tools](https://www.nexusmods.com/cyberpunk2077/mods/35793) packs, and [REDagent](https://www.nexusmods.com/cyberpunk2077/mods/35670). It is still young: every part below as passed was tested in the developer's modded game, and the overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
 
 | Part | Status |
 |---|---|
@@ -72,6 +73,10 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | Sound: the game's UI sounds, and packages' own audio files | Passed in game |
 | Swapping changed archives into the running game, sound archives included | Passed in game on 2.31 through RED Hot Tools. On 2.5, through [REDswap](redswap.html): released in REDnode 0.41.0; sound archives untested on 2.5 |
 | The game's own UI from Node (ink; needs Codeware), in the player's language | Passed in game. Experimental |
+| [Ink markup](ink-markup.html): native HUD panels written as `.ink.html` files | Passed in game. Released in REDnode 0.56.1. Experimental |
+| [Reading the game's own UI](game-api.html#the-games-own-ui) (layers, widget trees, what is under a point) and trying changes on it live | Passed in game. Released in REDnode 0.56.1 |
+| Pictures in Node mod windows (`ui.image`), live sliders, double-clicks, modifiers on clicks, Esc for pages | Passed in game. Released in REDnode 0.56.1 |
+| Clicks and typing on native (ink) panels | Planned (phase I3) |
 | Quest API (quest facts, the journal, moving V) | Passed in game |
 | Mod services (mods calling each other, and offering tools to AI assistants) | Passed in game |
 | Development folders (run a package from your own project folder) | Passed in game |
@@ -82,19 +87,20 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | [EDGEmat's material tools](agents.html#edgemats-tools-for-in-game-assistants) for in-game assistants such as REDagent | Passed in game. Released in REDnode 0.49.5 |
 | Resizable windows, and a resizable [Mod Manager](mod-manager.html) | Passed in game. Released in REDnode 0.49.5 |
 | [Pages that cover the whole game view](overlay-apps.html#window-size-and-the-whole-screen) at any aspect ratio, and [frames from other addresses](overlay-apps.html#frames-from-another-address) | Passed in game. Released in REDnode 0.50.2 |
-| Optional packs: [Admin Tools](#optional-packs) and [Sound Tools](#optional-packs) | Released |
+| Optional packs: [UI Tools](#optional-packs), [Sound Tools](#optional-packs) and [Admin Tools](#optional-packs) | Released |
 | TweakDB without the game running | Not built yet |
 | Display: HDR, frame generation, ultrawide | Planned |
 | Code that runs inside the game (Tier 1), declarative rules | Not started |
 
 ### Optional packs
 
-Two app packs come as their own zips, attached to each REDnode release. Install them only if you want them.
+Three app packs come as their own zips, attached to each REDnode release and on their own Nexus pages. Install them only if you want them.
 
 | Pack | Apps | For |
 |---|---|---|
-| **REDnode Admin Tools** 0.1.0 | Task Manager (what every package costs, **End task**, **Restart**), Tools Manager (every tool an AI assistant sees, switched on and off) | Players and modders who want to manage REDnode itself. Needs REDnode 0.37.0 and the `admin` permission. [Guide](https://edgemodders.github.io/REDnode/admin-tools.html) |
-| **REDnode Sound Tools** 0.1.1 | Sound Tracer, Sound Search, Hot swap | Sound modders: see and hear every sound the game plays, and swap a sound mod in without a restart, through REDswap. Needs REDnode 0.41.0 or later. [Guide](https://edgemodders.github.io/REDnode/sound-tools.html) |
+| **REDnode UI Tools** 0.1.0 | UI Workbench: inspect the game's own UI (layers, widget trees, Pick under the cursor), try changes on it live, copy it into ink markup, and write, run and export native HUD panels of your own | UI modders, and anyone curious how the game's UI is built. Needs REDnode 0.56.0 and Codeware 1.16. [Wiki pages](ui-tools.html), [Nexus](https://www.nexusmods.com/cyberpunk2077/mods/36958) |
+| **REDnode Admin Tools** 0.1.1 | Task Manager (what every package costs, **End task**, **Restart**), Tools Manager (every tool an AI assistant sees, switched on and off) | Players and modders who want to manage REDnode itself. Needs REDnode 0.38.1 and the `admin` permission. [Guide](https://edgemodders.github.io/REDnode/admin-tools.html) |
+| **REDnode Sound Tools** 0.1.2 | Sound Tracer, Sound Search, Hot swap | Sound modders: see and hear every sound the game plays, and swap a sound mod in without a restart, through REDswap. Needs REDnode 0.41.0 or later. [Guide](https://edgemodders.github.io/REDnode/sound-tools.html) |
 
 ## In this section
 
@@ -113,11 +119,24 @@ Two app packs come as their own zips, attached to each REDnode release. Install 
 |---|---|
 | [Making mods and apps](making-mods.html) | Package kinds, the manifest, the apps folder, permissions, requirements, mod services and sharing |
 | [Node mods](node-mods.html) | Mods in Node, windows without HTML, logs, isolation, hot reload |
-| [Overlay apps](overlay-apps.html) | Web pages over the game, the UI kit, HUD widgets, sounds, pointer lock |
+| [Overlay apps](overlay-apps.html) | Web pages over the game, the UI kit, HUD widgets, sounds, keys, pointer lock |
+| [Native UI: ink markup](ink-markup.html) | HUD panels the game draws itself, written as `.ink.html` files |
 | [REDswap](redswap.html) | Swapping changed archives into the running game on 2.5, from REDnode, AI assistants and your own tools |
 | [Game API and TweakDB](game-api.html) | Calling the game, TweakDB, placing objects, the game's files, sound |
 | [Debugging](debugging.html) | The Mod log, Developer mode, DevTools in the game, attaching VS Code |
 | [Agents and MCP](agents.html) | Claude Code and the MCP server, and asking REDagent from a mod |
+
+**UI Tools** (an optional pack)
+
+| Page | |
+|---|---|
+| [UI Tools](ui-tools.html) | What the UI Workbench is, installing it, its admin permission |
+| [Inspect](ui-tools-inspect.html) | The game's UI as a tree, Pick, a widget's details |
+| [Try](ui-tools-try.html) | Change a game widget live, never kept |
+| [To source](ui-tools-to-source.html) | Copy a HUD piece into a project of your own |
+| [Projects and Edit](ui-tools-projects.html) | Write and run native HUD panels in the game |
+| [Export](ui-tools-export.html) | Share a project as a mod |
+| [Tutorial: your first native HUD panel](ui-tools-tutorial.html) | From New to an installed mod, step by step |
 
 **Reference**
 
