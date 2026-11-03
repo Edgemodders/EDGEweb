@@ -3,8 +3,8 @@ title: The camera and builder mode
 nav_title: Camera and builder mode
 section: EDGEbuilder
 order: 4
-description: "EDGEbuilder's own camera: look, fly, orbit, pan, dolly and frame while V stays put, and builder mode, which hides the game's HUD while Edit is on."
-reviewed: 2026-10-24
+description: "EDGEbuilder's own camera: look, fly, orbit, pan, dolly and frame while V stays put, and builder mode, which hides the game's HUD and other windows while Edit is on."
+reviewed: 2026-11-03
 ---
 
 # The camera and <span class="y">builder mode</span>
@@ -18,6 +18,7 @@ Placing things from V's eyes is awkward: you can't see behind a crate, or look d
 | The view | Switches to EDGEbuilder's camera, starting exactly where V's view is, so nothing jumps |
 | V | Stays where V was standing. Only the camera moves |
 | The HUD | The game's own HUD (minimap, quest tracker, crosshair) disappears |
+| Other windows | Other REDnode packages' windows hide, if you allowed solo mode |
 | The help line | At the bottom of the screen, now also lists the camera keys |
 
 Switch **Edit** off and the view snaps back to V's eyes and the HUD returns. Switch it on again and the camera starts from V's view again.
@@ -52,7 +53,7 @@ The cursor lock passed its in-game retest on 2026-10-16 (EDGEbuilder 0.3.2 with 
 
 ## Dropping from the camera
 
-With the editor camera on, **Drop where I look** puts the asset on the first surface the camera looks at, up to 60 m away, turned to face the camera. That makes it easy to fly to a spot, look at it, and drop. **Drop at click** (0.3.3, untested in game) drops it where you click instead. See [Browsing and dropping](browsing.html#drop-it).
+With the editor camera on, **Drop where I look** puts the asset on the first surface the camera looks at, up to 60 m away, turned to face the camera. That makes it easy to fly to a spot, look at it, and drop. **Drop at click** drops it where you click instead. See [Browsing and dropping](browsing.html#drop-it).
 
 ## How far can the camera go?
 
@@ -73,4 +74,6 @@ If EDGEbuilder stops while Edit is on (it crashed, or you closed it), V's view m
 
 ## Builder mode and other windows
 
-Builder mode hides the game's HUD, not other REDnode windows. They stay on screen, and while Edit is on, EDGEbuilder's layer is over them, so they can't be clicked. Switch Edit off to use them. REDnode now has a solo mode that could hide them; EDGEbuilder doesn't use it yet.
+From 0.4.1, builder mode also hides other packages' windows, through REDnode's [solo mode](../rednode/spaces.html#solo-mode). It needs your permission: in REDnode's Mod Manager, allow EDGEbuilder **Hiding every other package's windows (solo mode)**. See [Install and set up](install.html#allow-redbridge). While it's on, the launcher tab shows **SOLO EDGEbuilder**. Switch Edit off and the windows come back. REDnode's own tools, such as the launcher, stay.
+
+Without the permission, other windows stay on screen, and EDGEbuilder says so once. While Edit is on, EDGEbuilder's layer is over them, so they can't be clicked. Switch Edit off to use them.

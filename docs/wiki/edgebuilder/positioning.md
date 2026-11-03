@@ -3,7 +3,7 @@ title: Positioning objects
 section: EDGEbuilder
 order: 3
 description: "Move, turn and scale objects in EDGEbuilder: the Edit switch, selecting in the world, the gizmo, G R S with axis locks and typed numbers, snapping, drop to floor and the number fields."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Positioning <span class="y">objects</span>
@@ -34,6 +34,8 @@ A help line at the bottom of the screen says what you can do next. From 0.3.3 it
 With Edit on, **click an object** in the world to select it. The game outlines it, and the **Scene** tab opens with its numbers. Click empty space to select nothing.
 
 Clicking in the **Scene** tab's list selects too.
+
+**Ctrl+click** adds an object to the selection, and **Shift+drag** selects everything in a box. Everything on this page then works on all of them at once, around their middle. A click on an object in a group selects the whole group. See [Arranging a scene](arranging.html).
 
 ## The gizmo
 
@@ -73,7 +75,7 @@ While it's going:
 | **Backspace** | Removes the last typed character |
 | **Ctrl** | Snaps, as with the gizmo (0.25 m, 15°, 0.25 for scale) |
 | **Enter** or a click | Keeps it |
-| **Esc** or a right-click | Puts the object back where it was |
+| **Esc** or a right-click | Puts the object back where it was. Esc needs REDnode 0.52.0 or later: with an older one it leaves REDnode's interactive mode, so use the right-click |
 
 The help line shows the amount so far.
 
@@ -99,16 +101,18 @@ The **Selected** panel in the **Scene** tab has five fields:
 | **Heading** | The turn around the vertical, in degrees |
 | **Scale** | Size as a factor, for meshes. 1 is the original size. Greyed out for entities |
 
-Type new values and press **Apply**, or **Enter** in a field. The object moves there.
+Type new values and press **Apply**, or **Enter** in a field. The object moves there. **Enter** also leaves the field, so **Ctrl+Z** then undoes the move rather than your typing.
+
+With several objects selected, the fields hold their middle, and the last two become **Turn by** and **Scale by**. See [Arranging a scene](arranging.html#moving-several-at-once).
 
 {% include shot.html caption="The Selected panel" shows="The Scene tab with a crate selected: its name, path and position at the top of the Selected panel, the X, Y, Z, Heading and Scale fields, and the Apply, Drop to floor and Delete buttons." %}
 
 ## Delete
 
-Press **Delete** with an object selected, or **Delete** in the Scene tab. It goes from the world and the scene. There's no undo yet.
+Press **Delete** with an object selected, or **Delete** in the Scene tab. It goes from the world and the scene. **Ctrl+Z**, or **Undo** on the Scene tab, brings it back.
 
 ## Good to know
 
 - Drags follow the mouse at the game's frame rate. In the in-game test, dragging didn't lower the frame rate.
-- While Edit is on, EDGEbuilder's layer is over other REDnode windows, so you can't click them. Switch Edit off to use them.
+- While Edit is on, other packages' windows hide, if you allowed EDGEbuilder [solo mode](install.html#allow-redbridge). Without it they stay, but EDGEbuilder's layer is over them, so you can't click them. Switch Edit off to use them.
 - The fields set the heading only. **R** with **X** or **Y** locked turns around those axes instead, which tilts the object; the in-game test turned objects around the vertical only.

@@ -2,9 +2,9 @@
 title: Troubleshooting EDGEbuilder
 nav_title: Troubleshooting
 section: EDGEbuilder
-order: 7
-description: "Fixes for common EDGEbuilder problems: red status pills, REDbridge not allowed, drops that fail, a stuck camera, windows you can't click, and missing previews."
-reviewed: 2026-10-24
+order: 8
+description: "Fixes for common EDGEbuilder problems: red status pills, REDbridge not allowed, drops that fail, keys that do nothing, a stuck camera, windows you can't click, mods and projects, and missing previews."
+reviewed: 2026-11-03
 ---
 
 # Troubleshooting <span class="y">EDGEbuilder</span>
@@ -52,6 +52,26 @@ Check the third pill. **No index** or **Index failed** means the index needs RED
 
 Remember that only meshes and entities are listed today. Lights and other kinds come later.
 
+Check the **Everywhere**, **Game**, **Mods** and **Project** tabs too: **Game** hides your mods' files, and **Mods** hides the game's. The count says what it's filtered by.
+
+### The Mods tab doesn't list my mod
+
+EDGEbuilder reads the archives in the game's `archive\pc\mod` folder and REDmod's `mods\<name>\archives`. A mod in EDGEdeck's library counts once it's deployed. Only meshes and entities are listed, so a mod that changes only textures or items has nothing to show.
+
+### The Project tab says "No REDcode project open"
+
+- You need REDcode 0.10.5 or later, with a project open in VS Code.
+- REDcode tells EDGEbuilder through a small REDnode package, `redcode`, that it installs into the game. Check that it's in REDnode's Mod Manager, and that REDcode's setting `redcode.rednode.installPackage` isn't off.
+- With several VS Code windows, the last one you used with a project open counts.
+
+### A mod's mesh has no size, or drops with a 1 m box
+
+The size and appearances of a mod's or a project's mesh need REDbridge 0.12.0, which isn't released yet. With 0.11.0 the asset still drops, with a 1 m box for the gizmo. Many entities have no size even in the game's own files, because their meshes are in an appearance file: those get the 1 m box too.
+
+### My project's file shows the game's version, or doesn't show
+
+A project file is in the game only once the project is packed and loaded. Use REDcode's **Pack and Play**: previews that use a swapped file come back showing the new version. See [Files from your project](browsing.html#files-from-your-project).
+
 ### A drop doesn't happen
 
 The message line under the pills says why:
@@ -62,6 +82,24 @@ The message line under the pills says why:
 | "Load a save first." | Load a save |
 | "The world is not ready yet; try again in a moment." | Wait a moment after a save loads, and try again |
 | "Drop failed, nothing was added: ..." | The game refused the drop; the rest of the line says why. Nothing is left behind. If it keeps happening with one asset, report it with the log |
+
+### Ctrl+Z, Ctrl+C or another Ctrl key does nothing
+
+In the game, Ctrl+Z, Ctrl+Y, Ctrl+C, Ctrl+X and Ctrl+V reach EDGEbuilder only from REDnode 0.52.0. Update REDnode. Until then, use **Undo**, **Redo** and **Duplicate** on the Scene tab.
+
+Also check that no field in the panel has the cursor: a key then goes to the field. Press **Enter** or click in the world first.
+
+### Esc closes REDnode's overlay instead of cancelling
+
+With REDnode older than 0.52.0, Esc always leaves REDnode's interactive mode. Use a right-click to cancel a drag, a Drop at click, a box or a copy. From 0.52.0, Esc cancels while something is in progress, and leaves interactive mode otherwise.
+
+### EDGEbuilder is busy, or my clicks seem to do nothing
+
+A long change, such as an undo or **Rebuild previews** with many objects, runs first, and later clicks wait behind it. The busy bar says what's running and how many changes wait. Wait for it, or press **Stop** to place no more previews for that change. See [When EDGEbuilder is busy](arranging.html#when-edgebuilder-is-busy).
+
+### Rebuild previews or Undo leaves objects out
+
+Objects more than 300 m from V and the camera get no preview: the message says how many are far away. They're still in the scene. Fly or walk near them and press **Rebuild previews**.
 
 ### Edit does nothing, or the mouse still moves V
 
@@ -79,9 +117,11 @@ EDGEbuilder probably stopped while Edit was on. **Load a save**: that gives V's 
 
 That was the behaviour in 0.3.0. Update to 0.3.1 or later, which hides the HUD again when the game brings it back (retested in game on 2026-10-16). If you still see it, check that **Hide the game's HUD** is on in the Settings tab, then report it with the log.
 
-### I can't click other REDnode windows
+### I can't click other REDnode windows, or they don't hide
 
 While Edit is on, EDGEbuilder's layer covers them. Switch **Edit** off, use the other window, and switch Edit back on.
+
+To have them hide while Edit is on, allow EDGEbuilder **Hiding every other package's windows (solo mode)** in REDnode's Mod Manager. See [Install and set up](install.html#allow-redbridge).
 
 ### The cursor stops at the edge of the screen while looking around
 

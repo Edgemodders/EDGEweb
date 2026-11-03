@@ -3,8 +3,8 @@ title: Troubleshooting REDbridge
 nav_title: Troubleshooting
 section: REDbridge
 order: 2
-description: "Fixes for REDbridge problems: missing, too old, not starting, the .NET runtime, slow first TweakDB use, and where the logs are."
-reviewed: 2026-10-24
+description: "Fixes for REDbridge problems: missing, too old, not starting, the .NET runtime, game 2.31, slow first TweakDB use, and where the logs are."
+reviewed: 2026-11-03
 ---
 
 # Troubleshooting <span class="y">REDbridge</span>
@@ -27,7 +27,7 @@ Look at the EDGEdeck page's footer. A **Get REDbridge** button means there's no 
 
 ### REDcode says REDbridge is too old
 
-REDcode 0.10.0 and newer need REDbridge 0.10.0 or newer. Run **REDcode: Update REDbridge**. If you set `redcode.bridgePath` to a copy you manage yourself, download the newer release and unzip it over that copy instead. See [Install and update](install.html#which-version-do-i-need).
+REDcode 0.10.0 and newer need REDbridge 0.10.0 or newer, and REDcode's **Find Items** needs 0.11.0 ("Find Items needs a newer REDbridge"). Run **REDcode: Update REDbridge**. If you set `redcode.bridgePath` to a copy you manage yourself, download the newer release and unzip it over that copy instead. See [Install and update](install.html#which-version-do-i-need).
 
 ### REDbridge doesn't start
 
@@ -47,6 +47,14 @@ Two things must be true:
 - **You allowed the package's bridge permission** in REDnode's Mod Manager. The Mod Manager also shows where REDbridge was found.
 
 If Get REDbridge fails, the Mod Manager shows the error and **Try again**. It needs to reach GitHub.
+
+### Streaming sectors read wrong on game 2.31
+
+REDbridge 0.11.0 is built for game 2.5. On 2.31 it fails some quest sectors ("Non-zero padding bytes found"), and others come back with wrong node data. Everything else works. If you mod 2.31's world sectors, use REDbridge 0.10.0: download it from the [releases page](https://github.com/Edgemodders/REDbridge/releases) and point the tool at it, as in [Installing it by hand](install.html#installing-it-by-hand). EDGEdeck's daily update check leaves a copy you set up yourself alone.
+
+### Game 2.5 files fail to open
+
+REDbridge 0.10.0 and older are built with WolvenKit 9.1, from before game 2.5, and fail some of its files. Update to 0.11.0 or newer: **Update REDbridge** in EDGEdeck or REDnode's Mod Manager, or **REDcode: Update REDbridge**.
 
 ### The first TweakDB look-up is slow
 

@@ -13,6 +13,7 @@ How to keep it:
 **New**
 
 - Wiki: an EDGEchat section, from installing the EDGE plugin for Claude Code to a first mod, a recolor and live swaps (https://github.com/Edgemodders/EDGEweb/issues/4): https://edgemodders.ai/wiki/edgechat/
+- Wiki: Arranging a scene in EDGEbuilder: select several objects, groups, copy and paste, undo: https://edgemodders.ai/wiki/edgebuilder/arranging.html
 
 **Changed**
 
@@ -20,3 +21,4 @@ How to keep it:
 - Wiki: Connect Claude Code describes EDGEchat 0.1.1, with three ways to install and sign-in with no token: https://edgemodders.ai/wiki/connect-claude-code.html
 - Wiki: EDGEdeck 0.30.0, with Get the frameworks, Update all, Move library, deploying one mod and several files from one Nexus page: https://edgemodders.ai/wiki/edgedeck/
 - Wiki: EDGEkit app 1.140.3 and extension pack 0.3.0, which now installs EDGEmat and EDGEwave too, and the one-click setup of Claude Code for EDGE: https://edgemodders.ai/wiki/edgekit/
+- Wiki: EDGEbuilder 0.5.8 on game 2.5, with your mods' and your REDcode project's assets, and REDbridge 0.11.0, built for game 2.5: https://edgemodders.ai/wiki/edgebuilder/ and https://edgemodders.ai/wiki/redbridge/

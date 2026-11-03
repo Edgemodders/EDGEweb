@@ -3,8 +3,8 @@ title: Install and set up EDGEbuilder
 nav_title: Install and set up
 section: EDGEbuilder
 order: 1
-description: "What EDGEbuilder needs, installing it with EDGEdeck, allowing REDbridge, and opening it in the game."
-reviewed: 2026-10-26
+description: "What EDGEbuilder needs, installing it with EDGEdeck, allowing REDbridge and solo mode, and opening it in the game."
+reviewed: 2026-11-03
 ---
 
 # Install and set up <span class="y">EDGEbuilder</span>
@@ -13,18 +13,19 @@ reviewed: 2026-10-26
 
 | You need | Notes |
 |---|---|
-| Cyberpunk 2077 on Windows, 2.31 tested | And a save to load: EDGEbuilder works in the world, not in the menus. REDnode supports game 2.5 from 0.38.1, but EDGEbuilder has not been tested on 2.5 yet |
-| [REDnode](../rednode/) 0.17 or later | Runs EDGEbuilder in the game. Version 0.22.0 or later also holds the cursor still while you look around. Use the newest release: see [Install REDnode](../rednode/install.html) |
+| Cyberpunk 2077 on Windows, game 2.5 | And a save to load: EDGEbuilder works in the world, not in the menus. Every release from 0.3.4 was tested on 2.5 |
+| [REDnode](../rednode/) 0.41.0 or later | Runs EDGEbuilder in the game. From 0.52.0, Ctrl+Z, Ctrl+Y, Ctrl+C, Ctrl+X, Ctrl+V and Esc reach EDGEbuilder; with an older REDnode, use the Scene tab's buttons and a right-click to cancel. Use the newest release: see [Install REDnode](../rednode/install.html) |
 | [Codeware](https://www.nexusmods.com/cyberpunk2077/mods/7780) 1.14 or later | REDnode's world calls, which spawn and move objects, need it. EDGEbuilder says so in its manifest, and REDnode's Mod Manager checks it |
-| [REDbridge](../redbridge/) 0.6.0 or later | Reads the game's files to build the asset list. The easiest way to get it is EDGEdeck's **Get REDbridge**. A copy REDcode fetched works too |
+| [REDbridge](../redbridge/) 0.10.0 or later | Reads the game's files to build the asset list. 0.11.0, the newest, is the one built for game 2.5. The easiest way to get it is EDGEdeck's **Get REDbridge**. A copy REDcode fetched works too. The size and appearances of a mod's or a project's mesh need REDbridge 0.12.0, which isn't released yet: until then such an asset drops with a 1 m box for the gizmo |
 | [EDGEdeck](../edgedeck/) 0.20.0 or later | Installs EDGEbuilder. From 0.21.1, a new EDGEbuilder version takes the old one's place in the same row |
+| [REDcode](../redcode/) 0.10.5 or later | Optional: for the **Project** tab, which lists the meshes and entities of the project open in REDcode. REDcode installs a small REDnode package, `redcode`, that tells EDGEbuilder which project is open |
 | A 16:9 screen | The editor covers a 1920 x 1080 area, scaled to your screen. Ultrawide screens aren't covered yet |
 
 Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. RED4ext, which REDnode and Codeware both need, goes in the same way. See [Frameworks and game patches](../edgedeck/frameworks.html).
 
 ## Install EDGEbuilder
 
-1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.3.3.
+1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.5.8.
 2. In EDGEdeck, press **Add mod** and pick the zip. EDGEdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../edgedeck/adding-mods.html).
 3. Make sure it's ticked, and press **Deploy**.
 
@@ -42,9 +43,11 @@ EDGEbuilder asks REDnode for the REDbridge that EDGEdeck downloaded. REDnode han
 
 Within about five seconds EDGEbuilder picks REDbridge up by itself. Until then its second status pill says **Allow REDbridge**: hover it for the same steps.
 
+EDGEbuilder also asks for **Hiding every other package's windows (solo mode)**. Switch that on too, and other packages' windows hide while Edit is on, then come back when you switch it off. Without it they stay on screen, and EDGEbuilder says once how to allow it. See [solo mode](../rednode/spaces.html#solo-mode).
+
 While you're in the Mod Manager, EDGEbuilder's **Requires** line should list Codeware with a tick.
 
-{% include shot.html caption="Allowing REDbridge" shows="REDnode's Mod Manager with EDGEbuilder selected, its Requires line showing Codeware with a tick, and the Allowed switch under Permissions." %}
+{% include shot.html caption="Allowing REDbridge" shows="REDnode's Mod Manager with EDGEbuilder selected, its Requires line showing Codeware with a tick, and the Allowed switches for REDbridge and solo mode under Permissions." %}
 
 ## Open EDGEbuilder
 
@@ -56,7 +59,7 @@ The panel opens at the right of the screen. Three pills at its top say how thing
 |---|---|---|
 | The game | **World ready** | **No game** (REDnode isn't linked to a running game), **Load a save**, or **Needs Codeware 1.14+** |
 | REDbridge | **REDbridge** and its version, in green | **Allow REDbridge (hover)**, **REDbridge starting**, **No REDbridge** or **REDbridge failed**. Hover for the reason |
-| The asset index | A count, about **31,500 assets** | **Indexing...** while it's built, **No index** or **Index failed** |
+| The asset index | A count of the game's assets, about **31,500 assets** | **Indexing...** while it's built, **No index** or **Index failed** |
 
 The first time, the index takes a few seconds to build. After that it loads straight away when EDGEbuilder starts, so search works even before REDbridge is ready. It is built again only when the game version changes, or when you ask in the Settings tab.
 
