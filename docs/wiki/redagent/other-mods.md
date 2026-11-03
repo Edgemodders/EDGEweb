@@ -4,7 +4,7 @@ nav_title: Mods that ask REDagent
 section: REDagent
 order: 3
 description: "Let other REDnode mods ask REDagent questions: the permission, what their questions can do, daily spending limits, and the Mods view."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Mods that ask <span class="y">REDagent</span>
@@ -21,6 +21,8 @@ A mod that wants to ask declares the **agent** permission. It can't ask anything
 REDagent itself must be installed and switched on. Withdraw the permission the same way, and the mod's questions are refused again.
 
 REDnode comes with a sample to try it: the [Ask mod](https://github.com/Edgemodders/REDnode/tree/main/packages/overlay/apps/ask-mod). Switch it on in the Mod Manager, allow its permission, and type a question in its window. The answer streams in with its cost.
+
+A mod gets only REDagent's answer, in plain text (REDagent 0.4.1). Before, a note REDagent wrote while looking something up could run into the answer, and Markdown marks such as `**` showed as they were.
 
 {% include shot.html caption="The Ask mod" src="/assets/shots/redagent/other-mods-the-ask-mod.png" alt="The Ask mod window with the question How many eddies does V have?, the Ask and Stop buttons, and REDagent&rsquo;s answer with its cost." shows="REDnode's Ask mod window with a question typed in and REDagent's answer streaming in below it, with its cost." %}
 

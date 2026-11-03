@@ -4,7 +4,7 @@ nav_title: Your first mod
 section: REDagent
 order: 1
 description: "Make a working Cyberpunk 2077 mod with REDagent, from setup to undo, without writing code."
-reviewed: 2026-10-26
+reviewed: 2026-11-03
 ---
 
 # Your first mod with <span class="y">REDagent</span>
@@ -13,14 +13,16 @@ This walkthrough follows REDagent's own in-game test. By the end you'll have a m
 
 ## Before you start
 
-- REDnode and REDagent are installed: REDnode 0.38.1 or later with REDagent 0.3.2 on game 2.5, or REDnode 0.37.0 with REDagent 0.3.1 on 2.31. See [Install REDnode](../rednode/install.html) and the [REDagent guide's install steps](https://edgemodders.github.io/REDagent/guide.html#install).
+- REDnode and REDagent are installed: REDnode 0.50.2 or later with REDagent 0.4.1 on game 2.5, or REDnode 0.37.0 with REDagent 0.3.1 on 2.31. See [Install REDnode](../rednode/install.html) and the [REDagent guide's install steps](https://edgemodders.github.io/REDagent/guide.html#install).
 - You have an Anthropic API key from [console.anthropic.com](https://console.anthropic.com/), with some credit on it. Keys start with `sk-ant-`.
 
 ## 1. Set up once
 
 1. Start the game and load a save. The REDagent window opens on the right. The first time, press **Get the Agent SDK** in it and wait for the download (about 140 MB) to finish.
 2. Press **F10**, open the **Mod Manager** at the top of the REDnode launcher and select **REDagent**. Under its permissions, switch **Allowed** on for "REDnode's tools for AI agents". A new package is listed only in the Mod Manager until you press **Pin to launcher** there. Without this permission, REDagent can chat but can't see your mod log, the game or overlay windows.
-3. Click the key field in REDagent, press **Ctrl+V** to paste your key, then **Save key**. The chat appears.
+3. Press **Set up the key** in REDagent. REDnode's **Key request** window opens: copy your key, click its box, press **Ctrl+V**, then **Allow**. The chat appears. If you already set an Anthropic key in REDnode's Settings, under **Keys**, or another EDGE tool did, REDagent only asks you to allow it.
+
+   Coming from REDagent 0.3? At your first question, REDagent offers the key it kept to REDnode's shared keys, then deletes its own copy. If you decline, it keeps using its own copy.
 
 ## 2. Warm up
 

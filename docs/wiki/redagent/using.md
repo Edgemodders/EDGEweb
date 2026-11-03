@@ -3,7 +3,7 @@ title: Using REDagent
 section: REDagent
 order: 2
 description: "Find your way around REDagent's chat window: what to ask, saved chats, changes and Undo, models and costs, your key and data, and what to do when something goes wrong."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Using <span class="y">REDagent</span>
@@ -23,7 +23,7 @@ REDagent's window opens on the right of the game when it starts. If you close it
 | **Total** | What this chat has cost so far |
 | **Chats** | Your saved chats, and the [Mods](other-mods.html) tab |
 | **New** | Starts a fresh chat |
-| **Key** | Replaces your saved Anthropic API key |
+| **Key** | Opens the key panel. **Set up the key** there opens REDnode's **Key request** window. To change or remove the key itself, use REDnode's Settings, under **Keys** |
 | **The changes strip** | Above the input, once REDagent has changed a file in this chat. See [Changes and Undo](#changes-and-undo) |
 
 While REDagent works, the last line of the chat says **WORKING...**. When it says **WAITING FOR YOU...**, a card in the chat needs your answer: scroll to it.
@@ -91,7 +91,7 @@ Questions from [other mods](other-mods.html) always use Sonnet 5.5, and each mod
 
 | What | Where it goes |
 |---|---|
-| Your API key | Stored encrypted with your Windows account, by REDnode. Only used to talk to Anthropic, and never shown again. **Key** replaces it |
+| Your API key | One of the keys every EDGE tool on your PC shares, kept encrypted for your Windows user by REDnode. REDagent uses it only to talk to Anthropic, and it is never shown again. Change or remove it in REDnode's Settings, under **Keys** |
 | Your questions and REDagent's answers | Sent to Anthropic's API, as with any use of the Claude API |
 | What REDagent reads to answer | Also sent to Anthropic: mod logs, values from the game, pictures of overlay windows and of the screen, and the files it reads |
 | Everything else | Stays on your PC. REDagent sends no telemetry |
@@ -102,9 +102,9 @@ Questions from [other mods](other-mods.html) always use Sonnet 5.5, and each mod
 |---|---|
 | "REDnode's tools are off" | Press **F10**, open the **Mod Manager**, select REDagent, and switch **Allowed** on for "REDnode's tools for AI agents" |
 | **Get the Agent SDK** fails | Check your connection and press it again. A partial or mismatched download is thrown away, never used |
-| "That does not look like an Anthropic API key" | Copy the whole key. Anthropic keys start with `sk-ant-` |
-| An error about your key or credit | Check the key and your credit at [console.anthropic.com](https://console.anthropic.com/), then press **Key** and save the key again |
-| REDagent asks for your key again | The saved key couldn't be read, for example after a Windows account change. Paste it again |
+| REDnode refuses the key | Copy the whole key: an Anthropic key starts with `sk-ant-`. REDnode refuses one that doesn't |
+| An error about your key or credit | Check the key and your credit at [console.anthropic.com](https://console.anthropic.com/). To use another key: REDnode's Settings, **Keys**, **Replace** on the Anthropic line |
+| REDagent asks for your key again | The saved key couldn't be read, for example after a Windows account change (REDnode's Keys shows it as **Unreadable here**). Press **Set up the key** and paste it again |
 | The window is gone | **F10**, **Mod Manager**: check REDagent is switched on, and press **Show** if its window was closed |
 | Anything else | Open REDnode's Mod log app. REDagent's lines start with `[redagent]` |
 
