@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEdeck
 order: 12
 description: "Every EDGEdeck setting with its default and when to change it, and every EDGEdeck command."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Settings and <span class="y">commands</span>
@@ -19,7 +19,7 @@ Open VS Code's settings (`Ctrl+,`) and search for `edgedeck`. Most people never 
 |---|---|---|---|
 | `edgedeck.gamePath` | empty | The Cyberpunk 2077 folder (the one with `bin`, `archive` and `r6`). Empty means find it through Steam, GOG or Epic on every start | The game is somewhere those launchers can't see. **Pick the game folder...** sets it for you |
 | `edgedeck.launch` | `auto` | How **Run game** starts the game: `auto` (through Steam for a Steam install, else the exe), `steam` (always through Steam) or `exe` (always `bin\x64\Cyberpunk2077.exe`). Every way adds `-modded` | Run game starts the game the wrong way for your setup |
-| `edgedeck.libraryPath` | empty | Where your mods are kept. Empty means `%USERPROFILE%\EDGEdeck` | The game is on another drive. Put the library on the game's drive so deploy can use hardlinks |
+| `edgedeck.libraryPath` | empty | Where your mods are kept: every mod in the list, on or off. Empty means `%USERPROFILE%\EDGEdeck` | Don't change it by hand: that only points EDGEdeck at another folder. Use **Move library...**, which moves the mods and sets this for you |
 | `edgedeck.bridgePath` | empty | Path to `REDbridge.exe` or its folder. Empty means the copy **Get REDbridge** fetched, else a REDbridge checkout next to EDGEdeck's, else REDbridge on your PATH | You build REDbridge yourself |
 | `edgedeck.dotnetRoot` | empty | The .NET location for the REDbridge process only. Empty means the per-user .NET 10 runtime, else whatever the PC has | Rarely. See the warning below |
 | `edgedeck.nexusCheckUpdatesOnStart` | on | Asks Nexus once a day whether your mods have newer files. Needs a Nexus sign-in | You don't want daily update checks |
@@ -41,6 +41,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEdeck` to see them. Most 
 | Add mod | Adds a mod from a zip, 7z or rar, a single mod file such as an `.archive`, or a folder |
 | Deploy | Makes the game folder match your list. Waits until the game is closed |
 | Run game | Deploys any waiting changes, then starts the game with `-modded`. Leaves a running game alone |
+| Update all | Gets the newest file for every mod with an update waiting, after one question. **Update shown** on the EDGEdeck page while a search or filter narrows the list |
 | Undo deploy | Removes everything EDGEdeck deployed. Waits until the game is closed |
 | Show pending changes | Lists what the next deploy will do, and why |
 | Show conflicts | Opens the Conflicts page |
@@ -51,6 +52,8 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEdeck` to see them. Most 
 | Command | Does |
 |---|---|
 | Details | Opens the mod's detail panel |
+| Deploy this mod | Turns the mod on and puts only its files in the game. Other changes keep waiting |
+| Undeploy | Turns the mod off and takes only its files out of the game |
 | Move up (wins conflicts), Move down | Changes its place in the order |
 | Switch version... | Makes another version of the mod the active one |
 | Open on Nexus Mods | Opens its Nexus page |
@@ -83,14 +86,14 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEdeck` to see them. Most 
 | Update REDbridge | Checks for and installs a newer REDbridge |
 | Import from Vortex | Copies Vortex's mods into the library |
 | Add from REDcode project | Adds a project's packed output as a mod |
-| Add an archive to the REDcode project... | Puts the resources of any `.archive` file into the open REDcode project, without adding it to the library. Also on an archive's right-click menu in VS Code's Explorer |
+| Add to REDcode project (for an `.archive` file) | Puts the resources of any `.archive` file into the open REDcode project, without adding it to the library. On an archive's right-click menu in VS Code's Explorer, or run it and pick the file. Called **Add an archive to the REDcode project...** before 0.29.4 |
 | Switch loadout... | Makes another loadout active. Deploy afterwards |
 | Save as new loadout... | Saves the mods as they are now as a new loadout. The active one stays active |
 | Export the active loadout... | Writes the active loadout to a file, to share or keep |
 | Import a loadout... | Adds a loadout file as a new loadout |
 | Open library folder | Opens the library in File Explorer |
-| Get the frameworks... | Next version, not released yet. Gets RED4ext, CET, redscript, ArchiveXL, TweakXL and Codeware from their authors' GitHub releases |
-| Move library... | Next version, not released yet. Moves the library to a folder you pick and sets `edgedeck.libraryPath` |
+| Get the frameworks... | Gets RED4ext, CET, redscript, ArchiveXL, TweakXL and Codeware from their authors' GitHub releases |
+| Move library... | Moves the library to a folder you pick and sets `edgedeck.libraryPath`. Won't start while the game runs |
 | Show log | Opens EDGEdeck's log |
 | EDGEdeck: Connect an assistant (MCP)... | Sets up Claude Code or another assistant |
 | Suggest the HUD theme | Offers REDnode HUD, the colour theme EDGEdeck's pages are drawn for. EDGEdeck offers it once by itself |

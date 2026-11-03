@@ -4,7 +4,7 @@ nav_title: Library and loadouts
 section: EDGEdeck
 order: 9
 description: "Where EDGEdeck keeps your mods, what uses disk space and what's safe to delete, and loadouts you switch between."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Library, disk space and <span class="y">loadouts</span>
@@ -12,6 +12,8 @@ reviewed: 2026-10-24
 ## The library
 
 Everything EDGEdeck knows is kept in plain files in the **library** folder, `%USERPROFILE%\EDGEdeck` by default. **Open library folder** in the Mods view's `...` menu opens it.
+
+**The list is your library.** Every mod in it, on or off, is a copy kept in this folder, and a mod that isn't in the list isn't in the library. The Mods view's header says so, for example `Library: 38 mods · Loadout: Default`. On the EDGEdeck page, **Library** at the right of the loadout row shows the count of mods and versions; click it to open the folder.
 
 | Folder or file | Contents |
 |---|---|
@@ -30,8 +32,15 @@ Because the library is plain folders and JSON files, you can look inside it with
 
 Choose a folder on the **same drive as the game**, so deploy can use hardlinks and your mods don't take up space twice.
 
-- **In 0.28.0:** set `edgedeck.libraryPath` to the new folder, best before you add mods: 0.28.0 doesn't move an existing library for you. See [Settings and commands](settings.html).
-- **Next version (built, not released yet):** **Move library...** in the Mods view's `...` menu, or in the Set up group when the library and the game are on different drives, moves it to a folder you pick and sets the setting. On the same drive that's a rename; otherwise it copies, checks every file, then removes the old folder. The next deploy turns copies in the game into hardlinks.
+**Move library...** moves it for you (EDGEdeck 0.29.0 or later). It's in the Mods view's `...` menu, in the Set up group as **Move the library to the game's drive** when the library and the game are on different drives, and on the EDGEdeck page's footer while deploy is copying.
+
+1. Choose **Move library...** and pick the new folder.
+2. On the same drive, EDGEdeck simply renames the folder. On another drive it copies everything, checks each file, then removes the old folder. A folder that already holds a library is used as it is.
+3. EDGEdeck sets `edgedeck.libraryPath` for you. The next deploy turns the game's copies into hardlinks, or the other way round if you moved away from the game's drive. **Show pending changes** says why each file is redone.
+
+Close the game first: Move library won't start while it runs.
+
+> **Don't just edit `edgedeck.libraryPath`.** Changing the setting by hand only points EDGEdeck at another folder; your mods stay where they were. Use **Move library...**.
 
 ## Disk space
 

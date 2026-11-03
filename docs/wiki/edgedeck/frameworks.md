@@ -4,7 +4,7 @@ nav_title: Frameworks and patches
 section: EDGEdeck
 order: 8
 description: "How EDGEdeck handles RED4ext, CET, redscript, ArchiveXL, TweakXL and other frameworks, and what to do after a Cyberpunk 2077 update."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Frameworks and <span class="y">game patches</span>
@@ -30,9 +30,20 @@ In EDGEdeck, frameworks are mods like any other: you add them from Nexus (or as 
 
 ## Getting the frameworks
 
-Today, add each framework from its Nexus page like any mod (see [Adding mods](adding-mods.html)). Most mods need at least RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and Codeware.
+Most mods need at least RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and Codeware. **Get the frameworks** gets those six in one go (EDGEdeck 0.29.0 or later). It's in four places:
 
-**Get the frameworks** is built for the next version after 0.28.0 and not released yet. One button gets those six: on the Frameworks group's header, in the Set up group while any is missing, on the EDGEdeck page, and in the `...` menu. A list shows what the library has and what's out, with the missing and older ones ticked. The files come from each author's GitHub release, the same as on Nexus, so no Nexus account is needed. After a game patch, the page offers **Update the frameworks**. Then deploy.
+- the download button on the Frameworks group's header;
+- the **Get the frameworks** row in the Set up group, while any of the six is missing;
+- a link on the EDGEdeck page;
+- the Mods view's `...` menu.
+
+A list shows each one with the version your library has and the version that's out, with the missing and older ones ticked. Confirm, then deploy.
+
+The files come from each author's GitHub release, the same files and versions as on Nexus, so you don't need a Nexus account. Each one joins the same mod a Nexus download of it would, so its versions, update checks and **Switch version...** work as for any mod.
+
+{% include shot.html caption="Get the frameworks" shows="The list Get the frameworks shows: the six frameworks with the library's version and the newest one, the missing and older ones ticked." %}
+
+Frameworks other than those six, such as Audioware, input_loader or mod_settings, you add from their Nexus pages like any mod (see [Adding mods](adding-mods.html)).
 
 ## The game version
 
@@ -48,7 +59,7 @@ When the game's version differs from the one at your last deploy, the Frameworks
 
 What to do:
 
-1. **Update each framework** from its `update ... available` link. See [Nexus Mods](nexus.html#updates).
+1. **Update the frameworks**, the button the EDGEdeck page shows after a game patch, updates them all at once; or update each one from its `update ... available` link. Frameworks update from their authors' GitHub releases, so no Nexus click is needed. **Update all** does every mod with an update, frameworks included. See [Update all](nexus.html#update-all).
 2. **Deploy.**
 3. If a framework has no update yet, wait for its author, or turn off the mods that need it until there is one.
 4. If you aren't signed in to Nexus, EDGEdeck asks you to sign in so it can check. You can also check each framework's Nexus page yourself.

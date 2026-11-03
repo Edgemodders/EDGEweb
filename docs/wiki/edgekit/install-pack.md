@@ -3,36 +3,38 @@ title: Install the EDGEkit extension pack
 nav_title: Install the extension pack
 section: EDGEkit
 order: 1
-description: "Install the EDGEkit extension pack in VS Code or VSCodium to get REDcode, EDGEdeck and the REDnode HUD theme in one go. A preview."
-reviewed: 2026-10-24
+description: "Install the EDGEkit extension pack in VS Code or VSCodium to get REDcode, EDGEdeck, EDGEmat, EDGEwave and the REDnode HUD theme in one go. A preview."
+reviewed: 2026-11-03
 ---
 
 # Install the <span class="y">EDGEkit</span> extension pack
 
 The EDGEkit extension pack is one extension that installs the published EDGE extensions for you. It is for modders who want to stay in VS Code or VSCodium. If you'd rather have one app with everything built in, [get the EDGEkit app](index.html#get-the-app) instead. The pack itself has no features: it is a list, and installing it installs everything on the list.
 
-**It is a preview**, like REDcode and EDGEdeck inside it. Expect rough edges, and tell us about them.
+**It is a preview**, like the EDGE extensions inside it. Expect rough edges, and tell us about them.
 
 ## What you need
 
 | You need | Notes |
 |---|---|
 | [VS Code](https://code.visualstudio.com/) 1.80 or later, or [VSCodium](https://vscodium.com/) | |
-| Windows x64 for REDcode and EDGEdeck | They read game files through REDbridge, which runs on Windows only, so they install only there. The theme and REDscript IDE work everywhere |
-| Cyberpunk 2077 | For REDcode and EDGEdeck to be useful |
+| Windows x64 for REDcode, EDGEdeck and EDGEmat | They read game files through REDbridge, which runs on Windows only, so they install only there. EDGEwave works through REDcode. The theme and REDscript IDE work everywhere |
+| Cyberpunk 2077 | For the EDGE tools to be useful |
 
 ## What it installs
 
-Checked on 2026-10-24, pack version 0.2.0 (the published one):
+Checked on 2026-11-03, pack version 0.3.0 (published that day):
 
 | Extension | What it does | In VS Code | In VSCodium |
 |---|---|---|---|
 | [REDcode](../redcode/) for Cyberpunk 2077 | The modding workspace: browse the game's archives, edit game files, view textures, meshes and sounds, pack WolvenKit projects | Yes | Yes |
 | [EDGEdeck](../edgedeck/) | The mod manager | Yes | Yes |
+| [EDGEmat](../edgemat/) | The material editor: find a garment's materials, recolor them, make new ones from your words | Yes | Yes |
+| [EDGEwave](../edgewave/) | The sound studio: edit, mix and re-voice the game's sounds | Yes | Yes |
 | REDnode HUD | A dark theme in the EDGE house style | Yes | Yes |
 | REDscript IDE, by jac3km4 | Language support for redscript, the game's scripting language | Yes | No: it isn't on Open VSX |
 
-VS Code installs extensions from the Microsoft Marketplace, and VSCodium from Open VSX, so the pack lists only what each one can get. New EDGE extensions join the pack as they are published: pack 0.3.0, built but not published yet, adds [EDGEmat](../edgemat/) and [EDGEwave](../edgewave/). Until it's out, install those two on their own from the Extensions view.
+VS Code installs extensions from the Microsoft Marketplace, and VSCodium from Open VSX, so the pack lists only what each one can get. New EDGE extensions join the pack as they are published. Pack 0.3.0 added EDGEmat and EDGEwave: if you installed an older pack, VS Code updates it and installs the two.
 
 ## Install it
 
@@ -48,7 +50,7 @@ code --install-extension edgemodders.edgekit
 
 The listings: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgekit) and [Open VSX](https://open-vsx.org/extension/edgemodders/edgekit).
 
-{% include shot.html caption="The EDGEkit pack in the Extensions view" shows="VS Code's Extensions view with EDGEkit selected, its Extension Pack tab listing REDcode, EDGEdeck, REDnode HUD and REDscript IDE." %}
+{% include shot.html caption="The EDGEkit pack in the Extensions view" shows="VS Code's Extensions view with EDGEkit selected, its Extension Pack tab listing REDcode, EDGEdeck, EDGEmat, EDGEwave, REDnode HUD and REDscript IDE." %}
 
 ## After installing
 
@@ -58,6 +60,8 @@ The pack installs the extensions; each still has its own first steps.
 |---|---|
 | REDcode | Run **REDcode: Install REDbridge** from the command palette (`Ctrl+Shift+P`) to fetch the engine it needs. See [REDcode](../redcode/) |
 | EDGEdeck | Click the EDGEdeck icon in the activity bar and follow its Set up steps. See [Install and set up EDGEdeck](../edgedeck/install.html) |
+| EDGEmat | Build its material library from your game once. See [Install and set up EDGEmat](../edgemat/install.html) |
+| EDGEwave | Needs REDcode set up and a REDcode project. See [Install and use EDGEwave](../edgewave/try-it.html) |
 | REDnode HUD | Optional: pick it with **Preferences: Color Theme** |
 
 ## Updates

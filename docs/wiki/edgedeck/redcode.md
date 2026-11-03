@@ -3,7 +3,7 @@ title: EDGEdeck and REDcode
 section: EDGEdeck
 order: 10
 description: "Test your own REDcode or WolvenKit project as a EDGEdeck mod, and copy files from installed mods into a project."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # EDGEdeck and <span class="y">REDcode</span>
@@ -41,7 +41,7 @@ When a REDcode project is open, you can copy files from an installed mod into it
 
 Without a project open, EDGEdeck says so and offers REDcode's **New Project**.
 
-**An archive that isn't in your library**, such as one a contributor sent you, goes in the same way without installing it anywhere: right-click the `.archive` file in VS Code's Explorer and choose **Add an archive to the REDcode project...**, or run that command and pick the file.
+**An archive that isn't in your library**, such as one a contributor sent you, goes in the same way without installing it anywhere: right-click the `.archive` file in VS Code's Explorer and choose **Add to REDcode project**, or run **EDGEdeck: Add to REDcode project** from the command palette and pick the file.
 
 > **Respect the author.** Another modder's files are theirs. Check the mod's permissions on its Nexus page before you publish anything that includes them.
 

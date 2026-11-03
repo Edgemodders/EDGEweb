@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEmat
 order: 0
 description: "EDGEmat, the EDGE platform's material editor for Cyberpunk 2077: see what a garment is made of, in plain words and in 3D, recolor it, make new materials from your words, or ask an AI assistant to."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # EDGE<span class="y">mat</span>
@@ -51,7 +51,7 @@ One thing to know: a layer's color isn't a free choice. Each surface offers a fi
 | [REDbridge](../redbridge/) | Reads every game file, using WolvenKit's engine. EDGEmat needs it |
 | [REDcode](../redcode/) | Recommended. With it, EDGEmat takes the game folder and REDbridge from REDcode, so there is nothing to set up. EDGEmat saves into REDcode's open project, and REDcode packs it for the game. REDcode's 3D viewer shows EDGEmat's colors |
 | Claude and other agents | EDGEmat's MCP server lets an AI assistant find, describe, recolor and make materials. Every feature comes to the buttons and the assistant together. EDGEmat makes no network calls of its own, except to an image service you chose, when you press Generate |
-| [EDGEkit](../edgekit/) | The EDGEkit app (1.140.1) has EDGEmat 0.3.1 built in. In VS Code, install EDGEmat on its own for now: the extension pack adds it in its next version |
+| [EDGEkit](../edgekit/) | The EDGEkit app (1.140.3) has EDGEmat 0.3.1 built in. In VS Code, the EDGEkit extension pack (0.3.0) installs it with the other EDGE tools |
 
 EDGEmat builds its material library from your own game the first time it runs, so it ships no game data and stays current after game patches.
 

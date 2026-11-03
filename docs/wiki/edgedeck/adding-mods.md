@@ -4,7 +4,7 @@ nav_title: Adding mods
 section: EDGEdeck
 order: 4
 description: "Add mods to EDGEdeck from zip, 7z and rar files, single mod files, folders, Nexus Mods and Vortex, and how EDGEdeck decides where each file goes."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Adding <span class="y">mods</span>
@@ -54,7 +54,7 @@ If nothing matches, or a download offers a choice (folders such as "Option A" an
 | **Paste a link** | Without link handling, copy the `nxm://` link (right-click **Mod manager download**, copy link) and use **Nexus: add from a link** |
 | **Update from a row** | When a mod says `update 1.2 available`, click it. See [Nexus Mods](nexus.html#updates) |
 
-Mods added from Nexus remember their Nexus id, so EDGEdeck can check them for updates.
+Mods added from Nexus remember their Nexus id, so EDGEdeck can check them for updates. Each file you download from a page is a mod of its own; with two or more from one page, they share a row named after the page. See [Several files from one page](nexus.html#several-files-from-one-page).
 
 ## From Vortex
 
@@ -66,10 +66,10 @@ Mods added from Nexus remember their Nexus id, so EDGEdeck can check them for up
 
 ## Versions
 
-A mod has one row however many of its versions are in the library. The newest, or the one that's on, stands for it. The others wait in the version dropdown on the EDGEdeck page and in **Switch version...**, which appears when you hover the mod's row in the Mods view. Adding a version the library already has does nothing. Adding a newer version takes the old one's place in the order, on if the old one was on, and turns the old one off; an older version arrives switched off.
+A mod has one row however many of its versions are in the library. The newest, or the one that's on, stands for it. The others wait in the version dropdown on the EDGEdeck page and in **Switch version...**, which appears when you hover the mod's row in the Mods view. Adding a version the library already has does nothing. A version at the end of a file name stays out of the mod's name: `REDnode-0.40.1.zip` is REDnode, version 0.40.1. Adding a newer version takes the old one's place in the order, on if the old one was on, and turns the old one off; an older version arrives switched off.
 
 To go back to an older version, switch to it and deploy. To clear out old versions, see [Library, disk space and loadouts](library.html).
 
 ## Removing a mod
 
-Right-click it and choose **Remove**, or use the detail panel. This deletes the mod from the library. If it was deployed, its files come out of the game at the next deploy.
+Right-click it and choose **Remove**, or use the detail panel. This deletes the mod from the library. The question names the version; a mod's other versions stay. If it was deployed, its files come out of the game at the next deploy. The row leaves the list as soon as you confirm, while EDGEdeck checks the other mods' archives for conflicts again. To clear out a whole Nexus page, or every mod in a section, use the remove button on its row or header.

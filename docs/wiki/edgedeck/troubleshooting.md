@@ -3,8 +3,8 @@ title: Troubleshooting EDGEdeck
 nav_title: Troubleshooting
 section: EDGEdeck
 order: 13
-description: "Fixes for common EDGEdeck problems: game not found, the game still running, Vortex, missing conflicts, changed files, Nexus downloads, what a deploy changed, and a game that won't start."
-reviewed: 2026-10-24
+description: "Fixes for common EDGEdeck problems: game not found, the game still running, Vortex, missing conflicts, changed files, Nexus downloads, files from one Nexus page, what a deploy changed, and a game that won't start."
+reviewed: 2026-11-03
 ---
 
 # Troubleshooting <span class="y">EDGEdeck</span>
@@ -55,6 +55,18 @@ Nexus gives direct downloads to Premium members only. EDGEdeck opens the file's 
 
 Vortex takes the download links back every time it starts. Use **Nexus: handle download links (nxm)**, or the row that reappears in the Set up group.
 
+### Mod manager download opens VS Code, or nothing, while you use EDGEkit
+
+EDGEdeck before 0.29.3 always sent the links to VS Code. Update EDGEdeck (EDGEkit 1.140.3 comes with 0.29.4). The links switch over the next time EDGEdeck starts.
+
+### A second file from a Nexus page turned the first one off
+
+Up to EDGEdeck 0.29.4, a second file from the same page, such as a 4K version or an optional patch, was added as a new version of the first. Update to 0.30.0: each file is then a mod of its own, and EDGEdeck splits ones it had put together at the next update check or download from that page. See [Several files from one page](nexus.html#several-files-from-one-page).
+
+### Adding REDnode fails with "ENOENT ... app.asar"
+
+Fixed in EDGEdeck 0.29.4. Update EDGEdeck and add REDnode's zip again.
+
 ### What did my last deploy change?
 
 Every deploy writes a report: each mod's files added, replaced or removed, with their paths in the game folder. **View** on the deploy message opens it. Earlier reports, the newest 30, are in the `deploys` folder of your library (**Open library folder** in the Mods view's `...` menu). For what the *next* deploy will do, use **Show pending changes**. See [Deploying and undo](deploying.html#deploy-reports).
@@ -65,7 +77,7 @@ Check that it says `deployed`. Archives load in the order of `modlist.txt`, whic
 
 ### Deploy copies files instead of using hardlinks
 
-Your library is on a different drive from the game. Hardlinks only work on the same drive. Put the library on the game's drive: set `edgedeck.libraryPath` to a folder there (the next version's **Move library...** does it for you). See [Library, disk space and loadouts](library.html#moving-the-library).
+Your library is on a different drive from the game. Hardlinks only work on the same drive. Put the library on the game's drive with **Move library...**, or the **Move the library to the game's drive** row in the Set up group. The next deploy turns the copies into hardlinks. See [Library, disk space and loadouts](library.html#moving-the-library).
 
 ### REDmod mods are deployed but don't load
 
@@ -73,7 +85,7 @@ REDmod mods load only when the game starts with `-modded`. Start it with **Run g
 
 ### The game won't start after a game update
 
-A framework probably needs updating for the new game version. Check the Frameworks group's header and update what it names. See [Frameworks and game patches](frameworks.html#after-a-game-update).
+A framework probably needs updating for the new game version. Check the Frameworks group's header and update what it names, or press **Update the frameworks** on the EDGEdeck page. See [Frameworks and game patches](frameworks.html#after-a-game-update).
 
 ### The game won't start, or crashes, after adding mods
 
