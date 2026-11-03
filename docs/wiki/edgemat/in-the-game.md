@@ -3,8 +3,8 @@ title: See your EDGEmat changes in the game
 nav_title: Your mod in the game
 section: EDGEmat
 order: 8
-description: "From a saved recolor or new material to the game: pack and install with REDcode, the hot folder and REDmod pitfalls, and putting the item on V with Cyber Engine Tweaks."
-reviewed: 2026-10-24
+description: "From a saved recolor or new material to the game: pack and install with REDcode, the hot folder and REDmod pitfalls, and putting the item on V with REDnode's Console."
+reviewed: 2026-11-03
 ---
 
 # Your mod <span class="y">in the game</span>
@@ -30,10 +30,10 @@ To check: after installing, `<game>\archive\pc\mod\<project>.archive` should exi
 
 ## 2. Put the item on V
 
-You need to wear the item you changed. The quickest way is the console of [Cyber Engine Tweaks](https://www.nexusmods.com/cyberpunk2077/mods/107):
+You need to wear the item you changed. The quickest way is [REDnode's Console](../rednode/overlay.html#the-console) (REDnode 0.49.5 or later): press F10, switch on **Console** in the launcher, and type:
 
-```lua
-Game.AddToInventory("Items.Pants_01_basic_01", 1)
+```js
+addItem("Items.Pants_01_basic_01")
 ```
 
 The id is the item's record id. [Find](find.html) shows it beside each item, after its slot (and `mat_find` returns it), so you know the item you add is the one you edited. Equip it, then look in third person: photo mode, or a mirror.

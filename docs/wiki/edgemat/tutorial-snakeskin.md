@@ -4,7 +4,7 @@ nav_title: "Tutorial: snakeskin"
 section: EDGEmat
 order: 11
 description: "Step by step: ask Claude Code, through EDGEmat's MCP server, to make a dark green snakeskin material and put it on a pair of slim-fit pants for both bodies, then wear them in the game."
-reviewed: 2026-10-20
+reviewed: 2026-11-03
 ---
 
 # Tutorial: <span class="y">snakeskin</span> by asking Claude
@@ -19,7 +19,7 @@ In this tutorial you don't press a button in EDGEmat at all: you ask [Claude Cod
 |---|---|
 | Claude Code, connected to EDGEmat's MCP server **with your image service key** | Below |
 | A WolvenKit project made with REDcode | **REDcode: New Project**, for example `MyMaterials`. Note its folder |
-| [REDcode](../redcode/) to pack it, and [Cyber Engine Tweaks](https://www.nexusmods.com/cyberpunk2077/mods/107) | As in [Your mod in the game](in-the-game.html) |
+| [REDcode](../redcode/) to pack it, and [REDnode](../rednode/) 0.49.5 or later for its Console | As in [Your mod in the game](in-the-game.html) |
 
 ## 1. Connect Claude Code, with your key
 
@@ -52,10 +52,10 @@ You can name the settings too: "repeat 6, glossy, strong bumps". Or ask to see t
 ## 3. Into the game
 
 1. With the game closed, in REDcode: **Pack and Install**.
-2. Start the game, and in Cyber Engine Tweaks' console:
+2. Start the game, press F10, switch on **Console** in REDnode's launcher, and type:
 
-   ```lua
-   Game.AddToInventory("Items.Pants_01_basic_02", 1)
+   ```js
+   addItem("Items.Pants_01_basic_02")
    ```
 
 3. Equip the pants; photo mode, front, side and back.

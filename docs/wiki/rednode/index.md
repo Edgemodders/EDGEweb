@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDnode
 order: 0
 description: "REDnode, the EDGE platform's runtime for Cyberpunk 2077: what it is, what it's for, and why you might want it."
-reviewed: 2026-10-27
+reviewed: 2026-11-03
 ---
 
 # RED<span class="y">node</span>
@@ -75,10 +75,10 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | Quest API (quest facts, the journal, moving V) | Passed in game |
 | Mod services (mods calling each other, and offering tools to AI assistants) | Passed in game |
 | Development folders (run a package from your own project folder) | Passed in game |
+| [Console](overlay.html#the-console) (type commands and JavaScript in the game, such as `addItem`, with no Cyber Engine Tweaks) | Passed in game. Released in REDnode 0.49.5 |
 | Optional packs: [Admin Tools](#optional-packs) and [Sound Tools](#optional-packs) | Released |
 | TweakDB without the game running | Not built yet |
 | Display: HDR, frame generation, ultrawide | Planned |
-| Console (type JavaScript in the game, like CET's console) | Proposed, not scheduled |
 | Code that runs inside the game (Tier 1), declarative rules | Not started |
 
 ### Optional packs

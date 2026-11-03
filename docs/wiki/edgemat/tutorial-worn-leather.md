@@ -4,7 +4,7 @@ nav_title: "Tutorial: worn leather"
 section: EDGEmat
 order: 10
 description: "Step by step: generate a worn brown leather from words with an AI image service, put it on a pair of slim-fit pants for both bodies, and wear them in the game."
-reviewed: 2026-10-20
+reviewed: 2026-11-03
 ---
 
 # Tutorial: worn <span class="y">leather</span>
@@ -20,7 +20,7 @@ In this tutorial you turn the **Comfy rocker aramid-weave slim-fits** into worn 
 | EDGEmat 0.3 or later and [REDcode](../redcode/) | [Install and set up](install.html) |
 | A REDcode project | **REDcode: New Project** (`Ctrl+Shift+P`), for example `MyMaterials`. Leave it open |
 | An image service key | Google Gemini or OpenAI, your own ([New Material](new-material.html#from-words-ai)). One take costs a few cents |
-| [Cyber Engine Tweaks](https://www.nexusmods.com/cyberpunk2077/mods/107) | To put the pants on V |
+| [REDnode](../rednode/) 0.49.5 or later | Its [Console](../rednode/overlay.html#the-console) puts the pants on V |
 
 ## 1. Find the pants' material
 
@@ -65,10 +65,10 @@ Press **Add to Project**. The message says it saved `worn_leather` and put it on
 
 1. Close the game if it's running. In REDcode, **Pack and Install**. (Pack and Try is for a running game with Red Hot Tools: see [Your mod in the game](in-the-game.html).)
 2. Start the game and load a save.
-3. Open Cyber Engine Tweaks' console and run:
+3. Press F10, switch on **Console** in REDnode's launcher, and type:
 
-   ```lua
-   Game.AddToInventory("Items.Pants_01_basic_01", 1)
+   ```js
+   addItem("Items.Pants_01_basic_01")
    ```
 
 4. Equip the pants, and look in photo mode: front, side and back.

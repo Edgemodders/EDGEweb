@@ -2,8 +2,8 @@
 title: Using the overlay
 section: REDnode
 order: 2
-description: "REDnode's overlay in the game: F10 and the three modes, the launcher, moving and closing windows, HUD widgets, themes and keys."
-reviewed: 2026-10-24
+description: "REDnode's overlay in the game: F10 and the three modes, the launcher, moving and closing windows, HUD widgets, themes, the Console and keys."
+reviewed: 2026-11-03
 ---
 
 # Using the <span class="y">overlay</span>
@@ -100,6 +100,25 @@ The **Theme** buttons at the bottom of the launcher recolour every window built 
 | **EDGE** | Like REDnode, with solid yellow title bars |
 
 An app can choose its own look; it then keeps it whatever you pick. The HUD samples always use HUD red.
+
+## The Console
+
+The **Console** is a command line for the game, built into REDnode from 0.49.5. It does the jobs players used Cyber Engine Tweaks' console for, such as giving V an item, and it needs no Cyber Engine Tweaks. Switch on **Console** in the launcher: its window opens at the top of the screen. Type a line at the bottom and press Enter; the answer shows above.
+
+{% include shot.html caption="The Console" shows="The Console window at the top of the screen after typing addItem with the trousers' id: its answer, 1 × Items.Pants_01_basic_01 added, and the line to type in below." %}
+
+| Type | Does |
+|---|---|
+| `addItem("Items.Pants_01_basic_01")` | Puts the item in V's inventory. Add a number for more than one: `addItem("Items.money", 1000)` gives V 1,000 eddies. A wrong id gets a red error, not an empty item |
+| `removeItem("Items.Pants_01_basic_01")` | Takes the item out of V's inventory. Untested in the game |
+| `pos()` | Where V is: x, y and z |
+| `tp(x, y, z)` | Moves V there. Untested in the game |
+| `clear()` | Empties the window (also Ctrl+L) |
+| `help()` | Lists these shortcuts |
+
+An item's id is its TweakDB record, such as `Items.Pants_01_basic_01`. Commands from Cyber Engine Tweaks' console, such as `Game.AddToInventory(...)`, are Lua and don't work here: use the shortcuts above.
+
+Up and Down bring back what you typed before, even after a restart, Tab completes, and Shift+Enter adds a line. For modders, any JavaScript works, with the whole `rednode` package ready and no imports: try a call from the [game API](game-api.html) before you put it in a package. If a line never finishes, such as an endless loop, press **Stop**: the Console starts again, and the game and your other mods carry on. Closing its window stops it.
 
 ## Keys
 

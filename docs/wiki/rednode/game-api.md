@@ -4,7 +4,7 @@ nav_title: Game API and TweakDB
 section: REDnode
 order: 8
 description: "How REDnode packages reach the game: the game helper, calling any game function, TweakDB reads and changes, placing objects in the world, the game's files through REDbridge, swapping archives, sound, and the newer APIs."
-reviewed: 2026-10-27
+reviewed: 2026-11-03
 ---
 
 # The game API, <span class="y">TweakDB</span> and the world
@@ -31,11 +31,12 @@ import { game } from 'rednode';
 
 const p = await game.player.position();          // { x, y, z }, V's position
 await game.audio.play('ui_menu_onpress');         // a game UI sound
+await game.player.addItem('Items.Pants_01_basic_01'); // an item in V's inventory (count optional)
 game.on('PlayerPuppet.OnGameAttached', reload);   // the main menu and every save load
 const state = await game.state();                 // menu, photo mode, scene, main menu, overlay mode
 ```
 
-`game.player.position()` fails at the main menu, where there is no V. `game.instance` is the `GameInstance` value that many game functions take first.
+`game.player.position()` fails at the main menu, where there is no V. `game.player.addItem(id, count?)` refuses an id with no TweakDB record, and `game.player.removeItem(id, count?)` takes items out (REDnode 0.49.5; `removeItem` untested in the game). To try any call here without writing a package, type it in the [Console](overlay.html#the-console). `game.instance` is the `GameInstance` value that many game functions take first.
 
 ## Calling any game function
 
@@ -252,4 +253,3 @@ The **Ink Coords**, **Ink vitals** and **Quest test** samples show them.
 |---|---|
 | Change what a game function does while it runs (multiply damage, cancel a call) | Needs code inside the game (Tier 1) or declarative rules. Designed, not started |
 | Hear any game function being called, as an event | Planned |
-| A console to type JavaScript in the game, like CET's | Proposed, not scheduled |
