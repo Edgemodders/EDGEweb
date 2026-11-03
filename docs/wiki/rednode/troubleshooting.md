@@ -3,7 +3,7 @@ title: Troubleshooting REDnode
 nav_title: Troubleshooting
 section: REDnode
 order: 12
-description: "Fixes for common REDnode problems: no launcher tab, the wrong game version, missing windows, crashed mods, packages that need something, archive swaps, and Claude Code not connecting."
+description: "Fixes for common REDnode problems: no launcher tab, the wrong game version, missing windows, crashed mods, packages that need something, archive swaps, Claude Code not connecting, and the UI Tools pack's UI Workbench."
 reviewed: 2026-11-03
 ---
 
@@ -16,7 +16,7 @@ REDnode writes its logs to `red4ext\logs` in the game folder. Close the game fir
 | Log | Look for |
 |---|---|
 | `red4ext-*.log` | A line saying REDnode `has been loaded`. If it's missing, REDnode never started |
-| `rednode-*.log` | The plugin: `REDnode 0.37.0 loading`, and that it started the host |
+| `rednode-*.log` | The plugin: `REDnode 0.56.1 loading` (with your version), and that it started the host |
 | `rednode-overlay.log` | The overlay host: packages found, started and refused, permissions, the MCP server. The last session's is kept as `rednode-overlay.prev.log` |
 | `rednode-mods.log` | What Node mods printed, and their crashes |
 | `r6\logs\redscript_rCURRENT.log` | Script errors, if the game stopped at startup |
@@ -114,7 +114,7 @@ Switch **GPU sharing** off in the launcher's Settings drawer (the gear). Every w
 
 ### The cursor vanishes, or interactive mode ends by itself
 
-Press F10 to get back to interactive mode. Fixes for both went into earlier versions and passed their tests, so if it happens on 0.37.0, report it with the plugin log: it records when the game leaves and comes back to the front. If the arrow blinks with DLSS on, update your GPU driver: an older NVIDIA driver caused it on one laptop.
+Press F10 to get back to interactive mode. Fixes for both went into earlier versions and passed their tests, so if it happens on a current version, report it with the plugin log: it records when the game leaves and comes back to the front. If the arrow blinks with DLSS on, update your GPU driver: an older NVIDIA driver caused it on one laptop.
 
 ### A HUD widget stays up in a cutscene, or hides in a conversation
 
@@ -145,3 +145,76 @@ F9 is the game's Quick Load, not REDnode's: it loads your last save. It sits rig
 ### Something else
 
 Ask on [Discord]({{ site.discord }}) with your logs' first lines, or [open an issue](https://github.com/Edgemodders/REDnode/issues) on REDnode's repo.
+
+## UI Tools
+
+Problems with the optional [UI Tools](ui-tools.html) pack's **UI Workbench**.
+
+### "Edit and Projects need the admin permission"
+
+The Workbench is missing the `admin` permission, which Try, To source, Edit, Projects and Export need. In the Mod Manager, select **UI Workbench**, and under **Permissions** switch **Allowed** on for **managing REDnode**. Then open the tab again. A **Try** without it answers with the reason instead of changing the widget. **Inspect** works without it. See [The admin permission](ui-tools.html#the-admin-permission).
+
+### The UI Workbench isn't in the Mod Manager
+
+| Check | Fix |
+|---|---|
+| Is it installed? | `red4ext\plugins\REDnode\apps\ui-workbench` must exist in the game folder. Install the [pack's zip](ui-tools.html#install) again |
+| Is your REDnode new enough? | It needs REDnode 0.56.0 or later. The Mod Manager shows **NEEDS** for an older one: [update REDnode](install.html#updating-rednode) |
+| Is Codeware installed? | It needs Codeware 1.16 or later; without it the Workbench shows **NEEDS** and reads no layers |
+
+### The tree says "Waiting for the game"
+
+The game didn't answer yet: at the start, before a save loads, or during a load. The Workbench asks again every 3 seconds by itself. Load a save; if it still waits, press **Refresh**. If it never reads, check that Codeware is installed for your game version.
+
+### Pick finds nothing, or a HUD piece is missing
+
+| What you see | Why, and what to do |
+|---|---|
+| "No drawn widget of the game is under that point." | Nothing the game draws is there, or what is there is fully transparent. Pick leaves out widgets at opacity 0 and the layers drawn onto surfaces in the world (signs, adverts, screens) |
+| The health bar can't be picked | It hides itself out of combat. Pick it in a fight, or use the quest tracker, the minimap or the clock |
+| A HUD entry says **not spawned** | The game makes that piece only when it's needed (a video, a boss fight, a vehicle). Once it's on screen, press **Refresh** and select it again |
+| A menu's widgets aren't in the tree | Menu widgets exist only while their menu is open. Open the menu, then press **Refresh** |
+| The widget you want is under another | Right-click while picking to set the top one aside, or select its parent and use **Pick inside**. See [Pick](ui-tools-inspect.html#reach-a-widget-under-another) |
+
+### Try's changes are gone
+
+| When | Why |
+|---|---|
+| After a save load | The game rebuilds its HUD with fresh widgets, so the ones you changed are gone, and the new ones show the game's own values. Pick again |
+| After the Workbench was switched off or closed | On purpose: REDnode puts back every change it tried. Nothing Try does is kept |
+| A text changes back by itself | The game's own controller writes it again, such as a clock's. The property belongs to the controller |
+
+### Run says "REDnode did not find ..."
+
+The full message ends "check that the folder is watched (the launcher's Settings, Development folders)". REDnode runs projects from `Documents\REDnode\UI projects` as a development folder, and the Workbench adds that folder the first time it opens Projects in a session.
+
+1. In the launcher's Settings drawer, switch on **Developer mode** and look at **Development folders**: `...\Documents\REDnode\UI projects` should be listed.
+2. If you removed it, switch the Workbench off and on, and open **Projects** again: it adds the folder back. Or paste the folder's path into the list yourself.
+3. A project made a moment ago can take a second or two to be found; press **Run** again.
+4. Check `rednode-overlay.log` for the project's id: a project whose `rednode-app.json` doesn't read is skipped.
+
+### "There is a project ... already"
+
+Two projects can't share an id, and the id comes from the name. Pick another name. A project you deleted is in `.trash` and doesn't count.
+
+### A project shows CRASHED
+
+Its script stopped with an error. Read it in the **Mod log** (switch it on in the launcher): it names the file and line. A mistake shown in the editor's header (the markup's or the script's) does this if you save it while the project runs. Fix it, press **Save**, and if the panel doesn't come back, **Stop** and **Run**.
+
+### The panel doesn't show on the HUD
+
+| Check | Fix |
+|---|---|
+| Is the overlay in front? | Press **Esc** to leave interactive mode, so the HUD shows clearly |
+| Is the project running? | The Projects tab marks it **running**. Press **Run** in Edit |
+| Is there an error in its header? | The panel doesn't load until the markup reads. Fix it and save |
+| Did you move it off screen? | Check the `<mount>` line's `anchor`, `x` and `y`. They are in the HUD's units, which are larger than the overlay's 1080p pixels (3840 x 2160 across the screen in the developer's tests) |
+| Is a game menu open? | Panels go on the HUD; menus cover it |
+
+### My installed export shows DEV, or runs the old version
+
+A project in `Documents\REDnode\UI projects` wins over an installed mod with the same id: the Mod Manager marks it **DEV** and runs the project instead. Delete the project in **Projects** (it goes to `.trash`), or move its folder out of `UI projects`, then restart the game. Renaming the project in the Workbench isn't enough: the id stays. See [Install it on your own PC](ui-tools-export.html#install-it-on-your-own-pc).
+
+### Where's my deleted project?
+
+In `Documents\REDnode\UI projects\.trash`, in a folder named after its id with the date and time it was deleted. Move it back into `UI projects` and rename the folder to its id (the part before the date).
