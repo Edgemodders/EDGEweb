@@ -23,6 +23,7 @@ The site pitches the EDGEmodders tools and links to their docs:
 | [EDGEwave](https://github.com/Edgemodders/EDGEwave) | Sound studio beside REDcode (preview) | [edgemodders.github.io/EDGEwave](https://edgemodders.github.io/EDGEwave/) |
 | [EDGEmat](https://github.com/Edgemodders/EDGEmat) | Material editor (preview) | [edgemodders.github.io/EDGEmat](https://edgemodders.github.io/EDGEmat/) |
 | [EDGEkit](https://github.com/Edgemodders/EDGEkit) | The EDGEmodders editor app and its extension pack (preview) | [edgemodders.github.io/EDGEkit](https://edgemodders.github.io/EDGEkit/) |
+| [EDGEchat](https://github.com/Edgemodders/EDGEchat) | The EDGE plugin for Claude Code (in the wiki only) | [edgemodders.github.io/EDGEchat](https://edgemodders.github.io/EDGEchat/) |
 
 ## Repository layout
 

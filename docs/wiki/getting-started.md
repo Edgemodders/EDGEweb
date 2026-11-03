@@ -24,6 +24,7 @@ EDGE is a family of tools. You don't need all of them. Start from what you want 
 | Install the EDGE tools in VS Code in one go | [EDGEkit](edgekit/) | [Install the extension pack](edgekit/install-pack.html) |
 | Recolour clothes, or make a new material from my words | [EDGEmat](edgemat/) | [Install EDGEmat](edgemat/install.html) |
 | Edit the game's sounds for a mod | [EDGEwave](edgewave/) | [Install and use EDGEwave](edgewave/try-it.html) |
+| Make mods with Claude Code on my PC, step by step, with no code | [EDGEchat](edgechat/) | [Install and connect](edgechat/install.html), then [your first mod](edgechat/first-mod.html) |
 | Let an AI agent on my PC read game files, manage mods or call the game | [REDnode](rednode/), [REDcode](redcode/), [EDGEdeck](edgedeck/), [EDGEmat](edgemat/) | [Connect Claude Code](connect-claude-code.html) |
 
 ## What you need
@@ -35,7 +36,7 @@ EDGE is a family of tools. You don't need all of them. Start from what you want 
 | [REDnode](rednode/install.html) installed in the game | REDagent, EDGEbuilder and any REDnode mod or overlay app |
 | Your own [Anthropic API key](https://console.anthropic.com/) | REDagent. You pay Anthropic per use; see the [FAQ](faq.html#does-redagent-cost-money) |
 
-> **Early days.** REDcode, EDGEdeck, EDGEmat, EDGEwave and the EDGEkit extension pack install from the VS Code Marketplace or Open VSX as previews. REDnode, REDagent, REDbridge, EDGEbuilder and the EDGEkit app install from release files on GitHub. Each tool's page in this wiki says how it installs today.
+> **Early days.** REDcode, EDGEdeck, EDGEmat, EDGEwave and the EDGEkit extension pack install from the VS Code Marketplace or Open VSX as previews. REDnode, REDagent, REDbridge, EDGEbuilder and the EDGEkit app install from release files on GitHub. EDGEchat installs into Claude Code. Each tool's page in this wiki says how it installs today.
 
 ## Where to go next
 

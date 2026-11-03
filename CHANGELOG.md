@@ -22,3 +22,4 @@ How to keep it:
 - Wiki: EDGEdeck 0.30.0, with Get the frameworks, Update all, Move library, deploying one mod and several files from one Nexus page: https://edgemodders.ai/wiki/edgedeck/
 - Wiki: EDGEkit app 1.140.3 and extension pack 0.3.0, which now installs EDGEmat and EDGEwave too, and the one-click setup of Claude Code for EDGE: https://edgemodders.ai/wiki/edgekit/
 - Wiki: EDGEbuilder 0.5.8 on game 2.5, with your mods' and your REDcode project's assets, and REDbridge 0.11.0, built for game 2.5: https://edgemodders.ai/wiki/edgebuilder/ and https://edgemodders.ai/wiki/redbridge/
+- Landing page, platform page, wiki home, Getting started and FAQ: the status lines of REDcode 0.10.5, EDGEdeck 0.30.0, REDbridge 0.11.0, EDGEbuilder 0.5.8 and EDGEkit 1.140.3 with pack 0.3.0, and EDGEchat 0.1.1 in the wiki's toolkit list: https://edgemodders.ai/

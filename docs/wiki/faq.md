@@ -25,7 +25,7 @@ REDagent itself is free and open source. It calls Claude with your own Anthropic
 
 ## Does it work with game version 2.5?
 
-Yes, REDnode and REDagent do. Game 2.5 came out on 22 October 2026; REDnode supports it from 0.38.1 and REDagent from 0.3.2, both released on 25 October. The latest are REDnode 0.56.1 (3 November, with the first release of the UI Tools pack) and REDagent 0.4.1 (1 November). On a game kept on 2.31, use REDnode 0.37.0 and REDagent 0.3.1, the last releases for 2.31. From REDnode 0.41.0, archives swap into the running game on 2.5 through REDnode's own [REDswap](rednode/redswap.html). EDGEbuilder is still tested on 2.31 only. The tools that only read the game's files (REDcode, EDGEdeck, EDGEmat, EDGEwave) are not tied to the game's runtime in the same way; they were tested on 2.31.
+Yes, REDnode and REDagent do. Game 2.5 came out on 22 October 2026; REDnode supports it from 0.38.1 and REDagent from 0.3.2, both released on 25 October. The latest are REDnode 0.56.1 (3 November, with the first release of the UI Tools pack) and REDagent 0.4.1 (1 November). On a game kept on 2.31, use REDnode 0.37.0 and REDagent 0.3.1, the last releases for 2.31. From REDnode 0.41.0, archives swap into the running game on 2.5 through REDnode's own [REDswap](rednode/redswap.html). EDGEbuilder 0.5.8 (2 November) is tested on 2.5, and REDbridge 0.11.0 is built for it. The tools that only read the game's files (REDcode, EDGEdeck, EDGEmat, EDGEwave) are not tied to the game's runtime in the same way; they were tested on 2.31.
 
 ## Does it work with WolvenKit, CET, RED4ext and my other mods?
 

@@ -29,10 +29,11 @@ More toolkits build on those five for particular jobs:
 
 | Job | Toolkit | What it does |
 |---|---|---|
-| Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props, drop them where you look, and position them |
+| Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props and your mods', drop them where you look, position and arrange them |
 | Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade, mix and shape it, and put it into the game through your mod. Preview, 0.1.0 on the Marketplace |
 | Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, 0.3.1 on the Marketplace |
-| One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE tools built in (preview, 1.140.1), or an extension pack that installs them in VS Code in one go |
+| One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE tools built in (preview, 1.140.3), or an extension pack that installs them in VS Code in one go |
+| At your desk | [EDGEchat](edgechat/) | The EDGE plugin for Claude Code: one install connects Claude Code on your PC to the running game, the game's files, your mods and materials, with commands like `/edge:new-mod`. 0.1.1 |
 
 ## Platform benefits
 
@@ -41,18 +42,18 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | Benefit | What it means | From |
 |---|---|---|
 | **Anyone can mod** | Describe a mod in plain words; an agent writes, runs and fixes it | [REDagent](redagent/) |
-| **Agent-ready everywhere** | REDnode, REDcode, EDGEdeck and EDGEmat offer their tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop. REDnode mods can offer tools of their own too | [REDnode](rednode/), [REDcode](redcode/), [EDGEdeck](edgedeck/), [EDGEmat](edgemat/) |
+| **Agent-ready everywhere** | REDnode, REDcode, EDGEdeck and EDGEmat offer their tools to AI agents through MCP: REDagent in the game, Claude Code on your desktop through [EDGEchat](edgechat/). REDnode mods can offer tools of their own too | [REDnode](rednode/), [REDcode](redcode/), [EDGEdeck](edgedeck/), [EDGEmat](edgemat/), [EDGEchat](edgechat/) |
 | **You stay in control** | Every file change is shown before it happens, and agent changes and deploys can be undone | [REDagent](redagent/), [EDGEdeck](edgedeck/) |
 | **Live in the game** | Mods hot-reload into the running game, and changed archives swap into it; overlay apps draw HTML windows and HUD widgets over it, and native panels join the game's own HUD, inspected and edited live with the UI Workbench | [REDnode](rednode/) |
 | **Crash isolation** | Mods and overlay apps run outside the game process, so a crash doesn't take the game down | [REDnode](rednode/) |
 | **Everything is text** | Game files as JSON, tweaks as YAML, mods in JavaScript and TypeScript, with a typed game API | [REDcode](redcode/), [REDnode](rednode/) |
 | **WolvenKit inside** | WolvenKit's engine does the file work; WolvenKit projects open and pack as they are | [REDbridge](redbridge/), [REDcode](redcode/) |
-| **Simple mod management** | One list, four verbs, conflicts even inside archives, Nexus updates, Vortex import | [EDGEdeck](edgedeck/) |
-| **Build where you see it** | Place the game's own objects in the running game with a gizmo and a free camera, instead of typing coordinates | [EDGEbuilder](edgebuilder/) |
-| **One install** | The EDGEkit app comes with the EDGE tools built in and keeps them updated; in VS Code, one extension pack installs REDcode, EDGEdeck and the HUD theme | [EDGEkit](edgekit/) |
+| **Simple mod management** | One list, four verbs, conflicts even inside archives, the frameworks and every update in one click, Nexus updates, Vortex import | [EDGEdeck](edgedeck/) |
+| **Build where you see it** | Place the game's own objects, and your mods', in the running game with a gizmo and a free camera, group and copy them, instead of typing coordinates | [EDGEbuilder](edgebuilder/) |
+| **One install** | The EDGEkit app comes with the EDGE tools built in and keeps them updated; in VS Code, one extension pack installs REDcode, EDGEdeck, EDGEmat, EDGEwave and the HUD theme | [EDGEkit](edgekit/) |
 | **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |
 
-> **Status:** EDGE is early and moving fast. REDnode (0.56.1, with the new UI Tools pack) and REDagent (0.4.1) are released for **game version 2.5**; REDnode 0.37.0 and REDagent 0.3.1 stay available for 2.31. EDGEbuilder places objects in the running game (a test build). REDcode, EDGEdeck, EDGEmat and EDGEwave are on the VS Code Marketplace and Open VSX as previews, and the EDGEkit app is a preview for Windows. REDnode, REDagent, REDbridge and EDGEbuilder install from release files on GitHub. The [platform page](/platform.html) shows where each feature stands.
+> **Status:** EDGE is early and moving fast. REDnode (0.56.1, with the new UI Tools pack) and REDagent (0.4.1) are released for **game version 2.5**; REDnode 0.37.0 and REDagent 0.3.1 stay available for 2.31. EDGEbuilder places objects in the running game (a test build). REDcode, EDGEdeck, EDGEmat and EDGEwave are on the VS Code Marketplace and Open VSX as previews, and the EDGEkit app is a preview for Windows. REDnode, REDagent, REDbridge and EDGEbuilder install from release files on GitHub, and EDGEchat (0.1.1) installs into Claude Code. The [platform page](/platform.html) shows where each feature stands.
 
 ## About this wiki
 
@@ -63,6 +64,6 @@ Each toolkit's docs site is its reference: every setting, the design, the API. T
 | [Getting started](getting-started.html) | You're new and want to know which toolkit to use for what |
 | [FAQ](faq.html) | You have a quick question about cost, safety or compatibility |
 | [Glossary](glossary.html) | A word like CR2W, TweakDB or MCP stopped you |
-| [Connect Claude Code](connect-claude-code.html) | You want an AI agent on your PC to use the EDGE tools |
+| [Connect Claude Code](connect-claude-code.html) | You want an AI agent on your PC to use the EDGE tools ([EDGEchat](edgechat/) does it in one install) |
 
 The wiki is curated: pages are checked against each toolkit's docs, and each one shows when it was last reviewed. To suggest a page or report a mistake, see [Contribute](contribute.html), or come and talk on [Discord]({{ site.discord }}).
