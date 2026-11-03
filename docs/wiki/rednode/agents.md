@@ -79,7 +79,7 @@ To see every tool an assistant can reach, and switch any tool or any mod's tools
 
 ### EDGEmat's tools for in-game assistants
 
-From REDnode 0.49.5, REDnode carries [EDGEmat](../edgemat/)'s MCP server and starts it the first time an in-game assistant such as REDagent needs it, with REDnode's own Node, your game folder and REDbridge. Its tools show as `edgemat__mat_*`: finding a garment's materials and describing them run without asking; edits and new materials ask you first. The **Tools Manager** switches them on and off. This passed in game with REDagent. Claude Code on your desktop gets EDGEmat through [EDGEchat](../connect-claude-code.html) instead. Details in REDnode's [MCP docs](https://edgemodders.github.io/REDnode/mcp.html#edgemats-tools-e1).
+From REDnode 0.49.5, REDnode carries [EDGEmat](../edgemat/)'s MCP server and starts it the first time an in-game assistant such as REDagent needs it, with REDnode's own Node, your game folder and REDbridge. Its tools show as `edgemat__mat_*`: finding a garment's materials and describing them run without asking; edits and new materials ask you first. The **Tools Manager** switches them on and off. This passed in game with REDagent. Claude Code on your desktop gets EDGEmat through [EDGEchat](../edgechat/) instead. Details in REDnode's [MCP docs](https://edgemodders.github.io/REDnode/mcp.html#edgemats-tools-e1).
 
 ### Safety
 

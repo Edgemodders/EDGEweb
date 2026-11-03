@@ -33,6 +33,7 @@ defaults:
 wiki_sections:
   - Start here
   - REDagent
+  - EDGEchat
   - REDnode
   - REDcode
   - EDGEdeck
