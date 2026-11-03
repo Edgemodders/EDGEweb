@@ -17,6 +17,7 @@ EDGE is a family of tools. You don't need all of them. Start from what you want 
 | Describe a mod in plain words and have it built for me | [REDagent](redagent/) | [Your first mod with REDagent](redagent/first-mod.html) |
 | Install, switch on and off, and update mods made by others | [EDGEdeck](edgedeck/) | [Switch from Vortex to EDGEdeck](edgedeck/switch-from-vortex.html) |
 | Script the game in TypeScript or JavaScript, or build an in-game app | [REDnode](rednode/) | [Making mods and apps](rednode/making-mods.html) |
+| See how the game's own UI is built, or make a HUD panel that looks like the game's | [REDnode](rednode/) with its UI Tools pack | [UI Tools](rednode/ui-tools.html), then [your first native HUD panel](rednode/ui-tools-tutorial.html) |
 | Browse the game's files and edit them, WolvenKit-style, in VS Code | [REDcode](redcode/) | [Install and set up REDcode](redcode/install.html) |
 | Place objects in the game world and build a scene | [EDGEbuilder](edgebuilder/) | [Install and set up EDGEbuilder](edgebuilder/install.html) |
 | Get every EDGE tool in one app | [EDGEkit](edgekit/) | [Get the app](edgekit/#get-the-app) |

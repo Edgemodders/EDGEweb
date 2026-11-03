@@ -3,7 +3,7 @@ title: Glossary
 section: Start here
 order: 3
 description: "Plain-language definitions of Cyberpunk 2077 modding terms and EDGE terms."
-reviewed: 2026-10-27
+reviewed: 2026-11-03
 ---
 
 # <span class="y">Glossary</span>
@@ -21,6 +21,7 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | CR2W | The binary format of most game files inside archives. REDcode and REDbridge show them as readable JSON |
 | Entity | A `.ent` file: a ready-made game object, such as a prop with its meshes, lights and behaviour |
 | Hash | A number that stands for a file path inside an archive. Tools turn hashes back into paths when they know them |
+| Ink | The game's UI system: the HUD, the menus and their widgets, drawn by the engine. Its files are `.inkwidget` (a piece of UI), `.inkatlas` (pictures) and `.inkstyle` (colours and text styles) |
 | Load order | Which mod wins when two mods change the same file |
 | Mesh | A `.mesh` file: the 3D shape of an object, with its materials |
 | Multilayered material | How the game colours most clothing and many objects: up to 20 layers, each with a surface, a colour and a mask, stored in an `.mlsetup` file. EDGEmat shows them in plain words and recolours them |
@@ -48,6 +49,7 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | Deploy | EDGEdeck putting your switched-on mods into the game folder, with hardlinks, recorded in a manifest |
 | Extension pack | A VS Code extension that only installs other extensions. EDGEkit's pack installs the EDGE tools in one go |
 | Hot reload | REDnode restarting a changed mod in the running game, without a game restart |
+| Ink markup | REDnode's way to write a native UI panel: an `.ink.html` file with tags such as `<column>` and `<text>`, drawn by the game on its HUD. See [Native UI: ink markup](rednode/ink-markup.html) |
 | Library | Where EDGEdeck keeps your mods, outside the game folder |
 | MCP (Model Context Protocol) | The standard that lets AI agents use tools. REDnode, REDcode, EDGEdeck and EDGEmat each offer an MCP server |
 | Mod Manager | REDnode's in-game list of installed packages, in the launcher (F10). New packages appear there first; you switch them on, allow their permissions and pin them |
@@ -57,4 +59,6 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | Overlay app | A small web app (HTML, CSS, JavaScript) that REDnode draws on top of the game |
 | Permission | What a REDnode package may do beyond the basics, such as change TweakDB or swap archives. You allow each one in the Mod Manager |
 | Scene | In EDGEbuilder, the set of objects you have placed. Today they are previews in the running game; baking turns a scene into a real mod (planned) |
+| UI Workbench | The app in REDnode's optional UI Tools pack: inspect the game's own UI, try changes live, and write and export native HUD panels. See [UI Tools](rednode/ui-tools.html) |
+| Widget | One piece of the game's UI: a panel, a text, an image. A HUD piece is a tree of widgets |
 | Tier 1, Tier 2 | REDnode's two kinds of mod code: Tier 2 runs outside the game (most mods); Tier 1 runs inside it for the rare cases that must change a value mid-call (planned) |
