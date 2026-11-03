@@ -3,8 +3,8 @@ title: Troubleshooting REDcode
 nav_title: Troubleshooting
 section: REDcode
 order: 12
-description: "Fixes for common REDcode problems: REDbridge not found or too old, missing .NET, an empty Game Assets view, the old extension, slow TweakDB, Blender, and mods that don't show in the game."
-reviewed: 2026-10-24
+description: "Fixes for common REDcode problems: REDbridge not found or too old, missing .NET, an empty Game Assets view, the old extension, slow TweakDB, Blender, sounds after a game patch, Pack and Play, and mods that don't show in the game."
+reviewed: 2026-11-03
 ---
 
 # Troubleshooting <span class="y">REDcode</span>
@@ -87,9 +87,17 @@ Most likely it was inside `compiledData` in an `.ent` or `.app` file, which is r
 
 Only game sound effects import, from a WAV file named exactly after the sound's hash, such as `832549876.wav` (from **Copy Hash** in the game sound list). Voice lines (`.wem`) and WAVs with other names can't be imported. See [Replacing a sound](viewers.html#replacing-a-sound).
 
-### The game crashed after Pack and Try
+### The game crashed after Pack and Play
 
-Swapping an archive that replaces game sounds into a running game crashes it: install sound mods with **Pack and Install** and restart the game. With the official Red Hot Tools, replacing an archive whose name has capital letters can also end the game. See [Pack and Try, and the Hot Folder](pack-install.html#pack-and-try-and-the-hot-folder).
+Swapping an archive that replaces game sounds through Red Hot Tools crashes a running game. REDcode 0.10.4 and later refuse that swap and offer **Install for Next Start**; swap sound mods through REDnode, or install them and restart the game. With the official Red Hot Tools, replacing an archive whose name mixes capital and small letters can also end the game, and REDcode refuses that too. A broken archive crashes the game at a swap as it would at start. See [Pack and Play](pack-install.html#pack-and-play-into-the-running-game).
+
+### Pack and Play installs instead of swapping
+
+It swaps only into a running game, and only through REDnode with its **MCP server** switched on in the launcher's Settings drawer, or through Red Hot Tools. With neither, it packs and installs, and you restart the game. Switch the MCP server on and press it again. REDnode's answer is in REDcode's log.
+
+### No sound plays after a game update, or EDGEwave "could not read sound"
+
+REDcode 0.10.4 and earlier kept the game files they had extracted for the sound player, the 3D view and EDGEwave across a game update, then read the old sound index against the new sound packs. Update REDcode to 0.10.5 or later: its cache empties itself when the game changes.
 
 ### Edit in Blender says it can't find Blender
 
@@ -101,7 +109,7 @@ Install uses EDGEdeck when it's installed and enabled in the same VS Code. The o
 
 ### The Hot Folder button is missing
 
-It shows only when the game has Red Hot Tools, in `red4ext/plugins`. Install Red Hot Tools first, then reload the window. This feature is untested in REDcode; please report how it goes. **Pack and Try**, the other flame button, is always there.
+It shows only when the game has Red Hot Tools, in `red4ext/plugins`. Install Red Hot Tools first, then reload the window. This feature is untested in REDcode; please report how it goes. **Pack and Play**, the other flame button, is always there.
 
 ### My mod doesn't show in the game
 
@@ -114,6 +122,18 @@ It shows only when the game has Red Hot Tools, in `red4ext/plugins`. Install Red
 ### Open in EDGEwave offers to install EDGEwave
 
 EDGEwave isn't installed. See [EDGEwave](../edgewave/) for how to get it.
+
+### Open in EDGEmat says it needs EDGEmat
+
+EDGEmat isn't installed. Press **Install EDGEmat**, or see [EDGEmat](../edgemat/).
+
+### Find Items says it needs a newer REDbridge
+
+Find Items needs REDbridge 0.11.0 or later. Run **REDcode: Update REDbridge**.
+
+### Find Items finds nothing for a weapon
+
+Normal. Find Items covers items that pick their look by appearance name, such as clothing. Weapons choose theirs another way. For a mesh no item shows, it lists the `.app` looks that use it, to open instead.
 
 ### Something else
 

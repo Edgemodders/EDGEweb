@@ -4,7 +4,7 @@ nav_title: Projects
 section: REDcode
 order: 2
 description: "Make or open a WolvenKit project in REDcode, find your way around the Project view, and learn what goes in each folder."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # <span class="y">Projects</span>
@@ -60,10 +60,11 @@ Click a file and REDcode opens it in the right place:
 | Sounds: `.wem`, `.opus` | The [audio player](viewers.html#sounds) |
 | `.glb` and `.gltf` | The [3D mesh viewer](viewers.html#meshes-in-3d) |
 | Text: tweaks, YAML, Lua, JSON, `.xl` | VS Code's text editor |
+| [EDGEbuilder](../edgebuilder/) scenes, `<name>.scene.json` | VS Code's text editor, as JSON |
 
 ### Buttons and menus
 
-The view's title bar has the project buttons: **Pack** (the package), **Pack and Install** (the rocket), **Pack and Try** (a flame), **Run Game** (the play button), **New Project**, **Refresh Project** and **Filter the Project**. **Install**, **Uninstall** and **Close Project** are in its **`...`** menu. When the game has Red Hot Tools, a second flame button, **Install to the Hot Folder**, appears too. See [Pack, install and run](pack-install.html).
+The view's title bar has the project buttons: **Pack** (the package), **Pack and Install** (the rocket), **Pack and Play** (a flame), **Run Game** (the play button), **New Project**, **Refresh Project** and **Filter the Project**. **Install**, **Uninstall** and **Close Project** are in its **`...`** menu. When the game has Red Hot Tools, a second flame button, **Install to the Hot Folder**, appears too. See [Pack, install and run](pack-install.html).
 
 Hover over a file or folder and buttons appear on the right of its row. Right-click for the full list:
 

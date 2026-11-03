@@ -3,7 +3,7 @@ title: Assistants and MCP
 section: REDcode
 order: 9
 description: "Give Claude Code or another AI assistant REDcode's engine through redcode-mcp: what it can do, how to connect it, and what to ask."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Assistants and <span class="y">MCP</span>
@@ -33,6 +33,7 @@ Once it's connected, for example:
 | Archives | Search the game's files, list folders, extract files, and look inside a mod's `.archive` on disk |
 | Game files | Read any game file as WolvenKit JSON, write one from JSON, and open a file to read or change it part by part, with every change undoable |
 | Textures and hashes | Decode a texture to PNG, and turn file hashes into paths |
+| Meshes | Find the items in TweakDB that wear a mesh, with their `.app` looks (`mesh_items`, REDbridge 0.11.0 or later) |
 | Project | Export to Raw, import from Raw, and pack, as REDcode's buttons do |
 | TweakDB | List record types and records, read a record or one value, search by words |
 | Texts | Find the game's on-screen texts (LocKeys) by key or words, in any of its languages, with your project's own over them |
@@ -44,9 +45,9 @@ The [MCP docs](https://edgemodders.github.io/REDcode/mcp.html) and the [package 
 
 ## Connect Claude Code
 
-`redcode-mcp` is published on npm as [`@edgemodders/redcode-mcp`](https://www.npmjs.com/package/@edgemodders/redcode-mcp), version 0.3.0. It isn't part of the REDcode extension: you register it with your assistant once.
+`redcode-mcp` is published on npm as [`@edgemodders/redcode-mcp`](https://www.npmjs.com/package/@edgemodders/redcode-mcp), version 0.4.0. It isn't part of the REDcode extension: you register it with your assistant once.
 
-The easiest way is the **EDGE plugin for Claude Code**, which sets up `redcode-mcp` with the other EDGE servers in one install. It's a preview; see [Connect Claude Code](../connect-claude-code.html). To register `redcode-mcp` on its own, read on.
+The easiest way is the **EDGE plugin for Claude Code**, which sets up `redcode-mcp` with the other EDGE servers in one install; see [Connect Claude Code](../connect-claude-code.html). To register `redcode-mcp` on its own, read on.
 
 **You need:** REDcode set up as on [Install and set up](install.html) (so REDbridge and the game are found), and [Node.js](https://nodejs.org/) 20 or later.
 
@@ -76,7 +77,7 @@ On a PC where REDcode is set up, nothing more is needed: the server reads REDcod
 | The game folder | `--game <path>` | `REDCODE_GAME_PATH` | `redcode.gamePath` |
 | A per-user .NET runtime | `--dotnet-root <path>` | `DOTNET_ROOT` | `redcode.dotnetRoot` |
 
-Prefer the command line or REDcode's setting for .NET. Setting `DOTNET_ROOT` for your whole Windows account breaks other .NET programs.
+An empty environment variable counts as unset, so REDcode's settings still apply (0.4.0). Prefer the command line or REDcode's setting for .NET. Setting `DOTNET_ROOT` for your whole Windows account breaks other .NET programs.
 
 For example:
 
@@ -89,7 +90,8 @@ claude mcp add redcode -- npx -y @edgemodders/redcode-mcp --bridge "D:\Tools\RED
 - The server starts REDbridge on the first tool call. Loading the archive index takes about three seconds; after that it stays up for the session.
 - The first TweakDB call takes about 12 seconds, as in REDcode.
 - If REDbridge stops, the next call starts it again. Files the assistant had open for editing are closed by that, so it has to open them again.
-- It needs REDbridge 0.10.0 or later for the text tools, 0.9.0 for sound import, and 0.8.0 for the rest. REDcode 0.10.0 and later need 0.10.0 anyway.
+- It needs REDbridge 0.11.0 or later for `mesh_items`, 0.10.0 for the text tools, 0.9.0 for sound import, and 0.8.0 for the rest. REDcode 0.10.0 and later need 0.10.0 anyway, and fetch the newest.
+- REDnode adds one more tool when REDcode is open: `redcode__project`, the project open in REDcode, through REDnode's own MCP server. See [REDnode](other-tools.html#rednode).
 - The tools never ship an API key. Claude Code uses your own account.
 
 ## Tips for working with an assistant

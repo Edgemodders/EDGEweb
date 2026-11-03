@@ -9,3 +9,7 @@ How to keep it:
 - Links are full URLs, since the same text may go to GitHub, Discord and Nexus.
 
 ## Unreleased
+
+**Changed**
+
+- Wiki: REDcode 0.10.5 and redcode-mcp 0.4.0, with Pack and Play (the new name of Pack and Try, https://github.com/Edgemodders/EDGEweb/issues/3), Find Items, Open in EDGEmat and EDGEbuilder scenes: https://edgemodders.ai/wiki/redcode/

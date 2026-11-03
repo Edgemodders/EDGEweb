@@ -4,7 +4,7 @@ nav_title: The setup editor
 section: EDGEmat
 order: 4
 description: "Open any .mlsetup (from the game, a project, a file or another mod), see each layer in plain words and where it goes, change its surface, color and finish, and save it into your mod project."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # The setup <span class="y">editor</span>
@@ -90,7 +90,7 @@ The game's files are never changed. **Save to Project** (the button top right, t
 | **In place of the game's setup** | The setup at the game's own path | Needs the Material Texture Override mod, which lets a mod replace a game `.mlsetup`. Changes every item that uses the setup |
 | **At a game path you choose...** | The setup at your path | Up to you to point something at it |
 
-When it's done: "Saved into ... : the setup and 2 meshes pointed at it", with **Pack and Try** and **Open the Saved Setup**. Then see [Your mod in the game](in-the-game.html).
+When it's done: "Saved into ... : the setup and 2 meshes pointed at it", with **Pack and Try**, which runs REDcode's Pack and Play, and **Open the Saved Setup**. Then see [Your mod in the game](in-the-game.html).
 
 Once saved, the project's copy is yours: open it, change it, and `Ctrl+S` saves straight into it, with no questions. Saving the game's setup again as a new setup updates the same files.
 

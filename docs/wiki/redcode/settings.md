@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: REDcode
 order: 11
 description: "Every REDcode setting with its default and when to change it, every REDcode command, and the editors it adds to Open With."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Settings and <span class="y">commands</span>
@@ -35,6 +35,7 @@ Open VS Code's settings (`Ctrl+,`) and search for `redcode`. Most people never c
 | `redcode.pack.clean` | on | Empties `packed` before packing, so a file you removed doesn't linger in the mod | Rarely. Keep it on |
 | `redcode.pack.redmod` | off | Packs the project as a REDmod under `packed/mods/<mod name>` | You want to ship a REDmod |
 | `redcode.launch` | `auto` | How Run Game starts the game: `auto` (through Steam for a Steam install, else the exe), `steam` or `exe` | Steam doesn't start the game the way you want |
+| `redcode.rednode.installPackage` | on | When the game has REDnode, installs and updates REDcode's small REDnode package, `redcode`, in REDnode's apps folder. It tells REDnode mods, such as EDGEbuilder, and assistants which project is open in REDcode | You don't want REDcode to add anything to the game folder |
 | `redcode.loc.language` | `en-us` | The language of the texts in the LocKeys view and the LocKey hover, and of the localization file Add to Project Onscreens writes to. **LocKey Language...** sets it | You mod in another language |
 
 ### Export and import
@@ -58,7 +59,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | New Project | Asks for a name and a folder, creates a WolvenKit project and opens it |
 | Pack | Builds the project's `packed` folder. Also `Ctrl+Shift+B` |
 | Pack and Install | Packs, then installs |
-| Pack and Try | Packs, then sends the archive to Red Hot Tools' hot folder for the running game. Without Red Hot Tools, Pack and Install |
+| Pack and Play | Packs, then swaps the archive into the running game through REDnode, or Red Hot Tools' hot folder. Without either, Pack and Install. Was Pack and Try: the old id, `redcode.packAndTry`, still works |
 | Install | Puts the packed mod in the game, through EDGEdeck when it's installed |
 | Uninstall | Takes the mod out of the game again |
 | Install to the Hot Folder (Red Hot Tools) | Copies the packed archive to `archive/pc/hot`. Shown only when the game has Red Hot Tools. Untested |

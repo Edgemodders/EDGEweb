@@ -63,7 +63,7 @@ Press **Add to Project**. The message says it saved `worn_leather` and put it on
 
 ## 4. Into the game
 
-1. Close the game if it's running. In REDcode, **Pack and Install**. (Pack and Try is for a running game with Red Hot Tools: see [Your mod in the game](in-the-game.html).)
+1. Close the game if it's running. In REDcode, **Pack and Install**. (Pack and Play is for a running game: see [Your mod in the game](in-the-game.html).)
 2. Start the game and load a save.
 3. Press F10, switch on **Console** in REDnode's launcher, and type:
 

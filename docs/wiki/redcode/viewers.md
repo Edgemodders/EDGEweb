@@ -3,7 +3,7 @@ title: Textures, meshes and sounds
 section: REDcode
 order: 5
 description: "See and hear what a mod is made of in REDcode: the texture viewer, the 3D mesh viewer, the audio player and the game's 73,000 sound effects."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Textures, meshes and <span class="y">sounds</span>
@@ -41,6 +41,8 @@ A mesh (`.mesh`) opens on a **3D view** inside the CR2W editor. **Tree** shows t
 - It also turns on and off the **wireframe**, the **bounding box** and the **ground grid**, and shows the triangle count and the size in metres.
 - The list on the right turns each **submesh** on and off, with its material name and triangle count.
 - The **Appearance** list switches between the mesh's appearances. Each submesh then shows the material that appearance gives it.
+- **Find Items** lists the items in the game that wear this mesh, the appearance shown first. See [Which items use a mesh](#which-items-use-a-mesh).
+- **Open in EDGEmat** puts the mesh on [EDGEmat](../edgemat/)'s Desk with the appearance shown open, to change its materials.
 
 Good to know:
 
@@ -48,6 +50,19 @@ Good to know:
 - With [EDGEmat](../edgemat/) installed, the view shows the materials as EDGEmat renders them: colours only, and approximate. See [EDGEmat in 3D](../edgemat/view-in-3d.html).
 - The view shows the **saved** file. Save to see your edits.
 - `.glb` and `.gltf` files, such as a mesh you exported to Raw, open in the same viewer. A model that carries its own materials and textures, such as one from Blender, shows them; **Shading** switches to flat colours.
+
+### Which items use a mesh
+
+**Find Items**, in the 3D view's toolbar, answers "which item is this?". It looks through TweakDB for the item records whose look shows the mesh. The first time takes about 10 seconds, while TweakDB loads.
+
+- Items that show the **appearance you're looking at** come first, then items showing **other appearances** of the mesh.
+- Each row has the item's name in the game, the mesh appearance, the `.app` look and the record's appearance name.
+- Pick a row to open its [TweakDB record](tweakdb.html). Its buttons copy the record name, for [REDnode's Console](../rednode/overlay.html#the-console) or a tweak, or open the `.app`.
+- It covers items that pick their look by appearance name, such as clothing, but not weapons. For a mesh no item shows, it lists the `.app` looks that use it.
+
+It needs REDbridge 0.11.0 or later. Added in REDcode 0.10.4 and tested by hand; assistants have it as `mesh_items`.
+
+{% include shot.html caption="Find Items" shows="Find Items open over the 3D view of a pair of shoes: under Shows red_yellow_graphic, three item records with their names in the game, then the other appearances of the mesh below." %}
 
 {% include shot.html caption="The 3D mesh viewer" shows="A vehicle or weapon mesh from the game in the 3D view: the model coloured by material, the LOD picker and toggles in the toolbar, and the submesh list on the right." %}
 
@@ -88,7 +103,7 @@ You can replace any of the game's **sound effects** with your own sound:
 1. In the game sound list, play the sound you want to replace and press **Copy Hash**.
 2. Save your sound as a WAV file named after that hash, such as `832549876.wav`, under **Raw** in your project.
 3. Press **Import from Raw** on it. REDcode writes the changed sound packs and a new sound index into your project's Archive. Earlier replacements in the project stay.
-4. [Pack and install](pack-install.html), then **restart the game**. Don't use Pack and Try or the hot folder for sounds: swapping sound files into a running game through Red Hot Tools crashes it.
+4. [Pack and install](pack-install.html), then **restart the game**. Or, with REDnode in the game, **Pack and Play** swaps it in (untested for sounds on game 2.5). Never use Red Hot Tools' hot folder for sounds: that swap crashes the running game, and REDcode refuses it.
 
 **Voice lines** (`.wem`) can be exported to Ogg to listen to or edit elsewhere, but not imported back yet. See [Export and import](export-import.html#what-converts).
 

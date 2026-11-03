@@ -18,9 +18,9 @@ In REDcode, with the project open:
 | You have | Use | Result |
 |---|---|---|
 | The game closed (most of the time) | **Pack and Install** | The archive goes into the game. Start the game |
-| The game running, with [Red Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools) installed | **Pack and Try** | The archive goes to `archive\pc\hot`, and Red Hot Tools loads it into the running game |
+| The game running, with [REDnode](../rednode/)'s **MCP server** switched on, or [Red Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools) | **Pack and Play** (called Pack and Try before REDcode 0.10.5) | REDnode swaps the archive into the running game. Without REDnode, it goes to `archive\pc\hot`, and Red Hot Tools loads it. See [Pack and Play](../redcode/pack-install.html#pack-and-play-into-the-running-game) |
 
-**Pitfall 1: the hot folder.** With Red Hot Tools installed, Pack and Try only copies the archive to `archive\pc\hot`. Red Hot Tools picks it up from there **only while the game runs**. Pressed with the game closed, the archive just waits there, and the game starts without it. With the game closed, use Pack and Install (or REDcode's Deploy).
+**Pitfall 1: the hot folder.** With Red Hot Tools and no REDnode, Pack and Play only copies the archive to `archive\pc\hot`. Red Hot Tools picks it up from there **only while the game runs**. Pressed with the game closed, the archive just waits there, and the game starts without it. With the game closed, use Pack and Install (or REDcode's Deploy).
 
 **Pitfall 2: REDmod.** If REDcode's `redcode.pack.redmod` setting is on, the project packs as a REDmod into the game's `mods\` folder. REDmods need a deploy step (EDGEdeck's and REDcode's Deploy run it) and load only when the game starts with `-modded` (REDcode's Run Game does that). A material mod doesn't need REDmod: with the setting off, it goes to `archive\pc\mod` and simply loads.
 

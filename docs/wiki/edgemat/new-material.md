@@ -4,7 +4,7 @@ nav_title: New Material
 section: EDGEmat
 order: 7
 description: "Make a material from words, through an AI image service with your own key, or from a photo of your own, and put it on a garment: seamless, with bumps and shine, written into your mod project."
-reviewed: 2026-10-20
+reviewed: 2026-11-03
 ---
 
 # New <span class="y">Material</span>
@@ -64,7 +64,7 @@ The take you pick shows **tiled 3 × 3, already made seamless**, so you can see 
 | Shine | Matte, Satin or Glossy. Light parts of the image shine a little more |
 | Metal | Tick for a metal |
 
-Press **Add to Project**. EDGEmat writes the material into REDcode's open project (or asks you for one), puts it where it goes, and says what it did, with **Pack and Try** and **Show Files**.
+Press **Add to Project**. EDGEmat writes the material into REDcode's open project (or asks you for one), puts it where it goes, and says what it did, with **Pack and Try**, which runs REDcode's Pack and Play, and **Show Files**.
 
 ### On a garment, the garment keeps its folds
 

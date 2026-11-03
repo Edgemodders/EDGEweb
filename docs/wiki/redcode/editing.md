@@ -3,7 +3,7 @@ title: Editing game files
 section: REDcode
 order: 4
 description: "Change game files in REDcode's CR2W editor: the tree and property grid, search, the table and atlas views, the Properties view, undo and save, and editing as JSON."
-reviewed: 2026-10-24
+reviewed: 2026-11-03
 ---
 
 # Editing game <span class="y">files</span>
@@ -14,7 +14,7 @@ Most game files are in a binary format called CR2W. REDcode opens them in the **
 
 ## Which files open in it
 
-Clicking a game file in the Project view or Game Assets opens the CR2W editor. That covers entities (`.ent`, `.app`), meshes, atlases (`.inkatlas`), materials (`.mi`, `.mt`, `.mlsetup`, `.mlmask`), animations, rigs, ink widgets, scenes, quests, streaming sectors and around forty types in all.
+Clicking a game file in the Project view or Game Assets opens the CR2W editor. That covers entities (`.ent`, `.app`), meshes, atlases (`.inkatlas`), materials (`.mi`, `.mt`, `.mlsetup`, `.mlmask`), animations, rigs, ink widgets, scenes, quests, streaming sectors, journals and around forty types in all. The game's two quest journals, `base\journal\cooked_journal.journal` and the one under `ep1`, open read-only from Game Assets.
 
 - A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d) first; **Tree** switches to the editor.
 - A texture (`.xbm`) opens in the texture viewer. **Open in CR2W Editor** in the Project view's right-click menu shows it in the editor instead, with the image above the grid and its setup selected.
