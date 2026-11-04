@@ -12,6 +12,7 @@ How to keep it:
 
 **New**
 
+- EDGEquest, the quest maker, on the landing page, the platform page and in the wiki, with a ten-page section from reading the game's quests to writing, music and checking your own (https://github.com/Edgemodders/EDGEweb/issues/5): https://edgemodders.ai/wiki/edgequest/
 - Wiki: an EDGEchat section, from installing the EDGE plugin for Claude Code to a first mod, a recolor and live swaps (https://github.com/Edgemodders/EDGEweb/issues/4): https://edgemodders.ai/wiki/edgechat/
 - Wiki: Arranging a scene in EDGEbuilder: select several objects, groups, copy and paste, undo: https://edgemodders.ai/wiki/edgebuilder/arranging.html
 

@@ -4,7 +4,7 @@ nav_title: The EDGE platform
 section: Start here
 order: 0
 description: "An introduction to EDGE, the agent-based modding platform for Cyberpunk 2077, and the EDGEmodders wiki."
-reviewed: 2026-11-03
+reviewed: 2026-11-04
 ---
 
 # The EDGE <span class="y">platform</span>
@@ -32,6 +32,7 @@ More toolkits build on those five for particular jobs:
 | Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props and your mods', drop them where you look, position and arrange them |
 | Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade, mix and shape it, and put it into the game through your mod. Preview, 0.1.0 on the Marketplace |
 | Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, 0.3.1 on the Marketplace |
+| Quests | [EDGEquest](edgequest/) | A quest maker beside REDcode. Read the game's quests in plain words, and write your own as a short story: EDGEquest makes the game's quest files from it. Preview, 0.1.0 on the Marketplace |
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE tools built in (preview, 1.140.3), or an extension pack that installs them in VS Code in one go |
 | At your desk | [EDGEchat](edgechat/) | The EDGE plugin for Claude Code: one install connects Claude Code on your PC to the running game, the game's files, your mods and materials, with commands like `/edge:new-mod`. 0.1.1 |
 
@@ -50,10 +51,11 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | **WolvenKit inside** | WolvenKit's engine does the file work; WolvenKit projects open and pack as they are | [REDbridge](redbridge/), [REDcode](redcode/) |
 | **Simple mod management** | One list, four verbs, conflicts even inside archives, the frameworks and every update in one click, Nexus updates, Vortex import | [EDGEdeck](edgedeck/) |
 | **Build where you see it** | Place the game's own objects, and your mods', in the running game with a gizmo and a free camera, group and copy them, instead of typing coordinates | [EDGEbuilder](edgebuilder/) |
+| **Quests in plain words** | Read any of the game's quests as steps and lines, and write your own as a story with places, choices and music; the quest files are made for you | [EDGEquest](edgequest/) |
 | **One install** | The EDGEkit app comes with the EDGE tools built in and keeps them updated; in VS Code, one extension pack installs REDcode, EDGEdeck, EDGEmat, EDGEwave and the HUD theme | [EDGEkit](edgekit/) |
 | **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |
 
-> **Status:** EDGE is early and moving fast. REDnode (0.56.1, with the new UI Tools pack) and REDagent (0.4.1) are released for **game version 2.5**; REDnode 0.37.0 and REDagent 0.3.1 stay available for 2.31. EDGEbuilder places objects in the running game (a test build). REDcode, EDGEdeck, EDGEmat and EDGEwave are on the VS Code Marketplace and Open VSX as previews, and the EDGEkit app is a preview for Windows. REDnode, REDagent, REDbridge and EDGEbuilder install from release files on GitHub, and EDGEchat (0.1.1) installs into Claude Code. The [platform page](/platform.html) shows where each feature stands.
+> **Status:** EDGE is early and moving fast. REDnode (0.56.1, with the new UI Tools pack) and REDagent (0.4.1) are released for **game version 2.5**; REDnode 0.37.0 and REDagent 0.3.1 stay available for 2.31. EDGEbuilder places objects in the running game (a test build). REDcode, EDGEdeck, EDGEmat, EDGEwave and EDGEquest are on the VS Code Marketplace and Open VSX as previews, and the EDGEkit app is a preview for Windows. REDnode, REDagent, REDbridge and EDGEbuilder install from release files on GitHub, and EDGEchat (0.1.1) installs into Claude Code. The [platform page](/platform.html) shows where each feature stands.
 
 ## About this wiki
 
