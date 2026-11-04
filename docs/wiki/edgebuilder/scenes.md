@@ -3,7 +3,7 @@ title: Scenes and baking
 section: EDGEbuilder
 order: 6
 description: "What EDGEbuilder keeps today (one working scene, previews you rebuild), and what saving and Bake will add: named scenes and baking a scene into a mod."
-reviewed: 2026-11-03
+reviewed: 2026-11-04
 ---
 
 # Scenes and <span class="y">baking</span>
@@ -35,13 +35,16 @@ There is **one scene** for now, the working scene. You can't name, save as, or s
 
 {% include shot.html caption="Rebuilding after a save loads" shows="The Scene tab after loading a save: the objects listed as not in world, the message line saying how many are waiting, and the Rebuild previews button." %}
 
-## Saving scenes: next
+## Saving scenes: built, being tested
 
-Phase B3, **Arrange and save**, comes in two halves. The first, B3-1 Arrange, passed in game on 2026-11-02 and is in 0.5.8: see [Arranging a scene](arranging.html). The second, **B3-2 Save**, is next. It is planned to add:
+Phase B3, **Arrange and save**, comes in two halves. The first, B3-1 Arrange, passed in game on 2026-11-02 and is in 0.5.8: see [Arranging a scene](arranging.html). The second, **B3-2 Save**, was built on 2026-11-03 as EDGEbuilder 0.6.0. It hasn't had its in-game test yet and isn't released, so treat everything below as untested:
 
-- named scene files you save and open again (the **Return** behaviour), kept in your REDcode project's `source\scenes` folder, which REDcode 0.10.5 already shows as **Scenes**;
-- a **Library**: a folder of your own for scenes and bakes, shared by the EDGE tools, for scenes that don't belong to one project;
-- a way for other REDnode packages to ask EDGEbuilder for scenes.
+- **named scenes** you save and open again (the **Return** behaviour). A scene is saved after every change, as today; **Ctrl+S** confirms it and **Ctrl+Shift+S** saves a copy under a new name;
+- three places to keep them: the [EDGE Library](../library.html) (a folder of your own, shared by the EDGE tools, offered at `Documents\EDGE Library`), your REDcode project's `source\scenes` folder (which REDcode 0.10.5 shows as **Scenes**), or **This PC** (EDGEbuilder's own data folder);
+- a **Library** tab in the panel listing all three as one tree, with New scene, Save here and New folder;
+- **Show in world**: another scene's objects appear beside the one you're editing, but can't be selected;
+- your last scene, and the scenes you showed, come back when you start again;
+- a way for other mods and AI assistants to ask EDGEbuilder for its scenes and their objects.
 
 ## NPCs and scenes other mods can load: planned
 

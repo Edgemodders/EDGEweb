@@ -3,7 +3,7 @@ title: Glossary
 section: Start here
 order: 3
 description: "Plain-language definitions of Cyberpunk 2077 modding terms and EDGE terms."
-reviewed: 2026-11-03
+reviewed: 2026-11-04
 ---
 
 # <span class="y">Glossary</span>
@@ -46,11 +46,13 @@ Modding words in plain language. If a word you met isn't here, ask on [Discord](
 | EDGE | The platform: the EDGE toolkits working together |
 | Agent | An AI that can use tools, not only chat. REDagent is one; Claude Code is another |
 | Change card | REDagent's preview of a file change, as a diff, with Allow and Deny |
+| Desk | One EDGE tool's own scratch space for work in progress (EDGEmat and EDGEfab have one). It lasts across restarts; finished work goes to a project or the EDGE Library |
 | Deploy | EDGEdeck putting your switched-on mods into the game folder, with hardlinks, recorded in a manifest |
 | Extension pack | A VS Code extension that only installs other extensions. EDGEkit's pack installs the EDGE tools in one go |
 | Hot reload | REDnode restarting a changed mod in the running game, without a game restart |
 | Ink markup | REDnode's way to write a native UI panel: an `.ink.html` file with tags such as `<column>` and `<text>`, drawn by the game on its HUD. See [Native UI: ink markup](rednode/ink-markup.html) |
-| Library | Where EDGEdeck keeps your mods, outside the game folder |
+| EDGE Library | One folder of your own where the EDGE tools keep scenes, bakes and assets for good, outside any project. Optional. See [The EDGE Library](library.html) |
+| Library (EDGEdeck's mod library) | Where EDGEdeck keeps your mods, outside the game folder |
 | MCP (Model Context Protocol) | The standard that lets AI agents use tools. REDnode, REDcode, EDGEdeck and EDGEmat each offer an MCP server |
 | Mod Manager | REDnode's in-game list of installed packages, in the launcher (F10). New packages appear there first; you switch them on, allow their permissions and pin them |
 | Mod service | A REDnode package's functions that other packages can call. Functions marked `@tool` are offered to AI agents too |

@@ -66,6 +66,7 @@ Each toolkit's docs site is its reference: every setting, the design, the API. T
 | [Getting started](getting-started.html) | You're new and want to know which toolkit to use for what |
 | [FAQ](faq.html) | You have a quick question about cost, safety or compatibility |
 | [Glossary](glossary.html) | A word like CR2W, TweakDB or MCP stopped you |
+| [The EDGE Library](library.html) | You want to keep scenes, props and sounds for good, outside any one mod, and use them in several |
 | [Connect Claude Code](connect-claude-code.html) | You want an AI agent on your PC to use the EDGE tools ([EDGEchat](edgechat/) does it in one install) |
 
 The wiki is curated: pages are checked against each toolkit's docs, and each one shows when it was last reviewed. To suggest a page or report a mistake, see [Contribute](contribute.html), or come and talk on [Discord]({{ site.discord }}).
