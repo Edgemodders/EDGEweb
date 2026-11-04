@@ -43,6 +43,7 @@ Phase B3, **Arrange and save**, comes in two halves. The first, B3-1 Arrange, pa
 - three places to keep them: the [EDGE Library](../library.html) (a folder of your own, shared by the EDGE tools, offered at `Documents\EDGE Library`), your REDcode project's `source\scenes` folder (which REDcode 0.10.5 shows as **Scenes**), or **This PC** (EDGEbuilder's own data folder);
 - a **Library** tab in the panel listing all three as one tree, with New scene, Save here and New folder;
 - **Show in world**: another scene's objects appear beside the one you're editing, but can't be selected;
+- an **Objects** drawer beside the panel listing a scene's objects: two quick clicks fly the camera to one and select it, and a trash icon deletes one after asking, wherever it is;
 - your last scene, and the scenes you showed, come back when you start again, and the open scene's objects near you come back by themselves when a save loads;
 - a way for other mods and AI assistants to ask EDGEbuilder for its scenes and their objects.
 
