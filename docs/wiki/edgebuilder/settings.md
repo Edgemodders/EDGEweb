@@ -9,7 +9,7 @@ reviewed: 2026-11-05
 
 # Settings and <span class="y">keys</span>
 
-Everything in EDGEbuilder 0.6.7, in one place. The pages before this one explain each in context.
+Everything in EDGEbuilder 0.7.3, in one place. The pages before this one explain each in context.
 
 ## The panel
 
@@ -18,8 +18,9 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 | Tab | What's in it |
 |---|---|
 | **Assets** | Search, the **All**, **Meshes** and **Entities** tabs, the **Everywhere**, **Game**, **Mods** and **Project** tabs, a line saying what was found in your mods and project, the results, and the **Picked** panel with **Drop where I look** and **Drop at click**. Typing anywhere on this tab searches. See [Browsing and dropping](browsing.html) |
-| **Scene** | The open scene's name and where it is, **Save**, **Save as**, **New**, **Open** and **Close**, the count, what the scene needs, the **Undo**, **Redo**, **Duplicate**, **Group** and **Ungroup** buttons, every object and group in the scene, and the **Selected** panel with **Group name** for a group. See [Browsing and dropping](browsing.html#the-scene-tab), [Positioning objects](positioning.html#typing-numbers) and [Arranging a scene](arranging.html) |
+| **Scene** | **Open scene's name** (change it and press Enter to rename the scene and its file; it asks first) and where it is, **Save**, **Save as**, **New**, **Open** and **Close**, the count, what the scene needs, the **Undo**, **Redo**, **Duplicate**, **Group** and **Ungroup** buttons, every object and group in the scene, and the **Selected** panel with **Group name** for a group. See [Browsing and dropping](browsing.html#the-scene-tab), [Positioning objects](positioning.html#typing-numbers) and [Arranging a scene](arranging.html) |
 | **Library** | Every scene in the [EDGE Library](../library.html), the open REDcode project and This PC as one tree, with **Make the Library** until you have one. The **Picked** panel opens, closes or shows a scene and slides out its **Objects**; **New scene here**, **Save open scene here** and **New folder** work on the picked folder |
+| **Bake** | The open scene, the REDcode project it bakes into, what the checks say, **Bake**, **Refresh**, what it wrote, and the project's bakes, each with a trash icon. See [Bake](scenes.html#bake) |
 | **Settings** | The settings below |
 | **About** | A short summary of the keys and what's next |
 

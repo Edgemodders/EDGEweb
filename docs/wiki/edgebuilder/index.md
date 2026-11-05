@@ -25,10 +25,10 @@ EDGEbuilder lets you do it where you can see it: in the game, with the real ligh
 | **Drop** | Pick one and it appears where you look, or where you click | Passed in game |
 | **Position** | Move, turn and scale it with a gizmo, keys or typed numbers; drop it to the floor | Passed in game |
 | **Arrange** | Select several objects, group, duplicate, copy, cut and paste, undo and redo; save named scenes | Passed in game. Named scenes from 0.6.7 |
-| **Bake** | Turn a scene into a mod that puts the objects in the world for good | Planned |
+| **Bake** | Turn a scene into a mod that puts the objects in the world for good | Passed in game, from 0.7.3. Meshes aren't solid yet |
 | **Return** | Open a saved scene and keep working on it | Passed in game, from 0.6.7 |
 
-Until Bake exists, what you place is a **preview**: it's in the world while you play and EDGEbuilder is running, and it goes when a save loads. EDGEbuilder keeps it in your scene and puts it back by itself. See [Scenes and baking](scenes.html).
+Until you bake it, what you place is a **preview**: it's in the world while you play and EDGEbuilder is running, and it goes when a save loads. EDGEbuilder keeps it in your scene and puts it back by itself. See [Scenes and baking](scenes.html).
 
 ## Benefits
 
@@ -49,9 +49,9 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 | Toolkit | What it does for EDGEbuilder |
 |---|---|
 | [REDnode](../rednode/) | Runs it. Draws the editor over the game, gives it the game calls that spawn, move and remove objects, and hides other packages' windows while you edit ([solo mode](../rednode/spaces.html#solo-mode)) |
-| [REDbridge](../redbridge/) | Reads the game's archives, and your mods', to build the list of assets, with each one's size and appearances. It will also write the baked files |
-| [EDGEdeck](../edgedeck/) | Installs EDGEbuilder from its release zip. Later it will install what you bake, too |
-| [REDcode](../redcode/) | Tells EDGEbuilder which project is open (REDcode 0.10.5 or later), so its meshes and entities are listed too. After REDcode's **Pack and Play**, previews show the new version. Planned: holds your scenes in the project, and packs the bake into a mod |
+| [REDbridge](../redbridge/) | Reads the game's archives, and your mods', to build the list of assets, with each one's size and appearances. It also writes the baked files (0.12.0 or later) |
+| [EDGEdeck](../edgedeck/) | Installs EDGEbuilder from its release zip, and what you bake, as your REDcode project |
+| [REDcode](../redcode/) | Tells EDGEbuilder which project is open (REDcode 0.10.5 or later), so its meshes and entities are listed too. After REDcode's **Pack and Play**, previews show the new version. It can hold your scenes in the project, and packs what you bake into a mod |
 
 ## Status
 
@@ -64,7 +64,7 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 | B2c Mod assets | Passed in game on 2026-10-30 (0.4.1): your mods' and your REDcode project's meshes and entities |
 | B3-1 Arrange | Passed in game on 2026-11-02 (0.5.8): several objects at once, groups, duplicate, copy, cut and paste, undo and redo |
 | B3-2 Save | Passed in game, released as 0.6.7 on 2026-11-05: named scenes you save and open again, kept in the [EDGE Library](../library.html), your REDcode project or on this PC |
-| B4 Bake | The bake probe showed that a baked scene loads in the game. EDGEbuilder's bake panel is not started |
+| B4 Bake | **Bake to project** passed in game and is released as 0.7.3 on 2026-11-05: the Bake tab, and a baked scene that stands with EDGEbuilder uninstalled. Next: a Solid switch for meshes, then bakes in the Library |
 | B3c NPCs and scenes through REDnode | Agreed on 2026-10-23: place NPCs, and let REDnode load EDGEbuilder's scene files so other mods can use them. REDnode's side passed in game on 2026-10-26; EDGEbuilder's comes after B4 |
 | B3b World objects | Agreed: pick, inspect and copy what the game itself placed. Not started |
 | B4b Edit the world | Agreed: hide or change the game's own objects. Not started |
@@ -73,7 +73,7 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 | B6 Comfort (favourites, prefabs, snapping) | Not started |
 | B7 Scenes in REDcode with the game closed | Not started |
 
-The latest release is **EDGEbuilder 0.6.7** (2026-11-05), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It was tested on game 2.5 with REDnode 0.58.0. EDGEbuilder is a test build: a first public preview is planned after B4 (Bake). It needs [REDnode](../rednode/) 0.58.0 or later. See [Install and set up](install.html).
+The latest release is **EDGEbuilder 0.7.3** (2026-11-05), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It was tested on game 2.5 with REDnode 0.58.0 and REDbridge 0.12.0. EDGEbuilder is a test build: a first public preview is planned after B4 (Bake). It needs [REDnode](../rednode/) 0.58.0 or later, and REDbridge 0.12.0 or later to bake. See [Install and set up](install.html).
 
 EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks mod that showed a world editor can live inside the running game. EDGEbuilder is its own design and uses none of World Builder's code, files or data.
 
@@ -86,7 +86,7 @@ EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks m
 | [Positioning objects](positioning.html) | The Edit switch, the gizmo, G R S, typed numbers, snapping, drop to floor, scale |
 | [The camera and builder mode](camera.html) | Flying the editor camera, orbit, pan, frame, the hidden HUD and solo mode |
 | [Arranging a scene](arranging.html) | Several objects at once, groups, duplicate, copy, cut and paste, undo and redo, the busy bar |
-| [Scenes and baking](scenes.html) | Named scenes and the Library, previews that come back, and what Bake will add |
+| [Scenes and baking](scenes.html) | Named scenes and the Library, previews that come back, and baking a scene into the world |
 | [Settings and keys](settings.html) | Every setting, button and key |
 | [Troubleshooting](troubleshooting.html) | Symptoms and fixes |
 

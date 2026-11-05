@@ -69,7 +69,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | Tool | Its part | Status |
 |---|---|---|
 | [EDGEbuilder](edgebuilder/) | Scenes in Library folders, the in-game **Library** tab, scenes shown beside the one you edit | Passed in game, released as 0.6.7 on 2026-11-05 |
-| EDGEbuilder | Bakes in the Library, Include in project | Planned (B4) |
+| EDGEbuilder | Bakes in the Library, Include in project | Planned (B4-3). Bakes go into a REDcode project today |
 | EDGEfab | Props as asset items, its Desk, Add to Library and a Library view | In progress (its first build, F1). Its Desk is built; the Library side is next |
 | [REDcode](redcode/) | **Add to Library** on a game file or a project file | Planned |
 | [EDGEwave](edgewave/) | Sounds as asset items | Planned, after its Desk |

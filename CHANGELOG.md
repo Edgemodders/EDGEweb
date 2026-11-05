@@ -12,6 +12,7 @@ How to keep it:
 
 **New**
 
+- Wiki: Bake in EDGEbuilder, with the Bake tab, what stands and what is solid, and changing or taking out a bake: https://edgemodders.ai/wiki/edgebuilder/scenes.html#bake
 - Wiki: REDbridge's Reading and building the world, with its 0.12.0 calls and solid objects: https://edgemodders.ai/wiki/redbridge/index.html#reading-and-building-the-world
 - Wiki: REDnode's title-bar buttons and window views for Node mods: https://edgemodders.ai/wiki/rednode/node-mods.html#title-bar-buttons-and-views
 - Wiki: REDnode's objects far from V, and its scene and near-V calls, which had been missing since 0.40.1: https://edgemodders.ai/wiki/rednode/game-api.html#objects-far-from-v
@@ -22,6 +23,7 @@ How to keep it:
 
 **Changed**
 
+- Landing page and platform page: EDGEbuilder's status lines, 0.7.3
 - Wiki: EDGEbuilder 0.6.7, with named scenes, the Library tab, Close, the Objects drawer and objects in the world wherever V is; it needs REDnode 0.58.0: https://edgemodders.ai/wiki/edgebuilder/scenes.html
 - Landing page and platform page: EDGEbuilder's status lines, 0.6.7
 - Wiki: REDcode 0.10.5 and redcode-mcp 0.4.0, with Pack and Play (the new name of Pack and Try, https://github.com/Edgemodders/EDGEweb/issues/3), Find Items, Open in EDGEmat and EDGEbuilder scenes: https://edgemodders.ai/wiki/redcode/

@@ -2,13 +2,13 @@
 title: Scenes and baking
 section: EDGEbuilder
 order: 6
-description: "How EDGEbuilder keeps your work: named scenes, the Library, previews that come back by themselves, and what Bake will add."
+description: "How EDGEbuilder keeps your work: named scenes, the Library, previews that come back by themselves, and baking a scene into the world."
 reviewed: 2026-11-05
 ---
 
 # Scenes and <span class="y">baking</span>
 
-This page is honest about where things stand: EDGEbuilder places objects in the live game today, but it doesn't yet turn them into a mod that keeps them there.
+EDGEbuilder places objects in the live game as previews, keeps them in named scenes, and bakes a scene into a mod that keeps them there.
 
 ## Previews and the scene
 
@@ -29,7 +29,7 @@ The scene is the truth; previews are drawn from it. That's why EDGEbuilder can a
 - **Start over.** **Clear scene** removes every object from the world and the scene. **Ctrl+Z** brings them back, until EDGEbuilder stops.
 - **See what it needs.** When the scene uses files from mods or a REDcode project, the Scene tab says which: **This scene needs: EvilClown**.
 
-> **Previews are only previews.** Without EDGEbuilder running, or for anyone else playing, the objects aren't there. Making them part of the world is what Bake is for.
+> **Previews are only previews.** Without EDGEbuilder running, or for anyone else playing, the objects aren't there. Making them part of the world is what [Bake](#bake) is for.
 
 {% include shot.html caption="Rebuild previews" shows="The Scene tab with objects listed as not in world, and the Rebuild previews button." %}
 
@@ -56,25 +56,52 @@ Phase B3c was agreed on 2026-10-23, together with [REDnode](../rednode/)'s work 
 
 REDnode's side passed in game on 2026-10-26 (REDnode 0.40.1). EDGEbuilder's side comes after Bake. Baking NPCs into the world is an open question.
 
-## Bake: planned
+## Bake
 
-Phase B4, **Bake**, is what turns a scene into a real mod. The plan:
+The **Bake** tab turns the open scene into part of the game world. It writes a **streaming sector** (the game's own format for a piece of the world) into your [REDcode](../redcode/) project. Once the project is packed and installed, the objects stand in Night City from the next game start, even with EDGEbuilder uninstalled.
 
-1. You name the scene, pick a [REDcode](../redcode/) project and press **Bake**.
-2. [REDbridge](../redbridge/) writes the game files that add the objects to the world: a **streaming sector** (the game's own format for a piece of the world), a streaming block that tells the game where it is, and an [ArchiveXL](../glossary.html) file that loads it.
-3. REDcode packs the project into a mod, and [EDGEdeck](../edgedeck/) deploys it.
-4. On the next game start, the objects are part of Night City, with EDGEbuilder off.
+You need a REDcode project open in VS Code, [REDbridge](../redbridge/) 0.12.0 or later, and [ArchiveXL](../glossary.html) in the game. Anyone who plays your mod needs ArchiveXL too.
+
+{% include shot.html caption="The Bake tab" shows="EDGEbuilder's Bake tab: the open scene and its object count, the REDcode project it bakes into, what the checks say, the Bake button, and the list of the project's bakes." %}
+
+### From scene to world
+
+1. Open the project in REDcode, and the scene in EDGEbuilder.
+2. On the **Bake** tab, read what the checks say, then press **Bake**. It lists the files it wrote.
+3. Quit the game. In REDcode, run **Pack and Install**, which puts the project in [EDGEdeck](../edgedeck/) and deploys it.
+4. Start the game and load a save. A bake comes in only at a game start, so loading a save without restarting won't show it.
+
+After the first install, EDGEdeck follows the project, so later bakes only need another Pack and Install.
+
+If REDcode's **redcode.pack.redmod** setting is on, the bake installs as a REDmod, and the game must start with `-modded`. EDGEdeck's **Run game** does that for you.
+
+### What stands, and what is solid
+
+| Object | In the baked world |
+|---|---|
+| **An entity** with its own collision, such as `crate_red.ent` | Solid, and keeps its look |
+| **A mesh** | Drawn where you placed it, turned and scaled. **It has no collision yet: V, bullets and cars pass through.** A Solid switch comes next |
+| **A mesh from a mod** | Bakes too, and the Bake tab names the mod. If a player doesn't have that mod, the game doesn't crash: that object is just absent, and the rest stand |
+| **A kind a bake can't make**, such as an NPC | Left out, and the tab says so |
+
+In the test, 200 baked crates in one place made no measurable difference to the frame rate (about 65 fps with or without them, at 4K, on one PC). Those crates only draw, so solid objects still need measuring.
+
+### After a bake
+
+- **Nothing stands twice.** When a scene's bake is in the game, its previews stay off, and the tab says so. Press **Rebuild previews** on the Scene tab to edit the scene again. Each object then exists twice in the same place, the baked one and its preview, so it may flicker. Drag a preview away and you'll see the baked object stay behind. Press Ctrl+Z to put it back. The previews stay off again at the next game start.
+- **Changing a baked scene.** The tab says when the scene has changed since its bake. Bake again, then Pack and Install, and restart: the objects stand in their new places, with no copies at the old ones.
+- **Taking a bake out.** Press the trash icon on the bake in the tab's list, then **Yes**, then Pack and Install again. The objects leave the world and the save is fine. The scene stays. If that scene is still open, you'll keep seeing its objects as previews until you close it, since it no longer has a bake to stand in for them.
+- **Renaming a baked scene.** A bake goes by the scene's name, so its bake keeps the old name. Bake again and take the old bake out, or both stand in the world. EDGEbuilder warns you before it renames.
+
+You can bake several scenes into one project, and they all stand. They can be far apart, indoors or in Dogtown.
+
+### What comes next
 
 | Part | Status |
 |---|---|
-| REDbridge writing the sector from a scene | Released: REDbridge 0.12.0 writes game 2.5 sectors and the ArchiveXL file. In EDGEbuilder's **bake probe** on 2026-10-30, a crate it baked loaded in game 2.5 with EDGEbuilder off, and went and came back with the street like the game's own props |
-| What the probe taught | A plain mesh has no collision once baked: V walks through it. A mesh written as a kinematic instanced destructible node is solid, if the mesh has collision data; about 4 in 10 sampled have none. An entity with a physical mesh, such as `crate_red.ent`, is solid. Each object can set how far away it stays loaded |
-| The Bake tab in EDGEbuilder | In a test build (0.7.0), not released |
-| A Solid switch for each object | Planned. REDbridge 0.12.0 already has what it needs ([solid objects](../redbridge/index.html#solid-objects)) |
-| Scenes in a REDcode project | EDGEbuilder saves scenes in the project's `source\scenes` folder, and REDcode 0.10.5 shows them. Baking them into the project comes with Bake |
-| Installing the baked mod with EDGEdeck | EDGEdeck can add a REDcode project as a mod already. The full loop is untested |
-
-A baked scene will need **ArchiveXL** in the game, as every mod that adds world sectors does.
+| Bake into a REDcode project | Passed in game, released as 0.7.3 on 2026-11-05 |
+| A Solid switch for each mesh | Next. A mesh written as a kinematic instanced destructible node stops V, bullets and cars, if the mesh has collision data; about 4 in 10 sampled have none. REDbridge 0.12.0 already has what it needs ([solid objects](../redbridge/index.html#solid-objects)) |
+| Bakes in the EDGE Library | After that: bakes from several scenes kept in the [Library](../library.html), and included in a project |
 
 ## Later
 
