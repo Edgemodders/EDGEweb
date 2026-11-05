@@ -41,7 +41,7 @@ Phase B3, **Arrange and save**, comes in two halves. The first, B3-1 Arrange, pa
 
 - **named scenes** you save and open again (the **Return** behaviour). A scene is saved after every change, as today; **Ctrl+S** confirms it and **Ctrl+Shift+S** saves a copy under a new name;
 - three places to keep them: the [EDGE Library](../library.html) (a folder of your own, shared by the EDGE tools, offered at `Documents\EDGE Library`), your REDcode project's `source\scenes` folder (which REDcode 0.10.5 shows as **Scenes**), or **This PC** (EDGEbuilder's own data folder);
-- a scene's objects in the world wherever V is, so you can fly to any of them and work there (needs REDnode 0.58.0, not released yet);
+- a scene's objects in the world wherever V is, so you can fly to any of them and work there (needs REDnode 0.58.0);
 - **Close**, which takes a scene's objects out of the world and leaves no scene open;
 - a **Library** tab in the panel listing all three as one tree, with New scene, Save here and New folder;
 - **Show in world**: another scene's objects appear beside the one you're editing, but can't be selected;
