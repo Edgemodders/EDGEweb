@@ -3,7 +3,7 @@ title: Overlay apps
 section: REDnode
 order: 7
 description: "Build in-game windows and HUD widgets from web pages with REDnode: a first app, the UI kit and its themes, HUD widgets, game sounds, the title bar, keys and modifiers, pointer lock and window sizes."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Overlay <span class="y">apps</span>
@@ -168,6 +168,14 @@ Two events reach a page only through the older `window.rednode.on`: `focus` (you
 
 ```html
 <rn-window title="Speedometer" draggable no-rollup>...</rn-window>
+```
+
+From REDnode 0.58.0 a page can add buttons of its own next to **✕**, by setting the window's `titleButtons` from your script. Each has an `id`, a `label`, an `icon`, `on` to light it and an `onClick`, as [in a Node mod](node-mods.html#title-bar-buttons-and-views). They count toward the three icons, so the window's own actions move into **⋯**:
+
+```js
+document.querySelector('rn-window').titleButtons = [
+  { id: 'settings', label: 'Settings', icon: 'settings', onClick: () => openSettings() },
+];
 ```
 
 Your package needs nothing to work with [spaces](spaces.html): its windows join the space the player is in.

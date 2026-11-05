@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDnode
 order: 0
 description: "REDnode, the EDGE platform's runtime for Cyberpunk 2077: what it is, what it's for, and why you might want it."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # RED<span class="y">node</span>
@@ -52,7 +52,7 @@ REDnode is the **Run** stage of the EDGE platform: the part that is in the game 
 
 ## Status
 
-**Released.** REDnode 0.56.1 came out on 2026-11-03, for **game version 2.5**, with the first release of the optional [UI Tools](ui-tools.html) pack. 0.49.5 (2026-10-31) added the [Console](overlay.html#the-console), [shared keys](settings.html#shared-keys) and resizable windows; 0.50.2 (2026-11-01) added pages that cover the whole game view and frames from other addresses; 0.56.1 added [ink markup](ink-markup.html) for native HUD panels, reading the game's own UI, pictures in Node mod windows, live sliders, double-clicks, Ctrl, Shift and Alt on clicks, and Esc for pages that ask for it. [REDswap](redswap.html), for swapping archives into the running game, comes with it from 0.41.0. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
+**Released.** REDnode 0.58.0 came out on 2026-11-05, for **game version 2.5**. It adds [title-bar buttons and window views](node-mods.html#title-bar-buttons-and-views) for Node mods, and [objects that stay spawned far from V](game-api.html#objects-far-from-v). 0.56.1 (2026-11-03) brought the first release of the optional [UI Tools](ui-tools.html) pack. 0.49.5 (2026-10-31) added the [Console](overlay.html#the-console), [shared keys](settings.html#shared-keys) and resizable windows; 0.50.2 (2026-11-01) added pages that cover the whole game view and frames from other addresses; 0.56.1 added [ink markup](ink-markup.html) for native HUD panels, reading the game's own UI, pictures in Node mod windows, live sliders, double-clicks, Ctrl, Shift and Alt on clicks, and Esc for pages that ask for it. [REDswap](redswap.html), for swapping archives into the running game, comes with it from 0.41.0. REDnode supports 2.5 from 0.38.1 (2026-10-25); 0.37.0 is the last release for game 2.31, still on the releases page for a game kept on 2.31.
 
 Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and see [Install and set up](install.html). It is also on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419), with the optional [UI Tools](https://www.nexusmods.com/cyberpunk2077/mods/36958), [Sound Tools](https://www.nexusmods.com/cyberpunk2077/mods/35537) and [Admin Tools](https://www.nexusmods.com/cyberpunk2077/mods/35793) packs, and [REDagent](https://www.nexusmods.com/cyberpunk2077/mods/35670). It is still young: every part below as passed was tested in the developer's modded game, and the overlay was also tested side by side with Cyber Engine Tweaks and ten other RED4ext plugins.
 
@@ -76,6 +76,8 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | [Ink markup](ink-markup.html): native HUD panels written as `.ink.html` files | Passed in game. Released in REDnode 0.56.1. Experimental |
 | [Reading the game's own UI](game-api.html#the-games-own-ui) (layers, widget trees, what is under a point) and trying changes on it live | Passed in game. Released in REDnode 0.56.1 |
 | Pictures in Node mod windows (`ui.image`), live sliders, double-clicks, modifiers on clicks, Esc for pages | Passed in game. Released in REDnode 0.56.1 |
+| [Title-bar buttons and window views](node-mods.html#title-bar-buttons-and-views) for Node mods | Passed in game. Released in REDnode 0.58.0 |
+| [Objects that stay spawned far from V](game-api.html#objects-far-from-v), and [scenes from Node](game-api.html#scenes-and-whats-near-v) (need Codeware) | Passed in game. `alwaysSpawned` released in REDnode 0.58.0 |
 | Clicks and typing on native (ink) panels | Planned (phase I3) |
 | Quest API (quest facts, the journal, moving V) | Passed in game |
 | Mod services (mods calling each other, and offering tools to AI assistants) | Passed in game |
@@ -84,7 +86,7 @@ Download `REDnode-<version>.zip` from [REDnode's releases](https://github.com/Ed
 | [Shared keys](settings.html#shared-keys) (your AI service keys, set once in the game for every EDGE tool) | Passed in game. Released in REDnode 0.49.5 |
 | [Roles](making-mods.html#roles) (reach a kind of service, such as a voice, whichever package provides it) | Passed in game. Released in REDnode 0.49.5 |
 | Editor channel (tools on your PC play a game sound in the running game, with the game's own mix) | Passed in game. Released in REDnode 0.49.5 |
-| [EDGEmat's material tools](agents.html#edgemats-tools-for-in-game-assistants) for in-game assistants such as REDagent | Passed in game. Released in REDnode 0.49.5 |
+| [EDGEmat's material tools](agents.html#edgemats-tools-for-in-game-assistants) for in-game assistants such as REDagent | Passed in game. Released in REDnode 0.49.5. [Sharing REDnode's REDbridge](agents.html#edgemats-tools-for-in-game-assistants) with them passed in game with a test build, and reaches players once REDnode carries a newer EDGEmat |
 | Resizable windows, and a resizable [Mod Manager](mod-manager.html) | Passed in game. Released in REDnode 0.49.5 |
 | [Pages that cover the whole game view](overlay-apps.html#window-size-and-the-whole-screen) at any aspect ratio, and [frames from other addresses](overlay-apps.html#frames-from-another-address) | Passed in game. Released in REDnode 0.50.2 |
 | Optional packs: [UI Tools](#optional-packs), [Sound Tools](#optional-packs) and [Admin Tools](#optional-packs) | Released |

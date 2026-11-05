@@ -3,7 +3,7 @@ title: Agents and MCP
 section: REDnode
 order: 10
 description: "REDnode and AI agents: the MCP server that lets Claude Code see and call the running game, packages that use it, and asking REDagent from your own mod."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Agents and <span class="y">MCP</span>
@@ -38,6 +38,8 @@ The connection stays across game restarts. The Settings drawer lists **Connected
 
 **Copy setup** in the Settings drawer still works, for other MCP clients and REDnode before 0.40.1: it copies a `claude mcp add` command with a fixed token. Run it in a terminal once.
 
+Port 41820 is kept for the game. If another program holds it when the game starts, REDnode tries again every 10 seconds, and the Settings drawer says which program holds it, so nothing needs restarting once that program closes (REDnode 0.58.0). Until then, a sign-in reaches that other program, and no **Connect** window shows in the game.
+
 `claude mcp list` shows `rednode` as connected while the game runs, and as failing while it's closed, which is normal: the server lives in the overlay host, which runs with the game.
 
 [Connect Claude Code](../connect-claude-code.html) covers REDnode beside the REDcode and EDGEdeck servers.
@@ -65,7 +67,7 @@ The connection stays across game restarts. The Settings drawer lists **Connected
 | `archives_reload` | Swaps changed archives into the running game. It replaces files in your mod folder, and a broken archive can crash the game | **Always** |
 | `game_facts_set`, `game_journal_set`, `game_teleport` | Change quest facts or journal entries in your save, or move V | **Always** |
 | `world_near`, `world_spawned` | What is around V, with the files each thing uses, and what the assistant spawned | No |
-| `world_spawn`, `world_remove`, `world_load` | Spawn a prop, an entity or a person, remove it, or load an EDGEbuilder scene | **Always** |
+| `world_spawn`, `world_remove`, `world_load` | Spawn a prop, an entity or a person, remove it, or load an EDGEbuilder scene. `world_spawn` takes `alwaysSpawned`, for [objects far from V](game-api.html#objects-far-from-v) | **Always** |
 | `mod_services`, `mod_read` | Lists the tools your mods offer, and calls the ones that only read | No |
 | `mod_call` and each mod's own tools | Calls a mod's tool. See [Mods' tools for AI assistants](#mods-tools-for-ai-assistants) | Unless the mod marks it read-only |
 
@@ -79,7 +81,9 @@ To see every tool an assistant can reach, and switch any tool or any mod's tools
 
 ### EDGEmat's tools for in-game assistants
 
-From REDnode 0.49.5, REDnode carries [EDGEmat](../edgemat/)'s MCP server and starts it the first time an in-game assistant such as REDagent needs it, with REDnode's own Node, your game folder and REDbridge. Its tools show as `edgemat__mat_*`: finding a garment's materials and describing them run without asking; edits and new materials ask you first. The **Tools Manager** switches them on and off. This passed in game with REDagent. Claude Code on your desktop gets EDGEmat through [EDGEchat](../edgechat/) instead. Details in REDnode's [MCP docs](https://edgemodders.github.io/REDnode/mcp.html#edgemats-tools-e1).
+From REDnode 0.49.5, REDnode carries [EDGEmat](../edgemat/)'s MCP server and starts it the first time an in-game assistant such as REDagent needs it, with REDnode's own Node, your game folder and REDbridge. Its tools show as `edgemat__mat_*`: finding a garment's materials and describing them run without asking; edits and new materials ask you first. The **Tools Manager** switches them on and off. This passed in game with REDagent. Claude Code on your desktop gets EDGEmat through [EDGEchat](../edgechat/) instead.
+
+From REDnode 0.58.0, REDnode can share its own REDbridge with this server, so one REDbridge runs while you play, not two. It passed in game with a test build. It needs an EDGEmat newer than 0.3.1, and REDnode 0.58.0 still carries 0.3.1, so for now EDGEmat starts its own as before; a later REDnode release turns it on. The share listens only on 127.0.0.1, takes a token given to that server alone, and refuses web pages. `"edgematBridge": "own"` in the host's `settings.json` gives EDGEmat its own again. Details in REDnode's [MCP docs](https://edgemodders.github.io/REDnode/mcp.html#edgemats-tools-e1).
 
 ### Safety
 

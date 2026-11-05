@@ -77,7 +77,7 @@ Click an appearance to use it for the next drop.
 
 If REDbridge isn't running, the size and appearances may be missing. You can still drop the asset.
 
-For a mod's or a project's file, the size and appearances need REDbridge 0.12.0, which isn't released yet. With 0.11.0 the Picked panel says so, and the asset drops with a 1 m box for the gizmo.
+For a mod's or a project's file, the size and appearances need REDbridge 0.12.0 or later: update it with EDGEdeck's **Get REDbridge**. With 0.11.0 the Picked panel says so, and the asset drops with a 1 m box for the gizmo.
 
 ## Drop it
 

@@ -4,7 +4,7 @@ nav_title: Game API and TweakDB
 section: REDnode
 order: 8
 description: "How REDnode packages reach the game: the game helper, calling any game function, TweakDB reads and changes, placing objects in the world, the game's files through REDbridge, swapping archives, sound, the game's own UI, and the newer APIs."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # The game API, <span class="y">TweakDB</span> and the world
@@ -182,6 +182,10 @@ await world.remove(id);
 |---|---|
 | `world.spawn(options)` | Spawns from a template or a TweakDB record, with components attached, and resolves once it's in the world. If it isn't in the world in time, REDnode removes it before the call fails, so a failed spawn leaves nothing behind |
 | `world.spawn({ ..., wait: false })` | Resolves as soon as the entity is made, without waiting for it to be in the world (far from V, or still streaming in). It is still your package's: move, remove and the clean-up when your package stops work as usual (REDnode 0.56.1) |
+| `world.spawn({ mesh, meshAppearance, scale, position })` | A prop with just that mesh, with no template to choose (REDnode 0.40.1) |
+| `world.spawn({ record, npc, position })` | A person from a `Character.*` record. They stand where placed and stay friendly to V; `npc: false` leaves the game's own behaviour (REDnode 0.40.1) |
+| `world.spawn({ ..., keep: true })` | Keeps it in the save: it comes back about 8 s after that save loads (REDnode 0.40.1) |
+| `world.spawn({ ..., alwaysSpawned: true, wait: false })` | Asks the game to keep it spawned wherever V is. See [Objects far from V](#objects-far-from-v) (REDnode 0.58.0) |
 | `world.spawned()` | Your package's spawns, each with `attached`: whether it's in the world now |
 | `world.move(id, position, orientation?, yaw?)` | Places it |
 | `world.remove(id)` | Removes it |
@@ -191,6 +195,48 @@ await world.remove(id);
 | `world.available()` | True when Codeware is installed and a game is loaded |
 
 In the in-game test, a box appeared in front of V about a quarter of a second after the click. The **World test** sample does exactly this.
+
+What your package spawned is removed when it stops.
+
+### Objects far from V
+
+The game normally brings a spawned object into the world only while V is around, so an object about 300 m away never shows, and `wait: false` only holds on to it until V gets near. For an editor whose camera flies away from V, ask the game to keep it spawned:
+
+```js
+const { id } = await world.spawn({ mesh: 'base\\environment\\ld_kit\\marker.mesh', position, alwaysSpawned: true, wait: false });
+```
+
+`world.load(scene, { wait: false, alwaysSpawned: true })` does it for every object in a scene, and the MCP tool `world_spawn` takes the option too. What the in-game test found, with boxes in game 2.5:
+
+| Question | Found |
+|---|---|
+| Does it come in far from V? | Yes, within 0.1 s at 300 m, 1 km and 4 km. The same box without the option, at 300 m, never came in |
+| Does it stay when V goes far? | Yes, with V about 5 km away, until `world.remove` |
+| What do a few hundred cost? | 200 boxes took about 46 ms each to ask for, with the frame rate steady throughout. Heavier objects and people are untried |
+| Does the game draw the ground around it? | Not read separately: this depends on a camera that flies out there, as in EDGEbuilder |
+
+It stays for the session wherever V goes, so remove what you no longer show. A camera entity you fly with needs the option too, if V can move far.
+
+### Scenes, and what's near V
+
+These need Codeware too, and were released in REDnode 0.40.1.
+
+| Call | Does |
+|---|---|
+| `world.load(scene, options)` | Loads an EDGEbuilder scene into the running game: its meshes, entities and people, but not lights yet. Pass the scene, or a `.scene.json` file's path. Loading a scene of the same name again replaces it. It answers what it spawned and what it skipped, and why |
+| `world.unload(name)` | Removes what `world.load` spawned for that scene |
+| `world.near({ radius, files, uses })` | The entities near V, nearest first (15 m by default), with each one's class, distance and appearance. With `files`, the files each uses; with `uses`, only those that use one of the files you name |
+| `world.files(entity)` | The files one entity uses: its template and everything its components name, as path hashes |
+| `world.onRespawn(fn)` | Tells you when an [archive swap](#swapping-archives-into-the-running-game) respawned one of your entities, with its old and new id, so you can keep track of it |
+
+```js
+const r = await world.load('scenes/my_alley.scene.json');
+console.log(r.spawned.length, 'spawned', r.skipped);
+// later
+await world.unload(r.name);
+```
+
+The **World objects test** sample in REDnode's repo has a button for each of these.
 
 ## The game's files through REDbridge
 

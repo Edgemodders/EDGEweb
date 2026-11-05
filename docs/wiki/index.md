@@ -4,7 +4,7 @@ nav_title: The EDGE platform
 section: Start here
 order: 0
 description: "An introduction to EDGE, the agent-based modding platform for Cyberpunk 2077, and the EDGEmodders wiki."
-reviewed: 2026-11-04
+reviewed: 2026-11-05
 ---
 
 # The EDGE <span class="y">platform</span>
@@ -55,7 +55,7 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | **One install** | The EDGEkit app comes with the EDGE tools built in and keeps them updated; in VS Code, one extension pack installs REDcode, EDGEdeck, EDGEmat, EDGEwave and the HUD theme | [EDGEkit](edgekit/) |
 | **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |
 
-> **Status:** EDGE is early and moving fast. REDnode (0.56.1, with the new UI Tools pack) and REDagent (0.4.1) are released for **game version 2.5**; REDnode 0.37.0 and REDagent 0.3.1 stay available for 2.31. EDGEbuilder places objects in the running game (a test build). REDcode, EDGEdeck, EDGEmat, EDGEwave and EDGEquest are on the VS Code Marketplace and Open VSX as previews, and the EDGEkit app is a preview for Windows. REDnode, REDagent, REDbridge and EDGEbuilder install from release files on GitHub, and EDGEchat (0.1.1) installs into Claude Code. The [platform page](/platform.html) shows where each feature stands.
+> **Status:** EDGE is early and moving fast. REDnode (0.58.0, with the optional UI Tools pack) and REDagent (0.4.1) are released for **game version 2.5**; REDnode 0.37.0 and REDagent 0.3.1 stay available for 2.31. EDGEbuilder places objects in the running game (a test build). REDcode, EDGEdeck, EDGEmat, EDGEwave and EDGEquest are on the VS Code Marketplace and Open VSX as previews, and the EDGEkit app is a preview for Windows. REDnode, REDagent, REDbridge and EDGEbuilder install from release files on GitHub, and EDGEchat (0.1.1) installs into Claude Code. The [platform page](/platform.html) shows where each feature stands.
 
 ## About this wiki
 

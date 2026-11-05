@@ -3,7 +3,7 @@ title: Node mods
 section: REDnode
 order: 6
 description: "Write REDnode mods in JavaScript that run in Node beside the game: a first mod, windows without HTML, game events, logs, isolation, hot reload, data and secrets."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Node <span class="y">mods</span>
@@ -74,7 +74,7 @@ The `ui` builder makes windows from a few building blocks. REDnode draws them wi
 | `ui.list({ lines, keep, height, follow })` | A list of lines that scrolls on its own, for a log or a live feed. `push(...lines)` adds lines, `clear()` empties it |
 | `ui.image(src, { width, alt, onClick })` | A picture: a PNG, JPEG, WebP or GIF from your package's folder or its data folder (`pkg.dataDir`), a `data:` URL, or the picture's bytes. `set({ src })` shows another one, or the same file again after your mod wrote over it. A picture that can't be shown says why in the window and the Mod log (REDnode 0.56.1) |
 | `ui.row(...)`, `ui.column(...)` | Layout |
-| `ui.window({ title, width, height, anchor, x, y, children, onClose })` | Opens the window |
+| `ui.window({ title, width, height, anchor, x, y, titleButtons, children, onClose })` | Opens the window |
 
 Every block has `set(...)`, which changes it in the open window at once, as `where.set(...)` does above.
 
@@ -93,6 +93,46 @@ shot.set({ src: path.join(pkg.dataDir, 'after.png') });
 ```
 
 The **Image mod** sample in REDnode's repo shows pictures from the package, from bytes and drawn into the data folder (it isn't in the release zip; its source and a live preview are on the [example apps](https://edgemodders.github.io/REDnode/examples/) page).
+
+### Title-bar buttons and views
+
+From REDnode 0.58.0, a window can have buttons of your own in its title bar, and one window can swap between views, such as a main view and its settings:
+
+```js
+import { ui } from 'rednode';
+
+const main = [ui.text('The main view.')];
+const settings = [ui.text('The settings.'), ui.button('Done', () => showMain())];
+
+const mainButtons = [{ id: 'settings', label: 'Settings', icon: 'settings', onClick: () => showSettings() }];
+
+const win = ui.window({ title: 'Views', width: 380, height: 260, titleButtons: mainButtons, children: main });
+
+function showSettings() {
+  win.set({
+    title: 'Views: settings',
+    titleButtons: [{ id: 'back', label: 'Back', icon: 'back', onClick: () => showMain() }],
+    children: settings,
+  });
+}
+function showMain() {
+  win.set({ title: 'Views', titleButtons: mainButtons, children: main });
+}
+```
+
+| Field of a button | Means |
+|---|---|
+| `id` | Names the button within the window |
+| `label` | Its tooltip, or its text when it has no icon |
+| `icon` | One of `key`, `settings`, `back`, `refresh`, `help`, `info`, `add`, `edit`, `search`, `list`, `home`, `pin`, `reset`, `space` |
+| `on` | `true` lights it, for a switch that is on |
+| `onClick` | Runs in your mod when the player presses it |
+
+`win.set({ title, titleButtons, children })` changes only what you pass, in the open window: same place and size, with no flicker. Blocks you take out keep their state and can come back. A closed window takes the changes too, and shows them when the player opens it again.
+
+Your buttons sit next to **✕**, the first one closest. They count toward the three icons there, so the window's own actions, such as roll up and reset position, move into its **⋯** menu.
+
+The **Views mod** sample in REDnode's repo does all of this (it isn't in the release zip; its source and a live preview are on the [example apps](https://edgemodders.github.io/REDnode/examples/) page).
 
 For anything richer, give your package a web page too: see [Overlay apps](overlay-apps.html) and [a page and a mod together](#a-page-and-a-mod-together).
 

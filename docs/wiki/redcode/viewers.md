@@ -3,7 +3,7 @@ title: Textures, meshes and sounds
 section: REDcode
 order: 5
 description: "See and hear what a mod is made of in REDcode: the texture viewer, the 3D mesh viewer, the audio player and the game's 73,000 sound effects."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Textures, meshes and <span class="y">sounds</span>
@@ -60,7 +60,7 @@ Good to know:
 - Pick a row to open its [TweakDB record](tweakdb.html). Its buttons copy the record name, for [REDnode's Console](../rednode/overlay.html#the-console) or a tweak, or open the `.app`.
 - It covers items that pick their look by appearance name, such as clothing, but not weapons. For a mesh no item shows, it lists the `.app` looks that use it.
 
-It needs REDbridge 0.11.0 or later. Added in REDcode 0.10.4 and tested by hand; assistants have it as `mesh_items`.
+It needs REDbridge 0.11.0 or later, and with 0.12.0 it also finds outfit sets, glasses, several helmets and masks, food and drinks, which 0.11.0 missed. Added in REDcode 0.10.4 and tested by hand; assistants have it as `mesh_items`.
 
 {% include shot.html caption="Find Items" shows="Find Items open over the 3D view of a pair of shoes: under Shows red_yellow_graphic, three item records with their names in the game, then the other appearances of the mesh below." %}
 

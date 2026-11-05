@@ -4,7 +4,7 @@ nav_title: Install and update
 section: REDbridge
 order: 1
 description: "How EDGEdeck, REDcode and REDnode get REDbridge for you, keeping it updated, the .NET 10 runtime, and installing it by hand."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Install and update <span class="y">REDbridge</span>
@@ -39,11 +39,11 @@ A REDnode package that wants REDbridge must ask for the **bridge** permission, a
 
 | Tool | Needs |
 |---|---|
-| Game 2.5 | REDbridge 0.11.0, the first built for 2.5. Older releases fail some of 2.5's files, such as 262 of its quest streaming sectors |
+| Game 2.5 | REDbridge 0.11.0 or newer; 0.12.0 is the latest. 0.11.0 is the first built for 2.5, and older releases fail some of 2.5's files, such as 262 of its quest streaming sectors |
 | Game 2.31 | REDbridge 0.10.0 if you read streaming sectors: 0.11.0 reads 2.31's wrong. For everything else 0.11.0 works on 2.31 too |
 | REDcode 0.10.0 and newer | REDbridge 0.10.0 or newer, and 0.11.0 for **Find Items** in REDcode 0.10.5. If yours is older, REDcode says so and offers **REDcode: Update REDbridge** |
 | REDcode's MCP server 0.4.0 | REDbridge 0.11.0 for `mesh_items`, 0.10.0 for the `loc_*` tools, 0.9.0 for `sound_import` and mesh templates, 0.8.0 for the rest |
-| EDGEbuilder | REDbridge 0.10.0 or newer for the list of assets. The sizes of mods' meshes need 0.12.0, not released yet |
+| EDGEbuilder | REDbridge 0.10.0 or newer for the list of assets. The sizes of mods' meshes, and baking with a project's or a mod's files, need 0.12.0 |
 | A REDnode package that names REDbridge | The version in the package's requirements, which the Mod Manager shows. REDnode's Get REDbridge fetches the newest |
 | EDGEdeck's Add to Project for archives | REDbridge 0.7.1 or newer |
 | EDGEdeck's archive conflicts | Any release from 0.4.0 |

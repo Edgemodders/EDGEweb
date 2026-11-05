@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: REDnode
 order: 12
 description: "Fixes for common REDnode problems: no launcher tab, the wrong game version, missing windows, crashed mods, packages that need something, archive swaps, Claude Code not connecting, and the UI Tools pack's UI Workbench."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Troubleshooting <span class="y">REDnode</span>
@@ -130,6 +130,7 @@ The game alone needs 12 to 16 GB of RAM. Each open REDnode window adds roughly 6
 |---|---|
 | Is the game running? | The server only runs with the game. `claude mcp list` showing `rednode` failing while the game is closed is normal |
 | Is **MCP server** on? | Switch it on in the launcher's Settings drawer (the gear) |
+| Does the browser show a code, but no **Connect** window shows in the game? Or does the Settings drawer say **Waiting for port 41820**? | Another program holds REDnode's port, and the drawer names it (REDnode 0.58.0). Close that program: REDnode tries again every 10 seconds, with no restart. Before 0.58.0, restart the game once the port is free |
 | Did you connect it? | Run `claude mcp add --transport http --scope user rednode http://127.0.0.1:41820/mcp` once, then `/mcp` › `rednode` › **Authenticate** and **Allow** in the game (REDnode 0.40.1 or later). Or press **Copy setup** and run the command in a terminal once |
 | Did you press **Revoke**? | A revoked assistant asks again: **Authenticate** in `/mcp` and **Allow** in the game |
 | Is it a new session? | Claude Code loads MCP servers when a session starts. Start a new one |

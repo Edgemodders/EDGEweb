@@ -4,7 +4,7 @@ nav_title: Settings and controls
 section: REDnode
 order: 11
 description: "Every REDnode setting, key, permission and manifest field, and where REDnode keeps its files."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Settings and <span class="y">controls</span>
@@ -20,7 +20,7 @@ REDnode's settings are in the **Settings** drawer: press F10, open the launcher 
 | **Keys** | | Opens the Keys panel beside the drawer: your AI service keys, shared by every EDGE tool on your PC. See [Shared keys](#shared-keys) | You set up REDagent, or another tool that uses an AI service |
 | **GPU sharing** | on | Windows reach the game as shared GPU textures, with no copying of pixels. Off, they're copied through the CPU instead. Switching reopens every window | A window looks wrong (garbage, flicker, stale pictures). If GPU sharing fails, REDnode switches it off by itself for that session |
 | **Hot reload** | off for players | Restarts a mod, or reloads an app's page, when its files change | You're making or editing a package, or REDagent is |
-| **MCP server** | off for players | Lets Claude Code and other programs on your PC use REDnode's [MCP tools](agents.html) | You want Claude Code to see and call the game |
+| **MCP server** | off for players | Lets Claude Code and other programs on your PC use REDnode's [MCP tools](agents.html). A warning line under it names any program holding the port, while REDnode waits for it (REDnode 0.58.0) | You want Claude Code to see and call the game |
 | **Copy setup** | | Copies a command that adds REDnode to Claude Code with a fixed token | For other MCP clients; Claude Code can [sign in](agents.html#connect-claude-code) instead (REDnode 0.40.1 or later) |
 | **Connected assistants** | | The assistants you allowed in the game, each with **Revoke** | You want to cut one off; it has to ask again |
 | **Developer mode** | off | A debug button on every window's title bar, and the **Development folders** list | You're [debugging](debugging.html) or making a package |
@@ -135,8 +135,8 @@ Every field of `rednode-app.json`:
 | The [UI Workbench](ui-tools.html)'s projects, and its exports | `Documents\REDnode\UI projects` (watched as a development folder) and `Documents\REDnode\UI exports` |
 | Logs | `red4ext\logs` in the game folder: `rednode-overlay.log` (and `rednode-overlay.prev.log`, the last session's), `rednode-mods.log`, the plugin's `rednode-*.log`, and `rednode-faults.log` around archive swaps |
 
-The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. In the same file, `"editorChannel": "off"` turns off the editor channel, which lets tools on your PC play game sounds in the running game, and `"edgematTools": "all"` also lists EDGEmat's tools to desktop assistants such as Claude Code. Close the game first.
+The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. In the same file, `"editorChannel": "off"` turns off the editor channel, which lets tools on your PC play game sounds in the running game, `"edgematTools": "all"` also lists EDGEmat's tools to desktop assistants such as Claude Code, and `"edgematBridge": "own"` keeps EDGEmat on [a REDbridge of its own](agents.html#edgemats-tools-for-in-game-assistants). Close the game first.
 
 ## For developers: running the host by hand
 
-From a REDnode checkout you can run the overlay host yourself instead of the packaged one, with switches the launcher doesn't have, such as several apps folders at once or a forced render path. Hot reload and the MCP server are then on by default. The options are in the [overlay host README](https://github.com/Edgemodders/REDnode/tree/main/packages/overlay). Only one host runs at a time: one you started first keeps the game's connection.
+From a REDnode checkout you can run the overlay host yourself instead of the packaged one, with switches the launcher doesn't have, such as several apps folders at once or a forced render path. Hot reload and the MCP server are then on by default. The options are in the [overlay host README](https://github.com/Edgemodders/REDnode/tree/main/packages/overlay). Only one host runs at a time: one you started first keeps the game's connection. A host you start by hand uses MCP port 41821, since 41820 is kept for the game's (`--mcp-port=<n>` for another; REDnode 0.58.0).

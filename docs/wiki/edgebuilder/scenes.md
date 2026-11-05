@@ -67,9 +67,10 @@ Phase B4, **Bake**, is what turns a scene into a real mod. The plan:
 
 | Part | Status |
 |---|---|
-| REDbridge writing the sector from a scene | REDbridge 0.11.0 writes game 2.5 sectors. In EDGEbuilder's **bake probe** on 2026-10-30, a crate it baked loaded in game 2.5 with EDGEbuilder off, and went and came back with the street like the game's own props. The probe's ArchiveXL file was written by hand in a form REDbridge's next release writes |
-| What the probe taught | A plain mesh has no collision once baked: V walks through it. An entity with a physical mesh, such as `crate_red.ent`, is solid. Each object can set how far away it stays loaded. The bake will pick solid node types |
-| The Bake panel in EDGEbuilder | Not started |
+| REDbridge writing the sector from a scene | Released: REDbridge 0.12.0 writes game 2.5 sectors and the ArchiveXL file. In EDGEbuilder's **bake probe** on 2026-10-30, a crate it baked loaded in game 2.5 with EDGEbuilder off, and went and came back with the street like the game's own props |
+| What the probe taught | A plain mesh has no collision once baked: V walks through it. A mesh written as a kinematic instanced destructible node is solid, if the mesh has collision data; about 4 in 10 sampled have none. An entity with a physical mesh, such as `crate_red.ent`, is solid. Each object can set how far away it stays loaded |
+| The Bake tab in EDGEbuilder | In a test build (0.7.0), not released |
+| A Solid switch for each object | Planned. REDbridge 0.12.0 already has what it needs ([solid objects](../redbridge/index.html#solid-objects)) |
 | Scenes in a REDcode project | EDGEbuilder saves scenes in the project's `source\scenes` folder, and REDcode 0.10.5 shows them. Baking them into the project comes with Bake |
 | Installing the baked mod with EDGEdeck | EDGEdeck can add a REDcode project as a mod already. The full loop is untested |
 

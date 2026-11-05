@@ -4,7 +4,7 @@ nav_title: Making mods and apps
 section: REDnode
 order: 5
 description: "What a REDnode package is: Node mods, overlay apps and HUD widgets, the rednode-app.json manifest, the apps folder, permissions, requirements, mod services, and how to work on one and share it."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Making mods and <span class="y">apps</span>
@@ -205,6 +205,7 @@ The release puts eleven samples in the apps folder, switched off: Hello mod, Ask
 | Ink Coords, Ink vitals | The game's own UI widgets on the HUD (need Codeware) |
 | Ink markup | A HUD panel written as an `.ink.html` file, with a list and a bound health bar. See [Native UI: ink markup](ink-markup.html) |
 | Image mod | Pictures in a Node mod's window with `ui.image` (in the repo, not the release zip) |
+| Views mod | One window with two views, swapped with `win.set`, and title-bar buttons of its own. See [Title-bar buttons and views](node-mods.html#title-bar-buttons-and-views) (in the repo) |
 | Input test | Ctrl, Shift and Alt on clicks, a page's own edit keys, and taking Esc (in the repo) |
 | Quest test | Reading and setting quest facts and journal entries |
 | Counter service, Counter panel | One package calling another's functions |

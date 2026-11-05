@@ -3,7 +3,7 @@ title: Using the overlay
 section: REDnode
 order: 2
 description: "REDnode's overlay in the game: F10 and the three modes, the launcher, moving and closing windows, HUD widgets, themes, the Console and keys."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Using the <span class="y">overlay</span>
@@ -73,6 +73,8 @@ Windows built with REDnode's UI kit show a few small buttons beside **✕**, rig
 | Pin to HUD | Keeps the window on screen in passive mode | Usually |
 | Reset position | Puts the window back where it started | After you moved it |
 | Debug | Opens the window's debugger | [Developer mode](debugging.html#developer-mode) is on |
+
+A package can add buttons of its own next to **✕**, such as a gear for its settings. The window's own buttons then move into **⋯**.
 
 At most three of them fit beside **✕**. If a window has more, a **⋯** button appears on the far left with the rest, each with its name. A choice such as "which space" opens in the same list, with **‹ Back**.
 

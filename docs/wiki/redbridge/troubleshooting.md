@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: REDbridge
 order: 2
 description: "Fixes for REDbridge problems: missing, too old, not starting, the .NET runtime, game 2.31, slow first TweakDB use, and where the logs are."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Troubleshooting <span class="y">REDbridge</span>
@@ -55,6 +55,14 @@ REDbridge 0.11.0 is built for game 2.5. On 2.31 it fails some quest sectors ("No
 ### Game 2.5 files fail to open
 
 REDbridge 0.10.0 and older are built with WolvenKit 9.1, from before game 2.5, and fail some of its files. Update to 0.11.0 or newer: **Update REDbridge** in EDGEdeck or REDnode's Mod Manager, or **REDcode: Update REDbridge**.
+
+### A baked mesh isn't solid, or a bake warns "no collision data"
+
+A mesh is solid only with `"solid": true` on it in the scene (REDbridge 0.12.0 or later) and collision data in the mesh. Without the data it still shows, and the bake's warning names it. Ask `mesh.info` first: `hasCollision` is false for those. Pick another mesh, or use an entity with a physical mesh. See [Solid objects](index.html#solid-objects).
+
+### A bake refuses a file that isn't in the game's archives
+
+A mod's or a project's file needs one of two things. Pass the mod's `archive` or the project's `root`, so REDbridge can check the file and read its size. Or give the object's `bounds` in the scene: the bake then runs, with a warning that the game needs the mod that has the file. Both need REDbridge 0.12.0.
 
 ### The first TweakDB look-up is slow
 

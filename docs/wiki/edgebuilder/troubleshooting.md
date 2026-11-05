@@ -66,7 +66,7 @@ EDGEbuilder reads the archives in the game's `archive\pc\mod` folder and REDmod'
 
 ### A mod's mesh has no size, or drops with a 1 m box
 
-The size and appearances of a mod's or a project's mesh need REDbridge 0.12.0, which isn't released yet. With 0.11.0 the asset still drops, with a 1 m box for the gizmo. Many entities have no size even in the game's own files, because their meshes are in an appearance file: those get the 1 m box too.
+The size and appearances of a mod's or a project's mesh need REDbridge 0.12.0 or later: update it with EDGEdeck's **Get REDbridge**. With 0.11.0 the asset still drops, with a 1 m box for the gizmo. Many entities have no size even in the game's own files, because their meshes are in an appearance file: those get the 1 m box too.
 
 ### My project's file shows the game's version, or doesn't show
 

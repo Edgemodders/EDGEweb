@@ -12,6 +12,9 @@ How to keep it:
 
 **New**
 
+- Wiki: REDbridge's Reading and building the world, with its 0.12.0 calls and solid objects: https://edgemodders.ai/wiki/redbridge/index.html#reading-and-building-the-world
+- Wiki: REDnode's title-bar buttons and window views for Node mods: https://edgemodders.ai/wiki/rednode/node-mods.html#title-bar-buttons-and-views
+- Wiki: REDnode's objects far from V, and its scene and near-V calls, which had been missing since 0.40.1: https://edgemodders.ai/wiki/rednode/game-api.html#objects-far-from-v
 - Wiki: The EDGE Library, the folder of your own the EDGE tools share for scenes, bakes and assets, and the rules every tool follows there: https://edgemodders.ai/wiki/library.html
 - EDGEquest, the quest maker, on the landing page, the platform page and in the wiki, with a ten-page section from reading the game's quests to writing, music and checking your own (https://github.com/Edgemodders/EDGEweb/issues/5): https://edgemodders.ai/wiki/edgequest/
 - Wiki: an EDGEchat section, from installing the EDGE plugin for Claude Code to a first mod, a recolor and live swaps (https://github.com/Edgemodders/EDGEweb/issues/4): https://edgemodders.ai/wiki/edgechat/
