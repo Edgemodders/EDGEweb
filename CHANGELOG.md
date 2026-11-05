@@ -19,7 +19,8 @@ How to keep it:
 
 **Changed**
 
-- Wiki: EDGEbuilder's named scenes and Library tab, built as 0.6.0 and waiting for their in-game test: https://edgemodders.ai/wiki/edgebuilder/scenes.html
+- Wiki: EDGEbuilder 0.6.7, with named scenes, the Library tab, Close, the Objects drawer and objects in the world wherever V is; it needs REDnode 0.58.0: https://edgemodders.ai/wiki/edgebuilder/scenes.html
+- Landing page and platform page: EDGEbuilder's status lines, 0.6.7
 - Wiki: REDcode 0.10.5 and redcode-mcp 0.4.0, with Pack and Play (the new name of Pack and Try, https://github.com/Edgemodders/EDGEweb/issues/3), Find Items, Open in EDGEmat and EDGEbuilder scenes: https://edgemodders.ai/wiki/redcode/
 - Wiki: Connect Claude Code describes EDGEchat 0.1.1, with three ways to install and sign-in with no token: https://edgemodders.ai/wiki/connect-claude-code.html
 - Wiki: EDGEdeck 0.30.0, with Get the frameworks, Update all, Move library, deploying one mod and several files from one Nexus page: https://edgemodders.ai/wiki/edgedeck/

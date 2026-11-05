@@ -3,7 +3,7 @@ title: Positioning objects
 section: EDGEbuilder
 order: 3
 description: "Move, turn and scale objects in EDGEbuilder: the Edit switch, selecting in the world, the gizmo, G R S with axis locks and typed numbers, snapping, drop to floor and the number fields."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Positioning <span class="y">objects</span>
@@ -89,7 +89,7 @@ Scaling rebuilds the mesh's preview at the new size, so it blinks once.
 
 ## Drop to floor
 
-**Ctrl+E**, or **Drop to floor** in the Scene tab, lowers the selected object onto the first surface below it: the ground, a floor, a pavement. If there's nothing within 100 m, the message line says so and the object stays put.
+**Ctrl+E**, or **Drop to floor** in the Scene tab, lowers the selected object onto the first surface below it: the ground, a floor, a pavement. If it finds nothing solid within 1000 m, the message line says so and the object stays put. The game's ground is solid only near the camera, so if this happens from far off, fly closer and try again.
 
 ## Typing numbers
 

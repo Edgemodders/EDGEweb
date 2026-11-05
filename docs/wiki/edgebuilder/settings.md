@@ -4,12 +4,12 @@ nav_title: Settings and keys
 section: EDGEbuilder
 order: 7
 description: "Every EDGEbuilder setting, button, key and mouse control, in one place."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Settings and <span class="y">keys</span>
 
-Everything in EDGEbuilder 0.5.8, in one place. The pages before this one explain each in context.
+Everything in EDGEbuilder 0.6.7, in one place. The pages before this one explain each in context.
 
 ## The panel
 
@@ -18,7 +18,8 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 | Tab | What's in it |
 |---|---|
 | **Assets** | Search, the **All**, **Meshes** and **Entities** tabs, the **Everywhere**, **Game**, **Mods** and **Project** tabs, a line saying what was found in your mods and project, the results, and the **Picked** panel with **Drop where I look** and **Drop at click**. Typing anywhere on this tab searches. See [Browsing and dropping](browsing.html) |
-| **Scene** | The count, what the scene needs, the **Undo**, **Redo**, **Duplicate**, **Group** and **Ungroup** buttons, every object and group in the scene, and the **Selected** panel with **Group name** for a group. See [Browsing and dropping](browsing.html#the-scene-tab), [Positioning objects](positioning.html#typing-numbers) and [Arranging a scene](arranging.html) |
+| **Scene** | The open scene's name and where it is, **Save**, **Save as**, **New**, **Open** and **Close**, the count, what the scene needs, the **Undo**, **Redo**, **Duplicate**, **Group** and **Ungroup** buttons, every object and group in the scene, and the **Selected** panel with **Group name** for a group. See [Browsing and dropping](browsing.html#the-scene-tab), [Positioning objects](positioning.html#typing-numbers) and [Arranging a scene](arranging.html) |
+| **Library** | Every scene in the [EDGE Library](../library.html), the open REDcode project and This PC as one tree, with **Make the Library** until you have one. The **Picked** panel opens, closes or shows a scene and slides out its **Objects**; **New scene here**, **Save open scene here** and **New folder** work on the picked folder |
 | **Settings** | The settings below |
 | **About** | A short summary of the keys and what's next |
 
@@ -32,6 +33,7 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 | **Game folder** | Empty: found from where REDnode runs | The game folder, for when EDGEbuilder can't find it. When empty, the field shows `Automatic:` and the folder in use |
 | **Use EDGEbuilder's own camera (V stays put)** | On | Off: Edit works from V's own view instead, as in 0.2 |
 | **Hide the game's HUD** | On | Off: the HUD stays on screen while Edit is on |
+| **Library folder** | Empty until you make or choose one | The [EDGE Library](../library.html): **Use this folder** sets it. It's kept in `%APPDATA%\EDGE\library.json`, for every EDGE tool. Scenes can stay in the REDcode project or on This PC instead |
 
 **Save and restart REDbridge** saves the two fields and restarts REDbridge if its path changed. The two switches apply as soon as you flip them, even while Edit is on (from 0.3.3; before that, switch Edit off and on to see the change).
 
@@ -79,8 +81,8 @@ Keys work while Edit is on and no text field in the panel has focus.
 | **Ctrl+V** | Paste where the cursor points |
 | **Ctrl+Z** | Undo |
 | **Ctrl+Y** or **Ctrl+Shift+Z** | Redo |
-
-In the game, Ctrl+Z, Ctrl+Y, Ctrl+C, Ctrl+X, Ctrl+V and Esc need REDnode 0.52.0 or later. With an older REDnode, use the Scene tab's buttons, and a right-click to cancel.
+| **Ctrl+S** | Confirm the scene is saved: it's saved after every change anyway |
+| **Ctrl+Shift+S** | Save a copy under a new name, which becomes the open scene |
 
 ### The camera
 

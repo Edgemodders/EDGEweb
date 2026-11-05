@@ -4,7 +4,7 @@ nav_title: Arranging a scene
 section: EDGEbuilder
 order: 5
 description: "Work on several objects at once in EDGEbuilder: select with Ctrl+click or a box, group, duplicate, copy, cut and paste, undo and redo, and the busy bar."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Arranging a <span class="y">scene</span>
@@ -104,7 +104,7 @@ Clicks you make meanwhile wait their turn. The bar counts them (**1 more waiting
 
 ### Objects far away
 
-Undo, Redo and **Rebuild previews** place previews only for objects within 300 m of V or the editor camera. The game doesn't load the world much farther out, so each far preview would hold everything else up. Far objects stay in the scene, and the message says how many. Go near them and press **Rebuild previews** to see them.
+Undo, Redo and **Rebuild previews** place every object, near or far: from 0.6.7, a scene's objects are in the world wherever V is, so you can fly to any of them and work there.
 
 ## All the arranging keys
 

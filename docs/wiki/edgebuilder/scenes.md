@@ -2,8 +2,8 @@
 title: Scenes and baking
 section: EDGEbuilder
 order: 6
-description: "What EDGEbuilder keeps today (one working scene, previews you rebuild), and what saving and Bake will add: named scenes and baking a scene into a mod."
-reviewed: 2026-11-04
+description: "How EDGEbuilder keeps your work: named scenes, the Library, previews that come back by themselves, and what Bake will add."
+reviewed: 2026-11-05
 ---
 
 # Scenes and <span class="y">baking</span>
@@ -16,37 +16,35 @@ Two things are worth telling apart:
 
 | | What it is | Where it lives |
 |---|---|---|
-| **The scene** | The list of everything you placed: which asset, which appearance, where, which way round, what size, and your groups | A file in EDGEbuilder's data folder. It's saved as you work |
-| **Previews** | The objects you see in the game | In the running game only. They go when a save loads or the game closes |
+| **The scene** | The list of everything you placed: which asset, which appearance, where, which way round, what size, and your groups | A file in the place you chose: the [EDGE Library](../library.html), your REDcode project or EDGEbuilder's data folder. It's saved after every change |
+| **Previews** | The objects you see in the game | In the running game only. They go when a save loads or the game closes, and EDGEbuilder puts the open scene's back |
 
 The scene is the truth; previews are drawn from it. That's why EDGEbuilder can always put them back.
 
 ## What you can do today
 
-- **Keep working across sessions.** The scene is kept when you load a save, quit the game or update EDGEbuilder.
-- **Bring the previews back.** After a save loads, the message line says how many objects are in the scene but not in the world. Press **Rebuild previews** in the Scene tab. In the in-game test, all four objects came back in the same second, where they were, groups and all. Objects more than 300 m from V and the camera wait until you're near them.
+- **Keep working across sessions.** Your scene is kept when you load a save, quit the game or update EDGEbuilder, and the one you had open opens again at the next start.
+- **Get the previews back.** When a save loads, the open scene's objects come back by themselves, wherever V is, and the message line says how many. **Rebuild previews** in the Scene tab does the same by hand if any are missing.
 - **Arrange it.** Groups, duplicates, copy and paste, undo and redo. See [Arranging a scene](arranging.html).
 - **Start over.** **Clear scene** removes every object from the world and the scene. **Ctrl+Z** brings them back, until EDGEbuilder stops.
 - **See what it needs.** When the scene uses files from mods or a REDcode project, the Scene tab says which: **This scene needs: EvilClown**.
 
-There is **one scene** for now, the working scene. You can't name, save as, or switch between scenes yet.
-
 > **Previews are only previews.** Without EDGEbuilder running, or for anyone else playing, the objects aren't there. Making them part of the world is what Bake is for.
 
-{% include shot.html caption="Rebuilding after a save loads" shows="The Scene tab after loading a save: the objects listed as not in world, the message line saying how many are waiting, and the Rebuild previews button." %}
+{% include shot.html caption="Rebuild previews" shows="The Scene tab with objects listed as not in world, and the Rebuild previews button." %}
 
-## Saving scenes: built, being tested
+## Named scenes
 
-Phase B3, **Arrange and save**, comes in two halves. The first, B3-1 Arrange, passed in game on 2026-11-02 and is in 0.5.8: see [Arranging a scene](arranging.html). The second, **B3-2 Save**, was built on 2026-11-03 as EDGEbuilder 0.6.0. It hasn't had its in-game test yet and isn't released, so treat everything below as untested:
+Phase B3, **Arrange and save**, comes in two halves. The first, B3-1 Arrange, is in [Arranging a scene](arranging.html). The second, **B3-2 Save**, passed in game and was released as EDGEbuilder 0.6.7 on 2026-11-05, on game 2.5 with REDnode 0.58.0. It brings:
 
 - **named scenes** you save and open again (the **Return** behaviour). A scene is saved after every change, as today; **Ctrl+S** confirms it and **Ctrl+Shift+S** saves a copy under a new name;
 - three places to keep them: the [EDGE Library](../library.html) (a folder of your own, shared by the EDGE tools, offered at `Documents\EDGE Library`), your REDcode project's `source\scenes` folder (which REDcode 0.10.5 shows as **Scenes**), or **This PC** (EDGEbuilder's own data folder);
-- a scene's objects in the world wherever V is, so you can fly to any of them and work there (needs REDnode 0.58.0);
+- a scene's objects in the world wherever V is, so you can fly to any of them and work there (this is why EDGEbuilder needs REDnode 0.58.0 or later);
 - **Close**, which takes a scene's objects out of the world and leaves no scene open;
 - a **Library** tab in the panel listing all three as one tree, with New scene, Save here and New folder;
 - **Show in world**: another scene's objects appear beside the one you're editing, but can't be selected;
 - an **Objects** drawer beside the panel listing a scene's objects: two quick clicks fly the camera to one and select it, and a trash icon deletes one after asking, wherever it is;
-- your last scene, and the scenes you showed, come back when you start again, and the open scene's objects near you come back by themselves when a save loads;
+- your last scene, and the scenes you showed, come back when you start again, and the open scene's objects come back by themselves when a save loads;
 - a way for other mods and AI assistants to ask EDGEbuilder for its scenes and their objects.
 
 ## NPCs and scenes other mods can load: planned
@@ -72,7 +70,7 @@ Phase B4, **Bake**, is what turns a scene into a real mod. The plan:
 | REDbridge writing the sector from a scene | REDbridge 0.11.0 writes game 2.5 sectors. In EDGEbuilder's **bake probe** on 2026-10-30, a crate it baked loaded in game 2.5 with EDGEbuilder off, and went and came back with the street like the game's own props. The probe's ArchiveXL file was written by hand in a form REDbridge's next release writes |
 | What the probe taught | A plain mesh has no collision once baked: V walks through it. An entity with a physical mesh, such as `crate_red.ent`, is solid. Each object can set how far away it stays loaded. The bake will pick solid node types |
 | The Bake panel in EDGEbuilder | Not started |
-| Scenes in a REDcode project | REDcode 0.10.5 shows a project's scenes. EDGEbuilder saving them there comes with B3-2 |
+| Scenes in a REDcode project | EDGEbuilder saves scenes in the project's `source\scenes` folder, and REDcode 0.10.5 shows them. Baking them into the project comes with Bake |
 | Installing the baked mod with EDGEdeck | EDGEdeck can add a REDcode project as a mod already. The full loop is untested |
 
 A baked scene will need **ArchiveXL** in the game, as every mod that adds world sectors does.

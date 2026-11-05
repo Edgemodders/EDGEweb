@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEbuilder
 order: 0
 description: "EDGEbuilder, a world builder that runs inside Cyberpunk 2077 on REDnode: what it is, what it's for, and where it stands."
-reviewed: 2026-11-04
+reviewed: 2026-11-05
 ---
 
 # EDGE<span class="y">builder</span>
@@ -24,11 +24,11 @@ EDGEbuilder lets you do it where you can see it: in the game, with the real ligh
 | **Browse** | Search the game's meshes and entities by name, and those in your installed mods and your open REDcode project | Passed in game. Mods and the project from 0.4.1 |
 | **Drop** | Pick one and it appears where you look, or where you click | Passed in game |
 | **Position** | Move, turn and scale it with a gizmo, keys or typed numbers; drop it to the floor | Passed in game |
-| **Arrange** | Select several objects, group, duplicate, copy, cut and paste, undo and redo; save named scenes | Partly: everything but saving passed in game in 0.5.8. Named scenes are built (0.6.0) and waiting for their test |
+| **Arrange** | Select several objects, group, duplicate, copy, cut and paste, undo and redo; save named scenes | Passed in game. Named scenes from 0.6.7 |
 | **Bake** | Turn a scene into a mod that puts the objects in the world for good | Planned |
-| **Return** | Open a saved scene and keep working on it | Partly: your working scene is kept between sessions. Named scenes are built (0.6.0) and waiting for their test |
+| **Return** | Open a saved scene and keep working on it | Passed in game, from 0.6.7 |
 
-Until Bake exists, what you place is a **preview**: it's in the world while you play, and it goes when a save loads. EDGEbuilder remembers it and can put it back. See [Scenes and baking](scenes.html).
+Until Bake exists, what you place is a **preview**: it's in the world while you play and EDGEbuilder is running, and it goes when a save loads. EDGEbuilder keeps it in your scene and puts it back by itself. See [Scenes and baking](scenes.html).
 
 ## Benefits
 
@@ -38,7 +38,8 @@ Until Bake exists, what you place is a **preview**: it's in the world while you 
 - **Precise placement.** A gizmo, the keys G, R and S with axis locks and typed numbers, snapping, drop to floor, and exact X, Y, Z and heading fields.
 - **A free camera that leaves V alone.** Fly anywhere to place objects from any angle; V stays where V stood, and the game's HUD gets out of the way.
 - **Arrange like a 3D program.** Select several objects with Ctrl+click or a box, group them, duplicate, copy and paste, and undo the last 100 changes.
-- **Easy to back out of.** Undo takes back a change, and previews go away when a save loads, coming back only when you ask. Switch Edit off and the view, the HUD and the mouse are the game's again.
+- **Scenes you keep.** Named scenes, saved after every change, in the [EDGE Library](../library.html), your REDcode project or on this PC, and back where you left them at the next start.
+- **Easy to back out of.** Undo takes back a change, and **Close** takes a scene's objects out of the world, keeping the scene. Switch Edit off and the view, the HUD and the mouse are the game's again.
 - **Part of EDGE, end to end.** REDnode runs it, REDbridge reads the game's files, EDGEdeck installs it. Baked scenes are planned to land in a REDcode project.
 
 ## How it fits into EDGE
@@ -62,7 +63,7 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 | Bake probe | Passed in game on 2026-10-30: a crate baked by REDbridge, without EDGEbuilder, loaded in game 2.5 as part of the world |
 | B2c Mod assets | Passed in game on 2026-10-30 (0.4.1): your mods' and your REDcode project's meshes and entities |
 | B3-1 Arrange | Passed in game on 2026-11-02 (0.5.8): several objects at once, groups, duplicate, copy, cut and paste, undo and redo |
-| B3-2 Save | Built on 2026-11-03 as 0.6.0, waiting for its in-game test: named scenes you save and open again, kept in the [EDGE Library](../library.html), your REDcode project or on this PC |
+| B3-2 Save | Passed in game, released as 0.6.7 on 2026-11-05: named scenes you save and open again, kept in the [EDGE Library](../library.html), your REDcode project or on this PC |
 | B4 Bake | The bake probe showed that a baked scene loads in the game. EDGEbuilder's bake panel is not started |
 | B3c NPCs and scenes through REDnode | Agreed on 2026-10-23: place NPCs, and let REDnode load EDGEbuilder's scene files so other mods can use them. REDnode's side passed in game on 2026-10-26; EDGEbuilder's comes after B4 |
 | B3b World objects | Agreed: pick, inspect and copy what the game itself placed. Not started |
@@ -72,7 +73,7 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 | B6 Comfort (favourites, prefabs, snapping) | Not started |
 | B7 Scenes in REDcode with the game closed | Not started |
 
-The latest release is **EDGEbuilder 0.5.8** (2026-11-02), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It was tested on game 2.5 with REDnode 0.52.1. EDGEbuilder is a test build: a first public preview is planned after B4 (Bake). It needs [REDnode](../rednode/) 0.41.0 or later, and 0.52.0 or later for the keys Ctrl+Z, Ctrl+Y, Ctrl+C, Ctrl+X, Ctrl+V and Esc in the game; the newest REDnode release has them. See [Install and set up](install.html).
+The latest release is **EDGEbuilder 0.6.7** (2026-11-05), on the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It was tested on game 2.5 with REDnode 0.58.0. EDGEbuilder is a test build: a first public preview is planned after B4 (Bake). It needs [REDnode](../rednode/) 0.58.0 or later. See [Install and set up](install.html).
 
 EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks mod that showed a world editor can live inside the running game. EDGEbuilder is its own design and uses none of World Builder's code, files or data.
 
@@ -85,7 +86,7 @@ EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks m
 | [Positioning objects](positioning.html) | The Edit switch, the gizmo, G R S, typed numbers, snapping, drop to floor, scale |
 | [The camera and builder mode](camera.html) | Flying the editor camera, orbit, pan, frame, the hidden HUD and solo mode |
 | [Arranging a scene](arranging.html) | Several objects at once, groups, duplicate, copy, cut and paste, undo and redo, the busy bar |
-| [Scenes and baking](scenes.html) | What is kept today, named scenes and the Library (being tested), and what Bake will add |
+| [Scenes and baking](scenes.html) | Named scenes and the Library, previews that come back, and what Bake will add |
 | [Settings and keys](settings.html) | Every setting, button and key |
 | [Troubleshooting](troubleshooting.html) | Symptoms and fixes |
 

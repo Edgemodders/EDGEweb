@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEbuilder
 order: 1
 description: "What EDGEbuilder needs, installing it with EDGEdeck, allowing REDbridge and solo mode, and opening it in the game."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Install and set up <span class="y">EDGEbuilder</span>
@@ -14,18 +14,18 @@ reviewed: 2026-11-03
 | You need | Notes |
 |---|---|
 | Cyberpunk 2077 on Windows, game 2.5 | And a save to load: EDGEbuilder works in the world, not in the menus. Every release from 0.3.4 was tested on 2.5 |
-| [REDnode](../rednode/) 0.41.0 or later | Runs EDGEbuilder in the game. From 0.52.0, Ctrl+Z, Ctrl+Y, Ctrl+C, Ctrl+X, Ctrl+V and Esc reach EDGEbuilder; with an older REDnode, use the Scene tab's buttons and a right-click to cancel. Use the newest release: see [Install REDnode](../rednode/install.html) |
+| [REDnode](../rednode/) 0.58.0 or later | Runs EDGEbuilder in the game, and keeps a scene's objects in the world wherever V is. See [Install REDnode](../rednode/install.html) |
 | [Codeware](https://www.nexusmods.com/cyberpunk2077/mods/7780) 1.14 or later | REDnode's world calls, which spawn and move objects, need it. EDGEbuilder says so in its manifest, and REDnode's Mod Manager checks it |
 | [REDbridge](../redbridge/) 0.10.0 or later | Reads the game's files to build the asset list. 0.11.0, the newest, is the one built for game 2.5. The easiest way to get it is EDGEdeck's **Get REDbridge**. A copy REDcode fetched works too. The size and appearances of a mod's or a project's mesh need REDbridge 0.12.0, which isn't released yet: until then such an asset drops with a 1 m box for the gizmo |
 | [EDGEdeck](../edgedeck/) 0.20.0 or later | Installs EDGEbuilder. From 0.21.1, a new EDGEbuilder version takes the old one's place in the same row |
 | [REDcode](../redcode/) 0.10.5 or later | Optional: for the **Project** tab, which lists the meshes and entities of the project open in REDcode. REDcode installs a small REDnode package, `redcode`, that tells EDGEbuilder which project is open |
-| A 16:9 screen | The editor covers a 1920 x 1080 area, scaled to your screen. Ultrawide screens aren't covered yet |
+| A screen of any width | The editor covers the whole game view. Wider than 16:9 is built, but the in-game tests record no ultrawide screen yet: tell us how it goes |
 
 Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. RED4ext, which REDnode and Codeware both need, goes in the same way. See [Frameworks and game patches](../edgedeck/frameworks.html).
 
 ## Install EDGEbuilder
 
-1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.5.8.
+1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.6.7.
 2. In EDGEdeck, press **Add mod** and pick the zip. EDGEdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../edgedeck/adding-mods.html).
 3. Make sure it's ticked, and press **Deploy**.
 
@@ -67,7 +67,7 @@ The first time, the index takes a few seconds to build. After that it loads stra
 
 ## Where EDGEbuilder keeps things
 
-EDGEbuilder keeps its settings, the asset index and your working scene in a data folder of its own, which REDnode gives each package. Updates don't touch it. The **Settings** tab shows the settings file's path; the index and the scene sit beside it.
+EDGEbuilder keeps its settings, the asset index and any scenes you keep on **This PC** in a data folder of its own, which REDnode gives each package. Updates don't touch it. The **Settings** tab shows the settings file's path; the index and the scene sit beside it.
 
 ## Updating
 

@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEbuilder
 order: 8
 description: "Fixes for common EDGEbuilder problems: red status pills, REDbridge not allowed, drops that fail, keys that do nothing, a stuck camera, windows you can't click, mods and projects, and missing previews."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Troubleshooting <span class="y">EDGEbuilder</span>
@@ -99,7 +99,11 @@ A long change, such as an undo or **Rebuild previews** with many objects, runs f
 
 ### Rebuild previews or Undo leaves objects out
 
-Objects more than 300 m from V and the camera get no preview: the message says how many are far away. They're still in the scene. Fly or walk near them and press **Rebuild previews**.
+The message says how many the game didn't place, and `rednode-mods.log` says why. They're still in the scene: press **Rebuild previews** again.
+
+### Drop to floor or Drop at click finds nothing
+
+The game's ground is solid only near the camera, even where you can see it from afar. Fly closer and try again.
 
 ### Edit does nothing, or the mouse still moves V
 
@@ -137,7 +141,7 @@ Entities keep the size their template gives them. Only meshes can be scaled.
 
 ### My objects are gone after loading a save
 
-They're still in the scene. Open the **Scene** tab and press **Rebuild previews**. See [Scenes and baking](scenes.html).
+They're still in the scene, and the open scene's objects come back by themselves a moment after the save is in. If any stay missing, open the **Scene** tab and press **Rebuild previews**. See [Scenes and baking](scenes.html).
 
 ### An object I don't remember placing is in the scene
 
@@ -153,7 +157,7 @@ With REDnode older than 0.17.1, a window position saved from an older, smaller E
 
 ### The editor doesn't fill my ultrawide screen
 
-EDGEbuilder's window is laid out for 16:9 (1920 x 1080, scaled to your screen). Ultrawide screens aren't covered yet.
+From 0.6.7 the editor covers the whole game view at any width. If it doesn't, check that EDGEbuilder and REDnode are up to date, and tell us on Discord: the in-game tests record no ultrawide screen yet.
 
 ### Something else
 

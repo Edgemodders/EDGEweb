@@ -3,7 +3,7 @@ title: Browsing and dropping
 section: EDGEbuilder
 order: 2
 description: "Search the game's meshes and entities in EDGEbuilder, and your mods' and REDcode project's, pick an appearance, drop objects into the world, and manage them in the Scene tab."
-reviewed: 2026-11-03
+reviewed: 2026-11-05
 ---
 
 # Browsing and <span class="y">dropping</span>
@@ -117,11 +117,11 @@ Click an object in the list to select it, and Ctrl+click to add more. The game d
 | **Apply** | Moves the object to the numbers typed in the fields. See [Positioning objects](positioning.html#typing-numbers) |
 | **Drop to floor** | Lowers the object onto the surface below it |
 | **Delete** | Removes the selected object from the world and the scene |
-| **Rebuild previews** | Puts back every object within 300 m that's in the scene but not in the world, for example after a save loads |
+| **Rebuild previews** | Puts back every object that's in the scene but not in the world. After a save loads, the open scene's objects come back without it |
 | **Clear scene** | Removes every object at once |
 
 Above the list, **Undo**, **Redo**, **Duplicate**, **Group** and **Ungroup** do what their keys do. **Delete** and **Clear scene** can be undone. See [Arranging a scene](arranging.html).
 
 ## After a save loads
 
-Loading a save, or starting the game again, takes the previews out of the world. The scene keeps them. EDGEbuilder's message line says how many objects are waiting: press **Rebuild previews** in the Scene tab and they come back where they were. Objects more than 300 m from V and the camera stay in the scene without a preview, and the message says how many: go near them and press **Rebuild previews** again. See [Scenes and baking](scenes.html).
+Loading a save, or starting the game again, takes the previews out of the world. The scene keeps them, and they come back by themselves where they were, once the save is in. If any are missing, press **Rebuild previews** in the Scene tab. See [Scenes and baking](scenes.html).
