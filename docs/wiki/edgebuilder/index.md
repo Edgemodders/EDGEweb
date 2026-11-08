@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEbuilder
 order: 0
 description: "EDGEbuilder, a world builder that runs inside Cyberpunk 2077 on REDnode: what it is, what it's for, and where it stands."
-reviewed: 2026-11-05
+reviewed: 2026-11-08
 ---
 
 # EDGE<span class="y">builder</span>
@@ -82,6 +82,7 @@ EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks m
 | Page | |
 |---|---|
 | [Install and set up](install.html) | What you need, installing with EDGEdeck, allowing REDbridge, opening it in the game |
+| [Your first scene](first-scene.html) | A walk through from start to finish: make a scene, drop and stack crates, group and copy them, undo, bake them into the world |
 | [Browsing and dropping](browsing.html) | The asset index, your mods and project, search, appearances, dropping objects, the Scene tab |
 | [Positioning objects](positioning.html) | The Edit switch, the gizmo, G R S, typed numbers, snapping, drop to floor, scale |
 | [The camera and builder mode](camera.html) | Flying the editor camera, orbit, pan, frame, the hidden HUD and solo mode |

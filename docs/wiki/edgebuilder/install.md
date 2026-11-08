@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEbuilder
 order: 1
 description: "What EDGEbuilder needs, installing it with EDGEdeck, allowing REDbridge and solo mode, and opening it in the game."
-reviewed: 2026-11-05
+reviewed: 2026-11-08
 ---
 
 # Install and set up <span class="y">EDGEbuilder</span>
@@ -81,3 +81,7 @@ Your settings, index and scene stay.
 2. In EDGEdeck, untick EDGEbuilder, or remove it, and deploy.
 
 Your scene stays in EDGEbuilder's data folder in case you come back. The previews leave the world the next time a save loads.
+
+## Next
+
+New to EDGEbuilder? [Your first scene](first-scene.html) walks you through it once, from an empty scene to crates baked into the world.

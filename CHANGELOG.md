@@ -12,6 +12,7 @@ How to keep it:
 
 **New**
 
+- Wiki: Your first scene, a walk through EDGEbuilder from an empty scene to crates baked into the world: https://edgemodders.ai/wiki/edgebuilder/first-scene.html
 - Wiki: EDGEbuilder's Solid switch and Seen from, and the frame rate with 200 solid crates: https://edgemodders.ai/wiki/edgebuilder/scenes.html#the-solid-switch
 - Wiki: Bake in EDGEbuilder, with the Bake tab, what stands and what is solid, and changing or taking out a bake: https://edgemodders.ai/wiki/edgebuilder/scenes.html#bake
 - Wiki: REDbridge's Reading and building the world, with its 0.12.0 calls and solid objects: https://edgemodders.ai/wiki/redbridge/index.html#reading-and-building-the-world
