@@ -62,7 +62,9 @@ A mesh baked the plain way only draws: V, bullets and cars pass through it. With
 | A mesh with no collision data | It shows, but it isn't solid. The bake still runs, and a warning names the mesh. About 4 in 10 of the crate-sized meshes EDGEbuilder sampled have none; `hasCollision` tells you before you bake |
 | An entity | Its collision comes from what it's made of, so `solid` does nothing and the bake warns. An entity with a physical mesh, such as `crate_red.ent`, is solid already |
 
-The node `solid` writes is byte for byte the one that passed in game, but a bake through `solid` itself hasn't been run in the game yet: EDGEbuilder's Solid switch, still to come, will be the first.
+A bake through `solid` passed in game on 2026-11-08, from EDGEbuilder's Solid switch.
+
+A scene object's `streaming.primary` is also a mesh's hide distance from 0.12.1 (the game otherwise hides a small mesh by its size, about 60 m for a crate). The game hides a node beyond `primary` or `secondary`, whichever is nearer, so give both the same to be seen that far.
 
 Full call shapes are in the [changelog](https://github.com/Edgemodders/REDbridge/blob/main/CHANGELOG.md).
 

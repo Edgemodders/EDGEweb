@@ -4,7 +4,7 @@ nav_title: Arranging a scene
 section: EDGEbuilder
 order: 5
 description: "Work on several objects at once in EDGEbuilder: select with Ctrl+click or a box, group, duplicate, copy, cut and paste, undo and redo, and the busy bar."
-reviewed: 2026-11-05
+reviewed: 2026-11-08
 ---
 
 # Arranging a <span class="y">scene</span>
@@ -110,6 +110,7 @@ Undo, Redo and **Rebuild previews** place every object, near or far: from 0.6.7,
 
 | Key or mouse | Does |
 |---|---|
+| **Ctrl+A** | Select the whole scene |
 | **Ctrl+click** | Add to or take out of the selection |
 | **Shift+drag** | Select everything in a box |
 | **Alt+click** | One object out of a group |

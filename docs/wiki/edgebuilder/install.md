@@ -25,7 +25,7 @@ Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. R
 
 ## Install EDGEbuilder
 
-1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.7.3.
+1. Download `edgebuilder-<version>.zip` from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.8.1.
 2. In EDGEdeck, press **Add mod** and pick the zip. EDGEdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../edgedeck/adding-mods.html).
 3. Make sure it's ticked, and press **Deploy**.
 

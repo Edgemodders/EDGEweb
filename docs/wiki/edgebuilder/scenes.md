@@ -3,7 +3,7 @@ title: Scenes and baking
 section: EDGEbuilder
 order: 6
 description: "How EDGEbuilder keeps your work: named scenes, the Library, previews that come back by themselves, and baking a scene into the world."
-reviewed: 2026-11-05
+reviewed: 2026-11-08
 ---
 
 # Scenes and <span class="y">baking</span>
@@ -60,7 +60,7 @@ REDnode's side passed in game on 2026-10-26 (REDnode 0.40.1). EDGEbuilder's side
 
 The **Bake** tab turns the open scene into part of the game world. It writes a **streaming sector** (the game's own format for a piece of the world) into your [REDcode](../redcode/) project. Once the project is packed and installed, the objects stand in Night City from the next game start, even with EDGEbuilder uninstalled.
 
-You need a REDcode project open in VS Code, [REDbridge](../redbridge/) 0.12.0 or later, and [ArchiveXL](../glossary.html) in the game. Anyone who plays your mod needs ArchiveXL too.
+You need a REDcode project open in VS Code, [REDbridge](../redbridge/) 0.12.1 or later (0.12.0 bakes too, but small meshes are seen only as far as the game allows for their size), and [ArchiveXL](../glossary.html) in the game. Anyone who plays your mod needs ArchiveXL too.
 
 {% include shot.html caption="The Bake tab" shows="EDGEbuilder's Bake tab: the open scene and its object count, the REDcode project it bakes into, what the checks say, the Bake button, and the list of the project's bakes." %}
 
@@ -80,11 +80,24 @@ If REDcode's **redcode.pack.redmod** setting is on, the bake installs as a REDmo
 | Object | In the baked world |
 |---|---|
 | **An entity** with its own collision, such as `crate_red.ent` | Solid, and keeps its look |
-| **A mesh** | Drawn where you placed it, turned and scaled. **It has no collision yet: V, bullets and cars pass through.** A Solid switch comes next |
+| **A mesh, Solid on** | Stops V, bullets, melee and cars, stays put and keeps its look. Its collision grows with its scale. It needs collision data of its own: EDGEbuilder says which meshes have none |
+| **A mesh, Solid off** | Only drawn: V, bullets and cars pass through |
 | **A mesh from a mod** | Bakes too, and the Bake tab names the mod. If a player doesn't have that mod, the game doesn't crash: that object is just absent, and the rest stand |
 | **A kind a bake can't make**, such as an NPC | Left out, and the tab says so |
 
-In the test, 200 baked crates in one place made no measurable difference to the frame rate (about 65 fps with or without them, at 4K, on one PC). Those crates only draw, so solid objects still need measuring.
+### The Solid switch
+
+Select one mesh, several or a group on the **Scene** tab and switch **Solid when baked** on or off. New meshes start solid; meshes already in your scenes from before 0.8.1 stay as they were until you switch them. Previews in the world are never solid, so you can walk through them while you build.
+
+About 4 in 10 crate-sized meshes have no collision data, and can't be solid this way. The Scene tab and the Bake tab name them; an entity with its own collider, such as `crate_red.ent`, can stand in.
+
+### Seen from
+
+**Seen from, m** on the Scene tab sets how far off an object is seen once baked, for one object, several or a group. Left empty, it goes by the object's size: 40 m for small things, up to 400 m for big ones. A crate set to 120 shows from 120 m (measured from the camera in game). Farther costs frame rate in a full scene. Previews are seen from any distance.
+
+### Frame rate
+
+In the tests, 200 baked crates in one place made no measurable difference to the frame rate: about 76 fps with or without 200 solid crates seen from 120 m, and about 65 fps with or without 200 crates that only draw, at 4K on one PC. The same 200 as previews, while you edit, cost about 6 fps.
 
 ### After a bake
 
@@ -100,8 +113,8 @@ You can bake several scenes into one project, and they all stand. They can be fa
 | Part | Status |
 |---|---|
 | Bake into a REDcode project | Passed in game, released as 0.7.3 on 2026-11-05 |
-| A Solid switch for each mesh | Next. A mesh written as a kinematic instanced destructible node stops V, bullets and cars, if the mesh has collision data; about 4 in 10 sampled have none. REDbridge 0.12.0 already has what it needs ([solid objects](../redbridge/index.html#solid-objects)) |
-| Bakes in the EDGE Library | After that: bakes from several scenes kept in the [Library](../library.html), and included in a project |
+| The Solid switch and Seen from | Passed in game, released as 0.8.1 on 2026-11-08 |
+| Bakes in the EDGE Library | Next: bakes from several scenes kept in the [Library](../library.html), and included in a project |
 
 ## Later
 
