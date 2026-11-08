@@ -63,7 +63,7 @@ Results show the file name, with tags at the right:
 
 Hover a result for its full path, and for a mod's file, the archive it is in. The count above the list says how many matched, in the kind's own word: `1 mesh found`, `4 entities found`, `0 assets found for "chair"`. The list stops at 120 results (the count then shows **120+**), so a longer, more exact search works better than scrolling.
 
-{% include shot.html caption="Searching the asset index" shows="The Assets tab with cargo crate typed in the search box, the Meshes and Everywhere tabs selected, a list of results with their tags, the count above the list and the Mods and Project line." %}
+{% include shot.html src="/assets/shots/edgebuilder/browsing-search.webp" caption="Searching the asset index" shows="The Assets tab with cargo crate typed in the search box, the Meshes and Everywhere tabs selected, a list of results with their tags, the count above the list and the Mods and Project line." %}
 
 ## Pick an asset
 
@@ -104,7 +104,7 @@ If a drop fails, nothing is added to the scene, and the message line says why.
 
 A file you made in your REDcode project isn't in the game until the project is packed and loaded. Drop it before that and the message says so; if the file has a game file's path, you see the game's version for now. REDcode's **Pack and Play** swaps the packed mod into the running game: previews that use a swapped file come back showing the new version, where they were, and stay selected.
 
-{% include shot.html caption="A dropped crate" shows="A cargo crate standing on the pavement in front of V, with the message line in the EDGEbuilder panel saying how many milliseconds the drop took." %}
+{% include shot.html src="/assets/shots/edgebuilder/browsing-dropped.webp" caption="A dropped crate" shows="A cargo crate standing on the pavement in front of V, with the message line in the EDGEbuilder panel saying how many milliseconds the drop took." %}
 
 ## The Scene tab
 

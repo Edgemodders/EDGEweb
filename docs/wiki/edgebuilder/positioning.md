@@ -27,7 +27,7 @@ The overlay must be **interactive** for Edit to work: press **F10** until REDnod
 
 A help line at the bottom of the screen says what you can do next. From 0.3.3 it sits at the bottom centre, clear of REDnode's launcher; before that, at the bottom left.
 
-{% include shot.html caption="The Edit switch" shows="The EDGEbuilder panel's title bar with the Edit switch at its right end turned on, and the help line at the bottom centre of the screen." %}
+{% include shot.html src="/assets/shots/edgebuilder/positioning-edit.webp" caption="The Edit switch" shows="The EDGEbuilder panel's title bar with the Edit switch at its right end turned on, and the help line at the bottom centre of the screen." %}
 
 ## Selecting
 
@@ -54,7 +54,7 @@ Hold **Ctrl** while dragging to snap: moves go in 0.25 m steps, turns in 15° st
 
 Let go to keep the new position. The scene is saved as you go.
 
-{% include shot.html caption="The gizmo" shows="A selected cargo crate with the red, green and blue arrows from its base, the yellow ring around it and the thin cyan box, with the mouse dragging the red arrow." %}
+{% include shot.html src="/assets/shots/edgebuilder/positioning-gizmo.webp" caption="The gizmo" shows="A selected cargo crate with the red, green and blue arrows from its base, the yellow ring around it and the thin cyan box, with the mouse dragging the red arrow." %}
 
 ## G, R and S
 
@@ -108,7 +108,7 @@ Type new values and press **Apply**, or **Enter** in a field. The object moves t
 
 With several objects selected, the fields hold their middle, and the last two become **Turn by** and **Scale by**. See [Arranging a scene](arranging.html#moving-several-at-once).
 
-{% include shot.html caption="The Selected panel" shows="The Scene tab with a crate selected: its name, path and position at the top of the Selected panel, the X, Y and Z fields, Heading, Scale and Seen from, m, the Solid when baked switch with its note, and the Apply, Drop to floor and Delete buttons." %}
+{% include shot.html src="/assets/shots/edgebuilder/positioning-selected.webp" caption="The Selected panel" shows="The Scene tab with a crate selected: its name, path and position at the top of the Selected panel, the X, Y and Z fields, Heading, Scale and Seen from, m, the Solid when baked switch with its note, and the Apply, Drop to floor and Delete buttons." %}
 
 ## Delete
 

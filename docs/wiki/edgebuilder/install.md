@@ -31,7 +31,7 @@ Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. R
 
 Do this with the game closed. REDnode must already be deployed in the game folder.
 
-{% include shot.html caption="EDGEbuilder in EDGEdeck" shows="The EDGEdeck Mods view with EDGEbuilder added from its zip, its kind chip showing rednode, and the Deploy button counting the change." %}
+{% include shot.html src="/assets/shots/edgebuilder/install-edgedeck.webp" caption="EDGEbuilder in EDGEdeck" shows="The EDGEdeck Mods view with EDGEbuilder added from its zip, its kind chip showing rednode, and the Deploy button counting the change." %}
 
 ## Allow REDbridge
 
@@ -47,7 +47,7 @@ EDGEbuilder also asks for **Hiding every other package's windows (solo mode)**. 
 
 While you're in the Mod Manager, EDGEbuilder's **Requires** line should list Codeware with a tick.
 
-{% include shot.html caption="Allowing REDbridge" shows="REDnode's Mod Manager with EDGEbuilder selected, its Requires line showing Codeware with a tick, and the Allowed switches for REDbridge and solo mode under Permissions." %}
+{% include shot.html src="/assets/shots/edgebuilder/install-permissions.webp" caption="Allowing REDbridge" shows="REDnode's Mod Manager with EDGEbuilder selected, its Requires line showing Codeware with a tick, and the Allowed switches for REDbridge and solo mode under Permissions." %}
 
 ## Open EDGEbuilder
 
@@ -63,7 +63,7 @@ The panel opens at the right of the screen. Three pills at its top say how thing
 
 The first time, the index takes a few seconds to build. After that it loads straight away when EDGEbuilder starts, so search works even before REDbridge is ready. It is built again only when the game version changes, or when you ask in the Settings tab.
 
-{% include shot.html caption="The status pills" shows="The top of the EDGEbuilder panel with all three pills green: World ready, REDbridge with its version, and the asset count." %}
+{% include shot.html src="/assets/shots/edgebuilder/install-pills.webp" caption="The status pills" shows="The top of the EDGEbuilder panel with all three pills green: World ready, REDbridge with its version, and the asset count." %}
 
 ## Where EDGEbuilder keeps things
 

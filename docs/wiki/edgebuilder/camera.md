@@ -25,7 +25,7 @@ Switch **Edit** off and the view snaps back to V's eyes and the HUD returns. Swi
 
 Both halves can be switched off in the Settings tab, if one misbehaves. See [Settings and keys](settings.html). From 0.3.3 the switches apply at once, even while Edit is on, and switching Edit on with one of them off says so in the message line.
 
-{% include shot.html caption="Builder mode" shows="The game with Edit on and the camera flown up above a street: no minimap, quest tracker or crosshair, V standing small in the distance, and the EDGEbuilder panel at the right." %}
+{% include shot.html src="/assets/shots/edgebuilder/camera-builder.webp" caption="Builder mode" shows="The game with Edit on and the camera flown up above a street: no minimap, quest tracker or crosshair, V standing small in the distance, and the EDGEbuilder panel at the right." %}
 
 ## Moving the camera
 

@@ -32,7 +32,7 @@ At the top of EDGEbuilder's panel, three pills say whether everything is ready:
 
 When all three are green, you're ready.
 
-{% include shot.html caption="Ready to build" shows="EDGEbuilder's panel at the right of the game, with its three pills green: World ready, REDbridge 0.12.1, 31,601 assets, and the Assets tab below them." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-ready.webp" caption="Ready to build" shows="EDGEbuilder's panel at the right of the game, with its three pills green: World ready, REDbridge 0.12.1, 31,601 assets, and the Assets tab below them." %}
 
 ## 2. Make a scene
 
@@ -41,12 +41,12 @@ A **scene** is the list of everything you place. EDGEbuilder saves it after ever
 1. Open the **Library** tab.
 2. If it says **No Library folder yet**, press **Make the Library**. That makes `Documents\EDGE Library`, a folder the EDGE tools share for your work. (You can skip it: pick **This PC** in the tree instead, and the scene is kept in EDGEbuilder's own folder.)
 3. Click **Library** in the tree, so new things go there.
-4. In the **Picked** panel, type `My first scene` in **Name**.
+4. In the **Picked** panel, type `Construction Crates` in **Name**.
 5. Press **New scene here**.
 
-The message line says **New scene My first scene in Library**, and the scene shows in the tree with an **open** tag. The **Scene** tab now has it as **Open scene's name**.
+The message line says **New scene Construction Crates in Library**, and the scene shows in the tree with an **open** tag. The **Scene** tab now has it as **Open scene's name**.
 
-{% include shot.html caption="A new scene in the Library" shows="The Library tab: the tree with Library at the top and My first scene under it tagged open, the Picked panel with My first scene typed in Name, and the New scene here button." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-new-scene.webp" caption="A new scene in the Library" shows="The Library tab: the tree with Library at the top and Construction Crates under it tagged open, the Picked panel with Construction Crates typed in Name, and the New scene here button." %}
 
 ## 3. Find a crate and drop it
 
@@ -60,7 +60,7 @@ The crate lands about 3 m in front of V, facing V. The message line says how lon
 
 What you see is a **preview**: a stand-in EDGEbuilder places in the running game while you build. You'll make the crates permanent in step 10.
 
-{% include shot.html caption="The crate dropped" shows="A cargo crate standing on the ground in front of V, outlined by the game, and the Scene tab with cargo_crate_a in the list and the Selected panel showing its position." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-dropped.webp" caption="The crate dropped" shows="A cargo crate standing on the ground in front of V, outlined by the game, and the Scene tab with cargo_crate_a in the list and the Selected panel showing its position." %}
 
 ## 4. Switch Edit on and fly
 
@@ -74,7 +74,7 @@ The view changes to EDGEbuilder's own camera, the game's HUD goes away, and V st
 
 A help line at the bottom of the screen always says what you can do next.
 
-{% include shot.html caption="Looking down on the crate" shows="Edit on: the editor camera a few metres above the crate, no HUD, V standing beside it, the help line at the bottom centre." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-edit-on.webp" caption="Looking down on the crate" shows="Edit on: the editor camera a few metres above the crate, no HUD, V standing beside it, the help line at the bottom centre." %}
 
 ## 5. Move the crate
 
@@ -88,7 +88,7 @@ The selected crate has a **gizmo**: red, green and blue arrows, and a yellow rin
 
 If you get it wrong, **Esc** or a right-click puts the crate back while you're still moving it. After that, **Ctrl+Z** undoes it.
 
-{% include shot.html caption="Moving with the gizmo" shows="The selected crate with its red, green and blue arrows, the yellow ring and the thin cyan box, the mouse dragging the red arrow, and the help line naming the move." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-gizmo.webp" caption="Moving with the gizmo" shows="The selected crate with its red, green and blue arrows, the yellow ring and the thin cyan box, the mouse dragging the red arrow, and the help line naming the move." %}
 
 ## 6. Make a small stack
 
@@ -97,7 +97,7 @@ If you get it wrong, **Esc** or a right-click puts the crate back while you're s
 3. Press **Ctrl+D** again and put a third crate beside the others.
 4. For a fourth on top: press **Ctrl+D**, click to put it on the ground near the others, then press **G**, **Z**, type the crate's height and press **Enter**. The **Picked** panel on the Assets tab gave the height as the last of the three sizes, about `1` m. Then drag its red and green arrows until it sits on the crates below.
 
-{% include shot.html caption="A small stack" shows="Three cargo crates side by side on the ground and a fourth on top of them, the top one selected with its gizmo." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-stack.webp" caption="A small stack" shows="Three cargo crates side by side on the ground and a fourth on top of them, the top one selected with its gizmo." %}
 
 ## 7. Group the stack and name it
 
@@ -110,7 +110,7 @@ A **group** keeps objects together, so one click picks them all.
 
 In the Scene tab's list, **Crate stack** shows as a folder with its four crates under it. The arrow beside it folds them away.
 
-{% include shot.html caption="The group in the Scene tab" shows="The Scene tab's list with Crate stack as a group, group of 4 at its right, its four crates under it, and Group name in the Selected panel reading Crate stack." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-group.webp" caption="The group in the Scene tab" shows="The Scene tab's list with Crate stack as a group, group of 4 at its right, its four crates under it, and Group name in the Selected panel reading Crate stack." %}
 
 ## 8. Copy the stack somewhere else
 
@@ -118,7 +118,7 @@ In the Scene tab's list, **Crate stack** shows as a folder with its four crates 
 2. Fly a little way off, a wall's length away.
 3. Point the cursor at the ground there and press **Ctrl+V**. A second stack lands on the ground under the cursor, already selected, as a new group of the same name.
 
-{% include shot.html caption="Two stacks" shows="The camera looking at two identical stacks of four crates a few metres apart, the newer one selected." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-two-stacks.webp" caption="Two stacks" shows="The camera looking at two identical stacks of four crates a few metres apart, the newer one selected." %}
 
 ## 9. Undo a mistake
 
@@ -135,11 +135,11 @@ Your scene has been saved after every step. **Ctrl+S** confirms it, and the Scen
 So far the crates are previews: only you see them, while EDGEbuilder runs, and V walks through them. **Baking** writes them into your REDcode project as part of the game world, so they stand for anyone who installs it.
 
 1. Make sure your REDcode project is open in VS Code.
-2. Open the **Bake** tab. At the top it names the scene, **My first scene: 8 objects**, and the project it bakes into.
+2. Open the **Bake** tab. At the top it names the scene, **Construction Crates: 8 objects**, and the project it bakes into.
 3. Read the checks under it. One says **8 meshes will stop V, bullets and cars. Entities keep their own collision.** New meshes start **Solid when baked**, so your crates will be solid. A red check stops the bake and says what to fix.
-4. Press **Bake**. The message says **Baked My first scene: 8 objects into** your project, and **The last bake** lists the files it wrote.
+4. Press **Bake**. The message says **Baked Construction Crates: 8 objects into** your project, and **The last bake** lists the files it wrote.
 
-{% include shot.html caption="The Bake tab" shows="The Bake tab for My first scene, 8 objects, into the REDcode project, with the checks (8 meshes will stop V, bullets and cars), the Bake button, and the project's bakes listing My first scene." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-bake-tab.webp" caption="The Bake tab" shows="The Bake tab for Construction Crates, 8 objects, into the REDcode project, with the checks (8 meshes will stop V, bullets and cars), the Bake button, and the project's bakes listing Construction Crates." %}
 
 ## 11. See it in the game
 
@@ -152,7 +152,7 @@ A bake comes into the game only as the game starts.
 
 EDGEbuilder places no previews for a scene whose bake is in the game, so nothing stands twice. The Bake tab says **Its bake is in the game**. Your crates now stand with EDGEbuilder closed, or uninstalled.
 
-{% include shot.html caption="Baked crates in the world" shows="V standing against the baked stack of crates in first person, with the game's HUD back and EDGEbuilder's panel closed." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-baked.webp" caption="Baked crates in the world" shows="V standing against the baked stack of crates in first person, with the game's HUD back and EDGEbuilder's panel closed." %}
 
 ## 12. Change it and bake again
 
@@ -163,7 +163,7 @@ EDGEbuilder places no previews for a scene whose bake is in the game, so nothing
 
 The stack stands in its new place, with nothing left at the old one.
 
-{% include shot.html caption="The scene changed since its bake" shows="The Bake tab's state line: Baked with the date and 8 objects, then The scene changed since: bake again to bring it in." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-changed.webp" caption="The scene changed since its bake" shows="The Bake tab's state line: Baked with the date and 8 objects, then The scene changed since: bake again to bring it in." %}
 
 ## Where next
 

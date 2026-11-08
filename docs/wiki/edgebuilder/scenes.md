@@ -31,7 +31,7 @@ The scene is the truth; previews are drawn from it. That's why EDGEbuilder can a
 
 > **Previews are only previews.** Without EDGEbuilder running, or for anyone else playing, the objects aren't there. Making them part of the world is what [Bake](#bake) is for.
 
-{% include shot.html caption="Rebuild previews" shows="The Scene tab with objects listed as not in world, and the Rebuild previews button." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-rebuild.webp" caption="Rebuild previews" shows="The Scene tab with objects listed as not in world, and the Rebuild previews button." %}
 
 ## Named scenes and the Library
 
@@ -81,7 +81,7 @@ Click a scene or a folder to pick it. The **Picked** panel under the tree then a
 
 Without a Library yet, the tab says **No Library folder yet** and offers **Make the Library**, which makes `Documents\EDGE Library`. To use another folder, type it in **Library folder** on the Settings tab and press **Use this folder**.
 
-{% include shot.html caption="The Library tab" shows="The Library tab: the tree with Library and two folders (Alleys, with Kabuki inside), scenes with their object counts and dates, one tagged open and one shown, Project: EDGEbuilder_Testing and This PC below, and the Picked panel with Open, Close, Show in world, Objects, Refresh, the Name field and New scene here, Save open scene here and New folder." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-library.webp" caption="The Library tab" shows="The Library tab: the tree with Library and two folders (Alleys, with Kabuki inside), scenes with their object counts and dates, one tagged open and one shown, Project: EDGEbuilder_Testing and This PC below, and the Picked panel with Open, Close, Show in world, Objects, Refresh, the Name field and New scene here, Save open scene here and New folder." %}
 
 ### The Objects drawer
 
@@ -90,7 +90,7 @@ Without a Library yet, the tab says **No Library folder yet** and offers **Make 
 - **Two quick clicks** on an object fly the camera to it and select it. For a scene that isn't open, they open it first.
 - The **trash icon** on a row deletes that object, after asking, wherever it and the camera are. In a scene that isn't open, that delete can't be undone.
 
-{% include shot.html caption="The Objects drawer" shows="The Objects drawer beside the EDGEbuilder panel, titled Objects: 200 Cargo Crates, its line saying 200 objects. Two clicks fly the camera to an object and select it, and the list of crates with a trash icon on each row." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-objects.webp" caption="The Objects drawer" shows="The Objects drawer beside the EDGEbuilder panel, titled Objects: 200 Cargo Crates, its line saying 200 objects. Two clicks fly the camera to an object and select it, and the list of crates with a trash icon on each row." %}
 
 ### Try it: the Library
 
@@ -119,7 +119,7 @@ The **Bake** tab turns the open scene into part of the game world. It writes a *
 
 You need a REDcode project open in VS Code, [REDbridge](../redbridge/) 0.12.1 or later (0.12.0 bakes too, but small meshes are seen only as far as the game allows for their size), and [ArchiveXL](../glossary.html) in the game. Anyone who plays your mod needs ArchiveXL too.
 
-{% include shot.html caption="The Bake tab" shows="EDGEbuilder's Bake tab: the open scene and its object count, the REDcode project it bakes into, what the checks say, the Bake button, The last bake panel with what it wrote, and the list of the project's bakes." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-bake.webp" caption="The Bake tab" shows="EDGEbuilder's Bake tab: the open scene and its object count, the REDcode project it bakes into, what the checks say, the Bake button, The last bake panel with what it wrote, and the list of the project's bakes." %}
 
 ### From scene to world
 
@@ -150,7 +150,7 @@ About 4 in 10 crate-sized meshes have no collision data, and can't be solid this
 
 With several meshes selected, the line under the switch counts them, for example **3 of 4 solid.** The switch acts on all of them.
 
-{% include shot.html caption="The Solid switch" shows="The Selected panel for one mesh with Solid when baked switched off and the line under it saying No collision data, so this mesh can't be solid., with the switch's tooltip open." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-solid.webp" caption="The Solid switch" shows="The Selected panel for one mesh with Solid when baked switched off and the line under it saying No collision data, so this mesh can't be solid., with the switch's tooltip open." %}
 
 ### Seen from
 
@@ -158,7 +158,7 @@ With several meshes selected, the line under the switch counts them, for example
 
 Empty, the field's hint gives the distance by size, for example **40 by size**. With several objects at different distances it says **mixed**. Type metres from 5 to 2000 and press **Enter**; empty it and press **Enter** to go back to the distance by size. Small meshes need REDbridge 0.12.1 or later to be seen that far: with an older one, the Bake tab says so.
 
-{% include shot.html caption="Seen from" shows="The Selected panel with a group of crates selected and Seen from, m reading 120, the message line saying 4 objects: seen from 120 m once baked." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-seen-from.webp" caption="Seen from" shows="The Selected panel with a group of crates selected and Seen from, m reading 120, the message line saying 4 objects: seen from 120 m once baked." %}
 
 ### Frame rate
 
@@ -211,7 +211,7 @@ Tags in the tree and the Picked panel warn about a Library bake:
 | **in project** | The open REDcode project includes it |
 | **in game** | The game loaded it at its last start |
 
-{% include shot.html caption="A bake in the Library" shows="The Library tab: the tree with Kabuki Bakes tagged bake and in project, 2 scenes · v2, beside its scenes, and the Picked panel with its place, version and two scenes, each with a trash icon, and Include in project, Add open scene, Bake again and Delete." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-library-bake.webp" caption="A bake in the Library" shows="The Library tab: the tree with Kabuki Bakes tagged bake and in project, 2 scenes · v2, beside its scenes, and the Picked panel with its place, version and two scenes, each with a trash icon, and Include in project, Add open scene, Bake again and Delete." %}
 
 ### Try it: a bake in the Library
 

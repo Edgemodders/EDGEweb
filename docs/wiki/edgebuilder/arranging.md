@@ -30,7 +30,7 @@ Ctrl+click works in the **Scene** tab's list too.
 
 Each selected object gets the game's outline and a thin box. The gizmo sits at the middle of the selection. The Scene tab's count says how many are selected, for example **5 objects, 1 group; 3 selected**.
 
-{% include shot.html caption="Three crates selected" shows="Three cargo crates selected with Edit on: each outlined with its thin cyan box, one gizmo at their middle, and the Scene tab saying 3 selected." %}
+{% include shot.html src="/assets/shots/edgebuilder/arranging-selected.webp" caption="Three crates selected" shows="Three cargo crates selected with Edit on: each outlined with its thin cyan box, one gizmo at their middle, and the Scene tab saying 3 selected." %}
 
 ## Moving several at once
 
@@ -57,7 +57,7 @@ The **Scene** tab's list is a tree: each group shows **group of N** at its right
 
 With a group selected, the **Selected** panel has a **Group name** field. Type a name and press **Enter**.
 
-{% include shot.html caption="Groups in the Scene tab" shows="The Scene tab's list as a tree: a group with its name and arrow, three crates under it, a second group folded, and the Group name field in the Selected panel." %}
+{% include shot.html src="/assets/shots/edgebuilder/arranging-groups.webp" caption="Groups in the Scene tab" shows="The Scene tab's list as a tree: a group with its name and arrow, three crates under it, a second group folded, and the Group name field in the Selected panel." %}
 
 ## Duplicate
 
@@ -100,7 +100,7 @@ Clicks you make meanwhile wait their turn. The bar counts them (**1 more waiting
 
 **Stop** places no more previews for that change. The changes waiting behind it still run.
 
-{% include shot.html caption="The busy bar" shows="The top of the view with Edit on: the busy bar saying Rebuild previews, 3 of 12, 2 s, 1 more waiting, with the Stop button." %}
+{% include shot.html src="/assets/shots/edgebuilder/arranging-busy.webp" caption="The busy bar" shows="The top of the view with Edit on: the busy bar saying Rebuild previews, 3 of 12, 2 s, 1 more waiting, with the Stop button." %}
 
 ### Objects far away
 
