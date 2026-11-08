@@ -2,7 +2,7 @@
 title: Arranging a scene
 nav_title: Arranging a scene
 section: EDGEbuilder
-order: 5
+order: 6
 description: "Work on several objects at once in EDGEbuilder: select with Ctrl+click or a box, group, duplicate, copy, cut and paste, undo and redo, and the busy bar."
 reviewed: 2026-11-08
 ---
@@ -40,7 +40,7 @@ Everything on [Positioning objects](positioning.html) works on the whole selecti
 - **G**, **R** and **S**, with **X**, **Y**, **Z**, typed numbers and **Ctrl** snapping, act on all of them. **S** scales them from their middle: they spread out and grow;
 - **Delete** and **Drop to floor** act on each object.
 
-With several objects selected, the **Selected** panel shows their middle in **X**, **Y** and **Z**, and the last two fields become **Turn by** and **Scale by**. **Apply** moves the middle to the X, Y and Z you typed, turns them around it by **Turn by** degrees, and scales them from it by **Scale by**. **Scale by** is greyed out when the selection holds an entity, since entities don't scale.
+With several objects selected, the **Selected** panel shows their middle in **X**, **Y** and **Z**, and the last two fields become **Turn by** and **Scale by**. **Apply** moves the middle to the X, Y and Z you typed, turns them around it by **Turn by** degrees, and scales them from it by **Scale by**. **Scale by** is hidden when the selection holds an entity, since entities don't scale.
 
 ## Groups
 
@@ -121,3 +121,14 @@ Undo, Redo and **Rebuild previews** place every object, near or far: from 0.6.7,
 | **Esc** or a right-click | Cancels a drag, a Drop at click, a box or a copy that follows the mouse |
 
 With nothing in progress, **Esc** leaves REDnode's interactive mode as usual.
+
+## Try it: a barricade down the street
+
+1. Drop a crate, then press **Ctrl+D** twice to put two more beside it.
+2. Hold **Shift** and drag a box around the three. The Scene tab says **3 selected**.
+3. Press **Ctrl+G**. In **Group name**, type `Barricade` and press **Enter**.
+4. In the Scene tab's list, click the arrow beside **Barricade** to fold its crates away, and again to show them.
+5. **Alt+click** the middle crate and press **Delete**. Only that one goes. **Ctrl+Z** puts it back.
+6. Click the barricade and press **Ctrl+X**. It's gone, and copied.
+7. Fly down the street, point the cursor at the road and press **Ctrl+V**. Press **Ctrl+V** again further on. Now there are two barricades.
+8. Press **Ctrl+Z** three times: the two pastes and the cut come undone, and the barricade is back where it started.

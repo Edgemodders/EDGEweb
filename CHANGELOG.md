@@ -12,6 +12,7 @@ How to keep it:
 
 **New**
 
+- Wiki: Try it exercises on EDGEbuilder's pages (dropping from your mods, positioning, the camera, arranging, the Library, Solid and Seen from), and how to use the Library tab, the Scene tab's buttons and the Objects drawer: https://edgemodders.ai/wiki/edgebuilder/scenes.html#named-scenes-and-the-library
 - Wiki: Your first scene, a walk through EDGEbuilder from an empty scene to crates baked into the world: https://edgemodders.ai/wiki/edgebuilder/first-scene.html
 - Wiki: EDGEbuilder's Solid switch and Seen from, and the frame rate with 200 solid crates: https://edgemodders.ai/wiki/edgebuilder/scenes.html#the-solid-switch
 - Wiki: Bake in EDGEbuilder, with the Bake tab, what stands and what is solid, and changing or taking out a bake: https://edgemodders.ai/wiki/edgebuilder/scenes.html#bake

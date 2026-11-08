@@ -1,9 +1,9 @@
 ---
 title: Browsing and dropping
 section: EDGEbuilder
-order: 2
+order: 3
 description: "Search the game's meshes and entities in EDGEbuilder, and your mods' and REDcode project's, pick an appearance, drop objects into the world, and manage them in the Scene tab."
-reviewed: 2026-11-05
+reviewed: 2026-11-08
 ---
 
 # Browsing and <span class="y">dropping</span>
@@ -125,3 +125,14 @@ Above the list, **Undo**, **Redo**, **Duplicate**, **Group** and **Ungroup** do 
 ## After a save loads
 
 Loading a save, or starting the game again, takes the previews out of the world. The scene keeps them, and they come back by themselves where they were, once the save is in. If any are missing, press **Rebuild previews** in the Scene tab. See [Scenes and baking](scenes.html).
+
+## Try it: drop something from one of your mods
+
+1. Open the **Assets** tab and click **Mods**. The line above the list says how many of your mods have meshes or entities.
+2. Type part of a mod's name. Its files are listed, each tagged with the mod.
+3. Click **All** to see both kinds: a **mesh** (a model only) and an **entity** (a game object with its own parts, such as lights, doors or collision).
+4. Click a result. The **Picked** panel shows its size and appearances.
+5. Press **Drop at click**, then click a spot on the ground. The object lands there, facing the camera. Esc or a right-click cancels.
+6. Open the **Scene** tab. The object is listed, and the line above the list says **This scene needs:** and the mod's name. Anyone you share the scene or its bake with needs that mod too.
+
+No mods with models installed? Do the same on the **Game** tab with `bench` or `vending machine`.

@@ -1,7 +1,7 @@
 ---
 title: Scenes and baking
 section: EDGEbuilder
-order: 6
+order: 7
 description: "How EDGEbuilder keeps your work: named scenes, the Library, previews that come back by themselves, and baking a scene into the world."
 reviewed: 2026-11-08
 ---
@@ -33,19 +33,75 @@ The scene is the truth; previews are drawn from it. That's why EDGEbuilder can a
 
 {% include shot.html caption="Rebuild previews" shows="The Scene tab with objects listed as not in world, and the Rebuild previews button." %}
 
-## Named scenes
+## Named scenes and the Library
 
-Phase B3, **Arrange and save**, comes in two halves. The first, B3-1 Arrange, is in [Arranging a scene](arranging.html). The second, **B3-2 Save**, passed in game and was released as EDGEbuilder 0.6.7 on 2026-11-05, on game 2.5 with REDnode 0.58.0. It brings:
+Every scene has a name and a place. EDGEbuilder saves the open scene after every change, opens it again at the next start, and brings its objects back when a save loads, wherever V is. Named scenes passed in game and were released in EDGEbuilder 0.6.7 on 2026-11-05.
 
-- **named scenes** you save and open again (the **Return** behaviour). A scene is saved after every change, as today; **Ctrl+S** confirms it and **Ctrl+Shift+S** saves a copy under a new name;
-- three places to keep them: the [EDGE Library](../library.html) (a folder of your own, shared by the EDGE tools, offered at `Documents\EDGE Library`), your REDcode project's `source\scenes` folder (which REDcode 0.10.5 shows as **Scenes**), or **This PC** (EDGEbuilder's own data folder);
-- a scene's objects in the world wherever V is, so you can fly to any of them and work there (this is why EDGEbuilder needs REDnode 0.58.0 or later);
-- **Close**, which takes a scene's objects out of the world and leaves no scene open;
-- a **Library** tab in the panel listing all three as one tree, with New scene, Save here and New folder;
-- **Show in world**: another scene's objects appear beside the one you're editing, but can't be selected;
-- an **Objects** drawer beside the panel listing a scene's objects: two quick clicks fly the camera to one and select it, and a trash icon deletes one after asking, wherever it is;
-- your last scene, and the scenes you showed, come back when you start again, and the open scene's objects come back by themselves when a save loads;
-- a way for other mods and AI assistants to ask EDGEbuilder for its scenes and their objects.
+A scene can live in one of three places:
+
+| Place | Where it is | Good for |
+|---|---|---|
+| **Library** | A folder of your own, shared by the EDGE tools, offered at `Documents\EDGE Library`. Make your own folders in it. See [The EDGE Library](../library.html) | Most scenes. They're kept apart from any one mod, and you can bake them into any project |
+| **Project:** and its name | The open REDcode project's `source\scenes` folder, which REDcode shows as **Scenes** | A scene that belongs to one mod and travels with its project |
+| **This PC** | EDGEbuilder's own data folder | Quick tests, or when you don't want a Library |
+
+The Library is never needed: scenes work the same in all three.
+
+### The Scene tab's buttons
+
+| Button or key | Does |
+|---|---|
+| **Open scene's name** | The open scene's name. Change it and press **Enter** to rename the scene and its file. It asks first: **Rename** or **Keep the name** |
+| **Save**, or **Ctrl+S** | Confirms the scene is saved. It's saved after every change anyway |
+| **Save as**, or **Ctrl+Shift+S** | A copy under a new name: the Library tab opens with the name ready; pick a folder and press **Save open scene here**. The copy becomes the open scene |
+| **New** | An empty scene: the Library tab opens; type a name, pick a folder, press **New scene here** |
+| **Open** | The Library tab, to pick a scene |
+| **Close** | The scene's objects leave the world, and no scene is open, also at the next start. It stays saved |
+
+The line under the name says where the scene is, for example **In Library > Alleys. Saved after every change.**
+
+### The Library tab
+
+The **Library** tab shows all three places as one tree: **Library** with your folders, **Project:** and the project's name while REDcode has a project open, and **This PC**. Each scene shows its object count and when it changed, and an **open** or **shown** tag.
+
+Click a scene or a folder to pick it. The **Picked** panel under the tree then acts on it:
+
+| Button | Does |
+|---|---|
+| **Open** | Opens the picked scene. Two quick clicks on a scene in the tree do the same |
+| **Close** | Closes the open scene |
+| **Show in world** | Shows the picked scene's objects beside the one you're editing. They can't be selected; open the scene to change it. **Hide from world** takes them away |
+| **Objects** | Slides out the Objects drawer: see below |
+| **Refresh** | Looks at the folders again, after you changed them outside the game |
+| **Name** | The name for a new scene or folder. The line under it says where it goes: **In Library > Alleys** |
+| **New scene here** | An empty scene in the picked folder, opened |
+| **Save open scene here** | A copy of the open scene in the picked folder, which becomes the open scene |
+| **New folder** | A folder inside the picked one. Folders are made in the Library only |
+
+Without a Library yet, the tab says **No Library folder yet** and offers **Make the Library**, which makes `Documents\EDGE Library`. To use another folder, type it in **Library folder** on the Settings tab and press **Use this folder**.
+
+{% include shot.html caption="The Library tab" shows="The Library tab: the tree with Library and two folders (Alleys, with Kabuki inside), scenes with their object counts and dates, one tagged open and one shown, Project: EDGEbuilder_Testing and This PC below, and the Picked panel with Open, Close, Show in world, Objects, Refresh, the Name field and New scene here, Save open scene here and New folder." %}
+
+### The Objects drawer
+
+**Objects** on the Library tab slides a drawer out beside the panel, listing every object of the picked scene, or of the open one. Its title names the scene.
+
+- **Two quick clicks** on an object fly the camera to it and select it. For a scene that isn't open, they open it first.
+- The **trash icon** on a row deletes that object, after asking, wherever it and the camera are. In a scene that isn't open, that delete can't be undone.
+
+{% include shot.html caption="The Objects drawer" shows="The Objects drawer beside the EDGEbuilder panel, titled Objects: 200 Cargo Crates, its line saying 200 objects. Two clicks fly the camera to an object and select it, and the list of crates with a trash icon on each row." %}
+
+### Try it: the Library
+
+1. Open the **Library** tab. If it offers **Make the Library**, press it.
+2. Click **Library** in the tree. Type `Alleys` in **Name** and press **New folder**.
+3. Click **Alleys**. Type `Back lot` in **Name** and press **New scene here**. It opens, empty.
+4. Drop a crate or two (see [Your first scene](first-scene.html)).
+5. Press **Ctrl+Shift+S**. The Library tab opens with the name ready. Change it to `Back lot copy`, click **Alleys**, and press **Save open scene here**. The copy is now the open scene.
+6. On the Scene tab, press **Close**. The crates leave the world.
+7. On the Library tab, click **Back lot** twice quickly. It opens, and its crates come back.
+8. Click **Back lot copy** and press **Show in world**. Its crates appear too, but a click on them selects nothing. Press **Hide from world**.
+9. Press **Objects**. Click a crate in the drawer twice quickly: the camera flies to it and selects it.
 
 ## NPCs and scenes other mods can load: planned
 
@@ -89,11 +145,19 @@ If REDcode's **redcode.pack.redmod** setting is on, the bake installs as a REDmo
 
 Select one mesh, several or a group on the **Scene** tab and switch **Solid when baked** on or off. New meshes start solid; meshes already in your scenes from before 0.8.1 stay as they were until you switch them. Previews in the world are never solid, so you can walk through them while you build.
 
-About 4 in 10 crate-sized meshes have no collision data, and can't be solid this way. The Scene tab and the Bake tab name them; an entity with its own collider, such as `crate_red.ent`, can stand in.
+About 4 in 10 crate-sized meshes have no collision data, and can't be solid this way. Under the switch, the Scene tab says so: **No collision data, so this mesh can't be solid.**, or for several, how many can't. The Bake tab names them too. An entity with its own collider, such as `crate_red.ent`, can stand in.
+
+With several meshes selected, the line under the switch counts them, for example **3 of 4 solid.** The switch acts on all of them.
+
+{% include shot.html caption="The Solid switch" shows="The Selected panel for one mesh with Solid when baked switched off and the line under it saying No collision data, so this mesh can't be solid., with the switch's tooltip open." %}
 
 ### Seen from
 
 **Seen from, m** on the Scene tab sets how far off an object is seen once baked, for one object, several or a group. Left empty, it goes by the object's size: 40 m for small things, up to 400 m for big ones. A crate set to 120 shows from 120 m (measured from the camera in game). Farther costs frame rate in a full scene. Previews are seen from any distance.
+
+Empty, the field's hint gives the distance by size, for example **40 by size**. With several objects at different distances it says **mixed**. Type metres from 5 to 2000 and press **Enter**; empty it and press **Enter** to go back to the distance by size. Small meshes need REDbridge 0.12.1 or later to be seen that far: with an older one, the Bake tab says so.
+
+{% include shot.html caption="Seen from" shows="The Selected panel with a group of crates selected and Seen from, m reading 120, the message line saying 4 objects: seen from 120 m once baked." %}
 
 ### Frame rate
 
@@ -107,6 +171,15 @@ In the tests, 200 baked crates in one place made no measurable difference to the
 - **Renaming a baked scene.** A bake goes by the scene's name, so its bake keeps the old name. Bake again and take the old bake out, or both stand in the world. EDGEbuilder warns you before it renames.
 
 You can bake several scenes into one project, and they all stand. They can be far apart, indoors or in Dogtown.
+
+### Try it: Solid, Seen from and taking a bake out
+
+1. Open a scene with a few meshes, and the REDcode project to bake into.
+2. On the Scene tab, select one mesh and switch **Solid when baked** off. The Bake tab now says one mesh is set not solid: V walks through it.
+3. Select a group, type `80` in **Seen from, m** and press **Enter**. The message says the objects will be seen from 80 m once baked.
+4. Open the **Bake** tab and read the checks. Yellow ones are worth reading, and a red one stops the bake. Press **Bake**.
+5. Quit, **Pack and Install** in REDcode, start the game: V walks through the one mesh and bumps into the rest.
+6. To take the bake out again: on the Bake tab, press the trash icon beside it in **Bakes in this project**, then **Yes**. Quit, **Pack and Install** again, and start. The objects are gone from the world, and the scene is still in the Library.
 
 ### What comes next
 

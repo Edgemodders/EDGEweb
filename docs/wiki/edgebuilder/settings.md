@@ -2,7 +2,7 @@
 title: EDGEbuilder settings and keys
 nav_title: Settings and keys
 section: EDGEbuilder
-order: 7
+order: 8
 description: "Every EDGEbuilder setting, button, key and mouse control, in one place."
 reviewed: 2026-11-08
 ---
@@ -13,7 +13,7 @@ Everything in EDGEbuilder 0.8.1, in one place. The pages before this one explain
 
 ## The panel
 
-EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **Edit** switch. Under it are three status pills (see [Install and set up](install.html#open-edgebuilder)), a message line, the busy bar with **Stop** while a long change runs (see [Arranging a scene](arranging.html#when-edgebuilder-is-busy)), and four tabs.
+EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **Edit** switch. Under it are three status pills (see [Install and set up](install.html#open-edgebuilder)), a message line, the busy bar with **Stop** while a long change runs (see [Arranging a scene](arranging.html#when-edgebuilder-is-busy)), and six tabs.
 
 | Tab | What's in it |
 |---|---|

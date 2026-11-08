@@ -1,9 +1,9 @@
 ---
 title: Positioning objects
 section: EDGEbuilder
-order: 3
+order: 4
 description: "Move, turn and scale objects in EDGEbuilder: the Edit switch, selecting in the world, the gizmo, G R S with axis locks and typed numbers, snapping, drop to floor and the number fields."
-reviewed: 2026-11-05
+reviewed: 2026-11-08
 ---
 
 # Positioning <span class="y">objects</span>
@@ -93,19 +93,22 @@ Scaling rebuilds the mesh's preview at the new size, so it blinks once.
 
 ## Typing numbers
 
-The **Selected** panel in the **Scene** tab has five fields:
+The **Selected** panel in the **Scene** tab has these fields:
 
 | Field | Meaning |
 |---|---|
 | **X**, **Y**, **Z** | Position in the game's world, in metres. X is east, Y north, Z up |
 | **Heading** | The turn around the vertical, in degrees |
-| **Scale** | Size as a factor, for meshes. 1 is the original size. Greyed out for entities |
+| **Scale** | Size as a factor, for meshes. 1 is the original size. Hidden when an entity is selected: entities keep their template's size |
+| **Seen from, m** | How far off the object is seen once baked. See [Seen from](scenes.html#seen-from) |
+
+For a mesh, the **Solid when baked** switch sits under the fields. See [The Solid switch](scenes.html#the-solid-switch).
 
 Type new values and press **Apply**, or **Enter** in a field. The object moves there. **Enter** also leaves the field, so **Ctrl+Z** then undoes the move rather than your typing.
 
 With several objects selected, the fields hold their middle, and the last two become **Turn by** and **Scale by**. See [Arranging a scene](arranging.html#moving-several-at-once).
 
-{% include shot.html caption="The Selected panel" shows="The Scene tab with a crate selected: its name, path and position at the top of the Selected panel, the X, Y, Z, Heading and Scale fields, and the Apply, Drop to floor and Delete buttons." %}
+{% include shot.html caption="The Selected panel" shows="The Scene tab with a crate selected: its name, path and position at the top of the Selected panel, the X, Y and Z fields, Heading, Scale and Seen from, m, the Solid when baked switch with its note, and the Apply, Drop to floor and Delete buttons." %}
 
 ## Delete
 
@@ -116,3 +119,16 @@ Press **Delete** with an object selected, or **Delete** in the Scene tab. It goe
 - Drags follow the mouse at the game's frame rate. In the in-game test, dragging didn't lower the frame rate.
 - While Edit is on, other packages' windows hide, if you allowed EDGEbuilder [solo mode](install.html#allow-redbridge). Without it they stay, but EDGEbuilder's layer is over them, so you can't click them. Switch Edit off to use them.
 - The fields set the heading only. **R** with **X** or **Y** locked turns around those axes instead, which tilts the object; the in-game test turned objects around the vertical only.
+
+## Try it: put a crate on top of something
+
+1. Drop a crate (search `cargo crate` on the Assets tab, then **Drop where I look**) near something in the world with a flat top: a dumpster, a low wall, a concrete block.
+2. Switch **Edit** on and click the crate.
+3. Drag the **blue** arrow up until the crate is higher than the object, then the **red** and **green** arrows until it's above it.
+4. Press **Ctrl+E**. The crate drops onto the first solid surface below it: the object's top.
+5. Press **R**, type `45` and press **Enter**. The crate turns an eighth of a turn.
+6. In the **Selected** panel, type `0` in **Heading** and press **Enter**. It turns back.
+7. Press **G**, **Z**, type `-0.5`, then press **Esc** instead of Enter. Nothing moved.
+8. Press **Ctrl+Z** twice: the heading and the turn come undone. Once more and the drop comes undone: the crate is back in the air above the object.
+
+Drop to floor lands only on the game's own objects and ground. Previews from your scene aren't solid, so a crate drops through another preview.

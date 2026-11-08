@@ -2,9 +2,9 @@
 title: The camera and builder mode
 nav_title: Camera and builder mode
 section: EDGEbuilder
-order: 4
+order: 5
 description: "EDGEbuilder's own camera: look, fly, orbit, pan, dolly and frame while V stays put, and builder mode, which hides the game's HUD and other windows while Edit is on."
-reviewed: 2026-11-03
+reviewed: 2026-11-08
 ---
 
 # The camera and <span class="y">builder mode</span>
@@ -77,3 +77,14 @@ If EDGEbuilder stops while Edit is on (it crashed, or you closed it), V's view m
 From 0.4.1, builder mode also hides other packages' windows, through REDnode's [solo mode](../rednode/spaces.html#solo-mode). It needs your permission: in REDnode's Mod Manager, allow EDGEbuilder **Hiding every other package's windows (solo mode)**. See [Install and set up](install.html#allow-redbridge). While it's on, the launcher tab shows **SOLO EDGEbuilder**. Switch Edit off and the windows come back. REDnode's own tools, such as the launcher, stay.
 
 Without the permission, other windows stay on screen, and EDGEbuilder says so once. While Edit is on, EDGEbuilder's layer is over them, so they can't be clicked. Switch Edit off to use them.
+
+## Try it: a look from the rooftops
+
+1. Drop something in front of V and leave it selected.
+2. Switch **Edit** on.
+3. Hold the right mouse button and press **E** to rise above the street. Hold **Shift** to go faster, or turn the mouse wheel while flying to change the speed.
+4. Fly forward with **W** to a rooftop and look back down.
+5. Press **F**. The camera comes back to a good distance from the selected object.
+6. Hold the middle mouse button and move the mouse: the camera circles the object. Add **Shift** to slide it sideways or up.
+7. Turn the mouse wheel to move closer and further.
+8. Switch **Edit** off. You're back in V's eyes, where V stood all along.
