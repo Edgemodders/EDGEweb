@@ -19,13 +19,13 @@ reviewed: 2026-11-08
 | [REDbridge](../redbridge/) 0.12.1 or later | Reads the game's files to build the asset list, and writes your bakes. 0.11.0 is the first built for game 2.5 and still builds the list; the size and appearances of a mod's or a project's mesh, and baking, need 0.12.0, and Seen from on small meshes 0.12.1. The easiest way to get it is EDGEdeck's **Get REDbridge**. A copy REDcode fetched works too |
 | [EDGEdeck](../edgedeck/) 0.20.0 or later | Installs EDGEbuilder. From 0.21.1, a new EDGEbuilder version takes the old one's place in the same row |
 | [REDcode](../redcode/) 0.10.5 or later | Optional: for the **Project** tab, which lists the meshes and entities of the project open in REDcode. REDcode installs a small REDnode package, `redcode`, that tells EDGEbuilder which project is open |
-| A screen of any width | The editor covers the whole game view. Wider than 16:9 is built, but the in-game tests record no ultrawide screen yet: tell us how it goes |
+| A screen of any width | The editor covers the whole game view. Checked on an ultrawide screen with 0.9.1 |
 
 Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. RED4ext, which REDnode and Codeware both need, goes in the same way. See [Frameworks and game patches](../edgedeck/frameworks.html).
 
 ## Install EDGEbuilder
 
-1. Download EDGEbuilder's zip from the [EDGEbuilder releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.9.0. From the next release it is `EDGEbuilder-<version>.zip`, laid out like the game folder, so it also installs with Vortex or by extracting it into the game folder.
+1. Download `EDGEbuilder-<version>.zip` from [EDGEbuilder's Nexus page](https://www.nexusmods.com/cyberpunk2077/mods/36627) (Manual Download) or the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.9.1. The zip is laid out like the game folder, so it also installs with Vortex (Mod Manager Download, then deploy) or by extracting it into the game folder.
 2. In EDGEdeck, press **Add mod** and pick the zip. EDGEdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../edgedeck/adding-mods.html).
 3. Make sure it's ticked, and press **Deploy**.
 

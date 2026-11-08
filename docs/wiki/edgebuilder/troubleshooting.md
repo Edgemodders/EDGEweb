@@ -157,7 +157,7 @@ With REDnode older than 0.17.1, a window position saved from an older, smaller E
 
 ### The editor doesn't fill my ultrawide screen
 
-From 0.6.7 the editor covers the whole game view at any width. If it doesn't, check that EDGEbuilder and REDnode are up to date, and tell us on Discord: the in-game tests record no ultrawide screen yet.
+From 0.6.7 the editor covers the whole game view at any width. It was checked on an ultrawide screen with 0.9.1. If it doesn't, check that EDGEbuilder and REDnode are up to date, and tell us on Discord.
 
 ## Baking
 

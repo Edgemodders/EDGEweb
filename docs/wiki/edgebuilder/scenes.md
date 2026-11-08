@@ -228,7 +228,7 @@ Tags in the tree and the Picked panel warn about a Library bake:
 | Bake into a REDcode project | Passed in game, released as 0.7.3 on 2026-11-05 |
 | The Solid switch and Seen from | Passed in game, released as 0.8.1 on 2026-11-08 |
 | Bakes in the EDGE Library | Passed in game, released as 0.9.0 on 2026-11-08 |
-| The first public preview | Next |
+| The first public preview | 0.9.1, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627), 2026-11-08 |
 
 ## Later
 
