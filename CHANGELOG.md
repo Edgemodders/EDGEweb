@@ -12,6 +12,7 @@ How to keep it:
 
 **New**
 
+- EDGEbuilder 0.9.2, which hides its window while a game menu is open, and a troubleshooting entry for it: https://edgemodders.ai/wiki/edgebuilder/troubleshooting.html#edgebuilder-disappears-when-i-open-a-menu
 - EDGEbuilder's first public preview, 0.9.1, on Nexus Mods, and the wiki's install page with its Nexus and Vortex install: https://www.nexusmods.com/cyberpunk2077/mods/36627
 - Wiki: screenshots on every EDGEbuilder page, 32 of them, from the panel and the game: https://edgemodders.ai/wiki/edgebuilder/
 - Wiki: Bakes in the Library in EDGEbuilder 0.9.0: one or more scenes baked into the EDGE Library, Include in project, Update and the tags: https://edgemodders.ai/wiki/edgebuilder/scenes.html#bakes-in-the-library

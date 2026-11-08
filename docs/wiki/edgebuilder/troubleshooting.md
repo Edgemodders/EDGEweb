@@ -155,6 +155,10 @@ The scene file was damaged. EDGEbuilder keeps the damaged file beside the new on
 
 With REDnode older than 0.17.1, a window position saved from an older, smaller EDGEbuilder window can push the new full-screen one aside. Close the game and remove the `"edgebuilder"` entry from `%APPDATA%\@rednode\overlay\window-positions.json`, or update REDnode.
 
+### EDGEbuilder disappears when I open a menu
+
+From 0.9.2 that is on purpose. The whole window, with the gizmo, hides while the game shows a menu: pause, Settings, inventory or map. It comes back when the menu closes, with Edit and the editor camera as they were. A move or a look under way when the menu opened stops there, and the object goes back to where the move started.
+
 ### The editor doesn't fill my ultrawide screen
 
 From 0.6.7 the editor covers the whole game view at any width. It was checked on an ultrawide screen with 0.9.1. If it doesn't, check that EDGEbuilder and REDnode are up to date, and tell us on Discord.

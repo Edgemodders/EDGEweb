@@ -25,7 +25,7 @@ Codeware is a framework mod: add it to EDGEdeck like any other mod and deploy. R
 
 ## Install EDGEbuilder
 
-1. Download `EDGEbuilder-<version>.zip` from [EDGEbuilder's Nexus page](https://www.nexusmods.com/cyberpunk2077/mods/36627) (Manual Download) or the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.9.1. The zip is laid out like the game folder, so it also installs with Vortex (Mod Manager Download, then deploy) or by extracting it into the game folder.
+1. Download `EDGEbuilder-<version>.zip` from [EDGEbuilder's Nexus page](https://www.nexusmods.com/cyberpunk2077/mods/36627) (Manual Download) or the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). The newest is 0.9.2. The zip is laid out like the game folder, so it also installs with Vortex (Mod Manager Download, then deploy) or by extracting it into the game folder.
 2. In EDGEdeck, press **Add mod** and pick the zip. EDGEdeck sees the `rednode-app.json` inside and files it as a `rednode` mod, bound for REDnode's apps folder. See [Adding mods](../edgedeck/adding-mods.html).
 3. Make sure it's ticked, and press **Deploy**.
 
