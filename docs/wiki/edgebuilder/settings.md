@@ -9,7 +9,7 @@ reviewed: 2026-11-08
 
 # Settings and <span class="y">keys</span>
 
-Everything in EDGEbuilder 0.8.1, in one place. The pages before this one explain each in context.
+Everything in EDGEbuilder 0.9.0, in one place. The pages before this one explain each in context.
 
 ## The panel
 
@@ -19,8 +19,8 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 |---|---|
 | **Assets** | Search, the **All**, **Meshes** and **Entities** tabs, the **Everywhere**, **Game**, **Mods** and **Project** tabs, a line saying what was found in your mods and project, the results, and the **Picked** panel with **Drop where I look** and **Drop at click**. Typing anywhere on this tab searches. See [Browsing and dropping](browsing.html) |
 | **Scene** | **Open scene's name** (change it and press Enter to rename the scene and its file; it asks first) and where it is, **Save**, **Save as**, **New**, **Open** and **Close**, the count, what the scene needs, the **Undo**, **Redo**, **Duplicate**, **Group** and **Ungroup** buttons, every object and group in the scene, and the **Selected** panel with **Group name** for a group, **Seen from, m** and the **Solid when baked** switch for meshes. See [Browsing and dropping](browsing.html#the-scene-tab), [Positioning objects](positioning.html#typing-numbers) and [Arranging a scene](arranging.html) |
-| **Library** | Every scene in the [EDGE Library](../library.html), the open REDcode project and This PC as one tree, with **Make the Library** until you have one. The **Picked** panel opens, closes or shows a scene and slides out its **Objects**; **New scene here**, **Save open scene here** and **New folder** work on the picked folder |
-| **Bake** | The open scene, the REDcode project it bakes into, what the checks say, **Bake**, **Refresh**, what it wrote, and the project's bakes, each with a trash icon. See [Bake](scenes.html#bake) |
+| **Library** | Every scene in the [EDGE Library](../library.html), the open REDcode project and This PC as one tree, with **Make the Library** until you have one. The **Picked** panel opens, closes or shows a scene and slides out its **Objects**; **New scene here**, **Save open scene here** and **New folder** work on the picked folder. **Bake into Library** bakes a picked scene into the Library, and a picked bake has **Include in project**, **Add open scene**, **Bake again** and **Delete**. See [Bakes in the Library](scenes.html#bakes-in-the-library) |
+| **Bake** | The open scene, the REDcode project it bakes into, what the checks say, **Bake**, **Refresh**, what it wrote, and the project's bakes, each with a trash icon, and **from** a Library bake with **Update** when it's newer. See [Bake](scenes.html#bake) |
 | **Settings** | The settings below |
 | **About** | A short summary of the keys and what's next |
 

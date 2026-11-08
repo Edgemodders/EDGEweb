@@ -77,6 +77,7 @@ Click a scene or a folder to pick it. The **Picked** panel under the tree then a
 | **New scene here** | An empty scene in the picked folder, opened |
 | **Save open scene here** | A copy of the open scene in the picked folder, which becomes the open scene |
 | **New folder** | A folder inside the picked one. Folders are made in the Library only |
+| **Bake into Library** | Bakes the picked scene into a Library bake of its own, named by **Name**. See [Bakes in the Library](#bakes-in-the-library) |
 
 Without a Library yet, the tab says **No Library folder yet** and offers **Make the Library**, which makes `Documents\EDGE Library`. To use another folder, type it in **Library folder** on the Settings tab and press **Use this folder**.
 
@@ -181,13 +182,53 @@ You can bake several scenes into one project, and they all stand. They can be fa
 5. Quit, **Pack and Install** in REDcode, start the game: V walks through the one mesh and bumps into the rest.
 6. To take the bake out again: on the Bake tab, press the trash icon beside it in **Bakes in this project**, then **Yes**. Quit, **Pack and Install** again, and start. The objects are gone from the world, and the scene is still in the Library.
 
+### Bakes in the Library
+
+A bake can also live in the [EDGE Library](../library.html), beside your scenes, instead of in one project. Making one needs no REDcode project, and it can go into any project later. One Library bake can hold several scenes. Each stays a piece of the world of its own, so it loads only near its own place.
+
+A Library bake is a folder named `<name>.bake` in a Library folder. The Library tab's tree shows it with a **bake** tag, how many scenes it holds and its version. Pick it, and the **Picked** panel says where it is, its version and whether the open project has it, and lists its scenes. Its buttons:
+
+| Button | Does |
+|---|---|
+| **Bake into Library** | On a picked scene: bakes it into a new Library bake in the same folder, named by **Name**, or by the scene if Name is empty |
+| **Include in project** | Copies the bake's files into the REDcode project open in VS Code. The scenes stay in the Library, the one place you edit them. The project notes where the files came from in `source\library.json`. When the project has an older version, the button reads **Update in project to v3** (or whichever version is newest) |
+| **Add open scene** | Bakes the open scene into this bake, as one more scene, and raises the version |
+| **Bake again** | Bakes each of its scenes as it is now, and raises the version |
+| **Delete** | Deletes the bake from the Library, after asking. The scenes stay, and so do copies already in projects |
+| The trash icon by a scene | Takes that scene out of the bake, after asking, and raises the version. The scene itself stays |
+
+**Include in project** stops when the project already has its own bake of one of the same scenes: the two would overwrite each other. Take that bake out on the Bake tab first.
+
+In a project that includes it, the Bake tab says **from Kabuki Bakes v2** (the bake's name and version) beside each scene that came from the Library, and offers **Update to v3** when the Library has a newer version. An update also takes out a scene that has left the bake since. Baking one of those scenes straight into the project, with **Bake** on the Bake tab, makes it the project's own again.
+
+Tags in the tree and the Picked panel warn about a Library bake:
+
+| Tag | Means |
+|---|---|
+| **stale** | A scene changed since the bake: press **Bake again** |
+| **scene missing** | A scene in the bake was moved or deleted. The bake still works, and **Bake again** keeps that scene as it was baked. Put the scene back, or take it out with its trash icon |
+| **collides** | Another Library bake holds the same scene, so in one game it would stand twice. Picked says which |
+| **in project** | The open REDcode project includes it |
+| **in game** | The game loaded it at its last start |
+
+{% include shot.html caption="A bake in the Library" shows="The Library tab: the tree with Kabuki Bakes tagged bake and in project, 2 scenes · v2, beside its scenes, and the Picked panel with its place, version and two scenes, each with a trash icon, and Include in project, Add open scene, Bake again and Delete." %}
+
+### Try it: a bake in the Library
+
+1. On the Library tab, pick a scene with a few objects, type `My Bakes` in **Name** and press **Bake into Library**. **My Bakes** shows in the tree, tagged **bake**, with `1 scene · v1`.
+2. Open a second scene, pick **My Bakes** and press **Add open scene**. It now holds 2 scenes, at version 2.
+3. Open the REDcode project, pick **My Bakes** and press **Include in project**. On the Bake tab, both scenes show **from My Bakes v2**.
+4. Quit, **Pack and Install** in REDcode, and start: both scenes stand in the world.
+5. Move one object in one of the scenes. **My Bakes** is tagged **stale**. Press **Bake again**: version 3. On the Bake tab, press **Update to v3**, then Pack and Install again.
+
 ### What comes next
 
 | Part | Status |
 |---|---|
 | Bake into a REDcode project | Passed in game, released as 0.7.3 on 2026-11-05 |
 | The Solid switch and Seen from | Passed in game, released as 0.8.1 on 2026-11-08 |
-| Bakes in the EDGE Library | Next: bakes from several scenes kept in the [Library](../library.html), and included in a project |
+| Bakes in the EDGE Library | Passed in game, released as 0.9.0 on 2026-11-08 |
+| The first public preview | Next |
 
 ## Later
 

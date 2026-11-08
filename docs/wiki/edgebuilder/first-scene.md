@@ -174,4 +174,5 @@ The stack stands in its new place, with nothing left at the old one.
 | Orbit, pan and frame with the camera | [The camera and builder mode](camera.html) |
 | Selecting, groups, copy and paste in depth | [Arranging a scene](arranging.html) |
 | Keeping scenes, the Library, Solid, Seen from, taking a bake out | [Scenes and baking](scenes.html) |
+| Bakes kept in the Library, for any project | [Bakes in the Library](scenes.html#bakes-in-the-library) |
 | When something goes wrong | [Troubleshooting](troubleshooting.html) |
