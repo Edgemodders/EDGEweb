@@ -2,9 +2,9 @@
 title: Troubleshooting EDGEbuilder
 nav_title: Troubleshooting
 section: EDGEbuilder
-order: 8
-description: "Fixes for common EDGEbuilder problems: red status pills, REDbridge not allowed, drops that fail, keys that do nothing, a stuck camera, windows you can't click, mods and projects, and missing previews."
-reviewed: 2026-11-05
+order: 9
+description: "Fixes for common EDGEbuilder problems: red status pills, REDbridge not allowed, drops that fail, keys that do nothing, a stuck camera, windows you can't click, mods and projects, missing previews, and bakes that don't show, aren't solid or pop in."
+reviewed: 2026-11-08
 ---
 
 # Troubleshooting <span class="y">EDGEbuilder</span>
@@ -159,6 +159,57 @@ With REDnode older than 0.17.1, a window position saved from an older, smaller E
 
 From 0.6.7 the editor covers the whole game view at any width. If it doesn't, check that EDGEbuilder and REDnode are up to date, and tell us on Discord: the in-game tests record no ultrawide screen yet.
 
-### Something else
+## Baking
+
+### The Bake tab says "No scene is open"
+
+Open a scene first: on the **Library** tab, pick one and press **Open**, or make one with **New scene here**. The **Bake** button stays off until the red checks are gone.
+
+### The Bake tab says "No REDcode project is open"
+
+A bake goes into a REDcode project. Open or make one in REDcode, in VS Code, and the tab picks it up. See [REDcode projects](../redcode/projects.html).
+
+### The Bake tab bakes into the wrong project
+
+The tab follows the project REDcode tells it about. With several VS Code windows open, that may not be the window you are looking at. Close the other VS Code windows, so only the right project is open. The line under the scene's name says which project: **Into the REDcode project** and its name. Hover it for the folder.
+
+### My bake doesn't show in the game
+
+1. **Restart the game.** A bake comes in only as the game starts. Loading a save isn't enough, and neither is REDcode's **Pack and Play**.
+2. **Pack and Install** after every bake. Baking writes into the project; packing and installing puts it in the game.
+3. **Packed as a REDmod?** If REDcode's **redcode.pack.redmod** setting is on, the game must start with `-modded`. EDGEdeck's **Run game** does that for you.
+4. **ArchiveXL** must be installed: the game reads a bake through it.
+5. Still nothing? Look at the Bake tab after the game starts: **Its bake is in the game** means the game has it, so look where the objects were placed. If it isn't there, check that EDGEdeck deployed the project.
+
+### V walks through a baked mesh
+
+| Cause | Fix |
+|---|---|
+| **Solid when baked** was off for that mesh | Select it on the Scene tab, switch it on, bake again, Pack and Install, restart |
+| The mesh has no collision data | The Scene tab says **No collision data, so this mesh can't be solid.** Use another mesh, or an entity with its own collider, such as `crate_red.ent` |
+| REDbridge is older than 0.12.0 | The Bake tab warns that it writes no solid meshes. Update it with EDGEdeck's **Get REDbridge**, then bake again |
+| It's a preview, not the bake | Previews are never solid. The Bake tab says whether the scene's bake is in the game |
+
+### Baked objects pop in close, or vanish as I walk away
+
+Each baked object is seen only within its **Seen from** distance, and by its size when that's empty: about 40 m for a crate.
+
+- Select the objects on the Scene tab and type a larger distance in **Seen from, m**, then bake again. See [Seen from](scenes.html#seen-from).
+- With REDbridge older than 0.12.1, small meshes are seen only as far as the game allows for their size (about 60 m for a crate), whatever Seen from says. The Bake tab warns about it. Update REDbridge with EDGEdeck's **Get REDbridge**, then bake again.
+- Hills and buildings hide objects too: check from the editor camera, high above.
+
+### Objects stand twice, or flicker
+
+The bake and the scene's previews are both in the world. That happens after **Rebuild previews**, which brings the previews back so you can edit a baked scene. Close the scene, or restart the game: a scene whose bake is in the game places no previews by itself.
+
+### My scene's previews came back after I took its bake out
+
+That's on purpose: once the bake leaves the game, the open scene shows its objects as previews again, so you can keep editing. Press **Close** on the Scene tab to take them away. The scene stays saved.
+
+### A bake I renamed stands twice
+
+A bake goes by the scene's name. After a rename, bake again, then take the old bake out with its trash icon in **Bakes in this project**, and Pack and Install.
+
+## Something else
 
 Ask on [Discord]({{ site.discord }}) with the `[edgebuilder]` lines from `rednode-mods.log`, or [open an issue](https://github.com/Edgemodders/EDGEbuilder/issues) on EDGEbuilder's repo.
