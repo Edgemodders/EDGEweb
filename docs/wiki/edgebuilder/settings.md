@@ -24,7 +24,7 @@ EDGEbuilder's panel sits at the right of the screen. Its title bar holds the **E
 | **Settings** | The settings below |
 | **About** | A short summary of the keys and what's next |
 
-{% include shot.html caption="The Settings tab" shows="EDGEbuilder's Settings tab: the REDbridge.exe and Game folder fields, Save and restart REDbridge, the While Edit is on panel with its two switches, and the Rebuild asset index and Restart REDbridge buttons." %}
+{% include shot.html caption="The Settings tab" shows="EDGEbuilder's Settings tab: the REDbridge.exe and Game folder fields, Save and restart REDbridge, the While Edit is on panel with its two switches, the Library folder field with Use this folder, and the Rebuild asset index and Restart REDbridge buttons." %}
 
 ## Settings
 

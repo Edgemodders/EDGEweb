@@ -119,7 +119,7 @@ The **Bake** tab turns the open scene into part of the game world. It writes a *
 
 You need a REDcode project open in VS Code, [REDbridge](../redbridge/) 0.12.1 or later (0.12.0 bakes too, but small meshes are seen only as far as the game allows for their size), and [ArchiveXL](../glossary.html) in the game. Anyone who plays your mod needs ArchiveXL too.
 
-{% include shot.html caption="The Bake tab" shows="EDGEbuilder's Bake tab: the open scene and its object count, the REDcode project it bakes into, what the checks say, the Bake button, and the list of the project's bakes." %}
+{% include shot.html caption="The Bake tab" shows="EDGEbuilder's Bake tab: the open scene and its object count, the REDcode project it bakes into, what the checks say, the Bake button, The last bake panel with what it wrote, and the list of the project's bakes." %}
 
 ### From scene to world
 

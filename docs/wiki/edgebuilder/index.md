@@ -11,7 +11,7 @@ reviewed: 2026-11-08
 
 EDGEbuilder is a world builder for Cyberpunk 2077 that runs inside the game. You search the game's own 3D models, and your mods', drop one into the world in front of you, and move, turn and scale it until it sits right. You can work on several objects at once, group them, copy them and undo. Later phases will let you save named scenes and bake them into the world, so they load like any other mod.
 
-{% include shot.html caption="EDGEbuilder in the game" shows="The game with Edit on: a cargo crate selected with its gizmo (red, green and blue arrows and a yellow ring), the EDGEbuilder panel on the right with the Assets tab open, and the help line at the bottom centre." %}
+{% include shot.html caption="EDGEbuilder in the game" shows="The game with Edit on: a cargo crate selected with its gizmo (red, green and blue arrows and a yellow ring), the EDGEbuilder panel on the right with its six tabs (Assets, Scene, Library, Bake, Settings, About) and the Assets tab open, and the help line at the bottom centre." %}
 
 ## What it's for
 
