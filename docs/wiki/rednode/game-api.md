@@ -24,8 +24,8 @@ Everything here works the same in a Node mod and in an overlay app. Every call i
 | `ink` | The game's own UI: panels on the HUD from code or [ink markup](ink-markup.html), and reading the game's UI | Codeware | Passed in game. Experimental |
 | `t` | Text in the player's language | Nothing | Passed in game |
 | `quests`, `journal` | Quest facts and journal entries | Nothing | Passed in game |
-| `world.pin` | Labelled pins over places and objects in the world, seen from a distance | Nothing | Passed in game. REDnode 0.59.1 (styles and pins on objects: 0.60.0, not yet released) |
-| `quickhacks` | A quickhack's own logic: a scan check per person, and a function when it lands | Nothing | Passed in game. REDnode 0.61.1, not yet released |
+| `world.pin` | Labelled pins over places and objects in the world, seen from a distance | Nothing | Passed in game. REDnode 0.59.1 (styles and pins on objects: 0.62.4) |
+| `quickhacks` | A quickhack's own logic: a scan check per person, and a function when it lands | Nothing | Passed in game. REDnode 0.62.4 |
 
 ## The game helper
 
@@ -303,7 +303,7 @@ Newer parts of the `rednode` package, each tested in game. They have their own p
 | `game.state().world`, `game.onState` | True only while V is in the world: false while the game starts, at the main menu and from the start of every load. Read the world's systems (time, weather, districts) only while it's true. REDnode 0.49.5 | Nothing | [Talking to the game](https://edgemodders.github.io/REDnode/overlay-apps.html#talking-to-the-game) |
 | `loc.text(key)`, `loc.language()` | The game's own text for a LocKey, such as a district's or an item's name, in the player's language: `await loc.text("LocKey#10963")` gives "Little China" in English. REDnode 0.49.5 | Nothing | [Talking to the game](https://edgemodders.github.io/REDnode/overlay-apps.html#talking-to-the-game) |
 
-The **Ink markup**, **Ink Coords**, **Ink vitals**, **Quest test** and **Quickhack test** (from 0.61.1) samples show them.
+The **Ink markup**, **Ink Coords**, **Ink vitals**, **Quest test** and **Quickhack test** (from 0.62.4) samples show them.
 
 ## The game's own UI
 

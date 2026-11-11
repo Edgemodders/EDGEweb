@@ -9,7 +9,7 @@ reviewed: 2026-11-03
 
 # Install and set up <span class="y">REDnode</span>
 
-REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.56.1** (2026-11-03), for **game version 2.5**. On a game kept on 2.31, use **0.37.0**, the last release for 2.31: RED4ext won't load a 2.5 build on 2.31, nor 0.37.0 on 2.5.
+REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.62.4** (2026-11-11), for **game version 2.5**. On a game kept on 2.31, use **0.37.0**, the last release for 2.31: RED4ext won't load a 2.5 build on 2.31, nor 0.37.0 on 2.5.
 
 If the steps below look like too much, ask on [Discord]({{ site.discord }}): someone can walk you through it.
 
@@ -102,7 +102,7 @@ Your settings and packages' data are kept outside the game folder, so they survi
 1. Close the game.
 2. Download the new zip from [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) and install it as before: update it in Vortex or EDGEdeck, or extract it over the old one.
 
-This replaces REDnode's own files and the samples. Other packages in the apps folder, REDagent's included, stay, and so do your settings. The launcher shows the new version at the bottom.
+This replaces REDnode's own files and the samples. Updating by hand from 0.59.1 or earlier: the host's code is now the folder `host\resources\app`, so the old file `host\resources\app.asar` is no longer used and can be deleted. (That file stopped Vortex's deploy with "Invalid package"; from 0.62.4 Vortex installs REDnode.) Other packages in the apps folder, REDagent's included, stay, and so do your settings. The launcher shows the new version at the bottom.
 
 Before you update the game itself, check that REDnode supports the new game version. Today that is 2.5 (REDnode 0.38.1 or later).
 
