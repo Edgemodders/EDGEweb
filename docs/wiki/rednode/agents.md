@@ -85,6 +85,10 @@ From REDnode 0.49.5, REDnode carries [EDGEmat](../edgemat/)'s MCP server and sta
 
 From REDnode 0.58.0, REDnode can share its own REDbridge with this server, so one REDbridge runs while you play, not two. It passed in game with a test build. It needs an EDGEmat newer than 0.3.1, and REDnode 0.58.0 still carries 0.3.1, so for now EDGEmat starts its own as before; a later REDnode release turns it on. The share listens only on 127.0.0.1, takes a token given to that server alone, and refuses web pages. `"edgematBridge": "own"` in the host's `settings.json` gives EDGEmat its own again. Details in REDnode's [MCP docs](https://edgemodders.github.io/REDnode/mcp.html#edgemats-tools-e1).
 
+### EDGEhack's tools for in-game assistants
+
+REDnode 0.63.0 (not yet released) carries EDGEhack's MCP server the same way, so REDagent can make quickhacks while you play: find and describe the game's quickhacks, make a new one, change its costs, texts and effects, write its script, and try it live, which puts it in V's backpack. Its tools show as `edgehack__hack_*`. Finding and describing run without asking; every change asks you first, and the first live try asks you to allow EDGEhack in REDnode's **Editor request** window. With no project named, a quickhack REDagent makes goes on EDGEhack's Desk, which EDGEhack in VS Code adds to a project. It uses REDnode's own REDbridge, so no second one runs. It is being tested in game. A REDnode release carries it once EDGEhack's first release puts the server on npm. Details in REDnode's [MCP docs](https://edgemodders.github.io/REDnode/mcp.html#edgehacks-tools-h46).
+
 ### Safety
 
 - The server listens only on your own PC (`127.0.0.1`, port 41820), and every request needs a token: the one Claude Code gets when you press **Allow** in the game, or the fixed one in **Copy setup**. Only someone at the game can allow a new assistant, and REDnode keeps only a hash of each token.

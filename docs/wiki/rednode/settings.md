@@ -135,7 +135,7 @@ Every field of `rednode-app.json`:
 | The [UI Workbench](ui-tools.html)'s projects, and its exports | `Documents\REDnode\UI projects` (watched as a development folder) and `Documents\REDnode\UI exports` |
 | Logs | `red4ext\logs` in the game folder: `rednode-overlay.log` (and `rednode-overlay.prev.log`, the last session's), `rednode-mods.log`, the plugin's `rednode-*.log`, and `rednode-faults.log` around archive swaps |
 
-The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. In the same file, `"editorChannel": "off"` turns off the editor channel, which lets tools on your PC play game sounds in the running game and, from REDnode 0.62.0 (not yet released), change it with **Try Live** after you allow the tool in REDnode's **Editor request** window, `"edgematTools": "all"` also lists EDGEmat's tools to desktop assistants such as Claude Code, and `"edgematBridge": "own"` keeps EDGEmat on [a REDbridge of its own](agents.html#edgemats-tools-for-in-game-assistants). Close the game first.
+The MCP server's port, 41820, can be changed as `mcp.port` in the host's `settings.json` in that folder. In the same file, `"editorChannel": "off"` turns off the editor channel, which lets tools on your PC play game sounds in the running game and, from REDnode 0.62.0, change it with **Try Live** after you allow the tool in REDnode's **Editor request** window, `"edgematTools": "all"` also lists EDGEmat's tools to desktop assistants such as Claude Code (and from REDnode 0.63.0 `"edgehackTools": "all"` EDGEhack's), and `"edgematBridge": "own"` keeps EDGEmat on [a REDbridge of its own](agents.html#edgemats-tools-for-in-game-assistants). Close the game first.
 
 ## For developers: running the host by hand
 
