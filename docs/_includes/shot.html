@@ -1,9 +1,13 @@
 {%- comment -%}
   A screenshot, or a placeholder until one exists.
   {% include shot.html caption="The Mods view" shows="What the screenshot should show." %}
-  Add src="/assets/shots/<tool>/<name>.png" once the image is in docs/assets/shots/.
+  Add src="/assets/shots/<tool>/<name>.webp" once the image is in docs/assets/shots/. A page may name its
+  src before the file exists (a screenshot dossier for the owner): until the file is there, the placeholder
+  shows, and the build after it lands shows the picture with no change to the page.
 {%- endcomment -%}
-{%- if include.src -%}
+{%- assign shot_file = nil -%}
+{%- if include.src -%}{%- assign shot_file = site.static_files | where: "path", include.src | first -%}{%- endif -%}
+{%- if shot_file -%}
 <figure class="shot"><img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.caption }}" loading="lazy"><figcaption>{{ include.caption }}</figcaption></figure>
 {%- else -%}
 <figure class="shot placeholder"><div class="ph"><b>Screenshot coming</b><span>{{ include.caption }}</span></div><figcaption>{{ include.shows }}</figcaption></figure>
