@@ -37,7 +37,7 @@ What shows live:
 | Names and descriptions | No. The game reads texts only when it starts: a new quickhack shows its text key (`LocKey#...`) as its name, and a changed one its last packed texts, until Pack and Play and a restart |
 | Icons of your own | No: they come with the mod's archive, at Pack and Play |
 
-{% include shot.html src="/assets/shots/edgehack/try-live-allow.webp" caption="Allowing EDGEhack" shows="The game with REDnode's Editor request window for EDGEhack, Allow and Deny, and EDGEhack's page in VS Code behind it saying it is sending the changes." %}
+{% include shot.html src="/assets/shots/edgehack/try-live-allow.webp" caption="Static Bloom while it is tried live" alt="EDGEhack's page for Static Bloom while it is tried live: Pack and Play, Try Again and Stop, and the note that 313 changes are in the game and the Legendary++ tier is in V's backpack" shows="EDGEhack's page while a quickhack is tried live: Try Again and Stop, and the note saying how many changes are in the game." %}
 
 Try Live never writes into the game folder: it changes the running game's TweakDB through REDnode's editor channel, which only answers on your own PC, and only after you allow the tool.
 
