@@ -4,7 +4,7 @@ nav_title: Scripts
 section: EDGEhack
 order: 4
 description: "A quickhack's own logic in JavaScript: a scan check that decides per person whether it is usable, and a function when it lands, run in the game by REDnode."
-reviewed: 2026-11-11
+reviewed: 2026-11-12
 ---
 
 # <span class="y">Scripts</span>
@@ -64,7 +64,7 @@ export async function onLand(target, hack) {
 
 A scan check runs each time V scans someone, so keep it quick: answer from `target` alone. While it runs the hack shows "Checking...", for a second the first time V scans someone; with no answer, the game's own result stands.
 
-{% include shot.html src="/assets/shots/edgehack/scripts-in-game.webp" caption="A scan check in the game" shows="The quickhack wheel on a scanned enemy: the scripted quickhack greyed out with the modder's own disabled text, beside the game's quickhacks." %}
+{% include shot.html src="/assets/shots/edgehack/scripts-in-game.webp" caption="A made quickhack in the game" shows="A scanned enemy with Static Bloom, a quickhack made in EDGEhack, ready in the list of available quickhacks, and its Hacking tab showing its damage, duration, upload time and feature lines." %}
 
 ## Try it
 

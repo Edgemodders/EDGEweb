@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEhack
 order: 7
 description: "Claude Code and REDagent making and changing quickhacks with EDGEhack's MCP server: connecting, what they can do, and what they ask first."
-reviewed: 2026-11-11
+reviewed: 2026-11-12
 ---
 
 # EDGEhack with <span class="y">assistants</span>
@@ -34,7 +34,7 @@ Claude Code asks you before every call of a tool marked **Yes**, in every permis
 
 A session started before step 2 doesn't see it. The server works in the project of the folder Claude Code starts in; you can name another project in your request. With no project, new quickhacks go on the Desk. VS Code's own agents see EDGEhack's tools without Connect.
 
-{% include shot.html src="/assets/shots/edgehack/assistants-claude.webp" caption="Claude Code making a quickhack" shows="A Claude Code session asking to run edgehack's hack_edit, with the changes listed (RAM on every tier, an added poison), and the Allow and Deny choices." %}
+{% include shot.html src="/assets/shots/edgehack/assistants-claude.webp" caption="Claude Code changing a quickhack" shows="Claude Code in VS Code, asked to set Static Bloom's duration to 6 on every tier: it reads the quickhack with hack_describe, then asks before running hack_edit, with Yes and No. Static Bloom is open in EDGEhack's editor beside it." %}
 
 ## REDagent in the game
 
