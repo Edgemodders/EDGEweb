@@ -55,7 +55,7 @@ A quickhack has three icons: the **Item** (its card in the inventory), the **Whe
 | **Generate...** | OpenAI's GPT Image draws it from your words, in that icon's look. **Keep** puts it in; **Try Again** draws another; **Show the Prompt** shows what was sent |
 | **Original** | Goes back to the game's icon |
 
-**Generate All...** draws the Item first, then the Wheel and the Status from it, so all three show the same glyph. The Item is drawn as a glyph only, and EDGEhack puts it on the game's own card for that quickhack, read from your game. Each picture is one paid image on your OpenAI account: the first Generate asks for your key and keeps it in the EDGE tools' shared key store. **EDGEhack: Set the OpenAI Key...** changes it. Settings choose the model (`edgehack.generate.model`) and quality (`edgehack.generate.quality`, medium by default). While it draws, a notification shows its progress, with **Cancel**.
+**Generate All...** draws the Item first, then the Wheel and the Status from it, so all three show the same glyph. The Item is drawn as a glyph only, and EDGEhack puts it on the game's own card for that quickhack, read from your game. Each picture is one paid image on your OpenAI account: the first Generate asks for your key and keeps it encrypted in VS Code's secret storage, for EDGEhack only. **EDGEhack: Set the OpenAI Key...** changes it. Settings choose the model (`edgehack.generate.model`) and quality (`edgehack.generate.quality`, medium by default). While it draws, a notification shows its progress, with **Cancel**.
 
 On save, your pictures go into one texture with the game's UI setup and an atlas in your project. Own icons need REDcode 0.10.8 or later.
 
