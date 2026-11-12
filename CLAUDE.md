@@ -26,7 +26,7 @@ EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a ne
 ## Conventions
 
 - Commit straight to `main` and push, in small logical commits. Agree the plan in chat first.
-- Changelog: `CHANGELOG.md` at the root, the convention shared by every Edgemodders repo (issue #2). Add a line under **Unreleased** (groups **New**, **Changed**, **Fixed**, **Other**) in the commit that makes a change a reader would notice. It stays out of the site, since Jekyll builds only `docs/`.
+- Changelog: `CHANGELOG.md` at the root, the convention shared by every Edgemodders repo (issue #2). Add a line under **Unreleased** (groups **New**, **Changed**, **Fixed**, **Other**) in the commit that makes a change a reader would notice. It stays out of the site, since Jekyll builds only `docs/`. A release (first: v0.1.0, 2026-11-12) renames **Unreleased** to `## <version> (<date>)`, tags `v<version>` and makes a GitHub release whose notes are that section.
 - Git identity for this repo is `CyberbuildsAI` <340969962+CyberbuildsAI@users.noreply.github.com>, as in every EDGE repo: that account owns the GitHub organization, and Edgemodders is the organization, not a committer. Never change the global identity.
 - Writing style: plain, short sentences, tables for comparisons. Friendly to non-modders: avoid jargon on the landing page, or explain it.
 - House style is the HUD look shared with the RED* repos: tokens in `:root` (bg `#08090d`, yellow `#fcee0a`, cyan `#19f3ff`, red `#ff2a52`, green `#5dffa1`), Chakra Petch, Rajdhani, JetBrains Mono, cut-corner panels, sticky status bar. Keep it in sync with REDnode's design doc.
