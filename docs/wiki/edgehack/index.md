@@ -33,7 +33,7 @@ EDGEhack reads that chain from your own game and shows it as one page, in a modd
 | **Desk and Library** | Work outside a project on the Desk, and keep quickhacks for good in the EDGE Library | Passed their tests |
 | **Assistants** | Claude Code, or REDagent in the game, make and change quickhacks with you | Passed in game |
 
-EDGEhack's first release, 0.1.0, is being prepared. Until then it runs from its source, as its tests do.
+EDGEhack 0.1.1, its first release, came out on 2026-11-11 for game 2.5, as a preview: on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/37293), [Open VSX](https://open-vsx.org/extension/edgemodders/edgehack) and [GitHub](https://github.com/Edgemodders/EDGEhack/releases), with its MCP server on npm. The VS Code Marketplace refused it so far ("suspicious content", with no reason given); that is being sorted out.
 
 ## Benefits
 

@@ -12,6 +12,7 @@ How to keep it:
 
 **New**
 
+- EDGEhack 0.1.1, its first release, on Nexus Mods and Open VSX, and the wiki's install steps for it: https://edgemodders.ai/wiki/edgehack/install.html
 - Wiki: EDGEhack, the quickhack editor, with eight pages: install, a first quickhack, the editor, scripts, Try Live, the Desk and the Library, assistants and troubleshooting, ahead of its first release; and EDGEhack on the home and platform pages: https://edgemodders.ai/wiki/edgehack/
 - A screenshot a page names now shows as a placeholder until its file is there, so pages can name their screenshots before they are taken.
 - Wiki: EDGEhack's quickhacks in The EDGE Library, with Add to Library and Add to Project: https://edgemodders.ai/wiki/library.html

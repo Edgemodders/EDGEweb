@@ -32,10 +32,11 @@ Add them to EDGEdeck like any other mod and deploy. See [Frameworks and game pat
 
 ## Install EDGEhack
 
-From EDGEhack's first release, 0.1.0 (being prepared):
+EDGEhack 0.1.1 is the first release. The VS Code Marketplace hasn't listed it yet, so install it from the download:
 
-1. In VS Code, open the Extensions view (Ctrl+Shift+X), search for **EDGEhack**, and press **Install**. REDcode installs with it if you don't have it.
-2. Or download `EDGEhack-<version>-nexus.zip` from EDGEhack's Nexus Mods page, unzip it, and in the Extensions view's **...** menu pick **Install from VSIX...** and choose the `.vsix` inside.
+1. Install [REDcode](../redcode/) from the VS Code Marketplace first, if you don't have it.
+2. Download `EDGEhack-<version>-nexus.zip` from [EDGEhack's Nexus Mods page](https://www.nexusmods.com/cyberpunk2077/mods/37293) or the [releases page](https://github.com/Edgemodders/EDGEhack/releases), unzip it, and in VS Code's Extensions view (Ctrl+Shift+X) pick **Install from VSIX...** in its **...** menu, and choose the `.vsix` inside.
+3. In VSCodium, Cursor and other editors that use [Open VSX](https://open-vsx.org/extension/edgemodders/edgehack), search for **EDGEhack** there instead.
 
 Then open your WolvenKit project in REDcode, as for any REDcode work.
 
