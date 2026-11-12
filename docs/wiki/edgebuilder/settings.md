@@ -9,7 +9,7 @@ reviewed: 2026-11-08
 
 # Settings and <span class="y">keys</span>
 
-Everything in EDGEbuilder 0.9.2, in one place. The pages before this one explain each in context.
+Everything in EDGEbuilder 0.10.9, in one place. The pages before this one explain each in context.
 
 ## The panel
 

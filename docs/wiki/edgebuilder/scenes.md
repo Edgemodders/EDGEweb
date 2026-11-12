@@ -104,14 +104,13 @@ Without a Library yet, the tab says **No Library folder yet** and offers **Make 
 8. Click **Back lot copy** and press **Show in world**. Its crates appear too, but a click on them selects nothing. Press **Hide from world**.
 9. Press **Objects**. Click a crate in the drawer twice quickly: the camera flies to it and selects it.
 
-## NPCs and scenes other mods can load: planned
+## NPCs and scenes other mods can load
 
-Phase B3c was agreed on 2026-10-23, together with [REDnode](../rednode/)'s work on world objects. It is planned to add:
+From 0.10.9 a scene can hold the game's people ([how to place them](browsing.html#people-npcs)). A scene with people is saved as scene format 2; one without stays format 1, so older tools still read it.
 
-- **NPCs**, picked from the game's characters, standing friendly and idle where you place them;
-- **scene files REDnode can load by itself**, so another mod (a quest, for example) can bring an EDGEbuilder scene into the game without EDGEbuilder running.
+[REDnode](../rednode/) reads EDGEbuilder's scene files by itself, people included: another mod (a quest, for example) can bring a scene into the game without EDGEbuilder running, and an assistant can do it with REDnode's `world_load` and take it away with `world_unload`. People loaded that way stand friendly and idle, as in EDGEbuilder.
 
-REDnode's side passed in game on 2026-10-26 (REDnode 0.40.1). EDGEbuilder's side comes after Bake. Baking NPCs into the world is an open question.
+People are not baked: they show while a mod loads the scene. Baking them into the world is an open question.
 
 ## Bake
 

@@ -12,14 +12,27 @@ reviewed: 2026-11-08
 
 ## Meshes and entities
 
-The game builds its world from two kinds of asset that EDGEbuilder can place today:
+The game builds its world from two kinds of asset, and fills it with people. EDGEbuilder can place all three today:
 
 | Kind | What it is | Example |
 |---|---|---|
 | **Mesh** (`.mesh`) | A 3D model on its own: a shape with materials, and nothing else. Meshes can be scaled | A cargo crate, a bench, a wall panel |
 | **Entity** (`.ent`) | A ready-made game object built from one or more meshes, sometimes with lights or other parts. It keeps the size its template gives it | A vending machine, an ATM |
+| **NPC** | One of the game's people, from its `Character` records: crowd people and story characters alike. It stands where you put it and stays friendly to V | `Character.Judy`, CitizenRichFemale |
 
 Lights, decals, particles, sounds and the rest are planned for a later phase (B5).
+
+## People (NPCs)
+
+From 0.10.9 the **NPCs** tab on the Assets tab lists the game's people, about 6,600 of them, read from the game's own records the first time EDGEbuilder starts (a few seconds) and kept after that.
+
+- **Search** by the name the game shows ("Judy") or by the record (`Character.Judy`).
+- **Pick an appearance** from the list, or leave **Any: the game picks** to let the game choose one. EDGEbuilder keeps whichever one the person got, so they look the same next time.
+- **Drop** them like anything else. They stand where you put them, hold still, and stay friendly to V: walk into one and they may grumble, nothing more.
+- **Move and turn** them with the gizmo or the keys. The gizmo moves on its own while you drag; the person steps to the new place when you let go. People stay upright when turned, and have no Scale, Solid or Seen from.
+- **Copy, paste, group and undo** work on people as on any object.
+
+People come back with the scene after a save loads or the game starts. They are **not baked**: a bake leaves them out (the Bake tab names them), and they show only while EDGEbuilder, or another mod that loads the scene through REDnode, runs.
 
 ## The asset index
 

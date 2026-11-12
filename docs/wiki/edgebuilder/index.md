@@ -65,15 +65,15 @@ EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made 
 | B3-1 Arrange | Passed in game on 2026-11-02 (0.5.8): several objects at once, groups, duplicate, copy, cut and paste, undo and redo |
 | B3-2 Save | Passed in game, released as 0.6.7 on 2026-11-05: named scenes you save and open again, kept in the [EDGE Library](../library.html), your REDcode project or on this PC |
 | B4 Bake | **Bake to project** passed in game and is released as 0.7.3 on 2026-11-05: the Bake tab, and a baked scene that stands with EDGEbuilder uninstalled. **The Solid switch** and Seen from passed in game, released as 0.8.1 on 2026-11-08. **Bakes in the Library** passed in game, released as 0.9.0 on 2026-11-08. **0.9.1 is the first public preview**, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) (2026-11-08) |
-| B3c NPCs and scenes through REDnode | Agreed on 2026-10-23: place NPCs, and let REDnode load EDGEbuilder's scene files so other mods can use them. REDnode's side passed in game on 2026-10-26; EDGEbuilder's comes after B4 |
+| B3c NPCs and scenes through REDnode | **Passed in game and released as 0.10.9 on 2026-11-12**: place the game's people, and REDnode loads EDGEbuilder's scene files, people included, so other mods can use them. REDnode's side passed on 2026-10-26 |
 | B3b World objects | Agreed: pick, inspect and copy what the game itself placed. Not started |
 | B4b Edit the world | Agreed: hide or change the game's own objects. Not started |
 | B4c Quest places | Planned: spots, trigger areas and map markers for EDGEquest's quests |
-| B5 Lights and more kinds | Not started. Today you can place meshes and entities only |
+| B5 Lights and more kinds | Not started. Today you can place meshes, entities and NPCs |
 | B6 Comfort (favourites, prefabs, snapping) | Not started |
 | B7 Scenes in REDcode with the game closed | Not started |
 
-The latest release is **EDGEbuilder 0.9.2** (2026-11-08), on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) and the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It hides the window while a game menu is open; 0.9.1, the same day, was the first public preview. 0.9.2 was tested on game 2.5 with REDnode 0.58.0 and REDbridge 0.12.1, and on an ultrawide screen. It needs [REDnode](../rednode/) 0.58.0 or later, and REDbridge 0.12.1 or later to bake. See [Install and set up](install.html).
+The latest release is **EDGEbuilder 0.10.9** (2026-11-12), on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) and the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It adds [people (NPCs)](browsing.html#people-npcs) and pins that keep the Picked and Selected panels in view; 0.9.1 (2026-11-08) was the first public preview. 0.10.9 was tested on game 2.5 with REDnode 0.58.0 and REDbridge 0.12.1. It needs [REDnode](../rednode/) 0.58.0 or later, and REDbridge 0.12.1 or later to bake. See [Install and set up](install.html).
 
 EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks mod that showed a world editor can live inside the running game. EDGEbuilder is its own design and uses none of World Builder's code, files or data.
 

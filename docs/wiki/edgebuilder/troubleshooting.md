@@ -217,3 +217,15 @@ A bake goes by the scene's name. After a rename, bake again, then take the old b
 ## Something else
 
 Ask on [Discord]({{ site.discord }}) with the `[edgebuilder]` lines from `rednode-mods.log`, or [open an issue](https://github.com/Edgemodders/EDGEbuilder/issues) on EDGEbuilder's repo.
+
+## A person doesn't follow the gizmo while I drag
+
+That is how people move. The gizmo moves on its own while you drag; when you let go, the person steps to the new place. The game keeps its people where they stand and moves them only through their own AI, so a live drag would jump.
+
+## The Bake tab says REDcode's package is not in the game
+
+REDcode tells EDGEbuilder which project is open through a small REDnode package of its own, which it puts in the game when its **Game Path** setting is your game folder and **REDnode: Install Package** is on (it is by default). Check both in VS Code's settings under REDcode, then press **Refresh** on the Bake tab. REDcode's output says "Installed REDcode's REDnode package" when it puts it in.
+
+## I opened a REDcode project but the Bake tab doesn't see it
+
+Press **Refresh** on the Bake tab (or switch to the Library tab): from 0.10.8 it asks REDcode again. If it still says no project is open, see the entry above.
