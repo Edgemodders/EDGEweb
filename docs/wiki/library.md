@@ -75,7 +75,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | [REDcode](redcode/) | **Add to Library** on a game file or a project file | Planned |
 | [EDGEwave](edgewave/) | Sounds as asset items | Planned, after its Desk |
 | [EDGEmat](edgemat/) | Materials and looks on Library assets | Later |
-| EDGEhack | Quickhacks as asset items, Add to Library and Add to Project, a Library view, Refresh from Library | Built and tested; ships with EDGEhack's first release |
+| [EDGEhack](edgehack/) | Quickhacks as asset items, Add to Library and Add to Project, a Library view, Refresh from Library | Built and tested; ships with EDGEhack's first release |
 
 ## For tool makers
 

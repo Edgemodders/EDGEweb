@@ -32,6 +32,7 @@ More toolkits build on those five for particular jobs:
 | Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props and your mods', drop them where you look, position and arrange them |
 | Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade, mix and shape it, and put it into the game through your mod. Preview, 0.1.0 on the Marketplace |
 | Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, 0.3.1 on the Marketplace |
+| Quickhacks | [EDGEhack](edgehack/) | A quickhack editor beside REDcode. Open any of the game's quickhacks in plain words, change it, or make new ones with effects, icons and scripts of your own, and try them live in the game. Its first release, 0.1.0, being prepared; every phase passed its tests, in the game where it changes the game |
 | Quests | [EDGEquest](edgequest/) | A quest maker beside REDcode. Read the game's quests in plain words, and write your own as a short story: EDGEquest makes the game's quest files from it. Preview, 0.1.0 on the Marketplace |
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE tools built in (preview, 1.140.3), or an extension pack that installs them in VS Code in one go |
 | At your desk | [EDGEchat](edgechat/) | The EDGE plugin for Claude Code: one install connects Claude Code on your PC to the running game, the game's files, your mods and materials, with commands like `/edge:new-mod`. 0.1.1 |
@@ -51,6 +52,7 @@ Together, the toolkits' benefits add up to these. Each toolkit's page lists its 
 | **WolvenKit inside** | WolvenKit's engine does the file work; WolvenKit projects open and pack as they are | [REDbridge](redbridge/), [REDcode](redcode/) |
 | **Simple mod management** | One list, four verbs, conflicts even inside archives, the frameworks and every update in one click, Nexus updates, Vortex import | [EDGEdeck](edgedeck/) |
 | **Build where you see it** | Place the game's own objects, and your mods', in the running game with a gizmo and a free camera, group and copy them, instead of typing coordinates | [EDGEbuilder](edgebuilder/) |
+| **Quickhacks in plain words** | Every tier's RAM, upload, damage and effects read from your own game; change them, or make new quickhacks with effects from any other, and try them live | [EDGEhack](edgehack/) |
 | **Quests in plain words** | Read any of the game's quests as steps and lines, and write your own as a story with places, choices and music; the quest files are made for you | [EDGEquest](edgequest/) |
 | **One install** | The EDGEkit app comes with the EDGE tools built in and keeps them updated; in VS Code, one extension pack installs REDcode, EDGEdeck, EDGEmat, EDGEwave and the HUD theme | [EDGEkit](edgekit/) |
 | **Built on the community, open source** | Works alongside RED4ext, CET, redscript, ArchiveXL and TweakXL. MIT, with GPL-3.0 where WolvenKit requires it | All toolkits |

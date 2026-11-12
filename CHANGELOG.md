@@ -12,6 +12,8 @@ How to keep it:
 
 **New**
 
+- Wiki: EDGEhack, the quickhack editor, with eight pages: install, a first quickhack, the editor, scripts, Try Live, the Desk and the Library, assistants and troubleshooting, ahead of its first release; and EDGEhack on the home and platform pages: https://edgemodders.ai/wiki/edgehack/
+- A screenshot a page names now shows as a placeholder until its file is there, so pages can name their screenshots before they are taken.
 - Wiki: EDGEhack's quickhacks in The EDGE Library, with Add to Library and Add to Project: https://edgemodders.ai/wiki/library.html
 - EDGEbuilder 0.9.2, which hides its window while a game menu is open, and a troubleshooting entry for it: https://edgemodders.ai/wiki/edgebuilder/troubleshooting.html#edgebuilder-disappears-when-i-open-a-menu
 - EDGEbuilder's first public preview, 0.9.1, on Nexus Mods, and the wiki's install page with its Nexus and Vortex install: https://www.nexusmods.com/cyberpunk2077/mods/36627
