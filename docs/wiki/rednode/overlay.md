@@ -36,7 +36,7 @@ The launcher is REDnode's home. Its tab sits at the lower left of the screen: **
 |---|---|
 | **GAME LINKED** or **GAME OFF** | Whether the overlay host is connected to the game |
 | The list | The **Mod Manager** first, then every package pinned to the launcher, and any package that crashed even if it isn't pinned, so an error never hides |
-| "3 more in the Mod Manager · 1 new" | Packages not in the launcher, and new ones you haven't looked at yet. **Open** opens the Mod Manager |
+| "3 more in the Mod Manager · 1 new" | Packages not in the launcher, and new ones you haven't looked at yet. **Open** opens the Mod Manager. From REDnode 0.64.0 (not yet released) this line is a filter box that finds any installed package by name, and **Open**'s tooltip gives the counts; a click on a package's name switches it on and shows it |
 | A package's switch | Turns it on or off: opens or closes an app, starts or stops a mod |
 | **Asks for ...** with **Allowed** | A permission the package wants. Nothing happens until you allow it. See [Permissions](mod-manager.html#permissions) |
 | "Needs ..." | A mod the package requires that your game doesn't have |
