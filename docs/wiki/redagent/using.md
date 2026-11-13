@@ -1,56 +1,85 @@
 ---
 title: Using REDagent
 section: REDagent
-order: 2
-description: "Find your way around REDagent's chat window: what to ask, saved chats, changes and Undo, models and costs, your key and data, and what to do when something goes wrong."
-reviewed: 2026-11-03
+order: 3
+description: "Find your way around REDagent's chat window: what to ask, changes and Undo, saved chats, and every control in one table."
+reviewed: 2026-11-13
 ---
 
 # Using <span class="y">REDagent</span>
 
-New to REDagent? Start with [Your first mod](first-mod.html). This page is the tour of everything else.
+New to REDagent? Start with [Your first mod](first-mod.html). This page is the tour of the window and everything in it.
+
+| On this page | |
+|---|---|
+| [The window](#the-window) | Its parts, and how to show it |
+| [What to ask](#what-to-ask) | Requests that work, by kind |
+| [Changes and Undo](#changes-and-undo) | Approving what REDagent writes, and taking it back |
+| [Saved chats](#saved-chats) | Carrying on later |
+| [Every control](#every-control) | All of REDagent's settings in one table |
 
 ## The window
 
-REDagent's window opens on the right of the game when it starts. If you close it, press **F10**, open the **Mod Manager** and press **Show** on REDagent. **Pin to launcher** there keeps it one press away.
+Press **F10** in the game: a cursor appears, and REDagent's window shows on the right. Press **Esc** to go back to playing. The window hides while you play, unless you switch on **Pin to HUD** for REDagent in REDnode's Mod Manager.
+
+If you closed the window, press **F10**, open the launcher (the **REDNODE** tab), switch on **Mod Manager** and press **Show** on REDagent. **Pin to launcher** there gives REDagent its own entry in the launcher.
 
 {% include shot.html caption="REDagent's window" src="/assets/shots/redagent/using-redagent-s-window.png" alt="The REDagent window after it made a clock HUD widget: the two files it created, each with Undo, the tools it used to check its work, its answer with the cost, the changes strip with Show, and the footer with the model choice, the total, Chats, New and Key." shows="The REDagent window with a short chat, the changes strip above the input, and the footer: the Opus 5.5 / Sonnet 5.5 choice, the chat's total cost, and the Chats, New and Key buttons." %}
 
 | Part | What it does |
 |---|---|
 | **The input** | Type your question and press **Enter** or **Send**. While REDagent answers, **Stop** stops it |
-| **The model choice** | **Opus 5.5** (the default) or **Sonnet 5.5**. See [Models and costs](#models-and-costs) |
+| **The model choice** | **Opus 5.5** (the default) or **Sonnet 5.5**. See [Choosing a model](costs.html#choosing-a-model) |
 | **Total** | What this chat has cost so far |
-| **Chats** | Your saved chats, and the [Mods](other-mods.html) tab |
+| **Chats** | Your [saved chats](#saved-chats), and the [Mods](other-mods.html#the-mods-view) tab |
 | **New** | Starts a fresh chat |
-| **Key** | Opens the key panel. **Set up the key** there opens REDnode's **Key request** window. To change or remove the key itself, use REDnode's Settings, under **Keys** |
+| **Key** | Opens the key panel. **Set up the key** there opens REDnode's **Key request** window |
 | **The changes strip** | Above the input, once REDagent has changed a file in this chat. See [Changes and Undo](#changes-and-undo) |
 
-While REDagent works, the last line of the chat says **WORKING...**. When it says **WAITING FOR YOU...**, a card in the chat needs your answer: scroll to it.
+The last line of the chat tells you whose turn it is:
+
+| It says | Meaning |
+|---|---|
+| **WORKING...** | REDagent is thinking or using a tool. An answer usually takes 10 to 60 seconds |
+| **WAITING FOR YOU...** | A card in the chat needs your answer. Scroll to it |
 
 ## What to ask
 
-Plain words work. Some ideas:
+Plain words work. You don't need to know what anything is called.
+
+### About your game
 
 | You ask | REDagent |
 |---|---|
-| "What's in my mod log?" | Reads REDnode's Mod log, crashes included, and explains it |
-| "What are V's health, level and money?" | Looks up the game's functions and asks the running game. Before any call that could change the game, it asks you |
-| "What does the Hello mod window show?" | Captures that overlay window and reads it |
-| "What's on my screen?" | Takes a picture of the game's screen, with or without REDnode's windows, and describes it |
-| "Swap my changed archive into the game" | Swaps it into the running game through REDnode, so a changed mesh or texture shows without a restart. It asks you first |
-| "What tools do my mods offer?" | Lists the tools your installed mods offer to AI assistants through REDnode, and can use them. Tools that only read run at once; the rest ask you first |
-| "Why does the crash mod break?" | Reads the mod's files and explains the code |
-| "Make a mod that ..." | Writes a new REDnode mod, waits for it to load, checks it runs, and fixes it |
-| "Fix the Throw button" | Changes the file, then checks the log again |
+| "What are V's health, level and money?" | Looks up how the game reports them and reads them from the running game |
+| "What's on my screen?" | Takes a picture of the game's screen and describes it |
+| "Give V 500 eddies." | Asks you first, with a card, as it does before anything that could change the game |
 
-Without REDnode's tools allowed (see [Troubleshooting](#when-something-goes-wrong)), REDagent can still chat and read your mods' files, but can't see the log, the game or overlay windows.
+### Making and fixing mods
+
+| You ask | REDagent |
+|---|---|
+| "Make a mod that ..." | Writes a new REDnode mod, waits for it to start, checks it runs, and fixes it |
+| "Make the warning bigger." | Changes the file, then checks the log again |
+| "My mod stopped working. Find out why." | Reads the mod's log and its files, explains the fault and offers a fix |
+| "What's in my mod log?" | Reads REDnode's Mod log, crashes included, and explains it |
+| "What does the Vitals window show?" | Reads that window directly. (Vitals is one of REDnode's sample mods) |
+
+See [what REDagent can make](index.html#what-it-can-make) for where its limits are.
+
+### With other EDGE tools
+
+| You ask | REDagent |
+|---|---|
+| "What tools do my mods offer?" | Lists the tools your installed mods offer to AI assistants through REDnode. It can use them: tools that only read run at once, the rest ask you first |
+| "Find this jacket's materials and make the leather red." | Uses [EDGEmat](../edgemat/assistants.html)'s tools on a mod project you already have. Searches run at once; changes ask you first |
+| "Swap my changed archive into the game." | For mod makers: puts a rebuilt mod file into the running game through REDnode, so a changed model or texture shows without a restart. It asks you first |
+
+REDagent can only see the game, the mod log and windows once you have [allowed REDnode's tools](install.html#allow-rednodes-tools). Without that, it can still chat and read your mods' files.
 
 ## Changes and Undo
 
-REDagent writes only inside REDnode's apps folders. It never changes its own files or anything in a `node_modules` folder.
-
-Before every change, a **change card** shows it as a diff, added lines in green and removed lines in red, with three buttons:
+Before REDagent creates or changes a file, a **change card** shows you exactly which lines it will add, in green, and remove, in red. Programmers call this a diff. The card has three buttons:
 
 | Button | What happens |
 |---|---|
@@ -58,54 +87,43 @@ Before every change, a **change card** shows it as a diff, added lines in green 
 | **Allow all in this chat** | This and every later change in this chat are made without asking. A new chat, or reopening a saved one, asks again |
 | **Deny** | Nothing changes. REDagent is told you said no, and asks what you want instead |
 
-REDagent backs up each file before changing it. The **changes strip** above the input counts this chat's changes, and how many you've undone. **Show** lists them all, each with **Undo**, however far the chat has scrolled. Undo puts a file back as it was, or removes a file REDagent created and any folder left empty. REDagent hears about the undo with your next question.
+You don't have to judge the code. Look at the file's name and folder: it should be in the mod you're working on. If in doubt, **Allow** and test; Undo is always there.
 
-Backups are kept in `%APPDATA%\@rednode\overlay\packages\redagent\backups`.
+REDagent backs up each file before it changes it. The **changes strip** above the input counts this chat's changes, and how many you've undone. **Show** lists them all, each with **Undo**, however far the chat has scrolled.
+
+| Undo on | Does this |
+|---|---|
+| A file REDagent changed | Puts the file back as it was |
+| A file REDagent created | Removes the file, and any folder that leaves empty |
+
+REDagent isn't told about an undo straight away. It learns of it when you next ask something, so it won't assume the change is still there.
+
+**Where it can write.** REDagent creates and changes files only inside REDnode's apps folder (`red4ext\plugins\REDnode\apps` in the game folder), and in a [development folder](../rednode/settings.html#development-folders) if you set one. It can't change its own files, or the code libraries inside a mod.
 
 ## Saved chats
 
 Every chat is saved as it goes, with its changes, so closing the game loses nothing. When the game starts, your last chat comes back, and Undo still works on its changes.
 
-**Chats** in the footer opens the list of your last 30 chats, each with its date and cost. **Open** one to carry on where you left off, or **Delete** it. The chat you're in says **This chat**. **Back** or **Close** returns to the chat.
+**Chats** in the footer lists your last 30 chats, each with its date and cost. **Open** one to carry on where you left off, or **Delete** it. The chat you're in says **This chat**. **Back** or **Close** returns to the chat.
 
 {% include shot.html caption="The Chats list" src="/assets/shots/redagent/using-the-chats-list.png" alt="REDagent&rsquo;s Chats tab with three saved chats, each with its date and cost: the current one marked This chat, the others with Open and Delete." shows="REDagent's Chats tab: several saved chats with their titles, dates and costs, Open and Delete buttons, and This chat on the current one." %}
 
-**New** starts a fresh chat. Start one when you change topic: the whole chat is sent with each question, so long chats cost more per answer.
+When you start a 31st chat, the oldest is deleted, and its Undo buttons go with it. The mods it made stay.
 
-Chats are kept in `%APPDATA%\@rednode\overlay\packages\redagent\chats`.
+**New** starts a fresh chat. Start one when you change topic: REDagent sends the whole chat to Claude with each question, so a long chat costs more per answer.
 
-## Models and costs
+## Every control
 
-You pay Anthropic for what you use, through your own API key. Each answer shows its cost under it in dim text, beside the chat's running total.
+REDagent has few settings, and they live in different places.
 
-| Model | Use it for |
-|---|---|
-| **Opus 5.5** (the default) | Writing and fixing mods, and harder questions |
-| **Sonnet 5.5** | Quick questions, at a lower price |
+| Control | Where | Starts as | What it does |
+|---|---|---|---|
+| Model | The window's footer | Opus 5.5 | Which Claude model answers. See [Choosing a model](costs.html#choosing-a-model) |
+| **Allow all in this chat** | On a change card | Off | Stops the cards for this chat. Never carried into another chat |
+| "REDnode's tools for AI agents" | REDnode's Mod Manager, REDagent's permissions | Off | Lets REDagent see the mod log, the game and windows |
+| The Anthropic key | REDnode's Settings, under [Keys](../rednode/settings.html#shared-keys) | None | Replace or remove your key |
+| A mod's **Daily limit** | **Chats**, then the **Mods** tab | $0.25 | What one mod's questions may cost you each day. See [Mods that ask REDagent](other-mods.html) |
+| A mod's **Paused** | The same tab | Off | Refuses all of that mod's questions |
+| A mod's **Pictures** | The same tab | Off | Lets that mod's questions use pictures of windows and of your screen |
 
-To give you an idea: in REDagent's first test, six questions (five on Opus, one on Sonnet) cost $0.34 in all, and each took 11 to 55 seconds. Questions asked close together cost less, because Anthropic briefly caches REDagent's long instructions. A picture of the game's screen costs about as much as a page of text; REDagent takes one only when it needs to see.
-
-Questions from [other mods](other-mods.html) always use Sonnet 5.5, and each mod has its own daily limit.
-
-## Your key and your data
-
-| What | Where it goes |
-|---|---|
-| Your API key | One of the keys every EDGE tool on your PC shares, kept encrypted for your Windows user by REDnode. REDagent uses it only to talk to Anthropic, and it is never shown again. Change or remove it in REDnode's Settings, under **Keys** |
-| Your questions and REDagent's answers | Sent to Anthropic's API, as with any use of the Claude API |
-| What REDagent reads to answer | Also sent to Anthropic: mod logs, values from the game, pictures of overlay windows and of the screen, and the files it reads |
-| Everything else | Stays on your PC. REDagent sends no telemetry |
-
-## When something goes wrong
-
-| You see | Do this |
-|---|---|
-| "REDnode's tools are off" | Press **F10**, open the **Mod Manager**, select REDagent, and switch **Allowed** on for "REDnode's tools for AI agents" |
-| **Get the Agent SDK** fails | Check your connection and press it again. A partial or mismatched download is thrown away, never used |
-| REDnode refuses the key | Copy the whole key: an Anthropic key starts with `sk-ant-`. REDnode refuses one that doesn't |
-| An error about your key or credit | Check the key and your credit at [console.anthropic.com](https://console.anthropic.com/). To use another key: REDnode's Settings, **Keys**, **Replace** on the Anthropic line |
-| REDagent asks for your key again | The saved key couldn't be read, for example after a Windows account change (REDnode's Keys shows it as **Unreadable here**). Press **Set up the key** and paste it again |
-| The window is gone | **F10**, **Mod Manager**: check REDagent is switched on, and press **Show** if its window was closed |
-| Anything else | Open REDnode's Mod log app. REDagent's lines start with `[redagent]` |
-
-Still stuck? Ask on [Discord]({{ site.discord }}) or [open an issue](https://github.com/Edgemodders/REDagent/issues).
+Where chats, backups and the rest are stored: [Where REDagent keeps things](install.html#where-redagent-keeps-things).

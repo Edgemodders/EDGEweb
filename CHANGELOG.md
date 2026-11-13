@@ -10,6 +10,12 @@ How to keep it:
 
 ## Unreleased
 
+**New**
+
+- Wiki: REDagent has its own install page, from getting an Anthropic API key to the first start, updating and removing: https://edgemodders.ai/wiki/redagent/install.html
+- Wiki: REDagent's costs, key and data on a page of their own, with the costs measured in its tests and how to keep them down: https://edgemodders.ai/wiki/redagent/costs.html
+- Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
+
 **Fixed**
 
 - Wiki: EDGEhack's pages are in the sidebar, where they were missing, and in Getting started's "I want to..." table: https://edgemodders.ai/wiki/edgehack/
@@ -17,6 +23,7 @@ How to keep it:
 
 **Changed**
 
+- Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
 - EDGEmat's wiki follows its 0.3.2 release: a new page for **the Desk**, https://edgemodders.ai/wiki/edgemat/desk.html; the Library page is now **Game Materials**, https://edgemodders.ai/wiki/edgemat/game-materials.html, with its filter; Find's Add to Desk and Copy REDnode Command; which item to give V on "Your mod in the game", every 0.3.2 command on "Settings and commands", and four more assistant tools. EDGEmat's status says 0.3.2 on the landing and platform pages and the wiki home.
 
 ## 0.1.0 (2026-11-12)
