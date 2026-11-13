@@ -4,30 +4,47 @@ nav_title: Your first mod, no code
 section: EDGEchat
 order: 2
 description: "Make a first mod by describing it: /edge:new-mod builds a HUD widget showing V's money, tests it in the game with you, and changes it when you ask."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # Your first mod, <span class="y">no code</span>
 
 You describe a small mod in your own words. Claude picks how to build it, writes it, and checks it in the running game with you. The example here is a line on screen showing V's money, but any small idea works the same way. Allow 15 minutes.
 
+Claude words its answers a little differently each time, so what you read won't match this page word for word. What it does, and what you see in the game, should.
+
+| On this page | |
+|---|---|
+| [Before you start](#before-you-start) | Three things to have ready |
+| [Step 1: Start with /edge:new-mod](#step-1-start-with-edgenew-mod) | Say what you want |
+| [Step 2: Claude picks the kind of mod](#step-2-claude-picks-the-kind-of-mod) | And tells you why |
+| [Step 3: Claude makes the package](#step-3-claude-makes-the-package) | Two files, and your first permission prompts |
+| [Step 4: Claude tests it in the game, with you](#step-4-claude-tests-it-in-the-game-with-you) | Look, and say what you see |
+| [Step 5: Grow it, one piece at a time](#step-5-grow-it-one-piece-at-a-time) | Change it by asking |
+| [Step 6: When it works](#step-6-when-it-works) | Keep it, share it, remove it |
+| [Other first mods to try](#other-first-mods-to-try) | Three more ideas |
+
 ## Before you start
 
 - [Install and connect](install.html) done: `/edge:setup` shows all four connected.
-- The game running at a loaded save, with **Hot reload** on in REDnode's [Settings drawer](../rednode/settings.html) (**F10**, **REDNODE** tab, the gear by **Theme**).
+- The game running at a loaded save, with **Hot reload** on in REDnode's [Settings drawer](../rednode/settings.html) (**F10**, **REDNODE** tab, the gear by **Theme**). Hot reload makes REDnode load a mod again each time its files change.
 - Claude Code open in any folder. In VS Code, a folder for your mods, such as `Documents\Cyberpunk Mods`, is a good place.
 
 ## Step 1: Start with /edge:new-mod
 
-Type `/edge:new-mod`. Claude asks what the mod should do, a question or two at a time. Answer in your own words:
+Type `/edge:new-mod` and press Enter. Claude asks what the mod should do, a question or two at a time. Answer in your own words:
 
 > I want to see how much money V has, in a corner of the screen, all the time.
 
-It may ask more, such as when it should show, or whether it's just for you or to share on Nexus. Then it says the mod back in one sentence, such as "A small widget in the top right corner that always shows V's money", and waits for your yes. If that's not what you meant, say so: nothing is built until you agree.
+It may ask more, such as when the line should show, or whether the mod is just for you or to share on Nexus. Then it says the mod back in one sentence, such as "A small widget in the top right corner that always shows V's money", and waits for your yes.
+
+If that's not what you meant, say so. Nothing is built until you agree.
 
 ## Step 2: Claude picks the kind of mod
 
-Claude checks the game, REDbridge and EDGEdeck, then tells you which kind of mod it will make and why. Something on screen becomes a [REDnode package](../rednode/overlay-apps.html): a small web page REDnode draws over the game, here a **HUD widget**.
+Claude first checks what it can reach: the running game, the game's files and your mod list. Then it tells you which kind of mod it will make, and why.
+
+Something on screen becomes a [REDnode package](../rednode/overlay-apps.html): a small web page that REDnode draws over the game. This one is a **HUD widget**, a package that sits on the game's screen while you play.
 
 | Your idea | The kind Claude picks |
 |---|---|
@@ -44,17 +61,19 @@ Claude says where it will put the package, and you can choose:
 
 | Where | When |
 |---|---|
-| REDnode's apps folder in the game, `red4ext\plugins\REDnode\apps\<id>\` | The simple choice. REDnode picks it up at once |
+| REDnode's apps folder in the game, `red4ext\plugins\REDnode\apps\<id>\` | The simple choice, and the one to take if you're unsure. REDnode picks the package up at once |
 | A folder of your own outside the game, added to REDnode as a [development folder](../rednode/settings.html#development-folders) | To keep your work out of the game folder. Switch **Developer mode** on in REDnode's Settings drawer and add the folder |
 
-Then it writes two files, and Claude Code asks before writing each:
+Then it writes two files:
 
 | File | Is |
 |---|---|
 | `rednode-app.json` | The package's description: its id (such as `money-hud`), its name, that it's a HUD widget, where it sits |
 | A page, such as `index.html` | What the widget shows, and the code that reads V's money from the game |
 
-Before writing the code, Claude looks up the game functions it needs, so it uses the right names. You don't have to read the files, but you can: ask "what does each part do?".
+**Your first permission prompts.** Before it writes each file, Claude Code stops and shows a prompt naming the file and what will go into it. Allow it to let Claude write the file. Deny it and nothing is written, and Claude asks what you'd like instead. [Safety](safety.html#how-asking-works) explains these prompts.
+
+Before writing the code, Claude looks up the game functions it needs, so it uses the right names. You don't have to read the files. If you're curious, ask "what does each part do?".
 
 ## Step 4: Claude tests it in the game, with you
 
@@ -62,7 +81,14 @@ With **Hot reload** on, REDnode loads the package as soon as its files are writt
 
 {% include shot.html caption="The money widget" shows="The game with a small HUD widget in the top right corner showing V's money, made with /edge:new-mod." %}
 
-Look, and say what you see. If something's off, say it plainly:
+Switch to the game and look.
+
+| You should see | If not |
+|---|---|
+| A line with V's money, in the corner Claude named | Tell Claude what you see instead |
+| The number changing when V's money does: buy or sell something to try it | Say "it doesn't update when I buy something" |
+
+If something's off, say it plainly:
 
 > It shows, but it's too small and hard to read.
 
@@ -84,7 +110,11 @@ Small steps are the point: when something breaks, you know which change did it.
 
 ## Step 6: When it works
 
-Claude offers to write a `CLAUDE.md` for the mod, so a later session knows it at once ([Keep a project easy to work on](projects.html)). To share the mod, zip the package's folder: players install it like any mod, with [EDGEdeck](../edgedeck/) or by hand, and they need REDnode. To remove it, ask Claude, or delete the package's folder.
+| To | Do this |
+|---|---|
+| Keep it easy to work on | Claude offers to write a `CLAUDE.md` file for the mod, so a later chat knows it at once. See [Keep a project easy to work on](projects.html) |
+| Share it | Make a zip laid out like the game folder: inside the zip, the package's folder sits at `red4ext\plugins\REDnode\apps\<id>\`. Players install it with EDGEdeck or Vortex, or by extracting it into their game folder, and they need REDnode. See [Sharing your package](../rednode/making-mods.html#sharing-your-package) |
+| Remove it | Ask Claude, or delete the package's folder |
 
 ## What just happened
 
@@ -92,15 +122,15 @@ Claude offers to write a `CLAUDE.md` for the mod, so a later session knows it at
 |---|---|
 | You | Said what you wanted, and checked the result in the game |
 | Claude | Picked the kind of mod, wrote the files, looked up the game functions, and tested it through the `rednode` connection |
-| Claude Code | Asked before writing each file. Reading the game, such as V's money, never asks; changing it does ([Safety](safety.html)) |
+| Claude Code | Asked before writing each file. Reading the game, such as V's money, never asks. Changing the game always does ([Safety](safety.html)) |
 
 ## Other first mods to try
 
 | Say | Kind |
 |---|---|
 | "Show V's position on screen, so I can share places" | A REDnode HUD widget |
-| "Make every jacket in the game cost half as much" | A TweakXL tweak. Claude checks the jacket's record in the game's data first, and the mod reaches the game through EDGEdeck, with the game closed |
-| "A small window listing the quests in V's journal" | A REDnode overlay window |
+| "Make every jacket in the game cost half as much" | A TweakXL tweak. Claude looks up the jackets' prices in the game's data first. Unlike the widget, this kind of mod is put in the game by EDGEdeck with the game closed, so you see it after a restart |
+| "A small window listing the quests in V's journal" | A REDnode overlay window: a package with a window you can move and close |
 
 ## Check
 

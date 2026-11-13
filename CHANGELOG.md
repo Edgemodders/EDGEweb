@@ -15,16 +15,20 @@ How to keep it:
 - Wiki: REDagent has its own install page, from getting an Anthropic API key to the first start, updating and removing: https://edgemodders.ai/wiki/redagent/install.html
 - Wiki: REDagent's costs, key and data on a page of their own, with the costs measured in its tests and how to keep them down: https://edgemodders.ai/wiki/redagent/costs.html
 - Wiki: EDGEkit has pages for installing the app, a first session (where each tool lives, first steps, Claude Code with EDGEchat) and troubleshooting: https://edgemodders.ai/wiki/edgekit/install.html
+- Wiki: EDGEchat's overview says what it doesn't do yet (quests, quickhacks) and where to go instead; a sample `CLAUDE.md` on its projects page; an Uninstalling section on its settings page: https://edgemodders.ai/wiki/edgechat/
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- Wiki: EDGEchat's safety page states exactly what asks every time (the EDGE tools' changes to the game, the save and the game folder) and what follows Claude Code's own permission setting, including a REDnode package built in the apps folder: https://edgemodders.ai/wiki/edgechat/safety.html
+- Wiki: EDGEchat's EDGEkit install route no longer has you rely on `/edge:setup` before the settings and restart; "Recolor a jacket" lists REDnode 0.49.5 for its Console step; sharing a REDnode package from "Your first mod" gives the right zip layout: https://edgemodders.ai/wiki/edgechat/install.html
 - Wiki: EDGEhack's pages are in the sidebar, where they were missing, and in Getting started's "I want to..." table: https://edgemodders.ai/wiki/edgehack/
 - Wiki: two links from EDGEmat's Troubleshooting to "Your mod in the game" go to their headings again.
 
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Wiki: EDGEchat's section is revised for newcomers: jump lists, "what you should see" tables, terms explained where they first appear, how to get Node.js and Claude Code, settings for terminal and EDGEkit users, and troubleshooting split by topic: https://edgemodders.ai/wiki/edgechat/
 - Wiki: EDGEkit 1.140.6 and extension pack 0.6.0, with EDGEquest, EDGEhack and REDsave built in, and what is and isn't inside the app: https://edgemodders.ai/wiki/edgekit/
 - EDGEmat's wiki follows its 0.3.2 release: a new page for **the Desk**, https://edgemodders.ai/wiki/edgemat/desk.html; the Library page is now **Game Materials**, https://edgemodders.ai/wiki/edgemat/game-materials.html, with its filter; Find's Add to Desk and Copy REDnode Command; which item to give V on "Your mod in the game", every 0.3.2 command on "Settings and commands", and four more assistant tools. EDGEmat's status says 0.3.2 on the landing and platform pages and the wiki home.
 

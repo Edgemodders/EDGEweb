@@ -4,66 +4,97 @@ nav_title: Recolor a jacket
 section: EDGEchat
 order: 3
 description: "A clothing mod the way most are made: Claude makes a WolvenKit project with EDGEmat, packs it, and EDGEdeck puts it in the game. The NCPD badge coat, in red."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # Recolor a <span class="y">jacket</span>
 
-This page makes a mod that changes how a jacket looks, the way most clothing mods are made: a WolvenKit project holding the game's files for that jacket, changed, then packed and put in the game by [EDGEdeck](../edgedeck/). Claude does the file work through the `edgemat` and `redcode` connections; you check the result. Allow 20 minutes.
+This page makes a mod that changes the color of a jacket, the way most clothing mods are made. Claude copies the game's files for that jacket into a project, changes them, and packs them into one mod file. [EDGEdeck](../edgedeck/) puts that file in the game. Claude does the file work; you check the result. Allow 20 minutes.
+
+| On this page | |
+|---|---|
+| [Before you start](#before-you-start) | What to have ready |
+| [Step 1: Put the jacket on V](#step-1-put-the-jacket-on-v) | So you can see the change |
+| [Step 2: Know what you're recoloring](#step-2-know-what-youre-recoloring) | A coat is several parts |
+| [Step 3: Make the project, in red](#step-3-make-the-project-in-red) | One request to Claude |
+| [Step 4: Pack it](#step-4-pack-it) | The project becomes a mod file |
+| [Step 5: Put it in the game with EDGEdeck](#step-5-put-it-in-the-game-with-edgedeck) | Install and deploy |
+| [Step 6: Start the game and look](#step-6-start-the-game-and-look) | The coat is red |
+| [If it isn't red](#if-it-isnt-red) | What to check |
 
 ## Before you start
 
 - [Install and connect](install.html) done, with EDGEmat's library built (step 7 there).
-- EDGEdeck in VS Code, for the easy way to start the game afterwards (step 6).
+- REDnode 0.49.5 or later, for the Console in step 1. On an older REDnode, [update it](../rednode/install.html#updating-rednode), or use a jacket V already wears (also in step 1).
+- EDGEdeck in VS Code or EDGEkit, for the easy way to start the game afterwards (step 6).
 - The game running at a loaded save, for step 1. You close it in step 5.
+
+Words used on this page:
+
+| Word | Means |
+|---|---|
+| **WolvenKit project** | A folder that holds a mod's files while you work on them. The EDGE tools make and read the same kind of project as WolvenKit, the community's modding tool |
+| **Mesh** | A 3D shape, such as a jacket's |
+| **Material** | How a mesh's surface looks: its colors, wear and shine. Recoloring changes the material, not the mesh |
+| **Pack** | Turn a project into the one `.archive` file the game loads |
+| **Deploy** | EDGEdeck putting the mods that are switched on into the game folder |
 
 ## Step 1: Put the jacket on V
 
 This page uses the **Heavy-duty aramid-reinforced badge coat**, the NCPD coat: it's easy to get, and it's the one EDGEchat was tested with. Its id in the game's data is `Items.Cop_01_Set_Jacket`.
 
-Open [REDnode's Console](../rednode/overlay.html#the-console) from the launcher (**F10**; REDnode 0.49.5 or later) and type:
+In the game, press **F10** and switch on **Console** in REDnode's launcher. The [Console](../rednode/overlay.html#the-console) is a window where you type commands for the game. Type this and press Enter:
 
 ```js
 addItem("Items.Cop_01_Set_Jacket")
 ```
 
-The coat goes into V's inventory. Equip it there.
+The Console answers that the item was added. The coat is now in V's inventory. Equip it there.
 
-To use a jacket V already wears instead, ask Claude:
+**To use a jacket V already wears instead,** ask Claude:
 
 > What is V wearing in the outer torso slot? Give me its TweakDB record id.
 
-Claude reads it from the game without asking, and answers with an id. Use that id instead of `Items.Cop_01_Set_Jacket` below.
+TweakDB is the game's database of items and stats, and a record is one entry in it. Claude reads the answer from the game without asking, and gives you an id. Use that id instead of `Items.Cop_01_Set_Jacket` below.
 
 ## Step 2: Know what you're recoloring
 
-A garment in the game is not one file. Ask:
+A piece of clothing in the game is not one file. Ask:
 
 > What materials does Items.Cop_01_Set_Jacket have? Use edgemat.
 
-Claude follows the item through the game's data to its meshes and materials, and lists them. The badge coat is a jacket with a tactical vest, a belt, an NCPD patch and cuffs, each with its own mesh and material. The jacket's material is `cop_blue_black`: that's the one to change.
+"Use edgemat" tells Claude which connection to use, the one made for materials.
 
-Three things to know, all met while testing this page:
+Claude follows the item through the game's data to its meshes and materials, and lists them. The badge coat turns out to be a jacket with a tactical vest, a belt, an NCPD patch and cuffs. Each part has its own mesh and its own material. The jacket's material is named `cop_blue_black`: that's the one to change.
+
+Three things to know. Each one came up while this lesson was tested.
 
 | Know | Why |
 |---|---|
 | One item can be several meshes worn together | Recolor only the part you mean: here the jacket's `cop_blue_black`, not the vest's |
-| Each body type has its own mesh | `pwa` in a file name is the feminine body, `pma` the masculine. A recolor changes both, so it works for any V |
-| V's clothes and NPCs' clothes are different files | V's are under `player_equipment`. A file under `citizen_casual` or another NPC folder changes what NPCs wear, not V. If the file list in step 3 has no `player_equipment` path, the wrong mesh was picked |
+| Each body type has its own mesh | `pwa` in a file name is the feminine body, `pma` the masculine. The recolor in step 3 changes both, so the mod works whichever body your V has |
+| V's clothes and NPCs' clothes are different files | V's are in a folder named `player_equipment`. A file under `citizen_casual` or another NPC folder changes what NPCs wear, not V. If the file list in step 3 has no `player_equipment` path, the wrong mesh was picked |
 
 [EDGEmat's pages](../edgemat/) explain materials, layers and recolors in depth.
 
 ## Step 3: Make the project, in red
 
-Ask, naming a folder of your own outside the game folder, with a name in lowercase:
+Ask Claude to make the project in a folder of your own, outside the game folder:
 
 > Make a new WolvenKit project at `C:\Users\<you>\Documents\Cyberpunk Mods\red_badge_coat` that recolors the jacket of Items.Cop_01_Set_Jacket (its cop_blue_black material) to bright red with edgemat. Don't deploy yet.
 
-Claude makes the project, describes the jacket's color layers in plain words, writes a red version of its material into the project, and points the jacket's meshes at it. Claude Code asks before writing files. At the end Claude lists what's in the project. Check that:
+Before you send it, change two things if you need to:
+
+- Replace `<you>` with your Windows user name.
+- The last part, `red_badge_coat`, is the project's name. Keep it in lowercase letters, digits and `_`, with no spaces. The name ends up in the names of files the game reads, and the game doesn't find files whose paths have capitals or spaces. The folders above it can be named anything.
+
+Claude makes the project, describes the jacket's color layers in plain words, writes a red version of its material into the project, and points the jacket's meshes at it. Claude Code asks before writing files. Allow it.
+
+At the end Claude lists what's in the project. Check that:
 
 - the paths are under `base\characters\garment\player_equipment\torso\t2_064_jacket__t2_player_heavy\`;
 - both bodies are there: `t2_064_pwa_...` and `t2_064_pma_...`;
-- there is one new `.mlsetup` file, such as `cop_blue_black_red_badge_coat.mlsetup`.
+- there is one new `.mlsetup` file, such as `cop_blue_black_red_badge_coat.mlsetup`. An `.mlsetup` is the file that holds a material's layers. This one is your red material.
 
 You can do the same by hand in the [EDGEmat extension](../edgemat/new-material.html): find the item, open its material, recolor it, and add it to the project. Claude takes it from there.
 
@@ -71,17 +102,17 @@ You can do the same by hand in the [EDGEmat extension](../edgemat/new-material.h
 
 > Pack the project.
 
-The `redcode` connection packs the game files in the project's `source\archive` folder into one file, `red_badge_coat.archive`, in its `packed` folder. It warns about capital letters or spaces in game paths; there should be none.
+Claude packs the game files in the project's `source\archive` folder into one file, `red_badge_coat.archive`, in the project's `packed` folder. That file is your mod. Claude warns you if a path has capital letters or spaces; there should be none.
 
-Some projects pack as a **REDmod** instead, into `packed\mods\<name>\`. That works too, with one difference in step 6.
+Claude tells you how the project was packed. Most pack as above. Some pack as a **REDmod** instead: that is CD PROJEKT RED's own mod format, and its files land in `packed\mods\<name>\`. Everything below still works for a REDmod, with one difference in step 6.
 
 ## Step 5: Put it in the game with EDGEdeck
 
-**Close the game first:** EDGEdeck won't deploy while it runs. Then:
+**Close the game first.** EDGEdeck won't deploy while it runs. Then ask:
 
 > Install the project into EDGEdeck and show me what a deploy would change.
 
-Claude adds the project to EDGEdeck's library, as version `dev`, switched on, and lists what the next deploy would do:
+Claude adds the project to EDGEdeck's library, as version `dev`, switched on. Nothing is in the game yet. Claude lists what the next deploy would do:
 
 | You see | Means |
 |---|---|
@@ -90,15 +121,21 @@ Claude adds the project to EDGEdeck's library, as version `dev`, switched on, an
 
 > Deploy only red_badge_coat.
 
-Claude Code **asks before the deploy**, every time, because it writes into the game folder. Allow it. EDGEdeck links the file into the game folder and records it, so it can [undo the deploy](../edgedeck/deploying.html#undo-deploy) or remove the mod later.
+Claude Code **asks before the deploy**, every time, because a deploy writes into the game folder. Allow it. EDGEdeck links the file into the game folder and records it, so it can [undo the deploy](../edgedeck/deploying.html#undo-deploy) or remove the mod later.
 
 ## Step 6: Start the game and look
 
-The easy way is EDGEdeck's **Run game**, the play button in its Mods view. It deploys any waiting changes first (every mod that's on, not only this one), then starts the game with `-modded`. See [Start the game](../edgedeck/deploying.html#start-the-game).
+The easy way is EDGEdeck's **Run game**, the play button in its Mods view. It deploys any waiting changes first (every mod that's on, not only this one), then starts the game with `-modded`. `-modded` is a launch option that tells the game to load REDmods. See [Start the game](../edgedeck/deploying.html#start-the-game).
 
-Starting from Steam works the same for a mod packed into `archive\pc\mod`. A **REDmod** loads only when the game starts with `-modded`: add it to the game's launch options in Steam, or use **Run game**. Without it the jacket keeps its old color.
+Starting from Steam works too, for a mod packed into `archive\pc\mod`. A **REDmod** loads only when the game starts with `-modded`: use **Run game**, or add `-modded` to the game's launch options in Steam. Without it the jacket keeps its old color.
 
-Load a save and look at V: the badge coat is red, in the inventory preview too.
+Load a save and look at V.
+
+| You should see | |
+|---|---|
+| The badge coat's jacket in bright red | On V, in the world |
+| The same red in the inventory preview | In the inventory screen |
+| The vest, belt and patch unchanged | You recolored only the jacket's material |
 
 {% include shot.html caption="The red badge coat" shows="V in the game wearing the NCPD badge coat with its jacket recolored bright red, the tactical vest over it unchanged." %}
 
@@ -108,15 +145,15 @@ Load a save and look at V: the badge coat is red, in the inventory preview too.
 |---|---|
 | V wears this coat | Ask "What is V wearing in the outer torso slot?" |
 | The project changed V's jacket, not an NPC's | The paths in step 3 are under `player_equipment` |
-| A REDmod, started without `-modded` | Start with **Run game** |
+| The mod is a REDmod, and the game was started without `-modded` | Start with **Run game** |
 | The pack is older than your change | Pack again, then install and deploy again (steps 4 and 5) |
 | Something else | `/edge:check-mod`: see [When a mod doesn't work](check-mod.html) |
 
 ## Good to know
 
-- **A replaced file changes it everywhere it's used.** Your mod replaces the coat's meshes, so anyone wearing this coat in your game shows red.
+- **A replaced file changes everything that uses it.** Your mod replaces the coat's own files, so the coat is red wherever the game uses those files, not only on V. Clothes that NPCs wear from their own folders (step 2) don't change.
 - **The game's own files never change.** Your mod is a separate file the game loads on top. Remove it and the coat is back to normal.
-- **To remove the mod,** ask Claude to remove it from EDGEdeck, then deploy, or use EDGEdeck's **Undo** on the last deploy. Both ask first.
+- **To remove the mod,** ask Claude to remove it from EDGEdeck and then deploy, or use EDGEdeck's [Undo deploy](../edgedeck/deploying.html#undo-deploy) on the last deploy. Both ask first.
 
 ## Check
 

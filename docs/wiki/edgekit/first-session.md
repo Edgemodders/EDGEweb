@@ -83,7 +83,7 @@ Claude Code is Anthropic's AI assistant: a chat panel in EDGEkit that can read f
 1. Press **Set Up**. Claude Code opens its plugin dialog, showing EDGEchat.
 2. Install it there.
 3. EDGEkit opens a new Claude Code chat with `/edge:setup` already typed in its box. Press **Enter** to send it.
-4. Claude checks its connections to the EDGE tools and lists what is ready and what is missing, with the next step for each. [EDGEchat's Install and connect](../edgechat/install.html) explains each line of that answer.
+4. Claude checks its connections to the EDGE tools and lists what is ready and what is missing, with the next step for each. Expect some to be missing the first time: EDGEchat's settings aren't filled in yet. [EDGEchat's Install and connect](../edgechat/install.html#step-3-fill-in-the-settings) takes it from there.
 
 {% include shot.html caption="Set up Claude Code for EDGE" shows="EDGEkit's one-time question Set up Claude Code for EDGE?, with its Set Up and No, Thanks buttons, and Claude Code's plugin dialog open on EDGEchat." %}
 
