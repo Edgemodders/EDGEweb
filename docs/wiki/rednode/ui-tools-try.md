@@ -4,7 +4,7 @@ nav_title: "UI Tools: Try"
 section: REDnode
 order: 10.3
 description: "Change one of the game's own UI widgets live with the UI Workbench's Try: every field, Reset and Reset all, why nothing is ever kept, and a walkthrough on a HUD text."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # UI Workbench: <span class="y">Try</span>
@@ -13,7 +13,7 @@ reviewed: 2026-11-03
 
 Nothing Try does is kept. Each change remembers the value the widget had, **Reset** puts it back, and switching the Workbench off puts back everything that is left. A save never holds a change.
 
-> **Needs the admin permission.** Try changes another package's view of the game, so it is for packages you allowed **managing REDnode** in the Mod Manager. See [The admin permission](ui-tools.html#the-admin-permission). Without it, a try answers with the reason instead of changing anything.
+> **Needs the admin permission.** Try changes the game's own UI, so the Workbench needs the **managing REDnode** permission (admin) before it will do it. See [The admin permission](ui-tools.html#the-admin-permission). Without it nothing changes, and the line under the fields says the permission is missing.
 
 ## Open it
 
@@ -36,9 +36,9 @@ Each field starts with the widget's value as the game has it now. Type a new val
 | **size** | Every widget | Two numbers: `width height` | Its size, in the HUD's units |
 | **margin** | Every widget | One number, or four: `left top right bottom` | Space around it, inside its parent |
 | **padding** | Panels | One number, or four | Space inside it, around its children |
-| **x y** | Every widget | Two numbers: `x y` | Moves it from where its parent puts it, without changing the layout |
+| **x y** | Every widget | Two numbers: `x y` | Moves it from where its parent puts it, without changing the layout. In **Properties** and in scripts this property is called `translation` |
 
-The line under the fields answers each try: the property, the value now and the value **before**, for example `opacity: 0.4 (before: 1)`. A value the field can't read, such as a single number for **x y**, is refused with what it wants (`give two numbers: x y`) and changes nothing.
+The line under the fields reports each try: the property, the value now and the value **before**, for example `opacity: 0.4 (before: 1)`. A value the field can't read, such as a single number for **x y**, is refused with what it wants (`give two numbers: x y`) and changes nothing.
 
 | Button | Does |
 |---|---|
@@ -56,7 +56,7 @@ The line under the fields answers each try: the property, the value now and the 
 | A save loads | The game rebuilds its HUD with fresh widgets, so the ones you changed are gone. Pick again |
 | The game removes the widget itself | The change goes with it. **Reset all** then says how many were on widgets the game had removed |
 
-The game's own scripts keep driving their widgets while you try. A controller that updates a text, such as a clock's, may write over a tried text the next time it updates (unverified for each HUD piece). That is a clue in itself: the property is the controller's.
+The game keeps running its own scripts while you try. If a widget's script (its *controller*) sets the same property, your change may be overwritten a moment later, as a clock rewrites its text every minute. That tells you something too: the value comes from the script, not from the widget's file. (This has not been checked for every HUD piece.)
 
 ## Walkthrough: change a HUD text, tint it, fade it, reset it
 
@@ -87,17 +87,20 @@ Now try two changes on two different widgets, and press **Reset all**: both come
 | Where a colour comes from | Change the **tint** on the widget, then on its parents. If a parent's tint changes the child, the colour is inherited |
 | Whether space comes from a margin or the layout | Change **margin** and **padding** and watch which one moves the widget |
 
-When you've found it, note its **Path** (the details' copy button) and its property name in **Properties**. That's what an archive mod or a script edit would change. For a HUD panel of your own in the game's look, see [To source](ui-tools-to-source.html).
+When you've found it, press **Path** in the details to copy where the widget is, and look up the property's exact name under **Properties**. Note the `.inkwidget` file's hash from the details too.
+
+## Making a change permanent
+
+Try never keeps anything: it is for finding the widget and the property. To keep a change, you have three routes today.
+
+| Route | What it is | Where to go |
+|---|---|---|
+| A panel of your own | Leave the game's piece alone and show your own beside it, built from a copy of it. The only route that needs no other tool | [To source](ui-tools-to-source.html), then [Projects and Edit](ui-tools-projects.html) and [Export](ui-tools-export.html) |
+| An archive mod | Change the game's `.inkwidget` file (the one the details name) and pack it as a mod that replaces it | REDcode opens and edits game files: see its [game assets](../redcode/game-assets.html) and [editing](../redcode/editing.html) pages. EDGE has no step-by-step guide for editing an `.inkwidget` yet |
+| A script | A redscript mod, or a REDnode package with the `admin` permission, sets the property each time the widget appears | For REDnode: `ink.try`, under [For mod makers](#for-mod-makers). A package's tries are put back when it stops, so it must run while the change should show |
+
+The path and the property name you noted are what the second and third routes need.
 
 ## For mod makers
 
-Try is `ink.try(id, prop, value)` in the `rednode` package, for packages allowed `admin`. The properties are `visible`, `opacity`, `tint`, `size`, `margin`, `padding`, `translation`, and a text's `text` and `fontSize`, in the ink API's own forms: a tint as `"#rrggbb"`, a size or translation as `[x, y]`, margins as one number or four. It answers `{ was, now }`. `ink.reset(id?, prop?)` puts back what was tried, newest first, and `ink.tried()` lists what is still changed. REDnode puts back a package's tries when it stops. Details in REDnode's [Native game UI](https://edgemodders.github.io/REDnode/ink.html#ut3b-build-rednode-0560-ui-workbench-030) page.
-
-```js
-import { ink } from 'rednode';
-
-const { hits } = await ink.at(1800, 300);
-const r = await ink.try(hits[0].id, 'opacity', 0.3);
-console.log(r.was, r.now); // the value before, and the value now
-await ink.reset();
-```
+Try is `ink.try(id, prop, value)` in the `rednode` package, for packages allowed `admin`; `ink.reset()` puts changes back and `ink.tried()` lists them. The properties, the form of each value and an example are in [The game's own UI](more-apis.html#the-games-own-ui).

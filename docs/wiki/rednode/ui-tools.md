@@ -4,20 +4,22 @@ nav_title: UI Tools
 section: REDnode
 order: 10.1
 description: "REDnode UI Tools, the optional app pack for UI modders: what the UI Workbench does, why you'd want it, installing it, switching it on and allowing its admin permission."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # REDnode UI <span class="y">Tools</span>
 
 **REDnode UI Tools** is an optional app pack for REDnode, for anyone curious about the game's own interface or wanting to build on it. Its one app, the **UI Workbench**, opens inside the game and does five jobs:
 
-| Tab or button | What it does |
-|---|---|
-| [Inspect](ui-tools-inspect.html) | Shows the game's UI as a live tree: every layer, every HUD piece, every widget. Point at anything on the HUD or in a menu and it tells you what it is, where it came from and every property it has |
-| [Try](ui-tools-try.html) | Changes a game widget live (its text, colour, opacity, size, place) to find what controls a look. Never kept |
-| [To source](ui-tools-to-source.html) | Copies a piece of the game's HUD into a project of your own, as [ink markup](ink-markup.html), so you start from the game's own look |
-| [Projects and Edit](ui-tools-projects.html) | Write a native HUD panel (its markup and its script) in an editor in the game, with mistakes shown as you type, and run it live |
-| [Export](ui-tools-export.html) | Turns a project into a zip that installs as a mod of its own, ready to share |
+| Job | Where in the Workbench | What it does |
+|---|---|---|
+| [Inspect](ui-tools-inspect.html) | The **Inspect** tab | Shows the game's UI as a live tree: every layer, every HUD piece, every widget. Point at anything on the HUD or in a menu and it tells you what it is, where it came from and every property it has |
+| [Try](ui-tools-try.html) | A part of Inspect's details | Changes a game widget live (its text, colour, opacity, size, place) to find what controls a look. Never kept |
+| [To source](ui-tools-to-source.html) | A button in Inspect's details | Copies a piece of the game's HUD into a project of your own, as [ink markup](ink-markup.html), so you start from the game's own look |
+| [Projects and Edit](ui-tools-projects.html) | The **Projects** and **Edit** tabs | Write a native HUD panel (its markup and its script) in an editor in the game, with mistakes shown as you type, and run it live |
+| [Export](ui-tools-export.html) | A button in Edit and in Projects | Turns a project into a zip that installs as a mod of its own, ready to share |
+
+> **New here?** [Install it](#install), [switch it on](#switch-it-on), then follow the [tutorial](ui-tools-tutorial.html): your first HUD panel in about 20 minutes, with no code to write.
 
 *Native UI* means UI the game draws itself, with its own widgets, fonts and colours, as opposed to REDnode's [overlay windows](overlay-apps.html), which are web pages drawn on top. The game's UI system is called **ink**. If the words are new, read [Native UI: ink markup](ink-markup.html) first; the Workbench writes that markup for you.
 
@@ -37,16 +39,16 @@ Inspect only reads. Try's changes are put back when you press Reset or switch th
 
 ## Status
 
-**Released.** REDnode UI Tools **0.1.0** came out on 2026-11-03 with REDnode 0.56.1, its first release, with the **UI Workbench 0.4.1**. Every part below passed its in-game test on game version 2.5:
+**Released.** REDnode UI Tools **0.1.0**, with the **UI Workbench 0.4.1**, is the pack's first release. Every working part below passed its in-game test on game version 2.5:
 
 | Part | Status |
 |---|---|
-| Inspect: the tree, Pick, Pick inside, the details | Passed in game on 2026-11-02 |
-| Projects and Edit: New, Rename, Delete, the editor, Run, Stop, Save while it runs | Passed in game on 2026-11-02 and 2026-11-03 |
-| Try and To source | Passed in game on 2026-11-03 |
-| Export, and installing the export as a mod | Passed in game on 2026-11-03 |
-| Buttons and other controls inside a native panel | Not yet: input on ink comes with REDnode's phase I3, then the Workbench's phase UT4 |
-| Projects on a menu, and whole screens of your own | Planned (phases UT4 and UT5) |
+| Inspect: the tree, Pick, Pick inside, the details | Passed in game |
+| Projects and Edit: New, Rename, Delete, the editor, Run, Stop, Save while it runs | Passed in game |
+| Try and To source | Passed in game |
+| Export, and installing the export as a mod | Passed in game |
+| Buttons and other controls inside a native panel | Not yet. Planned for a later REDnode release, then a later Workbench |
+| Projects on a menu, and whole screens of your own | Planned |
 
 It is a preview, built in the open: expect changes.
 
@@ -54,7 +56,7 @@ It is a preview, built in the open: expect changes.
 
 | You need | Why |
 |---|---|
-| [REDnode](install.html) **0.56.0** or later | The Workbench is a REDnode package. The current release is 0.56.1 |
+| [REDnode](install.html) **0.56.1** or later | The Workbench is a REDnode package |
 | [Codeware](https://github.com/psiberx/cp2077-codeware) **1.16** or later | The game's UI layers reach REDnode through it |
 | Cyberpunk 2077 on PC, game version **2.5** | As REDnode |
 
@@ -69,11 +71,11 @@ Install it after REDnode: it goes into REDnode's apps folder. To remove it, remo
 ## Switch it on
 
 1. Start the game and load a save.
-2. Press **F10** for interactive mode and click the **REDNODE** tab at the lower left to open the launcher. Switch on the **Mod Manager**.
+2. Press **F10** for interactive mode and click the **REDNODE** tab at the lower left to open the launcher. In the launcher, switch on **Mod Manager** to open it.
 3. Find **UI Workbench** (type `work` in the search box) and switch it on. It starts switched off, like every new package.
 4. To reach it in one click next time, press **Pin to launcher** in its details.
 
-The Workbench opens over the game. Its **Inspect** tab works at once.
+The Workbench window opens. Its **Inspect** tab works straight away; the other tabs need a permission first (next section).
 
 {% include shot.html caption="The UI Workbench in the Mod Manager" shows="The Mod Manager with UI Workbench selected: its details on the right with the Running switch on, Pin to launcher, and the Permissions part with the red warning under managing REDnode and its Allowed switch." %}
 
@@ -87,16 +89,16 @@ Four of the Workbench's jobs need REDnode's **admin** permission, shown in the M
 
 To allow it: in the Mod Manager, select **UI Workbench**, read the warning under **Permissions**, and switch **Allowed** on for **managing REDnode**. Then open the tab you wanted again. Without it, Edit and Projects say: "Edit and Projects need the admin permission: allow it for UI Workbench in the Mod Manager (Permissions), then open this tab again."
 
-The same permission lets the Admin Tools pack's Task Manager end any package. Allow it only for tools you trust; you can switch it off any time, and Inspect keeps working.
+It is a strong permission: a package that has it can stop or start any other package. The Workbench uses it only to run your projects and for Try. Allow it for tools you trust. You can switch it off again at any time, and Inspect keeps working.
 
 ## The Workbench window
 
-The Workbench covers the whole game view, but only its window takes the mouse: everywhere else the page is see-through and your clicks reach the game or the windows behind.
+The Workbench draws on the whole screen, so that it can outline widgets anywhere, but only its window reacts to the mouse. Clicks elsewhere go to the game or to other windows as usual.
 
 | To | Do |
 |---|---|
 | Move it | Drag its title bar |
-| Resize it | Drag the grip in its bottom-right corner. It stops at 760 x 420 |
+| Resize it | Drag the grip in its bottom-right corner. It can't go smaller than 760 x 420 |
 | Put it back where it started | **Reset position and size** in its title bar (in the **⋯** menu when there's no room for its icon) |
 | Switch tabs | **Inspect**, **Edit**, **Projects** at the top |
 | Read a status line cut short | Point at it: its tooltip shows the whole text |
@@ -128,29 +130,10 @@ Projects and exports are outside the game folder, so game updates, reinstalls an
 | [Export](ui-tools-export.html) | Share a project as a mod |
 | [Tutorial: your first native HUD panel](ui-tools-tutorial.html) | From New to an installed mod, step by step |
 | [Native UI: ink markup](ink-markup.html) | The markup the Workbench writes, for newcomers |
-| [Troubleshooting](troubleshooting.html#ui-tools) | When a tab says no, a pick finds nothing, or a project won't run |
+| [Troubleshooting](troubleshooting.html) | When a tab says no, a pick finds nothing, or a project won't run |
 
 The developer reference is REDnode's [UI Tools guide](https://edgemodders.github.io/REDnode/ui-tools.html) and its [Native game UI](https://edgemodders.github.io/REDnode/ink.html) page.
 
 ## For mod makers
 
-Everything the Workbench reads is in the `rednode` package, for your own packages. The reads need no permission; Try needs `admin`.
-
-| Call | Gives |
-|---|---|
-| `ink.layers()` | The game's layers and the HUD's pieces |
-| `ink.read(from, { depth, max, props })` | A tree of widgets in one call; with `props: true`, each one's layout and look too |
-| `ink.inspect(id)` | One widget in full: path, parents, controllers, source file, every property, and an `api` reference to it |
-| `ink.at(x, y)` | The drawn widgets under a point, smallest first |
-| `ink.boxes()` | Every drawn widget's box in one call |
-| `ink.try(id, prop, value)`, `ink.reset()` | Change one property of a game widget, and put it back |
-
-```js
-import { ink } from 'rednode';
-
-const { hits } = await ink.at(200, 900);   // in the HUD's units
-const w = await ink.inspect(hits[0].id);
-console.log(w.path, w.controllers, w.properties.opacity);
-```
-
-More in [Game API: more of the game](game-api.html#the-games-own-ui).
+Everything the Workbench reads is in the `rednode` package, for your own packages: `ink.layers`, `ink.read`, `ink.inspect`, `ink.at` and `ink.boxes` read the game's UI and need no permission, and `ink.try` changes a widget with the `admin` permission. The calls, with examples, are in [The game's own UI](more-apis.html#the-games-own-ui).

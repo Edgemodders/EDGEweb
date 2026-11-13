@@ -27,7 +27,7 @@ Either way, EDGEdeck stores the sign-in in VS Code's secret storage, not in a se
 On a Nexus mod page, the **Mod manager download** button opens a special `nxm://` link meant for a mod manager. Only one program on your PC can receive those links.
 
 - **Nexus: handle download links (nxm)** makes EDGEdeck the one. Then **Mod manager download** sends the file straight into your library. The Set up group offers it from the start, signed in or not.
-- **In EDGEkit**, the links go to EDGEkit's own EDGEdeck (EDGEdeck 0.29.3 or later; before, they always went to VS Code). EDGEkit's installer can set this up for you. See [EDGEkit](../edgekit/#get-the-app).
+- **In EDGEkit**, the links go to EDGEkit's own EDGEdeck (EDGEdeck 0.29.3 or later; before, they always went to VS Code). EDGEkit's installer can set this up for you. See [EDGEkit](../edgekit/install.html#2-the-nexus-mods-box).
 - **Nexus: stop handling download links** gives them up again.
 - Vortex takes the links back whenever it starts. If you use both, EDGEdeck's **Handle Nexus download links** row reappears in the Set up group so you can reclaim them.
 - Without link handling, copy the link and use **Nexus: add from a link**. Pasting always works.

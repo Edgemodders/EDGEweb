@@ -4,7 +4,7 @@ nav_title: "UI Tools: Export"
 section: REDnode
 order: 10.6
 description: "Turn a UI Workbench project into a zip that installs as a mod of its own: where the zip goes, what is in it, how a player installs it, and testing it on your own PC."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # UI Workbench: <span class="y">Export</span>
@@ -37,7 +37,7 @@ Paste the path into Explorer's address bar to open the folder. Point at the stat
 | Its layout | `red4ext\plugins\REDnode\apps\<id>\`, as in the game folder |
 | Inside | Every file of the project (`rednode-app.json`, `panel.ink.html`, `mod.mjs`, and any you added), leaving out dot folders and `node_modules` |
 | `README.txt` | Beside the project's files: the mod's name, version and description, what it needs, and how to install it |
-| What it needs | Written into the zip's copy of `rednode-app.json`: Codeware 1.16 or later, as every project says, and REDnode 0.55.2 or later when your project names no REDnode version (the template's live slider needs it). Your project's own file is left as it is |
+| What it needs | Written into the zip's copy of `rednode-app.json`: Codeware 1.16 or later, as every project says, and a REDnode new enough for the template's live slider, when your project names no REDnode version. The line reads `"rednode": ">=0.55.2"`, a development build's number: every public release from 0.56.1 on passes it. Your project's own file is left as it is |
 
 To export a new version, raise `version` in the project's `rednode-app.json` (in its folder, with any text editor), then export again: the new zip has the new number and the old one stays.
 
@@ -51,28 +51,36 @@ The same way as any REDnode package. They need REDnode and Codeware first.
 2. Add the zip to Vortex or [EDGEdeck](../edgedeck/adding-mods.html) and deploy, or extract it into the Cyberpunk 2077 folder (the one that holds `bin` and `red4ext`). It lands in `red4ext\plugins\REDnode\apps\<id>`.
 3. Start the game, press **F10**, open the **Mod Manager**, find the mod by its name and switch it on.
 
-It runs as a mod of its own: the Workbench doesn't need to be installed. This passed in game on 2026-11-03: an exported template project, extracted into the game folder, started as its own mod with its controls window and HUD panel, and the slider drove the panel.
+It runs as a mod of its own: the Workbench doesn't need to be installed. This passed in game: an exported template project, extracted into the game folder, started as its own mod with its controls window and HUD panel, and the slider drove the panel.
 
 ### Share it
 
-Upload the zip to Nexus Mods or anywhere else. On the mod's page, list **REDnode** (name the version you tested with) and **Codeware** as requirements, and say it is for game version 2.5. See [Sharing your package](making-mods.html#sharing-your-package).
+Upload the zip to Nexus Mods or anywhere else. Before you do:
+
+| Do | Why |
+|---|---|
+| Test the zip as a player first: see [the next section](#install-it-on-your-own-pc) | You see what players will see |
+| On the mod's page, list **REDnode** (name the version you tested with) and **Codeware** as requirements, and say it is for game version 2.5 | Players need both first |
+| Say what the panel shows, and that its controls are in a window that opens with **F10** | A player who sees only a HUD panel won't guess there is a controls window |
+
+See also [Sharing your package](making-mods.html#sharing-your-package).
 
 ## Install it on your own PC
 
 Your projects folder is a [development folder](settings.html#development-folders), and a development copy **wins** over an installed one with the same id: REDnode runs the project from your Documents folder and hides the installed copy, with a **DEV** tag in the Mod Manager.
 
-So before you install your own export to test it as a player would:
+So to test your own export as a player would, the project has to step aside first. Nothing is lost either way:
 
-1. In **Projects**, **Delete** the project (it goes to `.trash`, so you can take it back), or move its folder out of `UI projects` with Explorer. The Workbench's **Rename** is not enough: it changes the name, and the id stays.
+1. Move the project's folder out of `UI projects` with Explorer (to your Desktop, say). Or press **Delete** in **Projects**: that only moves it to `.trash`. The Workbench's **Rename** is not enough: it changes the name, and the id stays.
 2. Quit the game, install the zip, and start the game again.
 3. In the Mod Manager, the mod shows with **no DEV tag**. Switch it on.
 
-To go back to working on it, take the folder back out of `.trash` into `UI projects` (remove the date from the end of its name). Uninstall the exported copy first, or remember the project now wins again.
+To go back to working on it, move the folder back into `UI projects`, or [bring it back from `.trash`](ui-tools-projects.html#bring-a-deleted-project-back). You can leave the exported copy installed: while the project's folder is in `UI projects`, REDnode runs the project and ignores the installed copy.
 
 ## Good to know
 
 | | |
 |---|---|
 | An exported mod is a normal package | Players allow its permissions, pin it and switch it on in the Mod Manager like any other |
-| Interactive panels | Native panels can't take clicks yet (phase I3). Put controls in an overlay window, as the template does |
-| The project's id | Comes from the project's first name and never changes on Rename. Pick the first name with care if you plan to share it |
+| Interactive panels | Native panels can't take clicks yet. Put controls in an overlay window, as the template does |
+| The project's id | Comes from the project's first name and never changes on Rename. The id is the mod's folder name, and how REDnode tells your mod from every other, so pick the first name with care if you plan to share it |

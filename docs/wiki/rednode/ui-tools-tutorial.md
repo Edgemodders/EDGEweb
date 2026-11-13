@@ -4,14 +4,14 @@ nav_title: "Tutorial: first HUD panel"
 section: REDnode
 order: 10.7
 description: "Step by step in the UI Workbench: make a project from the template, read its markup and script, change the title, add a line, change a colour threshold, see each change live, then export it and install it as a mod of its own."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # Tutorial: your first native <span class="y">HUD panel</span>
 
 In this tutorial you make a small gauge on the game's HUD, drawn by the game itself, with a slider that drives it. You start from the UI Workbench's template, change it a little at a time while it runs, and finish with a zip that installs as a mod of its own. No coding experience is needed: you change words and numbers, and the editor tells you if something is wrong.
 
-It takes about 20 minutes. The template, Run, Save while it runs, Export and installing the export all passed in game in the UI Workbench's tests (2026-11-02 and 2026-11-03); the edits here are small changes to the template.
+It takes about 20 minutes. The template, Run, Save while it runs, Export and installing the export all passed in game in the UI Workbench's tests; the edits here are small changes to the template.
 
 {% include shot.html caption="The finished gauge" shows="The game's HUD with the Cyberware heat panel at the left: its title, a level bar in the warning colour, the percentage, the mood line Running hot, a raw level line, and the controls window with its slider at the right of the screen." %}
 
@@ -19,7 +19,7 @@ It takes about 20 minutes. The template, Run, Save while it runs, Export and ins
 
 | | |
 |---|---|
-| [REDnode](install.html) 0.56.0 or later and [Codeware](https://github.com/psiberx/cp2077-codeware) 1.16 or later | Installed in the game |
+| [REDnode](install.html) 0.56.1 or later and [Codeware](https://github.com/psiberx/cp2077-codeware) 1.16 or later | Installed in the game |
 | The [UI Tools](ui-tools.html#install) pack | Installed, with the UI Workbench switched on and its **admin** permission allowed ([how](ui-tools.html#the-admin-permission)) |
 | A save to load | Any save in the open world |
 
@@ -35,7 +35,7 @@ The status line says `Made Heat Gauge in ...\Documents\REDnode\UI projects\heat-
 
 1. Press **Run**. The status line says `Heat Gauge runs in the game. Its output and any crash are in the Mod log.`
 2. A window, **Heat Gauge: controls**, opens at the right of the screen with a **Level** slider.
-3. Press **Esc** to leave interactive mode and look at the HUD's left side: a panel says **HEAT GAUGE**, with a bar at 50 %, *In the zone*, and *0 changes from the slider*.
+3. Press **Esc** to leave interactive mode and look at the HUD's left side: a panel says **HEAT GAUGE**, with a bar at 50 %, *In the zone*, and *0 changes from the slider*. You'll do this often: **Esc** to look at the HUD, **F10** to come back to the Workbench and the controls. If the Workbench's window covers the panel, drag it aside by its title bar.
 4. Press **F10** again and drag the slider slowly to the right. The panel follows while you drag: the bar fills, the number climbs, and from 70 the panel turns to the warning colour (*Running hot*), from 90 to red (*Overheating!*). The count goes up with each change sent.
 5. Press **Reset** in the controls window: back to 50 and 0 changes.
 
@@ -43,7 +43,7 @@ The status line says `Made Heat Gauge in ...\Documents\REDnode\UI projects\heat-
 
 ## 3. Read what you made
 
-Here is the markup the template wrote, without the comment at the top of the file that explains it (lines 1 to 4). Each tag is one of the game's widgets; `{name}` is a slot the script fills.
+The markup file starts with a four-line comment that explains it. Below that is this markup. Each tag is one of the game's widgets; `{name}` is a slot the script fills.
 
 ```html
 <mount layer="hud" anchor="left" x="80" y="-60">
@@ -106,7 +106,28 @@ const level = ui.slider('Level', (value) => {
 | `ui.slider(..., { live: true })` | A slider in an overlay window. `live: true` sends its value while you drag, not only when you let go |
 | `view.set(data(value))` | Gives the panel new data. REDnode sends the game only the widgets whose slots read something that changed |
 
-The rest of the script opens the controls window with the slider and **Reset**.
+The rest of the script opens the controls window, with the slider and **Reset**:
+
+```js
+ui.window({
+  title: "Heat Gauge: controls",
+  anchor: 'right',
+  x: -40,
+  width: 380,
+  height: 230,
+  children: [
+    ui.text('Drag the slider: the panel on the HUD at the left follows.', { tone: 'dim' }),
+    level,
+    ui.button('Reset', () => {
+      changes = 0;
+      level.set({ value: 50 });
+      view.set(data(50));
+    }, { variant: 'ghost' }),
+  ],
+});
+```
+
+`ui.window` opens an overlay window at the right edge. Its `children` are a line of text, the slider made above, and a **Reset** button that puts the slider and the panel back to 50.
 
 ## 4. Change the title
 
@@ -152,6 +173,8 @@ Your markup now reads (after the comment):
 
 Change `style="small"` on your new line to `style="tiny"`. Within a moment the header says `line 14: style: "tiny" is not one of: title, subtitle, heading, body, label, value, small, fluff`, and the word is underlined. That list is every style you can use. Put it back to `small`. A mistake like this never reaches the game: REDnode checks the whole file first.
 
+{% include shot.html caption="A mistake shown in the editor" shows="The UI Workbench's Edit tab with the markup's header showing the error line 14: style: tiny is not one of the styles, and the word tiny underlined in the markup." %}
+
 ## 6. Change when it turns to warning
 
 The colours come from the `tone` line in the script's `data` function:
@@ -171,7 +194,14 @@ Want other colours? The [tones](ink-markup.html#tones) are `normal`, `accent`, `
 ## 7. Move it and print something
 
 1. In the `<mount ...>` line of the markup, change `y="-60"` to `y="200"` and save: the panel moves down. `x` moves it right; a minus moves it the other way.
-2. In the script, find the **Reset** button near the end: `ui.button('Reset', () => {`. On the next line, add `console.log('Gauge reset');` and save.
+2. In the script, find the **Reset** button near the end (shown in step 3): `ui.button('Reset', () => {`. Add a line under it, so it reads as below, and save.
+
+```js
+    ui.button('Reset', () => {
+      console.log('Gauge reset');
+      changes = 0;
+```
+
 3. Switch on **Mod log** in the REDnode launcher, then press **Reset** in the controls window: the Mod log shows `[heat-gauge] Gauge reset`. Anything your script prints, and any crash, shows there.
 
 ## 8. Stop and export
@@ -180,9 +210,13 @@ Want other colours? The [tones](ink-markup.html#tones) are `normal`, `accent`, `
 2. Press **Export**. The status line says `Exported Heat Gauge: ...\Documents\REDnode\UI exports\heat-gauge-0.1.0.zip (... files, ... KB). The path is copied.`
 3. Paste the path into Explorer's address bar to see the zip.
 
-## 9. Install it as a mod
+You've made a native HUD mod: the zip is ready to share. The last step is optional.
 
-To try the export as a player would, the project must step aside first, or REDnode keeps running the project instead (a development copy wins over an installed one).
+## 9. Optional: install it as a mod
+
+This step shows that your zip works without the Workbench, the way a player gets it. **Your project is not lost**: Delete only moves it to a `.trash` folder, and the end of this step brings it back.
+
+The project must step aside first, or REDnode keeps running the project instead of the installed copy (a development copy wins over an installed one).
 
 1. In **Projects**, press **Delete** on **Heat Gauge**, then **Sure?**. It moves to the projects folder's `.trash`.
 2. Quit the game.
@@ -190,13 +224,20 @@ To try the export as a player would, the project must step aside first, or REDno
 4. Start the game and load a save. Press **F10**, open the **Mod Manager** and find **Heat Gauge**: installed, with no **DEV** tag. Switch it on.
 5. The controls window and the panel show, with your title, your extra line and your thresholds. The slider drives the panel. The UI Workbench isn't needed for it to run.
 
-You've made a native HUD mod. To keep working on it, take the `heat-gauge` folder back from `.trash` into `UI projects` (rename it to `heat-gauge`), and remove the installed copy.
+{% include shot.html caption="The exported mod, installed" shows="The Mod Manager with Heat Gauge selected: installed, running, with no DEV tag, and its controls window open beside it." %}
+
+To keep working on the project, bring it back:
+
+1. In Explorer, open `Documents\REDnode\UI projects\.trash`.
+2. Find the folder that starts with `heat-gauge-` and ends with the date and time you deleted it.
+3. Move it up into `UI projects` and rename it to `heat-gauge`.
+4. Open the Workbench's **Projects** tab: **Heat Gauge** is back. While it is there, REDnode runs the project and ignores the installed copy, so you can leave that installed or remove it.
 
 ## Try next
 
 | Idea | How |
 |---|---|
-| Show V's real health instead of a slider | Use `bind`: `<bar bind="player.health" of="player.healthMax" />`. See [Game values](ink-markup.html#game-values-with-no-round-trip) |
+| Show V's real health instead of a slider | Use `bind`: `<bar bind="player.health" of="player.healthMax" />`. See [Live game values](ink-markup.html#live-game-values-bind) |
 | Start from the game's own look | Copy a HUD piece with [To source](ui-tools-to-source.html) and change it |
 | A list that grows | `<list items="..." key="id">`. See [Lists](ink-markup.html#lists) |
 | Find what a game widget's colour is | [Try](ui-tools-try.html) a tint on it live |
