@@ -4,7 +4,7 @@ nav_title: View in 3D
 section: EDGEmat
 order: 6
 description: "See a garment on its mesh with its colors: EDGEmat's View in 3D opens REDcode's 3D viewer and gives it each material's colors."
-reviewed: 2026-10-19
+reviewed: 2026-11-13
 ---
 
 # View in <span class="y">3D</span>
@@ -17,7 +17,7 @@ EDGEmat doesn't have a viewer of its own: REDcode shows meshes, and EDGEmat give
 
 ## How to use it
 
-1. In [Find](find.html), search for a garment and open it down to a mesh, or find a mesh by path.
+1. In [Find](find.html), search for a garment and open it down to a mesh, or find a mesh by path. A mesh on the [Desk](desk.html) works the same way, and shows the Desk's edits.
 2. Hover the mesh's row and click the **eye** (or right-click › **View in 3D**).
 3. REDcode opens the mesh in a new tab, on its 3D view.
 4. REDcode starts on the mesh's first look. The status bar at the bottom of VS Code names the look you came from, for example: *EDGEmat: pick the look "red_yellow_graphic" in the 3D view*. Pick it in the viewer's appearance list.
@@ -37,8 +37,14 @@ The viewer marks EDGEmat's colors **approximate**, because this first version gi
 
 {% include shot.html caption="The Arasaka jacket in 3D" shows="REDcode's 3D view of t2_078_ma_jacket__samurai.mesh on its default look: a near-black jacket with the Arasaka decals and stitches showing as textures." %}
 
+## Live while you edit
+
+Keep the 3D view open beside the [setup editor](setup-editor.html): while a setup is open, the 3D view shows it as edited, before you save, and follows each change, undo (`Ctrl+Z`) and redo (`Ctrl+Y`) within about a second. Close the editor without saving and the 3D view goes back to the saved setup. After a save, or a [new material](new-material.html) put on the mesh, it draws the materials again by itself.
+
+The preview shows on meshes from the same place as the setup: a setup opened from the Desk, on the Desk's meshes; a project's file, on that project's; a game file, on the game's.
+
 ## Good to know
 
 - The first time a material is shown, EDGEmat makes its picture from the game's files, which takes about a second for a whole jacket; after that it's cached.
-- **Show Log** in the Library's **`...`** menu lists each request, such as `3D view: 5 of 5 materials for ...t2_078_ma_jacket__samurai.mesh, look default, in 1055 ms`.
-- Opening a mesh from your own project in REDcode works the same way, and EDGEmat reads your project's copies of its setups and textures first. This hasn't been tried in a real project yet.
+- **Show Log** in Game Materials' **`...`** menu lists each request, such as `3D view: 5 of 5 materials for ...t2_078_ma_jacket__samurai.mesh, look default, in 1055 ms`.
+- **View in 3D** on a mesh in your project opens the project's copy, and EDGEmat reads your project's copies of its setups and textures first.

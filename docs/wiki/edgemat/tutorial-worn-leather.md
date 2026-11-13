@@ -4,7 +4,7 @@ nav_title: "Tutorial: worn leather"
 section: EDGEmat
 order: 10
 description: "Step by step: generate a worn brown leather from words with an AI image service, put it on a pair of slim-fit pants for both bodies, and wear them in the game."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # Tutorial: worn <span class="y">leather</span>
@@ -24,7 +24,7 @@ In this tutorial you turn the **Comfy rocker aramid-weave slim-fits** into worn 
 
 ## 1. Find the pants' material
 
-1. Click EDGEmat's icon in the activity bar, then the **FIND** header (below the Library) and its magnifier.
+1. Click EDGEmat's icon in the activity bar, then the **FIND** header (below the Desk and Game Materials) and its magnifier.
 2. Type `comfy rocker` and open **Comfy rocker aramid-weave slim-fits**. Its record id, `Items.Pants_01_basic_01`, shows beside it: you'll need it in the game.
 3. Open your V's body (Feminine or Masculine), then the mesh `l1_012_pw?_pants__jeans_tight.mesh`.
 4. Hover the material **leather** and press the sparkle icon at its right (**New Material Here...**).

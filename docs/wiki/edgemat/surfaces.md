@@ -4,18 +4,18 @@ nav_title: Surface pages
 section: EDGEmat
 order: 3
 description: "A surface's page in EDGEmat: every color it offers as a named swatch, the closest color to one you name, its shine, metal and bumps in plain words, and its textures."
-reviewed: 2026-10-20
+reviewed: 2026-11-13
 ---
 
 # Surface <span class="y">pages</span>
 
-Click a surface in the [Library](library.html) and its page opens in an editor tab. It answers the questions you have before recoloring: which colors does this surface offer, which is closest to the one I want, and how shiny, metallic and bumpy can it be?
+Click a surface in [Game Materials](game-materials.html) and its page opens in an editor tab. It answers the questions you have before recoloring: which colors does this surface offer, which is closest to the one I want, and how shiny, metallic and bumpy can it be?
 
 {% include shot.html caption="A surface page" shows="The surface page of fabric › leather bull 01 30: the large tinted image at the top left, the selected color's panel under it, and the grid of color swatches with the Filter and Closest to boxes on the right." %}
 
 ## One tab, or keep it
 
-Clicking around the Library reuses one tab, as VS Code's Explorer does with previews, so you don't end up with forty tabs. Press **Keep open** at the top of a page to keep that one: the next click opens a new tab. A page remembers its selected color, filter and settings when you switch tabs and come back.
+Clicking around Game Materials reuses one tab, as VS Code's Explorer does with previews, so you don't end up with forty tabs. Press **Keep open** at the top of a page to keep that one: the next click opens a new tab. A page remembers its selected color, filter and settings when you switch tabs and come back.
 
 ## What's on the page
 
@@ -47,7 +47,7 @@ Tick **Raw values** to see the game's own names beside the plain words: the pres
 
 ## Microblend pages
 
-Click a microblend in the Library for its page: its mask image (white is where the detail shows), its name and game path, and a line on what a microblend does. Microblends are the wear, dirt, scratches and printed patterns a layer can carry on top of its surface.
+Click a microblend in Game Materials for its page: its mask image (white is where the detail shows), its name and game path, and a line on what a microblend does. Microblends are the wear, dirt, scratches and printed patterns a layer can carry on top of its surface.
 
 {% include shot.html caption="A microblend page" shows="The page of a microblend such as edgewear 01: its mask image, name, game path and the short explanation of microblends." %}
 

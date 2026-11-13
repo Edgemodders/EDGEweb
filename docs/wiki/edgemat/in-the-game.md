@@ -4,7 +4,7 @@ nav_title: Your mod in the game
 section: EDGEmat
 order: 8
 description: "From a saved recolor or new material to the game: pack and install with REDcode, the hot folder and REDmod pitfalls, and putting the item on V with REDnode's Console."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # Your mod <span class="y">in the game</span>
@@ -38,7 +38,17 @@ addItem("Items.Pants_01_basic_01")
 
 The id is the item's record id. [Find](find.html) shows it beside each item, after its slot (and `mat_find` returns it), so you know the item you add is the one you edited. Equip it, then look in third person: photo mode, or a mirror.
 
-Some garments are worn only by NPCs, so V can't equip them: pick a garment V can wear for your tests.
+EDGEmat writes the command for you (since 0.3.2). One mesh look can be worn by several items, or by none V can wear, so it tells you which:
+
+| Where | What you get |
+|---|---|
+| The setup editor, opened from a mesh on the [Desk](desk.html) or in Find | An **In the game** section near the top, below the title (unfold it with its ▸): each item that wears that look, with its `addItem(...)` command, the body it fits, and a **Copy** button |
+| A look on the Desk or in Find | Its tooltip lists the items that wear it; the look itself reads **worn by 2 items**, or **no item** |
+| Right-click a look, a material or an item, on the Desk or in Find | **Copy REDnode Command** puts the command on the clipboard (with several items, it asks which) |
+
+The first time, EDGEmat reads every clothing item (about ten seconds, once per game version). Assistants get the same list from `mat_find` with a mesh: each item's `rednode` command.
+
+Some garments are worn only by NPCs, so V can't equip them: pick a look marked as worn by an item for your tests.
 
 ## 3. If you don't see your change
 

@@ -134,7 +134,7 @@ More in [Troubleshooting](troubleshooting.html).
 
 ## Step 7: Build EDGEmat's library, once
 
-EDGEmat finds garments' materials in a [library](../edgemat/library.html) it builds from your own game. If `/edge:setup` said it isn't built, ask:
+EDGEmat finds garments' materials in a list of [game materials](../edgemat/game-materials.html) it builds from your own game. If `/edge:setup` said it isn't built, ask:
 
 > Build the EDGEmat library.
 

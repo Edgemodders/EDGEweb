@@ -26,7 +26,7 @@ A big piece of work, such as a district you extend over months and release in pa
 | **A REDcode project** | One mod: what gets packed, installed and released | As long as the mod |
 | **EDGEdeck's mod library** | The mods you have installed, outside the game folder | As long as they're installed |
 
-Two other things share the word: EDGEdeck's **mod library** (your installed mods, see [EDGEdeck](edgedeck/library.html)) and EDGEmat's **Library** view (the game's surfaces and microblends, see [EDGEmat](edgemat/library.html)). Neither is the EDGE Library.
+Another thing shares the word: EDGEdeck's **mod library** (your installed mods, see [EDGEdeck](edgedeck/library.html)). It isn't the EDGE Library. EDGEmat's list of the game's surfaces and microblends was called Library too, up to EDGEmat 0.3.1; since 0.3.2 it is [Game Materials](edgemat/game-materials.html).
 
 ## Where it lives
 

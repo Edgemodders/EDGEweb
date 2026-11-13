@@ -31,7 +31,7 @@ More toolkits build on those five for particular jobs:
 |---|---|---|
 | Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props and your mods', drop them where you look, position and arrange them |
 | Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade, mix and shape it, and put it into the game through your mod. Preview, 0.1.0 on the Marketplace |
-| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; or ask an agent. Preview, 0.3.1 on the Marketplace |
+| Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; keep your work on its Desk; or ask an agent. Preview, 0.3.2 on the Marketplace |
 | Quickhacks | [EDGEhack](edgehack/) | A quickhack editor beside REDcode. Open any of the game's quickhacks in plain words, change it, or make new ones with effects, icons and scripts of your own, and try them live in the game. 0.1.1, the first release, a preview, on Nexus Mods and Open VSX |
 | Quests | [EDGEquest](edgequest/) | A quest maker beside REDcode. Read the game's quests in plain words, and write your own as a short story: EDGEquest makes the game's quest files from it. Preview, 0.1.0 on the Marketplace |
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE tools built in (preview, 1.140.3), or an extension pack that installs them in VS Code in one go |

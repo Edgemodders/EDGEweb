@@ -4,7 +4,7 @@ nav_title: New Material
 section: EDGEmat
 order: 7
 description: "Make a material from words, through an AI image service with your own key, or from a photo of your own, and put it on a garment: seamless, with bumps and shine, written into your mod project."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # New <span class="y">Material</span>
@@ -20,7 +20,7 @@ It was tested in the game on 2026-10-20: a worn leather and a dark green snakesk
 | From | How | Where it goes |
 |---|---|---|
 | A garment's material | [Find](find.html): open a garment, a body and a mesh, hover a material and press the sparkle icon at its right (or right-click › **New Material Here...**) | That material, on every body's mesh of the garment |
-| Anywhere | The sparkle icon (**New Material...**) in the Library's title bar | Written into your project only, for you to use later |
+| Anywhere | The sparkle icon (**New Material...**) in Game Materials' title bar | Written into your project only, for you to use later |
 
 The top of the page, **Where it goes**, says which meshes and materials it will go on.
 

@@ -3,15 +3,15 @@ title: Troubleshooting EDGEmat
 nav_title: Troubleshooting
 section: EDGEmat
 order: 13
-description: "Fixes for common EDGEmat problems: game or REDbridge not found, a library that won't build, a scrambled color map, changes that don't show in the game, image service errors, View in 3D, and Find."
-reviewed: 2026-11-03
+description: "Fixes for common EDGEmat problems: game or REDbridge not found, Game Materials that won't build, a scrambled color map, changes that don't show in the game, image service errors, View in 3D, and Find."
+reviewed: 2026-11-13
 ---
 
 # Troubleshooting <span class="y">EDGEmat</span>
 
 ## Start with the log
 
-**Show Log** in the Library's **`...`** menu, or **View**, **Output**, then **EDGEmat** in the dropdown. It says which game and which REDbridge EDGEmat uses ("Using REDcode's REDbridge for ...", or "Starting REDbridge from ..."), how the library build went, and every file it couldn't read. When you ask for help, include those lines.
+**Show Log** in Game Materials' **`...`** menu, or **View**, **Output**, then **EDGEmat** in the dropdown. It says which game and which REDbridge EDGEmat uses ("Using REDcode's REDbridge for ...", or "Starting REDbridge from ..."), how the library build went, and every file it couldn't read. When you ask for help, include those lines.
 
 ## Problems and fixes
 
@@ -21,17 +21,17 @@ EDGEmat couldn't find the game through REDcode or in the usual Steam, GOG and Ep
 
 ### "EDGEmat reads the game through REDbridge, which was not found"
 
-EDGEmat needs REDbridge 0.8.0 or later. The easy way: install [REDcode](../redcode/) and run its **Install REDbridge**, then press **Rebuild Library** in EDGEmat. Or set `edgemat.bridgePath` to `REDbridge.exe` ([Settings](settings.html)).
+EDGEmat needs REDbridge 0.8.0 or later. The easy way: install [REDcode](../redcode/) and run its **Install REDbridge**, then press **Rebuild Game Materials** in EDGEmat. Or set `edgemat.bridgePath` to `REDbridge.exe` ([Settings](settings.html)).
 
 If the log says REDbridge "could not start", .NET 10 may be missing or installed for your user only: REDcode's **Install REDbridge** fetches it, or see `edgemat.dotnetRoot`.
 
-### "The library could not be built"
+### "Game Materials could not be built"
 
 Press **Show Log** for the reason, then **Try Again**. Common causes: REDbridge stopped (it restarts when needed; try again), or REDcode's REDbridge is older than 0.8.0 (update it in REDcode). A few files the game itself lacks are listed apart as "missing in the game"; that's normal and not an error.
 
-### The Library shows old data after a game update
+### Game Materials shows old data after a game update
 
-EDGEmat checks the game's archives on every start and rebuilds when they changed. If it didn't, press **Rebuild Library**.
+EDGEmat checks the game's archives on every start and rebuilds when they changed. If it didn't, press **Rebuild Game Materials**.
 
 ### The setup editor's color map looks scrambled
 
@@ -73,7 +73,7 @@ The services set prices and limits; a free key may have none for image models. *
 
 ### Find is missing from the sidebar
 
-It's there, below the Library, often collapsed at the bottom: click its **FIND** header. Collapse the Library (click its header) if Find is squeezed. The magnifier at the top of the Library is Search Library, not Find.
+It's there, below the Desk and Game Materials, often collapsed at the bottom: click its **FIND** header. Collapse the others (click their headers) if Find is squeezed. The funnel at the top of Game Materials is Filter Game Materials, which only narrows that list, not Find.
 
 ### View in 3D does nothing, or says REDcode isn't installed
 

@@ -4,7 +4,7 @@ nav_title: The setup editor
 section: EDGEmat
 order: 4
 description: "Open any .mlsetup (from the game, a project, a file or another mod), see each layer in plain words and where it goes, change its surface, color and finish, and save it into your mod project."
-reviewed: 2026-11-03
+reviewed: 2026-11-13
 ---
 
 # The setup <span class="y">editor</span>
@@ -18,16 +18,21 @@ A garment's look lives in its **setup**, an `.mlsetup` file: a stack of up to 20
 | From | How |
 |---|---|
 | A garment's name | [Find](find.html): type the name, open a body and a mesh, click a layered material. This is the best way: the setup opens with the exact mask set the garment uses |
-| The game, by file name | **Open Setup...** (the go-to-file icon in the Library's title bar) › **From the game**, then type words from the file name, such as `s1_055 red yellow`, and pick one |
+| The Desk | Click a layered material under a mesh on the [Desk](desk.html). Ctrl+S then saves it on the Desk, not in a project, until you add it to one |
+| The game, by file name | **Open Setup...** (in Game Materials' title bar, the page with an arrow pointing into it) › **From the game**, then type words from the file name, such as `s1_055 red yellow`, and pick one |
 | A file on disk | **Open Setup...** › **A file on disk**: a binary `.mlsetup`, or WolvenKit's JSON form, `.mlsetup.json`. A file in a WolvenKit project works too |
 | Another mod | **Open Setup...** › **A file on disk**, pick the mod's `.archive`, then pick a setup inside it. The mod's own mask sets come along. The mod is only read, never changed |
-| REDcode or the Explorer | Open any `.mlsetup`. If REDcode's editor opens instead, right-click the editor tab (or press `Ctrl+Shift+P`) › **Reopen Editor With...** › **EDGEmat Setup Editor**. VS Code may ask which editor to use the first time. The next version (built, not released yet) adds **Open Material in EDGEmat...** to the right-click menu of a setup in the Explorer, on its tab and in REDcode's Project view |
+| REDcode or the Explorer | Click any `.mlsetup` in the Explorer: EDGEmat's setup editor is VS Code's default editor for them. If another editor has it open, right-click the file or its tab › **Open Material in EDGEmat...** (the menu's first item; also in REDcode's Project view). Or **Reopen Editor With...** › **EDGEmat Setup Editor** |
 
 The header names the file and where it came from: "Setup · game file", "project file", "from the mod ...", or the garment you found it through. It also counts the layers that show and the setup's **ratio** (how the detail textures map onto the garment).
+
+Opened from a mesh on the Desk or in Find, the editor also has an **In the game** section below the header (folded; click its ▸): the game's items that wear that mesh look, each with the REDnode Console command that gives V one and a **Copy** button. See [Your mod in the game](in-the-game.html).
 
 ## The color map
 
 On the left: the garment's texture, unwrapped flat, with each layer painted in its own color where its mask puts it. It shows *where* each layer goes; it isn't the in-game look, which also has shine, bumps and lighting. (For the garment in 3D, see [View in 3D](view-in-3d.html).)
+
+Since 0.3.2 the map cuts each layer's mask with its microblend, as the game does, so a layer meant to show only as specks (lint, dirt) no longer tints the whole garment. A layer's **share** follows.
 
 - **Click a spot** on the map: the layer that shows there is selected, and scrolled into view in the list.
 - The switch under the map, **All layers** / **Selected layer**, either shows the whole map or dims it and lights up the selected layer's area, so you can see exactly which parts one layer covers.

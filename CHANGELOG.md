@@ -10,6 +10,10 @@ How to keep it:
 
 ## Unreleased
 
+**Changed**
+
+- EDGEmat's wiki follows its 0.3.2 release: a new page for **the Desk**, https://edgemodders.ai/wiki/edgemat/desk.html; the Library page is now **Game Materials**, https://edgemodders.ai/wiki/edgemat/game-materials.html, with its filter; Find's Add to Desk and Copy REDnode Command; which item to give V on "Your mod in the game", every 0.3.2 command on "Settings and commands", and four more assistant tools. EDGEmat's status says 0.3.2 on the landing and platform pages and the wiki home.
+
 ## 0.1.0 (2026-11-12)
 
 The site's first release: everything since the changelog began on 3 November 2026.

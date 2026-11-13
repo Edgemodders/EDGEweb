@@ -3,8 +3,8 @@ title: Install and set up EDGEmat
 nav_title: Install and set up
 section: EDGEmat
 order: 1
-description: "What EDGEmat needs, installing it from the VS Code Marketplace, and the first build of the material library from your game."
-reviewed: 2026-11-03
+description: "What EDGEmat needs, installing it from the VS Code Marketplace, and the first build of Game Materials from your game."
+reviewed: 2026-11-13
 ---
 
 # Install and set up <span class="y">EDGEmat</span>
@@ -19,7 +19,7 @@ reviewed: 2026-11-03
 | Recommended: [REDcode](../redcode/) | With REDcode set up, EDGEmat needs no configuration at all: it takes REDcode's game folder and its running REDbridge. [View in 3D](view-in-3d.html) needs REDcode |
 | To save your changes: a WolvenKit project | REDcode's **New Project** makes one. EDGEmat saves into REDcode's open project, and REDcode packs it for the game ([Your mod in the game](in-the-game.html)) |
 | Optional: an image service key | Only to generate materials from words: your own Google Gemini or OpenAI key ([New Material](new-material.html)). Everything else works without one |
-| Some disk space | About 15 MB for the material library EDGEmat builds from your game, in `%LOCALAPPDATA%\EDGEmat`, growing a little as you open pages and setups (their images are kept there too). Safe to delete; EDGEmat builds it again |
+| Some disk space | About 15 MB for the list of game materials EDGEmat builds from your game, and the Desk, in `%LOCALAPPDATA%\EDGEmat`, growing a little as you open pages and setups (their images are kept there too). Safe to delete; EDGEmat builds it again |
 
 ## Install EDGEmat
 
@@ -45,24 +45,25 @@ code --install-extension edgemodders.edgemat
 | **The EDGEkit app** | You want one editor with the EDGE tools built in | [EDGEkit](../edgekit/#get-the-app) 1.140.3 comes with EDGEmat 0.3.1, which then updates itself from Open VSX |
 | **A `.vsix` file** | No store access, or you want one exact version | Download `edgemat-<version>.vsix` from the [releases page](https://github.com/Edgemodders/EDGEmat/releases). In the Extensions view, press the **`...`** menu at the top right, choose **Install from VSIX...** and pick the file. Or run `code --install-extension edgemat-<version>.vsix` |
 
-Installed from the Marketplace or Open VSX, EDGEmat updates like any other extension: VS Code fetches new versions by itself unless you turned automatic updates off. Each version's changes are in EDGEmat's [changelog](https://edgemodders.github.io/EDGEmat/changelog.html) and on the [releases page](https://github.com/Edgemodders/EDGEmat/releases). If you installed from a `.vsix` file, install the newer file the same way. Your library and settings stay either way.
+Installed from the Marketplace or Open VSX, EDGEmat updates like any other extension: VS Code fetches new versions by itself unless you turned automatic updates off. Each version's changes are in EDGEmat's [changelog](https://edgemodders.github.io/EDGEmat/changelog.html) and on the [releases page](https://github.com/Edgemodders/EDGEmat/releases). If you installed from a `.vsix` file, install the newer file the same way. Game Materials, the Desk and your settings stay either way.
 
 To remove EDGEmat, uninstall it in the Extensions view, or run `code --uninstall-extension edgemodders.edgemat`.
 
 ## First start
 
-An EDGEmat icon appears in the activity bar on the left of VS Code: two corner brackets around a stack of layers. Click it. EDGEmat's sidebar has two views:
+An EDGEmat icon appears in the activity bar on the left of VS Code: two corner brackets around a stack of layers. Click it. EDGEmat's sidebar has three views, top to bottom:
 
 | View | What it is |
 |---|---|
-| **Library** | Every surface and detail texture in your game. See [The Library](library.html) |
-| **Find** | Below the Library, often collapsed at the bottom of the sidebar: click its **FIND** header to open it. See [Find](find.html) |
+| **Desk** | Meshes and setups you are working on, with your edits, until they go into a project. Empty at first. See [The Desk](desk.html) |
+| **Game Materials** | Every surface and detail texture in your game (called Library up to 0.3.1). See [Game Materials](game-materials.html) |
+| **Find** | Garments by their in-game name. Often collapsed at the bottom of the sidebar: click its **FIND** header to open it. See [Find](find.html) |
 
-{% include shot.html caption="EDGEmat's sidebar on first start" shows="The activity bar with the EDGEmat icon highlighted, the Library view building its library with a progress bar, and the collapsed FIND header below it." %}
+{% include shot.html caption="EDGEmat's sidebar on first start" shows="The activity bar with the EDGEmat icon highlighted, the empty Desk, the Game Materials view building its list with a progress bar, and the collapsed FIND header below it." %}
 
-### The library builds itself
+### Game Materials builds itself
 
-The first time, EDGEmat builds its material library from your game: every surface (about 390) with all its colors, every detail texture (about 130), and a thumbnail for each. It shows progress in the Library view and takes under half a minute. After that the library opens instantly, and EDGEmat rebuilds it on its own when a game update changes the archives.
+The first time, EDGEmat builds its list of game materials from your game: every surface (about 390) with all its colors, every detail texture (about 130), and a thumbnail for each. It shows progress in the Game Materials view and takes under half a minute. After that the list opens instantly, and EDGEmat rebuilds it on its own when a game update changes the archives.
 
 ### Finding the game and REDbridge
 
@@ -71,12 +72,12 @@ EDGEmat looks for the game in this order: its own setting, REDcode's game folder
 | You see | Do this |
 |---|---|
 | "EDGEmat needs your Cyberpunk 2077 folder" with a **Set Game Folder** button | Press it and pick the folder that contains `bin`, `archive` and `r6` |
-| "EDGEmat reads the game through REDbridge, which was not found" | Install [REDcode](../redcode/) and run its **Install REDbridge**, or point the `edgemat.bridgePath` setting at `REDbridge.exe`. Then press **Rebuild Library** |
-| The Library fills with categories | You're set |
+| "EDGEmat reads the game through REDbridge, which was not found" | Install [REDcode](../redcode/) and run its **Install REDbridge**, or point the `edgemat.bridgePath` setting at `REDbridge.exe`. Then press **Rebuild Game Materials** |
+| Game Materials fills with categories | You're set |
 
-When REDcode is running with the same game, EDGEmat uses REDcode's REDbridge rather than starting a second one. **Show Log** (in the Library's **`...`** menu) says which: "Using REDcode's REDbridge", or "Starting REDbridge from ...".
+When REDcode is running with the same game, EDGEmat uses REDcode's REDbridge rather than starting a second one. **Show Log** (in Game Materials' **`...`** menu) says which: "Using REDcode's REDbridge", or "Starting REDbridge from ...".
 
 ## Next
 
-- Browse the [Library](library.html), or go straight to [Find](find.html) and type a garment's name.
+- Browse [Game Materials](game-materials.html), or go straight to [Find](find.html) and type a garment's name, then put its mesh on the [Desk](desk.html).
 - Connect Claude: [Assistants](assistants.html).
