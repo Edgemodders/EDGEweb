@@ -38,4 +38,4 @@ reviewed: 2026-10-13
 ---
 ```
 
-`section` is the sidebar group, one of: Start here, REDagent, REDnode, REDcode, EDGEdeck, REDbridge, EDGEbuilder, EDGEwave, EDGEmat, EDGEkit. `order` sorts pages within it.
+`section` is the sidebar group, one of: Start here, REDagent, EDGEchat, REDnode, REDcode, EDGEdeck, REDbridge, EDGEbuilder, EDGEwave, EDGEmat, EDGEquest, EDGEhack, EDGEkit. `order` sorts pages within it.
