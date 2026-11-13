@@ -53,7 +53,7 @@ One thing to know: a layer's color isn't a free choice. Each surface offers a fi
 | [REDbridge](../redbridge/) | Reads every game file, using WolvenKit's engine. EDGEmat needs it |
 | [REDcode](../redcode/) | Recommended. With it, EDGEmat takes the game folder and REDbridge from REDcode, so there is nothing to set up. EDGEmat saves into REDcode's open project, and REDcode packs it for the game. REDcode's 3D viewer shows EDGEmat's colors |
 | Claude and other agents | EDGEmat's MCP server lets an AI assistant find, describe, recolor and make materials. Every feature comes to the buttons and the assistant together. EDGEmat makes no network calls of its own, except to an image service you chose, when you press Generate |
-| [EDGEkit](../edgekit/) | The EDGEkit app (1.140.3) has EDGEmat 0.3.1 built in. In VS Code, the EDGEkit extension pack (0.3.0) installs it with the other EDGE tools |
+| [EDGEkit](../edgekit/) | The EDGEkit app has EDGEmat built in. In VS Code, the EDGEkit extension pack installs it with the other EDGE tools |
 
 EDGEmat builds its list of game materials from your own game the first time it runs, so it ships no game data and stays current after game patches.
 

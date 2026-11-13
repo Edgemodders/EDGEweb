@@ -38,7 +38,7 @@ code --install-extension edgemodders.edgedeck
 | Way | When | How |
 |---|---|---|
 | **Open VSX** | Editors built on VS Code that use Open VSX instead of Microsoft's Marketplace, such as VSCodium | Search for `EDGEdeck` in the editor's Extensions view, or see [EDGEdeck on Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) |
-| **The EDGEkit app** | You want one editor with the EDGE tools built in | [EDGEkit](../edgekit/#get-the-app) 1.140.3 comes with EDGEdeck 0.29.4, which then updates itself from Open VSX |
+| **The EDGEkit app** | You want one editor with the EDGE tools built in | The [EDGEkit app](../edgekit/install.html) comes with EDGEdeck, which then updates itself from Open VSX |
 | **A `.vsix` file** | No store access, or you want one exact version | Download `edgedeck-<version>.vsix` from the [releases page](https://github.com/Edgemodders/EDGEdeck/releases). In the Extensions view, press the **`...`** menu at the top right, choose **Install from VSIX...** and pick the file. Then run **Developer: Reload Window** from the command palette (`Ctrl+Shift+P`) |
 
 A EDGEdeck icon appears in the activity bar on the left of VS Code. Click it to open the **Mods** view.

@@ -57,7 +57,7 @@ Vortex takes the download links back every time it starts. Use **Nexus: handle d
 
 ### Mod manager download opens VS Code, or nothing, while you use EDGEkit
 
-EDGEdeck before 0.29.3 always sent the links to VS Code. Update EDGEdeck (EDGEkit 1.140.3 comes with 0.29.4). The links switch over the next time EDGEdeck starts.
+EDGEdeck before 0.29.3 always sent the links to VS Code. Update EDGEdeck (EDGEkit 1.140.3 and later come with a fixed version). The links switch over the next time EDGEdeck starts.
 
 ### A second file from a Nexus page turned the first one off
 

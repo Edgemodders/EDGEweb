@@ -14,7 +14,7 @@ reviewed: 2026-11-04
 | You need | Why |
 |---|---|
 | Windows 10 or 11, 64-bit, and Cyberpunk 2077 **2.5** (Steam, GOG or Epic) | The game EDGEquest reads and writes for. Game 2.31 isn't supported |
-| [VS Code](https://code.visualstudio.com/) 1.70 or later, or VSCodium, or the [EDGEkit](../edgekit/) app | EDGEquest is an extension for it. EDGEkit doesn't come with EDGEquest yet: install it there the same way |
+| [VS Code](https://code.visualstudio.com/) 1.70 or later, or VSCodium, or the [EDGEkit](../edgekit/) app | EDGEquest is an extension for it. EDGEkit 1.140.5 and later come with EDGEquest built in |
 | [REDcode](../redcode/install.html) | Finds the game, installs [REDbridge](../redbridge/) (0.11.0 or later) and the .NET 10 runtime, makes the WolvenKit project, and packs and installs your quest |
 | [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198) in the game | Adds your quest's phase, journal and texts to the game. Only needed to play quests you make |
 

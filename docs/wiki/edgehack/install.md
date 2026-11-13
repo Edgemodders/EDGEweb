@@ -13,7 +13,7 @@ reviewed: 2026-11-11
 
 | You need | Notes |
 |---|---|
-| Windows and [VS Code](https://code.visualstudio.com/) 1.90 or later | EDGEhack is a VS Code extension. [EDGEkit](../edgekit/) works too |
+| Windows and [VS Code](https://code.visualstudio.com/) 1.90 or later | EDGEhack is a VS Code extension. [EDGEkit](../edgekit/) 1.140.6 and later come with EDGEhack built in |
 | Cyberpunk 2077, game 2.5 | EDGEhack reads the game's quickhacks from your own install |
 | [REDcode](../redcode/) 0.10.8 or later | EDGEhack builds on it: REDcode installs with EDGEhack from the Marketplace. REDcode fetches [REDbridge](../redbridge/) and .NET 10, which read the game's files, and holds the project EDGEhack writes into |
 | A WolvenKit project open in REDcode | Where your mod's files go. Without one, what you make waits on EDGEhack's [Desk](desk-library.html) |

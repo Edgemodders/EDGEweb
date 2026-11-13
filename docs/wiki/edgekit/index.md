@@ -3,107 +3,88 @@ title: EDGEkit
 nav_title: Overview
 section: EDGEkit
 order: 0
-description: "EDGEkit, the EDGEmodders editor: one app with every EDGE tool built in, and an extension pack that installs them in VS Code."
-reviewed: 2026-11-03
+description: "EDGEkit, the EDGEmodders editor: one free app for Windows with the EDGE modding tools already installed, and an extension pack that installs them in VS Code."
+reviewed: 2026-11-13
 ---
 
 # EDGE<span class="y">kit</span>
 
-EDGEkit is the EDGEmodders editor: one app to install, with every EDGE tool already inside. It is built from Code - OSS, the open-source core of VS Code, with its own name and look, the way VSCodium is. You install EDGEkit and start modding Cyberpunk 2077, with no extensions to hunt for.
+EDGEkit is the easiest way to get the EDGE tools. It is a free app for Windows: an editor that looks and works like VS Code, a popular free editor, with the EDGE modding tools already installed. You install one app and start modding Cyberpunk 2077, with nothing else to hunt for. You don't need to know how to code to use it.
 
-EDGEkit comes in two forms:
+{% include shot.html caption="EDGEkit" shows="The EDGEkit window just after its first start: the Welcome walkthrough in the middle, and the EDGE tools' icons down the activity bar on the left." %}
 
-| Form | What it is | Status |
+**New here?** [Install the app](install.html), then follow [Your first session](first-session.html).
+
+## Two ways to get it
+
+| | What it is | For you if |
 |---|---|---|
-| **The EDGEkit app** | A complete editor of its own, with the EDGE extensions built in | **Released as a preview:** 1.140.3, 1 November 2026, Windows x64. See [Get the app](#get-the-app) below |
-| **The EDGEkit extension pack** | One extension for VS Code (or VSCodium) that installs the published EDGE extensions in one go | **Available, as a preview:** 0.3.0, 3 November 2026. See [Install the extension pack](install-pack.html) |
+| **The EDGEkit app** | A complete editor of its own, with the EDGE tools built in. [Install the app](install.html) | You are new to modding, or don't use VS Code |
+| **The EDGEkit extension pack** | One extension for VS Code or VSCodium that installs the EDGE tools there in one go. [Install the extension pack](install-pack.html) | You already work in VS Code and want to stay there |
 
-## Why you might want it
+Both give you the same tools. The app adds Claude Code, the AI assistant, at its first start.
 
-| If you... | EDGEkit gives you |
-|---|---|
-| Are new to modding and to VS Code | The app: one install instead of a list of extensions to find and set up |
-| Already use VS Code | The extension pack: REDcode, EDGEdeck, EDGEmat, EDGEwave and the HUD theme in one click |
-| Want your tools to stay current | Each EDGE extension updates on its own, so a fix in EDGEdeck reaches you without waiting for a new EDGEkit |
-| Want to stay offline | The app works on first start with no network, since its extensions are built in |
+## What's inside
 
-## Get the app
+| Tool | What it does | In the wiki |
+|---|---|---|
+| REDcode | Browse the game's files, edit them, and build mods from a project | [REDcode](../redcode/) |
+| EDGEdeck | The mod manager: install mods, switch them on and off, deploy them to the game | [EDGEdeck](../edgedeck/) |
+| EDGEmat | Recolor clothes and make new materials | [EDGEmat](../edgemat/) |
+| EDGEwave | Edit, mix and re-voice the game's sounds | [EDGEwave](../edgewave/) |
+| EDGEquest | Read the game's quests and write your own | [EDGEquest](../edgequest/) |
+| EDGEhack | Change the game's quickhacks and make new ones | [EDGEhack](../edgehack/) |
+| REDsave | Search your save games, keep sets of them and name them | [REDsave's docs](https://edgemodders.github.io/REDsave/) |
+| Redscript IDE, by jac3km4 | Help with redscript, the game's scripting language, for those who write it | |
+| REDnode HUD | The dark theme EDGEkit starts in | |
+| Claude Code | Anthropic's AI assistant. The app installs it at the first start, with your OK | [EDGEchat](../edgechat/) |
 
-1. Download `EDGEkitSetup-1.140.3.exe` from the [EDGEkit releases page](https://github.com/Edgemodders/EDGEkit/releases/latest).
-2. Run it. The installer isn't signed yet, so Windows SmartScreen may warn: choose **More info**, then **Run anyway**. It installs for your Windows user only, beside VS Code, without touching it.
-3. On the **Select Additional Tasks** page, tick **Send Nexus Mods download links (Mod manager download) to EDGEdeck** if you want the **Mod manager download** button on Nexus Mods to send files to EDGEdeck. It starts unticked when Vortex or Mod Organizer has the links, so nothing is taken from them without asking. See [Download links](#nexus-mods-download-links) below.
-4. On first start, a short onboarding offers an optional GitHub sign-in and a theme choice, then EDGEkit's Welcome walkthrough. When the onboarding closes, Claude Code installs from Open VSX after you confirm that you trust its publisher.
-5. Once Claude Code is in, EDGEkit asks once whether to set up EDGEchat, the EDGE plugin for Claude Code. See [Claude Code for EDGE](#claude-code-for-edge) below.
-6. Follow each tool's first steps: [REDcode](../redcode/install.html) needs REDbridge, [EDGEdeck](../edgedeck/install.html) has its Set up steps.
+## What isn't inside
 
-{% include shot.html caption="The installer's Nexus links box" shows="EDGEkit's installer on the Select Additional Tasks page, with the box Send Nexus Mods download links (Mod manager download) to EDGEdeck." %}
+EDGEkit holds the tools that run in the editor. The tools that run inside the game are separate installs, into the game folder:
 
-### Nexus Mods download links
+| Tool | What it is | Install |
+|---|---|---|
+| REDnode | The runtime that lets mods and apps run in the game | [Install REDnode](../rednode/install.html) |
+| REDagent | The AI assistant inside the game | [Install REDagent](../redagent/install.html) |
+| EDGEbuilder | The world builder inside the game | [Install EDGEbuilder](../edgebuilder/install.html) |
 
-Only one program on your PC receives the links behind Nexus Mods' **Mod manager download** button. The installer offers them to EDGEkit's EDGEdeck once: on a first install, and the first time you update by hand from 1.140.2 or older. After that, updates leave the links wherever you put them. Uninstalling EDGEkit gives them up if they still go to it.
+REDbridge, the engine REDcode and the others use to read the game's files, isn't in the app either. REDcode downloads it for you: see [Your first session](first-session.html#set-up-the-tools).
 
-To take them later, for example after Vortex took them back, use the Welcome page's **Get mods from Nexus Mods** step, or EDGEdeck's **Handle Nexus download links** row. See [Nexus Mods in EDGEdeck](../edgedeck/nexus.html#download-links).
+## Why you'd want it
 
-EDGEkit checks for a new release when it starts and then every hour. When one is out, **Restart to Update** in the gear menu installs it. The built-in extensions update themselves from Open VSX in between. Each release's changes are in EDGEkit's [changelog](https://github.com/Edgemodders/EDGEkit/blob/main/CHANGELOG.md).
+- **One install.** No list of extensions to find and set up.
+- **It works straight away.** The tools are built in, so the first start needs no network.
+- **Your tools stay current.** Each EDGE tool updates itself. A fix in EDGEdeck reaches you without waiting for a new EDGEkit.
+- **It leaves VS Code alone.** EDGEkit has its own name, icon and settings folder, and installs beside VS Code without touching it.
+- **AI included.** Claude Code installs at the first start, and EDGEkit offers to set up [EDGEchat](../edgechat/), which makes it a modding assistant.
 
-## What the app is
+## What it costs
 
-These are decisions from EDGEkit's design:
-
-| Decision | What it means for you |
-|---|---|
-| Built on Code - OSS | It looks and works like VS Code, but is called EDGEkit everywhere, with its own icon and settings folder. It sits beside an installed VS Code without touching it |
-| The EDGE extensions built in | In 1.140.3: REDcode 0.10.5, EDGEdeck 0.29.4, EDGEmat 0.3.1, EDGEwave 0.1.0, the REDnode HUD theme 0.3.1 (the default theme) and Redscript IDE 0.3.4. Each then updates itself from Open VSX. REDagent's editor view may join later |
-| Extensions from Open VSX | VS Code's own Marketplace is only for Microsoft's products, so EDGEkit uses [Open VSX](https://open-vsx.org/), as VSCodium does |
-| Windows x64 only, for now | Linux may come later |
-| Unsigned at first | Windows SmartScreen may warn: choose **More info**, then **Run anyway** |
-| No Copilot chat | Copilot chat and the Agents window are off. Claude Code installs from Open VSX on the first start, after you confirm |
-| Rare releases | A new EDGEkit only when the editor itself changes. The extensions update themselves in between |
-
-## Claude Code for EDGE
-
-Giving Claude Code the modding knowledge and the EDGE tools is the job of EDGEchat, a separate Claude Code plugin. EDGEkit 1.140.2 or later sets it up for you:
-
-1. Once Claude Code is installed, EDGEkit asks once whether to set up EDGEchat. Say yes.
-2. Claude Code's plugin dialog opens on EDGEchat. Install it.
-3. EDGEkit opens a new Claude Code session with `/edge:setup` ready to send. It checks EDGEchat's connections to the EDGE tools and says what's missing.
-
-Missed the question? **EDGEkit: Set Up Claude Code for EDGE** in the command palette (`Ctrl+Shift+P`), or the Welcome page's step, does the same at any time. This passed the developer's test on a fresh install. For EDGEchat's settings and signing in to REDnode, see [EDGEchat's Install and connect](../edgechat/install.html).
-
-{% include shot.html caption="Set up Claude Code for EDGE" shows="EDGEkit's one-time question offering to set up EDGEchat, and Claude Code's plugin dialog open on EDGEchat behind it." %}
+EDGEkit and the EDGE tools are free and open source. Claude Code is Anthropic's, and needs a Claude account whose plan includes Claude Code: that is paid for separately, and you can skip it. Everything else in EDGEkit works without it.
 
 ## Status
 
-As of 2026-11-03:
-
-| Phase | State |
+| | |
 |---|---|
-| K0 Decide | Done 2026-10-15: the decisions above |
-| K1 Build | Done 2026-10-18: Code - OSS built from source, without Copilot |
-| K2 Brand | Under way: name, icons, installer, default theme and watermark done; the onboarding and Welcome text wait for the owner's review |
-| K3 Bundle | Done 2026-10-21: the EDGE extensions built in, working offline, updating from Open VSX |
-| K4 Release | **Released:** 1.140.1, the first, on 2026-10-22; 1.140.2 (Claude Code for EDGE) on 2026-10-26; 1.140.3 (the Nexus links box, REDcode 0.10.5, EDGEdeck 0.29.4) on 2026-11-01. The extension pack 0.3.0, adding EDGEmat and EDGEwave, published on 2026-11-03 on the VS Code Marketplace and Open VSX. The update was tested end to end on the developer's PC (1.140.1 to 1.140.2); not yet seen: a real click on **Restart to Update** from an installed release |
-
-## Roadmap
-
-In plain words. Each phase ends with a test on the developer's PC.
-
-| Phase | What it adds | Status |
-|---|---|---|
-| K0 Decide | The name, platform, updates, AI and trademark decisions | Done |
-| K1 Build | Code - OSS built from source, unbranded | Done |
-| K2 Brand | EDGEkit's name, icons, default theme and welcome page | Under way |
-| K3 Bundle | The released EDGE extensions built in, working with no network, and updating themselves from Open VSX | Done |
-| K4 Release | A Windows installer anyone can download, which updates itself. The extension pack shipped early | 1.140.3 released; pack 0.3.0 published |
-| K5 Track upstream | Moving to newer Code - OSS releases every month or so, sooner for a security fix | Planned |
+| **The app** | A preview. The latest is 1.140.6 (2026-11-12), for Windows x64 |
+| **The extension pack** | A preview. The latest is 0.6.0 (2026-11-12), on the VS Code Marketplace and Open VSX |
+| **Good to know** | The installer isn't signed yet, so Windows may warn before it runs. Updating with **Restart to Update** was tested on the developer's PC, by running what the button runs; a click on the button in a released copy is not confirmed yet |
+| **Next** | Following newer releases of Code - OSS, the open-source editor EDGEkit is built from. A Linux build may come later |
 
 ## In this section
 
 | Page | |
 |---|---|
-| [Get the app](#get-the-app) | Download and install the EDGEkit app, Nexus download links, and Claude Code for EDGE (on this page) |
-| [Install the extension pack](install-pack.html) | Get the EDGE extensions in VS Code with one install |
+| [Install the app](install.html) | What you need, the installer, the first start, updating and uninstalling |
+| [Your first session](first-session.html) | Finding your way around, setting up each tool, and Claude Code with EDGEchat |
+| [Install the extension pack](install-pack.html) | The EDGE tools in VS Code or VSCodium instead |
+| [Troubleshooting](troubleshooting.html) | Fixes, EDGEkit's own command, and where it keeps things |
 
-The [EDGEkit docs](https://edgemodders.github.io/EDGEkit/) and its [design](https://edgemodders.github.io/EDGEkit/design.html) are the developer reference. Source and issues: [github.com/Edgemodders/EDGEkit](https://github.com/Edgemodders/EDGEkit).
+## Reference
 
-EDGEkit is not affiliated with Microsoft. Visual Studio Code is a trademark of Microsoft; EDGEkit is built from the MIT-licensed Code - OSS.
+- [EDGEkit docs](https://edgemodders.github.io/EDGEkit/) and its [design](https://edgemodders.github.io/EDGEkit/design.html), for developers
+- [Changelog](https://github.com/Edgemodders/EDGEkit/blob/main/CHANGELOG.md): what changed in each release
+- [Source and issues](https://github.com/Edgemodders/EDGEkit)
+
+EDGEkit is built from Code - OSS, the MIT-licensed open-source core of VS Code, the way VSCodium is. It is not affiliated with Microsoft; Visual Studio Code is a trademark of Microsoft.

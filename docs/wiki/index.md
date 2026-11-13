@@ -34,7 +34,7 @@ More toolkits build on those five for particular jobs:
 | Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; keep your work on its Desk; or ask an agent. Preview, 0.3.2 on the Marketplace |
 | Quickhacks | [EDGEhack](edgehack/) | A quickhack editor beside REDcode. Open any of the game's quickhacks in plain words, change it, or make new ones with effects, icons and scripts of your own, and try them live in the game. 0.1.1, the first release, a preview, on Nexus Mods and Open VSX |
 | Quests | [EDGEquest](edgequest/) | A quest maker beside REDcode. Read the game's quests in plain words, and write your own as a short story: EDGEquest makes the game's quest files from it. Preview, 0.1.0 on the Marketplace |
-| One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE tools built in (preview, 1.140.3), or an extension pack that installs them in VS Code in one go |
+| One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE editor tools built in (preview, 1.140.6), or an extension pack that installs them in VS Code in one go |
 | At your desk | [EDGEchat](edgechat/) | The EDGE plugin for Claude Code: one install connects Claude Code on your PC to the running game, the game's files, your mods and materials, with commands like `/edge:new-mod`. 0.1.1 |
 
 ## Platform benefits

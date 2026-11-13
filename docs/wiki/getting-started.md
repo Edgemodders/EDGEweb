@@ -20,7 +20,7 @@ EDGE is a family of tools. You don't need all of them. Start from what you want 
 | See how the game's own UI is built, or make a HUD panel that looks like the game's | [REDnode](rednode/) with its UI Tools pack | [UI Tools](rednode/ui-tools.html), then [your first native HUD panel](rednode/ui-tools-tutorial.html) |
 | Browse the game's files and edit them, WolvenKit-style, in VS Code | [REDcode](redcode/) | [Install and set up REDcode](redcode/install.html) |
 | Place objects in the game world and build a scene | [EDGEbuilder](edgebuilder/) | [Install and set up EDGEbuilder](edgebuilder/install.html) |
-| Get every EDGE tool in one app | [EDGEkit](edgekit/) | [Get the app](edgekit/#get-the-app) |
+| Get the EDGE editor tools in one app | [EDGEkit](edgekit/) | [Install the app](edgekit/install.html), then [your first session](edgekit/first-session.html) |
 | Install the EDGE tools in VS Code in one go | [EDGEkit](edgekit/) | [Install the extension pack](edgekit/install-pack.html) |
 | Recolour clothes, or make a new material from my words | [EDGEmat](edgemat/) | [Install EDGEmat](edgemat/install.html) |
 | Read the game's quests, or write a quest of my own | [EDGEquest](edgequest/) | [Install and set up EDGEquest](edgequest/install.html), then [Writing a quest](edgequest/writing.html) |
@@ -34,7 +34,7 @@ EDGE is a family of tools. You don't need all of them. Start from what you want 
 | You need | For |
 |---|---|
 | Cyberpunk 2077 on Windows PC | Everything. EDGE is single-player PC modding only. REDnode and REDagent support **game version 2.5** (REDnode 0.38.1 or later; REDagent 0.4.1 needs REDnode 0.50.2); on 2.31, use REDnode 0.37.0 and REDagent 0.3.1 |
-| [VS Code](https://code.visualstudio.com/), or the [EDGEkit app](edgekit/#get-the-app) | REDcode, EDGEdeck, EDGEmat, EDGEwave and the EDGEkit extension pack, which run inside it |
+| [VS Code](https://code.visualstudio.com/), or the [EDGEkit app](edgekit/install.html) | REDcode, EDGEdeck, EDGEmat, EDGEwave and the EDGEkit extension pack, which run inside it |
 | [REDnode](rednode/install.html) installed in the game | REDagent, EDGEbuilder and any REDnode mod or overlay app |
 | Your own [Anthropic API key](https://console.anthropic.com/) | REDagent. You pay Anthropic per use; see the [FAQ](faq.html#does-redagent-cost-money) |
 
