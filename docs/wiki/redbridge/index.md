@@ -11,7 +11,7 @@ reviewed: 2026-11-13
 
 REDbridge is a small helper program that reads and writes Cyberpunk 2077's game files for the other EDGE tools. It has no window. You don't open it or use it yourself: the tools download it with one click and start it when they need it. Inside, it uses the same code as [WolvenKit](https://github.com/WolvenKit/WolvenKit), the community's main modding tool.
 
-{% include shot.html caption="REDbridge at work" shows="The footer of the EDGEdeck page in VS Code, with the green dot and the version of the running REDbridge." %}
+{% include shot.html caption="REDbridge at work" src="/assets/shots/redbridge/index-edgedeck-footer.png" alt="The EDGEdeck page scrolled to its footer: the library folder, last deploy, disk use, and a green dot beside REDbridge 0.12.1 (WolvenKit 10.0.0)." shows="The footer of the EDGEdeck page in VS Code, with the green dot and the version of the running REDbridge." %}
 
 **New here?** You most likely don't need to read further. When a tool needs REDbridge, it offers a **Get REDbridge** or **Install REDbridge** button: press it. Come back if a tool says REDbridge is missing or too old: [Troubleshooting](troubleshooting.html).
 
