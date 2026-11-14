@@ -19,10 +19,14 @@ How to keep it:
 - Wiki: pages for REDnode's Admin Tools pack (Task Manager, Tools Manager) and Sound Tools pack (Sound Tracer, Sound Search, Hot swap): https://edgemodders.ai/wiki/rednode/admin-tools.html and https://edgemodders.ai/wiki/rednode/sound-tools.html
 - Wiki: three REDnode pages for mod makers, with a runnable example for each part: TweakDB from code, https://edgemodders.ai/wiki/rednode/tweakdb.html; the world (objects, scenes and pins), https://edgemodders.ai/wiki/rednode/world.html; and more of the game (quests, text, quickhack functions, sound, files, the game's UI), https://edgemodders.ai/wiki/rednode/more-apis.html
 - Wiki: "Try it" walkthroughs across REDnode's section: a first widget, a first Console command with how to find an item's id, a first archive swap, first prompts for Claude Code, a second space, reading the Mod log; and a "Start here" route for new makers: https://edgemodders.ai/wiki/rednode/making-mods.html
+- Wiki: "Your first mod with EDGEdeck", a walkthrough from an empty list to one Nexus mod working in the game: https://edgemodders.ai/wiki/edgedeck/first-mod.html
+- Wiki: EDGEdeck's loadouts have their own page, with a Try it: https://edgemodders.ai/wiki/edgedeck/loadouts.html
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- Wiki: EDGEdeck's rule for which mod wins a conflict is stated once, with an example: https://edgemodders.ai/wiki/edgedeck/conflicts.html#who-wins
+- Wiki: updating frameworks after a game patch needs no Nexus account, only the automatic check does; an empty EDGEdeck shows "No mods yet" with buttons; a new mod arrives switched on; and what an assistant can and can't do in EDGEdeck: https://edgemodders.ai/wiki/edgedeck/frameworks.html#after-a-game-update
 - Wiki: REDnode's pages gave three different current versions, and now give one. RED Hot Tools is no longer listed as something to install on game 2.5. Pressing F10 in interactive mode hides everything, and the overlay page says so: https://edgemodders.ai/wiki/rednode/overlay.html#f10-and-the-three-modes
 - Wiki: in REDnode's maker pages, `game.state()` is shown with `await`, the secrets example runs, the release's twelve samples are listed apart from the repo-only ones, and UI Tools, world pins and quickhack functions each give one minimum version: https://edgemodders.ai/wiki/rednode/game-api.html
 - Wiki: EDGEchat's safety page states exactly what asks every time (the EDGE tools' changes to the game, the save and the game folder) and what follows Claude Code's own permission setting, including a REDnode package built in the apps folder: https://edgemodders.ai/wiki/edgechat/safety.html
@@ -33,6 +37,8 @@ How to keep it:
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Wiki: EDGEdeck's section is rewritten for newcomers and checked against EDGEdeck 0.31.0, in the order a new user needs it: frameworks before the full tour of the Mods view, Nexus sign-in with an API key step by step, downloads one at a time with Cancel, and troubleshooting as "You see / Do this" tables: https://edgemodders.ai/wiki/edgedeck/
+- Landing page and platform page: EDGEdeck 0.31.0
 - Wiki: REDnode's section is rewritten for newcomers and checked against REDnode 0.62.4. The overview has routes, a short status and a page map for players and for mod makers; the game API page is a short guide; first examples say what you should see; Agents and MCP leads with EDGEchat; Troubleshooting is grouped by where you are stuck: https://edgemodders.ai/wiki/rednode/
 - Landing page, platform page, wiki home and FAQ: REDnode 0.62.4
 - Wiki: EDGEchat's section is revised for newcomers: jump lists, "what you should see" tables, terms explained where they first appear, how to get Node.js and Claude Code, settings for terminal and EDGEkit users, and troubleshooting split by topic: https://edgemodders.ai/wiki/edgechat/

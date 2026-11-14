@@ -3,17 +3,19 @@ title: EDGEdeck
 nav_title: Overview
 section: EDGEdeck
 order: 0
-description: "EDGEdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, and why you might want it."
-reviewed: 2026-11-03
+description: "EDGEdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, why you might want it, and where to start."
+reviewed: 2026-11-13
 ---
 
 # EDGE<span class="y">deck</span>
 
-EDGEdeck is the EDGE platform's mod manager for Cyberpunk 2077. It runs inside VS Code (and inside REDcode, which is built on VS Code) and looks after the mods you download: it keeps them, puts the ones you want into the game, takes them out again, and tells you when two of them fight over the same thing.
+EDGEdeck is the EDGE platform's mod manager for Cyberpunk 2077. It looks after the mods you download: it keeps them, puts the ones you want into the game, takes them out again, and tells you when two of them change the same thing. You don't need to code to use it.
 
-**Used REDdeck?** EDGEdeck was called REDdeck up to version 0.26.6. It is a new extension, so nothing carries over: in REDdeck, turn every mod off and deploy, then uninstall REDdeck, install EDGEdeck and add your mods again. REDdeck kept the original downloads in `%USERPROFILE%\REDdeck\downloads`, so you can add them from there.
+EDGEdeck is an add-on (an **extension**) for [VS Code](https://code.visualstudio.com/), a free editor from Microsoft. It also comes built into the [EDGEkit app](../edgekit/), EDGE's own editor.
 
 {% include shot.html caption="EDGEdeck in VS Code" src="/assets/shots/edgedeck/index-vscode.png" alt="VS Code with the Mods view in the sidebar, Frameworks above Mods, and the EDGEdeck page beside it: search, filter chips, and a table of fifteen mods with version, kind, size, status and action buttons, three of them with an update available." shows="The EDGEdeck Mods view in VS Code's sidebar with a typical list of mods, the Frameworks group at the top, and the EDGEdeck page open beside it." %}
+
+**New here?** Read this page, then [Install and set up](install.html), then put [your first mod](first-mod.html) in the game. Allow about twenty minutes. **Coming from Vortex?** After installing, go to [Switch from Vortex](switch-from-vortex.html) instead.
 
 ## What it's for
 
@@ -21,64 +23,90 @@ Cyberpunk 2077 has no built-in list of mods. A mod is a set of files dropped int
 
 A mod manager does that bookkeeping for you. EDGEdeck:
 
-- **keeps your mods in a library** outside the game folder, so turning a mod off doesn't mean deleting it;
-- **deploys** the mods you switch on into the game folder, and records every file it puts there;
+- **keeps your mods in a library**, a folder of its own outside the game folder, so turning a mod off doesn't mean deleting it;
+- **deploys** the mods you switch on: it puts their files into the game folder, and records every file it puts there;
 - **undoes** a deploy exactly, removing only the files it placed;
 - **shows conflicts** when two mods change the same thing, and lets you choose the winner;
 - **checks Nexus Mods** for updates and downloads them for you.
+
+There are four things to learn: **add** a mod, **turn it on or off**, **deploy**, **remove**.
 
 ## Why you might want it
 
 | If you... | EDGEdeck gives you |
 |---|---|
-| Find other mod managers confusing | One list of mods and four verbs: **add**, **turn on or off**, **deploy**, **remove**. Plain words, and no staging, purges or rules to learn |
-| Worry about breaking your game | Every deploy is recorded in a manifest and can be undone. EDGEdeck never deletes a file it didn't put there |
-| Have mods that clash in strange ways | EDGEdeck sees conflicts *inside* mod archives, which file-based managers like Vortex can't see, and explains who wins |
-| Don't want to hunt down frameworks | **Get the frameworks** fetches RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and Codeware in one go, and **Update all** brings every mod up to date after one question |
-| Already use Vortex | A one-click import of your Vortex mods. Vortex keeps its copies, so you can go back |
-| Want an AI assistant to manage mods for you | A command line and an MCP server with the same verbs, so Claude or another agent can list, add, switch and deploy mods, asking you before it touches the game |
-| Make mods in REDcode | Your project's packed output becomes a mod that refreshes every time you pack |
+| Find other mod managers confusing | One list of mods and four verbs: add, turn on or off, deploy, remove. Plain words throughout |
+| Worry about breaking your game | Every deploy is recorded and can be undone. EDGEdeck never deletes a file it didn't put there |
+| Have mods that clash in strange ways | EDGEdeck sees conflicts *inside* mod archives, which managers that only compare file names can't see, and says who wins |
+| Don't want to hunt down frameworks | **Get the frameworks** fetches the six that most mods need in one go, and **Update all** brings every mod up to date after one question |
+| Already use Vortex | A guided import of your Vortex mods. Vortex keeps its copies, so you can go back |
+| Want an AI assistant to manage mods for you | Claude or another assistant can list, add, switch and deploy your mods, and asks before it touches the game. See [Assistants](assistants.html) |
+| Make mods in REDcode | Your project becomes a mod in the list that refreshes every time you pack it |
 
 ## How it fits into EDGE
 
-EDGEdeck is the **Deploy** stage of the EDGE platform. It works on its own, and other toolkits add to it when they're present:
+EDGEdeck is the part of EDGE that puts mods into the game. It works on its own, and other EDGE tools add to it when they're present:
 
-| Toolkit | What it adds to EDGEdeck |
+| Tool | What it adds to EDGEdeck |
 |---|---|
-| [REDbridge](../redbridge/) | Reads inside mod archives, so EDGEdeck can show archive-level conflicts. EDGEdeck downloads and updates it for you |
-| [REDcode](../redcode/) | A REDcode project can become a EDGEdeck mod, and EDGEdeck mods can feed files back into a project |
-| Claude and other agents | EDGEdeck's MCP server lets an AI assistant manage your mods |
+| [REDbridge](../redbridge/) | Reads inside mod archives, so EDGEdeck can show conflicts between them. EDGEdeck downloads and updates it for you |
+| [REDcode](../redcode/) | A REDcode project can become an EDGEdeck mod, and EDGEdeck mods can feed files back into a project |
+| [EDGEchat](../edgechat/) and other assistants | EDGEchat connects Claude Code to EDGEdeck, so an AI assistant can manage your mods |
 
 ## Status
 
-EDGEdeck is at version 0.30.0 (2 November 2026) and manages its developer's game on two PCs. It's on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck) and [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck), marked **Preview**: young, and Windows only. Its command line and MCP server are on npm as `@edgemodders/edgedeck-mcp`. Deploy, undo and the library are in daily use. Nexus downloads, updates and REDmod deploys have passed the developer's tests but have had little use beyond them so far. Nexus sign-in through the browser is built and waits for Nexus to register EDGEdeck; until then you paste a personal API key, which works the same way.
+**Released, as a preview.** The latest is EDGEdeck 0.31.0 (2026-11-10), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
 
-New since 0.28.0, each passed the developer's hand test before its release:
-
-| Version | What's new |
+| | |
 |---|---|
-| 0.29.0 | [Get the frameworks](frameworks.html#getting-the-frameworks), from their authors' GitHub releases with no Nexus account. [Update all](nexus.html#update-all), and update or check one mod from its row. [Move library...](library.html#moving-the-library) |
-| 0.29.2 | **Update shown**: Update all follows your search and filter |
-| 0.29.3 | **Mod manager download** works in [EDGEkit](../edgekit/), and links no longer go astray when another editor has taken VS Code's links |
-| 0.29.4 | [Deploy or undeploy one mod](deploying.html#deploying-one-mod) from its row. Adding REDnode itself works |
-| 0.30.0 | [Several files from one Nexus page](nexus.html#several-files-from-one-page) are mods of their own, under one row named after the page |
+| **In daily use** | The library, deploy, undo, conflicts, loadouts |
+| **Passed the developer's tests, little use beyond them** | Nexus downloads and updates, Get the frameworks, REDmod deploys |
+| **Game version** | EDGEdeck places files and isn't tied to one game version. Its recorded tests ran on game 2.31; a test on game 2.5 is not recorded in its repo |
+| **Not switched on yet** | Signing in to Nexus through your browser. Nexus has to approve EDGEdeck first. Until then you copy a personal key from your Nexus account page and paste it in once: see [Signing in](nexus.html#signing-in) |
 
 ## In this section
 
+Start here:
+
 | Page | |
 |---|---|
-| [Install and set up](install.html) | Requirements, installing, the Set up steps, updating and uninstalling |
+| [Install and set up](install.html) | What you need, installing, the Set up steps, updating and uninstalling |
+| [Your first mod](first-mod.html) | From an empty list to one mod working in the game, step by step |
+| [Frameworks and game patches](frameworks.html) | The tools most mods need, and what to do after a game update |
+
+Everyday use:
+
+| Page | |
+|---|---|
+| [Adding and removing mods](adding-mods.html) | From files, folders and Nexus; versions; removing |
+| [Deploying and undo](deploying.html) | What deploy does, closing the game first, Run game, one mod at a time, undo |
+| [Conflicts and who wins](conflicts.html) | What conflicts are, the order rule, and how to choose the winner |
+| [Nexus Mods](nexus.html) | Signing in, download links, updates, Update all, several files from one page |
 | [Switch from Vortex](switch-from-vortex.html) | Move your mods over safely |
-| [The Mods view and the EDGEdeck page](mods-view.html) | Find your way around, group mods in sections, and set who wins |
-| [Adding mods](adding-mods.html) | From files, folders and Nexus, and how EDGEdeck decides where files go |
-| [Deploying and undo](deploying.html) | What deploy does, closing the game first, Run game, one mod at a time, hardlinks, changes outside EDGEdeck, deploy reports, undo |
-| [Conflicts](conflicts.html) | What they are, who wins, and how to choose |
-| [Nexus Mods](nexus.html) | Signing in, download links, updates, Update all, several files from one page, and versions |
-| [Frameworks and game patches](frameworks.html) | RED4ext, CET, redscript and friends, and what to do after a game update |
-| [Library, disk space and loadouts](library.html) | Where everything is kept, what uses space, loadouts you switch between |
-| [EDGEdeck and REDcode](redcode.html) | Testing your own mods, and borrowing files from installed ones |
+
+Going further, and reference:
+
+| Page | |
+|---|---|
+| [The Mods view and the EDGEdeck page](mods-view.html) | A tour of the two places you work in, then every button, status and column |
+| [Library and disk space](library.html) | Where everything is kept, moving it, what uses space |
+| [Loadouts](loadouts.html) | Named sets of mods you switch between |
+| [EDGEdeck and REDcode](redcode.html) | For mod makers: testing your own mods, and borrowing files from installed ones |
 | [Assistants and the command line](assistants.html) | Let Claude manage your mods, or script EDGEdeck |
 | [Settings and commands](settings.html) | Every setting and command |
-| [Troubleshooting](troubleshooting.html) | Symptoms and fixes |
+| [Troubleshooting](troubleshooting.html) | What you see, and what to do |
 
-The [EDGEdeck guide](https://edgemodders.github.io/EDGEdeck/guide.html) and [design](https://edgemodders.github.io/EDGEdeck/design.html) on EDGEdeck's own docs site are the reference this section draws on.
+## Coming from REDdeck
+
+EDGEdeck was called REDdeck up to version 0.26.6. EDGEdeck is a separate extension with its own library folder, so it does not see REDdeck's mods or settings. To move:
+
+1. In REDdeck, turn every mod off and deploy. That takes REDdeck's files out of the game.
+2. Uninstall REDdeck, then [install EDGEdeck](install.html).
+3. Add your mods again. REDdeck kept the original downloads in `%USERPROFILE%\REDdeck\downloads`, so you can [add them](adding-mods.html) from there.
+
+## Reference
+
+- [EDGEdeck guide](https://edgemodders.github.io/EDGEdeck/guide.html): the project's own short guide
+- [Changelog](https://github.com/Edgemodders/EDGEdeck/blob/main/CHANGELOG.md): what changed in each release
+- [Design](https://edgemodders.github.io/EDGEdeck/design.html), for developers
+- [Source and issues](https://github.com/Edgemodders/EDGEdeck)

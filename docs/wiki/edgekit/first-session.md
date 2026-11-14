@@ -95,7 +95,7 @@ Pick the one that matches what you came for. Each is a walkthrough that ends wit
 
 | You want to | Do this |
 |---|---|
-| Use mods made by others | [Switch from Vortex to EDGEdeck](../edgedeck/switch-from-vortex.html), or start with [Adding mods](../edgedeck/adding-mods.html) |
+| Use mods made by others | [Your first mod with EDGEdeck](../edgedeck/first-mod.html). Coming from Vortex? [Switch from Vortex to EDGEdeck](../edgedeck/switch-from-vortex.html) |
 | Make a mod by asking for it | [Your first mod with EDGEchat](../edgechat/first-mod.html) |
 | Recolor a piece of clothing | [EDGEmat](../edgemat/) |
 | Change a quickhack | [Your first quickhack](../edgehack/first-quickhack.html) |

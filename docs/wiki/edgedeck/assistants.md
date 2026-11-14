@@ -1,15 +1,23 @@
 ---
 title: Assistants and the command line
-nav_title: Assistants and CLI
+nav_title: Assistants and command line
 section: EDGEdeck
-order: 11
-description: "Let Claude or another AI assistant manage your mods through EDGEdeck's MCP server, or script EDGEdeck from the command line."
-reviewed: 2026-10-24
+order: 13
+description: "Let Claude or another AI assistant manage your mods through EDGEdeck: what you can ask, what it can and can't do, how to connect it with EDGEchat or by hand, and the edgedeck command line."
+reviewed: 2026-11-13
 ---
 
 # Assistants and the <span class="y">command line</span>
 
-Everything you can do in EDGEdeck's Mods view, an AI assistant can do for you. That's the EDGE platform's idea: every tool you use, an agent can use too.
+An AI assistant can do most of what you do in the Mods view: look at your mods, add them, turn them on and off, and deploy. That's the EDGE platform's idea: a tool you can use, an assistant can use too.
+
+| On this page | |
+|---|---|
+| [What you can ask](#what-you-can-ask) | With examples |
+| [What an assistant can and can't do](#what-an-assistant-can-and-cant-do) | |
+| [Connect an assistant](#connect-an-assistant) | The easy way first |
+| [Safety](#safety) | What asks you first |
+| [The command line](#the-command-line) | For your own scripts |
 
 ## What you can ask
 
@@ -25,30 +33,59 @@ Once an assistant is connected, ask in plain words:
 
 > Save my current setup as a loadout called "photo mode".
 
-The assistant uses EDGEdeck's tools: list and inspect mods, add, install a REDcode project, turn on or off, reorder, rename, remove, show pending changes, deploy, undo, changes in the game folder, conflicts, loadouts and Vortex import.
-
 {% include shot.html caption="An assistant managing mods" shows="Claude Code in a terminal answering &quot;which of my mods conflict?&quot; using EDGEdeck's tools, and the Mods view updating on its own." %}
+
+## What an assistant can and can't do
+
+| It can | It can't, yet |
+|---|---|
+| List your mods and look at one in full: files, sizes, where it came from, conflicts | Download from Nexus, sign in to Nexus, check for updates or update mods |
+| Add a mod from a file or folder on your PC | Get the frameworks |
+| Add or refresh your own REDcode or WolvenKit project | See conflicts inside archives. It sees conflicts by file path only |
+| Turn mods on or off, move them in the order, rename, remove | Make or change sections |
+| Say what the next deploy will change | Start the game |
+| Deploy everything or one mod, and undo a deploy | Move the library |
+| List files changed in the game folder | |
+| Save, switch and list loadouts | |
+| List and import Vortex's mods | |
+
+For the things in the right-hand column, use the buttons.
 
 ## Connect an assistant
 
-| Assistant | How |
-|---|---|
-| **Agents inside VS Code** (VS Code 1.101 and later) | Nothing to do. They see EDGEdeck's tools as soon as EDGEdeck is installed |
-| **Claude Code** | Run **EDGEdeck: Connect an assistant (MCP)...** from the command palette, choose "Copy the Claude Code command", and paste it into a terminal once |
-| **Other MCP clients** | The same command copies a JSON entry for the client's settings. Or point the client at `node <EDGEdeck extension folder>/dist/mcp.js --library <folder> --game <folder>` |
-| **Without VS Code** | EDGEdeck's tools are also on npm: `npx -y @edgemodders/edgedeck-mcp` starts the server. For Claude Code: `claude mcp add edgedeck -- npx -y @edgemodders/edgedeck-mcp`. It shares the library with the extension |
+Assistants reach EDGEdeck through **MCP**, the standard way AI assistants use tools (see the [Glossary](../glossary.html)). You don't need to know more than that: pick your row.
 
-Outside VS Code, EDGEdeck's MCP server runs with Node (20 or newer). If the copied command fails because `node` or `npx` isn't found, install [Node.js](https://nodejs.org/).
+| You use | Do this |
+|---|---|
+| **Claude Code with EDGEchat**, the easy way, and what the EDGEkit app sets up | Nothing more. [EDGEchat](../edgechat/), the EDGE plugin for Claude Code, already connects EDGEdeck along with the other EDGE tools. See [Install EDGEchat](../edgechat/install.html) and [Connect Claude Code](../connect-claude-code.html) |
+| **Agents built into VS Code** (VS Code 1.101 or later) | Nothing. They see EDGEdeck's tools as soon as EDGEdeck is installed |
+| **Claude Code without EDGEchat** | Press `Ctrl+Shift+P`, run **EDGEdeck: Connect an assistant (MCP)...**, choose **Copy the Claude Code command**, and paste it into a terminal once |
+| **Another assistant that speaks MCP** | The same command can copy a settings entry for it |
+| **No VS Code at all** | EDGEdeck's tools are also on npm: `claude mcp add edgedeck -- npx -y @edgemodders/edgedeck-mcp` adds them to Claude Code. They use the same library as the extension |
+
+> **Connect it one way only.** If you have EDGEchat, don't also add EDGEdeck by hand: Claude would then see every EDGEdeck tool twice. If that has happened, run `/edge:setup` in Claude Code. It finds the copy you added by hand and explains how to remove it.
+
+**Check that it worked:** ask "Which of my mods are on?". The assistant should answer with the mods from your list.
+
+The routes outside VS Code need [Node.js](https://nodejs.org/) 20 or newer. If a copied command fails because `node` or `npx` isn't found, install it.
 
 ## Safety
 
-- **Deploy, undo and remove ask first.** Those tools change the game folder or your library, so they're marked as needing your say: Claude Code asks you before every call, in every permission mode, auto mode included. Deploy and undo also refuse while the game is running, as the buttons do.
+- **Deploy, undo and remove ask first.** Those change the game folder or delete from your library, so they're marked as needing your say. Claude Code asks you before every one of them, in every permission mode, auto mode included.
+- **The game must be closed.** Deploy and undo refuse while the game is running, as the buttons do.
 - **What you see stays true.** The Mods view reloads by itself when an assistant changes your library or deploys.
 - **Same rules as you.** An assistant goes through EDGEdeck, so it can only remove files EDGEdeck placed, and everything it deploys can be undone.
 
 ## The command line
 
-The same engine runs from a terminal, for your own scripts. It's on npm with the MCP server: run `npx -p @edgemodders/edgedeck-mcp edgedeck <command>`, or install it once with `npm i -g @edgemodders/edgedeck-mcp` and run `edgedeck <command>`. (In a checkout of the [EDGEdeck repo](https://github.com/Edgemodders/EDGEdeck), `node bin/edgedeck.mjs <command>` is the same.) Add `--json` to any command for machine-readable output.
+For people who write scripts. The same engine runs from a terminal as the `edgedeck` command, which comes in the npm package with the assistant tools.
+
+| To | Run |
+|---|---|
+| Try it without installing | `npx -p @edgemodders/edgedeck-mcp edgedeck <command>` |
+| Install it once | `npm i -g @edgemodders/edgedeck-mcp`, then `edgedeck <command>` |
+
+Add `--json` to any command for output a script can read.
 
 | Command | Does |
 |---|---|
@@ -58,7 +95,7 @@ The same engine runs from a terminal, for your own scripts. It's on npm with the
 | `install-project <.cpmodproj> [--follow \| --keep-both]` | Add a REDcode or WolvenKit project's packed output, or refresh it, and turn it on. Beside a mod of the same name, `--follow` makes that mod follow this project and `--keep-both` adds the project as another version of it |
 | `on <id>`, `off <id>` | Turn a mod on or off |
 | `up <id>`, `down <id>` | Move it in the order (first wins conflicts) |
-| `rename <id> [name]` | A name of your own for the mod, for all its versions. No name puts the first one back |
+| `rename <id> [name]` | A name of your own for the mod, for all its versions. No name puts the original back |
 | `remove <id>` | Remove it from the library |
 | `deploy [--keep PATH...] [--restore PATH...] [--mod ID]` | Deploy. `--keep` and `--restore` answer the "changed in game folder" question per file; `--mod` deploys that mod's changes only. Writes a deploy report and prints where. Refuses while the game is running |
 | `undo` | Undo deploy. Refuses while the game is running |
@@ -67,6 +104,6 @@ The same engine runs from a terminal, for your own scripts. It's on npm with the
 | `conflicts` | Conflicts by file path |
 | `loadout save <name>`, `loadout load <name or file>`, `loadout list` | Loadouts. `load` makes one active (a file is imported first); `list` marks the active one |
 | `vortex list`, `vortex import` | See and import Vortex's mods |
-| `mcp` | Start the MCP server |
+| `mcp` | Start the server that assistants connect to |
 
-`--library <folder>` and `--game <folder>` override the folders. The command line finds the game the same way the extension does.
+`--library <folder>` and `--game <folder>` override the folders. Without `--game`, the command line uses the game folder the library remembers, or finds the game the way the extension does.
