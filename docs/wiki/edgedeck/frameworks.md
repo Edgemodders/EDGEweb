@@ -45,7 +45,7 @@ Most mods need at least the first six: RED4ext, Cyber Engine Tweaks, redscript, 
 3. Wait for the downloads. A message names what was added, with a **Deploy now** button.
 4. Close the game and deploy.
 
-{% include shot.html caption="Get the frameworks" shows="The list Get the frameworks shows: the six frameworks with the library's version and the newest one, the missing and older ones ticked." %}
+{% include shot.html caption="Get the frameworks" src="/assets/shots/edgedeck/frameworks-get-list.png" alt="The Get the frameworks list over the Mods view: RED4ext 1.31.1, Cyber Engine Tweaks 1.38.1, redscript 1.0.0, ArchiveXL 1.28.8, TweakXL 1.12.2 and Codeware 1.21.4, each saying not in the library and each ticked, with 6 Selected and an OK button." shows="The list Get the frameworks shows: the six frameworks with the library's version and the newest one, the missing and older ones ticked." %}
 
 **What you should see:** six rows in the Frameworks group, each ticked and saying `not deployed yet`, then `deployed` after the deploy.
 

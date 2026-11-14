@@ -40,7 +40,7 @@ Most Cyberpunk mods don't work alone. They need **frameworks**: community-made t
 2. A list opens with the six: RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and Codeware. All are ticked. Press **OK**.
 3. Wait while they download. They come from each author's own page on GitHub, so this step needs no Nexus account.
 
-{% include shot.html caption="Get the frameworks" shows="The list Get the frameworks shows: the six frameworks with the library's version and the newest one, the missing and older ones ticked." %}
+{% include shot.html caption="Get the frameworks" src="/assets/shots/edgedeck/frameworks-get-list.png" alt="The Get the frameworks list over the Mods view: RED4ext 1.31.1, Cyber Engine Tweaks 1.38.1, redscript 1.0.0, ArchiveXL 1.28.8, TweakXL 1.12.2 and Codeware 1.21.4, each saying not in the library and each ticked, with 6 Selected and an OK button." shows="The list Get the frameworks shows: the six frameworks with the library's version and the newest one, the missing and older ones ticked." %}
 
 | What you should see | |
 |---|---|

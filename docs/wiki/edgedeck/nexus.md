@@ -31,7 +31,7 @@ You sign in by giving EDGEdeck a **personal API key**: a long password that Nexu
 
 **What you should see:** a message "Nexus: signed in as" with your Nexus name, and "(Premium)" after it if you have Premium. The **Sign in to Nexus Mods** step disappears.
 
-{% include shot.html caption="Signing in to Nexus" shows="The Sign in to Nexus Mods row in the Set up group, and the prompt where you paste a personal API key." %}
+{% include shot.html caption="Signing in to Nexus" src="/assets/shots/edgedeck/nexus-api-key-prompt.png" alt="The Nexus Mods API key box at the top of the window, empty, with the line: your personal API key from nexusmods.com, Settings, API Access; it stays in VS Code's secret storage. The Sign in to Nexus Mods row shows in the Set up group behind it." shows="The Sign in to Nexus Mods row in the Set up group, and the prompt where you paste a personal API key." %}
 
 | Good to know | |
 |---|---|

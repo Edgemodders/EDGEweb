@@ -196,7 +196,7 @@ The page remembers your search, filters and columns.
 
 Sections let you group a long list your way: "Visuals", "Gameplay", "Testing", whatever helps you find things. Frameworks and Mods are built in. Your own sections sit between them, on the EDGEdeck page and in the Mods view.
 
-{% include shot.html caption="Sections on the EDGEdeck page" shows="The EDGEdeck page with a section of your own between Frameworks and Mods: its header with the on/off box, the move and remove buttons, and one folded section below it." %}
+{% include shot.html caption="Sections on the EDGEdeck page" src="/assets/shots/edgedeck/mods-view-sections.png" alt="The EDGEdeck page with four boxes: Frameworks with six frameworks, a section named Visuals with three example mods and a dash in its box because one is off, a folded section named Testing, and Mods. Each section of your own has move-all, remove-all, rename, up, down and delete buttons on its header." shows="The EDGEdeck page with a section of your own between Frameworks and Mods: its header with the on/off box, the move and remove buttons, and one folded section below it." %}
 
 **Sections only group the list. They don't decide which mod wins a conflict.** See [Who wins](conflicts.html#who-wins).
 
