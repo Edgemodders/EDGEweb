@@ -56,7 +56,7 @@ console.log('Spawned', id.hash);
 | Run `await world.remove(id)` | The box is gone |
 | Switch your mod off instead | The box goes too: REDnode removes what a package spawned when it stops |
 
-{% include shot.html caption="A spawned box" shows="Gameplay with a closed cardboard box standing on the street three metres in front of V." %}
+{% include shot.html caption="A spawned box" src="/assets/shots/rednode/world-box.png" alt="Gameplay on a street at dawn with a closed cardboard box standing on the road a few metres in front of V, and REDnode's coordinates strip at the top of the screen." shows="Gameplay with a closed cardboard box standing on the street three metres in front of V." %}
 
 The `inFront` helper and the mesh path come from the **World test** sample in REDnode's repo, which passed in game. The paths use double backslashes because `\` is a special character in JavaScript text.
 
@@ -173,7 +173,7 @@ const id = await world.pin({ at: here, title: 'Drop', text: 'the crate by the st
 | Open the map or photo mode | The pin hides |
 | Run `await world.unpin(id)` | The pin is gone |
 
-{% include shot.html caption="A world pin" shows="Gameplay looking down a street at a cyan post with a label above it: the title Drop, a line of text, and the distance in metres." %}
+{% include shot.html caption="A world pin" src="/assets/shots/rednode/world-pin.png" alt="Gameplay looking down a street at a cyan post with a label above it: the title Drop, the line the crate by the stairs, and 10 m." shows="Gameplay looking down a street at a cyan post with a label above it: the title Drop, a line of text, and the distance in metres." %}
 
 A pin can follow an object: give `at` the id that `world.spawn` returned, or use `label` when you spawn.
 

@@ -106,7 +106,7 @@ The Workbench draws on the whole screen, so that it can outline widgets anywhere
 
 It keeps its place and size across starts. Like every REDnode window it shows only in interactive mode (F10), unless you pin it to the HUD; native panels it runs stay on the HUD either way, since the game draws them.
 
-{% include shot.html caption="The Workbench's three tabs" shows="The UI Workbench window alone, cropped: its title bar with the reset and close icons, the Inspect, Edit and Projects tabs, the Refresh, Pick and Pick inside buttons, and the status line at the right." %}
+{% include shot.html caption="The Workbench's three tabs" src="/assets/shots/rednode/ui-tools-tabs.png" alt="The UI Workbench window: its title bar with the window icons, the Inspect, Edit and Projects tabs, the Refresh, Pick and Pick inside buttons, the status line 13 layers, ink size 3840 x 2160, and the layer tree under the filter box." shows="The UI Workbench window alone, cropped: its title bar with the reset and close icons, the Inspect, Edit and Projects tabs, the Refresh, Pick and Pick inside buttons, and the status line at the right." %}
 
 ## Where things are kept
 
