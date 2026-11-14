@@ -25,7 +25,8 @@ The site pitches the EDGEmodders tools and links to their docs:
 | [EDGEquest](https://github.com/Edgemodders/EDGEquest) | Quest maker beside REDcode (preview) | [edgemodders.github.io/EDGEquest](https://edgemodders.github.io/EDGEquest/) |
 | [EDGEhack](https://github.com/Edgemodders/EDGEhack) | Quickhack editor beside REDcode (preview) | [edgemodders.github.io/EDGEhack](https://edgemodders.github.io/EDGEhack/) |
 | [EDGEkit](https://github.com/Edgemodders/EDGEkit) | The EDGEmodders editor app and its extension pack (preview) | [edgemodders.github.io/EDGEkit](https://edgemodders.github.io/EDGEkit/) |
-| [EDGEchat](https://github.com/Edgemodders/EDGEchat) | The EDGE plugin for Claude Code (in the wiki only) | [edgemodders.github.io/EDGEchat](https://edgemodders.github.io/EDGEchat/) |
+| [EDGEchat](https://github.com/Edgemodders/EDGEchat) | The EDGE plugin for Claude Code | [edgemodders.github.io/EDGEchat](https://edgemodders.github.io/EDGEchat/) |
+| [REDsave](https://github.com/Edgemodders/REDsave) | Save game manager, built into EDGEkit (no wiki section yet) | [edgemodders.github.io/REDsave](https://edgemodders.github.io/REDsave/) |
 
 ## Repository layout
 
@@ -33,10 +34,12 @@ The site pitches the EDGEmodders tools and links to their docs:
 |---|---|
 | `docs/index.html` | The landing page, standalone HTML in the HUD style |
 | `docs/platform.html` | The EDGE platform page, standalone HTML sharing `docs/assets/css/site.css` with the landing page |
-| `docs/wiki/` | The EDGEmodders wiki, rendered with `docs/_layouts/wiki.html` |
+| `docs/wiki/` | The EDGEmodders wiki, rendered with `docs/_layouts/wiki.html`. `docs/wiki/first-hour.md` is the newcomer's route |
+| `docs/community.md` | The Get involved page |
 | `docs/*.md` | Further pages, rendered by Jekyll with `docs/_layouts/default.html` and `docs/assets/css/hud.css` |
 | `docs/assets/tools/` | Tool icons, copied from each tool's `docs/assets/brand/icon.png` |
 | `tools/brand/` | Generates the banner, social preview, icon and badges |
+| `CHANGELOG.md` | What changed on the site, for readers |
 
 ## Build and deploy
 

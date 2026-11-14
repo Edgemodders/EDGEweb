@@ -71,7 +71,7 @@ EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks m
 
 ## How it fits into EDGE
 
-EDGEbuilder is an add-on that [REDnode](../rednode/) runs inside the game. REDnode calls such an add-on a [package](../glossary.html#edge-terms). The other EDGE tools each do one job for it:
+EDGEbuilder is an add-on that [REDnode](../rednode/) runs inside the game. REDnode calls such an add-on a [package](../glossary.html#package). The other EDGE tools each do one job for it:
 
 | Toolkit | What it does for EDGEbuilder |
 |---|---|

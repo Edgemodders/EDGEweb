@@ -11,7 +11,7 @@ reviewed: 2026-11-13
 
 Whatever you can do with EDGEmat's buttons, an AI assistant can do too. You ask in plain words, such as "make the punk jeans dark green on both bodies", and the assistant finds the garment, reads its layers, recolors them and saves the result into your mod project. You then pack and install the project as usual.
 
-It works because EDGEmat comes with an **MCP server**: a small program that offers EDGEmat's abilities to an assistant as tools. [MCP](../glossary.html#edge-terms) is the standard way AI assistants use tools. The assistant on these pages is [Claude Code](https://claude.com/claude-code), Anthropic's assistant that runs in a terminal or inside VS Code.
+It works because EDGEmat comes with an **MCP server**: a small program that offers EDGEmat's abilities to an assistant as tools. [MCP](../glossary.html#mcp-server) is the standard way AI assistants use tools. The assistant on these pages is [Claude Code](https://claude.com/claude-code), Anthropic's assistant that runs in a terminal or inside VS Code.
 
 | On this page | |
 |---|---|

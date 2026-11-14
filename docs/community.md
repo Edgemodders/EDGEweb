@@ -25,13 +25,13 @@ New here? Start on Discord and say what you want to make.
 
 ### Never modded before
 
-You are who these tools are for. Try them, then tell us:
+You are who these tools are for. [Your first hour](wiki/first-hour.html) shows where to begin. Try the tools, then tell us:
 
 - what you wanted to make,
 - where you got stuck,
 - what the assistant got wrong.
 
-Open an issue in the repo of the tool you were using. A plain description is enough.
+Tell us on Discord. If you use GitHub, you can also open an issue in the repo of the tool you were using. A plain description is enough.
 
 ### Experienced modders
 
@@ -50,15 +50,16 @@ The stack is TypeScript, JavaScript, Node, VS Code extensions, C# (.NET), C++ an
 | [REDagent](https://github.com/Edgemodders/REDagent) | Modding agent inside the game, powered by Claude | JavaScript |
 | [REDcode](https://github.com/Edgemodders/REDcode) | Modding IDE built on VS Code | TypeScript |
 | [EDGEdeck](https://github.com/Edgemodders/EDGEdeck) | Mod manager inside VS Code | TypeScript |
-| [REDbridge](https://github.com/Edgemodders/REDbridge) | WolvenKit engine host over JSON-RPC | C# |
-| [REDnode](https://github.com/Edgemodders/REDnode) | Node.js runtime scripting for the game | C++, TypeScript |
+| [REDbridge](https://github.com/Edgemodders/REDbridge) | The helper that reads and writes the game's files with WolvenKit's code, over JSON-RPC | C# |
+| [REDnode](https://github.com/Edgemodders/REDnode) | The runtime in the game: runs JavaScript and TypeScript mods and draws their windows | C++, TypeScript |
 | [EDGEbuilder](https://github.com/Edgemodders/EDGEbuilder) | World builder inside the game, a REDnode package | TypeScript |
 | [EDGEwave](https://github.com/Edgemodders/EDGEwave) | Sound studio beside REDcode | TypeScript |
 | [EDGEmat](https://github.com/Edgemodders/EDGEmat) | Material editor | TypeScript |
 | [EDGEquest](https://github.com/Edgemodders/EDGEquest) | Quest maker beside REDcode | TypeScript |
 | [EDGEhack](https://github.com/Edgemodders/EDGEhack) | Quickhack editor beside REDcode | TypeScript |
 | [EDGEkit](https://github.com/Edgemodders/EDGEkit) | The EDGEmodders editor app (built from Code - OSS) and its extension pack | JavaScript |
-| [EDGEchat](https://github.com/Edgemodders/EDGEchat) | The EDGE plugin for Claude Code: skills and MCP servers (0.1.1) | Markdown |
+| [EDGEchat](https://github.com/Edgemodders/EDGEchat) | The EDGE plugin for Claude Code: skills and MCP servers | Markdown |
+| [REDsave](https://github.com/Edgemodders/REDsave) | Save game manager for VS Code, built into EDGEkit | TypeScript |
 
 ## Ground rules
 

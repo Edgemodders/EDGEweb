@@ -34,10 +34,18 @@ How to keep it:
 - Wiki: in EDGEquest's section, Try it sections for reading a game quest, the checker, a music cue and an assistant; how to copy a place from a game quest; and how to share or remove a quest: https://edgemodders.ai/wiki/edgequest/reading.html#copying-a-place-from-a-game-quest
 - Wiki: EDGEwave has a tutorial, "Your first sound mod", from finding the katana's draw sound to hearing your version in the game: https://edgemodders.ai/wiki/edgewave/tutorial.html
 - Wiki: new EDGEwave pages for finding and playing sounds, editing and mixing, Add to Project, the voice tools, voices for quests and REDnode mods, assistants, settings and commands, and troubleshooting: https://edgemodders.ai/wiki/edgewave/
+- Your first hour: one route from nothing installed to a first mod, at your desk or inside the game, with the time and cost of each step: https://edgemodders.ai/wiki/first-hour.html
+- A Get started button on the landing page, and a line that says what EDGE costs and needs: https://edgemodders.ai/
+- EDGEchat has a card on the landing page and a section on the platform page: https://edgemodders.ai/platform.html#edgechat
+- FAQ: what EDGE costs, what the AI can change, saves, bans, uninstalling, Vortex and Nexus mods, game versions and stores: https://edgemodders.ai/wiki/faq.html
+- Glossary: about 125 terms in ten groups, each with its own link, such as https://edgemodders.ai/wiki/glossary.html#framework
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- The old address https://edgemodders.ai/wiki/edgewave/try-it.html leads to Install and set up EDGEwave again.
+- Landing and platform pages: seven toolkits offer an MCP server, not four; the toolkits build on each other, where the pages said each works alone; EDGEhack is not on the VS Code Marketplace; swapping sound archives into the running game is untested on game 2.5: https://edgemodders.ai/platform.html
+- Get involved and the README list every toolkit, with REDsave: https://edgemodders.ai/community.html
 - Wiki: EDGEwave's pages described 0.1.0 with its tests pending; they now give 0.2.0, the button's current name (Add to Project), all five settings, and what the voice tools cost, what is sent to ElevenLabs and where the key is kept: https://edgemodders.ai/wiki/edgewave/voices.html
 - Wiki: EDGEquest's assistant server is on npm, where the pages said it was waiting; EDGEwave 0.2.0 is released, so the sound picker, your own sounds and voice takes are described as available; the template quest is described as New Quest really makes it; and installing names RED4ext beside ArchiveXL: https://edgemodders.ai/wiki/edgequest/writing.html
 - Wiki: EDGEhack's pages no longer say REDcode installs with it from the Marketplace, that its assistant server is not on npm yet, or that REDagent can make quickhacks today. The editor page says All tiers copies the selected tier's change and that Edit is on the game quickhack's page: https://edgemodders.ai/wiki/edgehack/editor.html
@@ -57,6 +65,11 @@ How to keep it:
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Getting started tells the three ways in apart (the EDGEkit app, REDagent, EDGEchat) and says how each tool installs today: https://edgemodders.ai/wiki/getting-started.html
+- The landing and platform pages are in plainer words, with every status line brought up to the current releases: https://edgemodders.ai/ and https://edgemodders.ai/platform.html
+- The wiki home states each tool's release once, in its tool tables: https://edgemodders.ai/wiki/
+- Connect Claude Code leads with EDGEchat and shows which of the seven tools it connects and which you add by hand: https://edgemodders.ai/wiki/connect-claude-code.html
+- The EDGE Library page says which tools use it today (EDGEbuilder, EDGEhack, REDcode) and which are planned: https://edgemodders.ai/wiki/library.html
 - Wiki: EDGEwave's section is rebuilt for newcomers and checked against EDGEwave 0.2.0, with a "Words you'll meet" table and a status that says what was heard in the game. "Install and use EDGEwave" is now "Install and set up", at https://edgemodders.ai/wiki/edgewave/install.html
 - Wiki: EDGEquest's section is rewritten for newcomers and checked against EDGEquest 0.1.1 and EDGEwave 0.2.0: what a quest can hold today and a "Words you'll meet" table on the overview, the Storyboard's buttons, where files are kept, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgequest/
 - Wiki: EDGEhack's section is rewritten for newcomers and checked against 0.1.2: a "Words you'll meet" table, one table of what each feature needs, install by editor with updating and uninstalling, "Your first quickhack" installs the mod before trying it live, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgehack/

@@ -4,12 +4,12 @@ nav_title: Contribute
 section: Start here
 order: 9
 description: "How to suggest a wiki page, report a mistake or share a tip."
-reviewed: 2026-10-24
+reviewed: 2026-11-13
 ---
 
 # Contribute to the <span class="y">wiki</span>
 
-The wiki is curated so it stays accurate: pages are checked against each tool's docs before they go up. You don't have to write a page to help.
+The wiki is curated so it stays accurate. Claude sessions write the pages and check them against each tool's own docs, and the site's owner reviews them before they go up. You don't have to write a page to help.
 
 | You have | Do this |
 |---|---|
@@ -34,8 +34,10 @@ nav_title: Switch from Vortex
 section: EDGEdeck
 order: 2
 description: "One sentence for search results."
-reviewed: 2026-10-13
+reviewed: 2026-11-13
 ---
 ```
 
-`section` is the sidebar group, one of: Start here, REDagent, EDGEchat, REDnode, REDcode, EDGEdeck, REDbridge, EDGEbuilder, EDGEwave, EDGEmat, EDGEquest, EDGEhack, EDGEkit. `order` sorts pages within it.
+Put `description` in quotes, and any other value that contains a colon followed by a space. Without the quotes the page breaks and drops out of the sidebar.
+
+`section` is the sidebar group, one of: Start here, REDagent, EDGEchat, REDnode, REDcode, EDGEdeck, REDbridge, EDGEbuilder, EDGEwave, EDGEmat, EDGEquest, EDGEhack, EDGEkit. `order` sorts pages within it. `reviewed` is the date the page was last checked against the tool's docs.

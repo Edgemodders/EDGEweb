@@ -28,7 +28,7 @@ EDGE has two assistants, for two kinds of mod:
 | A mod made of **game files**: a look, a texture, a text, a stat, a sound | **Claude Code** with REDcode's tools. This page | On your desktop, in VS Code or a terminal |
 | A mod that **runs in the game**: something on the HUD, a window, a reaction to what happens | [REDagent](../redagent/) | Inside the game |
 
-**Claude Code** is Anthropic's AI assistant for working with files. It has its own account and its own cost, separate from EDGE: see [Claude Code's setup](https://code.claude.com/docs/en/setup). REDcode's tools reach it through **`redcode-mcp`**, a small program that gives an assistant the same engine the REDcode editor uses. [MCP](../glossary.html#edge-terms) is the standard that lets AI assistants use tools; any assistant that speaks it can use `redcode-mcp`.
+**Claude Code** is Anthropic's AI assistant for working with files. It has its own account and its own cost, separate from EDGE: see [Claude Code's setup](https://code.claude.com/docs/en/setup). REDcode's tools reach it through **`redcode-mcp`**, a small program that gives an assistant the same engine the REDcode editor uses. [MCP](../glossary.html#mcp-server) is the standard that lets AI assistants use tools; any assistant that speaks it can use `redcode-mcp`.
 
 ## What you can ask
 

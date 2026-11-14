@@ -21,7 +21,7 @@
 <div class="bar"><div class="wrap">
   <span><span class="dot"></span><b>EDGEMODDERS</b> / CYBERPUNK 2077 / AI-FIRST MODDING</span>
   <nav>
-    <a href="#community">Community</a><a href="#why">Why</a><a href="#loop">The loop</a><a href="#tools">Tools</a><a href="#principles">Principles</a><a href="wiki/">Wiki</a><a href="#join">Join</a>
+    <a href="wiki/first-hour.html">Get started</a><a href="#community">About</a><a href="#why">Why</a><a href="#loop">The loop</a><a href="#tools">Tools</a><a href="#principles">Principles</a><a href="platform.html">Platform</a><a href="wiki/">Wiki</a><a href="#join">Join</a>
   </nav>
 </div></div>
 
@@ -32,9 +32,10 @@
   <h1>Modding on <span>the EDGE.</span></h1>
   <p class="lede">Introducing our new agent-based modding platform, <b>EDGE</b>, that brings mod creation, testing, deployment and execution into a single unified open platform. Our AI-first tools invite veterans and beginners alike to bring their mod ideas to life.</p>
   <div class="cta">
-    <a class="btn go" href="#join">Join the crew</a>
+    <a class="btn go" href="wiki/first-hour.html">Get started</a>
     <a class="btn" href="#tools">See the tools</a>
-    <a class="btn" href="platform.html">Read more</a>
+    <a class="btn" href="platform.html">How EDGE works</a>
+    <a class="btn" href="#join">Join the crew</a>
   </div>
   <div class="meta">
     <span class="tag y">AI-first</span>
@@ -43,6 +44,7 @@
     <span class="tag">Works with WolvenKit</span>
     <span class="tag r">Early days: tools in active development</span>
   </div>
+  <p class="note">// Free and open source. For Cyberpunk 2077 version 2.5 on a Windows PC. The two AI assistants use your own Anthropic account: REDagent an API key, paid per use; EDGEchat a Claude plan. <a href="wiki/faq.html#what-does-edge-cost">What it costs</a> &middot; <a href="wiki/getting-started.html#what-you-need">What you need</a></p>
 </header>
 
 <section id="community">
@@ -64,18 +66,18 @@
       </ul></div>
     <div class="panel ok"><div class="label">With EDGEmodders</div>
       <ul>
-        <li>Say what you want: <em>"make the Mantis Blades glow cyan"</em></li>
+        <li>Say what you want: <em>"make this jacket red"</em></li>
         <li>An assistant reads the game files as plain text and finds what to change</li>
-        <li>It writes the change, packs it and deploys it for you</li>
+        <li>It writes the change, builds the mod and, with your OK, puts it in your game</li>
         <li>You see the result in game and say what to tweak next</li>
-        <li>Every step is visible, and every deploy can be undone</li>
+        <li>Every step is visible, and what goes into your game can be taken out again</li>
       </ul></div>
   </div>
 </section>
 
 <section id="loop">
   <h2><span class="id">03</span>The loop</h2><div class="rule"></div>
-  <p>Every EDGEmodders tool exposes what it does as text and as calls an AI agent can make. Here's a session with REDagent, the assistant inside the game:</p>
+  <p>Every EDGE tool shows its work as plain text, and lets an AI assistant press the same buttons you can. That is what lets an assistant build a mod with you. Here is a session with REDagent, the assistant inside the game:</p>
   <div class="term" role="figure" aria-label="Example session between a modder and an AI assistant">
     <div class="who you">&gt; you</div>
     <p class="say">Make a mod that shows a warning when V's health drops below 30%.</p>
@@ -86,66 +88,74 @@
 <i>04</i> <u>logs</u>            low-health              <b>running, no errors</b></div>
     <p class="say">Done. Your low-health warning is running. Take some damage to see it, or press Undo to remove it.</p>
   </div>
-  <p class="note">// Simplified from REDagent's in-game test on 2026-10-12. The tool names are REDagent's real tools.</p>
+  <p class="note">// Illustrative: simplified from REDagent's in-game test on 2026-10-12. Each numbered line is one action REDagent took, shown in the chat as it works. The names are REDagent's real tools.</p>
 
   <div class="steps" style="margin-top:22px">
     <div class="panel"><h3>Describe it</h3><p>Plain words. No file formats, no jargon.</p></div>
-    <div class="panel"><h3>Build it together</h3><p>REDagent writes it while you play, or an assistant works beside you in REDcode.</p></div>
+    <div class="panel"><h3>Build it together</h3><p>REDagent writes it while you play, or Claude Code works beside you at your desk.</p></div>
     <div class="panel"><h3>Try it live</h3><p>REDnode loads it into the running game. Change it without a restart.</p></div>
-    <div class="panel"><h3>Share it</h3><p>Pack it, publish it, and help the next modder start.</p></div>
+    <div class="panel"><h3>Share it</h3><p>Pack it, upload it to Nexus Mods yourself, and help the next modder start.</p></div>
   </div>
 </section>
 
 <section id="tools">
   <h2><span class="id">04</span>The toolkit</h2><div class="rule"></div>
-  <p>Open-source toolkits that work alone and work better together. Five of them cover the whole life of a mod. Each one has its own docs site and a section in the <a href="wiki/">wiki</a>.</p>
+  <p>Open-source toolkits that build on each other. Five of them cover the whole life of a mod, and two AI assistants work through them. Each one has its own docs site and a section in the <a href="wiki/">wiki</a>. New here? <a href="wiki/first-hour.html">Your first hour</a> says which to install first.</p>
+  <p class="note">// Preview means released and usable, but young. The VS Code Marketplace and Open VSX are the two stores that editor add-ons (extensions) install from.</p>
   <div class="grid g2">
 
     <article class="panel tool feature">
-      <div class="head"><img src="assets/tools/redagent.png" alt=""><div><div class="name">RED<span>agent</span> <span class="tag y new">New</span></div><div class="role">The modding agent &middot; powered by Claude</div></div></div>
-      <p>An AI assistant inside Cyberpunk 2077. Ask for a mod in a chat window over the game, and REDagent writes it, runs it, reads its log, checks the game's answers and fixes what's wrong, while you play. Every change is shown to you first and can be undone. Uses your own Anthropic API key.</p>
-      <div class="status"><b class="g">Status:</b> 0.4.1 released for game 2.5; writes and fixes mods in game, and can use other mods' tools. Needs REDnode</div>
+      <div class="head"><img src="assets/tools/redagent.png" alt=""><div><div class="name">RED<span>agent</span> <span class="tag y new">New</span></div><div class="role">The assistant in the game &middot; powered by Claude</div></div></div>
+      <p>An AI assistant inside Cyberpunk 2077. Ask for a mod in a chat window over the game, and REDagent writes it, runs it, checks that it works and fixes what's wrong, while you play. Every change is shown to you first and can be undone. Uses your own Anthropic API key.</p>
+      <div class="status"><b class="g">Status:</b> 0.4.1 released for game 2.5, on Nexus Mods and GitHub. Writes and fixes mods in the game, tested in the game. Needs REDnode, and an Anthropic API key that you pay for per use</div>
       <div class="links"><a href="wiki/redagent/">Wiki</a><a href="https://edgemodders.github.io/REDagent/">Docs</a><a href="https://github.com/Edgemodders/REDagent">GitHub</a></div>
     </article>
 
+    <article class="panel tool feature">
+      <div class="head"><div><div class="name">EDGE<span>chat</span></div><div class="role">The assistant at your desk &middot; for Claude Code</div></div></div>
+      <p>A free add-on for Claude Code, Anthropic's AI assistant, that makes it a modding assistant. It teaches Claude how Cyberpunk mods are made and connects it to the running game, the game's files, your mods and their materials. Ask for a mod in plain words. The EDGE tools ask you before anything changes your game.</p>
+      <div class="status"><b class="c">Status:</b> 0.1.1 released for game 2.5. Needs a Claude plan that includes Claude Code. Connects REDnode, REDcode, EDGEdeck and EDGEmat; quests, quickhacks and sounds are not connected yet</div>
+      <div class="links"><a href="wiki/edgechat/">Wiki</a><a href="https://edgemodders.github.io/EDGEchat/">Docs</a><a href="https://github.com/Edgemodders/EDGEchat">GitHub</a></div>
+    </article>
+
     <article class="panel tool">
-      <div class="head"><img src="assets/tools/redcode.png" alt=""><div><div class="name">RED<span>code</span></div><div class="role">The editor</div></div></div>
-      <p>A Cyberpunk 2077 modding IDE built on VS Code. Browse the game's files, edit them, see textures and meshes, hear sounds and pack your mod, with an AI assistant working beside you.</p>
-      <div class="status"><b class="c">Status:</b> 0.10.9 on the VS Code Marketplace and Open VSX (preview), with Pack and Play into the running game through REDnode</div>
-      <div class="links"><a href="wiki/redcode/">Wiki</a><a href="https://edgemodders.github.io/REDcode/">Docs</a><a href="https://github.com/Edgemodders/REDcode">GitHub</a></div>
+      <div class="head"><img src="assets/tools/rednode.png" alt=""><div><div class="name">RED<span>node</span></div><div class="role">The part in the game</div></div></div>
+      <p>The part of EDGE that runs in the game while you play. It lets mods load, change and reload without a restart, and draws their windows over the game. REDagent and EDGEbuilder run on it. Mod makers write for it in JavaScript and TypeScript.</p>
+      <div class="status"><b class="g">Status:</b> 0.62.4 released for game 2.5, on Nexus Mods and GitHub. You install it like any mod. What players use was tested in the game. Optional UI Tools, Sound Tools and Admin Tools packs</div>
+      <div class="links"><a href="wiki/rednode/">Wiki</a><a href="https://edgemodders.github.io/REDnode/">Docs</a><a href="https://edgemodders.github.io/REDnode/design.html">Design</a><a href="https://github.com/Edgemodders/REDnode">GitHub</a></div>
     </article>
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/edgedeck.png" alt=""><div><div class="name">EDGE<span>deck</span></div><div class="role">The mod manager</div></div></div>
-      <p>One list of mods and four verbs: add, on/off, deploy, remove. Every deploy can be undone, and EDGEdeck shows conflicts <em>inside</em> mod archives, which file-level managers can't see.</p>
-      <div class="status"><b class="g">Status:</b> 0.31.0 on the VS Code Marketplace, Open VSX and Nexus Mods (preview); in daily use</div>
+      <p>A mod manager, like Vortex. One list of mods: switch them on and off, then press Deploy to put them in the game. Every deploy can be undone. It also shows when two mods change the same thing <em>inside</em> their files, which most mod managers can't see.</p>
+      <div class="status"><b class="g">Status:</b> 0.31.0, a preview, on the VS Code Marketplace, Open VSX and Nexus Mods, and built into EDGEkit. Its developer uses it every day</div>
       <div class="links"><a href="wiki/edgedeck/">Wiki</a><a href="https://edgemodders.github.io/EDGEdeck/">Docs</a><a href="https://edgemodders.github.io/EDGEdeck/design.html">Design</a><a href="https://github.com/Edgemodders/EDGEdeck">GitHub</a></div>
     </article>
 
     <article class="panel tool">
-      <div class="head"><img src="assets/tools/redbridge.png" alt=""><div><div class="name">RED<span>bridge</span></div><div class="role">The engine &amp; AI bridge</div></div></div>
-      <p>Runs WolvenKit's proven C# engine as a local service. The same calls power REDcode and an MCP server, so AI assistants like Claude can browse archives, convert files and pack mods directly.</p>
-      <div class="status"><b class="y">Status:</b> 0.12.1 released, built for game 2.5; REDcode, EDGEdeck and REDnode fetch it for you</div>
-      <div class="links"><a href="wiki/redbridge/">Wiki</a><a href="https://edgemodders.github.io/REDbridge/">Docs</a><a href="https://github.com/Edgemodders/REDbridge">GitHub</a></div>
+      <div class="head"><img src="assets/tools/redcode.png" alt=""><div><div class="name">RED<span>code</span></div><div class="role">The editor</div></div></div>
+      <p>An editor for the game's files, built on VS Code, Microsoft's free code editor. Browse the game's files, change them, see textures and 3D models, hear sounds and build your mod, with an AI assistant working beside you.</p>
+      <div class="status"><b class="c">Status:</b> 0.10.9, a preview, on the VS Code Marketplace and Open VSX, and built into EDGEkit. It can swap your mod into the running game through REDnode</div>
+      <div class="links"><a href="wiki/redcode/">Wiki</a><a href="https://edgemodders.github.io/REDcode/">Docs</a><a href="https://github.com/Edgemodders/REDcode">GitHub</a></div>
     </article>
 
     <article class="panel tool">
-      <div class="head"><img src="assets/tools/rednode.png" alt=""><div><div class="name">RED<span>node</span></div><div class="role">The live runtime</div></div></div>
-      <p>Script Cyberpunk 2077 in TypeScript and JavaScript with npm, and build in-game HTML overlay apps. Mods attach to the running game, reload without a restart, and can be debugged while the game runs.</p>
-      <div class="status"><b class="g">Status:</b> 0.62.4 released for game 2.5, as a zip you install like any mod, with optional UI Tools, Sound Tools and Admin Tools packs. Overlay apps, Node mods, the Console, the game API, TweakDB, the world API, native HUD panels, mod services, the MCP server and archive swaps pass in game</div>
-      <div class="links"><a href="wiki/rednode/">Wiki</a><a href="https://edgemodders.github.io/REDnode/">Docs</a><a href="https://edgemodders.github.io/REDnode/design.html">Design</a><a href="https://github.com/Edgemodders/REDnode">GitHub</a></div>
+      <div class="head"><img src="assets/tools/redbridge.png" alt=""><div><div class="name">RED<span>bridge</span></div><div class="role">The file engine</div></div></div>
+      <p>The part that reads and writes the game's files, using WolvenKit's own code. The other tools and the AI assistants all go through it. You never install or open it yourself.</p>
+      <div class="status"><b class="y">Status:</b> 0.12.1 released for game 2.5. EDGEdeck, REDcode and REDnode download it for you</div>
+      <div class="links"><a href="wiki/redbridge/">Wiki</a><a href="https://edgemodders.github.io/REDbridge/">Docs</a><a href="https://github.com/Edgemodders/REDbridge">GitHub</a></div>
     </article>
 
   </div>
 
   <h3 style="margin-top:32px">How they fit</h3>
   <div class="flow">
-    <div><h4>Describe</h4><p>You + REDagent</p><small>Claude, over MCP</small></div>
-    <div><h4>Edit</h4><p>REDcode</p><small>project, game files as JSON</small></div>
-    <div><h4>Build</h4><p>REDbridge</p><small>WolvenKit engine: convert, pack</small></div>
-    <div><h4>Play</h4><p>EDGEdeck + REDnode</p><small>deploy, undo, live reload</small></div>
+    <div><h4>Describe</h4><p>You + an assistant</p><small>REDagent in the game, EDGEchat at your desk</small></div>
+    <div><h4>Edit</h4><p>REDcode</p><small>your mod's folder, game files as text</small></div>
+    <div><h4>Build</h4><p>REDbridge</p><small>WolvenKit's code: convert, pack</small></div>
+    <div><h4>Play</h4><p>EDGEdeck + REDnode</p><small>install, undo, reload while you play</small></div>
   </div>
-  <div class="ai-rail">One API, two clients: <b>every tool the modder uses, the AI can use too</b></div>
+  <div class="ai-rail">Everything you can do in a tool, <b>the AI can do too</b></div>
 
   <h3 style="margin-top:32px">More tools</h3>
   <p>Specialist toolkits built on the five above.</p>
@@ -153,43 +163,43 @@
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/edgebuilder.png" alt=""><div><div class="name">EDGE<span>builder</span></div><div class="role">The world builder</div></div></div>
-      <p>Build in Night City from inside the game. Search the game's own props, drop them where you look, and move, turn and scale them with a gizmo and a free camera.</p>
-      <div class="status"><b class="g">Status:</b> 0.10.9, a public preview for game 2.5, on Nexus Mods. Place objects and people in the running game, arrange and save scenes, and bake them into the world as a mod. People are placed but not baked yet</div>
+      <p>Build in Night City from inside the game. Search the game's own objects and people, drop one where you look, and move, turn and scale it by dragging its handles, with a free camera.</p>
+      <div class="status"><b class="g">Status:</b> 0.10.9, a public preview for game 2.5, on Nexus Mods and GitHub. Place objects and people in the running game, arrange and save them as scenes, and bake a scene into a mod that stays in the world. People are not baked yet. Needs REDnode</div>
       <div class="links"><a href="wiki/edgebuilder/">Wiki</a><a href="https://edgemodders.github.io/EDGEbuilder/">Docs</a><a href="https://github.com/Edgemodders/EDGEbuilder">GitHub</a></div>
     </article>
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/edgewave.png" alt=""><div><div class="name">EDGE<span>wave</span></div><div class="role">The sound studio</div></div></div>
-      <p>A sound studio for Cyberpunk 2077 modding that works beside REDcode. Open any game sound, cut, fade and shape it, and save it into your mod.</p>
-      <div class="status"><b class="c">Status:</b> 0.1.0 preview on the VS Code Marketplace and Open VSX: edit and mix game sounds and put them into the game</div>
+      <p>A sound studio that works beside REDcode. Find any game sound, cut, fade and mix it, and put your version into your mod. Its voice tools make new sounds and spoken lines through ElevenLabs, with your own key.</p>
+      <div class="status"><b class="c">Status:</b> 0.2.0, a preview, on the VS Code Marketplace, Open VSX and Nexus Mods, and built into EDGEkit. Replaced, silenced and new sounds were heard in the game. Voiced quest lines are not there yet. Needs REDcode</div>
       <div class="links"><a href="wiki/edgewave/">Wiki</a><a href="https://edgemodders.github.io/EDGEwave/">Docs</a><a href="https://github.com/Edgemodders/EDGEwave">GitHub</a></div>
     </article>
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/edgemat.png" alt=""><div><div class="name">EDGE<span>mat</span></div><div class="role">The material editor</div></div></div>
-      <p>Pick a jacket, click a layer, choose a colour and see it on the model. Or just tell an AI assistant "make this jacket red".</p>
-      <div class="status"><b class="g">Status:</b> 0.3.2 preview on the VS Code Marketplace and Open VSX: finds a garment's layers, recolours them, makes new materials from your words, keeps your work on a Desk and tells you which item to give V, all tested in the game</div>
+      <p>Pick a jacket, click a layer, choose a color and see it on the model. Or just tell an AI assistant "make this jacket red".</p>
+      <div class="status"><b class="g">Status:</b> 0.3.2, a preview, on the VS Code Marketplace and Open VSX, and built into EDGEkit. Recolors, and new materials made from your words, were seen in the game. It tells you which in-game item to give V to see your change</div>
       <div class="links"><a href="wiki/edgemat/">Wiki</a><a href="https://edgemodders.github.io/EDGEmat/">Docs</a><a href="https://github.com/Edgemodders/EDGEmat">GitHub</a></div>
     </article>
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/edgequest.png" alt=""><div><div class="name">EDGE<span>quest</span></div><div class="role">The quest maker</div></div></div>
       <p>Read any of the game's quests in plain words: its steps, its choices, who says what. Then write your own as a short story, with places, choices and music, and EDGEquest makes the game's quest files from it.</p>
-      <div class="status"><b class="c">Status:</b> 0.1.0 preview on the VS Code Marketplace and Open VSX, for game 2.5: small quests with choices and branches, tested in the game. Phone calls and voiced lines are coming</div>
+      <div class="status"><b class="c">Status:</b> 0.1.1, a preview for game 2.5, on the VS Code Marketplace, Open VSX and Nexus Mods, and built into EDGEkit. Small quests with choices and branches were played in the game. For now a quest has V alone, with subtitles and no voices, starts when a save loads, and one place was tested</div>
       <div class="links"><a href="wiki/edgequest/">Wiki</a><a href="https://edgemodders.github.io/EDGEquest/">Docs</a><a href="https://github.com/Edgemodders/EDGEquest">GitHub</a></div>
     </article>
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/edgehack.png" alt=""><div><div class="name">EDGE<span>hack</span></div><div class="role">The quickhack editor</div></div></div>
-      <p>Open any of the game's quickhacks and see every tier in plain words. Change its costs, texts and effects, or make new quickhacks with effects, icons and logic of your own, and try them live in the game.</p>
-      <div class="status"><b class="c">Status:</b> 0.1.1, the first release, a preview, for game 2.5, on Nexus Mods and Open VSX. Every part, from reading to the Library and assistants, passed its tests, in the game where it changes the game</div>
+      <p>Open any of the game's quickhacks and read every tier in plain words. Change its costs, texts and effects, or make new quickhacks with effects and icons of your own, and try them in the running game.</p>
+      <div class="status"><b class="c">Status:</b> 0.1.2, a preview for game 2.5, on Open VSX and Nexus Mods, and built into EDGEkit. Not on the VS Code Marketplace yet. What changes the game was tested in the game. Needs REDcode</div>
       <div class="links"><a href="wiki/edgehack/">Wiki</a><a href="https://edgemodders.github.io/EDGEhack/">Docs</a><a href="https://github.com/Edgemodders/EDGEhack">GitHub</a></div>
     </article>
 
     <article class="panel tool">
       <div class="head"><img src="assets/tools/edgekit.png" alt=""><div><div class="name">EDGE<span>kit</span></div><div class="role">The editor app</div></div></div>
-      <p>The EDGEmodders editor: one app with the EDGE editor tools built in. Already use VS Code? Its extension pack installs the same tools there in one go.</p>
-      <div class="status"><b class="y">Status:</b> the app 1.140.6 released as a preview for Windows; extension pack 0.6.0 (preview)</div>
+      <p>The EDGEmodders editor: one free app for Windows with the EDGE editor tools built in. It installs Claude Code at its first start, if you agree. Already use VS Code? Its extension pack installs the tools there in one go. The tools that run in the game (REDnode, REDagent, EDGEbuilder) install separately.</p>
+      <div class="status"><b class="y">Status:</b> the app 1.140.6, a preview for Windows; the extension pack 0.6.0, a preview</div>
       <div class="links"><a href="wiki/edgekit/">Wiki</a><a href="https://edgemodders.github.io/EDGEkit/">Docs</a><a href="https://github.com/Edgemodders/EDGEkit">GitHub</a></div>
     </article>
 
@@ -201,7 +211,7 @@
   <div class="grid g3">
     <div class="panel"><div class="label">Anyone can mod</div><p>Ideas matter more than syntax. If you can describe a mod, you should be able to make one.</p></div>
     <div class="panel"><div class="label">You stay in control</div><p>AI does the busywork in the open. Every file is readable, every change is visible, every deploy can be undone.</p></div>
-    <div class="panel"><div class="label">Everything is text</div><p>Game files as JSON, tweaks as YAML, scripts as TypeScript. Anything a person can see, an assistant can read, and the other way round.</p></div>
+    <div class="panel"><div class="label">Everything is text</div><p>Game files, game values and scripts all open as plain text, so you and the assistant can read any of it. Anything a person can see, an assistant can read, and the other way round.</p></div>
     <div class="panel"><div class="label">Build on the community</div><p>We work with WolvenKit, RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL and TweakXL, not against them, and we credit the people who built them.</p></div>
     <div class="panel"><div class="label">Open source</div><p>MIT where we can, GPL-3.0 where WolvenKit requires it. Read it, fork it, improve it.</p></div>
     <div class="panel"><div class="label">Veterans welcome</div><p>Experienced modders are the people who make this work. AI makes your knowledge go further, and helps you teach the next wave.</p></div>
@@ -220,6 +230,7 @@
   <div class="cta">
     <a class="btn go ico" href="https://discord.gg/63qP3Erw43"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128c-.598.349-1.22.645-1.873.891a.077.077 0 0 0-.041.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.029 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.182 0-2.157-1.086-2.157-2.42 0-1.332.956-2.418 2.157-2.418 1.21 0 2.176 1.095 2.157 2.419 0 1.333-.956 2.419-2.157 2.419zm7.975 0c-1.183 0-2.157-1.086-2.157-2.42 0-1.332.955-2.418 2.157-2.418 1.21 0 2.176 1.095 2.157 2.419 0 1.333-.946 2.419-2.157 2.419z"/></svg>Join our Discord</a>
     <a class="btn" href="https://github.com/Edgemodders">Find us on GitHub</a>
+    <a class="btn" href="wiki/first-hour.html">Get started</a>
     <a class="btn" href="wiki/">Read the wiki</a>
     <a class="btn" href="community.html">How to get involved</a>
   </div>

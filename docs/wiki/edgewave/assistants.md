@@ -11,7 +11,7 @@ reviewed: 2026-11-13
 
 An AI assistant can do some of EDGEwave's work for you. You ask in plain words, such as "find the music cues for the Dex meeting", and the assistant searches the game's sound events. It can also turn a WAV file into a new sound event in your project, and voice a quest's lines.
 
-It works because EDGEwave comes with an **MCP server**: a small program that offers these abilities to an assistant as tools. [MCP](../glossary.html#edge-terms) is the standard way AI assistants use tools. The assistant on this page is [Claude Code](https://claude.com/claude-code), Anthropic's assistant that runs in a terminal or inside VS Code.
+It works because EDGEwave comes with an **MCP server**: a small program that offers these abilities to an assistant as tools. [MCP](../glossary.html#mcp-server) is the standard way AI assistants use tools. The assistant on this page is [Claude Code](https://claude.com/claude-code), Anthropic's assistant that runs in a terminal or inside VS Code.
 
 The assistant gets five tools, not the whole studio. Editing, mixing and Add to Project's other routes are done with the buttons.
 
