@@ -21,10 +21,14 @@ How to keep it:
 - Wiki: "Try it" walkthroughs across REDnode's section: a first widget, a first Console command with how to find an item's id, a first archive swap, first prompts for Claude Code, a second space, reading the Mod log; and a "Start here" route for new makers: https://edgemodders.ai/wiki/rednode/making-mods.html
 - Wiki: "Your first mod with EDGEdeck", a walkthrough from an empty list to one Nexus mod working in the game: https://edgemodders.ai/wiki/edgedeck/first-mod.html
 - Wiki: EDGEdeck's loadouts have their own page, with a Try it: https://edgemodders.ai/wiki/edgedeck/loadouts.html
+- Wiki: "Your first mod with REDcode", a walkthrough that renames an item, from a new project to the game: https://edgemodders.ai/wiki/redcode/first-mod.html
+- Wiki: "Finding what you want to change" in REDcode, from an item you know to its text, record and files: https://edgemodders.ai/wiki/redcode/finding.html
+- Wiki: "Try it" sections on REDcode's editing, TweakDB, export and LocKeys pages, with the tweak file that New Tweak writes: https://edgemodders.ai/wiki/redcode/tweakdb.html#try-it-change-a-price
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- Wiki: REDcode's pages no longer describe Red Hot Tools and the Hot Folder, which REDcode dropped in 0.10.8: Pack and Play swaps through REDnode. Its example project name is now `my_jacket`, with the capital-letters warning explained, and it needs REDbridge 0.12.0: https://edgemodders.ai/wiki/redcode/pack-install.html#pack-and-play-into-the-running-game
 - Wiki: EDGEdeck's rule for which mod wins a conflict is stated once, with an example: https://edgemodders.ai/wiki/edgedeck/conflicts.html#who-wins
 - Wiki: updating frameworks after a game patch needs no Nexus account, only the automatic check does; an empty EDGEdeck shows "No mods yet" with buttons; a new mod arrives switched on; and what an assistant can and can't do in EDGEdeck: https://edgemodders.ai/wiki/edgedeck/frameworks.html#after-a-game-update
 - Wiki: REDnode's pages gave three different current versions, and now give one. RED Hot Tools is no longer listed as something to install on game 2.5. Pressing F10 in interactive mode hides everything, and the overlay page says so: https://edgemodders.ai/wiki/rednode/overlay.html#f10-and-the-three-modes
@@ -37,6 +41,8 @@ How to keep it:
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Wiki: REDcode's section is rewritten for newcomers and checked against REDcode 0.10.9: a which-button table on Pack, install and run, an assistants page that starts with which assistant fits, Add to Library, the Animations view, Open In... and exporting every LOD, and troubleshooting grouped by where you're stuck: https://edgemodders.ai/wiki/redcode/
+- Landing page and platform page: REDcode 0.10.9
 - Wiki: EDGEdeck's section is rewritten for newcomers and checked against EDGEdeck 0.31.0, in the order a new user needs it: frameworks before the full tour of the Mods view, Nexus sign-in with an API key step by step, downloads one at a time with Cancel, and troubleshooting as "You see / Do this" tables: https://edgemodders.ai/wiki/edgedeck/
 - Landing page and platform page: EDGEdeck 0.31.0
 - Wiki: REDnode's section is rewritten for newcomers and checked against REDnode 0.62.4. The overview has routes, a short status and a page map for players and for mod makers; the game API page is a short guide; first examples say what you should see; Agents and MCP leads with EDGEchat; Troubleshooting is grouped by where you are stuck: https://edgemodders.ai/wiki/rednode/
