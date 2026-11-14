@@ -13,7 +13,7 @@ REDcode is the EDGE platform's workspace for making mods that change the game's 
 
 REDcode does what [WolvenKit](https://github.com/WolvenKit/WolvenKit), the community's main modding tool, does, with WolvenKit's own engine. That engine runs in [REDbridge](../redbridge/), a small helper program REDcode downloads and starts for you.
 
-{% include shot.html caption="REDcode in VS Code" shows="VS Code with the REDcode sidebar open (Project, Game Assets, TweakDB, LocKeys and Properties views), a game file open in the CR2W editor, and the REDcode status bar item at the bottom." %}
+{% include shot.html caption="REDcode in VS Code" src="/assets/shots/redcode/index-overview.png" alt="EDGEkit with the REDcode side bar showing its five views, Project, Game Assets, TweakDB, LocKeys and Properties, an entity file open in the CR2W editor with one component selected, and the status bar reading my_first_mod, 592,071 files, REDbridge 0.12.1." shows="VS Code with the REDcode sidebar open (Project, Game Assets, TweakDB, LocKeys and Properties views), a game file open in the CR2W editor, and the REDcode status bar item at the bottom." %}
 
 **New here?** Read this page, then [Install and set up](install.html), then make [your first mod](first-mod.html). Allow about half an hour. You don't need to know how to code.
 

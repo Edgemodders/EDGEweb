@@ -118,7 +118,7 @@ An atlas (`.inkatlas`) is one texture cut into many small pictures, called parts
 - An atlas can hold the same pictures at more than one size, each in its own **slot**: usually one texture for 4K screens and one for 1080p. The view shows one slot at a time and lets you switch.
 - **Fit**, **1:1**, **Pixels** and **Labels** change how the texture shows. **Tree** is one click away.
 
-{% include shot.html caption="The atlas view" shows="An .inkatlas in the atlas view: the texture with part rectangles drawn over it, one part selected and its pixel rectangle in the side list." %}
+{% include shot.html caption="The atlas view" src="/assets/shots/redcode/editing-atlas.png" alt="The game file weapon_manufacturers.inkatlas in the atlas view: the list of 33 parts with their sizes on the left, kangtao selected, and the texture on the right with a labelled rectangle around every logo and the Kang Tao one highlighted." shows="An .inkatlas in the atlas view: the texture with part rectangles drawn over it, one part selected and its pixel rectangle in the side list." %}
 
 ## The Properties view
 
@@ -145,4 +145,4 @@ Every game file can also be read as **WolvenKit JSON**: the same tree, written o
 
 In the JSON, an edit inside `compiledData` vanishes on save, for the reason above. In the CR2W editor that part is read-only, so you can't make that mistake there.
 
-{% include shot.html caption="Save JSON to Project" shows="A project file open as JSON in a text tab, with the Save JSON to Project button in the editor title bar and the confirmation message after saving." %}
+{% include shot.html caption="Save JSON to Project" src="/assets/shots/redcode/editing-save-json.png" alt="The project file photomode_arealight.ent open as JSON in a text tab, with the Save JSON to Project button, a disk icon, highlighted at the right of the editor title bar." shows="A project file open as JSON in a text tab, with the Save JSON to Project button in the editor title bar and the confirmation message after saving." %}
