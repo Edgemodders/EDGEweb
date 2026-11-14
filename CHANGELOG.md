@@ -26,10 +26,13 @@ How to keep it:
 - Wiki: "Try it" sections on REDcode's editing, TweakDB, export and LocKeys pages, with the tweak file that New Tweak writes: https://edgemodders.ai/wiki/redcode/tweakdb.html#try-it-change-a-price
 - Wiki: EDGEbuilder's baking has a page of its own, with what you need, every Bake tab check, sharing a baked scene and bakes in the Library: https://edgemodders.ai/wiki/edgebuilder/baking.html
 - Wiki: REDbridge's install page says which copy each tool uses and how to remove one: https://edgemodders.ai/wiki/redbridge/install.html#do-i-need-several-copies
+- Wiki: a by-hand recolor tutorial for EDGEmat, from a jacket's name to the blue jacket on V, with no key: https://edgemodders.ai/wiki/edgemat/tutorial-recolor.html
+- Wiki: the two ways to get a recolor into a project, compared, with which body types each one changes: https://edgemodders.ai/wiki/edgemat/find.html#two-ways-into-a-project
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- Wiki: EDGEmat's "Your mod in the game" no longer describes the hot folder or Red Hot Tools; deleting EDGEmat's local data folder deletes the Desk, and both pages now say so; a Desk line changes one body type's mesh, and the Desk page says how to cover both: https://edgemodders.ai/wiki/edgemat/in-the-game.html
 - Wiki: EDGEbuilder's pages gave three different newest versions, left the NPCs tab out of Search, and had a "Try it" in Arranging a scene that failed as written: https://edgemodders.ai/wiki/edgebuilder/arranging.html
 - Wiki: REDbridge's pages gave 0.12.0 as the latest release and wrong minimum versions for REDcode and EDGEbuilder: https://edgemodders.ai/wiki/redbridge/install.html#which-version-do-i-need
 - Wiki: REDcode's pages no longer describe Red Hot Tools and the Hot Folder, which REDcode dropped in 0.10.8: Pack and Play swaps through REDnode. Its example project name is now `my_jacket`, with the capital-letters warning explained, and it needs REDbridge 0.12.0: https://edgemodders.ai/wiki/redcode/pack-install.html#pack-and-play-into-the-running-game
@@ -45,6 +48,7 @@ How to keep it:
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Wiki: EDGEmat's section is rewritten for newcomers and checked against 0.3.2: "Words you'll meet" on the overview, jump tables, "what you should see", Try it sections, a sidebar that follows the work, an Assistants page that says what each newer tool needs and how far it was tested, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgemat/
 - Wiki: EDGEbuilder's section is rewritten for newcomers and checked against 0.10.9: install as one numbered run with REDbridge, ArchiveXL and both permissions, people (NPCs) and the panel pins throughout, "Scenes and baking" split into Scenes and the Library and Baking (old links still land), troubleshooting grouped by where you are stuck, and version history removed: https://edgemodders.ai/wiki/edgebuilder/
 - Wiki: REDbridge's section is rewritten for users and checked against 0.12.1; its call reference now links to REDbridge's own docs: https://edgemodders.ai/wiki/redbridge/
 - Landing page, platform page and wiki home: EDGEbuilder 0.10.9 and REDbridge 0.12.1

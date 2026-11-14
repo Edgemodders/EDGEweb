@@ -2,63 +2,120 @@
 title: See your EDGEmat changes in the game
 nav_title: Your mod in the game
 section: EDGEmat
-order: 8
-description: "From a saved recolor or new material to the game: pack and install with REDcode, the hot folder and REDmod pitfalls, and putting the item on V with REDnode's Console."
+order: 7
+description: "From a saved recolor or new material to the game: pack and install with REDcode, keep the game running with Pack and Play, put the item on V with REDnode's Console, and what to check when the change doesn't show."
 reviewed: 2026-11-13
 ---
 
 # Your mod <span class="y">in the game</span>
 
-EDGEmat saves into a WolvenKit project: the files sit in the project's `source\archive` folder. The game sees them once the project is **packed** into a `.archive` and **installed** in the game folder. [REDcode](../redcode/) does both. This page is the short path, and the two things that tripped up EDGEmat's own tests.
+EDGEmat saves your changes into a mod project, a folder on your PC. The game doesn't read that folder. It sees your changes once the project is **packed** into one `.archive` file and that file is **installed** in the game folder. [REDcode](../redcode/) does both with one button. Then you put the garment on V and look.
+
+| On this page | |
+|---|---|
+| [1. Pack and install](#1-pack-and-install) | The simple way, with the game closed |
+| [Keep the game running](#keep-the-game-running) | Pack and Try, Pack and Play and REDnode |
+| [If REDmod packing is on](#if-redmod-packing-is-on) | A REDcode setting, and projects shared with EDGEwave |
+| [2. Put the item on V](#2-put-the-item-on-v) | The command, and where EDGEmat shows it |
+| [3. If you don't see your change](#3-if-you-dont-see-your-change) | What to check |
+| [Take the mod out again](#take-the-mod-out-again), [Share it](#share-it) | |
 
 ## 1. Pack and install
 
-In REDcode, with the project open:
+You need [REDcode](../redcode/install.html), with your project open in it.
 
-| You have | Use | Result |
-|---|---|---|
-| The game closed (most of the time) | **Pack and Install** | The archive goes into the game. Start the game |
-| The game running, with [REDnode](../rednode/)'s **MCP server** switched on, or [Red Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools) | **Pack and Play** (called Pack and Try before REDcode 0.10.5) | REDnode swaps the archive into the running game. Without REDnode, it goes to `archive\pc\hot`, and Red Hot Tools loads it. See [Pack and Play](../redcode/pack-install.html#pack-and-play-into-the-running-game) |
+1. Close the game.
+2. In REDcode's **Project** view, press **Pack and Install**, the rocket in the view's title bar.
+3. Press **Run Game**, the play triangle beside it, and load a save.
 
-**Pitfall 1: the hot folder.** With Red Hot Tools and no REDnode, Pack and Play only copies the archive to `archive\pc\hot`. Red Hot Tools picks it up from there **only while the game runs**. Pressed with the game closed, the archive just waits there, and the game starts without it. With the game closed, use Pack and Install (or REDcode's Deploy).
+| What you should see | |
+|---|---|
+| After step 2 | The file `<your project>.archive` in the game's `archive\pc\mod` folder (the folder is `mod`, not `mods`) |
+| After step 3 | The game starts as usual. Your change shows once V wears the garment: go to [step 2](#2-put-the-item-on-v) |
 
-**Pitfall 2: REDmod.** If REDcode's `redcode.pack.redmod` setting is on, the project packs as a REDmod into the game's `mods\` folder. REDmods need a deploy step (EDGEdeck's and REDcode's Deploy run it) and load only when the game starts with `-modded` (REDcode's Run Game does that). A material mod doesn't need REDmod: with the setting off, it goes to `archive\pc\mod` and simply loads.
+If you use [EDGEdeck](../edgedeck/), EDGE's mod manager, REDcode hands the mod to it, and it appears in EDGEdeck's list with the version `dev`. More about the buttons: REDcode's [Pack, install and run](../redcode/pack-install.html).
 
-To check: after installing, `<game>\archive\pc\mod\<project>.archive` should exist (folder `mod`, singular).
+### Keep the game running
 
-**Pitfall 3: capital letters in the archive's name.** The official RED Hot Tools can fail to swap in a new build of an archive whose name has capital letters (such as `MyMaterials.archive`) and close the game. The [Edgemodders build of RED Hot Tools](https://github.com/CyberbuildsAI/cp2077-red-hot-tools/releases/tag/v1.3.0%2Bedgemodders.1) (`1.3.0+edgemodders.1`) fixes it: extract its zip over the official files. An all-lowercase project name avoided the problem in REDnode's tests too.
+After EDGEmat saves into a project, its message has a **Pack and Try** button. It runs REDcode's **Pack and Play** (the flame button in REDcode's Project view), and it shows when REDcode has that project open.
+
+| The game is | Pack and Try, or Pack and Play |
+|---|---|
+| Closed, or running without REDnode | Packs and installs, like Pack and Install. Start or restart the game to see the change |
+| Running with [REDnode](../rednode/), at a loaded save | Packs, then swaps the new archive into the running game. No restart |
+
+To set up the swap once: install [REDnode](../rednode/install.html) in the game, press **F10**, open the launcher's **Settings** and switch on **MCP server**. Then install your mod the normal way once, with Pack and Install. The details are on REDcode's page: [Pack and Play](../redcode/pack-install.html#pack-and-play-into-the-running-game).
+
+| After a swap, to see | Do |
+|---|---|
+| A garment V is wearing | Nothing: REDnode refreshes it |
+| Another garment | Unequip it and equip it again |
+
+Older versions of these pages described a "hot folder" and Red Hot Tools. REDcode no longer uses either, and you don't need Red Hot Tools.
+
+### If REDmod packing is on
+
+Skip this unless you turned on REDcode's `redcode.pack.redmod` setting. It is off by default, and a material mod doesn't need it.
+
+With the setting on, the project packs as a REDmod, CD PROJEKT RED's own mod format, into the game's `mods` folder instead of `archive\pc\mod`. A REDmod loads only when the game is started for REDmods: use REDcode's **Run Game**, which does that. Started any other way, the game ignores it, and your recolor doesn't show. Whether Pack and Play can swap a REDmod into the running game has not been checked.
+
+**A project shared with EDGEwave.** [EDGEwave](../edgewave/)'s REDmod sounds need this setting on. If one project holds both such sounds and EDGEmat's materials, leave it on: the materials travel in the same REDmod, and show when you start the game with Run Game. If you'd rather keep the setting off for your clothes, keep sounds and materials in two projects.
 
 ## 2. Put the item on V
 
-You need to wear the item you changed. The quickest way is [REDnode's Console](../rednode/overlay.html#the-console) (REDnode 0.49.5 or later): press F10, switch on **Console** in the launcher, and type:
+To see your change, V has to wear the item you changed. The quickest way is the Console of [REDnode](../rednode/install.html) (0.49.5 or later), a window in the game where you type commands:
 
-```js
-addItem("Items.Pants_01_basic_01")
-```
+1. In the game, with a save loaded, press **F10**, click the **REDNODE** tab and switch on **Console**.
+2. Type the command with your item's id and press Enter:
 
-The id is the item's record id. [Find](find.html) shows it beside each item, after its slot (and `mat_find` returns it), so you know the item you add is the one you edited. Equip it, then look in third person: photo mode, or a mirror.
+   ```js
+   addItem("Items.Pants_01_basic_01")
+   ```
 
-EDGEmat writes the command for you (since 0.3.2). One mesh look can be worn by several items, or by none V can wear, so it tells you which:
+3. Press **Esc**, open the inventory and equip the item.
+4. Look at V from outside: photo mode, or a mirror.
+
+| What you should see | |
+|---|---|
+| After step 2 | The Console answers `1 × Items.Pants_01_basic_01 added` |
+| After step 4 | The garment with your change |
+
+`Items.Pants_01_basic_01` is the item's **record id**, the game's internal name for it. Use the id of the item you edited, so you get that exact item. More about the Console: [REDnode's Console](../rednode/overlay.html#the-console).
+
+**EDGEmat gives you the command.** Several items can share one look, and some looks are worn only by NPCs. So EDGEmat lists the items that wear the look you changed:
 
 | Where | What you get |
 |---|---|
-| The setup editor, opened from a mesh on the [Desk](desk.html) or in Find | An **In the game** section near the top, below the title (unfold it with its ▸): each item that wears that look, with its `addItem(...)` command, the body it fits, and a **Copy** button |
-| A look on the Desk or in Find | Its tooltip lists the items that wear it; the look itself reads **worn by 2 items**, or **no item** |
-| Right-click a look, a material or an item, on the Desk or in Find | **Copy REDnode Command** puts the command on the clipboard (with several items, it asks which) |
+| The setup editor, for a setup opened from [Find](find.html) or the [Desk](desk.html) | An **In the game** section near the top, below the title. Unfold it with its ▸. It lists each item that wears the look, with its `addItem(...)` command, the body it fits, and a **Copy** button |
+| A mesh row in Find, or a look on the Desk | Hover it: the tooltip lists the items that wear it. On the Desk, the look also reads **worn by 2 items**, or **no item** |
+| Right-click an item, a mesh, a look or a material, in Find or on the Desk | **Copy REDnode Command** puts the command on the clipboard. With several items, it asks which |
+| Find | The record id, in grey beside each item's name |
 
-The first time, EDGEmat reads every clothing item (about ten seconds, once per game version). Assistants get the same list from `mat_find` with a mesh: each item's `rednode` command.
+The first time, EDGEmat reads every clothing item to build this list. That takes about ten seconds, once per game version.
 
-Some garments are worn only by NPCs, so V can't equip them: pick a look marked as worn by an item for your tests.
+A look marked **no item** is worn only by NPCs, so V can't equip it. For your tests, pick a look that an item wears.
+
+No REDnode? If you have Cyber Engine Tweaks, its console does the same with `Game.AddToInventory("Items.Pants_01_basic_01", 1)`.
 
 ## 3. If you don't see your change
 
-| Check | Why |
+| Check | Do this |
 |---|---|
-| The archive is in `archive\pc\mod` | See the two pitfalls above |
-| You saved **As a new setup** (the default) | It works with no other mod. **In place of the game's setup** needs the Material Texture Override mod (on Nexus Mods) |
-| Both saves are in the project | If you saved a setup both ways, the project's mesh copies point at the new setup, so the game shows that one |
-| You're wearing the right body's mesh | Many garments use different meshes, and sometimes different setups, for each body. Save for both: Find lists both, and Save to Project offers every mesh it found |
-| The right look | Some items have several looks (colorways) that share a mesh but not a material. Find's looks show which material each uses |
-| Another mod changes the same item | Mods load in order; disable the other one to check |
+| Did the mod reach the game? | Look for `<your project>.archive` in the game's `archive\pc\mod` folder. If it isn't there, run **Pack and Install** with the game closed. If it is in `mods` instead, see [If REDmod packing is on](#if-redmod-packing-is-on) |
+| Did the game start after the install? | A mod installed while the game runs shows after a restart, unless REDnode swapped it in |
+| Is V wearing the item you edited? | Many items look alike. Give V the item with the command EDGEmat shows, and equip that one |
+| Does your V's body type have the change? | Many garments use one mesh for the feminine body and another for the masculine. A line added from the Desk changes one of them. Save for both: [Two ways into a project](find.html#two-ways-into-a-project) |
+| Is it the right look? | Some meshes have several looks that each use their own material. Edit the look your item wears: Find shows it on the mesh row |
+| How did you save? | **As a new setup** works with no helper mod. **In place of the game's setup** shows only with the Material Texture Override mod (on Nexus Mods) installed |
+| Did you save the same setup both ways? | The game then shows the **new setup** version, because the project's meshes use that one. Edit the new setup, or delete it and its meshes from the project |
+| Does another mod change the same garment? | When two mods hold the same file, one wins. Switch the other mod off to check |
 
-More in [Troubleshooting](troubleshooting.html).
+More symptoms are in [Troubleshooting](troubleshooting.html#in-the-game).
+
+## Take the mod out again
+
+To get the game's own colors back, in REDcode's Project view open the **`...`** menu and choose **Uninstall**, with the game closed. Only your mod's file comes out. Your project is untouched, and **Pack and Install** puts the mod back. See REDcode's [Uninstall](../redcode/pack-install.html#uninstall).
+
+## Share it
+
+The packed mod is the `.archive` file in your project's `packed` folder. A recolor saved **As a new setup** needs no other mod, so that one file is all someone else needs. How to zip it for others: REDcode's [Sharing your mod](../redcode/pack-install.html#sharing-your-mod).
