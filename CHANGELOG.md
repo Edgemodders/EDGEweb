@@ -5,6 +5,7 @@ What changed on https://edgemodders.ai and its wiki, for players and modders. Ev
 How to keep it:
 
 - With each change a reader would notice, add a line under **Unreleased**, in its group: **New**, **Changed**, **Fixed** or **Other**. One change per line, in the commit that makes the change. Leave out typo fixes and changes only the build sees.
+- Wiki: EDGEdeck screenshots for the empty Mods view, the Set up group, a deploy waiting, the EDGEdeck page and its settings: https://edgemodders.ai/wiki/edgedeck/mods-view.html#the-edgedeck-page
 - For a release, rename **Unreleased** to `## <version> (<date>)`, start a new empty **Unreleased** above it, then tag `v<version>` and make the GitHub release from that section.
 - Links are full URLs, since the same text may go to GitHub, Discord and Nexus.
 

@@ -40,7 +40,7 @@ EDGEdeck is an **extension**: an add-on for [VS Code](https://code.visualstudio.
 
 **What you should see:** a new EDGEdeck icon in the activity bar. Click it. The **Mods** view opens beside it and says **No mods yet**, with a button for each thing you can do next.
 
-{% include shot.html caption="The EDGEdeck icon and an empty Mods view" shows="VS Code's activity bar with the EDGEdeck icon highlighted, and the Mods view on first start: the No mods yet text with its Add mod button and the set-up buttons under it." %}
+{% include shot.html caption="The EDGEdeck icon and an empty Mods view" src="/assets/shots/edgedeck/install-empty-mods-view.png" alt="EDGEkit with the EDGEdeck icon selected in the activity bar and the Mods view on first start: No mods yet, an Add mod button, then Import from Vortex, Sign in to Nexus, Handle download links and Get REDbridge, each under a line that says what it does." shows="VS Code's activity bar with the EDGEdeck icon highlighted, and the Mods view on first start: the No mods yet text with its Add mod button and the set-up buttons under it." %}
 
 EDGEdeck is not a game mod. Never install it with Vortex or another mod manager.
 
@@ -80,7 +80,7 @@ Two words first. EDGEdeck keeps your mods in a folder of its own, the **library*
 | **Handle Nexus download links** | Makes the **Mod manager download** button on Nexus send files to EDGEdeck. You can do this before you sign in. See [Download links](nexus.html#download-links) | Optional |
 | **Import from Vortex** | Appears only when Vortex has Cyberpunk mods that EDGEdeck doesn't have yet. Follow [Switch from Vortex](switch-from-vortex.html) | Optional |
 
-{% include shot.html caption="The Set up group" shows="The Set up group at the top of the Mods view, with the Get REDbridge, Sign in to Nexus Mods and Import from Vortex rows." %}
+{% include shot.html caption="The Set up group" src="/assets/shots/edgedeck/install-set-up-group.png" alt="The Mods view with the Set up group on top, 5 to do: Get the frameworks, Get REDbridge, Sign in to Nexus Mods, Handle Nexus download links and Import from Vortex, each with a short reason. Seven example mods are listed under Mods." shows="The Set up group at the top of the Mods view, with the Get REDbridge, Sign in to Nexus Mods and Import from Vortex rows." %}
 
 ### Finding the game
 

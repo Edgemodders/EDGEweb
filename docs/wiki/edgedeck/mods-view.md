@@ -81,7 +81,7 @@ What you can do with a row:
 
 Press **Open EDGEdeck**, the first button in the Mods view's title bar.
 
-{% include shot.html caption="The EDGEdeck page" shows="The full-width EDGEdeck table with search, the filter chips (All, On, Off, Needs deploy, Conflicts, Update available) and their counts, the toolbar with Update all, the Library count at the right of the loadout row, and the footer with disk use and the running REDbridge." %}
+{% include shot.html caption="The EDGEdeck page" src="/assets/shots/edgedeck/mods-view-page.png" alt="The EDGEdeck page at full width with seven example mods: the top row with Add mod, Nexus sign in, Update all, Conflicts 2, 6 changes, Deploy and Run game; the Set up row; the loadout row with Library 7 mods at its right; search, the chips All, On, Off, Not deployed, Needs deploy and Conflicts with their counts, Largest first and Newest update first; the table with kind, size, status and actions; and the footer with the library folder, last deploy and disk use." shows="The full-width EDGEdeck table with search, the filter chips (All, On, Off, Needs deploy, Conflicts, Update available) and their counts, the toolbar with Update all, the Library count at the right of the loadout row, and the footer with disk use and the running REDbridge." %}
 
 The page shows the same mods as a table, one row per mod, with buttons on every row. What it adds to the Mods view:
 

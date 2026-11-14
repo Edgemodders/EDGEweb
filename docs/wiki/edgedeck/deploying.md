@@ -30,7 +30,7 @@ reviewed: 2026-11-13
 
 **View** on that message opens a report of every file the deploy added, replaced or removed, mod by mod.
 
-{% include shot.html caption="Deploy waiting" shows="The Mods view with a few mods switched on, their status not deployed yet, and the Deploy button counting the changes waiting." %}
+{% include shot.html caption="Deploy waiting" src="/assets/shots/edgedeck/install-set-up-group.png" alt="The Mods view with six of seven example mods switched on, each saying not deployed yet, two of them with 1 conflict, and the status bar reading 6 of 7 mods on, Deploy (6 changes)." shows="The Mods view with a few mods switched on, their status not deployed yet, and the Deploy button counting the changes waiting." %}
 
 ### Close the game first
 

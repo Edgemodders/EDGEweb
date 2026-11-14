@@ -21,7 +21,7 @@ A reference page. Most people never change a setting: EDGEdeck finds what it nee
 
 Open the editor's settings (`Ctrl+,`) and type `edgedeck` in the search box.
 
-{% include shot.html caption="EDGEdeck in VS Code's settings" shows="VS Code's Settings editor filtered to edgedeck, showing the game path, library path and Nexus settings." %}
+{% include shot.html caption="EDGEdeck in VS Code's settings" src="/assets/shots/edgedeck/settings-editor.png" alt="The Settings editor filtered to edgedeck, 13 settings found: Bridge Path, Dotnet Root, Game Path set to a Cyberpunk 2077 folder, Launch set to auto, and Library Path." shows="VS Code's Settings editor filtered to edgedeck, showing the game path, library path and Nexus settings." %}
 
 | Setting | Default | What it does | Change it when |
 |---|---|---|---|
