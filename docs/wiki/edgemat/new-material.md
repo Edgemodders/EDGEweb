@@ -22,7 +22,7 @@ Both routes were seen in the game: a worn leather and a dark green snakeskin on 
 | [Good to know](#good-to-know) | What it replaces, seams, mirrored text |
 | [For modders: the files](#for-modders-the-files) | What is written where |
 
-{% include shot.html caption="The New Material page" shows="The New Material page for the slim-fits' leather material: 'Where it goes' naming both meshes, the words 'worn brown leather with fine creases', two takes, and the chosen take tiled 3 x 3 under '3. The material' with Name, Repeat, Bumps, Shine and Add to Project." %}
+{% include shot.html caption="The New Material page" src="/assets/shots/edgemat/new-material-takes.png" alt="The New Material page for leather on both l1_012 meshes: the words worn brown leather with fine creases, Medium detail, Google Gemini, two takes with Take 2 picked, and its 3 x 3 tiled preview beside Name, Repeat, Bumps, Shine, Metal and Add to Project." shows="The New Material page for the slim-fits' leather material: 'Where it goes' naming both meshes, the words 'worn brown leather with fine creases', two takes, and the chosen take tiled 3 x 3 under '3. The material' with Name, Repeat, Bumps, Shine and Add to Project." %}
 
 ## Opening it
 

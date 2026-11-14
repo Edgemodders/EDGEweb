@@ -60,7 +60,7 @@ New to EDGEmat? Do [Tutorial: recolor a jacket](tutorial-recolor.html) first. It
 
 Look for seams, or a pattern that repeats too obviously. Not happy? Press **Generate again**, or change the words, and pick the take you like best. Each take costs a few cents.
 
-{% include shot.html caption="Takes and the tiled preview" shows="The New Material page with two takes of worn brown leather, the second selected, and its 3 x 3 tiled preview with no visible seams." %}
+{% include shot.html caption="Takes and the tiled preview" src="/assets/shots/edgemat/new-material-takes.png" alt="The New Material page for leather on both l1_012 meshes: the words worn brown leather with fine creases, Medium detail, Google Gemini, two takes with Take 2 picked, and its 3 x 3 tiled preview beside Name, Repeat, Bumps, Shine, Metal and Add to Project." shows="The New Material page with two takes of worn brown leather, the second selected, and its 3 x 3 tiled preview with no visible seams." %}
 
 ## 3. Add it to the project
 
@@ -81,7 +81,7 @@ Press **Add to Project**.
 | A message | It saved `worn_leather` and put it on 2 mesh materials, with the buttons **Pack and Try** and **Show Files** |
 | On the page | Both meshes listed, with "repeat in the texture, garment folds kept": the pants keep their own folds and wrinkles at their real size |
 
-{% include shot.html caption="Saved into the project" shows="The message 'Saved worn_leather into ... and put on 2 mesh materials.' with Pack and Try and Show Files, and the page listing both l1_012 meshes with 'repeat in the texture, garment folds kept'." %}
+{% include shot.html caption="Saved into the project" src="/assets/shots/edgemat/tutorial-worn-leather-saved.png" alt="The New Material page after Add to Project, with Name worn leather and Repeat 6: Saved into my_materials, 9 files in edgemat\materials\worn_leather, both l1_012 meshes with repeat in the texture, garment folds kept, and the message Saved worn_leather into my_materials and put on 2 mesh materials with Pack and Try and Show Files." shows="The message 'Saved worn_leather into ... and put on 2 mesh materials.' with Pack and Try and Show Files, and the page listing both l1_012 meshes with 'repeat in the texture, garment folds kept'." %}
 
 ## 4. Into the game
 
