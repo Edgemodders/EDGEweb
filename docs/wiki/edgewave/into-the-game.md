@@ -72,7 +72,7 @@ That makes a straight swap easy. Say track 1 is a sound file of your own, and tr
 
 The route you used last on this sound is marked **last time**. If no track holds a game sound effect, groups 2 and 4 are missing. To override a game sound with a mix made only from your own files, add the game sound with **Add Sound**, untick its lane, then open the list again.
 
-{% include shot.html caption="The Add to Project list" shows="The list titled 'Add to Project: what should the mix replace?': A new sound for this project at the top, a group headed Track 2 with Override sound, Replace the event and Silence the event, then Any game event, a group marked not in the mix, and In a REDnode package at the bottom, one row marked last time." %}
+{% include shot.html caption="The Add to Project list" src="/assets/shots/edgewave/into-the-game-add-to-project.png" alt="The Add to Project list: A new sound for this project, Override sound 746693166, Replace the event w_melee_katana_equip, Silence the event, Replace a game event by name, and In a REDnode package." shows="The list titled 'Add to Project: what should the mix replace?': A new sound for this project at the top, a group headed Track 2 with Override sound, Replace the event and Silence the event, then Any game event, a group marked not in the mix, and In a REDnode package at the bottom, one row marked last time." %}
 
 ## Replace one sound
 

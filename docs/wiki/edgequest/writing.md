@@ -65,7 +65,7 @@ At the top of the Storyboard are its buttons:
 
 The header shows the quest's title, id and description. To change those, edit them in the text: see [The quest](story-file.html#the-quest).
 
-{% include shot.html caption="The Storyboard" shows="A quest on the Storyboard: beat cards titled with their objectives, arrows labelled with the options that lead to them, the endings marked quest succeeds and quest fails, and the buttons + Beat, Make, Made files, Layout and Open YAML at the top." %}
+{% include shot.html caption="The Storyboard" src="/assets/shots/edgequest/first-quest-storyboard.png" alt="The Storyboard for Something at the Door, id door_mystery: three beat cards, Go to the place, Look around and Think it over, joined by arrows labelled Look around and Leave, both endings marked quest succeeds. Project Quests and Game Quests are in the side bar." shows="A quest on the Storyboard: beat cards titled with their objectives, arrows labelled with the options that lead to them, the endings marked quest succeeds and quest fails, and the buttons + Beat, Make, Made files, Layout and Open YAML at the top." %}
 
 ### A beat's page
 
@@ -90,7 +90,7 @@ Click a card to open its page below the board. Double-click a card to rename its
 
 Some things have no button yet and are done in the text, with **Open YAML**: the quest's title and description, its places, and a fact set in the middle of a scene.
 
-{% include shot.html caption="A beat's page" shows="A beat's page under the Storyboard: its steps (a music cue and a scene), the scene's lines with their Direction and Say boxes, and a choice whose options have a goes on to list and colour and condition lists." %}
+{% include shot.html caption="A beat's page" src="/assets/shots/edgequest/writing-beat-page.png" alt="The page of the beat Go to the place under the Storyboard: its steps, the scene arrival with V's line and its Direction and Say boxes, a choice with two options, each with a goes on to list and colour and condition lists, and the checklist." shows="A beat's page under the Storyboard: its steps (a music cue and a scene), the scene's lines with their Direction and Say boxes, and a choice whose options have a goes on to list and colour and condition lists." %}
 
 Every change goes straight into the story file, with your comments kept. `Ctrl+Z` undoes it. [The story file](story-file.html) describes everything the file can hold.
 

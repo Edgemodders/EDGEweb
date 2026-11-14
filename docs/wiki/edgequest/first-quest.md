@@ -73,7 +73,7 @@ Each card is a **beat**: one stage of the quest, titled with the objective the j
 | **Look around** | Three seconds pass, then the quest ends as succeeded |
 | **Think it over** | Three seconds pass, then the quest ends as succeeded. This is where **Leave** goes |
 
-{% include shot.html caption="The new quest on the Storyboard" shows="The Storyboard just after New Quest: the header with the title Something at the Door and the id door_mystery, three beat cards (Go to the place, Look around, Think it over) with arrows labelled Look around and Leave, and both endings marked quest succeeds." %}
+{% include shot.html caption="The new quest on the Storyboard" src="/assets/shots/edgequest/first-quest-storyboard.png" alt="The Storyboard for Something at the Door, id door_mystery: three beat cards, Go to the place, Look around and Think it over, joined by arrows labelled Look around and Leave, both endings marked quest succeeds. Project Quests and Game Quests are in the side bar." shows="The Storyboard just after New Quest: the header with the title Something at the Door and the id door_mystery, three beat cards (Go to the place, Look around, Think it over) with arrows labelled Look around and Leave, and both endings marked quest succeeds." %}
 
 ## 3. Change a line and an objective
 
@@ -102,7 +102,7 @@ The choice has two options. You add a third, and a new beat for it to lead to.
 
 To give the option a line of its own, press **+ Line** in the row under it, type `Not today.` and press Enter. V says it after the player picks the option.
 
-{% include shot.html caption="The third option" shows="The page of the beat Go to your apartment: the scene arrival with V's line, and a choice with three options, Look around, Leave and Walk away, the last one set to go on to Forget about it." %}
+{% include shot.html caption="The third option" src="/assets/shots/edgequest/first-quest-third-option.png" alt="The Storyboard with a third arrow, Walk away, leading to a new card, Forget about it, and below it the scene's choice with three options: Look around, Leave and Walk away, the last set to go on to Forget about it." shows="The page of the beat Go to your apartment: the scene arrival with V's line, and a choice with three options, Look around, Leave and Walk away, the last one set to go on to Forget about it." %}
 
 ## 5. Write the description
 

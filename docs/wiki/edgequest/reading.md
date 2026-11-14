@@ -73,7 +73,7 @@ At the side are lists of everything the quest uses: its **Facts**, its **Journal
 
 At the top of the page are **Raw** and **Copy path**, which copies the quest file's own path.
 
-{% include shot.html caption="A quest page" shows="The quest page for a side quest such as sq030, Pyramid Song: numbered steps in plain words with arrow links to other steps, and the facts, journal entries, scenes and places listed at the side." %}
+{% include shot.html caption="A quest page" src="/assets/shots/edgequest/reading-quest-page.png" alt="The page for a phase of the side quest Pyramid Song: numbered steps in plain words with arrow links to other steps, and its facts, journal entries, scenes and places listed at the right." shows="The quest page for a side quest such as sq030, Pyramid Song: numbered steps in plain words with arrow links to other steps, and the facts, journal entries, scenes and places listed at the side." %}
 
 ## The scene page
 
@@ -85,7 +85,7 @@ A scene page shows:
 
 Options show their tags as the game does: a lifepath, an attribute check or a price. A yellow option is one the game marks as moving the story on; the others are white.
 
-{% include shot.html caption="A scene page" shows="A scene page from a game quest: the people in the scene at the top, lines with speaker names and subtitles, and a choice whose options show their yellow or white colour and a lifepath or attribute tag." %}
+{% include shot.html caption="A scene page" src="/assets/shots/edgequest/reading-scene-page.png" alt="A scene page from Pyramid Song: the people in the scene and line counts at the top, then numbered steps with a choice of two yellow options and lines with their speakers." shows="A scene page from a game quest: the people in the scene at the top, lines with speaker names and subtitles, and a choice whose options show their yellow or white colour and a lifepath or attribute tag." %}
 
 ## Following a quest: the step trail
 

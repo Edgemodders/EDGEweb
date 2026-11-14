@@ -61,7 +61,7 @@ Leave the project open. EDGEwave saves into the project REDcode has open.
 
 Press **▶** on each variation to hear how they differ.
 
-{% include shot.html caption="The katana's event in Game Assets" shows="EDGEwave's Game Assets view filtered by 'katana equip': the Sound effects group with w_melee_katana_equip unfolded into Variation 1, 2 and 3 with their hashes, and the play, add and open buttons showing on the hovered row." %}
+{% include shot.html caption="The katana's event in Game Assets" src="/assets/shots/edgewave/tutorial-katana-event.png" alt="EDGEwave's side bar with the Sounds view on top and Game Assets below, filtered by katana equip: Sound effects with w_melee_katana_equip opened into Variation 1, 2 and 3 with their numbers, and the play, add and open buttons on the hovered row." shows="EDGEwave's Game Assets view filtered by 'katana equip': the Sound effects group with w_melee_katana_equip unfolded into Variation 1, 2 and 3 with their hashes, and the play, add and open buttons showing on the hovered row." %}
 
 ## 3. Open it
 
@@ -90,7 +90,7 @@ Press **Space** to hear the sound in the editor. If nothing plays, click the wav
 
 Press `Ctrl+S` to save. Changed your mind? `Ctrl+Z` undoes and `Ctrl+Y` redoes, and the **×** beside an effect removes it. Keep the radio for now: it is what you listen for in the game.
 
-{% include shot.html caption="The Radio preset on the katana sound" shows="The EDGEwave editor on 746693166.edgewave: the Mix bar with Render WAV and Add to Project, one lane, the waveform, and the Effects pane listing the Radio preset's five effects with their values." %}
+{% include shot.html caption="The Radio preset on the katana sound" src="/assets/shots/edgewave/tutorial-radio-preset.png" alt="The EDGEwave editor on 746693166.edgewave: the Mix bar with Render WAV and Add to Project, one lane marked 5 fx, the waveform, and the Effects pane listing High-pass, Low-pass, EQ, Distortion and Compressor with their values." shows="The EDGEwave editor on 746693166.edgewave: the Mix bar with Render WAV and Add to Project, one lane, the waveform, and the Effects pane listing the Radio preset's five effects with their values." %}
 
 ## 5. Add it to the project
 

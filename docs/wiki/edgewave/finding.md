@@ -57,7 +57,7 @@ Move the mouse over a sound and buttons appear on its row. Right-click it for th
 
 **▶** plays through Windows' default sound output. If it can't play a sound, a message says why and offers the Hear tab.
 
-{% include shot.html caption="Game Assets" shows="EDGEwave's sidebar with the Sounds view on top and Game Assets below it: Sound effects unfolded to an event with three variations, Voice lines and Music and streamed sounds folded, and the play, add and open buttons on the hovered row." %}
+{% include shot.html caption="Game Assets" src="/assets/shots/edgewave/tutorial-katana-event.png" alt="EDGEwave's side bar with the Sounds view on top and Game Assets below, filtered by katana equip: Sound effects with w_melee_katana_equip opened into Variation 1, 2 and 3 with their numbers, and the play, add and open buttons on the hovered row." shows="EDGEwave's sidebar with the Sounds view on top and Game Assets below it: Sound effects unfolded to an event with three variations, Voice lines and Music and streamed sounds folded, and the play, add and open buttons on the hovered row." %}
 
 ## Filter
 
@@ -98,7 +98,7 @@ Opening a sound makes a **sound document** for it, a `.edgewave` file in your pr
 
 To add a sound to a mix you already have open, use **+** instead: see [Tracks](editing.html#tracks).
 
-{% include shot.html caption="The Sounds view and Open in EDGEwave" shows="REDcode's sound browser with the Open in EDGEwave button, and EDGEwave's Sounds view in the activity bar listing two sound documents." %}
+{% include shot.html caption="The Sounds view and Open in EDGEwave" src="/assets/shots/edgewave/finding-open-in-edgewave.png" alt="REDcode's sound browser filtered by katana equip with the Open in EDGEwave button at its top right, and EDGEwave's Sounds view in the side bar listing the project's sound document." shows="REDcode's sound browser with the Open in EDGEwave button, and EDGEwave's Sounds view in the activity bar listing two sound documents." %}
 
 ## A new, empty sound
 

@@ -5,6 +5,7 @@ What changed on https://edgemodders.ai and its wiki, for players and modders. Ev
 How to keep it:
 
 - With each change a reader would notice, add a line under **Unreleased**, in its group: **New**, **Changed**, **Fixed** or **Other**. One change per line, in the commit that makes the change. Leave out typo fixes and changes only the build sees.
+- Wiki: EDGEwave and EDGEquest have their first screenshots: the sound editor, the Radio preset, Add to Project, the Storyboard, a beat page, the sound picker and game quest pages: https://edgemodders.ai/wiki/edgequest/first-quest.html
 - Wiki: EDGEmat has screenshots of Find, the setup editor, editing a layer, Save to Project, Game Materials, surface and microblend pages, the Desk and the 3D view: https://edgemodders.ai/wiki/edgemat/setup-editor.html
 - Wiki: REDcode has screenshots on twelve of its pages: the Project view, Game Assets, LocKeys, TweakDB, the CR2W editor, the table view, the texture, 3D, audio and sound viewers, Find Items and the settings: https://edgemodders.ai/wiki/redcode/viewers.html
 - Wiki: EDGEdeck screenshots for the empty Mods view, the Set up group, a deploy waiting, pending changes, the frameworks list, the Nexus key box, sections, the EDGEdeck page and its settings: https://edgemodders.ai/wiki/edgedeck/mods-view.html#the-edgedeck-page

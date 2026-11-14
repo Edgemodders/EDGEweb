@@ -15,7 +15,7 @@ A **mod project** is a folder that holds your changes until they are packed into
 
 **New here?** Read this page, then [Install and set up](install.html), then follow [Tutorial: your first sound mod](tutorial.html). It takes about 20 minutes, with no coding and no paid account.
 
-{% include shot.html caption="EDGEwave's sound editor" shows="A game sound open in the EDGEwave editor: the waveform with a selection, the Edits list, and the Render pane, in REDcode's HUD colours." %}
+{% include shot.html caption="EDGEwave's sound editor" src="/assets/shots/edgewave/index-editor.png" alt="A game sound open in the EDGEwave editor: three lanes in the mix, the waveform with a selection in yellow, one edit, Fade in, in the Edits list, and the Render pane at the bottom." shows="A game sound open in the EDGEwave editor: the waveform with a selection, the Edits list, and the Render pane, in REDcode's HUD colours." %}
 
 | On this page | |
 |---|---|

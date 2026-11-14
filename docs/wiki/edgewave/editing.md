@@ -42,7 +42,7 @@ Click a lane to select its track. The Track bar, the waveform, the Edits pane an
 
 A thin bar sits between the Track bar and the Clip bar. Drag it to give the lanes or the waveform more room, or double-click it to fit every track.
 
-{% include shot.html caption="The editor's parts" shows="The EDGEwave editor on a mix of three tracks, with labels on the header, the Mix bar, the lanes and their tick boxes, the Track bar, the bar that resizes the lanes, the Clip bar, the waveform, the edit buttons, and the Edits, Effects and Master panes." %}
+{% include shot.html caption="The editor's parts" src="/assets/shots/edgewave/editing-parts.png" alt="The EDGEwave editor on a mix of three tracks, top to bottom: the header, the Mix bar with Render WAV and Add to Project, three lanes with tick boxes, the Track bar, the Clip bar, the waveform, the edit buttons, then the Edits, Effects, Master and Render panes." shows="The EDGEwave editor on a mix of three tracks, with labels on the header, the Mix bar, the lanes and their tick boxes, the Track bar, the bar that resizes the lanes, the Clip bar, the waveform, the edit buttons, and the Edits, Effects and Master panes." %}
 
 ## Listen and select
 

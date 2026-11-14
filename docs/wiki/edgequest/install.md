@@ -57,7 +57,7 @@ Optional:
 
 > **Not a game mod.** EDGEquest is an extension for VS Code. Don't install it with Vortex or EDGEdeck: they would put it in the game folder, where it does nothing.
 
-{% include shot.html caption="The EDGEquest views" shows="The EDGEquest activity bar icon selected, with Project Quests (one quest with its beats and checklist) above Game Quests (folders titled with quest names)." %}
+{% include shot.html caption="The EDGEquest views" src="/assets/shots/edgequest/install-views.png" alt="The EDGEquest icon selected in the activity bar, with Project Quests showing one quest, its three beats and its checklist, above Game Quests with the game's quest folders." shows="The EDGEquest activity bar icon selected, with Project Quests (one quest with its beats and checklist) above Game Quests (folders titled with quest names)." %}
 
 ## The quest index
 

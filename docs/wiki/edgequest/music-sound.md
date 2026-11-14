@@ -111,7 +111,7 @@ Closing the picker stops the sound. The last row of the list, **Type a name...**
 
 If the game goes quiet while you try cues from the picker, open the game's pause menu and go back. Some cues turn the game's sound down, and this brings it back.
 
-{% include shot.html caption="The sound picker" shows="The Storyboard's sound picker searching for q104 drone, with the project's own edgewave_ sounds listed first, game events below, and a play button beside each." %}
+{% include shot.html caption="The sound picker" src="/assets/shots/edgequest/music-sound-picker.png" alt="The Storyboard's sound picker with drone typed in: game sound events whose names contain drone, each with its tags and whether it loops." shows="The Storyboard's sound picker searching for q104 drone, with the project's own edgewave_ sounds listed first, game events below, and a play button beside each." %}
 
 ## Try it
 

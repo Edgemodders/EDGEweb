@@ -52,7 +52,7 @@ This connects EDGEwave for every Claude Code session on your PC, whichever folde
 
 All the EDGE servers, side by side: [Connect Claude Code](../connect-claude-code.html).
 
-{% include shot.html caption="Connect an Assistant" shows="The list titled 'EDGEwave: Connect an Assistant (MCP)' in VS Code: Connect Claude Code, Copy the Claude Code command, Copy a JSON entry and Reveal the server file." %}
+{% include shot.html caption="Connect an Assistant" src="/assets/shots/edgewave/assistants-connect.png" alt="The list titled EDGEwave: Connect an Assistant (MCP): Connect Claude Code, Copy the Claude Code command, Copy a JSON entry and Reveal the server file." shows="The list titled 'EDGEwave: Connect an Assistant (MCP)' in VS Code: Connect Claude Code, Copy the Claude Code command, Copy a JSON entry and Reveal the server file." %}
 
 ## The ElevenLabs key
 

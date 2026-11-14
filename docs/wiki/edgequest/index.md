@@ -18,7 +18,7 @@ EDGEquest is the EDGE platform's quest maker for Cyberpunk 2077. It runs inside 
 
 **New here?** [Install and set up](install.html), then follow [Your first quest](first-quest.html): about 30 minutes, with no coding, from an empty project to your quest in the game. To learn how the game builds its own quests first, try [Reading the game's quests](reading.html). The other pages are for looking things up.
 
-{% include shot.html caption="EDGEquest in VS Code" shows="VS Code with the EDGEquest activity bar open: the Project Quests and Game Quests views on the left, and a quest's Storyboard on the right, with beat cards joined by arrows labelled with choices." %}
+{% include shot.html caption="EDGEquest in VS Code" src="/assets/shots/edgequest/first-quest-storyboard.png" alt="The Storyboard for Something at the Door, id door_mystery: three beat cards, Go to the place, Look around and Think it over, joined by arrows labelled Look around and Leave, both endings marked quest succeeds. Project Quests and Game Quests are in the side bar." shows="VS Code with the EDGEquest activity bar open: the Project Quests and Game Quests views on the left, and a quest's Storyboard on the right, with beat cards joined by arrows labelled with choices." %}
 
 | On this page | |
 |---|---|
