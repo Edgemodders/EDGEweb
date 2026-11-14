@@ -64,7 +64,7 @@ To come back to a quest you voiced before, run **EDGEwave: Voice Lines...** from
 
 Your voice choices are remembered for the quest. The takes are in your project, in `source\raw\edgewave\voice\<quest>`: one WAV per take, named the way the game names voice files, and `voice.json`, the record of what was made from what.
 
-{% include shot.html caption="The Voice Lines panel" shows="The Voice Lines tab for a quest: the header with the count of voiced lines, the Model menu and Generate All, the voice pickers for V's two voices and one other speaker, and three lines with their F and M takes, play buttons, and the Use a file, Studio, Regenerate and Previous buttons." %}
+{% include shot.html caption="The Voice Lines panel" src="/assets/shots/edgewave/voice-lines-panel.png" alt="The Voice Lines tab for the quest door_mystery: 3 lines, 3 voiced, 0 to voice, the Model menu on eleven_v3 and Generate All, a voice picked for female V and for male V, and three of V's lines marked voiced, each with F and M takes, play buttons, Use a file, Studio and Regenerate." shows="The Voice Lines tab for a quest: the header with the count of voiced lines, the Model menu and Generate All, the voice pickers for V's two voices and one other speaker, and three lines with their F and M takes, play buttons, and the Use a file, Studio, Regenerate and Previous buttons." %}
 
 ## How a line is spoken
 

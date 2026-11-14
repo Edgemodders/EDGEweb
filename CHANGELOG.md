@@ -16,6 +16,7 @@ How to keep it:
 
 **New**
 
+- Wiki: a screenshot of EDGEwave's Voice Lines panel with a quest's three lines voiced: https://edgemodders.ai/wiki/edgewave/voice-lines.html
 - Wiki: screenshots of EDGEmat making a material from words: two takes, the tiled preview and the material saved into a project: https://edgemodders.ai/wiki/edgemat/tutorial-worn-leather.html
 - Wiki: the first EDGEkit screenshots, from 1.140.6: the first welcome screen, the Welcome page and the window with REDcode open: https://edgemodders.ai/wiki/edgekit/
 - Wiki: the first REDnode screenshots taken in the game by Claude: a spawned box, a world pin and the UI Workbench window: https://edgemodders.ai/wiki/rednode/world.html
