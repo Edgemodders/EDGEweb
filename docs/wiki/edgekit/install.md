@@ -61,7 +61,7 @@ Start EDGEkit. Three things happen, in this order:
 
 Then the **Welcome** page shows, with EDGEkit's own walkthrough. That is where [Your first session](first-session.html) picks up.
 
-{% include shot.html caption="The first start" shows="EDGEkit's welcome screens at the first start: the Sign in with GitHub screen." %}
+{% include shot.html caption="The first start" src="/assets/shots/edgekit/install-first-start.png" alt="EDGEkit's first welcome screen, Welcome to EDGEkit, with the Continue with GitHub button and Continue without Signing In at the bottom right." shows="EDGEkit's welcome screens at the first start: the Sign in with GitHub screen." %}
 
 ## Updating
 

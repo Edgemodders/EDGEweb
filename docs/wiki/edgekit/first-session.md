@@ -22,7 +22,7 @@ If you have used VS Code, you know this window. If not, four parts are enough to
 | **The editor** | The large middle area | Whatever you open: a file, a material, a quest, the Welcome page |
 | **The command palette** | Press **Ctrl+Shift+P** | A search box for every command. Type a tool's name, such as `EDGEdeck`, to see what it can do |
 
-{% include shot.html caption="The EDGEkit window" shows="The EDGEkit window with the activity bar on the left, each EDGE tool's icon labelled: REDcode, EDGEdeck, EDGEmat, EDGEwave, REDsave, EDGEquest and EDGEhack, with REDcode's side bar open beside it." %}
+{% include shot.html caption="The EDGEkit window" src="/assets/shots/edgekit/first-session-window.png" alt="The EDGEkit window with the EDGE tools' icons down the activity bar and REDcode's side bar open: its Project, Game Assets, TweakDB, LocKeys and Properties views, each saying what to set up first." shows="The EDGEkit window with the activity bar on the left, each EDGE tool's icon labelled: REDcode, EDGEdeck, EDGEmat, EDGEwave, REDsave, EDGEquest and EDGEhack, with REDcode's side bar open beside it." %}
 
 ## Where each tool lives
 

@@ -11,7 +11,7 @@ reviewed: 2026-11-13
 
 EDGEkit is the easiest way to get the EDGE tools. It is a free app for Windows: an editor that looks and works like VS Code, a popular free editor, with the EDGE modding tools already installed. You install one app and start modding Cyberpunk 2077, with nothing else to hunt for. You don't need to know how to code to use it.
 
-{% include shot.html caption="EDGEkit" shows="The EDGEkit window just after its first start: the Welcome walkthrough in the middle, and the EDGE tools' icons down the activity bar on the left." %}
+{% include shot.html caption="EDGEkit" src="/assets/shots/edgekit/index-welcome.png" alt="The EDGEkit window after its first start: the Welcome page with the walkthroughs Get started with EDGEkit and Get started with Claude Code, and the EDGE tools' icons down the activity bar on the left." shows="The EDGEkit window just after its first start: the Welcome walkthrough in the middle, and the EDGE tools' icons down the activity bar on the left." %}
 
 **New here?** [Install the app](install.html), then follow [Your first session](first-session.html).
 

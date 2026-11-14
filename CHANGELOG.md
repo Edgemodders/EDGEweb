@@ -16,6 +16,7 @@ How to keep it:
 
 **New**
 
+- Wiki: the first EDGEkit screenshots, from 1.140.6: the first welcome screen, the Welcome page and the window with REDcode open: https://edgemodders.ai/wiki/edgekit/
 - Wiki: the first REDnode screenshots taken in the game by Claude: a spawned box, a world pin and the UI Workbench window: https://edgemodders.ai/wiki/rednode/world.html
 - Wiki: REDagent has its own install page, from getting an Anthropic API key to the first start, updating and removing: https://edgemodders.ai/wiki/redagent/install.html
 - Wiki: REDagent's costs, key and data on a page of their own, with the costs measured in its tests and how to keep them down: https://edgemodders.ai/wiki/redagent/costs.html
