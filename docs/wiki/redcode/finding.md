@@ -88,7 +88,7 @@ Where things usually are:
 
 **Check with Find Items.** For clothing, the 3D view can tell you which items a mesh belongs to. Open the mesh, pick a look in the **Appearance** list, and press **Find Items**. It lists the items that show that look, by their name in the game. See [Which items use a mesh](viewers.html#which-items-use-a-mesh). It doesn't cover weapons.
 
-{% include shot.html caption="From a mesh to its items" shows="A shoe mesh in the 3D view with the Appearance list open, and Find Items listing the items that show the chosen appearance, with their names in the game." %}
+{% include shot.html caption="From a mesh to its items" src="/assets/shots/redcode/viewers-find-items.png" alt="The shoe mesh in the 3D view with the red_yellow_graphic appearance, and the Find Items list over it: three records under Shows red_yellow_graphic, named Sunny Ammo synthetic high-tops, then the other appearances of the mesh." shows="A shoe mesh in the 3D view with the Appearance list open, and Find Items listing the items that show the chosen appearance, with their names in the game." %}
 
 ## From a record to its files
 

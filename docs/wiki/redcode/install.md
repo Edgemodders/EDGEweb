@@ -92,7 +92,7 @@ If your PC has no .NET 10 runtime, REDbridge can't start. REDcode says so and of
 
 If Game Assets stays empty, see [Troubleshooting](troubleshooting.html#setting-up).
 
-{% include shot.html caption="REDcode ready" shows="The REDcode status bar item with a project name, the REDbridge version and the indexed file count, and the Game Assets view showing the top folders of the game's archives." %}
+{% include shot.html caption="REDcode ready" src="/assets/shots/redcode/install-ready.png" alt="The REDcode side bar with the sample project my_first_mod, Game Assets showing base, dlc, engine and ep1 with their file counts, and the status bar reading my_first_mod, 592,071 files, REDbridge 0.12.1." shows="The REDcode status bar item with a project name, the REDbridge version and the indexed file count, and the Game Assets view showing the top folders of the game's archives." %}
 
 **Next:** make [your first mod](first-mod.html).
 

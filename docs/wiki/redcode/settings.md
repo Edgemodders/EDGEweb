@@ -20,7 +20,7 @@ reviewed: 2026-11-13
 
 Open VS Code's settings (`Ctrl+,`) and search for `redcode`. Most people never change any of these: REDcode finds the game and fetches REDbridge on its own.
 
-{% include shot.html caption="REDcode in VS Code's settings" shows="VS Code's Settings editor filtered to redcode, showing the game path, bridge path and pack settings." %}
+{% include shot.html caption="REDcode in VS Code's settings" src="/assets/shots/redcode/settings-editor.png" alt="The Settings editor filtered to redcode, 24 settings found: Author, Blender Path, Bridge Path, Bridge Repository and Bridge Update Check." shows="VS Code's Settings editor filtered to redcode, showing the game path, bridge path and pack settings." %}
 
 ### Game and REDbridge
 

@@ -60,7 +60,7 @@ The game doesn't keep an item's name with the item. The name is a numbered text 
 | You play in another language | Press **LocKey Language...** (the globe) in the view's title bar, pick your language, and search again |
 | There are several entries with the same text | The game sometimes has the same name more than once. Take the first; if the name doesn't change in the game, come back and do the next one too |
 
-{% include shot.html caption="Finding the name" shows="The LocKeys view after a search for sunny ammo high-tops: the matching entries with their texts and LocKey numbers, and the hover buttons on the first one." %}
+{% include shot.html caption="Finding the name" src="/assets/shots/redcode/lockeys-search.png" alt="The LocKeys view after a search for sunny ammo high-tops: one entry, Sunny Ammo synthetic high-tops, LocKey#4123, with its two hover buttons and a tip giving its secondary key." shows="The LocKeys view after a search for sunny ammo high-tops: the matching entries with their texts and LocKey numbers, and the hover buttons on the first one." %}
 
 ## 3. Add it to your project
 
@@ -85,7 +85,7 @@ Hover over the entry and press **Add to Project Onscreens**, the first button on
 
 **You should see** the dot on the editor's tab go away when the file is saved. Search again in the LocKeys view: your entry now shows your text, with a pencil icon that marks it as your project's.
 
-{% include shot.html caption="Changing the text" shows="The project's localization file in the table view with one row, its femaleVariant text being edited, and the file selected under Archive in the Project view." %}
+{% include shot.html caption="Changing the text" src="/assets/shots/redcode/editing-table.png" alt="The project text file en-us.json in the table view: a filter box, add row, and one row with key 4123 whose femaleVariant text is being typed. The file is selected under Archive in the Project view." shows="The project's localization file in the table view with one row, its femaleVariant text being edited, and the file selected under Archive in the Project view." %}
 
 ## 5. Pack and install
 

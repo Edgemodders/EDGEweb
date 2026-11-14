@@ -70,7 +70,7 @@ A few files are left out, as in WolvenKit: `.script` and `.ws` files, `info.json
 | A tweak file is not under `r6\tweaks` | TweakXL will not load it | Move it to `r6/tweaks` under Resources |
 | A custom sound is missing, or needs a REDmod | See [Packing as a REDmod](#packing-as-a-redmod) | |
 
-{% include shot.html caption="Packing" shows="The Project view after a pack: the Pack, Pack and Install and Run Game buttons in the title bar, and Packed expanded to show the mod's archive and a tweak file." %}
+{% include shot.html caption="Packing" src="/assets/shots/redcode/projects-view.png" alt="The Project view after a pack: the buttons in its title bar, and Packed opened to archive, pc, mod with my_first_mod.archive and my_first_mod.archive.xl." shows="The Project view after a pack: the Pack, Pack and Install and Run Game buttons in the title bar, and Packed expanded to show the mod's archive and a tweak file." %}
 
 ## Install
 

@@ -67,7 +67,7 @@ With no project open, the Project view shows **New Project** and **Open Folder**
 
 Click the REDcode icon in the activity bar. The Project view shows the open project as one tree: the project at the top, with the mod name and version beside it, and its folders below.
 
-{% include shot.html caption="The Project view" shows="The Project view with a small project expanded: the project row with mod name and version, then Archive with a few game files, Raw with an exported PNG, Resources with a tweak file, and Packed." %}
+{% include shot.html caption="The Project view" src="/assets/shots/redcode/projects-view.png" alt="The Project view with the sample project open: Archive with a texture, a mesh and two folders, Raw with the exported PNG, Resources with a tweak file and an .xl file, and Packed with the mod archive." shows="The Project view with a small project expanded: the project row with mod name and version, then Archive with a few game files, Raw with an exported PNG, Resources with a tweak file, and Packed." %}
 
 ### Opening files
 

@@ -22,7 +22,7 @@ Most game files are in a binary format called **CR2W**: data only the game and m
 | [Why a value looks different after saving](#why-a-value-looks-different-after-saving) | Three rules of the format |
 | [Editing as JSON](#editing-as-json) | The whole file as text |
 
-{% include shot.html caption="The CR2W editor" shows="An .ent file from a project open in the CR2W editor: the tree of chunks on the left with a component selected, its properties in the grid on the right, and the search box in the footer." %}
+{% include shot.html caption="The CR2W editor" src="/assets/shots/redcode/editing-cr2w.png" alt="An .ent file from the project in the CR2W editor: the tree on the left opened to its one component, and that component on the right with its name, type, colour, radius and intensity. The search box is at the bottom right." shows="An .ent file from a project open in the CR2W editor: the tree of chunks on the left with a component selected, its properties in the grid on the right, and the search box in the footer." %}
 
 ## Which files open in it
 
@@ -106,7 +106,7 @@ The game's text files, such as `onscreens.json` and the subtitle files, open as 
 
 To find a text by its words across the whole game, use the [LocKeys view](game-assets.html#the-lockeys-view). Its **Add to Project Onscreens** copies an entry into your project's file and opens this table on its row.
 
-{% include shot.html caption="The table view" shows="A localization file in the table view: the filter box, rows with their keys and texts, one text being edited, and the Add row button." %}
+{% include shot.html caption="The table view" src="/assets/shots/redcode/editing-table.png" alt="The project text file en-us.json in the table view: a filter box, add row, and one row with key 4123 whose femaleVariant text is being typed. The file is selected under Archive in the Project view." shows="A localization file in the table view: the filter box, rows with their keys and texts, one text being edited, and the Add row button." %}
 
 ## Atlases: the atlas view
 

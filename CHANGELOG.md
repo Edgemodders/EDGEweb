@@ -5,6 +5,7 @@ What changed on https://edgemodders.ai and its wiki, for players and modders. Ev
 How to keep it:
 
 - With each change a reader would notice, add a line under **Unreleased**, in its group: **New**, **Changed**, **Fixed** or **Other**. One change per line, in the commit that makes the change. Leave out typo fixes and changes only the build sees.
+- Wiki: REDcode has screenshots on twelve of its pages: the Project view, Game Assets, LocKeys, TweakDB, the CR2W editor, the table view, the texture, 3D, audio and sound viewers, Find Items and the settings: https://edgemodders.ai/wiki/redcode/viewers.html
 - Wiki: EDGEdeck screenshots for the empty Mods view, the Set up group, a deploy waiting, pending changes, the frameworks list, the Nexus key box, sections, the EDGEdeck page and its settings: https://edgemodders.ai/wiki/edgedeck/mods-view.html#the-edgedeck-page
 - For a release, rename **Unreleased** to `## <version> (<date>)`, start a new empty **Unreleased** above it, then tag `v<version>` and make the GitHub release from that section.
 - Links are full URLs, since the same text may go to GitHub, Discord and Nexus.
@@ -44,6 +45,7 @@ How to keep it:
 
 **Fixed**
 
+- Wiki: REDcode's TweakDB page named a record the game does not have; its examples now use Items.Preset_Dian_Yinglong: https://edgemodders.ai/wiki/redcode/tweakdb.html
 - The old address https://edgemodders.ai/wiki/edgewave/try-it.html leads to Install and set up EDGEwave again.
 - Landing and platform pages: seven toolkits offer an MCP server, not four; the toolkits build on each other, where the pages said each works alone; EDGEhack is not on the VS Code Marketplace; swapping sound archives into the running game is untested on game 2.5: https://edgemodders.ai/platform.html
 - Get involved and the README list every toolkit, with REDsave: https://edgemodders.ai/community.html

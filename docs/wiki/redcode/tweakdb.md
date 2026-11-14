@@ -8,7 +8,7 @@ reviewed: 2026-11-13
 
 # TweakDB and <span class="y">tweaks</span>
 
-**TweakDB** is the game's database: every item, weapon, vehicle, character and many settings is a **record**, such as `Items.Preset_Yinglong_Default`, made of named values called **flats**: its price, its damage, its display name, the records it points to. Mods change TweakDB with [TweakXL](../glossary.html#game-and-modding-terms) **tweak files**, small text files in YAML or the game's own `.tweak` format.
+**TweakDB** is the game's database: every item, weapon, vehicle, character and many settings is a **record**, such as `Items.Preset_Dian_Yinglong`, made of named values called **flats**: its price, its damage, its display name, the records it points to. Mods change TweakDB with [TweakXL](../glossary.html#game-and-modding-terms) **tweak files**, small text files in YAML or the game's own `.tweak` format.
 
 REDcode lets you look up any record, follow its links, and start a tweak from it in one click.
 
@@ -35,7 +35,7 @@ Another EDGE tool can claim the records it is made for, as [EDGEhack](../edgehac
 
 REDcode reads TweakDB **as the game ships it**, from the game's files, without any mods. To see what a mod changes in the running game, use [REDnode](../rednode/)'s live TweakDB reads, from a REDnode app or an assistant connected to REDnode. They aren't part of REDcode.
 
-{% include shot.html caption="The TweakDB view" shows="The TweakDB view with record types and their counts, one type expanded to its records grouped by path, and the hover buttons on a record." %}
+{% include shot.html caption="The TweakDB view" src="/assets/shots/redcode/tweakdb-view-record.png" alt="The TweakDB view filtered to yinglong, 43 records: record types with their counts and the records under each, one record hovered with its buttons. The record page for Items.Preset_Dian_Yinglong is open beside it." shows="The TweakDB view with record types and their counts, one type expanded to its records grouped by path, and the hover buttons on a record." %}
 
 ## The record page
 
@@ -47,7 +47,7 @@ The record page shows every flat of a record, with its type and value.
 - Click a flat's **name** to copy its full path, such as `Items.money.quality`.
 - The **filter box** narrows the flats by name or value.
 
-{% include shot.html caption="The record page" shows="A weapon record open on its record page: flats with types and values, a record link, a LocKey with its text, and the filter box." %}
+{% include shot.html caption="The record page" src="/assets/shots/redcode/tweakdb-view-record.png" alt="The record page for the weapon Items.Preset_Dian_Yinglong with name typed in its filter box, 29 of 141 flats: each flat with its type and value, and displayName showing LocKey#40613 with its text, Yinglong." shows="A weapon record open on its record page: flats with types and values, a record link, a LocKey with its text, and the filter box." %}
 
 ## New Tweak from This Record
 
@@ -56,7 +56,7 @@ The record page shows every flat of a record, with its type and value.
 | Choice | Means | Then |
 |---|---|---|
 | **Change this record** | Changes the record itself. Everything in the game that uses it sees the change | Writes the file |
-| **Clone as a new record** | A new record that starts as a copy of this one, for a new item. The original is untouched | Asks for the new record's path, and suggests one with your mod's name in it, such as `Items.my_jacket_Preset_Yinglong_Default` |
+| **Clone as a new record** | A new record that starts as a copy of this one, for a new item. The original is untouched | Asks for the new record's path, and suggests one with your mod's name in it, such as `Items.my_jacket_Preset_Dian_Yinglong` |
 
 The file goes under your project's `source/resources/r6/tweaks/<mod name>/`, opens in the editor, and is selected in the Project view under **Resources**. When you [pack](pack-install.html), it goes to the game's `r6/tweaks` folder, where TweakXL loads it when the game starts.
 
@@ -89,9 +89,9 @@ Price.CasualShoes:
 
 Leave the other lines as comments, or delete them. For **Clone as a new record**, the file starts with the new record's path and a line `$base:` naming the original, then the same commented list.
 
-To try a cloned item in the game, give it to V by its record path: with REDnode, type `addItem("Items.my_jacket_Preset_Yinglong_Default")` in [REDnode's Console](../rednode/overlay.html#the-console).
+To try a cloned item in the game, give it to V by its record path: with REDnode, type `addItem("Items.my_jacket_Preset_Dian_Yinglong")` in [REDnode's Console](../rednode/overlay.html#the-console).
 
-{% include shot.html caption="A new tweak" shows="The YAML file New Tweak from This Record wrote, open in the editor with its flats commented out, and the file selected in the Project view under Resources." %}
+{% include shot.html caption="A new tweak" src="/assets/shots/redcode/tweakdb-new-tweak.png" alt="The file Preset_Dian_Yinglong.yaml open in the editor: two comment lines, the record path, then every flat as a comment. The file is selected under Resources, r6, tweaks, my_first_mod in the Project view." shows="The YAML file New Tweak from This Record wrote, open in the editor with its flats commented out, and the file selected in the Project view under Resources." %}
 
 ## Try it: change a price
 

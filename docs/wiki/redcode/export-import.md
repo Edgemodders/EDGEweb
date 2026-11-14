@@ -29,7 +29,7 @@ Some changes need another tool: you repaint a texture in an image editor, or res
 
 Export and Import only show on files that can be converted. Both work on a folder too.
 
-{% include shot.html caption="Export and import buttons" shows="The Project view with a texture under Archive showing the Export to Raw hover button, and its exported PNG under Raw showing the Import from Raw button." %}
+{% include shot.html caption="Export and import buttons" src="/assets/shots/redcode/export-import-buttons.png" alt="The Project view with a texture, an .xbm file, under Archive and its exported PNG under Raw. The PNG row is hovered and shows its buttons, Import from Raw first." shows="The Project view with a texture under Archive showing the Export to Raw hover button, and its exported PNG under Raw showing the Import from Raw button." %}
 
 ## Try it: repaint a texture
 

@@ -32,7 +32,7 @@ The same viewer opens `.dds` and `.tga` files, which VS Code can't show. In the 
 
 To see a texture's settings (its format, compression, flags), open it in the CR2W editor: see [Editing game files](editing.html#which-files-open-in-it). To change the picture, [export](export-import.html) it to PNG, edit it in any image editor, and import it back.
 
-{% include shot.html caption="The texture viewer" shows="A game texture open in the texture viewer, over the checkerboard, with the size and the Fit, 1:1 and Pixels buttons." %}
+{% include shot.html caption="The texture viewer" src="/assets/shots/redcode/viewers-texture.png" alt="A normal map of a pair of shoes in the texture viewer, over a checkerboard, with the Fit, 1:1 and Pixels buttons at the top right." shows="A game texture open in the texture viewer, over the checkerboard, with the size and the Fit, 1:1 and Pixels buttons." %}
 
 ## Meshes in 3D
 
@@ -54,7 +54,7 @@ Two words first. A mesh is made of parts, called **submeshes**, and each part ha
 - **Find Items** lists the items in the game that wear this mesh. See [Which items use a mesh](#which-items-use-a-mesh).
 - **Open in EDGEmat** puts the mesh on [EDGEmat](../edgemat/)'s Desk with the appearance shown open, to change its materials.
 
-{% include shot.html caption="The 3D mesh viewer" shows="A vehicle or weapon mesh from the game in the 3D view: the model coloured by material, the LOD picker and toggles in the toolbar, and the submesh list on the right." %}
+{% include shot.html caption="The 3D mesh viewer" src="/assets/shots/redcode/viewers-mesh.png" alt="The Nokota Osprey rifle in the 3D view in flat colours on a ground grid: the LOD and appearance pickers, Wireframe, Bounds, Grid, Frame, Find Items and Open in EDGEmat in the toolbar, the triangle and size line, and the submesh list on the right." shows="A vehicle or weapon mesh from the game in the 3D view: the model coloured by material, the LOD picker and toggles in the toolbar, and the submesh list on the right." %}
 
 Good to know:
 
@@ -81,7 +81,7 @@ Each row shows how the item reaches the mesh:
 
 It works for clothing and similar items: shoes, jackets, outfit sets, glasses, helmets, masks, food and drinks. It does not work for weapons, which choose their look another way. For a mesh no item shows, it lists the `.app` looks that use it, to open instead.
 
-{% include shot.html caption="Find Items" shows="Find Items open over the 3D view of a pair of shoes: under Shows red_yellow_graphic, three item records with their names in the game, then the other appearances of the mesh below." %}
+{% include shot.html caption="Find Items" src="/assets/shots/redcode/viewers-find-items.png" alt="The shoe mesh in the 3D view with the red_yellow_graphic appearance, and the Find Items list over it: three records under Shows red_yellow_graphic, named Sunny Ammo synthetic high-tops, then the other appearances of the mesh." shows="Find Items open over the 3D view of a pair of shoes: under Shows red_yellow_graphic, three item records with their names in the game, then the other appearances of the mesh below." %}
 
 **Try it.** In Game Assets, filter for `converse mesh` and open `s1_055_pma_shoe__converse.mesh`. Pick `red_yellow_graphic` in the Appearance list and press **Find Items**. You should see `Items.CasualShoes_01_basic_01`, the Sunny Ammo synthetic high-tops, at the top.
 
@@ -107,7 +107,7 @@ A sound file opens in the **audio player**. Most `.wem` files in the game are vo
 
 WAV, Ogg, MP3 and FLAC files keep VS Code's own preview, and offer the player under **Open With...**.
 
-{% include shot.html caption="The audio player" shows="A voice line (.wem) open in the audio player: the waveform with the play position, the Play and Loop buttons, and the codec and rate in the toolbar." %}
+{% include shot.html caption="The audio player" src="/assets/shots/redcode/viewers-audio.png" alt="A voice line, a .wem file, in the audio player: its waveform, the Play and Loop buttons, the time 0:00.0 of 0:06.2, and Vorbis, mono, 48 kHz at the right." shows="A voice line (.wem) open in the audio player: the waveform with the play position, the Play and Loop buttons, and the codec and rate in the toolbar." %}
 
 ## The game's sound effects
 
@@ -123,7 +123,7 @@ The game's sound effects aren't separate files you can browse. About **73,000 so
 
 Event names come from WolvenKit's list of events for game version 1.6. It names about 10,900 of the 16,100 events that have sounds; the rest show only their hash.
 
-{% include shot.html caption="The game sound list" shows="Browse Game Sounds open: the filter box with a search such as revol reload, the list of events with numbered variations, one playing." %}
+{% include shot.html caption="The game sound list" src="/assets/shots/redcode/viewers-sounds.png" alt="Browse Game Sounds with revol reload in the filter, 2 of 16,175 events: two reload events with numbered variations, the first variation playing, its waveform above with Pause and Loop." shows="Browse Game Sounds open: the filter box with a search such as revol reload, the list of events with numbered variations, one playing." %}
 
 ### Replacing a sound
 

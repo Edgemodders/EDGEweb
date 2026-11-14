@@ -21,7 +21,7 @@ The game keeps its files in **archives**: `.archive` files, each a package of th
 
 Don't know what the file you want is called? See [Finding what you want to change](finding.html).
 
-{% include shot.html caption="The Game Assets view" shows="The Game Assets view with base expanded a few levels, folders showing their file counts, and the hover buttons on one file row." %}
+{% include shot.html caption="The Game Assets view" src="/assets/shots/redcode/game-assets-tree.png" alt="Game Assets opened from base down to the folder of a pair of shoes, each folder with its file count, and the hover buttons and path tip on the shoe mesh." shows="The Game Assets view with base expanded a few levels, folders showing their file counts, and the hover buttons on one file row." %}
 
 ## Browsing
 
@@ -73,7 +73,7 @@ The **Filter Game Assets** button (the funnel) in the view's title bar narrows t
 
 The filter matches **file paths**, not the names you see in the game. The Osprey works because its files happen to carry its name; many don't. See [Finding what you want to change](finding.html).
 
-{% include shot.html caption="A filtered tree" shows="Game Assets filtered with a pattern such as osprey mesh, the message above the tree showing the pattern and match count, and the matching mesh files with their folders opened." %}
+{% include shot.html caption="A filtered tree" src="/assets/shots/redcode/game-assets-filtered.png" alt="Game Assets with the line Filter osprey mesh: 38 files above the tree, and the Osprey rifle folder opened to its textures and mesh files." shows="Game Assets filtered with a pattern such as osprey mesh, the message above the tree showing the pattern and match count, and the matching mesh files with their folders opened." %}
 
 ## Search
 
@@ -114,7 +114,7 @@ The view also searches the texts in your project. Where your project and the gam
 
 Hover over `LocKey#...` in a tweak, YAML, JSON, Lua or redscript file to see its text. The CR2W editor shows the text beside `LocKey#...` values too.
 
-{% include shot.html caption="The LocKeys view" shows="The LocKeys view with a search for a word, entries with their keys and texts, and the hover buttons on one entry." %}
+{% include shot.html caption="The LocKeys view" src="/assets/shots/redcode/lockeys-search.png" alt="The LocKeys view after a search for sunny ammo high-tops: one entry, Sunny Ammo synthetic high-tops, LocKey#4123, with its two hover buttons and a tip giving its secondary key." shows="The LocKeys view with a search for a word, entries with their keys and texts, and the hover buttons on one entry." %}
 
 ### Try it: find a text
 
