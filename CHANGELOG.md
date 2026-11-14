@@ -28,10 +28,13 @@ How to keep it:
 - Wiki: REDbridge's install page says which copy each tool uses and how to remove one: https://edgemodders.ai/wiki/redbridge/install.html#do-i-need-several-copies
 - Wiki: a by-hand recolor tutorial for EDGEmat, from a jacket's name to the blue jacket on V, with no key: https://edgemodders.ai/wiki/edgemat/tutorial-recolor.html
 - Wiki: the two ways to get a recolor into a project, compared, with which body types each one changes: https://edgemodders.ai/wiki/edgemat/find.html#two-ways-into-a-project
+- Wiki: EDGEhack has a five-minute first walk-through, Change a game quickhack: https://edgemodders.ai/wiki/edgehack/edit-quickhack.html
+- Wiki: EDGEhack has a Settings and commands page, with every setting, command, button and where things are kept: https://edgemodders.ai/wiki/edgehack/settings.html
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- Wiki: EDGEhack's pages no longer say REDcode installs with it from the Marketplace, that its assistant server is not on npm yet, or that REDagent can make quickhacks today. The editor page says All tiers copies the selected tier's change and that Edit is on the game quickhack's page: https://edgemodders.ai/wiki/edgehack/editor.html
 - Wiki: EDGEmat's "Your mod in the game" no longer describes the hot folder or Red Hot Tools; deleting EDGEmat's local data folder deletes the Desk, and both pages now say so; a Desk line changes one body type's mesh, and the Desk page says how to cover both: https://edgemodders.ai/wiki/edgemat/in-the-game.html
 - Wiki: EDGEbuilder's pages gave three different newest versions, left the NPCs tab out of Search, and had a "Try it" in Arranging a scene that failed as written: https://edgemodders.ai/wiki/edgebuilder/arranging.html
 - Wiki: REDbridge's pages gave 0.12.0 as the latest release and wrong minimum versions for REDcode and EDGEbuilder: https://edgemodders.ai/wiki/redbridge/install.html#which-version-do-i-need
@@ -48,6 +51,7 @@ How to keep it:
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Wiki: EDGEhack's section is rewritten for newcomers and checked against 0.1.2: a "Words you'll meet" table, one table of what each feature needs, install by editor with updating and uninstalling, "Your first quickhack" installs the mod before trying it live, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgehack/
 - Wiki: EDGEmat's section is rewritten for newcomers and checked against 0.3.2: "Words you'll meet" on the overview, jump tables, "what you should see", Try it sections, a sidebar that follows the work, an Assistants page that says what each newer tool needs and how far it was tested, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgemat/
 - Wiki: EDGEbuilder's section is rewritten for newcomers and checked against 0.10.9: install as one numbered run with REDbridge, ArchiveXL and both permissions, people (NPCs) and the panel pins throughout, "Scenes and baking" split into Scenes and the Library and Baking (old links still land), troubleshooting grouped by where you are stuck, and version history removed: https://edgemodders.ai/wiki/edgebuilder/
 - Wiki: REDbridge's section is rewritten for users and checked against 0.12.1; its call reference now links to REDbridge's own docs: https://edgemodders.ai/wiki/redbridge/

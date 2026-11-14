@@ -3,60 +3,128 @@ title: Install and set up EDGEhack
 nav_title: Install and set up
 section: EDGEhack
 order: 1
-description: "What EDGEhack needs, installing it in VS Code, and its three views."
-reviewed: 2026-11-11
+description: "What EDGEhack needs, what each feature needs, installing it in VS Code or another editor, its three views, a first look at a quickhack, and updating and uninstalling."
+reviewed: 2026-11-13
 ---
 
 # Install and set up <span class="y">EDGEhack</span>
+
+EDGEhack is an extension for VS Code, not a game mod. You install it in VS Code, and it makes game mods. Allow about ten minutes, most of it downloads.
+
+| On this page | |
+|---|---|
+| [What you need](#what-you-need) | To run EDGEhack |
+| [What each feature needs](#what-each-feature-needs) | Frameworks and REDnode, in one table |
+| [Install EDGEhack](#install-edgehack) | Three ways, by editor |
+| [Where it shows](#where-it-shows) | Its icon and three views |
+| [Try it](#try-it) | Open Overheat. Nothing is changed |
+| [Updating](#updating), [Uninstalling](#uninstalling) | |
 
 ## What you need
 
 | You need | Notes |
 |---|---|
-| Windows and [VS Code](https://code.visualstudio.com/) 1.90 or later | EDGEhack is a VS Code extension. [EDGEkit](../edgekit/) 1.140.6 and later come with EDGEhack built in |
-| Cyberpunk 2077, game 2.5 | EDGEhack reads the game's quickhacks from your own install |
-| [REDcode](../redcode/) 0.10.8 or later | EDGEhack builds on it: REDcode installs with EDGEhack from the Marketplace. REDcode fetches [REDbridge](../redbridge/) and .NET 10, which read the game's files, and holds the project EDGEhack writes into |
-| A WolvenKit project open in REDcode | Where your mod's files go. Without one, what you make waits on EDGEhack's [Desk](desk-library.html) |
-| An OpenAI API key | Optional: only for **Generate**, which draws icons from your words. Each picture is billed to your OpenAI account |
+| Windows, and [VS Code](https://code.visualstudio.com/) 1.90 or later | Or an editor built on it, such as VSCodium or Cursor. The [EDGEkit](../edgekit/) app comes with EDGEhack built in |
+| Cyberpunk 2077, version 2.5 | EDGEhack reads the quickhacks from your own game |
+| [REDcode](../redcode/) 0.10.8 or later | EDGE's editor for game files. EDGEhack reads the game through it and saves into its project. REDcode fetches [REDbridge](../redbridge/) and .NET 10, the parts that read the game's files, the first time it starts: see [Install and set up REDcode](../redcode/install.html) |
+| A project open in REDcode | The folder your mod's files go into. No project yet? Run **REDcode: New Project** from the command palette (`Ctrl+Shift+P`): see [Make a new project](../redcode/projects.html#make-a-new-project). Without a project you can still read quickhacks and work on the [Desk](desk-library.html) |
 
-The mods EDGEhack makes need these in the game, as frameworks:
+## What each feature needs
 
-| Framework | For |
+A **framework** is a mod that other mods need. The mods EDGEhack makes need some in the game, and two features need [REDnode](../rednode/), EDGE's in-game runtime.
+
+| To do this | You need in the game |
 |---|---|
-| [TweakXL](https://www.nexusmods.com/cyberpunk2077/mods/4197) | Every quickhack mod: its changes are TweakXL files |
-| [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198) | Names, descriptions and icons of your own |
-| [redscript](https://www.nexusmods.com/cyberpunk2077/mods/1511) | New quickhacks: each mod ships one small script that lets enemies take them |
-| [REDnode](../rednode/) 0.61.1 or later | Only for [Scripts](scripts.html). [Try Live](try-live.html) needs 0.62.0 |
+| Play any mod made with EDGEhack | [TweakXL](https://www.nexusmods.com/cyberpunk2077/mods/4197), and [RED4ext](https://www.nexusmods.com/cyberpunk2077/mods/2380), which TweakXL runs on |
+| See a name, description or icon of your own | [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198) |
+| Use a new quickhack on enemies | [redscript](https://www.nexusmods.com/cyberpunk2077/mods/1511). Each mod with a new quickhack includes one small script. Without redscript the new quickhack does not show on enemies |
+| Run a quickhack's [script](scripts.html) | [REDnode](../rednode/install.html) 0.61.1 or later |
+| [Try Live](try-live.html), and the Console line that gives V a quickhack | REDnode 0.62.0 or later |
+| Have REDcode swap icons into the running game | REDnode with its **MCP server** switched on: see [Pack and Play](try-live.html#pack-and-play) |
+| Draw icons with **Generate** | An OpenAI API key of your own. Each picture is billed to your OpenAI account. Uploading your own pictures needs no key |
+| Ask [REDagent](../redagent/) for a quickhack in the game | Coming. It needs a REDnode and a REDagent that are not released yet |
 
-Add them to EDGEdeck like any other mod and deploy. See [Frameworks and game patches](../edgedeck/frameworks.html).
+All of these REDnode versions are released, so the current REDnode covers them.
+
+**The quick way to get the frameworks:** in [EDGEdeck](../edgedeck/), **Get the frameworks...** fetches RED4ext, TweakXL, ArchiveXL and redscript (and two more that many mods need) in one go. Then close the game and deploy. See [Getting the frameworks](../edgedeck/frameworks.html#getting-the-frameworks).
+
+**Sharing your mod?** Whoever installs it needs the same rows of this table as you do: TweakXL and RED4ext always, ArchiveXL for your texts and icons, redscript for a new quickhack, REDnode for a script. They don't need EDGEhack, REDcode or VS Code. See [Sharing your mod](../redcode/pack-install.html#sharing-your-mod) for what to zip.
 
 ## Install EDGEhack
 
-EDGEhack 0.1.1 is the first release. The VS Code Marketplace hasn't listed it yet, so install it from the download:
+Pick the row for your editor.
 
-1. Install [REDcode](../redcode/) from the VS Code Marketplace first, if you don't have it.
-2. Download `EDGEhack-<version>-nexus.zip` from [EDGEhack's Nexus Mods page](https://www.nexusmods.com/cyberpunk2077/mods/37293) or the [releases page](https://github.com/Edgemodders/EDGEhack/releases), unzip it, and in VS Code's Extensions view (Ctrl+Shift+X) pick **Install from VSIX...** in its **...** menu, and choose the `.vsix` inside.
-3. In VSCodium, Cursor and other editors that use [Open VSX](https://open-vsx.org/extension/edgemodders/edgehack), search for **EDGEhack** there instead.
+| Your editor | How |
+|---|---|
+| **The EDGEkit app** | Nothing to do: EDGEhack is built in, and it updates itself |
+| **VSCodium, Cursor, or another editor that uses Open VSX** | Open the Extensions view (`Ctrl+Shift+X`), search for **EDGEhack** and press **Install**. REDcode is installed with it. Here it updates itself too |
+| **VS Code** | From the download, below. EDGEhack is not on the VS Code Marketplace yet: see [Status](index.html#status) |
 
-Then open your WolvenKit project in REDcode, as for any REDcode work.
+In VS Code:
+
+1. Install [REDcode](../redcode/install.html) from the Extensions view first, if you don't have it.
+2. Download `EDGEhack-<version>-nexus.zip` from [EDGEhack's Nexus Mods page](https://www.nexusmods.com/cyberpunk2077/mods/37293), where it is listed as **Quickhack Editor**. Or download `edgehack-<version>.vsix` from the [releases page](https://github.com/Edgemodders/EDGEhack/releases) and skip step 3.
+3. Unzip it. Inside is a `.vsix` file, which is the extension.
+4. In VS Code, open the Extensions view (`Ctrl+Shift+X`).
+5. Click the **`...`** at the top of that view and choose **Install from VSIX...**.
+6. Pick the `.vsix` file.
+
+Don't install the download with Vortex or EDGEdeck. It is not a game mod.
+
+**You should see** a new icon in the activity bar, the strip of icons down the left edge of VS Code: a chip with a bolt. If it doesn't appear, run **Developer: Reload Window** from the command palette.
+
+Then open your project in REDcode: **File › Open Folder...** on the project's folder.
 
 ## Where it shows
 
-EDGEhack has its own icon in VS Code's activity bar: a chip with a bolt. It opens three views:
+Click EDGEhack's icon in the activity bar. Its side bar has three views:
 
 | View | What it lists |
 |---|---|
-| **Desk** | Quickhacks you're working on outside a project, then a **Project** group with the open project's quickhacks |
-| **Library** | Quickhacks you keep in the EDGE Library, in your own folders |
-| **Quickhacks** | The game's quickhacks: People (by category, then family), Devices and Vehicles, each family with its icon |
+| **Desk** | Quickhacks you're working on outside a project. Below them, a **Project** group with the quickhacks in the open project |
+| **Library** | Quickhacks you keep in the [EDGE Library](../library.html), in folders you made |
+| **Quickhacks** | The game's own quickhacks. **People** holds the ones V uses on enemies, in the game's four categories (Control Hack, Covert Hack, Damage Hack, Ultimate Hack), each quickhack with its icon and its number of tiers. **Devices** and **Vehicles** hold the rest, which are read-only for now |
 
 {% include shot.html src="/assets/shots/edgehack/install-views.webp" caption="EDGEhack's views" shows="VS Code's activity bar with EDGEhack's chip-and-bolt icon selected, and EDGEhack's side bar: the Desk view with a quickhack or two and a Project group, the Library view, and the Quickhacks view open on People with Control Hack and Damage Hack expanded, each family with its icon and its number of tiers." %}
 
-The first time the Quickhacks view opens, REDbridge reads the game's TweakDB, about 15 seconds. After that everything opens at once until VS Code restarts. **Refresh** in the view's title bar reads the game again, after a patch or a mod change.
+The first time the Quickhacks view opens, EDGEhack reads the game's database, which takes about 15 seconds. After that everything opens at once until VS Code restarts.
+
+Two buttons sit in the Quickhacks view's title bar. **Filter** narrows the list by words, such as `overheat` or `control`. **Refresh** reads the game again: use it after a game patch, or after you install or remove a mod that changes quickhacks.
 
 ## Try it
 
-1. Open EDGEhack's icon in the activity bar.
-2. In **Quickhacks**, open **People**, then **Damage Hack**, then click **Overheat**.
+1. Click EDGEhack's icon in the activity bar.
+2. In **Quickhacks**, open **People**, then **Damage Hack**.
+3. Click **Overheat**.
 
-A read-only page opens with Overheat's six tiers: each one's name, icon, RAM, upload time, damage and effects in plain words. Nothing is written anywhere until you choose **Edit** or **Clone and Modify**.
+| What you should see | |
+|---|---|
+| A new tab | Overheat's icon and name, "Quickhack · Damage Hack · 6 tiers", and the words "The game's own quickhack" |
+| A row of tier buttons | Common to Legendary++. Click one to see that tier |
+| For the tier you picked | Its name, icons, RAM, upload time, damage, duration and effects in plain words |
+| Two buttons | **Edit...** and **Clone and Modify...** |
+
+This page is read-only. Nothing is written anywhere until you press **Edit...** or **Clone and Modify...**. Those are the next two pages: [Change a game quickhack](edit-quickhack.html) and [Your first quickhack](first-quickhack.html).
+
+If the view stays empty, see [Troubleshooting](troubleshooting.html#setting-up).
+
+## Updating
+
+| Installed from | Updates |
+|---|---|
+| The EDGEkit app, or Open VSX | By itself |
+| A `.vsix` in VS Code | Not by itself. Download the new version and install it the same way, over the old one. Your quickhacks are not touched |
+
+The current version is on the [Overview](index.html#status). The version you have is on EDGEhack's entry in the Extensions view.
+
+## Uninstalling
+
+In the Extensions view, find **EDGEhack**, click the gear and choose **Uninstall**. What stays behind:
+
+| What | Where | To remove it |
+|---|---|---|
+| Quickhacks in your projects, and their mod files | In each project | They are yours. A mod you already installed keeps working without EDGEhack |
+| Quickhacks on the Desk | `%LOCALAPPDATA%\EDGEhack\desk` | Delete the `EDGEhack` folder there |
+| Quickhacks in the EDGE Library | Your Library folder | They are yours, and other EDGE tools share the folder |
+| Your OpenAI key | VS Code's secret storage | Run **EDGEhack: Clear the OpenAI Key...** before you uninstall |
+| The connection to Claude Code, if you made one | Claude Code's settings | Run `claude mcp remove --scope user edgehack` in a terminal |

@@ -2,64 +2,122 @@
 title: The EDGEhack Desk and the Library
 nav_title: The Desk and the Library
 section: EDGEhack
-order: 6
-description: "EDGEhack's Desk for quickhacks in progress outside a project, and the EDGE Library for quickhacks you keep: Add to Library, the Library view, Add to Project and Refresh from Library."
-reviewed: 2026-11-11
+order: 7
+description: "EDGEhack's Desk for quickhacks in progress outside a project, the Project group, and the EDGE Library for quickhacks you keep: Add to Project, Add to Library, the Library view and Refresh from Library."
+reviewed: 2026-11-13
 ---
 
 # The Desk and the <span class="y">Library</span>
 
+A quickhack you make can live in three places. A **project** is one mod: what gets packed and installed. The **Desk** is a scratch area for quickhacks that don't belong to a mod yet. The **Library** is where you keep finished quickhacks for good, to use in any mod.
+
+You can ignore both the Desk and the Library. If you always have a project open in REDcode, everything you make goes straight into it.
+
+A typical use: you made a quickhack you like in one mod, and want it in a second mod too. Add it to the Library, open the second project, and add it to that project from the Library.
+
 | | Desk | Library |
 |---|---|---|
-| What it's for | Quickhacks you're working on, with no project needed | Quickhacks you keep for good, to use in any mod |
-| Where | EDGEhack's own folder (`%LOCALAPPDATA%\EDGEhack\desk`) | The [EDGE Library](../library.html), one folder of your own every EDGE tool shares (`Documents\EDGE Library` by default) |
+| What it's for | Quickhacks you're working on, with no project needed | Quickhacks you keep for good |
+| Where it is | EDGEhack's own folder, `%LOCALAPPDATA%\EDGEhack\desk` | The [EDGE Library](../library.html): one folder of your own that the EDGE tools share, `Documents\EDGE Library` unless you chose another |
 | Organised | Newest first | In folders you make |
-| Mod files | None, until Add to Project | None, until Add to Project |
+| Versions | No | Yes. Each save raises the version number |
+
+Neither has mod files. A quickhack gets its mod files when you add it to a project.
+
+| On this page | |
+|---|---|
+| [The Desk](#the-desk) | Work with no project open |
+| [The Project group](#the-project-group) | The open project's quickhacks, and removing one |
+| [Add to Library](#add-to-library) | Keeping a quickhack |
+| [The Library view](#the-library-view) | Using a kept quickhack |
+| [Refresh from Library](#refresh-from-library) | Taking a newer version into a project |
+| [Try it](#try-it) | |
 
 ## The Desk
 
-**Clone and Modify on the Desk** (the **+** in the Desk view's title bar) starts a quickhack from any of the game's. With no project open in REDcode, **Clone and Modify** and **Edit** land on the Desk too. A Desk quickhack is edited like any other, and its page offers **Add to Project** instead of Pack and Play.
+A quickhack lands on the Desk in two ways:
 
-Hover a Desk quickhack for its buttons: **Add to Project**, **Add to Library** and a trash can. The right-click menu also has **Duplicate...**, for a copy under another name. **Add to Project** puts it in the open project under the project's names and writes its mod files; the Desk keeps its own. Adding it again replaces the project's copy, after asking.
+- Press the **+** in the Desk view's title bar (**Clone and Modify on the Desk...**), pick one of the game's quickhacks, and name the new one.
+- With no project open in REDcode, press **Edit...** or **Clone and Modify...** on a game quickhack's page.
 
-Below the Desk's quickhacks, the **Project** group lists the open project's.
+You edit a Desk quickhack like any other, and **Try Live** works on it. Where a project quickhack has **Pack and Play**, its page has **Add to Project**.
+
+Hover a Desk quickhack for its buttons, or right-click it for the same actions by name:
+
+| Action | What it does |
+|---|---|
+| **Add to Project** | Copies it into the project open in REDcode, gives its internal ids the project's name, and writes its mod files. The copy on the Desk stays as it was. If the project already has it, EDGEhack asks before replacing it |
+| **Add to Library** | Keeps a copy in the EDGE Library: see [below](#add-to-library) |
+| **Duplicate...** | Right-click only, on a new quickhack: a second copy on the Desk under another name |
+| **Remove from the Desk...** (the trash can) | Moves it to the Recycle Bin, after asking. A copy you added to a project stays in the project |
 
 {% include shot.html src="/assets/shots/edgehack/desk-view.webp" caption="The Desk view" shows="The Desk view with three quickhacks, one hovered with its Add to Project, Add to Library and trash icons, and the Project group below with the project's quickhacks." %}
 
+## The Project group
+
+Below the Desk's quickhacks, the **Project** group lists the quickhacks in the project open in REDcode. Each is marked `new, from Overheat` or `changes Overheat`. Click one to open it.
+
+| Action | What it does |
+|---|---|
+| **Add to Library** (right-click) | Keeps a copy in the EDGE Library |
+| **Refresh from Library** | Shown when the Library has a newer version: see [below](#refresh-from-library) |
+| **Remove from Project...** (the trash can) | Takes the quickhack out of the project. A list shows what goes to the Recycle Bin: its document, its TweakXL file and its icons. Its texts are taken out of the project's text file. A script file you wrote stays |
+
+Removing a quickhack from the project does not take it out of the game. Press **Pack and Play** again afterwards, or uninstall the mod.
+
 ## Add to Library
 
-On a Desk quickhack, or right-click a Project one:
+On a Desk quickhack, or by right-click on a Project one:
 
-1. **Add to Library**. The first time, EDGEhack asks where the EDGE Library goes, unless another EDGE tool already set it up.
-2. A list asks **which folder**: the Library's top folder, your folders, or **New Folder...** to make one, such as `Quickhacks/Electric`. The folder you used last comes first.
+1. Choose **Add to Library**. The first time, EDGEhack asks where the EDGE Library should go, unless another EDGE tool already set it up.
+2. A list asks **which folder**. Pick the Library's top folder, one of your folders, or **New Folder...** to make one, such as `Quickhacks/Electric`. The folder you used last is offered first.
 
-It's copied into that folder as `<name>.quickhack.asset`, with its own icons. A project's quickhack is copied without the mod's name in it, so it fits any mod. Adding the same quickhack again finds its Library copy wherever it is, and asks before replacing it.
+**You should see** a message that the quickhack is in the EDGE Library, with a **Reveal** button, and the quickhack in the **Library** view.
 
 {% include shot.html src="/assets/shots/edgehack/library-folder.webp" caption="Picking a Library folder" shows="The list at the top of VS Code titled Add to Library: Desk Spark: which folder?, with The Library's top folder, a Quickhacks/Electric folder marked Last used, and New Folder... at the bottom." %}
 
+The quickhack is copied into that folder as `<name>.quickhack.asset`, with its own icons. When it comes from a project, the project's name is taken out of its ids, so the Library copy can be added to any project.
+
+If you add the same quickhack again, EDGEhack finds its Library copy wherever you moved it, and asks before replacing it.
+
 ## The Library view
 
-The Library's folders that hold quickhacks, and each quickhack with its version:
+The view shows the Library folders that hold quickhacks, and each quickhack with its version number. **Refresh** in the title bar reads the folders again.
 
 | On a quickhack | What it does |
 |---|---|
-| Click | Opens it. A save raises its version. Its page offers Add to Project |
-| **Add to Project** | Copies it into the open project under the project's names, writes its mod files, and notes where it came from in the project's `source\library.json` |
-| **Copy to the Desk** | A copy to work on, which **Add to Library** later puts back over this one |
-| **Reveal in File Explorer** | Its folder |
-| **Remove from Library** | To the Recycle Bin, after asking. Projects that took it keep their copy |
+| Click | Opens it in the editor. Each save raises its version. Its page offers **Add to Project** |
+| **Add to Project** | Copies it into the open project, gives its internal ids the project's name, and writes its mod files. The project notes where it came from, in `source\library.json` |
+| **Copy to the Desk** (right-click) | Makes a copy on the Desk to work on. When you add that copy to the Library again, it replaces this one, after asking |
+| **Reveal in File Explorer** (right-click) | Opens its folder |
+| **Remove from Library** (the trash can) | Moves it to the Recycle Bin, after asking. Projects that took it keep their copy |
 
 {% include shot.html src="/assets/shots/edgehack/library-view.webp" caption="The Library view" shows="The Library view with a Quickhacks folder and an Electric folder inside, two quickhacks with their icons and versions, one hovered with its Add to Project and trash icons." %}
 
 ## Refresh from Library
 
-When you change a Library quickhack after a project took it, the project's copy is marked **newer in the Library (v3)** in the Desk view's Project group. **Refresh from Library** on it takes the new version, after asking: changes made to it in the project since are lost. Its mod files are written again.
+A project keeps its own copy of a Library quickhack. When you later change the Library's one, the project's copy is marked **newer in the Library (v3)** in the Project group, with the Library's version number.
+
+**Refresh from Library** on that row takes the new version, after asking. Changes you made to the project's copy since you added it are lost. Its mod files are written again.
 
 {% include shot.html src="/assets/shots/edgehack/library-newer.webp" caption="A newer version in the Library" shows="The Desk view's Project group with a quickhack marked newer in the Library (v3), and its Refresh from Library icon." %}
 
 ## Try it
 
-1. Add a Desk quickhack to the Library, in a new folder.
-2. Add it to your project from the Library view.
-3. Open the Library's copy, change a number and save.
-4. In the Project group, **Refresh from Library** on it.
+You need a project open in REDcode.
+
+1. Press the **+** in the Desk view's title bar, pick **Overheat**, and name the new quickhack `Desk Spark`.
+2. Hover it and choose **Add to Library**. Pick **New Folder...** and type `Quickhacks/Test`.
+3. In the **Library** view, hover Desk Spark and choose **Add to Project**.
+4. Click Desk Spark in the Library view, change a number and save.
+5. In the Desk view's **Project** group, press **Refresh from Library** on Desk Spark.
+
+| What you should see | |
+|---|---|
+| After step 1 | Desk Spark on the Desk, and its page with **Add to Project** where Pack and Play would be |
+| After step 2 | Desk Spark in the Library view, under Quickhacks, then Test |
+| After step 3 | Desk Spark in the Project group, and a message listing the mod files added |
+| After step 4 | The Project group's Desk Spark marked **newer in the Library**, with the new version |
+| After step 5 | The mark gone |
+
+Clean up with the trash cans: in the Project group, on the Desk, and in the Library.
