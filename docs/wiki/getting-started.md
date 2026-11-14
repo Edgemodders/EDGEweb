@@ -25,7 +25,7 @@ EDGE is a family of tools. You don't need all of them. Start from what you want 
 | Recolour clothes, or make a new material from my words | [EDGEmat](edgemat/) | [Install EDGEmat](edgemat/install.html) |
 | Read the game's quests, or write a quest of my own | [EDGEquest](edgequest/) | [Install and set up EDGEquest](edgequest/install.html), then [Writing a quest](edgequest/writing.html) |
 | Change one of the game's quickhacks, or make a new one | [EDGEhack](edgehack/) | [Install and set up EDGEhack](edgehack/install.html), then [your first quickhack](edgehack/first-quickhack.html) |
-| Edit the game's sounds for a mod | [EDGEwave](edgewave/) | [Install and use EDGEwave](edgewave/try-it.html) |
+| Edit the game's sounds for a mod | [EDGEwave](edgewave/) | [Install and set up EDGEwave](edgewave/install.html) |
 | Make mods with Claude Code on my PC, step by step, with no code | [EDGEchat](edgechat/) | [Install and connect](edgechat/install.html), then [your first mod](edgechat/first-mod.html) |
 | Let an AI agent on my PC read game files, manage mods or call the game | [REDnode](rednode/), [REDcode](redcode/), [EDGEdeck](edgedeck/), [EDGEmat](edgemat/) | [Connect Claude Code](connect-claude-code.html) |
 

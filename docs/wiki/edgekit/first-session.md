@@ -53,7 +53,7 @@ The other tools set themselves up the first time you use them:
 | Tool | Its first step |
 |---|---|
 | EDGEmat | Builds its list of the game's materials once. See [Install EDGEmat](../edgemat/install.html) |
-| EDGEwave | Needs a REDcode project open. See [Install and use EDGEwave](../edgewave/try-it.html) |
+| EDGEwave | Needs a REDcode project open. See [Install and set up EDGEwave](../edgewave/install.html) |
 | EDGEquest | See [Install and set up EDGEquest](../edgequest/install.html) |
 | EDGEhack | Reads the game's quickhacks the first time its view opens, about 15 seconds. See [Install and set up EDGEhack](../edgehack/install.html) |
 

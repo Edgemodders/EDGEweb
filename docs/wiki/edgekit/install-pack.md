@@ -68,7 +68,7 @@ The pack installs the extensions; each still has its own first steps.
 | REDcode | Run **REDcode: Install REDbridge** from the command palette (`Ctrl+Shift+P`) to fetch the engine it needs. See [REDcode](../redcode/) |
 | EDGEdeck | Click the EDGEdeck icon in the activity bar and follow its Set up steps. See [Install and set up EDGEdeck](../edgedeck/install.html) |
 | EDGEmat | Build its material library from your game once. See [Install and set up EDGEmat](../edgemat/install.html) |
-| EDGEwave | Needs REDcode set up and a REDcode project. See [Install and use EDGEwave](../edgewave/try-it.html) |
+| EDGEwave | Needs REDcode set up and a REDcode project. See [Install and set up EDGEwave](../edgewave/install.html) |
 | EDGEquest | See [Install and set up EDGEquest](../edgequest/install.html) |
 | EDGEhack | Needs REDcode set up. See [Install and set up EDGEhack](../edgehack/install.html) |
 | REDnode HUD | Optional: pick it with **Preferences: Color Theme** |

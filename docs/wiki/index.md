@@ -30,7 +30,7 @@ More toolkits build on those five for particular jobs:
 | Job | Toolkit | What it does |
 |---|---|---|
 | Build in the world | [EDGEbuilder](edgebuilder/) | A world builder inside the game. Find the game's own props and your mods', drop them where you look, position and arrange them |
-| Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade, mix and shape it, and put it into the game through your mod. Preview, 0.1.0 on the Marketplace |
+| Sound | [EDGEwave](edgewave/) | A sound studio beside REDcode. Open a game sound, cut, fade, mix and shape it, and put it into the game through your mod. Preview, 0.2.0, on the Marketplace, Open VSX and Nexus Mods, and built into EDGEkit |
 | Materials | [EDGEmat](edgemat/) | A material editor: find a garment by name, see its layers in plain words and in 3D, recolour them, or make a new material from your words; keep your work on its Desk; or ask an agent. Preview, 0.3.2 on the Marketplace |
 | Quickhacks | [EDGEhack](edgehack/) | A quickhack editor beside REDcode. Open any of the game's quickhacks in plain words, change it, or make new ones with effects, icons and scripts of your own, and try them live in the game. 0.1.2, a preview, on Nexus Mods and Open VSX, and built into EDGEkit |
 | Quests | [EDGEquest](edgequest/) | A quest maker beside REDcode. Read the game's quests in plain words, and write your own as a short story: EDGEquest makes the game's quest files from it. Preview, 0.1.1, on the Marketplace, Open VSX and Nexus Mods, and built into EDGEkit |

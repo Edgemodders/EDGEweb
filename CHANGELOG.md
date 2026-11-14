@@ -32,10 +32,13 @@ How to keep it:
 - Wiki: EDGEhack has a Settings and commands page, with every setting, command, button and where things are kept: https://edgemodders.ai/wiki/edgehack/settings.html
 - Wiki: "Your first quest", a walkthrough for EDGEquest from an empty project to your quest in the game: https://edgemodders.ai/wiki/edgequest/first-quest.html
 - Wiki: in EDGEquest's section, Try it sections for reading a game quest, the checker, a music cue and an assistant; how to copy a place from a game quest; and how to share or remove a quest: https://edgemodders.ai/wiki/edgequest/reading.html#copying-a-place-from-a-game-quest
+- Wiki: EDGEwave has a tutorial, "Your first sound mod", from finding the katana's draw sound to hearing your version in the game: https://edgemodders.ai/wiki/edgewave/tutorial.html
+- Wiki: new EDGEwave pages for finding and playing sounds, editing and mixing, Add to Project, the voice tools, voices for quests and REDnode mods, assistants, settings and commands, and troubleshooting: https://edgemodders.ai/wiki/edgewave/
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- Wiki: EDGEwave's pages described 0.1.0 with its tests pending; they now give 0.2.0, the button's current name (Add to Project), all five settings, and what the voice tools cost, what is sent to ElevenLabs and where the key is kept: https://edgemodders.ai/wiki/edgewave/voices.html
 - Wiki: EDGEquest's assistant server is on npm, where the pages said it was waiting; EDGEwave 0.2.0 is released, so the sound picker, your own sounds and voice takes are described as available; the template quest is described as New Quest really makes it; and installing names RED4ext beside ArchiveXL: https://edgemodders.ai/wiki/edgequest/writing.html
 - Wiki: EDGEhack's pages no longer say REDcode installs with it from the Marketplace, that its assistant server is not on npm yet, or that REDagent can make quickhacks today. The editor page says All tiers copies the selected tier's change and that Edit is on the game quickhack's page: https://edgemodders.ai/wiki/edgehack/editor.html
 - Wiki: EDGEmat's "Your mod in the game" no longer describes the hot folder or Red Hot Tools; deleting EDGEmat's local data folder deletes the Desk, and both pages now say so; a Desk line changes one body type's mesh, and the Desk page says how to cover both: https://edgemodders.ai/wiki/edgemat/in-the-game.html
@@ -54,6 +57,7 @@ How to keep it:
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Wiki: EDGEwave's section is rebuilt for newcomers and checked against EDGEwave 0.2.0, with a "Words you'll meet" table and a status that says what was heard in the game. "Install and use EDGEwave" is now "Install and set up", at https://edgemodders.ai/wiki/edgewave/install.html
 - Wiki: EDGEquest's section is rewritten for newcomers and checked against EDGEquest 0.1.1 and EDGEwave 0.2.0: what a quest can hold today and a "Words you'll meet" table on the overview, the Storyboard's buttons, where files are kept, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgequest/
 - Wiki: EDGEhack's section is rewritten for newcomers and checked against 0.1.2: a "Words you'll meet" table, one table of what each feature needs, install by editor with updating and uninstalling, "Your first quickhack" installs the mod before trying it live, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgehack/
 - Wiki: EDGEmat's section is rewritten for newcomers and checked against 0.3.2: "Words you'll meet" on the overview, jump tables, "what you should see", Try it sections, a sidebar that follows the work, an Assistants page that says what each newer tool needs and how far it was tested, and troubleshooting grouped by where you are stuck: https://edgemodders.ai/wiki/edgemat/
