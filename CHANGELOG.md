@@ -24,10 +24,14 @@ How to keep it:
 - Wiki: "Your first mod with REDcode", a walkthrough that renames an item, from a new project to the game: https://edgemodders.ai/wiki/redcode/first-mod.html
 - Wiki: "Finding what you want to change" in REDcode, from an item you know to its text, record and files: https://edgemodders.ai/wiki/redcode/finding.html
 - Wiki: "Try it" sections on REDcode's editing, TweakDB, export and LocKeys pages, with the tweak file that New Tweak writes: https://edgemodders.ai/wiki/redcode/tweakdb.html#try-it-change-a-price
+- Wiki: EDGEbuilder's baking has a page of its own, with what you need, every Bake tab check, sharing a baked scene and bakes in the Library: https://edgemodders.ai/wiki/edgebuilder/baking.html
+- Wiki: REDbridge's install page says which copy each tool uses and how to remove one: https://edgemodders.ai/wiki/redbridge/install.html#do-i-need-several-copies
 - Wiki: a Troubleshooting page for REDagent: https://edgemodders.ai/wiki/redagent/troubleshooting.html
 
 **Fixed**
 
+- Wiki: EDGEbuilder's pages gave three different newest versions, left the NPCs tab out of Search, and had a "Try it" in Arranging a scene that failed as written: https://edgemodders.ai/wiki/edgebuilder/arranging.html
+- Wiki: REDbridge's pages gave 0.12.0 as the latest release and wrong minimum versions for REDcode and EDGEbuilder: https://edgemodders.ai/wiki/redbridge/install.html#which-version-do-i-need
 - Wiki: REDcode's pages no longer describe Red Hot Tools and the Hot Folder, which REDcode dropped in 0.10.8: Pack and Play swaps through REDnode. Its example project name is now `my_jacket`, with the capital-letters warning explained, and it needs REDbridge 0.12.0: https://edgemodders.ai/wiki/redcode/pack-install.html#pack-and-play-into-the-running-game
 - Wiki: EDGEdeck's rule for which mod wins a conflict is stated once, with an example: https://edgemodders.ai/wiki/edgedeck/conflicts.html#who-wins
 - Wiki: updating frameworks after a game patch needs no Nexus account, only the automatic check does; an empty EDGEdeck shows "No mods yet" with buttons; a new mod arrives switched on; and what an assistant can and can't do in EDGEdeck: https://edgemodders.ai/wiki/edgedeck/frameworks.html#after-a-game-update
@@ -41,6 +45,9 @@ How to keep it:
 **Changed**
 
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
+- Wiki: EDGEbuilder's section is rewritten for newcomers and checked against 0.10.9: install as one numbered run with REDbridge, ArchiveXL and both permissions, people (NPCs) and the panel pins throughout, "Scenes and baking" split into Scenes and the Library and Baking (old links still land), troubleshooting grouped by where you are stuck, and version history removed: https://edgemodders.ai/wiki/edgebuilder/
+- Wiki: REDbridge's section is rewritten for users and checked against 0.12.1; its call reference now links to REDbridge's own docs: https://edgemodders.ai/wiki/redbridge/
+- Landing page, platform page and wiki home: EDGEbuilder 0.10.9 and REDbridge 0.12.1
 - Wiki: REDcode's section is rewritten for newcomers and checked against REDcode 0.10.9: a which-button table on Pack, install and run, an assistants page that starts with which assistant fits, Add to Library, the Animations view, Open In... and exporting every LOD, and troubleshooting grouped by where you're stuck: https://edgemodders.ai/wiki/redcode/
 - Landing page and platform page: REDcode 0.10.9
 - Wiki: EDGEdeck's section is rewritten for newcomers and checked against EDGEdeck 0.31.0, in the order a new user needs it: frameworks before the full tour of the Mods view, Nexus sign-in with an API key step by step, downloads one at a time with Cancel, and troubleshooting as "You see / Do this" tables: https://edgemodders.ai/wiki/edgedeck/

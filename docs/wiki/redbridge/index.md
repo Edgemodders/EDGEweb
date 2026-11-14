@@ -3,105 +3,104 @@ title: REDbridge
 nav_title: Overview
 section: REDbridge
 order: 0
-description: "REDbridge, EDGE's engine host: WolvenKit's C# engine as a local service for REDcode, EDGEdeck, REDnode packages and AI agents."
-reviewed: 2026-11-05
+description: "REDbridge, the helper program that reads and writes Cyberpunk 2077's game files for the other EDGE tools: what it is, whether you need to do anything, whether it is safe, and its status."
+reviewed: 2026-11-13
 ---
 
 # RED<span class="y">bridge</span>
 
-REDbridge is EDGE's engine room. It runs [WolvenKit](https://github.com/WolvenKit/WolvenKit)'s proven C# libraries in a small local program and offers them to the other toolkits, so EDGE never has to reinvent the game's file formats. Most people never run it directly: REDcode, EDGEdeck, REDnode and the EDGE plugin for Claude Code start it when they need it.
+REDbridge is a small helper program that reads and writes Cyberpunk 2077's game files for the other EDGE tools. It has no window. You don't open it or use it yourself: the tools download it with one click and start it when they need it. Inside, it uses the same code as [WolvenKit](https://github.com/WolvenKit/WolvenKit), the community's main modding tool.
 
-{% include shot.html caption="REDbridge at work" shows="The EDGEdeck page's footer with the green dot and the running REDbridge version, next to REDcode's status bar showing the bridge it uses." %}
+{% include shot.html caption="REDbridge at work" shows="The footer of the EDGEdeck page in VS Code, with the green dot and the version of the running REDbridge." %}
+
+**New here?** You most likely don't need to read further. When a tool needs REDbridge, it offers a **Get REDbridge** or **Install REDbridge** button: press it. Come back if a tool says REDbridge is missing or too old: [Troubleshooting](troubleshooting.html).
+
+| On this page | |
+|---|---|
+| [What it's for](#what-its-for) | What each tool does with it |
+| [Do I need to do anything?](#do-i-need-to-do-anything) | Usually one click |
+| [Is it safe?](#is-it-safe) | What it can and can't reach |
+| [Status](#status) | The current release |
+| [For tool makers](#for-tool-makers) | Where the reference is |
 
 ## What it's for
 
-Cyberpunk 2077 keeps its models, textures, sounds and game data packed inside `.archive` files, in formats only specialist tools can read. WolvenKit is the community's tool for that, built over years. REDbridge puts WolvenKit's engine behind a simple local connection, so tools written in other languages (VS Code extensions, Node mods, AI assistants) can ask it to do the reading and writing.
+Cyberpunk 2077 keeps its models, textures, sounds and game data packed inside `.archive` files, in formats only specialist tools can read. WolvenKit is the community's tool for that, built over years. REDbridge puts WolvenKit's reading and writing code in a program the EDGE tools can call, so each tool doesn't have to learn the game's formats again.
 
-You don't talk to REDbridge yourself. You notice it through what the other toolkits can do with it:
+You notice REDbridge through what the other tools can do with it:
 
 | Toolkit | What REDbridge lets it do |
 |---|---|
-| [EDGEdeck](../edgedeck/) | See [conflicts inside mod archives](../edgedeck/conflicts.html), and list an archive's contents for Add to Project |
-| [REDcode](../redcode/) | Browse the game's archives, open and edit game files, view textures and meshes, find the items that use a mesh, play game sounds with their names, browse TweakDB and the game's on-screen texts (LocKeys), export, import and pack mods, replace game sound effects |
-| [REDnode](../rednode/) | Packages you allow can read the game's archives while you play |
-| [EDGEbuilder](../edgebuilder/) | List the game's meshes and entities, and your mods', with their sizes, appearances and whether they can be solid. Bake a scene into the world as a mod, with EDGEbuilder's Bake, which is being tested. Read the world's own sectors and what is placed in them, for its world map and inspector, still to come |
-| AI assistants | REDcode's MCP server, `redcode-mcp`, gives Claude and other assistants the same abilities as tools. The EDGE plugin for Claude Code, a preview, sets it up for you |
+| [EDGEdeck](../edgedeck/) | See [conflicts inside mod archives](../edgedeck/conflicts.html), and list what is in an archive |
+| [REDcode](../redcode/) | Browse and open the game's files, view models and textures, look up items and texts, and pack your mod |
+| [EDGEbuilder](../edgebuilder/) | List the game's models, and your mods', with their sizes and looks. [Bake a scene](../edgebuilder/baking.html) into a mod |
+| [EDGEmat](../edgemat/), [EDGEwave](../edgewave/), [EDGEquest](../edgequest/) | Read and write the game's materials, sounds and spoken lines |
+| [REDnode](../rednode/) | Mods you allow can read the game's files while you play |
+| AI assistants | Claude and other assistants reach the same abilities through REDcode's connection for assistants. [EDGEchat](../edgechat/) sets it up for you |
 
-## Benefits
+REDbridge can also read what the game itself placed in the world. EDGEbuilder will use that for a world map and an inspector, which are planned.
 
-- **WolvenKit's own engine.** The same code WolvenKit trusts reads and writes the game's files.
-- **Ready for game 2.5.** Since 0.11.0 it is built with WolvenKit's first release for game 2.5, and reads all of 2.5's files.
-- **Fast.** Indexes a game install's archives (over 580,000 files) in about a second, and opens large game files in a fraction of a second.
-- **Exact round trips.** Game files convert to JSON and back byte for byte.
-- **Works without the game running.** Reads any mod archive on disk, which is how EDGEdeck finds conflicts inside archives, and reads the game's TweakDB (its database of items, stats and more) straight from the game folder.
-- **One engine, many clients.** The same calls serve REDcode, EDGEdeck, REDnode packages and AI agents.
-- **Fetched for you.** EDGEdeck, REDcode and REDnode's Mod Manager download it with one click, and offer updates. EDGEdeck and REDnode also install the .NET runtime it needs.
+## Do I need to do anything?
 
-## Reading and building the world
+Usually one click, once.
 
-Since 0.12.0, tools can read Night City's own layout from the game's files, read a mod's files the way they read the game's, and write solid objects. EDGEbuilder is the first user. If you're making a tool of your own, these are the calls:
-
-| Call | What it gives |
+| You use | What to do |
 |---|---|
-| `sector.find` | The world's streaming sectors, the pieces the game loads around you (26,347 in game 2.5), each with its box in the world. Ask for the ones in an area, of a kind or at a level. The first call takes a second or two, then milliseconds |
-| `sector.nodes` | What one sector places: each mesh, entity, decal or effect, with its world position, the file it shows and how far away it stays loaded, and one position per copy for instanced meshes. Most sectors read in under 100 ms |
-| `mesh.info`, `mesh.infoMany` | A mesh's or entity's size and appearances, and for a mesh `hasCollision`: whether it can be solid. Pass `archive` (a mod's `.archive`) or `root` (a folder of loose files, such as a REDcode project's `source\archive`) to look there before the game's archives |
-| `sector.build` | Writes a scene into a REDcode project as a sector, its block and an ArchiveXL file. Takes `archive` and `root` too, and `"solid": true` on a mesh |
+| EDGEdeck | Press **Get REDbridge** in the Set up group |
+| REDcode | Press **Install REDbridge** when REDcode asks at its first start |
+| Only tools in the game, such as EDGEbuilder | Press **Get REDbridge** in REDnode's Mod Manager. If EDGEdeck or REDcode already fetched a copy, REDnode uses that one and you do nothing |
 
-### Solid objects
+REDbridge needs Microsoft's free .NET 10 runtime. EDGEdeck and REDnode install it for you, and REDcode offers to. After that, each tool tells you when a newer REDbridge is out.
 
-A mesh baked the plain way only draws: V, bullets and cars pass through it. With `"solid": true` on a scene's mesh, the bake writes the kind of node EDGEbuilder's probe proved in game 2.5:
+[Install and update](install.html) has the details: where each copy goes, which version each tool needs, and installing by hand.
 
-```json
-{ "id": "crate", "kind": "mesh", "resource": "base\\...\\cargo_crate_a.mesh", "solid": true, "transform": { } }
-```
+## Is it safe?
 
-| Case | What you get |
-|---|---|
-| A mesh with collision data | Stops V, bullets, melee and cars, stays put, looks the same and takes an appearance. Its collision grows with its scale |
-| A mesh with no collision data | It shows, but it isn't solid. The bake still runs, and a warning names the mesh. About 4 in 10 of the crate-sized meshes EDGEbuilder sampled have none; `hasCollision` tells you before you bake |
-| An entity | Its collision comes from what it's made of, so `solid` does nothing and the bake warns. An entity with a physical mesh, such as `crate_red.ent`, is solid already |
-
-A bake through `solid` passed in game on 2026-11-08, from EDGEbuilder's Solid switch.
-
-A scene object's `streaming.primary` is also a mesh's hide distance from 0.12.1 (the game otherwise hides a small mesh by its size, about 60 m for a crate). The game hides a node beyond `primary` or `secondary`, whichever is nearer, so give both the same to be seen that far.
-
-Full call shapes are in the [changelog](https://github.com/Edgemodders/REDbridge/blob/main/CHANGELOG.md).
+- **It runs only on your PC**, and only while a tool needs it. The tool that started it stops it again.
+- **Only the tool that started it can talk to it.** REDbridge opens no network port. It takes requests from the program that launched it and from nothing else.
+- **In the game, you decide.** A REDnode mod can use REDbridge only after you switch on **Allowed** for it in the Mod Manager, because REDbridge can read and write files. See [Permissions](../rednode/mod-manager.html#permissions).
+- **Its source is public.** REDbridge is open source, under the GPL-3.0 licence, as WolvenKit is.
 
 ## Status
 
-The latest release is **0.12.0** (5 November 2026), built with WolvenKit 10.0.0-beta.1, for game 2.5. It adds:
+**Released.** The latest is REDbridge 0.12.1 (2026-11-08), for game 2.5, built with WolvenKit 10.0.0-beta.1. It is on [GitHub](https://github.com/Edgemodders/REDbridge/releases), and the tools fetch it from there.
 
-- [the world's sectors and what they place, and solid objects](#reading-and-building-the-world);
-- **a mod's files**: the sizes and appearances of the meshes and entities inside a mod's archive or a REDcode project, and baking scenes that use them;
-- a bake's ArchiveXL file in the form the game loaded in EDGEbuilder's probe, named `<name>.archive.xl`;
-- two fixes for REDcode: **Find Items** now finds outfit sets, glasses, helmets, masks and more, and searching a mesh finds its materials' values, such as its `.mlsetup`.
+| | |
+|---|---|
+| **Runs on** | Windows, 64-bit, with the .NET 10 runtime |
+| **Game version** | 2.5. On a game kept at 2.31, see [Game 2.31](install.html#game-231) |
+| **Used by** | EDGEdeck, REDcode, REDnode, EDGEbuilder, EDGEmat, EDGEwave, EDGEquest and EDGEchat |
+| **In the game** | The baking it does for EDGEbuilder passed its tests in game 2.5: baked objects are in the world, solid, and drawn at the distance the scene sets |
+| **Planned** | Linux. Not scheduled |
 
-0.11.0 (26 October 2026) was the first REDbridge for game 2.5: it reads all of 2.5's quest streaming sectors, where 0.10.0 failed 262 of them, and writes sectors in 2.5's form. It also added:
+What changed in each release is in the [changelog](https://github.com/Edgemodders/REDbridge/blob/main/CHANGELOG.md).
 
-- the game's **spoken lines** (subtitles), with their voice files and lengths, for EDGEquest;
-- **texture settings** for image imports (colour, normal map or greyscale), for EDGEmat;
-- **the items that use a mesh**, which REDcode 0.10.5's Find Items shows.
+<a id="reading-and-building-the-world"></a><a id="solid-objects"></a>
 
-> **On game 2.31, keep REDbridge 0.10.0** if you read streaming sectors (the files that place objects in the world): 0.11.0 reads 2.31's sectors wrong. Everything else still works on 2.31. See [Which version do I need?](install.html#which-version-do-i-need)
+## For tool makers
 
-0.10.0 before it added the game's on-screen texts (LocKeys) in all 19 languages, which REDcode's LocKeys view uses. 0.9.0 added replacing game sound effects from WAV files, and turning a 3D model (GLB) into a new mesh from a game mesh. 0.8.0 added offline TweakDB reading.
+REDbridge answers requests in JSON from the program that starts it. If you are making a tool of your own, the reference is on REDbridge's side, not here:
 
-REDbridge runs on Windows x64 and needs Microsoft's free .NET 10 runtime. It has no window and no settings of its own.
+| You want | Read |
+|---|---|
+| Every method, by group, and how a program talks to REDbridge | The [README](https://github.com/Edgemodders/REDbridge#readme) |
+| Each method's parameters, with examples: reading the world's sectors (`sector.find`, `sector.nodes`), sizes and looks (`mesh.info`), and baking with solid objects (`sector.build`) | The [changelog](https://github.com/Edgemodders/REDbridge/blob/main/CHANGELOG.md) |
+| Using REDbridge from a REDnode mod | REDnode's [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html#the-games-files-through-redbridge) |
+| Using it from an AI assistant | [REDcode's MCP server](https://edgemodders.github.io/REDcode/mcp.html) |
+| Building REDbridge from source | The [REDbridge docs](https://edgemodders.github.io/REDbridge/) |
 
-The scene baking it does for EDGEbuilder has loaded in the game: in EDGEbuilder's bake probes on 2026-10-30 and 2026-11-05, baked crates stood in the world in game 2.5, in the ArchiveXL form 0.12.0 writes, and streamed in and out at the distances the scene set. EDGEbuilder's Bake tab, which uses it, is in a test build.
+For what baking does from a user's side, such as which objects end up solid, see EDGEbuilder's [Baking](../edgebuilder/baking.html) page.
 
-REDbridge is GPL-3.0, because it links WolvenKit's GPL-3.0 libraries. The tools that talk to it stay MIT, and talk to it only through its local connection.
+REDbridge is GPL-3.0 because it includes WolvenKit's GPL-3.0 code. The tools that use it keep their own MIT licence, and talk to it only as a separate program.
 
 ## In this section
 
 | Page | |
 |---|---|
-| [Install and update](install.html) | How each toolkit gets REDbridge, updating it, the .NET 10 runtime, and installing it by hand |
+| [Install and update](install.html) | How each tool gets REDbridge, which copy is used, versions, the .NET 10 runtime, installing by hand, removing it |
 | [Troubleshooting](troubleshooting.html) | REDbridge missing, too old, or not starting |
 
 ## Reference
 
-- [REDbridge docs](https://edgemodders.github.io/REDbridge/) and its [README](https://github.com/Edgemodders/REDbridge#readme), with the list of methods
+- [REDbridge docs](https://edgemodders.github.io/REDbridge/) and its [README](https://github.com/Edgemodders/REDbridge#readme)
 - [Releases](https://github.com/Edgemodders/REDbridge/releases), [source and issues](https://github.com/Edgemodders/REDbridge)
-- [REDcode's MCP server](https://edgemodders.github.io/REDcode/mcp.html), for assistants

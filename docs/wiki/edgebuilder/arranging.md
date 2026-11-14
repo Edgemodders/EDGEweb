@@ -4,26 +4,38 @@ nav_title: Arranging a scene
 section: EDGEbuilder
 order: 6
 description: "Work on several objects at once in EDGEbuilder: select with Ctrl+click or a box, group, duplicate, copy, cut and paste, undo and redo, and the busy bar."
-reviewed: 2026-11-08
+reviewed: 2026-11-13
 ---
 
 # Arranging a <span class="y">scene</span>
 
-**Arrange** is where single objects become a scene: a table with its chairs, a row of crates, a barricade you build once and copy down the street. From EDGEbuilder 0.5.8 you can work on several objects at once, group them, copy them and undo your changes. It all passed its in-game test on 2026-11-02.
+Arranging is where single objects become a scene: a table with its chairs, a row of crates, a barricade you build once and copy down the street. You can work on several objects at once, group them, copy them and undo your changes.
 
-Saving named scenes is the other half of Arrange and comes next. See [Scenes and baking](scenes.html).
+Keeping your work as named scenes is covered on the next page, [Scenes and the Library](scenes.html).
 
-> **Keys need REDnode 0.52.0 or later.** In the game, Ctrl+Z, Ctrl+Y, Ctrl+C, Ctrl+X, Ctrl+V and Esc reach EDGEbuilder only from REDnode 0.52.0. The newest REDnode release has them. With an older REDnode, use the buttons on the Scene tab, and a right-click instead of Esc to cancel.
+| On this page | |
+|---|---|
+| [Selecting several objects](#selecting-several-objects) | Ctrl+click, and a box |
+| [Moving several at once](#moving-several-at-once) | The gizmo, the keys and the fields on a whole selection |
+| [Groups](#groups) | Objects that stay together |
+| [Duplicate](#duplicate) | Ctrl+D |
+| [Copy, cut and paste](#copy-cut-and-paste) | Ctrl+C, Ctrl+X, Ctrl+V |
+| [Undo and redo](#undo-and-redo) | The last 100 changes |
+| [When EDGEbuilder is busy](#when-edgebuilder-is-busy) | The busy bar and Stop |
+| [Try it](#try-it-a-barricade-down-the-street) | A barricade down the street |
+
+The keys on this page are for [Edit](positioning.html#the-edit-switch) on. With Edit off, use the buttons on the Scene tab. [Settings and keys](settings.html#arranging) lists every key in one table.
 
 ## Selecting several objects
 
-Switch [Edit](positioning.html#the-edit-switch) on first.
+Switch Edit on first.
 
 | Do | Selects |
 |---|---|
 | Click an object | That object alone (or its whole group: see [Groups](#groups)) |
 | **Ctrl+click** an object | Adds it to the selection. Ctrl+click it again to take it out |
 | **Shift+drag** | A dashed yellow box. When you let go, everything inside it is selected |
+| **Ctrl+A** | The whole scene |
 | Click empty ground | Nothing |
 
 Ctrl+click works in the **Scene** tab's list too.
@@ -36,20 +48,31 @@ Each selected object gets the game's outline and a thin box. The gizmo sits at t
 
 Everything on [Positioning objects](positioning.html) works on the whole selection:
 
-- the gizmo's arrows move them all, and the ring turns them all around their middle, so the outer ones swing round;
-- **G**, **R** and **S**, with **X**, **Y**, **Z**, typed numbers and **Ctrl** snapping, act on all of them. **S** scales them from their middle: they spread out and grow;
-- **Delete** and **Drop to floor** act on each object.
+| You use | What happens |
+|---|---|
+| The gizmo's arrows | All of them move together |
+| The gizmo's ring, or **R** | They turn around their middle, so the outer ones swing round |
+| **S** | They scale from their middle: they spread out and grow |
+| **Delete**, **Drop to floor** | Each object is deleted, or lowered to the floor below it |
 
-With several objects selected, the **Selected** panel shows their middle in **X**, **Y** and **Z**, and the last two fields become **Turn by** and **Scale by**. **Apply** moves the middle to the X, Y and Z you typed, turns them around it by **Turn by** degrees, and scales them from it by **Scale by**. **Scale by** is hidden when the selection holds an entity, since entities don't scale.
+With several objects selected, the **Selected** panel changes too:
+
+| Field | With several objects selected |
+|---|---|
+| **X**, **Y**, **Z** | The middle of the selection. Type new numbers and the whole selection moves there |
+| **Turn by** (in place of Heading) | Turns them around their middle by that many degrees |
+| **Scale by** (in place of Scale) | Scales them from their middle by that factor. Hidden when the selection holds an entity or a person, since those don't scale |
+
+Press **Apply**, or **Enter** in a field, to use the numbers.
 
 ## Groups
 
-A group keeps objects together, so one click picks them all.
+A **group** keeps objects together, so one click picks them all. Group a table with its chairs and you can move, copy or delete the set as one.
 
 | Key or button | Does |
 |---|---|
 | **Ctrl+G**, or **Group** | Groups the selection. The message says, for example, "Grouped 3 objects as Group 1" |
-| **Ctrl+Shift+G**, or **Ungroup** | Opens the selected group. Its objects stay where they are, on their own |
+| **Ctrl+Shift+G**, or **Ungroup** | Splits the selected group up. Its objects stay where they are, as single objects |
 | A click on an object in a group | Selects the whole group |
 | **Alt+click** | Selects just that object, out of its group |
 
@@ -61,7 +84,12 @@ With a group selected, the **Selected** panel has a **Group name** field. Type a
 
 ## Duplicate
 
-**Ctrl+D**, or **Duplicate** on the Scene tab, copies the selection, groups and all. With Edit on, the copy follows the mouse; a click puts it down. **Esc** or a right-click takes it back, and nothing is copied. With Edit off, the copy lands beside the original.
+**Ctrl+D**, or **Duplicate** on the Scene tab, copies the selection, groups and all.
+
+| With | The copy |
+|---|---|
+| Edit on | Follows the mouse. A click puts it down. **Esc** or a right-click takes it back, and nothing is copied |
+| Edit off | Lands beside the original, to its east |
 
 ## Copy, cut and paste
 
@@ -71,7 +99,7 @@ With a group selected, the **Selected** panel has a **Group name** field. Type a
 | **Ctrl+X** | Cuts it: copies it, then deletes it. Ctrl+Z puts it back |
 | **Ctrl+V** | Pastes it where the cursor points, standing on the surface there, and selects it |
 
-Paste as often as you like. What you copied stays until EDGEbuilder stops, even after the originals are deleted. A pasted group arrives as a new group with the same name.
+Paste as often as you like. What you copied is kept until you close the game, even if you delete the originals. A pasted group arrives as a new group with the same name.
 
 Where Ctrl+V puts the copy:
 
@@ -88,47 +116,33 @@ Where Ctrl+V puts the copy:
 | **Ctrl+Z**, or **Undo** | Takes back the last change |
 | **Ctrl+Y** or **Ctrl+Shift+Z**, or **Redo** | Does it again |
 
-Undo covers the last 100 changes: drops, moves, turns, scales, **Apply**, **Drop to floor**, deletes, copies and pastes, grouping, renaming and **Clear scene**. The message says what came back or went. The history lasts while EDGEbuilder runs; it starts empty after the game restarts.
+Undo covers the last 100 changes: drops, moves, turns, scales, **Apply**, **Drop to floor**, deletes, copies and pastes, grouping, renaming and **Clear scene**. The message says what came back or went. The history lasts until you close the game. It starts empty at the next start.
 
-When you type in a field of the **Selected** panel, **Enter** applies the number and leaves the field. Ctrl+Z then undoes the change to the object, not the text in the field.
+If Ctrl+Z seems to undo text instead of a move, the cursor is in a field. Click in the world first. See [Typing numbers](positioning.html#typing-numbers).
 
 ## When EDGEbuilder is busy
 
 Some changes take a while, such as an undo or **Rebuild previews** that puts back many objects. When a change runs for more than half a second, a **busy bar** shows what it is, how far it has got and for how long, for example **Rebuild previews: 3 of 12 · 2 s**. With Edit on, it shows at the top of the view too.
 
-Clicks you make meanwhile wait their turn. The bar counts them (**1 more waiting**), and they run when the change ends.
-
-**Stop** places no more previews for that change. The changes waiting behind it still run.
+| While the bar shows | What happens |
+|---|---|
+| You click something else | The click waits its turn. The bar counts it (**1 more waiting**), and it runs when the change ends |
+| You press **Stop** | The running change places no more previews. The objects it hadn't placed yet stay in the scene, marked **not in world** in the Scene tab's list. **Rebuild previews** places them later. Changes that were waiting still run |
 
 {% include shot.html src="/assets/shots/edgebuilder/arranging-busy.webp" caption="The busy bar" shows="The top of the view with Edit on: the busy bar saying Rebuild previews, 3 of 12, 2 s, 1 more waiting, with the Stop button." %}
 
-### Objects far away
-
-Undo, Redo and **Rebuild previews** place every object, near or far: from 0.6.7, a scene's objects are in the world wherever V is, so you can fly to any of them and work there.
-
-## All the arranging keys
-
-| Key or mouse | Does |
-|---|---|
-| **Ctrl+A** | Select the whole scene |
-| **Ctrl+click** | Add to or take out of the selection |
-| **Shift+drag** | Select everything in a box |
-| **Alt+click** | One object out of a group |
-| **Ctrl+G**, **Ctrl+Shift+G** | Group, ungroup |
-| **Ctrl+D** | Duplicate; the copy follows the mouse until a click |
-| **Ctrl+C**, **Ctrl+X**, **Ctrl+V** | Copy, cut, paste under the cursor |
-| **Ctrl+Z**, **Ctrl+Y** (or **Ctrl+Shift+Z**) | Undo, redo |
-| **Esc** or a right-click | Cancels a drag, a Drop at click, a box or a copy that follows the mouse |
-
-With nothing in progress, **Esc** leaves REDnode's interactive mode as usual.
+Your scene's objects are placed even when V is far away from them. So you can fly the camera to any part of a scene and keep working there.
 
 ## Try it: a barricade down the street
 
-1. Drop a crate, then press **Ctrl+D** twice to put two more beside it.
-2. Hold **Shift** and drag a box around the three. The Scene tab says **3 selected**.
-3. Press **Ctrl+G**. In **Group name**, type `Barricade` and press **Enter**.
-4. In the Scene tab's list, click the arrow beside **Barricade** to fold its crates away, and again to show them.
-5. **Alt+click** the middle crate and press **Delete**. Only that one goes. **Ctrl+Z** puts it back.
-6. Click the barricade and press **Ctrl+X**. It's gone, and copied.
-7. Fly down the street, point the cursor at the road and press **Ctrl+V**. Press **Ctrl+V** again further on. Now there are two barricades.
-8. Press **Ctrl+Z** three times: the two pastes and the cut come undone, and the barricade is back where it started.
+1. Drop a crate and switch **Edit** on.
+2. Press **Ctrl+D**, move the copy beside the crate and click. Do it once more, so three crates stand in a row.
+3. Hold **Shift** and drag a box around the three. The Scene tab says **3 selected**.
+4. Press **Ctrl+G**. In **Group name**, type `Barricade` and press **Enter**.
+5. In the Scene tab's list, click the arrow beside **Barricade** to fold its crates away, and again to show them.
+6. **Alt+click** the middle crate and press **Delete**. Only that one goes. **Ctrl+Z** puts it back.
+7. Click the barricade and press **Ctrl+X**. It's gone, and copied.
+8. Fly down the street, point the cursor at the road and press **Ctrl+V**. Press **Ctrl+V** again further on. Now there are two barricades.
+9. Press **Ctrl+Z** three times: the two pastes and the cut come undone, and the barricade is back where it started.
+
+A key does nothing? After typing in **Group name**, click in the world once: while the cursor is in a field, keys go to the field.

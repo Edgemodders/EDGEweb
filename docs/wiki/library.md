@@ -51,7 +51,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | Thing | Made by | Looks like |
 |---|---|---|
 | **Scene** | [EDGEbuilder](edgebuilder/) | `market_square.scene.json`: the objects you placed, where they are and their groups |
-| **Bake** | [EDGEbuilder](edgebuilder/scenes.html#bakes-in-the-library) | `market_square.bake`: a folder with the game files that put one or more scenes in the world, and a note of what they were baked from |
+| **Bake** | [EDGEbuilder](edgebuilder/baking.html#bakes-in-the-library) | `market_square.bake`: a folder with the game files that put one or more scenes in the world, and a note of what they were baked from |
 | **Asset** | EDGEfab, REDcode, later EDGEmat and EDGEwave | `rusty_oil_drum.prop.asset`, `comfy_rocker.mesh.asset`, `door_knock.sound.asset`: a folder laid out like a small project, with its game files and what they were made from. It keeps a stable id, so a project finds it even after you rename or move it |
 | **Quickhack** | EDGEhack | `overclock_plus.quickhack.asset`: a quickhack you made or changed, kept as EDGEhack's own document with its icons. It has no game files of its own: they're written into a project when you add it to one |
 | **Plain file** | You | `model.glb`, `knock.wav`: kept as they are, to turn into assets later |

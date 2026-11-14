@@ -3,92 +3,101 @@ title: EDGEbuilder
 nav_title: Overview
 section: EDGEbuilder
 order: 0
-description: "EDGEbuilder, a world builder that runs inside Cyberpunk 2077 on REDnode: what it is, what it's for, and where it stands."
-reviewed: 2026-11-08
+description: "EDGEbuilder, a world builder that runs inside Cyberpunk 2077: place objects and people, arrange them into scenes, and bake scenes into the world. What it does, what it needs, and where to start."
+reviewed: 2026-11-13
 ---
 
 # EDGE<span class="y">builder</span>
 
-EDGEbuilder is a world builder for Cyberpunk 2077 that runs inside the game. You search the game's own 3D models, and your mods', drop one into the world in front of you, and move, turn and scale it until it sits right. You can work on several objects at once, group them, copy them and undo. Later phases will let you save named scenes and bake them into the world, so they load like any other mod.
+EDGEbuilder is a world builder for Cyberpunk 2077 that runs inside the game. You search the game's own 3D models and people, and your mods', drop one into the world in front of you, and move, turn and scale it until it sits right. You save your work as named scenes, and you can bake a scene into a mod, so the objects are part of Night City for anyone who installs it.
 
 {% include shot.html src="/assets/shots/edgebuilder/overview.webp" caption="EDGEbuilder in the game" shows="The game with Edit on: a cargo crate selected with its gizmo (red, green and blue arrows and a yellow ring), the EDGEbuilder panel on the right with its six tabs (Assets, Scene, Library, Bake, Settings, About) and the Assets tab open, and the help line at the bottom centre." %}
+
+**New here?** Read this page, then [Install and set up](install.html), then build [your first scene](first-scene.html). The first scene takes about 20 minutes. You don't need to code.
 
 ## What it's for
 
 Night City is built from hundreds of thousands of pieces: crates, signs, lamps, vending machines, walls. Adding your own furniture to an apartment, a barricade to a street or props for a photo has always meant guessing coordinates in a file, or learning a separate 3D tool, then starting the game to see whether it worked.
 
-EDGEbuilder lets you do it where you can see it: in the game, with the real lighting, from any angle. It is built around six behaviours:
+EDGEbuilder lets you do it where you can see it: in the game, with the real lighting, from any angle.
 
-| Behaviour | What you do | Status |
+| You want to | You do this | Read |
 |---|---|---|
-| **Browse** | Search the game's meshes and entities by name, and those in your installed mods and your open REDcode project | Passed in game. Mods and the project from 0.4.1 |
-| **Drop** | Pick one and it appears where you look, or where you click | Passed in game |
-| **Position** | Move, turn and scale it with a gizmo, keys or typed numbers; drop it to the floor | Passed in game |
-| **Arrange** | Select several objects, group, duplicate, copy, cut and paste, undo and redo; save named scenes | Passed in game. Named scenes from 0.6.7 |
-| **Bake** | Turn a scene into a mod that puts the objects in the world for good | Passed in game, from 0.7.3. Solid meshes and Seen from from 0.8.1, bakes in the Library from 0.9.0 |
-| **Return** | Open a saved scene and keep working on it | Passed in game, from 0.6.7 |
+| Find something to place | Search the game's models, the game's people, and the models in your mods | [Browsing and dropping](browsing.html) |
+| Put it in the world | Pick it and drop it where you look, or where you click | [Browsing and dropping](browsing.html#drop-it) |
+| Get it exactly right | Move, turn and scale it with the mouse, with keys or with typed numbers | [Positioning objects](positioning.html) |
+| See it from anywhere | Fly a camera of EDGEbuilder's own, while V stays put | [The camera and builder mode](camera.html) |
+| Build something bigger | Select several objects, group them, copy and paste them, undo | [Arranging a scene](arranging.html) |
+| Keep your work | Save it as a named scene, and open it again later | [Scenes and the Library](scenes.html) |
+| Make it part of the game | Bake the scene into a mod | [Baking](baking.html) |
 
-Until you bake it, what you place is a **preview**: it's in the world while you play and EDGEbuilder is running, and it goes when a save loads. EDGEbuilder keeps it in your scene and puts it back by itself. See [Scenes and baking](scenes.html).
+Two words you will meet on every page:
 
-## Benefits
+- A **preview** is an object you placed that is not baked yet. Only you see it, and only while EDGEbuilder is running. Loading a save removes previews from the world, but your scene remembers them, and EDGEbuilder puts them back a moment later.
+- To **bake** a scene is to turn it into a mod. After a bake, the objects are in the world without EDGEbuilder, and for anyone who installs the mod.
 
-- **Build where you see it.** Place objects in the running game, with its own lighting and the game's own selection outline, instead of guessing coordinates in a file.
-- **The game's own assets, no lists to download.** EDGEbuilder reads an index of about 31,500 meshes and entities from your own game files, in a few seconds, once per game version.
-- **Your mods' assets too.** The meshes and entities in your installed mods and in the project open in REDcode are listed beside the game's, tagged with where they come from.
-- **Precise placement.** A gizmo, the keys G, R and S with axis locks and typed numbers, snapping, drop to floor, and exact X, Y, Z and heading fields.
-- **A free camera that leaves V alone.** Fly anywhere to place objects from any angle; V stays where V stood, and the game's HUD gets out of the way.
-- **Arrange like a 3D program.** Select several objects with Ctrl+click or a box, group them, duplicate, copy and paste, and undo the last 100 changes.
-- **Scenes you keep.** Named scenes, saved after every change, in the [EDGE Library](../library.html), your REDcode project or on this PC, and back where you left them at the next start.
-- **Easy to back out of.** Undo takes back a change, and **Close** takes a scene's objects out of the world, keeping the scene. Switch Edit off and the view, the HUD and the mouse are the game's again.
-- **Part of EDGE, end to end.** REDnode runs it, REDbridge reads the game's files, EDGEdeck installs it. REDcode packs what you bake, and bakes kept in the EDGE Library go into any REDcode project.
+## Why you'd want it
 
-## How it fits into EDGE
+- **Build where you see it.** Place objects in the running game, in its own lighting, instead of guessing coordinates in a file.
+- **The game's own models, with nothing to download.** EDGEbuilder reads a list of about 31,500 models from your own game files, in a few seconds, and about 6,600 of the game's people.
+- **Your mods' models too.** The models in your installed mods are listed beside the game's, tagged with the mod they come from.
+- **Precise placement.** Drag with the mouse, use the keys G, R and S, or type exact numbers. Snap to steps, and drop an object onto the floor.
+- **A free camera that leaves V alone.** Fly anywhere to place objects from any angle. V stays where V stood.
+- **Arrange like a 3D program.** Select several objects, group them, duplicate, copy and paste, and undo the last 100 changes.
+- **Nothing is lost.** A scene is saved after every change, and opens again the next time you play.
+- **A real mod at the end.** A baked scene works with EDGEbuilder closed or uninstalled.
 
-EDGEbuilder is a **REDnode package**: an add-on for [REDnode](../rednode/) made of a window drawn over the game (the editor you see) and a Node mod (the part that remembers your scene and talks to the other tools). It is the first mod built on the whole EDGE platform.
+## What you need, in short
 
-| Toolkit | What it does for EDGEbuilder |
+| To | You need |
 |---|---|
-| [REDnode](../rednode/) | Runs it. Draws the editor over the game, gives it the game calls that spawn, move and remove objects, and hides other packages' windows while you edit ([solo mode](../rednode/spaces.html#solo-mode)) |
-| [REDbridge](../redbridge/) | Reads the game's archives, and your mods', to build the list of assets, with each one's size and appearances. It also writes the baked files (0.12.0 or later) |
-| [EDGEdeck](../edgedeck/) | Installs EDGEbuilder from its release zip, and what you bake, as your REDcode project |
-| [REDcode](../redcode/) | Tells EDGEbuilder which project is open (REDcode 0.10.5 or later), so its meshes and entities are listed too. After REDcode's **Pack and Play**, previews show the new version. It can hold your scenes in the project, and packs what you bake into a mod |
+| Place and arrange objects | Cyberpunk 2077 version 2.5 on PC, [REDnode](../rednode/), Codeware and [REDbridge](../redbridge/) |
+| Bake a scene into a mod | Also [REDcode](../redcode/) and [EDGEdeck](../edgedeck/), which run in VS Code (a free code editor), and ArchiveXL |
+
+[Install and set up](install.html) has the full list, with versions and links.
 
 ## Status
 
-| Phase | Status |
-|---|---|
-| B1 Browse and drop | Passed in game on 2026-10-13 |
-| B2a Position | Passed in game on 2026-10-14 |
-| B2b Camera | Passed in game on 2026-10-14. The fixes in 0.3.1 and 0.3.2 (the HUD after a save loads, looking across the window, the cursor held still while looking) passed their retest on 2026-10-16. 0.3.3's additions (Drop at click and others) passed on game 2.5 on 2026-10-29 |
-| Bake probe | Passed in game on 2026-10-30: a crate baked by REDbridge, without EDGEbuilder, loaded in game 2.5 as part of the world |
-| B2c Mod assets | Passed in game on 2026-10-30 (0.4.1): your mods' and your REDcode project's meshes and entities |
-| B3-1 Arrange | Passed in game on 2026-11-02 (0.5.8): several objects at once, groups, duplicate, copy, cut and paste, undo and redo |
-| B3-2 Save | Passed in game, released as 0.6.7 on 2026-11-05: named scenes you save and open again, kept in the [EDGE Library](../library.html), your REDcode project or on this PC |
-| B4 Bake | **Bake to project** passed in game and is released as 0.7.3 on 2026-11-05: the Bake tab, and a baked scene that stands with EDGEbuilder uninstalled. **The Solid switch** and Seen from passed in game, released as 0.8.1 on 2026-11-08. **Bakes in the Library** passed in game, released as 0.9.0 on 2026-11-08. **0.9.1 is the first public preview**, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) (2026-11-08) |
-| B3c NPCs and scenes through REDnode | **Passed in game and released as 0.10.9 on 2026-11-12**: place the game's people, and REDnode loads EDGEbuilder's scene files, people included, so other mods can use them. REDnode's side passed on 2026-10-26 |
-| B3b World objects | Agreed: pick, inspect and copy what the game itself placed. Not started |
-| B4b Edit the world | Agreed: hide or change the game's own objects. Not started |
-| B4c Quest places | Planned: spots, trigger areas and map markers for EDGEquest's quests |
-| B5 Lights and more kinds | Not started. Today you can place meshes, entities and NPCs |
-| B6 Comfort (favourites, prefabs, snapping) | Not started |
-| B7 Scenes in REDcode with the game closed | Not started |
+**Released, as a public preview.** The latest is EDGEbuilder 0.10.9 (2026-11-12), for game 2.5, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) and [GitHub](https://github.com/Edgemodders/EDGEbuilder/releases). Everything on these pages passed its test in the game, unless a page says otherwise.
 
-The latest release is **EDGEbuilder 0.10.9** (2026-11-12), on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) and the [releases page](https://github.com/Edgemodders/EDGEbuilder/releases). It adds [people (NPCs)](browsing.html#people-npcs) and pins that keep the Picked and Selected panels in view; 0.9.1 (2026-11-08) was the first public preview. 0.10.9 was tested on game 2.5 with REDnode 0.58.0 and REDbridge 0.12.1. It needs [REDnode](../rednode/) 0.58.0 or later, and REDbridge 0.12.1 or later to bake. See [Install and set up](install.html).
+| | |
+|---|---|
+| **Works today** | Meshes and entities from the game, your mods and your REDcode project. People (NPCs). The editor camera. Groups, copy and paste, undo. Named scenes. Baking into a REDcode project, with solid meshes and a draw distance for each object. Bakes kept in the EDGE Library |
+| **Not baked yet** | People. They show while EDGEbuilder is running, and a bake leaves them out |
+| **Coming next** | Importing your own 3D model. Built, and being tested in the game; not released yet |
+| **Planned, not started** | Picking and changing what the game itself placed. Places for quests. Lights, decals, effects and sounds. Favourites and prefabs. Working on a scene in REDcode with the game closed |
 
 EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks mod that showed a world editor can live inside the running game. EDGEbuilder is its own design and uses none of World Builder's code, files or data.
+
+## How it fits into EDGE
+
+EDGEbuilder is an add-on that [REDnode](../rednode/) runs inside the game. REDnode calls such an add-on a [package](../glossary.html#edge-terms). The other EDGE tools each do one job for it:
+
+| Toolkit | What it does for EDGEbuilder |
+|---|---|
+| [REDnode](../rednode/) | Runs it. Draws the editor over the game, and places, moves and removes the objects |
+| [REDbridge](../redbridge/) | Reads the game's files, and your mods', to build the list of models. Writes the files of a bake |
+| [EDGEdeck](../edgedeck/) | Installs EDGEbuilder from its zip. Later it also installs the mod that holds your baked scenes |
+| [REDcode](../redcode/) | Holds the project your bakes go into and packs it into a mod. The project's own models are listed in EDGEbuilder too |
 
 ## In this section
 
 | Page | |
 |---|---|
-| [Install and set up](install.html) | What you need, installing with EDGEdeck, allowing REDbridge, opening it in the game |
+| [Install and set up](install.html) | What you need, installing, allowing its two permissions, the three status pills |
 | [Your first scene](first-scene.html) | A walk through from start to finish: make a scene, drop and stack crates, group and copy them, undo, bake them into the world |
-| [Browsing and dropping](browsing.html) | The asset index, your mods and project, search, appearances, dropping objects, the Scene tab |
-| [Positioning objects](positioning.html) | The Edit switch, the gizmo, G R S, typed numbers, snapping, drop to floor, scale |
-| [The camera and builder mode](camera.html) | Flying the editor camera, orbit, pan, frame, the hidden HUD and solo mode |
-| [Arranging a scene](arranging.html) | Several objects at once, groups, duplicate, copy, cut and paste, undo and redo, the busy bar |
-| [Scenes and baking](scenes.html) | Named scenes and the Library, previews that come back, and baking a scene into the world |
-| [Settings and keys](settings.html) | Every setting, button and key |
-| [Troubleshooting](troubleshooting.html) | Symptoms and fixes |
+| [Browsing and dropping](browsing.html) | Meshes, entities and people, search, your mods and project, appearances, dropping |
+| [Positioning objects](positioning.html) | The Edit switch, the gizmo, G R S, typed numbers, snapping, drop to floor |
+| [The camera and builder mode](camera.html) | Flying the editor camera, orbit, pan, frame, the hidden HUD and other windows |
+| [Arranging a scene](arranging.html) | Several objects at once, groups, duplicate, copy, cut and paste, undo and redo |
+| [Scenes and the Library](scenes.html) | Previews and scenes, where scenes are kept, the Scene tab, the Library tab |
+| [Baking](baking.html) | Turning a scene into a mod: what you need, solid objects, draw distance, sharing, bakes in the Library |
+| [Settings and keys](settings.html) | Every tab, setting, key and mouse control |
+| [Troubleshooting](troubleshooting.html) | What to do when something goes wrong |
 
-The [EDGEbuilder docs](https://edgemodders.github.io/EDGEbuilder/), with the [design](https://edgemodders.github.io/EDGEbuilder/design.html) and the results of each in-game test, are the reference this section draws on.
+## Reference
+
+- [EDGEbuilder docs](https://edgemodders.github.io/EDGEbuilder/): the design, and the result of each test in the game
+- [Changelog](https://edgemodders.github.io/EDGEbuilder/changelog.html): what changed in each release
+- [Scene format](https://edgemodders.github.io/EDGEbuilder/scene.html), for mod makers
+- [Source and issues](https://github.com/Edgemodders/EDGEbuilder)
