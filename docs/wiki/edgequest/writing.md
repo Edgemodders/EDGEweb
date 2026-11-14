@@ -2,85 +2,171 @@
 title: Writing a quest with EDGEquest
 nav_title: Writing a quest
 section: EDGEquest
-order: 3
-description: "Make your first quest: New Quest, the Storyboard and its beat pages, saving makes the quest's game files, then pack, install and play it."
-reviewed: 2026-11-04
+order: 4
+description: "How writing a quest works in EDGEquest: the story file, the Storyboard and its beat pages, what happens when you save, the Project Quests view, playing the quest, sharing it and removing it."
+reviewed: 2026-11-13
 ---
 
 # Writing a <span class="y">quest</span>
 
-In EDGEquest, a quest is one text file in your WolvenKit project, the **story file** (`<id>.quest.yaml`). You write the quest in story words; EDGEquest makes the game's files from it each time you save. You can edit the story file on the **Storyboard**, with cards and buttons, or as text. Both change the same file.
+In EDGEquest, a quest is one text file in your project, the **story file** (`<id>.quest.yaml`). You write the quest in story words, and EDGEquest makes the game's files from it each time you save. You can edit the story file on the **Storyboard**, with cards and buttons, or as text. Both change the same file.
 
-## Your first quest
+**First time?** Follow [Your first quest](first-quest.html). It makes a quest step by step and plays it in the game. This page explains each part once you have done that.
 
-1. **Open a WolvenKit project in REDcode,** or make one with **REDcode: New Project**. See [Projects](../redcode/projects.html).
-2. **Run EDGEquest: New Quest...** (or the **New Quest** button at the top of the Project Quests view).
-3. **Give a title and an id.** The title is what the journal shows ("Something at the Door"). The id is short, lower case, with `_` between words (`door_mystery`); it names the quest's files. The first time, EDGEquest also asks your modder name, and remembers it.
+| On this page | |
+|---|---|
+| [Starting a quest](#starting-a-quest) | New Quest, and what the template gives you |
+| [The Storyboard](#the-storyboard) | Cards, arrows, and a beat's page |
+| [What happens when you save](#what-happens-when-you-save) | The quest is made, and checked |
+| [The Project Quests view](#the-project-quests-view) | Your quests in the sidebar |
+| [Play it](#play-it) | Pack, install, and the test save |
+| [Sharing your quest](#sharing-your-quest) | What players need |
+| [Removing a quest](#removing-a-quest) | From the game, and from the project |
+
+## Starting a quest
+
+1. **Open a project in REDcode,** or make one with **REDcode: New Project**. A project is the folder that holds one mod's files; see [Projects](../redcode/projects.html).
+2. **Run EDGEquest: New Quest...**, or press **New Quest** (the **+**) at the top of the Project Quests view.
+3. **Give a title and an id.** The title is what the journal shows ("Something at the Door"). The id is short, in small letters, with `_` between words (`door_mystery`). The first time, EDGEquest also asks your modder name, and remembers it.
 4. EDGEquest writes `door_mystery.quest.yaml` at the top of the project, opens it on the Storyboard, and makes the quest's game files.
 
-The new quest already plays. Its objective sends V to the apartment door in Megabuilding H10. When V gets there, V thinks aloud and the player picks one of two options, each leading to its own ending.
+**Choose the id with care.** It becomes part of the quest's file names and of everything the quest remembers in a save, so changing it later makes a different quest. Two quests with the same id overwrite each other.
+
+The new quest already plays. It starts from EDGEquest's **template**: the objective "Go to the place" sends V to the apartment door in Megabuilding H10. When V gets there, V says a line and the player picks **Look around** or **Leave**. Each leads to its own ending.
+
+The story file has to stay at the top of the project, beside the project's `.cpmodproj` file. Moved into a subfolder, it is no longer made.
 
 ## The Storyboard
 
 The Storyboard shows your quest as **cards, one per beat**. A beat is one stage of the quest, with the objective the journal shows while it runs. Each card is titled with that objective.
 
-- **Arrows** show where the quest goes next. An arrow from a choice is labelled with the option that leads there. A grey arrow is what follows when no choice sends the quest elsewhere.
-- **Endings** show whether the quest succeeds or fails there.
-- **Drag** the board to move it, and use the **mouse wheel** to zoom. The buttons in its corner zoom in, out, to fit and to actual size.
-- **Drag the line under the board** to make it taller or shorter; double-click the line to fit the board to the story.
-- **Layout** lays the board out afresh and fits it in view. Beats a choice leads to stay together, in the choice's order.
+| On the board | What it means |
+|---|---|
+| An arrow with a label | A choice leads there. The label is the option the player picks |
+| A grey arrow | The default: where the quest goes after this beat if no choice sent it somewhere else |
+| **quest succeeds** or **quest fails** on a card | The beat is an ending |
+| A card no arrow leads to | Nothing in the quest goes there yet |
 
-{% include shot.html caption="The Storyboard" shows="The template quest on the Storyboard: four beat cards, Go to your apartment, You're home, Look at the door and Get some rest, with arrows labelled Look closer and Go inside, and the two endings marked succeeded and failed." %}
+To move around:
+
+- **Drag** the board to move it, and use the **mouse wheel** to zoom. The buttons in its corner zoom in, out, to fit the whole story, and to actual size.
+- **Drag the line under the board** to make the board taller or shorter. Double-click the line to fit the board to the story.
+- **Layout** lays the board out afresh and fits it in view. The beats that a choice leads to are placed side by side, in the same order as the options.
+
+At the top of the Storyboard are its buttons:
+
+| Button | What it does |
+|---|---|
+| **+ Beat** | Adds a new beat that nothing leads to yet, so the quest plays as before until you send a choice to it |
+| **Make** | Saves the story file and makes the quest now |
+| **Made files** | Lists the game files made from the story |
+| **Layout** | Lays the board out afresh |
+| **Open YAML** | Opens the story file as text, beside the board |
+
+The header shows the quest's title, id and description. To change those, edit them in the text: see [The quest](story-file.html#the-quest).
+
+{% include shot.html caption="The Storyboard" shows="A quest on the Storyboard: beat cards titled with their objectives, arrows labelled with the options that lead to them, the endings marked quest succeeds and quest fails, and the buttons + Beat, Make, Made files, Layout and Open YAML at the top." %}
 
 ### A beat's page
 
-Click a card to open its page below the board. There you can:
+Click a card to open its page below the board. Double-click a card to rename its objective. On the page you can:
 
 | Do | How |
 |---|---|
-| Change a line's words, or an option's text | Click it and type |
-| Add lines, choices, options and sounds | The add rows at the end of each scene and option |
-| Move a line, option or step up or down, or delete it | The buttons beside it. A choice's `go:` always stays last |
+| Rename the objective, add a beat after this one, or delete the beat | **Rename**, **+ Beat after** and **Delete** at the top of the page. **+ Beat after** puts the new beat into the chain, right after this one |
+| Say what follows the beat | The **Then** list: the next beat in the list, another beat, nothing, an ending that succeeds, or one that fails. "Nothing" stops the quest there and leaves it open in the journal |
 | Add a step | **+ Step**: arrive at a place, play a scene (or a new one), wait, set a fact, music, sound, or end the quest |
-| Send a choice to another beat | Pick the beat on the option |
-| Make an option yellow or white, or give it a lifepath, an attribute check or a payment | The colour and condition pickers on the option. See [Choices](story-file.html#choices) |
-| Say what follows the beat | **Then**: the next beat in the list, another beat, nothing, or an ending |
-| Write how a line is spoken | The line's voice prompt. See [How a line is spoken](story-file.html#how-a-line-is-spoken) |
-| Tick a checklist item | The checklist on the page |
+| Move a step up or down, or delete it | The **↑**, **↓** and **✕** buttons beside it |
+| Change a line's words, or an option's text | Click in its box, type, and press Enter |
+| Add a line, a choice or a sound | **+ Line**, **+ Choice** and **+ Sound**, in the row at the end of each scene and under each option |
+| Add an option to a choice | **+ Option** on the choice's row |
+| Send an option to another beat | The **goes on to** list on the option. "The scene goes on" means the option leads nowhere special |
+| Make an option yellow or white | The first list under the option. **auto** lets EDGEquest decide |
+| Give an option a lifepath, an attribute check or a payment | The second list under the option: **Anyone**, a lifepath, a check, or **Pay eddies**. See [Kinds of options](story-file.html#kinds-of-options) |
+| Move a line or an option up or down, or delete it | The **↑**, **↓** and **✕** buttons beside it. Where an option leads always stays its last item |
+| Write how a line is spoken | The **Direction** and **Say** boxes under the line. See [Voice prompts](story-file.html#how-a-line-is-spoken) |
+| Voice a line | **Generate** on the line, or **Voice all lines** on the scene. Both need EDGEwave. See [Voices](music-sound.html#voices) |
+| Tick a checklist item | The **Checklist** at the end of the page |
 
-To add a beat, use **+ Beat** at the top (it adds a beat at the end, linked to nothing, so the story doesn't change), or **+ Beat after** (it goes into the chain, after the beat you are on). You can also rename and delete beats.
+Some things have no button yet and are done in the text, with **Open YAML**: the quest's title and description, its places, and a fact set in the middle of a scene.
 
-{% include shot.html caption="A beat's page" shows="The page of the You're home beat under the Storyboard: its steps (a music cue and a scene), the scene's lines with their voice prompts, and a choice whose options have colour and condition pickers." %}
+{% include shot.html caption="A beat's page" shows="A beat's page under the Storyboard: its steps (a music cue and a scene), the scene's lines with their Direction and Say boxes, and a choice whose options have a goes on to list and colour and condition lists." %}
 
-Every change goes straight into the story file, with your comments kept. **Open YAML** shows the text, and you can edit it there directly. [The story file](story-file.html) describes everything it can hold.
+Every change goes straight into the story file, with your comments kept. `Ctrl+Z` undoes it. [The story file](story-file.html) describes everything the file can hold.
 
-## Saving makes the quest
+## What happens when you save
 
-Each time you save the story file, EDGEquest **makes the quest**: it writes the quest phase, the journal, the scenes, the texts and the ArchiveXL file into your project, and checks them against each other. You can also use **EDGEquest: Make Quest**, or the Storyboard's **Make** button.
+A change on the Storyboard or in the text is in the editor only, and the tab shows a dot, until you **save** (`Ctrl+S`). Saving **makes the quest**: EDGEquest writes the quest's game files into your project and checks them against each other. The **Make** button and the command **EDGEquest: Make Quest** save and make in one go.
 
-- **Problems** show in VS Code's Problems panel, at their line in the story file. A choice that goes to a beat that doesn't exist is one example.
-- **The status bar** says, while the story file is in front, when the quest was last made and how much is left on its checklist, or how many problems it has. Click it to see the problems or the made files.
-- **A made file you changed by hand is kept,** not overwritten. Files a new make no longer needs are removed, unless you changed them.
+What you see after a save:
 
-**Made Files...** lists the game files made from the story. A phase or scene opens in plain words on the quest page, as the game's own do.
+| Where | What |
+|---|---|
+| The status bar | While a story file is the active tab: when the quest was last made and how many checklist items are left, or how many problems it has. Click it to see the made files or the problems |
+| VS Code's Problems panel | Each problem, at its line in the story file. A choice that goes to a beat that doesn't exist is one example |
+| The Storyboard | With a problem in the story file, the cards give way to a notice that lists the problems. The board comes back once they are fixed |
+
+Three rules:
+
+- **A story with problems is not made.** The game files stay as they were at the last good save.
+- **A made file you changed by hand is kept,** not overwritten. EDGEquest then lists it as a problem. See [A file I changed by hand isn't updated](troubleshooting.html#a-file-i-changed-by-hand-isnt-updated).
+- **Files that are no longer needed are removed** when you make the quest again, for example after you rename a scene. A file you changed by hand stays.
+
+**Made Files...** lists the game files made from the story. Pick the quest's phase or a scene, and it opens in plain words on a quest page, just as the game's own do. [What saving makes](story-file.html#what-saving-makes) lists the files.
 
 To make the quest only when you ask, switch off `edgequest.makeOnSave`. See [Settings and commands](settings.html).
 
 ## The Project Quests view
 
-**Project Quests** lists the quests in REDcode's open project, or in any open folder that is a WolvenKit project. Each shows how much is left to do, its beats and its checklist. Click a quest to open its Storyboard. Each quest also has **Make Quest** and **Made Files**.
+**Project Quests** lists the quests in REDcode's open project, or in any folder open in VS Code that is a WolvenKit project. Under each quest are its beats and its checklist, with how much is left to do. Click a quest to open its Storyboard. Each quest also has **Make Quest**, and **Made Files** in its right-click menu.
 
 ## Play it
 
-1. In REDcode, **Pack and Install** the project. See [Pack and install](../redcode/pack-install.html).
-2. Make sure [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198) is installed in the game.
-3. Start the game and **load a save from before you installed the quest.** A quest made from the template starts when a save loads.
-4. The quest's objective shows in the journal. Follow its marker.
+Before the first time, make sure ArchiveXL and RED4ext are in the game ([What you need](install.html#what-you-need)), and **make a save and keep it**: your test save.
 
-{% include shot.html caption="The quest in the game" shows="Cyberpunk 2077 with the new quest's objective in the tracker, its map marker at V's apartment door, and the scene's choice on screen with its two options." %}
+1. **Quit the game.**
+2. In REDcode, **Pack and Install** the project. See [Pack, install and run](../redcode/pack-install.html).
+3. Start the game and **load your test save.**
+4. The quest is in the journal. Track it and follow its marker.
 
-**To change it:** edit the story, save, pack and install again, and load the same save again.
+{% include shot.html caption="The quest in the game" shows="Cyberpunk 2077 with the new quest's objective in the tracker, its map marker at V's apartment door, and the scene's choice on screen with its options." %}
+
+**Why a test save.** A quest starts once in each save, the first time that save loads with the quest installed. Saves made after that carry the quest's progress. A save from before the first install always starts the quest from the beginning, so it is the one to test with.
+
+**To change the quest:** quit the game, edit the story, save, pack and install again, and load the test save again.
+
+**A quest starts when a save loads.** In this preview there is no other way to start one: not at a place, not after another quest, not from a phone call. Other ways to start are planned. Until then, the first beat can make the player do something before anything else happens, such as going to a place.
+
+REDcode's **Pack and Play**, which swaps a mod into the running game, doesn't work for quests: the game only takes in a new quest when it starts.
 
 If something doesn't work, run **EDGEquest: Check Quest Mod...** on the project: it names what's wrong. **EDGEquest: Show Log** shows what EDGEquest did. See [Checking a quest](checking.html) and [Troubleshooting](troubleshooting.html).
 
-> **Keep test quests apart.** Every quest made from the template starts on load and waits at the same door. Two installed together both play there, and their choices merge into one list. Before you test a new quest, move the old test quest's story file out of the project and delete the files it made.
+> **Keep test quests apart.** Every quest made from the template starts on load and waits at the same door. Two installed together both play there, and their choices merge into one list. Keep one test quest per project, or [remove the old one](#removing-a-quest) before you test a new one.
+
+## Sharing your quest
+
+A quest is shared like any REDcode mod: see [Sharing your mod](../redcode/pack-install.html#sharing-your-mod). Tell players what it needs:
+
+| Your quest | Players need |
+|---|---|
+| Always | ArchiveXL and RED4ext, and game 2.5 |
+| It plays sounds you made yourself | The mod is then a REDmod, and the game must be started with REDmods switched on. See [Your own sounds](music-sound.html#your-own-sounds) |
+
+Players don't need EDGEquest, REDcode or VS Code. A shared quest has not been tested on another player's PC yet.
+
+## Removing a quest
+
+**From the game:** in REDcode's Project view, open the **`...`** menu and choose **Uninstall**. See [Uninstall](../redcode/pack-install.html#uninstall). Your project is untouched.
+
+**From the project:** there is no command for this yet. Deleting only the story file is not enough, because the game files made from it stay in the project and are packed again. Delete all of these in VS Code's Explorer:
+
+| Delete | What it is |
+|---|---|
+| `<id>.quest.yaml` | The story file. To keep the quest for later, move it out of the project instead |
+| `source\archive\mod\<author>\<id>` | The folder of game files made from it |
+| `source\resources\<id>.archive.xl` | The file that tells ArchiveXL about the quest |
+| `.edgequest\<id>.made.json` | EDGEquest's list of the files it made |
+
+Then **Pack and Install** again, or **Uninstall** if the project is now empty.
+
+**In your saves:** a save from before the quest was installed is not affected. What a save does when a quest it had started is no longer installed has not been tested, so keep your test save, and don't test on a save you care about.

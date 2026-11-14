@@ -2,33 +2,67 @@
 title: EDGEquest for assistants
 nav_title: For assistants
 section: EDGEquest
-order: 7
-description: "EDGEquest's MCP server gives Claude Code and other AI assistants the same quest maker: read and find the game's quests, start a quest, change its story, make it and work through its checklist."
-reviewed: 2026-11-04
+order: 8
+description: "What an AI assistant such as Claude Code can do for a quest writer with EDGEquest's MCP server: read and find the game's quests, start a quest, change its story, make it and work through its checklist. How to connect it, and what each tool changes."
+reviewed: 2026-11-13
 ---
 
 # EDGEquest for <span class="y">assistants</span>
 
-EDGEquest has an **MCP server**, `@edgemodders/edgequest-mcp`. It gives AI assistants such as Claude Code the same quest maker you have in VS Code. You can ask, for example, for a side quest where V finds something odd at the apartment door. The assistant writes the story file, makes the quest and works through its checklist, and you can watch the Storyboard change as it goes.
+An AI assistant can use the same quest maker you have in VS Code. You describe the quest in a sentence or two; the assistant writes the story file, makes the quest's game files and works through its checklist. If the story file is open on the Storyboard, you can watch the cards change as it goes.
 
-> **Not on npm yet.** Version 0.1.0 was published on 4 November 2026 and is waiting for its release to be approved on npm. Until it is, the command below can't download it. [EDGEchat](../edgechat/), the EDGE plugin for Claude Code, plans to list it once it's there.
+The assistant reaches EDGEquest through an **MCP server**: a small program that lets an assistant use a tool. EDGEquest's is called `@edgemodders/edgequest-mcp`. It is free, and it is on npm, the store Node.js programs come from.
+
+| On this page | |
+|---|---|
+| [What an assistant can do](#what-an-assistant-can-do) | With examples of what to ask |
+| [Which assistant](#which-assistant) | Claude Code, and others |
+| [What you need](#what-you-need) | |
+| [Connect it](#connect-it) | One command |
+| [Try it](#try-it) | A first request |
+| [Its tools](#its-tools) | What each does, and what it changes |
+
+## What an assistant can do
+
+| You ask | The assistant |
+|---|---|
+| "How does the quest Pyramid Song start, and what choices does it have?" | Finds the quest in your game and reads it to you in plain words, step by step |
+| "Which quests use Judy's apartment?" | Searches the game's quests by person, place, fact or journal entry |
+| "Start a side quest where V finds something odd at the apartment door, with three ways it can end" | Writes the story file in your project, with beats, a scene and a choice, and makes the quest |
+| "Make the last option a Body check, and add a line before it" | Changes the story the way the Storyboard does |
+| "What's left to do on this quest?" | Reads the checklist, and can do the items that are text, such as the description and the voice prompts |
+| "Why doesn't this quest mod work?" | Runs the same checks as [Check Quest Mod](checking.html#check-quest-mod) and explains the findings |
+
+What it can't do: play the quest for you, or get it into the game. Packing and installing stay with you, in REDcode. And the limits of this preview apply to an assistant too: V alone in scenes, subtitles only, a quest that starts on load, and one tested place.
+
+## Which assistant
+
+| Assistant | How it gets EDGEquest |
+|---|---|
+| [Claude Code](../connect-claude-code.html), Anthropic's assistant for the terminal and VS Code. It needs a paid Claude plan | Add the server yourself, with the command [below](#connect-it) |
+| [EDGEchat](../edgechat/), the EDGE plugin for Claude Code | EDGEchat doesn't include EDGEquest's server yet. Add it yourself, the same way; it works beside the plugin |
+| Other assistants that speak MCP | The same command |
+
+The server has been run through a scripted test of an assistant's whole flow: start a quest, edit it, prepare its voice lines and make it. A session with a real assistant is not on record yet, so treat it as new, and please tell us how it goes on [Discord]({{ site.discord }}).
 
 ## What you need
 
 - Windows, with Cyberpunk 2077 2.5.
-- [REDbridge](../redbridge/) 0.11.0 or later. REDcode's **Install REDbridge** fetches it.
-- The .NET 10 runtime, and Node.js 20 or newer.
-- ArchiveXL in the game, to play the quests it makes.
+- [REDbridge](../redbridge/) 0.11.0 or later, the program that reads the game's files. REDcode's **Install REDbridge** command fetches it.
+- The .NET 10 runtime, which REDbridge runs on, and [Node.js](https://nodejs.org/) 20 or newer, which the server runs on.
+- ArchiveXL and RED4ext in the game, to play the quests it makes. See [What you need](install.html#what-you-need).
 
-## Set it up
+You don't need the EDGEquest extension for the server to work. With it, you see the assistant's work on the Storyboard.
 
-With Claude Code:
+## Connect it
+
+With Claude Code, run this once in a terminal:
 
 ```
 claude mcp add edgequest -- npx -y @edgemodders/edgequest-mcp
 ```
 
-Other MCP clients use the same command: `npx -y @edgemodders/edgequest-mcp`.
+Then start a new Claude Code session. Other MCP clients take the same command: `npx -y @edgemodders/edgequest-mcp`.
 
 On a PC where REDcode or EDGEquest is set up, the server needs nothing else: it finds the game folder, REDbridge and .NET from their settings. Otherwise, give them on the command line or in the environment:
 
@@ -39,25 +73,39 @@ On a PC where REDcode or EDGEquest is set up, the server needs nothing else: it 
 | A per-user .NET runtime | `--dotnet-root <path>` | `DOTNET_ROOT` |
 | The quest index's folder | `--cache <path>` | `EDGEQUEST_CACHE` |
 
+## Try it
+
+1. In REDcode, make a new project, as in [Your first quest](first-quest.html#1-make-a-project).
+2. In Claude Code, ask:
+
+   > Use the edgequest tools. In my project at `<the project's folder>`, start a side quest called "Something at the Door". V goes home, notices something odd about the door, and can look closer, go inside or walk away. Make it, and tell me what is left on its checklist.
+
+3. Claude Code asks before it uses each tool for the first time. Allow them.
+
+**You should see** the assistant build the quest index if your game has none yet (about a minute and a half), then a new file `something_at_the_door.quest.yaml` at the top of your project, and a summary of the quest's beats, any problems, and its checklist. Open the story file to see it on the Storyboard.
+
+Then [pack, install and play it](writing.html#play-it) yourself.
+
 ## Its tools
 
-| Tool | What it does |
-|---|---|
-| `quest_index` | Builds the quest index from your game (about a minute and a half, once), and says when the game has changed |
-| `quest_find` | Finds quests and phases by title, file name, fact, journal entry, scene, person or place |
-| `quest_describe` | A quest, phase or story file in plain words, step by step |
-| `quest_scene` | A scene in plain words: who is in it, the lines, the choices and where they lead |
-| `quest_check` | Checks a quest mod's files, as [Check Quest Mod](checking.html#check-quest-mod) does |
-| `quest_new` | Starts a quest in a WolvenKit project, from the template or from a story the assistant wrote |
-| `quest_edit` | Changes a story file in story words: beats, where a choice goes, an option's kind, steps, lines, sounds and music |
-| `quest_make` | Makes the quest's game files from its story file, and checks them |
-| `quest_checklist` | What's left to do in a quest or a project |
-| `quest_voice` | A story's lines with their voice prompts and whether each has a take, ready for EDGEwave |
+| Tool | What it does | What it changes |
+|---|---|---|
+| `quest_index` | Builds the quest index from your game (about a minute and a half, once), and says when the game has changed | Its own index file only |
+| `quest_find` | Finds quests and phases by title, file name, fact, journal entry, scene, person or place | Nothing |
+| `quest_describe` | A quest, phase or story file in plain words, step by step | Nothing |
+| `quest_scene` | A scene in plain words: who is in it, the lines, the choices and where they lead | Nothing |
+| `quest_check` | Checks a quest mod's files, as [Check Quest Mod](checking.html#check-quest-mod) does | Nothing |
+| `quest_checklist` | What's left to do in a quest or a project | Nothing |
+| `quest_new` | Starts a quest in a project, from the template or from a story the assistant wrote | Writes a new story file in the project |
+| `quest_edit` | Changes a story file in story words: beats, where a choice goes, an option's kind, steps, lines, sounds and music | The story file |
+| `quest_make` | Makes the quest's game files from its story file, and checks them | The quest's game files in the project, and the story file's checklist |
+| `quest_voice` | A story's lines with their voice prompts and whether each has a take, ready for EDGEwave | Nothing, unless asked to prepare the lines: then it writes an id into each line of the story file |
 
-Each writing tool answers with the quest's beats, its problems and what's left on its checklist. A bad edit is refused, and nothing is written.
+Good to know:
 
-The flow of an assistant starting a quest, editing it, preparing its voices and making it worked as written in EDGEquest's test on 24 October 2026.
-
-When the quest is made, pack and install it with REDcode or [EDGEdeck](../edgedeck/), as in [Play it](writing.html#play-it).
+- **Everything is written into your project.** No tool writes to the game folder. Nothing reaches the game until you pack and install.
+- **The server doesn't ask before it writes.** Your assistant does: Claude Code asks permission for each tool unless you told it not to.
+- **A bad edit is refused, and nothing is written.** Each writing tool answers with the quest's beats, its problems and what's left on its checklist, so the assistant sees at once whether its change worked.
+- **A game file you changed by hand is kept,** as in the extension.
 
 For connecting Claude Code to the other EDGE tools, see [Connect Claude Code](../connect-claude-code.html).

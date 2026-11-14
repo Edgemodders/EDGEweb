@@ -3,36 +3,57 @@ title: Install and set up EDGEquest
 nav_title: Install and set up
 section: EDGEquest
 order: 1
-description: "What EDGEquest needs (VS Code, REDcode, ArchiveXL, game 2.5), how to install it from a store or Nexus Mods, and the quest index it builds the first time."
-reviewed: 2026-11-04
+description: "What EDGEquest needs (VS Code, REDcode, game 2.5, and ArchiveXL to play your quests), how to install it from a store or Nexus Mods, the quest index it builds the first time, and a check that it works."
+reviewed: 2026-11-13
 ---
 
 # Install and set up <span class="y">EDGEquest</span>
+
+EDGEquest is an extension: an add-on for the editor VS Code. Installing it takes a few minutes, plus about a minute and a half while it reads your game's quests for the first time.
+
+| On this page | |
+|---|---|
+| [What you need](#what-you-need) | To read quests, and to play your own |
+| [Install it](#install-it) | Three steps |
+| [The quest index](#the-quest-index) | What EDGEquest builds the first time |
+| [Try it](#try-it) | A check that everything works |
+| [If it can't find the game](#if-it-cant-find-the-game) | |
+| [Updating and uninstalling](#updating-and-uninstalling) | |
 
 ## What you need
 
 | You need | Why |
 |---|---|
 | Windows 10 or 11, 64-bit, and Cyberpunk 2077 **2.5** (Steam, GOG or Epic) | The game EDGEquest reads and writes for. Game 2.31 isn't supported |
-| [VS Code](https://code.visualstudio.com/) 1.70 or later, or VSCodium, or the [EDGEkit](../edgekit/) app | EDGEquest is an extension for it. EDGEkit 1.140.5 and later come with EDGEquest built in |
-| [REDcode](../redcode/install.html) | Finds the game, installs [REDbridge](../redbridge/) (0.11.0 or later) and the .NET 10 runtime, makes the WolvenKit project, and packs and installs your quest |
-| [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198) in the game | Adds your quest's phase, journal and texts to the game. Only needed to play quests you make |
+| [VS Code](https://code.visualstudio.com/) 1.70 or later, or VSCodium, or the [EDGEkit](../edgekit/) app | EDGEquest runs inside it. EDGEkit 1.140.5 and later come with EDGEquest built in, so there is nothing to install: skip to [The quest index](#the-quest-index) |
+| [REDcode](../redcode/install.html), set up and ready | EDGE's editor for game files. EDGEquest uses its game folder, its project and its **Pack and Install** button. REDcode also downloads [REDbridge](../redbridge/) (0.11.0 or later), the program that reads the game's files, and offers to install the .NET 10 runtime REDbridge runs on |
+
+To **play** a quest you made, the game also needs two free framework mods. You don't need them to read the game's quests.
+
+| In the game | Why |
+|---|---|
+| **ArchiveXL** | Adds your quest, its journal entry and its texts to the game when the game starts. Without it your quest never appears |
+| **RED4ext** | ArchiveXL needs it to load |
+
+The easy way to get both is [EDGEdeck](../edgedeck/)'s **Get the frameworks**: see [Getting the frameworks](../edgedeck/frameworks.html#getting-the-frameworks). Or install them by hand from their pages: [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198) and [RED4ext](https://www.nexusmods.com/cyberpunk2077/mods/2380).
 
 Optional:
 
 | Add | For |
 |---|---|
-| [EDGEwave](../edgewave/) | Searching, hearing and making sounds for your quest. See [Music and sound](music-sound.html) for which version |
-| [REDnode](../rednode/) 0.43 or later | Hearing a music cue in the running game from the picker |
+| [EDGEwave](../edgewave/) 0.2.0 or later | Searching and hearing sounds from the Storyboard, making a sound of your own, and voice takes. See [Music and sound](music-sound.html) |
+| [REDnode](../rednode/) 0.43 or later | Hearing a music cue in the running game before you pick it |
 | [EDGEdeck](../edgedeck/) | Installing your packed quest like any other mod, with undo |
 
 ## Install it
 
-1. **Install REDcode first**, and let it find the game and download REDbridge. See [Install and set up REDcode](../redcode/install.html).
+1. **Install REDcode first**, and let it find the game and download REDbridge. See [Install and set up REDcode](../redcode/install.html). Carry on here when REDcode's sidebar shows the game's files.
 2. **Install EDGEquest.** In VS Code, open the Extensions view (`Ctrl+Shift+X`), search for **EDGEquest**, and click **Install**. It updates itself from then on.
+3. **Click the EDGEquest icon** in the activity bar, the strip of icons down the left edge of VS Code.
 
-   No store? Download the main file from [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35750) with **Manual download** and extract it. In the Extensions view, click **...** at the top, choose **Install from VSIX...** and pick `edgequest-<version>.vsix`.
-3. **Click the EDGEquest icon** in the activity bar. It shows two views: **Project Quests** (your own) and **Game Quests** (the game's).
+**You should see** two views in the sidebar: **Project Quests** (your own quests) and **Game Quests** (the game's). Game Quests says "Reading the game's quests..." for a moment, then fills with folders.
+
+**Can't use the Marketplace** (for example in an editor that has no store)? Download the main file from [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35750) with **Manual download** and extract it. In the Extensions view, click **...** at the top, choose **Install from VSIX...** and pick `edgequest-<version>.vsix`.
 
 > **Not a game mod.** EDGEquest is an extension for VS Code. Don't install it with Vortex or EDGEdeck: they would put it in the game folder, where it does nothing.
 
@@ -40,29 +61,39 @@ Optional:
 
 ## The quest index
 
-The first time you open EDGEquest, it reads every quest in your game and builds a **quest index**: titles, facts, journal entries, scenes, people, places and trigger areas. It takes about a minute and a half and runs in the background; the status bar shows it. The index is what makes **Find Quest** fast, and what lets a new quest use the game's map markers.
+The first time you open EDGEquest, it reads every quest in your game and builds a **quest index**: a list of the quests' titles, facts, journal entries, scenes, people, places and trigger areas. It takes about a minute and a half and runs in the background. The status bar at the bottom of the window shows its progress.
 
-EDGEquest builds it again by itself when the game updates. To build it again by hand, use **Rebuild Quest Index** in the Game Quests view's `...` menu.
+The index is what makes **Find Quest** fast. It is also where a new quest gets its map marker from, so wait for it to finish before you make your first quest.
 
-## How it finds the game and REDbridge
+EDGEquest builds the index again by itself when the game updates. To build it again by hand, use **Rebuild Quest Index** in the Game Quests view's **`...`** menu.
 
-EDGEquest uses REDcode's game folder and REDcode's REDbridge. When REDcode isn't running, it looks for them itself:
+## Try it
 
-| What | Where EDGEquest looks |
+1. Wait until the status bar no longer shows the quest index being built.
+2. Click the search icon at the top of **Game Quests**.
+3. Type `pyramid song`. That is Judy's side job.
+4. Pick a result whose name starts with `sq030`.
+
+**You should see** a page open with the quest's name at the top and a list of numbered steps in plain words. If it does, EDGEquest is set up. [Reading the game's quests](reading.html) shows what the page can do.
+
+| If | Do this |
 |---|---|
-| The game folder | The setting `edgequest.gamePath`, then REDcode's, then EDGEdeck's, then a search of your PC |
-| REDbridge | The setting `edgequest.bridgePath`, then REDcode's `redcode.bridgePath`, then REDbridge on your PATH |
-| .NET 10 | The setting `edgequest.dotnetRoot`, then REDcode's `redcode.dotnetRoot` |
+| The list of results stays empty | The index isn't ready. Wait for the status bar, then try again |
+| Game Quests shows a message instead of folders | See [Game Quests stays empty](troubleshooting.html#game-quests-stays-empty-or-says-something-is-missing) |
 
-You only need to set these if EDGEquest can't find something; the Game Quests view says what's missing, with a button to fix it. See [Settings and commands](settings.html).
+## If it can't find the game
+
+EDGEquest uses REDcode's game folder and REDcode's REDbridge, so normally there is nothing to set. If REDcode isn't installed or isn't running, EDGEquest looks for the game in your Steam, GOG and Epic libraries by itself.
+
+When it can't find something, the Game Quests view says what is missing and shows a button that fixes it, such as **Set Game Folder**. The settings behind this are listed in [Settings and commands](settings.html#settings).
 
 ## Updating and uninstalling
 
-EDGEquest from a store updates itself. A copy installed from a `.vsix` doesn't: download the new file and install it the same way.
+EDGEquest from a store updates itself. A copy installed from a `.vsix` file doesn't: download the new file and install it the same way.
 
-To uninstall, click the gear on EDGEquest in the Extensions view and choose **Uninstall**. Your story files and the quest files it made stay in your WolvenKit projects.
+To uninstall, click the gear on EDGEquest in the Extensions view and choose **Uninstall**. Your story files and the quest files made from them stay in your projects.
 
 ## Next steps
 
+- Make and play a quest: [Your first quest](first-quest.html).
 - Look inside a quest you know: [Reading the game's quests](reading.html).
-- Make your first quest: [Writing a quest](writing.html).
