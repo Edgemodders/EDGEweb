@@ -70,7 +70,7 @@ This connects EDGEmat for every Claude Code session on your PC, whichever folder
 
 The server finds your game and REDbridge the same way the extension does, so on a PC with REDcode set up it needs nothing more. It shares the extension's Game Materials list and Desk. If that list has never been built, ask the assistant: "Build the EDGEmat library." It can take a minute or two.
 
-{% include shot.html caption="Connect an Assistant" shows="The Connect an Assistant (MCP) list in VS Code: Connect Claude Code, Copy the Claude Code command, Copy a JSON entry, Reveal the server file, and the hint at the top." %}
+{% include shot.html caption="Connect an Assistant" src="/assets/shots/edgemat/assistants-connect.png" alt="The Connect an Assistant (MCP) list: Connect Claude Code, Copy the Claude Code command, Copy a JSON entry and Reveal the server file, under the hint Agents inside this editor already see EDGEmat's tools." shows="The Connect an Assistant (MCP) list in VS Code: Connect Claude Code, Copy the Claude Code command, Copy a JSON entry, Reveal the server file, and the hint at the top." %}
 
 ## A key for new materials
 

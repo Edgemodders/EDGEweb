@@ -25,7 +25,7 @@ Each mesh or setup on the Desk is one **line**. A mesh line unfolds into its **l
 | [Add to a project](#add-to-a-project) | One line or all of them, and both body types |
 | [Take things off](#take-things-off), [Where it lives](#where-it-lives) | |
 
-{% include shot.html caption="The Desk" shows="EDGEmat's Desk with two lines for the same jeans mesh, the second named 'blue', both reading 'edited on the Desk', the first unfolded to its looks (leather 'worn by 2 items', default 'no item') and leather's layered material." %}
+{% include shot.html caption="The Desk" src="/assets/shots/edgemat/desk.png" alt="The Desk with a line for the jeans mesh l1_012_pwa_pants__jeans_tight reading edited on the Desk, opened to its looks: leather, worn by 2 items, is open and its layered material also reads edited on the Desk; default reads no item. A second line for the same mesh sits below the list." shows="EDGEmat's Desk with two lines for the same jeans mesh, the second named 'blue', both reading 'edited on the Desk', the first unfolded to its looks (leather 'worn by 2 items', default 'no item') and leather's layered material." %}
 
 ## Desk, or straight from Find?
 

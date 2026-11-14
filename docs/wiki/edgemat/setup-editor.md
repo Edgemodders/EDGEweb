@@ -32,7 +32,7 @@ Each layer has:
 | [The mask set](#the-mask-set) | When the map looks scrambled |
 | [Raw values](#raw-values) | The game's own names and numbers |
 
-{% include shot.html caption="The setup editor" shows="The setup editor on the Sunny Ammo sneakers (ml_s1_055_pma_shoe__red_yellow_graphic): the header with '19 of 20 layers show', the color map on the left, and the layer list on the right with layer 7, the sole, selected and its details open." %}
+{% include shot.html caption="The setup editor" src="/assets/shots/edgemat/setup-editor.png" alt="The setup editor on the Sunny Ammo sneakers: the header with 19 of 20 layers show, the colour map on the left, and the layer list on the right with layer 7, Rubber Bumper Damaged, selected and its details open." shows="The setup editor on the Sunny Ammo sneakers (ml_s1_055_pma_shoe__red_yellow_graphic): the header with '19 of 20 layers show', the color map on the left, and the layer list on the right with layer 7, the sole, selected and its details open." %}
 
 ## Opening a setup
 
@@ -116,7 +116,7 @@ Click a layer, then use the controls in its rows. Each change shows at once in t
 
 **Undo and redo.** Undo with `Ctrl+Z`, redo with `Ctrl+Y`. If nothing happens, click an empty part of the page first: while the cursor is in a box, the keys undo typing in that box.
 
-{% include shot.html caption="Editing a layer" shows="The setup editor on the Rocker's Heart bomber with its biggest layer selected: the color swatches filtered by 'blue', a blue swatch outlined, the layer blue on the map, and the unsaved dot on the tab." %}
+{% include shot.html caption="Editing a layer" src="/assets/shots/edgemat/setup-editor-edit-layer.png" alt="The setup editor on the Rocker's Heart bomber with layer 0, Silk Clean, selected: blue typed in the colour filter, a blue swatch outlined, the layer blue on the map, the line Edited, not saved yet, and a dot on the tab." shows="The setup editor on the Rocker's Heart bomber with its biggest layer selected: the color swatches filtered by 'blue', a blue swatch outlined, the layer blue on the map, and the unsaved dot on the tab." %}
 
 ### Try it: one layer, blue
 
@@ -157,7 +157,7 @@ The three choices in full:
 | **In place of the game's setup** | The setup at the game's own path. No mesh is copied | Changes every item that uses that setup. Needs the Material Texture Override mod (on Nexus Mods) installed in the game: without it the game ignores a replaced `.mlsetup` |
 | **At a game path you choose...** | The setup only, at your path | For experienced modders. Nothing uses it until you edit a mesh's material to name that path |
 
-{% include shot.html caption="Save to Project" shows="The Save to Project list for the project my_materials: As a new setup (recommended), In place of the game's setup, At a game path you choose." %}
+{% include shot.html caption="Save to Project" src="/assets/shots/edgemat/setup-editor-save-to-project.png" alt="The Save to Project list for the project my_materials: As a new setup (recommended), In place of the game's setup, and At a game path you choose." shows="The Save to Project list for the project my_materials: As a new setup (recommended), In place of the game's setup, At a game path you choose." %}
 
 ### What Ctrl+S does
 

@@ -61,7 +61,7 @@ Leave the project open. EDGEmat saves into the project REDcode has open.
 | After step 4 | The meshes `t2_084_pwa__short_sleeves.mesh` (feminine) and `t2_084_pma__short_sleeves.mesh` (masculine) |
 | After step 5 | The **setup editor** opens in a tab: a color map on the left and the list of layers on the right. Under the title it says "Select a layer to change it." |
 
-{% include shot.html caption="The bomber in Find" shows="The Find view after searching rocker's heart: the Rocker's Heart crystaljock bomber unfolded into Feminine body and Masculine body, each with its t2_084 mesh and the material black_red_glossy, and the setup editor open beside it." %}
+{% include shot.html caption="The bomber in Find" src="/assets/shots/edgemat/tutorial-recolor-find.png" alt="The Find view after a search for rocker's heart: the Rocker's Heart crystaljock bomber opened into Feminine body and Masculine body, each with its t2_084 mesh and the material black_red_glossy, and the setup editor open beside it." shows="The Find view after searching rocker's heart: the Rocker's Heart crystaljock bomber unfolded into Feminine body and Masculine body, each with its t2_084 mesh and the material black_red_glossy, and the setup editor open beside it." %}
 
 Now find out what the game calls this jacket. Near the top of the setup editor, click the ▸ beside **In the game**. The first time, EDGEmat reads every clothing item, which takes about ten seconds. It then lists the items that wear this look, each with a command and a **Copy** button. For this jacket the command is:
 
@@ -94,7 +94,7 @@ Click that layer.
 
 Changed your mind? Click an empty part of the page, then press `Ctrl+Z` to undo and `Ctrl+Y` to redo. Keep it blue for now: it is what you look for in the game.
 
-{% include shot.html caption="Editing a layer" shows="The setup editor on the Rocker's Heart bomber with its biggest layer selected: the color swatches filtered by 'blue', a blue swatch outlined, the layer blue on the map, and the unsaved dot on the tab." %}
+{% include shot.html caption="Editing a layer" src="/assets/shots/edgemat/setup-editor-edit-layer.png" alt="The setup editor on the Rocker's Heart bomber with layer 0, Silk Clean, selected: blue typed in the colour filter, a blue swatch outlined, the layer blue on the map, the line Edited, not saved yet, and a dot on the tab." shows="The setup editor on the Rocker's Heart bomber with its biggest layer selected: the color swatches filtered by 'blue', a blue swatch outlined, the layer blue on the map, and the unsaved dot on the tab." %}
 
 Only the colors this surface offers are in the grid. That is how the game works: see [Colors come from a list](index.html#colors-come-from-a-list).
 

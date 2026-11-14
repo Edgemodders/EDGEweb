@@ -15,7 +15,7 @@ A **mod project** is a folder that holds your changes until they are packed into
 
 **New here?** Read this page, then [Install and set up](install.html), then follow [Tutorial: recolor a jacket](tutorial-recolor.html). It takes about 20 minutes, with no coding and no paid key. If you would rather ask Claude to do it, [Recolor a jacket with EDGEchat](../edgechat/recolor.html) does the same job by chat.
 
-{% include shot.html caption="EDGEmat in VS Code" shows="VS Code with EDGEmat's icon selected in the activity bar: the Desk, Game Materials and Find views in the sidebar, and the setup editor open on the Sunny Ammo sneakers, showing the color map and the layer list." %}
+{% include shot.html caption="EDGEmat in VS Code" src="/assets/shots/edgemat/index-overview.png" alt="EDGEkit with EDGEmat selected in the activity bar: the Desk, Game Materials and Find views in the side bar, Find showing the Sunny Ammo synthetic high-tops, and the setup editor open on their material with the colour map and the layer list." shows="VS Code with EDGEmat's icon selected in the activity bar: the Desk, Game Materials and Find views in the sidebar, and the setup editor open on the Sunny Ammo sneakers, showing the color map and the layer list." %}
 
 | On this page | |
 |---|---|

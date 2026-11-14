@@ -22,7 +22,7 @@ Find is the third view in EDGEmat's sidebar, below the [Desk](desk.html) and [Ga
 | [Buttons on the rows](#buttons-on-the-rows) | |
 | [Limits](#limits) | What Find doesn't follow yet |
 
-{% include shot.html caption="The Find view" shows="The Find view after searching 'sunny ammo': the Items group with 'Sunny Ammo synthetic high-tops' expanded into Feminine body and Masculine body, one of them open down to its mesh and its two materials, red_yellow_graphic and dec_lights." %}
+{% include shot.html caption="The Find view" src="/assets/shots/edgemat/find-view.png" alt="The Find view after a search for sunny ammo: three items, the first opened into Feminine body and Masculine body, each with its mesh and two materials, red_yellow_graphic and dec_lights." shows="The Find view after searching 'sunny ammo': the Items group with 'Sunny Ammo synthetic high-tops' expanded into Feminine body and Masculine body, one of them open down to its mesh and its two materials, red_yellow_graphic and dec_lights." %}
 
 ## Search
 

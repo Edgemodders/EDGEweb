@@ -74,7 +74,7 @@ An EDGEmat icon appears in the activity bar, the strip of icons down the far lef
 | **Game Materials** | Every surface and detail pattern in your game. See [Game Materials](game-materials.html) |
 | **Find** | Garments by their in-game name. Often folded at the bottom of the sidebar: click its **FIND** header to open it. See [Find](find.html) |
 
-{% include shot.html caption="EDGEmat's sidebar on first start" shows="The activity bar with the EDGEmat icon highlighted, the empty Desk, the Game Materials view building its list with a progress bar, and the collapsed FIND header below it." %}
+{% include shot.html caption="EDGEmat's sidebar on first start" src="/assets/shots/edgemat/install-first-start.png" alt="EDGEmat's side bar on a first start: an empty Desk with its help text, Game Materials reading 386 surfaces, 131 microblends, and the Find view with its Find button. Here the materials list is already built." shows="The activity bar with the EDGEmat icon highlighted, the empty Desk, the Game Materials view building its list with a progress bar, and the collapsed FIND header below it." %}
 
 ### Game Materials builds itself
 

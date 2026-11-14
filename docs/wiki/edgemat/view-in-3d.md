@@ -20,7 +20,7 @@ EDGEmat doesn't have a viewer of its own: REDcode shows the mesh (the garment's 
 | [Live while you edit](#live-while-you-edit) | And where the preview reaches |
 | [Good to know](#good-to-know) | |
 
-{% include shot.html caption="The Sunny Ammo sneakers in 3D" shows="REDcode's 3D view of s1_055_pwa_shoe__converse.mesh with the look red_yellow_graphic picked: black sole, red trim and the orange-brown upper, and the 'EDGEmat: approximate' note in the viewer's toolbar." %}
+{% include shot.html caption="The Sunny Ammo sneakers in 3D" src="/assets/shots/edgemat/view-in-3d-sneakers.png" alt="REDcode's 3D view of s1_055_pwa_shoe__converse.mesh with the look red_yellow_graphic picked: black soles, red trim and a yellow upper, and the note EDGEmat: approximate in the toolbar line." shows="REDcode's 3D view of s1_055_pwa_shoe__converse.mesh with the look red_yellow_graphic picked: black sole, red trim and the orange-brown upper, and the 'EDGEmat: approximate' note in the viewer's toolbar." %}
 
 ## How to use it
 
@@ -47,7 +47,7 @@ Without REDcode installed, the eye says so and offers to show REDcode's extensio
 
 The viewer marks EDGEmat's colors **approximate**, because this first version gives **colors only**: no shine, no bumps, no metal, no detail patterns, and no lighting the way the game does it. The full preview with all of that is planned. Dark colors can also look darker here than in the game: see [Surface pages](surfaces.html#colors-on-screen-and-in-the-game).
 
-{% include shot.html caption="The Arasaka jacket in 3D" shows="REDcode's 3D view of t2_078_ma_jacket__samurai.mesh on its default look: a near-black jacket with the Arasaka decals and stitches showing as textures." %}
+{% include shot.html caption="The Arasaka jacket in 3D" src="/assets/shots/edgemat/view-in-3d-jacket.png" alt="REDcode's 3D view of t2_078_ma_jacket__samurai.mesh on its default look: a dark grey patterned jacket with pale trim, five submeshes listed on the right." shows="REDcode's 3D view of t2_078_ma_jacket__samurai.mesh on its default look: a near-black jacket with the Arasaka decals and stitches showing as textures." %}
 
 ## Live while you edit
 

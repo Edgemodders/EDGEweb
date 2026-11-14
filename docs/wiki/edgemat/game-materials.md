@@ -27,7 +27,7 @@ The line at the top of the view counts them and says when the list was built, fo
 | [The title bar](#the-title-bar) | Every button |
 | [Where the list lives](#where-the-list-lives) | And what deleting it does |
 
-{% include shot.html caption="Game Materials" shows="The Game Materials view with the fabric category open, showing leather and denim surfaces with their thumbnails, and the hover card of one surface with its larger thumbnail, color count and game path." %}
+{% include shot.html caption="Game Materials" src="/assets/shots/edgemat/game-materials.png" alt="The Game Materials view with the fabric group open, each surface with a thumbnail and its colour count, and the hover card of leather bull 01 30 with a larger thumbnail, 750 colors and its game path." shows="The Game Materials view with the fabric category open, showing leather and denim surfaces with their thumbnails, and the hover card of one surface with its larger thumbnail, color count and game path." %}
 
 ## Looking around
 

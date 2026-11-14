@@ -42,7 +42,7 @@ New to EDGEmat? Do [Tutorial: recolor a jacket](tutorial-recolor.html) first. It
 
 **You should see** the **New Material** page open. **Where it goes** names leather on two meshes, `l1_012_pwa_...` and `l1_012_pma_...`: one per body type, so the pants change whichever body you play.
 
-{% include shot.html caption="Find, with New Material Here on the leather material" shows="The Find view open on the Comfy rocker slim-fits: the item with Items.Pants_01_basic_01 beside it, a body, the l1_012 mesh, and the leather material with the sparkle icon highlighted." %}
+{% include shot.html caption="Find, with New Material Here on the leather material" src="/assets/shots/edgemat/tutorial-worn-leather-find.png" alt="The Find view on the Comfy rocker aramid-weave slim-fits: the item with Items.Pants_01_basic_01, both bodies, each l1_012 mesh, and the leather material with the New Material Here button, a sparkle, highlighted on its row." shows="The Find view open on the Comfy rocker slim-fits: the item with Items.Pants_01_basic_01 beside it, a body, the l1_012 mesh, and the leather material with the sparkle icon highlighted." %}
 
 ## 2. Generate the leather
 

@@ -19,7 +19,7 @@ A **surface** is one kind of stuff a layer can be made of, such as a leather, a 
 | [Keeping a page open](#keeping-a-page-open) | One tab, or several |
 | [Raw values](#raw-values), [Microblend pages](#microblend-pages) | |
 
-{% include shot.html caption="A surface page" shows="The surface page of fabric › leather bull 01 30: the large tinted image at the top left, the selected color's panel under it, and the grid of color swatches with the Filter and Closest to boxes on the right." %}
+{% include shot.html caption="A surface page" src="/assets/shots/edgemat/surfaces-surface-page.png" alt="The surface page of Leather Bull 01 30: the large image at the top left, the selected colour, Grey, with its preset and RGB under it, and the grid of 750 colour swatches with the Filter and Closest to boxes on the right." shows="The surface page of fabric › leather bull 01 30: the large tinted image at the top left, the selected color's panel under it, and the grid of color swatches with the Filter and Closest to boxes on the right." %}
 
 ## What's on the page
 
@@ -69,7 +69,7 @@ For people who also use WolvenKit, or who are asking for help on Discord. Tick *
 
 A **microblend** is a small detail pattern, such as wear, dirt, scratches or a print, that a layer can carry on top of its surface. Click one in Game Materials for its page: its mask image (white is where the detail shows), its name and game path, and a line on what a microblend does.
 
-{% include shot.html caption="A microblend page" shows="The page of a microblend such as edgewear 01: its mask image, name, game path and the short explanation of microblends." %}
+{% include shot.html caption="A microblend page" src="/assets/shots/edgemat/surfaces-microblend-page.png" alt="The page of the microblend edgewear 01: its black and white mask image, its name and game path, and a short explanation of microblends." shows="The page of a microblend such as edgewear 01: its mask image, name, game path and the short explanation of microblends." %}
 
 ## Ask an assistant instead
 

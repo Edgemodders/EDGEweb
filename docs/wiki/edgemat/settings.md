@@ -23,7 +23,7 @@ A reference page. Most people never change a setting: with REDcode set up, EDGEm
 
 Open VS Code's settings (`Ctrl+,`) and search for `edgemat`.
 
-{% include shot.html caption="EDGEmat in VS Code's settings" shows="VS Code's Settings editor filtered to edgemat, showing its three settings, all empty." %}
+{% include shot.html caption="EDGEmat in VS Code's settings" src="/assets/shots/edgemat/settings-editor.png" alt="The Settings editor filtered to edgemat: Bridge Path, Dotnet Root and Game Path, all empty." shows="VS Code's Settings editor filtered to edgemat, showing its three settings, all empty." %}
 
 | Setting | Default | What it does | Change it when |
 |---|---|---|---|
