@@ -63,7 +63,7 @@ REDbridge needs Microsoft's free .NET 10 runtime. EDGEdeck and REDnode install i
 
 ## Status
 
-**Released.** The latest is REDbridge 0.12.1 (2026-11-08), for game 2.5, built with WolvenKit 10.0.0-beta.1. It is on [GitHub](https://github.com/Edgemodders/REDbridge/releases), and the tools fetch it from there.
+**Released.** The latest is REDbridge 0.14.0 (2026-11-16), for game 2.5, built with WolvenKit 10.0.0-beta.1. 0.13.0 exports a character or vehicle in one look on its skeleton, and animations with their movement; 0.14.0 reads the game's animations without unpacking them and exports only the clips a tool asks for, for EDGEdir's animation index. It is on [GitHub](https://github.com/Edgemodders/REDbridge/releases), and the tools fetch it from there.
 
 | | |
 |---|---|
@@ -84,7 +84,7 @@ REDbridge answers requests in JSON from the program that starts it. If you are m
 | You want | Read |
 |---|---|
 | Every method, by group, and how a program talks to REDbridge | The [README](https://github.com/Edgemodders/REDbridge#readme) |
-| Each method's parameters, with examples: reading the world's sectors (`sector.find`, `sector.nodes`), sizes and looks (`mesh.info`), and baking with solid objects (`sector.build`) | The [changelog](https://github.com/Edgemodders/REDbridge/blob/main/CHANGELOG.md) |
+| Each method's parameters, with examples: reading the world's sectors (`sector.find`, `sector.nodes`), sizes and looks (`mesh.info`), baking with solid objects (`sector.build`), and animations (`anims.info`, `project.export` with `animations`) | The [changelog](https://github.com/Edgemodders/REDbridge/blob/main/CHANGELOG.md) |
 | Using REDbridge from a REDnode mod | REDnode's [overlay apps guide](https://edgemodders.github.io/REDnode/overlay-apps.html#the-games-files-through-redbridge) |
 | Using it from an AI assistant | [REDcode's MCP server](https://edgemodders.github.io/REDcode/mcp.html) |
 | Building REDbridge from source | The [REDbridge docs](https://edgemodders.github.io/REDbridge/) |
