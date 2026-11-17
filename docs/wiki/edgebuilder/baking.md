@@ -3,8 +3,8 @@ title: Baking a scene into the world
 nav_title: Baking
 section: EDGEbuilder
 order: 8
-description: "Bake an EDGEbuilder scene into a mod: what baking is, what you need, the steps from scene to world, solid objects, draw distance (Seen from), changing and removing a bake, sharing it, and bakes kept in the EDGE Library."
-reviewed: 2026-11-13
+description: "Bake an EDGEbuilder scene into a mod: what baking is, what you need, the steps from scene to world, solid objects, people in a baked scene, draw distance (Seen from), changing and removing a bake, sharing it, and bakes kept in the EDGE Library."
+reviewed: 2026-11-17
 ---
 
 # Baking a scene <span class="y">into the world</span>
@@ -18,6 +18,7 @@ How it works, in one line: the **Bake** tab writes your scene into a [REDcode](.
 | [What you need to bake](#what-you-need-to-bake) | |
 | [From scene to world](#from-scene-to-world) | The four steps, and the checks |
 | [What a bake keeps, and what is solid](#what-a-bake-keeps-and-what-is-solid) | |
+| [People in a baked scene](#people-in-a-baked-scene) | Spawning them from a script |
 | [The Solid switch](#the-solid-switch) | Whether a mesh stops V |
 | [Seen from](#seen-from) | How far away an object is drawn |
 | [After a bake](#after-a-bake) | Changing, removing and renaming |
@@ -90,6 +91,33 @@ REDcode's setting `redcode.pack.redmod` is off by default, and most people can s
 | **A person (NPC)** | Left out. The Bake tab says which |
 
 You can bake several scenes into one project. They can be far apart, indoors or in Dogtown.
+
+## People in a baked scene
+
+A bake never holds people. In your finished mod, someone has to spawn them, and that is a script: an [EDGEquest](../edgequest/) quest or any [REDnode](../rednode/) package. REDnode reads EDGEbuilder's scene files itself, so the people stand where you placed them, facing the way you turned them, in the look you picked. EDGEbuilder isn't needed for that, but REDnode is, for everyone who plays the mod.
+
+How to lay out your scenes:
+
+| Your people | Scenes | Why |
+|---|---|---|
+| Belong with the place, there whenever it is (a bar and its staff) | **One scene** with the props and the people | You place people against the props and see them together while you build. Bake it, and the script spawns only its people |
+| Come and go on their own events (a meeting at night, guards after a quest step) | **A scene of props, and a scene for each group of people** | Each group is loaded and removed on its own event. Bake the props scene |
+| Several setups of the same place (before and after a fight) | **One props scene, and a people scene for each setup** | The place stays baked; the script swaps the people |
+
+The props come in from the bake when V gets near, as the game's own do. The people come in when the script loads them.
+
+**Spawning only the people of a scene.** REDnode's `world.load` spawns every object in a scene, so loading a baked scene as it is would put each prop in the world twice. Read the scene and keep only its people:
+
+```ts
+const scene = JSON.parse(await fs.readFile(file, 'utf8'));
+await world.load({ ...scene, objects: scene.objects.filter((o) => o.kind === 'npc') }, { name: 'alley_people', wait: false });
+// later, on another event
+await world.unload('alley_people');
+```
+
+`wait: false` lets the people load even when V is far away: they come in once V gets near. `world.unload` removes only what that load spawned, so the baked props stay. A people-only scene needs no filter: `world.load` it as it is. An option to do the filtering for you is [asked of REDnode](https://github.com/Edgemodders/REDnode/issues/49). [The world](../rednode/world.html#scenes-and-whats-near-v) has more on `world.load`.
+
+For now the people stand friendly and idle. Walking, sitting and talking are for later tools.
 
 ## The Solid switch
 
