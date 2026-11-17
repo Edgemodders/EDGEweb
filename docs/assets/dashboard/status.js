@@ -2417,7 +2417,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.14",
+   "version": "0.0.15",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2456,7 +2456,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D5",
-      "title": "Play in game",
+      "title": "Play in game (plan written 2026-11-17, for the owner's review; not agreed, nothing built)",
       "status": "planned"
      },
      {
@@ -2604,6 +2604,11 @@ window.EDGE_STATUS = {
      "ref": "REDnode #47"
     },
     {
+     "who": "EDGEbuilder",
+     "what": "A vehicle kind in its scenes and an id in a scene file, for EDGEdir's sets",
+     "ref": "EDGEbuilder #6"
+    },
+    {
      "who": "EDGEfab",
      "what": "Its first stored animation, to try EDGEdir's reader on",
      "ref": "EDGEfab #7"
@@ -2611,6 +2616,7 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Run spot tests S1 to S10",
+    "Answer the design's six questions on sets (S1 to S6: EDGEbuilder's scenes as the stage) and D5's seven (P1 to P7)",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
@@ -2621,7 +2627,7 @@ window.EDGE_STATUS = {
     "Which way an actor's Turn turns against the game is unverified until D5",
     "How the game's own join at a jump compares with the preview's transitions is not measured yet"
    ],
-   "checkedBy": "EDGEdir session, 2026-11-16"
+   "checkedBy": "EDGEdir session, 2026-11-17"
   },
   {
    "name": "EDGEmobile",
