@@ -2459,7 +2459,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.20",
+   "version": "0.0.21",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2498,8 +2498,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D5",
-      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet and D5a sets built and passed by script, 0.0.20; the player package and the button not built)",
-      "status": "in progress"
+      "title": "Play in game (all four parts built, 0.0.21: the cue sheet and sets passed by script; the player package and the Play in Game button not run in VS Code or in the game)",
+      "status": "built, tests pending"
      },
      {
       "id": "D6",
@@ -2526,7 +2526,9 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The owner's spot tests S1 to S12 (about 35 minutes): none run",
+     "D5d Play in game, in VS Code (13 steps, by script): not run",
+     "D5 in the game (10 steps, on the owner's PC): not run",
+     "The owner's spot tests S1 to S13 (about 40 minutes): none run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page"
     ]
@@ -2594,6 +2596,18 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "11 of 14 on 0.0.18; the three misses were fixed in 0.0.19 and passed their rerun. One small change in 0.0.20, not run"
+    },
+    {
+     "name": "D5d Play in game, in VS Code",
+     "steps": 13,
+     "status": "not run",
+     "note": "On 0.0.21, with a stand-in for the player; no game needed"
+    },
+    {
+     "name": "D5 in the game",
+     "steps": 10,
+     "status": "not run",
+     "note": "In the game, on the owner's PC: EDGEdir 0.0.21 with EDGEdir Player 0.1.0; answers G1 to G7"
     }
    ],
    "ownerSpotTests": [
@@ -2656,6 +2670,11 @@ window.EDGE_STATUS = {
      "id": "S12",
      "feature": "Sets",
      "status": "not run"
+    },
+    {
+     "id": "S13",
+     "feature": "Play in game",
+     "status": "not run"
     }
    ],
    "waitingOn": [
@@ -2671,7 +2690,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDnode",
-     "what": "A call on the editor channel that reaches a package, for Play in game; directing a person not spawned with the workspot",
+     "what": "The editor channel call that reaches a package (agreed in principle, not built; Play in game uses a folder until then); a spike on directing a person not spawned with the workspot",
      "ref": "REDnode #48"
     },
     {
@@ -2686,11 +2705,13 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run spot tests S1 to S12",
+    "Run the in-game test of Play in game (10 steps: docs/testing.md, D5 in the game)",
+    "Run spot tests S1 to S13",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
    "risks": [
+    "The player package has never run in the game: where actors stand and face, and the T pose at the start, are unverified",
     "Seen once in a scripted round: a message that unsaved changes were put back, with no window reload; not reproduced, nothing lost",
     "Every hand test was run by script with nobody watching",
     "V has no head in the preview: no V with a head can be exported",
