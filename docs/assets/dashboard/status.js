@@ -2318,7 +2318,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F1",
-      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; the Pictures tab added 2026-11-17, its VS Code steps 1 to 10 passed, step 11 open; release pending)",
+      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; the Pictures tab added and passed 2026-11-17; release pending)",
       "status": "built, tests pending"
      },
      {
@@ -2386,8 +2386,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
-     "The owner runs step 11 of the Pictures tab test in VS Code (the tab comes back after a window reload; testing.html#f1-the-pictures-tab)",
-     "Then the three release tests again on the final build (by Claude)",
      "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
      "The date in the README and changelog changes to the release day first"
@@ -2397,9 +2395,9 @@ window.EDGE_STATUS = {
     {
      "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
      "steps": 11,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B steps 1 to 10 passed 2026-11-17 (owner); step 11, added during that run, is not run"
+     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 11 VS Code steps, passed 2026-11-17 (owner)"
     },
     {
      "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
@@ -2425,16 +2423,16 @@ window.EDGE_STATUS = {
     {
      "name": "Release tests on the final build: smoke, core package, package check",
      "steps": 3,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "script",
-     "note": "Passed 2026-11-16, before the Pictures tab; they run again on the final build"
+     "note": "Passed again 2026-11-17 on the final build (main 2f04616), after the Pictures tab"
     }
    ],
    "ownerSpotTests": [],
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Part B of the Pictures tab test in VS Code, then ask for the 0.1.0 release run",
+     "what": "Ask for the 0.1.0 release run: every test in testing.md has passed. Decide first whether 0.1.0 waits for part materials (EDGEmat #12)",
      "ref": "docs/testing.md"
     },
     {
@@ -2453,6 +2451,11 @@ window.EDGE_STATUS = {
      "ref": "REDnode #39"
     },
     {
+     "who": "REDcode",
+     "what": "Not blocking: the 3D view opened with a tab title, so a prop's tab says its name, not view.glb",
+     "ref": "REDcode #29"
+    },
+    {
      "who": "EDGEmat",
      "what": "Not blocking: generateImage takes a size; EDGEfab makes its own image call until then",
      "ref": "EDGEmat #9"
@@ -2464,8 +2467,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Install dist/edgefab-0.1.0.vsix from the worktree build and run part B of the Pictures tab test (testing.html#f1-the-pictures-tab)",
-    "Look at the vending machine with game materials on three parts in the game (testing.html#f1-check-game-materials-on-a-props-parts), and decide whether 0.1.0 waits for part materials",
+    "Decide whether 0.1.0 waits for part materials in the UI (EDGEmat #12; its in-game check passed 2026-11-17)",
     "Then ask for the 0.1.0 release run",
     "Add the video to Nexus page 38605 before it goes live (the shot script is nexus/video-script.md)",
     "Fill the Nexus page's form fields and tags by hand (nexus/README.md lists them)"
