@@ -2425,7 +2425,7 @@ window.EDGE_STATUS = {
      "steps": 3,
      "status": "passed",
      "ranBy": "script",
-     "note": "Passed again 2026-11-17 on the final build (main 2f04616), after the Pictures tab"
+     "note": "Passed again 2026-11-17 on the final build (main 8d0c9ed), after the Pictures tab and Rename going all the way in"
     }
    ],
    "ownerSpotTests": [],
