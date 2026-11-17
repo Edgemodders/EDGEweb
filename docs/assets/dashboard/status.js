@@ -1601,14 +1601,12 @@ window.EDGE_STATUS = {
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
     "Run 'The bake: color'",
     "Install 0.3.2 from the Marketplace in a normal VS Code",
-    "Close EDGEmat #1 and #2, or say its session may: both are done",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
    "risks": [
     "A made piece of clothing can come out off-color until the bake is checked in the game (the first made hat was too dark)",
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
-    "Two of its five open requests (#1, #2) are done and only left open; #3, #9 and #12 are real",
     "EDGEfab 0.1.0 may wait on #12 (game materials on a prop's parts, M4), new on 2026-11-17 and not started; the owner decides after EDGEfab's in-game check"
    ],
    "checkedBy": "EDGEmat session, 2026-11-17"
