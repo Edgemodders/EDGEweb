@@ -643,6 +643,11 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+      "id": "WL",
+      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49); after the dropdown",
+      "status": "planned"
+     },
+     {
       "id": "SN0-SN5",
       "title": "Semi-native overlay apps",
       "status": "planned"
