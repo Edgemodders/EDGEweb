@@ -2430,7 +2430,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.18",
+   "version": "0.0.19",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2469,7 +2469,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D5",
-      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet and D5a sets built, 0.0.18; the player package and the button not built)",
+      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet and D5a sets built, 0.0.19; the player package and the button not built)",
       "status": "in progress"
      },
      {
@@ -2557,13 +2557,14 @@ window.EDGE_STATUS = {
      "steps": 10,
      "status": "passed",
      "ranBy": "script",
-     "note": "10 of 10 on 0.0.16; two small changes from its notes in 0.0.18, not run"
+     "note": "10 of 10 on 0.0.16; the two changes of 0.0.18 from its notes passed too"
     },
     {
      "name": "D5a Sets",
      "steps": 14,
-     "status": "not run",
-     "note": "Built as 0.0.17; a round by script is asked of the EDGEweb session"
+     "status": "failed",
+     "ranBy": "script",
+     "note": "11 of 14 on 0.0.18: steps 2, 7 and 9 each missed one expectation. Fixed in 0.0.19; a rerun is asked of the EDGEweb session"
     }
    ],
    "ownerSpotTests": [
