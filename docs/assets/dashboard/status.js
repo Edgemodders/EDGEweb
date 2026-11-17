@@ -1579,7 +1579,7 @@ window.EDGE_STATUS = {
      "The hand test 'The bake: color' (4 steps), not run",
      "A short check that new bumps are no longer backwards: no test row yet",
      "#3: about 35 places still say Pack and Try",
-     "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
+     "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, Reshape with the game's materials in the game, install test, three Nexus screenshots"
     ]
    },
    "handTests": [
@@ -1596,6 +1596,13 @@ window.EDGE_STATUS = {
      "status": "partly run",
      "ranBy": "owner",
      "note": "Steps 1 to 8 run 2026-11-16; 9 to 12 open; faults found, fixes not built yet; reruns after them"
+    },
+    {
+     "name": "Reshape with the game's materials (in game)",
+     "steps": 7,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-17: a made piece keeps the game's materials (band and buckle kept); Claude's fitted picture looks right"
     },
     {
      "name": "Wardrobe Designer: install from the release zip",
@@ -1617,16 +1624,17 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
     "Run 'The bake: color'",
+    "Run 'Reshape with the game's materials' in the game (the archive is packed; Restore Wardrobe Designer's hat first)",
     "Install 0.3.2 from the Marketplace in a normal VS Code",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
    "risks": [
-    "A made piece of clothing can come out off-color until the bake is checked in the game (the first made hat was too dark)",
+    "Reshape's made pieces now keep the game's materials (Tripo's off-color paint is optional), untested in the game; Tripo on the new dark background is untested too",
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "EDGEfab 0.1.0 may wait on #12 (game materials on a prop's parts, M4), new on 2026-11-17 and not started; the owner decides after EDGEfab's in-game check"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-17"
+   "checkedBy": "EDGEmat session, 2026-11-17 (later)"
   },
   {
    "name": "EDGEquest",
