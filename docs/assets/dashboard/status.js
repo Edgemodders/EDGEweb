@@ -2378,6 +2378,13 @@ window.EDGE_STATUS = {
      "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 10 VS Code steps, is the owner's, not run"
     },
     {
+     "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Prepared by Claude 2026-11-17 in Projects/EDGEfab_PartMaterials (tests/edgefab_partmaterials_test.archive); the owner may hold 0.1.0 to include part materials"
+    },
+    {
      "name": "F1 extension in VS Code",
      "steps": 25,
      "status": "passed",
@@ -2425,10 +2432,16 @@ window.EDGE_STATUS = {
      "who": "EDGEmat",
      "what": "Not blocking: generateImage takes a size; EDGEfab makes its own image call until then",
      "ref": "EDGEmat #9"
+    },
+    {
+     "who": "EDGEmat",
+     "what": "Game materials on an EDGEfab prop's parts in the UI (Use a Game Surface or Material per part); works today through MCP only",
+     "ref": "EDGEmat #12"
     }
    ],
    "ownerActions": [
     "Install dist/edgefab-0.1.0.vsix from the worktree build and run part B of the Pictures tab test (testing.html#f1-the-pictures-tab)",
+    "Look at the vending machine with game materials on three parts in the game (testing.html#f1-check-game-materials-on-a-props-parts), and decide whether 0.1.0 waits for part materials",
     "Then ask for the 0.1.0 release run",
     "Add the video to Nexus page 38605 before it goes live (the shot script is nexus/video-script.md)",
     "Fill the Nexus page's form fields and tags by hand (nexus/README.md lists them)"
