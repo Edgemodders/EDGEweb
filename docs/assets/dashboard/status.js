@@ -1327,8 +1327,8 @@ window.EDGE_STATUS = {
    "version": "0.2.0",
    "lastTag": "v0.2.0",
    "lastTagDate": "2026-11-07",
-   "lastCommit": "2026-11-08",
-   "commitsSinceTag": 2,
+   "lastCommit": "2026-11-17",
+   "commitsSinceTag": 6,
    "sessions": [],
    "wiki": "wiki/edgewave/",
    "plan": {
@@ -2409,7 +2409,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.12",
+   "version": "0.0.13",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2443,8 +2443,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D4",
-      "title": "Transitions and sequences (D4a Transitions built; D4b Sequences being built)",
-      "status": "in progress"
+      "title": "Transitions and sequences (both parts built as 0.0.13)",
+      "status": "built, tests pending"
      },
      {
       "id": "D5",
@@ -2476,8 +2476,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The owner's spot tests S1 to S9 (about 25 minutes): none run",
-     "D4a's hand test (15 steps), not run",
+     "D4a's failed steps fixed and rerun: the blend is not drawn in the view",
+     "The owner's spot tests S1 to S10 (about 30 minutes): none run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page"
     ]
@@ -2521,9 +2521,16 @@ window.EDGE_STATUS = {
     {
      "name": "D4a Transitions",
      "steps": 15,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built as 0.0.12, 2026-11-16"
+     "status": "failed",
+     "ranBy": "script",
+     "note": "12 of 15 on 0.0.13: the view does not draw the blend (steps 4, 6), and Add Transition lands a hair off the join (step 3)"
+    },
+    {
+     "name": "D4b Sequences",
+     "steps": 19,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "19 of 19 on 0.0.13, with five notes passed to its session"
     }
    ],
    "ownerSpotTests": [
@@ -2571,6 +2578,11 @@ window.EDGE_STATUS = {
      "id": "S9",
      "feature": "Transitions",
      "status": "not run"
+    },
+    {
+     "id": "S10",
+     "feature": "Sequences",
+     "status": "not run"
     }
    ],
    "waitingOn": [
@@ -2591,11 +2603,12 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run spot tests S1 to S9",
+    "Run spot tests S1 to S10",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
    "risks": [
+    "Transitions do not show in the preview yet (D4a's round on 0.0.13)",
     "Every hand test was run by script with nobody watching",
     "V has no head in the preview: no V with a head can be exported",
     "The first read of the game is slow: about 3.5 minutes for the animation index",
@@ -3213,7 +3226,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-17",
-   "commitsSinceTag": 30,
+   "commitsSinceTag": 31,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"
