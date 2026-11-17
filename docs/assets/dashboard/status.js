@@ -2294,8 +2294,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F1",
-      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; release pending)",
-      "status": "done"
+      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; the Pictures tab added 2026-11-17, its VS Code steps open; release pending)",
+      "status": "built, tests pending"
      },
      {
       "id": "F3",
@@ -2362,12 +2362,21 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
+     "The owner runs part B of the Pictures tab test in VS Code (10 steps; testing.html#f1-the-pictures-tab)",
+     "Then the three release tests again on the final build (by Claude)",
      "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
-     "If the run is not on 2026-11-16, the date in the README and changelog changes first"
+     "The date in the README and changelog changes to the release day first"
     ]
    },
    "handTests": [
+    {
+     "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
+     "steps": 10,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 10 VS Code steps, is the owner's, not run"
+    },
     {
      "name": "F1 extension in VS Code",
      "steps": 25,
@@ -2385,17 +2394,17 @@ window.EDGE_STATUS = {
     {
      "name": "Release tests on the final build: smoke, core package, package check",
      "steps": 3,
-     "status": "passed",
+     "status": "not run",
      "ranBy": "script",
-     "note": "All three passed 2026-11-16"
+     "note": "Passed 2026-11-16, before the Pictures tab; they run again on the final build"
     }
    ],
    "ownerSpotTests": [],
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Start the 0.1.0 release run: the only thing 0.1.0 waits on",
-     "ref": "CLAUDE.md"
+     "what": "Part B of the Pictures tab test in VS Code, then ask for the 0.1.0 release run",
+     "ref": "docs/testing.md"
     },
     {
      "who": "REDbridge",
@@ -2419,16 +2428,17 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Ask for the 0.1.0 release run",
+    "Install dist/edgefab-0.1.0.vsix from the worktree build and run part B of the Pictures tab test (testing.html#f1-the-pictures-tab)",
+    "Then ask for the 0.1.0 release run",
     "Add the video to Nexus page 38605 before it goes live (the shot script is nexus/video-script.md)",
     "Fill the Nexus page's form fields and tags by hand (nexus/README.md lists them)"
    ],
    "risks": [
-    "The README and changelog are dated 2026-11-16 for 0.1.0: the date changes if the release run is later",
+    "The README and changelog are dated 2026-11-16 for 0.1.0: the date changes to the release day",
     "EDGEbuilder is blocked on #5 (edgefab-core on npm) now, and on #6 for Watch; #5 closes with the 0.1.0 release",
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key"
    ],
-   "checkedBy": "EDGEfab session, 2026-11-16"
+   "checkedBy": "EDGEfab session, 2026-11-17"
   },
   {
    "name": "EDGEdir",
