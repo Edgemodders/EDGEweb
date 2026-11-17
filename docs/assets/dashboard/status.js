@@ -955,7 +955,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#14",
-      "title": "Animations: export with rigs (0.13.0) and anims.info (0.14.0) done; .anims and rig import to do",
+      "title": "Animations: export with rigs (0.13.0), anims.info (0.14.0) and .anims import (built, unreleased) done; rig import to do",
       "status": "in progress"
      },
      {
@@ -966,19 +966,27 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.15.0",
     "needs": [
-     "Nothing unreleased",
-     "#14's remaining parts for EDGEfab: .anims import and rig import"
+     ".anims import from glTF (#14) is built and passed the probe on 2.5; REDcode's smoke test before the release",
+     "The owner's ask to release",
+     "#14's rig import for EDGEfab's F7a: WolvenKit's ImportRig is unfinished, so REDbridge needs its own writer; wants a short design with EDGEfab's prop case"
     ]
    },
    "handTests": [
     {
-     "name": "Probe and REDcode's smoke test on the 0.14.0 build",
+     "name": "Probe on the .anims import build (round trip of the soldier's land clip)",
      "steps": null,
      "status": "passed",
      "ranBy": "script",
-     "note": "2026-11-16"
+     "note": "2026-11-17, game 2.5"
+    },
+    {
+     "name": "REDcode's smoke test on the next release build",
+     "steps": null,
+     "status": "not run",
+     "ranBy": "script",
+     "note": null
     }
    ],
    "ownerSpotTests": [],
@@ -987,6 +995,11 @@ window.EDGE_STATUS = {
      "who": "EDGEbuilder",
      "what": "#11 is used when B3b or B7 starts (B3b itself waits on REDnode #24)",
      "ref": "REDbridge #11"
+    },
+    {
+     "who": "EDGEfab",
+     "what": "Which prop and bones its F7a rig needs, to design rig import; and an in-game check that an imported clip plays",
+     "ref": "REDbridge #14"
     }
    ],
    "ownerActions": [
@@ -999,7 +1012,7 @@ window.EDGE_STATUS = {
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
    ],
-   "checkedBy": "REDnode and EDGEbuilder sessions, 2026-11-16"
+   "checkedBy": "REDnode session, 2026-11-17"
   },
   {
    "name": "EDGEdeck",
