@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.67.0 (test build)",
+   "version": "0.67.1 (test build)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -634,7 +634,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AK",
-      "title": "App keys: a key per app shows only it with the cursor, or hides it",
+      "title": "App keys: 0.67.0 failed step 4 in game (a full-screen page hid whole); 0.67.1 hides only its panels, awaiting its retest",
       "status": "built, tests pending"
      },
      {
@@ -667,7 +667,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The App keys test in the game (0.67.0): not run",
+     "The App keys retest in the game (0.67.1): 0.67.0 failed step 4",
      "The Weather (#46) test in the game: not run; 0.67.0 carries it",
      "The 'Update REDbridge while it runs' fix needs its retest in the game; 0.67.0 carries it",
      "S24's street lamp step is open: decide whether it blocks the gate or moves to N2",
@@ -680,9 +680,9 @@ window.EDGE_STATUS = {
     {
      "name": "App keys, REDnode 0.67.0",
      "steps": 9,
-     "status": "not run",
+     "status": "failed",
      "ranBy": null,
-     "note": "Stand-in checks passed (24, dev and packaged host); waiting for the owner to say which machine gets the build"
+     "note": "2026-11-17 on 0.67.0: step 4 (EDGEbuilder's full-screen page hid whole, the mouse reached the game); fixed in 0.67.1, retest pending"
     },
     {
      "name": "Weather (#46), REDnode 0.66.10",
