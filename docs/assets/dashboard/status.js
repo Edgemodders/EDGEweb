@@ -955,7 +955,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#14",
-      "title": "Animations: export with rigs (0.13.0), anims.info (0.14.0) and .anims import (built, unreleased) done; rig import to do",
+      "title": "Animations: export with rigs (0.13.0), anims.info (0.14.0), .anims import (built, unreleased); rig import parked until EDGEfab's F7a",
       "status": "in progress"
      },
      {
@@ -969,8 +969,7 @@ window.EDGE_STATUS = {
     "version": "0.15.0",
     "needs": [
      ".anims import from glTF (#14) is built and passed the probe on 2.5; REDcode's smoke test before the release",
-     "The owner's ask to release",
-     "#14's rig import for EDGEfab's F7a: WolvenKit's ImportRig is unfinished, so REDbridge needs its own writer; wants a short design with EDGEfab's prop case"
+     "The owner's ask to release"
     ]
    },
    "handTests": [
@@ -998,7 +997,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEfab",
-     "what": "Which prop and bones its F7a rig needs, to design rig import; and an in-game check that an imported clip plays",
+     "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
      "ref": "REDbridge #14"
     }
    ],
