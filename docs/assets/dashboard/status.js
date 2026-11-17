@@ -2459,7 +2459,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.22",
+   "version": "0.0.23",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2498,7 +2498,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D5",
-      "title": "Play in game (all four parts built, 0.0.21: the cue sheet and sets passed by script; the player package and the Play in Game button not run in VS Code or in the game)",
+      "title": "Play in game (all four parts built; every hand test in VS Code passed by script, the player against a stand-in; the player has not run in the game)",
       "status": "built, tests pending"
      },
      {
@@ -2526,7 +2526,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "D5d Play in game, in VS Code (13 steps, by script): not run",
      "D5 in the game (10 steps, on the owner's PC): not run",
      "The owner's spot tests S1 to S13 (about 40 minutes): none run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
@@ -2595,19 +2594,20 @@ window.EDGE_STATUS = {
      "steps": 14,
      "status": "passed",
      "ranBy": "script",
-     "note": "11 of 14 on 0.0.18; the three misses were fixed in 0.0.19 and passed their rerun. One small change in 0.0.20, not run"
+     "note": "11 of 14 on 0.0.18; the three misses were fixed in 0.0.19 and passed their rerun; 0.0.20's small change passed too"
     },
     {
      "name": "D5d Play in game, in VS Code",
      "steps": 13,
-     "status": "not run",
-     "note": "On 0.0.22, with a stand-in for the player; no game needed"
+     "status": "passed",
+     "note": "13 of 13 on 0.0.22, with a stand-in for the player; one fix from its notes in 0.0.23, not run. The copy of the player into the game's folder was not run",
+     "ranBy": "script"
     },
     {
      "name": "D5 in the game",
      "steps": 10,
      "status": "not run",
-     "note": "In the game, on the owner's PC: EDGEdir 0.0.22 with EDGEdir Player 0.1.0; answers G1 to G7"
+     "note": "In the game, on the owner's PC: EDGEdir 0.0.23 with EDGEdir Player 0.1.0; answers G1 to G7"
     }
    ],
    "ownerSpotTests": [
