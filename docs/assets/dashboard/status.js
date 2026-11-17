@@ -2430,7 +2430,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.19",
+   "version": "0.0.20",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2469,7 +2469,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D5",
-      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet and D5a sets built, 0.0.19; the player package and the button not built)",
+      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet and D5a sets built and passed by script, 0.0.20; the player package and the button not built)",
       "status": "in progress"
      },
      {
@@ -2562,9 +2562,9 @@ window.EDGE_STATUS = {
     {
      "name": "D5a Sets",
      "steps": 14,
-     "status": "failed",
+     "status": "passed",
      "ranBy": "script",
-     "note": "11 of 14 on 0.0.18: steps 2, 7 and 9 each missed one expectation. Fixed in 0.0.19; a rerun is asked of the EDGEweb session"
+     "note": "11 of 14 on 0.0.18; the three misses were fixed in 0.0.19 and passed their rerun. One small change in 0.0.20, not run"
     }
    ],
    "ownerSpotTests": [
@@ -2662,6 +2662,7 @@ window.EDGE_STATUS = {
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
    "risks": [
+    "Seen once in a scripted round: a message that unsaved changes were put back, with no window reload; not reproduced, nothing lost",
     "Every hand test was run by script with nobody watching",
     "V has no head in the preview: no V with a head can be exported",
     "The first read of the game is slow: about 3.5 minutes for the animation index",
