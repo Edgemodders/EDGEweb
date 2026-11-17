@@ -1,7 +1,7 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
 window.EDGE_STATUS = {
  "asOf": "2026-11-17",
- "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts.",
+ "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
   {
    "repo": "EDGEbuilder",
@@ -483,9 +483,10 @@ window.EDGE_STATUS = {
     "Decide whether and when to start C6 (REDagent in REDcode)"
    ],
    "risks": [
-    "EDGEmobile's Chooms! needs a choice of model in agent.ask, and no issue is filed for it yet",
+    "EDGEmobile's Chooms! will need a choice of model in agent.ask for C3; no issue is filed for it yet",
     "A first question that reads the game cost about $0.45 on Opus"
-   ]
+   ],
+   "checkedBy": "REDnode session, 2026-11-16"
   },
   {
    "name": "REDnode",
@@ -622,6 +623,11 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "#46c",
+      "title": "Blend at a workspot jump, for EDGEdir's D4 and D5",
+      "status": "planned"
+     },
+     {
       "id": "L1-L3",
       "title": "Localization",
       "status": "planned"
@@ -646,9 +652,11 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The Weather (#46) test in the game on 0.66.10: not run",
-     "The 'Update REDbridge while it runs' fix has no recorded test",
-     "Admin Tools has unreleased changes: release it first or the run stops",
+     "The Weather (#46) test in the game: not run; the next test build, 0.66.11, carries it",
+     "The 'Update REDbridge while it runs' fix needs its retest in the game (it is in no build yet)",
+     "S24's street lamp step is open: decide whether it blocks the gate or moves to N2",
+     "world.jumpWorkspot answering false outside a workspot: untested",
+     "Admin Tools has unreleased changes (0.2.0): release it first or the run stops",
      "The owner's GIF on REDswap's Nexus page must be pulled first"
     ]
    },
@@ -661,6 +669,13 @@ window.EDGE_STATUS = {
      "note": "Stand-in checks passed; the laptop's update zip is ready"
     },
     {
+     "name": "Update REDbridge while it runs (W3 retest)",
+     "steps": null,
+     "status": "failed",
+     "ranBy": "owner",
+     "note": "Found 2026-11-16: the old copy kept running. Fixed since, not retested"
+    },
+    {
      "name": "A written workspot: the call (#46), 0.66.9",
      "steps": 6,
      "status": "passed",
@@ -670,9 +685,9 @@ window.EDGE_STATUS = {
     {
      "name": "A2 animations on a spawned person (#39), 0.66.8",
      "steps": 9,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Steps 1 to 8 passed 2026-11-16; step 9, the MCP route, not run"
+     "note": "Steps 1 to 8 passed 2026-11-16; step 9, the MCP route, is optional"
     },
     {
      "name": "S24 world node registry (#24), 0.66.7",
@@ -705,11 +720,6 @@ window.EDGE_STATUS = {
     },
     {
      "who": "owner",
-     "what": "More detail on players' crash and Vortex reports, open since 2026-11-09",
-     "ref": "CLAUDE.md"
-    },
-    {
-     "who": "owner",
      "what": "Talk through semi-native apps before its first spike starts",
      "ref": "docs/semi-native.md"
     }
@@ -717,14 +727,15 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Run the Weather (#46) test (the laptop's update zip is ready)",
     "Release Admin Tools 0.2.0",
-    "Start the next release run once the gate is met: 34 commits wait since 0.65.3",
+    "Start the next release run once the gate is met",
     "Agree the order after EDGEdir's requests (Console resizing, N2 and others are asked for, not built)"
    ],
    "risks": [
-    "34 commits and five features sit unreleased since 0.65.3",
-    "Native code reads game memory at fixed offsets: 0.66.0 crashed the game on 2.5",
-    "Four requests from other tools are open on it"
-   ]
+    "Five features sit unreleased since 0.65.3 (the count of commits is on this card)",
+    "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
+    "Four requests from other tools are open on it: #24, #39, #46, #47"
+   ],
+   "checkedBy": "REDnode session, 2026-11-16"
   },
   {
    "name": "REDcode",
@@ -805,7 +816,8 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "Nothing unreleased: no changes since 0.10.13",
-     "The next planned work is Animations A3"
+     "#24: Run Game drops ELECTRON_RUN_AS_NODE on the exe route (a small fix, not built)",
+     "The next planned work is Animations A3, which closes #21"
     ]
    },
    "handTests": [
@@ -814,7 +826,7 @@ window.EDGE_STATUS = {
      "steps": 12,
      "status": "passed",
      "ranBy": "script",
-     "note": "By the EDGEweb session 2026-11-15"
+     "note": "By the EDGEweb session 2026-11-15; not tried: the unsaved-editor question, and EDGEfab refreshing its own prop"
     },
     {
      "name": "Animations A2 (#21)",
@@ -842,10 +854,10 @@ window.EDGE_STATUS = {
      "steps": 6,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Parts A and B pass on 2.5; the rest waited on Red Hot Tools, since dropped"
+     "note": "A and B pass on 2.5; steps 1 and 2 (through REDswap) can run now and have not; 3 to 6 retired"
     },
     {
-     "name": "The never-run list (EDGEmat hook, .NET prompt, sound in game, template, Blender search)",
+     "name": "The never-run list, six items (EDGEmat hook, .NET prompt, EDGEwave from a store, sound in game, template, Blender search)",
      "steps": null,
      "status": "not run",
      "ranBy": null,
@@ -856,19 +868,19 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "EDGEmat",
-     "what": "Ship renderMaterials, so the mesh viewer's material hook can be tested",
+     "what": "Ship renderMaterials, so the mesh viewer's material hook can be tested (unverified whether it has since)",
      "ref": "docs/testing.md"
     }
    ],
    "ownerActions": [
-    "Agree a start on A3 (synced sets)",
-    "Close or answer #21 and #24, which look built or stale"
+    "Agree a start on A3 (synced sets)"
    ],
    "risks": [
-    "REDcode #21 (play an animation in the viewer) is still open though A2 passed its tests",
-    "REDcode #24 (Run game stops REDnode) is untouched since 2026-11-10",
+    "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older (#24, not fixed yet)",
+    "REDcode #21 stays open on purpose: it closes when A3 ships",
     "REDbridge answers one call at a time"
-   ]
+   ],
+   "checkedBy": "REDcode session, 2026-11-16"
   },
   {
    "name": "REDbridge",
@@ -925,7 +937,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#14",
-      "title": "Animations: anims.info done; .anims and rig import to do",
+      "title": "Animations: export with rigs (0.13.0) and anims.info (0.14.0) done; .anims and rig import to do",
       "status": "in progress"
      },
      {
@@ -955,19 +967,21 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "EDGEbuilder",
-     "what": "Use sector.find, and check baked sectors in the game, before #11, #15 and #16 close",
-     "ref": "REDbridge #11, #15, #16"
+     "what": "#11 is used when B3b or B7 starts (B3b itself waits on REDnode #24)",
+     "ref": "REDbridge #11"
     }
    ],
    "ownerActions": [
     "Ask for release runs: it is released at the owner's request from the REDnode session",
-    "Decide when to schedule Linux support"
+    "Decide when to schedule Linux support",
+    "Close REDbridge #15 and #16: both passed in the game 2026-11-08 (EDGEbuilder 0.8.1)"
    ],
    "risks": [
-    "Three of its four open requests wait on EDGEbuilder checks, not on REDbridge work",
+    "Two of its four open requests (#15, #16) are done and only left open; #11 waits on a later EDGEbuilder phase",
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
-   ]
+   ],
+   "checkedBy": "REDnode and EDGEbuilder sessions, 2026-11-16"
   },
   {
    "name": "EDGEdeck",
@@ -977,11 +991,10 @@ window.EDGE_STATUS = {
    "version": "0.32.0",
    "lastTag": "v0.32.0",
    "lastTagDate": "2026-11-15",
-   "lastCommit": "2026-11-15",
-   "commitsSinceTag": 1,
+   "lastCommit": "2026-11-17",
+   "commitsSinceTag": 2,
    "sessions": [
-    "EDGEdeck",
-    "edgedeck-26"
+    "EDGEdeck"
    ],
    "wiki": "wiki/edgedeck/",
    "plan": {
@@ -1052,7 +1065,7 @@ window.EDGE_STATUS = {
      "steps": null,
      "status": "passed",
      "ranBy": "contributor",
-     "note": "The owner has not run it"
+     "note": "One mod, by a contributor; the owner has not run it"
     },
     {
      "name": "32 FOMOD, the same file again",
@@ -1110,14 +1123,14 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Run the FOMOD hand tests 31 to 35",
     "Meet Nexus, so the OAuth client id can become the default",
-    "Deprecate the old REDdeck listings (Marketplace, Open VSX, npm), if not done",
+    "Delete the unused RELEASE_TOKEN organization secret and its token",
+    "Deprecate the old REDdeck listings (Marketplace, Open VSX, npm): unverified whether done",
     "Decide when to drop the stores' preview flag"
    ],
    "risks": [
-    "The FOMOD installer (a contributor's PR) was released before any hand test by the owner",
-    "0.31.0's GitHub release step failed with a 403 and the cause is unknown",
-    "docs/testing.md's summary says no hand tests are waiting, but 31 to 35 are listed"
-   ]
+    "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
+   ],
+   "checkedBy": "EDGEdeck session, 2026-11-16"
   },
   {
    "name": "EDGEbuilder",
@@ -1193,6 +1206,11 @@ window.EDGE_STATUS = {
       "status": "done"
      },
      {
+      "id": "B2d-0",
+      "title": "Import probe",
+      "status": "done"
+     },
+     {
       "id": "B2d-1",
       "title": "Import a model",
       "status": "built, tests pending"
@@ -1248,21 +1266,21 @@ window.EDGE_STATUS = {
      "steps": 10,
      "status": "not run",
      "ranBy": null,
-     "note": "Built 2026-11-13 as 0.11.0"
+     "note": "0.11.0 is deployed on the desktop since 2026-11-15, so it can be run now"
     },
     {
      "name": "B2d-0 Import probe",
      "steps": null,
      "status": "passed",
-     "ranBy": "script",
-     "note": "2026-11-13; about 2 minutes a model"
+     "ranBy": "script + owner",
+     "note": "2026-11-13; about 2 minutes a model, mostly textures; swap and spawn passed in the game"
     },
     {
      "name": "B3c NPCs (in game)",
-     "steps": 14,
+     "steps": 17,
      "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-12 on 0.10.9"
+     "note": "2026-11-12 on 0.10.9, the owner's laptop"
     }
    ],
    "ownerSpotTests": [],
@@ -1284,19 +1302,22 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDbridge",
-     "what": "sector.find and sector.nodes, for the world view (B7)",
+     "what": "sector.find and sector.nodes, for the world inspector (B3b) and the world view (B7)",
      "ref": "REDbridge #11"
     }
    ],
    "ownerActions": [
-    "Run the B2d-1 test in the game (delete the leftover b2d_probe.archive first, game closed)",
-    "Ask for the 0.11.0 release run once B2d-1 passes and edgefab-core is on npm"
+    "Run the B2d-1 test in the game (0.11.0 is on the desktop; allow the new Archives permission for EDGEbuilder in REDnode's Mod Manager; keep a REDcode project open)",
+    "Ask for the 0.11.0 release run once B2d-1 passes and edgefab-core is on npm",
+    "Close EDGEbuilder #1 (mod archives index): done in B2c, passed in the game 2026-10-30"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
-    "Two requests on it are 13 days old (mod archives index, quest places)",
-    "docs/testing.md and the index roadmap are dated 2026-10-30 and lag CLAUDE.md"
-   ]
+    "Watch (B2d-2) cannot work until EDGEfab #6 keeps unchanged textures",
+    "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
+    "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
+   ],
+   "checkedBy": "EDGEbuilder session, 2026-11-16"
   },
   {
    "name": "EDGEwave",
@@ -1437,11 +1458,10 @@ window.EDGE_STATUS = {
    "version": "0.3.2",
    "lastTag": "v0.3.2",
    "lastTagDate": "2026-11-13",
-   "lastCommit": "2026-11-16",
-   "commitsSinceTag": 13,
+   "lastCommit": "2026-11-17",
+   "commitsSinceTag": 14,
    "sessions": [
-    "EDGEmat",
-    "edgemat-37"
+    "EDGEmat"
    ],
    "wiki": "wiki/edgemat/",
    "plan": {
@@ -1485,8 +1505,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "M7",
-      "title": "Ship",
-      "status": "in progress"
+      "title": "Ship (parts done early: stores, npm, Nexus page; its own criterion not started)",
+      "status": "planned"
      },
      {
       "id": "W0",
@@ -1500,7 +1520,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "W2",
-      "title": "Wardrobe Designer: patterns",
+      "title": "Wardrobe Designer: patterns (first slice; pattern masks later)",
       "status": "done"
      },
      {
@@ -1511,10 +1531,12 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.3.3",
     "needs": [
      "The hand test 'The bake: color' (4 steps), not run",
-     "Wardrobe Designer 0.1.0, its own release: Reshape and keys rerun, install test, three Nexus screenshots"
+     "A short check that new bumps are no longer backwards: no test row yet",
+     "#3: about 35 places still say Pack and Try",
+     "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
    },
    "handTests": [
@@ -1530,7 +1552,7 @@ window.EDGE_STATUS = {
      "steps": 12,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "The 2026-11-16 run found window and refresh bugs; fixes built, steps to rerun"
+     "note": "Steps 1 to 8 run 2026-11-16; 9 to 12 open; faults found, fixes not built yet; reruns after them"
     },
     {
      "name": "Wardrobe Designer: install from the release zip",
@@ -1548,30 +1570,21 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerSpotTests": [],
-   "waitingOn": [
-    {
-     "who": "REDcode",
-     "what": "A way to reveal a file in the Project view, and file kinds on Game Assets",
-     "ref": "REDcode #27, #15"
-    },
-    {
-     "who": "REDnode",
-     "what": "Title-bar buttons for ui-builder windows; the in-game MCP server on the shared REDbridge",
-     "ref": "REDnode #38, #40"
-    }
-   ],
+   "waitingOn": [],
    "ownerActions": [
-    "Run 'The bake: color' and rerun Wardrobe Designer's Reshape and keys",
+    "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
+    "Run 'The bake: color'",
     "Install 0.3.2 from the Marketplace in a normal VS Code",
-    "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires",
-    "Delete the two EDGEmat check archives from the game, game closed",
+    "Close EDGEmat #1 and #2, or say its session may: both are done",
+    "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
    "risks": [
-    "Four requests on it are open, three of them 20 or more days old",
-    "0.3.2's Marketplace publish failed on an expired token",
-    "The bake's color is still approximate"
-   ]
+    "A made piece of clothing can come out off-color until the bake is checked in the game (the first made hat was too dark)",
+    "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
+    "Two of its four open requests (#1, #2) are done and only left open; #3 and #9 are real"
+   ],
+   "checkedBy": "EDGEmat session, 2026-11-16"
   },
   {
    "name": "EDGEquest",
@@ -1840,7 +1853,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The VS Code Marketplace to accept the extension (it refused 0.1.0, 0.1.1 and 0.1.2)",
+     "The VS Code Marketplace to accept the extension (it refused 0.1.0, 0.1.1 and 0.1.2; retry after about 2026-11-19)",
      "Nexus page 37293 published by the owner"
     ]
    },
@@ -1903,23 +1916,13 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "upstream",
-     "what": "VS Code Marketplace support to explain the 'suspicious content' refusals",
+     "what": "The VS Code Marketplace: the refusal has a cooldown, so retry after about 2026-11-19",
      "ref": "CHANGELOG 0.1.2"
     },
     {
      "who": "EDGEchat",
      "what": "List edgehack-mcp in the plugin",
      "ref": "EDGEchat #4"
-    },
-    {
-     "who": "REDnode",
-     "what": "Pin edgehack-mcp and ship it, so REDagent gets the tools",
-     "ref": "design H6.5"
-    },
-    {
-     "who": "REDagent",
-     "what": "Its next release, with the quickhack briefing",
-     "ref": "design H6.5"
     }
    ],
    "ownerActions": [
@@ -1928,9 +1931,10 @@ window.EDGE_STATUS = {
     "Supply the screenshots the wiki guide names"
    ],
    "risks": [
-    "The VS Code Marketplace refused three versions with no reason given",
+    "The VS Code Marketplace refused three versions with no reason given; retry after about 2026-11-19",
     "Try Live cannot change names: the game reads its text tables at load"
-   ]
+   ],
+   "checkedBy": "REDnode session (its REDnode side), 2026-11-16"
   },
   {
    "name": "EDGEkit",
@@ -2251,8 +2255,7 @@ window.EDGE_STATUS = {
    "lastCommit": "2026-11-17",
    "commitsSinceTag": 0,
    "sessions": [
-    "EDGEfab",
-    "edgefab-01"
+    "EDGEfab"
    ],
    "plan": {
     "name": "Build plan F0 to F9",
@@ -2265,7 +2268,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F1",
-      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder",
+      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; release pending)",
       "status": "done"
      },
      {
@@ -2285,7 +2288,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F5a",
-      "title": "Characters, seen",
+      "title": "Characters, seen (uses EDGEdir's animation index)",
       "status": "planned"
      },
      {
@@ -2333,9 +2336,9 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
-     "The owner asks for the release run (extension, MCP server and edgefab-core to npm)",
+     "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
-     "If the run is not on 2026-11-16, the date in the README and changelog changes"
+     "If the run is not on 2026-11-16, the date in the README and changelog changes first"
     ]
    },
    "handTests": [
@@ -2354,50 +2357,52 @@ window.EDGE_STATUS = {
      "note": "Steps 1 to 6 by script, 7 to 10 by the owner"
     },
     {
-     "name": "Release tests on the final build",
-     "steps": null,
+     "name": "Release tests on the final build: smoke, core package, package check",
+     "steps": 3,
      "status": "passed",
      "ranBy": "script",
-     "note": "Rerun on the final 0.1.0 build 2026-11-16"
+     "note": "All three passed 2026-11-16"
     }
    ],
    "ownerSpotTests": [],
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Start the 0.1.0 release run",
+     "what": "Start the 0.1.0 release run: the only thing 0.1.0 waits on",
      "ref": "CLAUDE.md"
     },
     {
      "who": "REDbridge",
-     "what": ".anims import, anims info and rig import, for characters and animation",
+     "what": "Later phases, not blocking: .anims import and rig import, for characters and animation",
      "ref": "REDbridge #14"
     },
     {
-     "who": "EDGEmat",
-     "what": "generateImage takes a size and says its usage",
-     "ref": "EDGEmat #9"
-    },
-    {
      "who": "REDcode",
-     "what": "Play a game animation in the mesh viewer (F5a)",
+     "what": "Later phase (F5a), not blocking: play a game animation in the mesh viewer",
      "ref": "REDcode #21"
     },
     {
      "who": "REDnode",
-     "what": "Play an animation on a spawned character in the game (F7b-1)",
+     "what": "Later phase (F7b-1), not blocking: play an animation on a spawned character",
      "ref": "REDnode #39"
+    },
+    {
+     "who": "EDGEmat",
+     "what": "Not blocking: generateImage takes a size; EDGEfab makes its own image call until then",
+     "ref": "EDGEmat #9"
     }
    ],
    "ownerActions": [
     "Ask for the 0.1.0 release run",
-    "Add the video to the Nexus page before it goes live"
+    "Add the video to Nexus page 38605 before it goes live (the shot script is nexus/video-script.md)",
+    "Fill the Nexus page's form fields and tags by hand (nexus/README.md lists them)"
    ],
    "risks": [
-    "The README already says 0.1.0 was released on 2026-11-16, but there is no tag",
-    "EDGEbuilder 0.11.0 is blocked until this release puts edgefab-core on npm",
-    "Uses paid AI services with the modder's own keys"
-   ]
+    "The README and changelog are dated 2026-11-16 for 0.1.0: the date changes if the release run is later",
+    "EDGEbuilder is blocked on #5 (edgefab-core on npm) now, and on #6 for Watch; #5 closes with the 0.1.0 release",
+    "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key"
+   ],
+   "checkedBy": "EDGEfab session, 2026-11-16"
   },
   {
    "name": "EDGEdir",
@@ -2597,13 +2602,13 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-16",
+   "lastCommit": "2026-11-17",
    "commitsSinceTag": 0,
    "sessions": [
     "EDGEmobile"
    ],
    "plan": {
-    "name": "Phases M0 to M6, Chooms! C1 to C5, then Release",
+    "name": "Phases M0 to M6 (M6 is Chooms!, C1 to C5), then Release",
     "source": "docs/design.md",
     "phases": [
      {
@@ -2628,8 +2633,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "M4",
-      "title": "Mobile apps for modders",
-      "status": "planned"
+      "title": "Mobile apps for modders (parts built in C1; sample app and guide not started)",
+      "status": "in progress"
      },
      {
       "id": "M5",
@@ -2643,8 +2648,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C2",
-      "title": "Chooms!: the game's story",
-      "status": "built, tests pending"
+      "title": "Chooms!: the game's story (code parts built, waiting on the owner's test; knowledge cards not started)",
+      "status": "in progress"
      },
      {
       "id": "C3",
@@ -2663,7 +2668,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "Release",
-      "title": "Zips, Nexus pages, changelog",
+      "title": "Zips, Nexus pages, changelog (tooling built 2026-11-10, never run)",
       "status": "planned"
      }
     ]
@@ -2674,7 +2679,8 @@ window.EDGE_STATUS = {
      "The owner's C2 code test (9 steps) and the C2 knowledge cards",
      "C3: people and corporations post by themselves through REDagent",
      "Nexus pages for EDGEmobile and Chooms!",
-     "A first run of the release workflow"
+     "A first run of the release workflow",
+     "README status line and badge naming the version"
     ]
    },
    "handTests": [
@@ -2687,10 +2693,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "C1 (Chooms! with hand-written posts)",
-     "steps": null,
+     "steps": 13,
      "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-10, in game and on Android"
+     "note": "Two runs found problems; the retest passed 2026-11-10, on the laptop and on Android"
     },
     {
      "name": "M2 onboarding on Android",
@@ -2705,6 +2711,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-10-30"
+    },
+    {
+     "name": "M1 tunnel spike on Android",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-10-29, after four fixes"
     }
    ],
    "ownerSpotTests": [
@@ -2727,21 +2740,24 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDagent",
-     "what": "A choice of model in agent.ask (for posts and DMs); no issue filed yet",
+     "what": "For C3, not blocking today: a choice of model in agent.ask; no issue filed yet",
      "ref": "docs/design.md"
     }
    ],
    "ownerActions": [
-    "Run the C2 code test in game and on Android",
+    "Run the C2 code test: mostly in the game, steps 3 to 6 on the phone",
     "Review the knowledge cards once drafted",
-    "Take photo mode pictures for Chooms!'s people and places",
-    "Create the Nexus pages for EDGEmobile and Chooms!"
+    "Create the Nexus pages for EDGEmobile and Chooms!",
+    "Optional: photo mode pictures for Chooms!'s people and places (for C4)"
    ],
    "risks": [
     "Never tested on an iPhone, only Android",
-    "Only Corpo saves tested",
-    "Relies on Cloudflare quick tunnels"
-   ]
+    "Only Corpo saves tested; some character ids are unverified (River, Kerry's contact)",
+    "Relies on Cloudflare quick tunnels: a private web address",
+    "How long the story read takes in the game is unverified (about 350 calls)",
+    "A game patch that renames quest paths would need Chooms!'s story file updated"
+   ],
+   "checkedBy": "EDGEmobile session, 2026-11-16"
   },
   {
    "name": "EDGEmods",
@@ -3019,8 +3035,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "V9",
-      "title": "Triggers while scanning",
-      "status": "done"
+      "title": "Triggers while scanning (round 3)",
+      "status": "built, tests pending"
      },
      {
       "id": "V10",
@@ -3072,6 +3088,13 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Spike test: round 3 (hold RT while scanning)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built in REDnode 0.65.1 with VATS spike 0.4.0; no recorded result"
+    },
+    {
      "name": "V13 (the VATS tab)",
      "steps": 9,
      "status": "partly run",
@@ -3112,8 +3135,9 @@ window.EDGE_STATUS = {
    ],
    "risks": [
     "One redscript compile error stops every script in the game; it happened on 2026-11-14",
-    "Spike statuses are a reading of REDnode's docs/vats.md, which has no status column"
-   ]
+    "Spikes V1 to V12 are checked by the REDnode session; V13 onward is VATS-repo work nobody has confirmed"
+   ],
+   "checkedBy": "REDnode session (V1 to V12 only), 2026-11-16"
   },
   {
    "name": "EDGErepo",
@@ -3178,8 +3202,8 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
-   "lastCommit": "2026-11-16",
-   "commitsSinceTag": 28,
+   "lastCommit": "2026-11-17",
+   "commitsSinceTag": 29,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"

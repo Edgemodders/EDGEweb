@@ -17,6 +17,7 @@ EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a ne
 - All its data is one file, `docs/assets/dashboard/status.js` (`window.EDGE_STATUS = {...};`, plain JSON after the `=`). The page only draws it. A session reads that file, not the page.
 - `python tools/dashboard/refresh.py` rewrites what a script can read: `issues` (through `gh`) and each tool's version, last tag, last commit and commits since the tag (from the sibling checkouts). Everything else is curated by hand from each tool's `CLAUDE.md`, `docs/testing.md` and changelog: `plan.phases`, `handTests`, `ownerSpotTests`, `waitingOn`, `ownerActions`, `risks`, `sessions`. Set `asOf` when the curated parts were checked too; the page warns when it is more than 3 days old.
 - Phase and test statuses use fixed words, which pick the colour: `done`, `built, tests pending`, `in progress`, `planned` for phases; `passed`, `not run`, `partly run`, `failed` for tests. Never mark a phase done or a test passed unless the tool's repo says so.
+- `checkedBy` names the tool's own session that confirmed its entry, and when. An entry without it is a first pass by a reader, and the card says so.
 - `sessions` holds the local session names seen in `ListAgents` when the file was written. Names change when a session restarts, so they are a hint to match on, not an address.
 - Bump the `?v=` on the `status.js` script tag in `dashboard.html` when the file changes, as with `site.css`.
 

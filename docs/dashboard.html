@@ -203,7 +203,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=1"></script>
+<script src="assets/dashboard/status.js?v=2"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
@@ -246,6 +246,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
     k(notRun.length, "Hand tests not passed", "of " + tests.length + " listed", "#tests", notRun.length > 0) +
     k(pend, "Phases built, untested", "of " + phases.length + " phases in all plans", "#plans", false) +
     k(crossWaits.length, "Waits on another tool", new Set(crossWaits.map(function (w) { return w.tool; })).size + " tools are waiting", "#waiting", false) +
+    k(tools.filter(function (t) { return t.checkedBy; }).length + "/" + tools.length, "Entries checked", "by the tool's own session", "#tools", false) +
     k(tools.filter(function (t) { return t.commitsSinceTag >= 5 && t.lastTag; }).length, "Tools with unreleased work", "5 or more commits since their last release", "#tools", false);
 
   // ---- owner
@@ -317,7 +318,8 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
       "<dt>Released</dt><dd>" + rel + "</dd>" +
       "<dt>Last commit</dt><dd" + (d > 14 ? ' class="old"' : "") + ">" + esc(t.lastCommit || "") + (d != null ? " &middot; " + d + " d ago" : "") + "</dd>" +
       "<dt>Requests</dt><dd>" + open + " open on it</dd>" + needs + risks +
-      "<dt>Session</dt><dd>" + sess(t) + "</dd></dl>" +
+      "<dt>Session</dt><dd>" + sess(t) + "</dd>" +
+      "<dt>Checked</dt><dd" + (t.checkedBy ? "" : ' class="old"') + ">" + esc(t.checkedBy || "Not yet by its own session: a first pass") + "</dd></dl>" +
       '<div class="links"><a href="' + GH + t.name + '">Repo</a><a href="' + GH + t.name + '/issues">Issues</a>' + (t.wiki ? '<a href="' + esc(t.wiki) + '">Wiki</a>' : "") + "</div></article>"; }).join("");
   table("sessTable", ["Tool", "Local session names seen", "Checkout folder", "Tests and plan live in"], tools.map(function (t) {
     return "<tr><td class='m'>" + tlink(t.name) + "</td><td>" + sess(t) + "</td><td class='m'>" + esc(t.name) + "</td><td class='m'>" + esc((t.plan && t.plan.source) || "CLAUDE.md") + "</td></tr>"; }), "");
