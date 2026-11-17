@@ -1608,9 +1608,10 @@ window.EDGE_STATUS = {
    "risks": [
     "A made piece of clothing can come out off-color until the bake is checked in the game (the first made hat was too dark)",
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
-    "Two of its four open requests (#1, #2) are done and only left open; #3 and #9 are real"
+    "Two of its five open requests (#1, #2) are done and only left open; #3, #9 and #12 are real",
+    "EDGEfab 0.1.0 may wait on #12 (game materials on a prop's parts, M4), new on 2026-11-17 and not started; the owner decides after EDGEfab's in-game check"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-16"
+   "checkedBy": "EDGEmat session, 2026-11-17"
   },
   {
    "name": "EDGEquest",
