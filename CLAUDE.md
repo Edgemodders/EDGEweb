@@ -11,6 +11,15 @@ EDGEweb is the website for https://edgemodders.ai, the home of EDGEmodders: a ne
 - Deployed by `.github/workflows/pages.yml`. Custom domain `edgemodders.ai` is set in Settings > Pages, not with a CNAME file (Actions deploys ignore it).
 - Tool status lines on the cards come from each tool's README and CLAUDE.md. Keep them current and honest; mark anything unbuilt as such. The transcript in "The loop" is labelled illustrative and must stay labelled until the loop works end to end.
 
+## Dashboard (the manager's view)
+
+- `docs/dashboard.html` is the EDGE dashboard at https://edgemodders.ai/dashboard.html: every tool's build plan, last release, open requests, tests, who waits on whom, what waits on the owner, and which local Claude session works on each tool. It is not in the site's nav and is marked `noindex`. It is also the entry point for a managing session that reviews the whole platform and messages the tools' sessions.
+- All its data is one file, `docs/assets/dashboard/status.js` (`window.EDGE_STATUS = {...};`, plain JSON after the `=`). The page only draws it. A session reads that file, not the page.
+- `python tools/dashboard/refresh.py` rewrites what a script can read: `issues` (through `gh`) and each tool's version, last tag, last commit and commits since the tag (from the sibling checkouts). Everything else is curated by hand from each tool's `CLAUDE.md`, `docs/testing.md` and changelog: `plan.phases`, `handTests`, `ownerSpotTests`, `waitingOn`, `ownerActions`, `risks`, `sessions`. Set `asOf` when the curated parts were checked too; the page warns when it is more than 3 days old.
+- Phase and test statuses use fixed words, which pick the colour: `done`, `built, tests pending`, `in progress`, `planned` for phases; `passed`, `not run`, `partly run`, `failed` for tests. Never mark a phase done or a test passed unless the tool's repo says so.
+- `sessions` holds the local session names seen in `ListAgents` when the file was written. Names change when a session restarts, so they are a hint to match on, not an address.
+- Bump the `?v=` on the `status.js` script tag in `dashboard.html` when the file changes, as with `site.css`.
+
 ## Wiki (curated by Claude sessions)
 
 - `docs/wiki/` is the EDGEmodders wiki at https://edgemodders.ai/wiki/. Claude sessions write and curate it; the community suggests changes on Discord or in issues (see `docs/wiki/contribute.md`). Terminology: the whole suite is the **EDGE platform**; REDagent, REDnode, REDcode, EDGEdeck and REDbridge are its core toolkits; EDGEbuilder, EDGEwave, EDGEmat, EDGEquest, EDGEhack, EDGEkit and EDGEchat build on them. Every section a page names must be in `wiki_sections`, or its pages drop out of the sidebar.

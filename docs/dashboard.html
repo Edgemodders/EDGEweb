@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EDGE dashboard · EDGEmodders</title>
+<meta name="description" content="The state of every EDGE tool at a glance: build plans, releases, open requests, tests and who is waiting on whom.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/brand/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
+<style>
+/* Dashboard only. Tokens come from site.css. Status colours always carry a word beside them. */
+.wrap { max-width: 1240px; }
+header.hero.short { padding-block: 44px 20px; }
+header.hero.short h1 { font-size: clamp(36px, 7vw, 68px); }
+.asof { font-family: var(--mono); font-size: 13px; color: var(--dim); margin-top: 14px; }
+.asof b { color: var(--fg); font-weight: 500; }
+.stale { color: var(--red); }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 26px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px 12px; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%); text-decoration: none; color: inherit; display: block; }
+a.kpi:hover { border-color: var(--cyan); }
+.kpi .n { font-family: var(--display); font-weight: 700; font-size: 44px; line-height: 1; color: var(--fg); }
+.kpi .l { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); margin-top: 8px; }
+.kpi .s { font-size: 15px; color: var(--dim); margin-top: 2px; }
+.kpi.attn { border-color: rgba(252,238,10,.55); } .kpi.attn .n { color: var(--yellow); }
+
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; }
+.panel h3 { margin-bottom: 10px; }
+.panel ul { max-width: none; }
+.sub { color: var(--dim); font-size: 16px; margin: -2px 0 18px; max-width: 80ch; }
+
+/* status words */
+.stw { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.stw::before { content: ""; display: inline-block; width: 9px; height: 9px; margin-right: 6px; vertical-align: -1px; background: var(--sw, var(--dim)); }
+.stw.k-done { --sw: var(--green); } .stw.k-test { --sw: var(--yellow); } .stw.k-prog { --sw: repeating-linear-gradient(135deg, var(--cyan) 0 2px, transparent 2px 4px); } .stw.k-plan { --sw: transparent; } .stw.k-plan::before { outline: 1px solid var(--dim); outline-offset: -1px; }
+.stw.k-bad { --sw: var(--red); }
+
+/* plan meters: one row per tool, one block per phase */
+.keyrow { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 14px; color: var(--dim); }
+.plans { display: grid; gap: 2px; }
+.plan { display: grid; grid-template-columns: 150px minmax(160px, 1fr) 250px; gap: 6px 16px; align-items: center; padding: 9px 12px; background: var(--panel); border: 1px solid var(--line); }
+.plan .who { font-family: var(--display); font-weight: 600; letter-spacing: .04em; }
+.plan .who a { color: var(--fg); text-decoration: none; } .plan .who a:hover { color: var(--cyan); }
+.plan .who small { display: block; font-family: var(--mono); font-weight: 400; font-size: 11px; color: var(--dim); letter-spacing: .04em; }
+.segs { display: flex; gap: 2px; height: 18px; }
+.seg { flex: 1 1 0; min-width: 5px; background: var(--panel-2); border: 1px solid var(--line); cursor: default; }
+.seg.k-done { background: var(--green); border-color: var(--green); }
+.seg.k-test { background: var(--yellow); border-color: var(--yellow); }
+.seg.k-prog { background: repeating-linear-gradient(135deg, var(--cyan) 0 3px, transparent 3px 6px); border-color: var(--cyan); }
+.seg:hover, .seg:focus-visible { outline: 2px solid #fff; outline-offset: 1px; }
+.plan .fig { font-family: var(--mono); font-size: 12px; color: var(--dim); }
+.plan .fig b { color: var(--fg); font-weight: 500; }
+.plan .none { color: var(--dim); font-size: 15px; }
+@media (max-width: 760px) { .plan { grid-template-columns: 1fr; } }
+
+/* ranked bars */
+.bars { display: grid; gap: 6px; }
+.barrow { display: grid; grid-template-columns: 110px 1fr 28px; gap: 10px; align-items: center; font-family: var(--mono); font-size: 12px; }
+.barrow .track { height: 12px; }
+.barrow .fill { height: 100%; background: var(--cyan); border-radius: 0 4px 4px 0; min-width: 2px; }
+.barrow .v { color: var(--fg); text-align: right; }
+.barrow a { color: var(--dim); text-decoration: none; } .barrow a:hover { color: var(--cyan); }
+
+/* tables */
+.tw { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); }
+table.d { border-collapse: collapse; width: 100%; font-size: 16px; }
+table.d th { font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; position: sticky; top: 0; background: var(--panel); }
+table.d td { padding: 8px 12px; border-bottom: 1px solid rgba(38,44,61,.6); vertical-align: top; }
+table.d tr:last-child td { border-bottom: 0; }
+table.d td.m { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+table.d td.num { font-family: var(--mono); font-size: 13px; text-align: right; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.chip { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; padding: 4px 10px; border: 1px solid var(--line); background: var(--panel); color: var(--dim); cursor: pointer; }
+.chip:hover { color: var(--cyan); border-color: var(--cyan); }
+.chip[aria-pressed="true"] { color: #08090d; background: var(--yellow); border-color: var(--yellow); }
+.old { color: var(--yellow); }
+
+/* tool cards */
+.tgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+.tcard { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; clip-path: polygon(0 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% 100%, 0 100%); scroll-margin-top: 60px; }
+.tcard h3 { color: var(--fg); margin: 0; font-size: 20px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.tcard h3 .ver { font-family: var(--mono); font-size: 12px; color: var(--yellow); letter-spacing: .04em; font-weight: 400; text-transform: none; }
+.tcard .what { color: var(--dim); font-size: 16px; margin: 2px 0 10px; }
+.tcard dl { display: grid; grid-template-columns: 96px 1fr; gap: 3px 10px; margin: 0; font-size: 15px; }
+.tcard dt { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); padding-top: 3px; }
+.tcard dd { margin: 0; }
+.tcard .links { margin-top: 10px; font-family: var(--mono); font-size: 12px; display: flex; gap: 14px; flex-wrap: wrap; }
+.sess { font-family: var(--mono); font-size: 12px; color: var(--cyan); }
+.nosess { color: var(--dim); }
+
+#tip { position: fixed; z-index: 20; pointer-events: none; background: #05060a; border: 1px solid var(--cyan); padding: 6px 10px; font-size: 15px; max-width: 320px; display: none; }
+#tip b { font-family: var(--mono); font-size: 12px; color: var(--yellow); font-weight: 500; }
+pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px; overflow-x: auto; font-family: var(--mono); font-size: 13px; color: #c3c9d8; margin: 0 0 14px; }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span><a href="./" style="color:inherit;text-decoration:none"><span class="dot"></span><b>EDGEMODDERS</b></a> / DASHBOARD</span>
+  <nav>
+    <a href="#owner">Owner</a><a href="#plans">Plans</a><a href="#requests">Requests</a><a href="#tests">Tests</a><a href="#waiting">Waiting</a><a href="#tools">Tools</a><a href="#agents">For agents</a><a href="platform.html">Platform</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+<header class="hero short">
+  <div class="eyebrow">// The EDGE platform &middot; manager's view</div>
+  <h1>EDGE <span>dashboard.</span></h1>
+  <p class="lede">Every EDGE tool on one page: where its build plan stands, what it last released, what other tools have asked of it, which tests are waiting, and who is waiting on whom.</p>
+  <div class="asof" id="asof"></div>
+  <div class="kpis" id="kpis"></div>
+</header>
+
+<section id="owner">
+  <h2><span class="id">01</span> Waiting on the owner</h2>
+  <div class="rule"></div>
+  <p class="sub">Things only the owner can do: spot tests, decisions, accounts and release go-aheads. Nothing here moves until the owner acts.</p>
+  <div class="tw"><table class="d" id="ownerTable"></table></div>
+</section>
+
+<section id="plans">
+  <h2><span class="id">02</span> Build plans</h2>
+  <div class="rule"></div>
+  <p class="sub">One row per tool, one block per phase of its own build plan, in the plan's order. Hover a block for the phase. Plans differ in size, so compare a tool with itself, not with its neighbours.</p>
+  <div class="keyrow">
+    <span class="stw k-done">Done</span><span class="stw k-test">Built, tests pending</span><span class="stw k-prog">In progress</span><span class="stw k-plan">Planned</span>
+  </div>
+  <div class="plans" id="planRows"></div>
+</section>
+
+<section id="requests">
+  <h2><span class="id">03</span> Open requests</h2>
+  <div class="rule"></div>
+  <p class="sub">Open issues across the Edgemodders repos. Most are requests one tool's session has filed on another. A request older than 14 days is marked.</p>
+  <div class="cols">
+    <div class="panel"><h3>Open, by the tool that has to build it</h3><div class="bars" id="reqBars"></div></div>
+    <div class="panel"><h3>Oldest still open</h3><ul id="reqOldest"></ul></div>
+  </div>
+  <div class="filters" id="reqFilters" style="margin-top:18px"></div>
+  <div class="tw"><table class="d" id="reqTable"></table></div>
+</section>
+
+<section id="tests">
+  <h2><span class="id">04</span> Tests</h2>
+  <div class="rule"></div>
+  <p class="sub">Hand tests each tool lists, and the owner's spot tests. A round "by script" was run by a Claude session with real mouse and key events and nobody watching; the owner's spot tests are the look by hand.</p>
+  <div class="filters" id="testFilters"></div>
+  <div class="tw"><table class="d" id="testTable"></table></div>
+</section>
+
+<section id="waiting">
+  <h2><span class="id">05</span> Who is waiting on whom</h2>
+  <div class="rule"></div>
+  <p class="sub">What each tool says it is blocked on or waiting for, by who has to move.</p>
+  <div class="tw"><table class="d" id="waitTable"></table></div>
+</section>
+
+<section id="tools">
+  <h2><span class="id">06</span> The tools</h2>
+  <div class="rule"></div>
+  <div class="tgrid" id="toolCards"></div>
+</section>
+
+<section id="agents">
+  <h2><span class="id">07</span> For a managing agent</h2>
+  <div class="rule"></div>
+  <div class="cols">
+    <div class="panel">
+      <h3>Reading this page</h3>
+      <p>Everything shown here comes from one file, <code>docs/assets/dashboard/status.js</code>, in the EDGEweb repo. Read that file, not this page's markup. Each tool's entry has its plan, tests, what it waits on, and the names of the local Claude sessions that work on it.</p>
+      <p>The file is a snapshot. Before acting on a line, check it against the tool's own <code>CLAUDE.md</code>, <code>docs/testing.md</code> and open issues: those are the truth, this is the summary.</p>
+    </div>
+    <div class="panel">
+      <h3>Reaching a session</h3>
+      <ul>
+        <li>Run <code>ListAgents</code>. Session names change when a session restarts (<code>edgedir-da</code> became <code>edgedir-49</code>), so match on the tool's name, not the exact name stored here.</li>
+        <li>Send with <code>SendMessage</code>. Say what you want in the first line, and name the issue or the step.</li>
+        <li>Ask and nudge; do not instruct. A session answers to its own user and its repo's rules. Never ask one to do what you were refused permission to do.</li>
+        <li>A new request between tools is a GitHub issue on the tool that has to build it, labelled <code>request</code>. A message is for questions and reminders.</li>
+        <li>No session listed for a tool means none was running when this was written: tell the owner, who can start one.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Keeping it current</h3>
+      <p>From the EDGEweb folder, with the sibling checkouts beside it:</p>
+      <pre class="how">python tools/dashboard/refresh.py</pre>
+      <p>That rewrites the facts a script can read (open issues, versions, tags, commit dates). The rest (plans, tests, waiting, owner's queue, sessions) is curated by hand in the same file: update a tool's entry when its session reports a change, and set <code>asOf</code>.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:22px">Sessions by tool</h3>
+  <div class="tw"><table class="d" id="sessTable"></table></div>
+</section>
+
+<section>
+  <p class="sub" style="margin-top:40px">EDGEmodders is a community project. Not affiliated with CD PROJEKT RED. Built with thanks to WolvenKit and the wider Cyberpunk 2077 modding community.</p>
+</section>
+
+</div>
+<div id="tip" role="tooltip"></div>
+
+<script src="assets/dashboard/status.js?v=1"></script>
+<script>
+(function () {
+  var S = window.EDGE_STATUS;
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  if (!S) { $("asof").textContent = "The status file did not load (assets/dashboard/status.js)."; return; }
+  var tools = S.tools, issues = S.issues || [];
+  var GH = "https://github.com/Edgemodders/";
+  var days = function (d) { return d ? Math.round((new Date(S.asOf) - new Date(d)) / 864e5) : null; };
+  var cls = function (st) { return "k-" + kind(st); };
+  var kind = function (st) { st = (st || "").toLowerCase(); return st.indexOf("done") === 0 || st === "passed" ? "done" : st.indexOf("test") >= 0 ? "test" : st.indexOf("progress") >= 0 || st === "partly run" ? "prog" : st === "failed" ? "bad" : "plan"; };
+  var word = function (st) { return '<span class="stw ' + cls(st) + '">' + esc(st) + "</span>"; };
+  var anchor = function (n) { return "t-" + n.toLowerCase(); };
+  var tlink = function (n) { return '<a href="#' + anchor(n) + '">' + esc(n) + "</a>"; };
+  var table = function (id, head, rows, empty) {
+    $(id).innerHTML = "<thead><tr>" + head.map(function (h) { return "<th>" + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      (rows.length ? rows.join("") : '<tr><td colspan="' + head.length + '" style="color:var(--dim)">' + empty + "</td></tr>") + "</tbody>";
+  };
+
+  // ---- as of, and the headline numbers
+  var age = Math.round((Date.now() - new Date(S.asOf)) / 864e5);
+  $("asof").innerHTML = "As of <b>" + esc(S.asOf) + "</b> &middot; " + (age > 3 ? '<span class="stale">' + age + " days old: refresh before trusting it</span>" : "current") + " &middot; " + tools.length + " tools &middot; source <b>docs/assets/dashboard/status.js</b>";
+  var tests = [], spots = [], waits = [], owner = [];
+  tools.forEach(function (t) {
+    (t.handTests || []).forEach(function (x) { tests.push({ tool: t.name, kind: "Hand test", name: x.name, steps: x.steps, status: x.status, ranBy: x.ranBy, note: x.note }); });
+    (t.ownerSpotTests || []).forEach(function (x) { spots.push({ tool: t.name, kind: "Owner spot test", name: (x.id ? x.id + " " : "") + x.feature, steps: null, status: x.status, ranBy: "owner", note: "" }); });
+    (t.waitingOn || []).forEach(function (x) { waits.push({ tool: t.name, who: x.who, what: x.what, ref: x.ref }); });
+    (t.ownerActions || []).forEach(function (x) { owner.push({ tool: t.name, what: x }); });
+  });
+  var notRun = tests.filter(function (x) { return kind(x.status) !== "done"; });
+  var spotsOpen = spots.filter(function (x) { return kind(x.status) !== "done"; });
+  var phases = [].concat.apply([], tools.map(function (t) { return (t.plan && t.plan.phases) || []; }));
+  var pend = phases.filter(function (p) { return kind(p.status) === "test"; }).length;
+  var oldReq = issues.filter(function (i) { return days(i.updated) > 14; }).length;
+  var crossWaits = waits.filter(function (w) { return w.who !== "owner"; });
+  var k = function (n, l, s, href, attn) { return '<a class="kpi' + (attn ? " attn" : "") + '" href="' + href + '"><div class="n">' + n + '</div><div class="l">' + l + '</div><div class="s">' + s + "</div></a>"; };
+  $("kpis").innerHTML =
+    k(owner.length + spotsOpen.length, "Waiting on the owner", owner.length + " actions, " + spotsOpen.length + " spot tests", "#owner", owner.length + spotsOpen.length > 0) +
+    k(issues.length, "Open requests", oldReq + " untouched for 14+ days", "#requests", false) +
+    k(notRun.length, "Hand tests not passed", "of " + tests.length + " listed", "#tests", notRun.length > 0) +
+    k(pend, "Phases built, untested", "of " + phases.length + " phases in all plans", "#plans", false) +
+    k(crossWaits.length, "Waits on another tool", new Set(crossWaits.map(function (w) { return w.tool; })).size + " tools are waiting", "#waiting", false) +
+    k(tools.filter(function (t) { return t.commitsSinceTag >= 5 && t.lastTag; }).length, "Tools with unreleased work", "5 or more commits since their last release", "#tools", false);
+
+  // ---- owner
+  var ownerRows = owner.map(function (o) { return "<tr><td class='m'>" + tlink(o.tool) + "</td><td>Action</td><td>" + esc(o.what) + "</td></tr>"; })
+    .concat(spotsOpen.map(function (s) { return "<tr><td class='m'>" + tlink(s.tool) + "</td><td>Spot test</td><td>" + esc(s.name) + "</td></tr>"; }));
+  table("ownerTable", ["Tool", "Kind", "What"], ownerRows, "Nothing is waiting on the owner.");
+
+  // ---- plans
+  $("planRows").innerHTML = tools.map(function (t) {
+    var ph = (t.plan && t.plan.phases) || [];
+    var c = { done: 0, test: 0, prog: 0, plan: 0, bad: 0 };
+    ph.forEach(function (p) { c[kind(p.status)]++; });
+    var bar = ph.length ? '<div class="segs" role="img" aria-label="' + esc(t.name + ": " + c.done + " of " + ph.length + " phases done") + '">' + ph.map(function (p) {
+      return '<span class="seg ' + cls(p.status) + '" tabindex="0" data-tip="' + esc("<b>" + esc(p.id) + "</b> " + esc(p.title) + "<br>" + esc(p.status)) + '"></span>'; }).join("") + "</div>"
+      : '<div class="none">' + esc(t.planNote || "No phased plan in its docs.") + "</div>";
+    var fig = ph.length ? "<b>" + c.done + "</b> of " + ph.length + " done" + (c.test ? " &middot; " + c.test + " testing" : "") + (c.prog ? " &middot; " + c.prog + " in progress" : "") : "";
+    var next = t.nextRelease && t.nextRelease.version ? "<br>next: <b>" + esc(t.nextRelease.version) + "</b>" : "";
+    return '<div class="plan"><div class="who">' + tlink(t.name) + "<small>" + esc(t.stage || "") + "</small></div>" + bar + '<div class="fig">' + fig + next + "</div></div>";
+  }).join("");
+
+  // ---- requests
+  var byRepo = {};
+  issues.forEach(function (i) { byRepo[i.repo] = (byRepo[i.repo] || 0) + 1; });
+  var ranked = Object.keys(byRepo).sort(function (a, b) { return byRepo[b] - byRepo[a] || a.localeCompare(b); });
+  var max = Math.max.apply(null, ranked.map(function (r) { return byRepo[r]; }).concat([1]));
+  $("reqBars").innerHTML = ranked.map(function (r) {
+    return '<div class="barrow"><a href="' + GH + r + '/issues">' + esc(r) + '</a><div class="track"><div class="fill" style="width:' + (byRepo[r] / max * 100) + '%" data-tip="' + esc("<b>" + r + "</b> " + byRepo[r] + " open") + '"></div></div><span class="v">' + byRepo[r] + "</span></div>"; }).join("");
+  var sorted = issues.slice().sort(function (a, b) { return a.updated < b.updated ? -1 : 1; });
+  $("reqOldest").innerHTML = sorted.slice(0, 6).map(function (i) {
+    return '<li><a href="' + GH + i.repo + "/issues/" + i.number + '">' + esc(i.repo) + " #" + i.number + "</a> " + esc(i.title) + ' <span class="old">(' + days(i.updated) + " days)</span></li>"; }).join("");
+  var reqFilter = "All";
+  function drawReq() {
+    $("reqFilters").innerHTML = ["All"].concat(ranked).map(function (r) { return '<button class="chip" aria-pressed="' + (r === reqFilter) + '" data-r="' + esc(r) + '">' + esc(r) + (r === "All" ? " " + issues.length : " " + byRepo[r]) + "</button>"; }).join("");
+    table("reqTable", ["Request", "Title", "Label", "Last touched"], sorted.filter(function (i) { return reqFilter === "All" || i.repo === reqFilter; }).map(function (i) {
+      var d = days(i.updated);
+      return "<tr><td class='m'><a href='" + GH + i.repo + "/issues/" + i.number + "'>" + esc(i.repo) + " #" + i.number + "</a></td><td>" + esc(i.title) + "</td><td class='m'>" + esc((i.labels || []).join(", ") || "none") + "</td><td class='m" + (d > 14 ? " old" : "") + "'>" + esc(i.updated) + " &middot; " + d + " d</td></tr>"; }), "No open requests.");
+  }
+  $("reqFilters").addEventListener("click", function (e) { var b = e.target.closest(".chip"); if (b) { reqFilter = b.dataset.r; drawReq(); } });
+  drawReq();
+
+  // ---- tests
+  var all = tests.concat(spots), testFilter = "Not passed";
+  function drawTests() {
+    var opts = ["Not passed", "All", "Hand test", "Owner spot test"];
+    $("testFilters").innerHTML = opts.map(function (o) { return '<button class="chip" aria-pressed="' + (o === testFilter) + '" data-r="' + o + '">' + o + "</button>"; }).join("");
+    var rows = all.filter(function (x) { return testFilter === "All" || (testFilter === "Not passed" ? kind(x.status) !== "done" : x.kind === testFilter); });
+    table("testTable", ["Tool", "Kind", "Test", "Steps", "Status", "Run by", "Note"], rows.map(function (x) {
+      return "<tr><td class='m'>" + tlink(x.tool) + "</td><td class='m'>" + x.kind + "</td><td>" + esc(x.name) + "</td><td class='num'>" + (x.steps || "") + "</td><td>" + word(x.status) + "</td><td class='m'>" + esc(x.ranBy || "") + "</td><td>" + esc(x.note || "") + "</td></tr>"; }), "No tests match.");
+  }
+  $("testFilters").addEventListener("click", function (e) { var b = e.target.closest(".chip"); if (b) { testFilter = b.dataset.r; drawTests(); } });
+  drawTests();
+
+  // ---- waiting
+  waits.sort(function (a, b) { return a.who.localeCompare(b.who) || a.tool.localeCompare(b.tool); });
+  table("waitTable", ["Has to move", "Waiting tool", "For what", "Reference"], waits.map(function (w) {
+    var known = tools.some(function (t) { return t.name === w.who; });
+    return "<tr><td class='m'>" + (known ? tlink(w.who) : esc(w.who)) + "</td><td class='m'>" + tlink(w.tool) + "</td><td>" + esc(w.what) + "</td><td class='m'>" + esc(w.ref || "") + "</td></tr>"; }), "No tool reports waiting on another.");
+
+  // ---- tool cards, sessions
+  var sess = function (t) { return (t.sessions && t.sessions.length) ? t.sessions.map(function (s) { return '<span class="sess">' + esc(s) + "</span>"; }).join(", ") : '<span class="nosess">none running</span>'; };
+  $("toolCards").innerHTML = tools.map(function (t) {
+    var d = days(t.lastCommit), open = byRepo[t.name] || 0;
+    var rel = t.lastTag ? esc(t.lastTag) + (t.lastTagDate ? " &middot; " + esc(t.lastTagDate) : "") + (t.commitsSinceTag ? " &middot; " + t.commitsSinceTag + " commits since" : "") : "none yet";
+    var risks = (t.risks || []).length ? "<dt>Watch</dt><dd>" + t.risks.map(esc).join("<br>") + "</dd>" : "";
+    var needs = t.nextRelease && (t.nextRelease.needs || []).length ? "<dt>Next needs</dt><dd>" + t.nextRelease.needs.map(esc).join("<br>") + "</dd>" : "";
+    return '<article class="tcard" id="' + anchor(t.name) + '"><h3>' + esc(t.name) + ' <span class="ver">' + esc(t.version || "") + "</span></h3>" +
+      '<p class="what">' + esc(t.role || "") + "</p><dl>" +
+      "<dt>Stage</dt><dd>" + esc(t.stage || "") + "</dd>" +
+      "<dt>Released</dt><dd>" + rel + "</dd>" +
+      "<dt>Last commit</dt><dd" + (d > 14 ? ' class="old"' : "") + ">" + esc(t.lastCommit || "") + (d != null ? " &middot; " + d + " d ago" : "") + "</dd>" +
+      "<dt>Requests</dt><dd>" + open + " open on it</dd>" + needs + risks +
+      "<dt>Session</dt><dd>" + sess(t) + "</dd></dl>" +
+      '<div class="links"><a href="' + GH + t.name + '">Repo</a><a href="' + GH + t.name + '/issues">Issues</a>' + (t.wiki ? '<a href="' + esc(t.wiki) + '">Wiki</a>' : "") + "</div></article>"; }).join("");
+  table("sessTable", ["Tool", "Local session names seen", "Checkout folder", "Tests and plan live in"], tools.map(function (t) {
+    return "<tr><td class='m'>" + tlink(t.name) + "</td><td>" + sess(t) + "</td><td class='m'>" + esc(t.name) + "</td><td class='m'>" + esc((t.plan && t.plan.source) || "CLAUDE.md") + "</td></tr>"; }), "");
+
+  // ---- one tooltip for every mark
+  var tip = $("tip");
+  function show(el, x, y) { tip.innerHTML = el.dataset.tip; tip.style.display = "block"; var w = tip.offsetWidth; tip.style.left = Math.max(8, Math.min(window.innerWidth - w - 8, x + 12)) + "px"; tip.style.top = (y + 16) + "px"; }
+  document.addEventListener("mousemove", function (e) { var el = e.target.closest("[data-tip]"); if (el) show(el, e.clientX, e.clientY); else tip.style.display = "none"; });
+  document.addEventListener("focusin", function (e) { var el = e.target.closest("[data-tip]"); if (el) { var r = el.getBoundingClientRect(); show(el, r.left, r.bottom - 12); } });
+  document.addEventListener("focusout", function () { tip.style.display = "none"; });
+})();
+</script>
+</body>
+</html>
