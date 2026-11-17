@@ -2459,7 +2459,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.21",
+   "version": "0.0.22",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2601,13 +2601,13 @@ window.EDGE_STATUS = {
      "name": "D5d Play in game, in VS Code",
      "steps": 13,
      "status": "not run",
-     "note": "On 0.0.21, with a stand-in for the player; no game needed"
+     "note": "On 0.0.22, with a stand-in for the player; no game needed"
     },
     {
      "name": "D5 in the game",
      "steps": 10,
      "status": "not run",
-     "note": "In the game, on the owner's PC: EDGEdir 0.0.21 with EDGEdir Player 0.1.0; answers G1 to G7"
+     "note": "In the game, on the owner's PC: EDGEdir 0.0.22 with EDGEdir Player 0.1.0; answers G1 to G7"
     }
    ],
    "ownerSpotTests": [
