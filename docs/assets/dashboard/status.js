@@ -2503,7 +2503,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D6",
-      "title": "Audio, camera, weather",
+      "title": "Audio, camera, weather (plan written 2026-11-17, waits for the owner's review)",
       "status": "planned"
      },
      {
@@ -2707,6 +2707,7 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Run the in-game test of Play in game (10 steps: docs/testing.md, D5 in the game)",
     "Run spot tests S1 to S13",
+    "Review D6's plan and its seven questions (docs/d6-audio-camera-weather.md)",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
