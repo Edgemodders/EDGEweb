@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.66.10 (test build)",
+   "version": "0.67.0 (test build)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -633,6 +633,11 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+      "id": "AK",
+      "title": "App keys: a key per app shows only it with the cursor, or hides it",
+      "status": "built, tests pending"
+     },
+     {
       "id": "SN0-SN5",
       "title": "Semi-native overlay apps",
       "status": "planned"
@@ -652,8 +657,9 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The Weather (#46) test in the game: not run; the next test build, 0.66.11, carries it",
-     "The 'Update REDbridge while it runs' fix needs its retest in the game (it is in no build yet)",
+     "The App keys test in the game (0.67.0): not run",
+     "The Weather (#46) test in the game: not run; 0.67.0 carries it",
+     "The 'Update REDbridge while it runs' fix needs its retest in the game; 0.67.0 carries it",
      "S24's street lamp step is open: decide whether it blocks the gate or moves to N2",
      "world.jumpWorkspot answering false outside a workspot: untested",
      "Admin Tools has unreleased changes (0.2.0): release it first or the run stops",
@@ -662,18 +668,25 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "App keys, REDnode 0.67.0",
+     "steps": 9,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Stand-in checks passed (24, dev and packaged host); waiting for the owner to say which machine gets the build"
+    },
+    {
      "name": "Weather (#46), REDnode 0.66.10",
      "steps": 10,
      "status": "not run",
      "ranBy": null,
-     "note": "Stand-in checks passed; the laptop's update zip is ready"
+     "note": "Stand-in checks passed; 0.67.0 carries it too"
     },
     {
      "name": "Update REDbridge while it runs (W3 retest)",
      "steps": null,
      "status": "failed",
      "ranBy": "owner",
-     "note": "Found 2026-11-16: the old copy kept running. Fixed since, not retested"
+     "note": "Found 2026-11-16: the old copy kept running. Fixed in 0.67.0, not retested"
     },
     {
      "name": "A written workspot: the call (#46), 0.66.9",
@@ -715,8 +728,8 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Run the Weather (#46) test on the laptop",
-     "ref": "docs/world.md"
+     "what": "Say which machine gets REDnode 0.67.0, then run its App keys, Weather and Update REDbridge tests",
+     "ref": "docs/overlay.md, docs/world.md"
     },
     {
      "who": "owner",
@@ -725,7 +738,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the Weather (#46) test (the laptop's update zip is ready)",
+    "Run the App keys, Weather (#46) and Update REDbridge tests on 0.67.0",
     "Release Admin Tools 0.2.0",
     "Start the next release run once the gate is met",
     "Agree the order after EDGEdir's requests (Console resizing, N2 and others are asked for, not built)"
@@ -735,7 +748,7 @@ window.EDGE_STATUS = {
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-16"
+   "checkedBy": "REDnode session, 2026-11-17"
   },
   {
    "name": "REDcode",
