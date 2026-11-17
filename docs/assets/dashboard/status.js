@@ -2600,7 +2600,7 @@ window.EDGE_STATUS = {
      "name": "D5d Play in game, in VS Code",
      "steps": 13,
      "status": "passed",
-     "note": "13 of 13 on 0.0.22, with a stand-in for the player; one fix from its notes in 0.0.23, not run. The copy of the player into the game's folder was not run",
+     "note": "13 of 13 on 0.0.22, with a stand-in for the player; the fix of 0.0.23 from its notes passed a rerun. The copy of the player into the game's folder was not run",
      "ranBy": "script"
     },
     {
