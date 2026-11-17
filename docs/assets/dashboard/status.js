@@ -2409,7 +2409,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.13",
+   "version": "0.0.14",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2476,7 +2476,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "D4a's failed steps fixed and rerun: the blend is not drawn in the view",
      "The owner's spot tests S1 to S10 (about 30 minutes): none run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page"
@@ -2521,16 +2520,16 @@ window.EDGE_STATUS = {
     {
      "name": "D4a Transitions",
      "steps": 15,
-     "status": "failed",
+     "status": "passed",
      "ranBy": "script",
-     "note": "12 of 15 on 0.0.13: the view does not draw the blend (steps 4, 6), and Add Transition lands a hair off the join (step 3)"
+     "note": "12 of 15 on 0.0.13; the three failed steps were fixed in 0.0.14 and passed their rerun, by sight too"
     },
     {
      "name": "D4b Sequences",
      "steps": 19,
      "status": "passed",
      "ranBy": "script",
-     "note": "19 of 19 on 0.0.13, with five notes passed to its session"
+     "note": "19 of 19 on 0.0.13; its five notes fixed in 0.0.14 and rerun"
     }
    ],
    "ownerSpotTests": [
@@ -2608,7 +2607,6 @@ window.EDGE_STATUS = {
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
    "risks": [
-    "Transitions do not show in the preview yet (D4a's round on 0.0.13)",
     "Every hand test was run by script with nobody watching",
     "V has no head in the preview: no V with a head can be exported",
     "The first read of the game is slow: about 3.5 minutes for the animation index",
@@ -3226,7 +3224,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-17",
-   "commitsSinceTag": 31,
+   "commitsSinceTag": 32,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"
