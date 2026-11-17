@@ -2318,7 +2318,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F1",
-      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; the Pictures tab added 2026-11-17, its VS Code steps open; release pending)",
+      "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; the Pictures tab added 2026-11-17, its VS Code steps 1 to 10 passed, step 11 open; release pending)",
       "status": "built, tests pending"
      },
      {
@@ -2386,7 +2386,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
-     "The owner runs part B of the Pictures tab test in VS Code (10 steps; testing.html#f1-the-pictures-tab)",
+     "The owner runs step 11 of the Pictures tab test in VS Code (the tab comes back after a window reload; testing.html#f1-the-pictures-tab)",
      "Then the three release tests again on the final build (by Claude)",
      "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
@@ -2396,10 +2396,10 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
-     "steps": 10,
+     "steps": 11,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 10 VS Code steps, is the owner's, not run"
+     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B steps 1 to 10 passed 2026-11-17 (owner); step 11, added during that run, is not run"
     },
     {
      "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
