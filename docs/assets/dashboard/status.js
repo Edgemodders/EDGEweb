@@ -1436,7 +1436,7 @@ window.EDGE_STATUS = {
      "steps": 15,
      "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-16, one round; four findings fixed during it"
+     "note": "2026-11-16, one round, steps 1 to 15; four findings fixed during it. A step 16 (Reveal in File Explorer) was added after and is still to run"
     }
    ],
    "ownerSpotTests": [],

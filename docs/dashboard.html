@@ -189,7 +189,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
       <h3>Keeping it current</h3>
       <p>From the EDGEweb folder, with the sibling checkouts beside it:</p>
       <pre class="how">python tools/dashboard/refresh.py</pre>
-      <p>That rewrites the facts a script can read (open issues, versions, tags, commit dates). The rest (plans, tests, waiting, owner's queue, sessions) is curated by hand in the same file: update a tool's entry when its session reports a change, and set <code>asOf</code>.</p>
+      <p>That rewrites the facts a script can read (open issues, releases, commit dates). The rest is curated: each tool's own session updates its entry in the same piece of work as a change to its status, as the Dashboard section in its repo's <code>CLAUDE.md</code> says, and sets <code>checkedBy</code>. A managing session checks entries against the repos and sets <code>asOf</code>.</p>
     </div>
   </div>
   <h3 style="margin-top:22px">Sessions by tool</h3>
@@ -203,7 +203,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=3"></script>
+<script src="assets/dashboard/status.js?v=4"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
