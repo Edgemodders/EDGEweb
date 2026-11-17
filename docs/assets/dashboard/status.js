@@ -1366,6 +1366,11 @@ window.EDGE_STATUS = {
       "status": "in progress"
      },
      {
+      "id": "DL",
+      "title": "Desk, Project and Library",
+      "status": "done"
+     },
+     {
       "id": "A4",
       "title": "Index: sound banks, full search",
       "status": "planned"
@@ -1385,8 +1390,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Desk and Library: agreed for after 0.2.0, not built",
-     "The Project view split: not agreed in detail",
+     "Desk, Project and Library: built and hand-tested 2026-11-16; the smoke test still to run on it, with the PC left alone",
+     "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
     ]
    },
@@ -1425,6 +1430,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-06"
+    },
+    {
+     "name": "Desk, Project and Library",
+     "steps": 15,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-16, one round; four findings fixed during it"
     }
    ],
    "ownerSpotTests": [],
@@ -1433,22 +1445,18 @@ window.EDGE_STATUS = {
      "who": "REDnode",
      "what": "Sound API steps S2 to S4, for the in-game features (A6)",
      "ref": "REDnode docs/sound.md"
-    },
-    {
-     "who": "owner",
-     "what": "Agree the Project view split and the Project sounds fix",
-     "ref": "CLAUDE.md"
     }
    ],
    "ownerActions": [
-    "Agree the Project view split",
-    "Give the go to build Desk and Library"
+    "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test on the Desk and Library",
+    "Say whether to build Add to Project's Pick a game sound to replace… row next",
+    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat"
    ],
    "risks": [
-    "No commits since 2026-11-08, with five requests open on it, the oldest from 2026-10-21",
-    "EDGEquest's pages lean on 0.2.0 being on the stores",
-    "Voice lines have no route into the game yet"
-   ]
+    "Voice lines have no route into the game yet (the .wem route)",
+    "Desk, Project and Library are on main, not in a release yet"
+   ],
+   "checkedBy": "EDGEwave session, 2026-11-16"
   },
   {
    "name": "EDGEmat",
