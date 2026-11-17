@@ -638,6 +638,11 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "DD",
+      "title": "Dropdown: rn-select in the UI kit and ui.select (after the App keys test)",
+      "status": "planned"
+     },
+     {
       "id": "SN0-SN5",
       "title": "Semi-native overlay apps",
       "status": "planned"
