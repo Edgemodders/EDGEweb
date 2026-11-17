@@ -2430,7 +2430,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.16",
+   "version": "0.0.18",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2469,7 +2469,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D5",
-      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet built as 0.0.16; sets, the player package and the button not built)",
+      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet and D5a sets built, 0.0.18; the player package and the button not built)",
       "status": "in progress"
      },
      {
@@ -2497,7 +2497,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The owner's spot tests S1 to S11 (about 30 minutes): none run",
+     "The owner's spot tests S1 to S12 (about 35 minutes): none run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page"
     ]
@@ -2555,8 +2555,15 @@ window.EDGE_STATUS = {
     {
      "name": "D5b The cue sheet",
      "steps": 10,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "10 of 10 on 0.0.16; two small changes from its notes in 0.0.18, not run"
+    },
+    {
+     "name": "D5a Sets",
+     "steps": 14,
      "status": "not run",
-     "note": "Built as 0.0.16; a round by script is asked of the EDGEweb session"
+     "note": "Built as 0.0.17; a round by script is asked of the EDGEweb session"
     }
    ],
    "ownerSpotTests": [
@@ -2614,6 +2621,11 @@ window.EDGE_STATUS = {
      "id": "S11",
      "feature": "What the game will not match",
      "status": "not run"
+    },
+    {
+     "id": "S12",
+     "feature": "Sets",
+     "status": "not run"
     }
    ],
    "waitingOn": [
@@ -2644,7 +2656,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run spot tests S1 to S11",
+    "Run spot tests S1 to S12",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
