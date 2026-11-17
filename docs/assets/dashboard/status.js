@@ -2409,7 +2409,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.11",
+   "version": "0.0.12",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2423,8 +2423,8 @@ window.EDGE_STATUS = {
     "phases": [
      {
       "id": "D0",
-      "title": "Spikes",
-      "status": "in progress"
+      "title": "Spikes (done as other work, but the weather: REDnode #46)",
+      "status": "done"
      },
      {
       "id": "D1",
@@ -2443,8 +2443,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D4",
-      "title": "Transitions and sequences",
-      "status": "planned"
+      "title": "Transitions and sequences (D4a Transitions built; D4b Sequences being built)",
+      "status": "in progress"
      },
      {
       "id": "D5",
@@ -2476,8 +2476,9 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The owner's spot tests S1 to S8 (about 20 minutes): none run",
-     "GitHub setup: Pages source, social preview, secrets reach the repo",
+     "The owner's spot tests S1 to S9 (about 25 minutes): none run",
+     "D4a's hand test (15 steps), not run",
+     "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page"
     ]
    },
@@ -2516,6 +2517,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "17 of 17 on 0.0.9; the four fixes of 0.0.10 passed a rerun"
+    },
+    {
+     "name": "D4a Transitions",
+     "steps": 15,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built as 0.0.12, 2026-11-16"
     }
    ],
    "ownerSpotTests": [
@@ -2558,17 +2566,17 @@ window.EDGE_STATUS = {
      "id": "S8",
      "feature": "The 3D preview",
      "status": "not run"
+    },
+    {
+     "id": "S9",
+     "feature": "Transitions",
+     "status": "not run"
     }
    ],
    "waitingOn": [
     {
-     "who": "owner",
-     "what": "Answers to D4's five questions: D4 is not built before them",
-     "ref": "docs/d4-transitions.md"
-    },
-    {
      "who": "REDnode",
-     "what": "A weather setter and blend times at jumps",
+     "what": "A weather setter, and blend times at a jump measured in the game",
      "ref": "REDnode #46"
     },
     {
@@ -2578,21 +2586,23 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEfab",
-     "what": "The split of animation work, and a single animation as a Library item",
+     "what": "Its first stored animation, to try EDGEdir's reader on",
      "ref": "EDGEfab #7"
     }
    ],
    "ownerActions": [
-    "Run spot tests S1 to S8",
-    "Answer D4's five questions",
-    "Decide whether the real player acts in the game or a stand-in copy",
-    "GitHub: social preview, Pages source; create a Nexus page"
+    "Run spot tests S1 to S9",
+    "GitHub: social preview, Pages source; create a Nexus page",
+    "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
    "risks": [
     "Every hand test was run by script with nobody watching",
     "V has no head in the preview: no V with a head can be exported",
-    "The first read of the game is slow: about 3.5 minutes for the animation index"
-   ]
+    "The first read of the game is slow: about 3.5 minutes for the animation index",
+    "Which way an actor's Turn turns against the game is unverified until D5",
+    "How the game's own join at a jump compares with the preview's transitions is not measured yet"
+   ],
+   "checkedBy": "EDGEdir session, 2026-11-16"
   },
   {
    "name": "EDGEmobile",
@@ -3203,7 +3213,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-17",
-   "commitsSinceTag": 29,
+   "commitsSinceTag": 30,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"
