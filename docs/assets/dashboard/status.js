@@ -2430,7 +2430,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.15",
+   "version": "0.0.16",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2469,8 +2469,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D5",
-      "title": "Play in game (plan written 2026-11-17, for the owner's review; not agreed, nothing built)",
-      "status": "planned"
+      "title": "Play in game (plan agreed 2026-11-17; D5b the cue sheet built as 0.0.16; sets, the player package and the button not built)",
+      "status": "in progress"
      },
      {
       "id": "D6",
@@ -2497,7 +2497,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The owner's spot tests S1 to S10 (about 30 minutes): none run",
+     "The owner's spot tests S1 to S11 (about 30 minutes): none run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page"
     ]
@@ -2551,6 +2551,12 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "19 of 19 on 0.0.13; its five notes fixed in 0.0.14 and rerun"
+    },
+    {
+     "name": "D5b The cue sheet",
+     "steps": 10,
+     "status": "not run",
+     "note": "Built as 0.0.16; a round by script is asked of the EDGEweb session"
     }
    ],
    "ownerSpotTests": [
@@ -2603,6 +2609,11 @@ window.EDGE_STATUS = {
      "id": "S10",
      "feature": "Sequences",
      "status": "not run"
+    },
+    {
+     "id": "S11",
+     "feature": "What the game will not match",
+     "status": "not run"
     }
    ],
    "waitingOn": [
@@ -2617,6 +2628,11 @@ window.EDGE_STATUS = {
      "ref": "REDnode #47"
     },
     {
+     "who": "REDnode",
+     "what": "A call on the editor channel that reaches a package, for Play in game; directing a person not spawned with the workspot",
+     "ref": "REDnode #48"
+    },
+    {
      "who": "EDGEbuilder",
      "what": "A vehicle kind in its scenes and an id in a scene file, for EDGEdir's sets",
      "ref": "EDGEbuilder #6"
@@ -2628,8 +2644,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run spot tests S1 to S10",
-    "Answer the design's six questions on sets (S1 to S6: EDGEbuilder's scenes as the stage) and D5's seven (P1 to P7)",
+    "Run spot tests S1 to S11",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
    ],
