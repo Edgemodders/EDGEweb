@@ -2396,9 +2396,9 @@ window.EDGE_STATUS = {
     {
      "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
      "steps": 6,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Prepared by Claude 2026-11-17 in Projects/EDGEfab_PartMaterials (tests/edgefab_partmaterials_test.archive); the owner may hold 0.1.0 to include part materials"
+     "note": "Passed in the game 2026-11-17 (owner): all proper by day and night, every level of detail. Whether 0.1.0 waits for its UI (EDGEmat #12) is the owner's call"
     },
     {
      "name": "F1 extension in VS Code",
