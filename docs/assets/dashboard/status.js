@@ -2586,7 +2586,7 @@ window.EDGE_STATUS = {
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page",
      "DR1 The Director's window (13 steps by script, with a stand-in): not run",
-     "EDGEdir #1: Nexus changelogs as a short summary block, before a release with Update Nexus Mods"
+     "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
     ]
    },
    "handTests": [
