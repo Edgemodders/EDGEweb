@@ -69,8 +69,8 @@ EDGEfab has no keyboard shortcuts of its own, except `Ctrl+Enter` in the Picture
 | Top of the view | **Import a GLB...**, **Generate from Words...**, **Refresh** |
 | On a model's line | **Open in 3D**, **Add to Project** |
 | A model's right-click menu | **Add to Project**, **Add to Library...**, **Open in 3D**, **Open Tripo's Preview**, **Reveal in File Explorer**, **Set Size...**, **Make the Painted Lights Glow...**, **Glow Strength...** and **Stop the Glow** (when it glows), **Rename...**, **Delete** |
-| On a picture's line | **Make 3D...**, **Open the Pictures** |
-| A picture's right-click menu | **Make 3D...**, **Change the Picture...**, **Open the Pictures**, **Reveal in File Explorer**, **Rename...**, **Delete** |
+| On a picture's line | **Generate 3D Model...**, **Open the Pictures** |
+| A picture's right-click menu | **Generate 3D Model...**, **Edit Picture...**, **Open the Pictures**, **Reveal in File Explorer**, **Rename...**, **Delete** |
 
 **The Pictures tab**
 

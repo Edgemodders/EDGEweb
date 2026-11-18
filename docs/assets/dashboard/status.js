@@ -2386,6 +2386,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
+    "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18), and EDGEfab keeping swapped parts on a second Add to Project",
      "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
      "The date in the README and changelog changes to the release day first"
@@ -2425,14 +2426,14 @@ window.EDGE_STATUS = {
      "steps": 3,
      "status": "passed",
      "ranBy": "script",
-     "note": "Passed again 2026-11-18 on the final build (main ac488ed), after the Pictures tab, Rename going all the way in and two small fixes"
+     "note": "Passed again 2026-11-18 on main 8910f46, after the Pictures tab, Rename going all the way in, two small fixes and the Desk's labels. They run once more on the build that is released"
     }
    ],
    "ownerSpotTests": [],
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Ask for the 0.1.0 release run: every test in testing.md has passed. Decide first whether 0.1.0 waits for part materials (EDGEmat #12)",
+     "what": "Nothing now. Every test in testing.md has passed; the owner decided 2026-11-18 that 0.1.0 waits for part materials in EDGEmat's UI (EDGEmat #12). Then ask for the release run",
      "ref": "docs/testing.md"
     },
     {
@@ -2467,14 +2468,13 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEmat",
-     "what": "Game materials on an EDGEfab prop's parts in the UI (Use a Game Surface or Material per part); works today through MCP only",
+     "what": "BLOCKS 0.1.0 (owner, 2026-11-18): game materials on an EDGEfab prop's parts in the UI (Use a Game Surface or Material per part); works today through MCP only",
      "ref": "EDGEmat #12"
     }
    ],
    "ownerActions": [
-    "Decide whether 0.1.0 waits for part materials in the UI (EDGEmat #12; its in-game check passed 2026-11-17)",
     "Read the wiki section (edgemodders.ai/wiki/edgefab/) and say what to change; two screenshots are yours (Claude Code using EDGEfab, the prop in the game)",
-    "Then ask for the 0.1.0 release run",
+    "Ask for the 0.1.0 release run once EDGEmat #12 is in (the release waits for it)",
     "Add the video to Nexus page 38605 before it goes live (the shot script is nexus/video-script.md)",
     "Fill the Nexus page's form fields and tags by hand (nexus/README.md lists them)"
    ],

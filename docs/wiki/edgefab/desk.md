@@ -73,7 +73,7 @@ EDGEfab prepares it the same way as a generated one and puts it on the Desk. It 
 
 Right-click a prop. The two icons at the right of its line are **Open in 3D** and **Add to Project**.
 
-{% include shot.html caption="A prop's menu" src="/assets/shots/edgefab/desk-menu.png" alt="The right-click menu on a prop on the Desk, listing Add to Project, Add to Library, Open in 3D, Set Size, Make the Painted Lights Glow, Rename and Delete." shows="The right-click menu on a prop on the Desk, with every action listed." %}
+{% include shot.html caption="A prop's menu" src="/assets/shots/edgefab/desk-menu.png" alt="The right-click menu on a prop on the Desk, listing Generate 3D Model, Edit Picture, Open the Pictures, Add to Library, Add to Project, Open in 3D, Set Size, the glow entries, Rename and Delete." shows="The right-click menu on a prop on the Desk, with every action listed." %}
 
 | Action | Does | More |
 |---|---|---|
@@ -87,7 +87,7 @@ Right-click a prop. The two icons at the right of its line are **Open in 3D** an
 | **Rename...** | A new name, for it and its files | [Below](#rename) |
 | **Delete** | Removes it from the Desk, with its model, textures and pictures. It asks first. A copy in a project or the Library stays |
 
-On a prop that is still a picture, the menu has **Make 3D...**, **Change the Picture...** and **Open the Pictures** instead.
+On a prop that is still a picture, the menu has **Generate 3D Model...**, **Edit Picture...** and **Open the Pictures** instead.
 
 ## Rename
 

@@ -40,7 +40,7 @@ The first time, EDGEfab asks for your OpenAI key: see [Your keys](install.html#y
 |---|---|
 | The big picture | The one in view: the four sides in one image |
 | Under it | Its number, the date, the words that made it, and "changed from picture 2" if it came from another |
-| **Change this picture** | The box for your words, with **Edit Picture** and **Draw Picture** |
+| **Edit this picture** | The box for your words, with **Edit Picture** and **Draw Picture** |
 | **Generate 3D Model** | At the top. It uses the picture in view: see [3D models](models.html) |
 | **History** | Every picture of this prop, newest first. Click one to view it |
 

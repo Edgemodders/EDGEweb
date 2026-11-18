@@ -53,7 +53,7 @@ A new picture appears and the first one stays in the **History** at the right. C
 1. With the picture you like in view, press **Generate 3D Model**.
 2. Choose **Detailed texture**.
 3. Type its height in metres: `2.0`.
-4. EDGEfab shows the cost and your Tripo balance. Press **Make 3D**.
+4. EDGEfab shows the cost and your Tripo balance. Press **Generate 3D Model**.
 
 Tripo takes 3 to 4 minutes. When it's done, the line on the Desk becomes a model, and a message says how many parts and levels of detail it has.
 

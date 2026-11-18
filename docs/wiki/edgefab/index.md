@@ -15,7 +15,7 @@ EDGEfab is the EDGE platform's asset maker for Cyberpunk 2077. It runs inside VS
 
 **New here?** Read this page, then [Install and set up](install.html), then follow [Tutorial: your first prop](first-prop.html). It takes about 30 minutes.
 
-{% include shot.html caption="EDGEfab in VS Code" src="/assets/shots/edgefab/index-overview.png" alt="VS Code with EDGEfab selected in the activity bar: the Desk and Library views in the side bar, and the Pictures tab open on a red vending machine drawn from four sides, with its history of pictures beside it." shows="VS Code with EDGEfab's icon selected in the activity bar: the Desk and Library views in the side bar, and the Pictures tab open on a vending machine drawn from four sides." %}
+{% include shot.html caption="EDGEfab in VS Code" src="/assets/shots/edgefab/index-overview.png" alt="VS Code with EDGEfab selected in the activity bar: the Desk with four props and the Library in the side bar, and the Pictures tab open on a red vending machine drawn from four sides, with its history of five pictures beside it." shows="VS Code with EDGEfab's icon selected in the activity bar: the Desk and Library views in the side bar, and the Pictures tab open on a vending machine drawn from four sides." %}
 
 | On this page | |
 |---|---|
@@ -90,7 +90,7 @@ EDGEfab comes with no game files, and it never changes your game: it writes into
 
 ## Status
 
-**0.1.0, a preview, built and tested but not released yet.** It will come out on the VS Code Marketplace, Open VSX, [GitHub](https://github.com/Edgemodders/EDGEfab/releases) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605). Windows only, tested with game version 2.5.
+**0.1.0, a preview, built and tested but not released yet.** The release waits for one more thing: buttons in EDGEmat for giving a prop's part one of the game's materials. It will come out on the VS Code Marketplace, Open VSX, [GitHub](https://github.com/Edgemodders/EDGEfab/releases) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605). Windows only, tested with game version 2.5.
 
 | | |
 |---|---|

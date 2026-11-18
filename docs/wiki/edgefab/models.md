@@ -26,7 +26,7 @@ In the [Pictures tab](pictures.html), with the picture you like in view:
 1. Press **Generate 3D Model**.
 2. Choose how much detail: see [below](#detail-and-cost).
 3. Type the object's height in metres, such as `1.8`. You can leave it empty and set it later.
-4. Read the cost and your Tripo balance, then press **Make 3D**. Nothing is paid before this.
+4. Read the cost and your Tripo balance, then press **Generate 3D Model**. Nothing is paid before this.
 
 ```text
 Make Neon vending machine in 3D with Tripo, from its four views, in parts?
@@ -35,7 +35,7 @@ About 60 credits and 3 to 4 minutes. You have 2,940.
 
 A progress note shows while Tripo works; **Cancel** on it stops EDGEfab waiting. When the model arrives, EDGEfab prepares it for the game and the prop's line on the Desk becomes a model. The history card of the picture it came from gets a **3D** chip.
 
-On the Desk, the same thing is **Make 3D...** in a picture's right-click menu: it uses the newest picture.
+On the Desk, the same thing is **Generate 3D Model...** in a picture's right-click menu: it uses the newest picture.
 
 The first time, EDGEfab asks for your Tripo key and your plan: see [Install and set up](install.html#your-keys).
 
