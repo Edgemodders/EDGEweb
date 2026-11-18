@@ -1290,6 +1290,21 @@ window.EDGE_STATUS = {
       "status": "done"
      },
      {
+      "id": "D0",
+      "title": "Doors probe",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "D1",
+      "title": "Remove a door (baked)",
+      "status": "planned"
+     },
+     {
+      "id": "D2",
+      "title": "Open, close, lock a door",
+      "status": "planned"
+     },
+     {
       "id": "B2d-2",
       "title": "Watch: re-import on save",
       "status": "planned"
@@ -1334,6 +1349,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "D0 Doors probe (in game)",
+     "steps": 13,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-18 (probes/door-probe, REDnode 0.67.3); in the EDGEdeck library, not deployed yet"
+    },
     {
      "name": "0.11.1 retest (in game)",
      "steps": 7,
@@ -1395,9 +1417,15 @@ window.EDGE_STATUS = {
      "who": "REDbridge",
      "what": "sector.find and sector.nodes, for the world inspector (B3b) and the world view (B7)",
      "ref": "REDbridge #11"
+    },
+    {
+     "who": "REDbridge",
+     "what": "sector.build writes ArchiveXL node removals, checked against the sector, for Doors D1 (after D0 answers D3)",
+     "ref": "REDbridge #18"
     }
    ],
    "ownerActions": [
+    "Let the door probe be deployed with the game closed, then run D0 steps 1 to 13 (docs/testing.md, D0 Doors probe)",
     "Ask for the 0.11.1 release run once edgefab-core is on npm"
    ],
    "risks": [
