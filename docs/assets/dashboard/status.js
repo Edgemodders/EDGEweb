@@ -1658,8 +1658,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.3.3",
     "needs": [
-     "The hand test 'Reshape with the game's materials' (in the game; it ships in EDGEmat's MCP), not run",
-     "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, Reshape with the game's materials in the game, install test, three Nexus screenshots"
+     "Every test since 0.3.2 has passed (2026-11-18): the release chores (README status and badge, version, the 0.3.3 changelog section, wiki, Nexus description), then the release run when the owner asks",
+     "Separately, Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
    },
    "handTests": [
@@ -1694,9 +1694,9 @@ window.EDGE_STATUS = {
     {
      "name": "Reshape with the game's materials (in game)",
      "steps": 7,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-17: a made piece keeps the game's materials (band and buckle kept); Claude's fitted picture looks right"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Passed 2026-11-18 (three cowboy hats): the game's own textures, bright; the band a little distorted by the fit's bend, to improve later"
     },
     {
      "name": "Game materials on a prop's parts (#12)",
@@ -1726,18 +1726,19 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
-    "Run 'Reshape with the game's materials' in the game from step 3 (Claude put the archive in the game's mod folder; it loads before Wardrobe Designer's, so no Restore is needed)",
+    "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
+    "Say when to release EDGEmat 0.3.3 (every test has passed)",
     "Install 0.3.2 from the Marketplace in a normal VS Code",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
    "risks": [
-    "Reshape's made pieces now keep the game's materials (Tripo's off-color paint is optional), untested in the game; Tripo on the new dark background is untested too",
+    "Reshape's game materials passed in the game, but the band bends a little out of shape on the new crown (EDGEmat's fit); Tripo on the new dark background is untested",
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "EDGEfab 0.1.0 waits on EDGEmat's next release, which carries #12 (game materials on a prop's parts, tested 2026-11-18)",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-18 (bumps passed)"
+   "checkedBy": "EDGEmat session, 2026-11-18 (all 0.3.3 tests passed)"
   },
   {
    "name": "EDGEquest",
