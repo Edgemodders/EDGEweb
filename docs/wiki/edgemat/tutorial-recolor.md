@@ -4,7 +4,7 @@ nav_title: "Tutorial: recolor a jacket"
 section: EDGEmat
 order: 2
 description: "Step by step, by hand and with no paid key: find the Rocker's Heart bomber by its name, turn its biggest layer blue, save it into a mod project for both body types, and wear it in the game."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Tutorial: recolor a <span class="y">jacket</span>
@@ -102,7 +102,7 @@ Only the colors this surface offers are in the grid. That is how the game works:
 
 Optional. In Find, hover the mesh row `t2_084_...__short_sleeves.mesh` and click the **eye** (**View in 3D**). REDcode opens the jacket in a new tab. The status bar at the bottom of VS Code names the look to pick, **black_red_glossy**: choose it in the viewer's **Appearance** list. Drag to turn the jacket.
 
-The 3D view shows your blue before you save, and follows each further change within about a second. It shows flat colors only, without shine or the game's lighting, so the game will look richer. More: [View in 3D](view-in-3d.html).
+The 3D view shows your blue before you save, and follows each further change within about a second. It shows each layer's surface and grain in its color, but no shine, bumps or the game's lighting yet, so the game will look richer. More: [View in 3D](view-in-3d.html).
 
 ## 6. Save it into the project
 
@@ -113,13 +113,13 @@ The 3D view shows your blue before you save, and follows each further change wit
 
 | What you should see | |
 |---|---|
-| A message | "Saved into my_materials: the setup and 2 meshes pointed at it.", with the buttons **Pack and Try** and **Open the Saved Setup** |
+| A message | "Saved into my_materials: the setup and 2 meshes pointed at it.", with the buttons **Pack and Play** and **Open the Saved Setup** |
 | The tab | The unsaved dot is gone, and a line under the title says where the setup was saved |
 | REDcode's Project view | Under **Archive**, a folder path ending in `t2_084_jacket__short_sleeves` with the two meshes, and a `textures` folder with your new setup |
 
 What happened: EDGEmat saved your blue setup under a new name, and copied the jacket's two mesh files into the project, changed to use it. That is all the game needs. No helper mod is required.
 
-Don't press **Pack and Try** yet: the next step does it with the game closed.
+Don't press **Pack and Play** yet: the next step does it with the game closed.
 
 ## 7. Into the game
 

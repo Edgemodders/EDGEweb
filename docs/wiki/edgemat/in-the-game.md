@@ -4,7 +4,7 @@ nav_title: Your mod in the game
 section: EDGEmat
 order: 7
 description: "From a saved recolor or new material to the game: pack and install with REDcode, keep the game running with Pack and Play, put the item on V with REDnode's Console, and what to check when the change doesn't show."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Your mod <span class="y">in the game</span>
@@ -14,7 +14,7 @@ EDGEmat saves your changes into a mod project, a folder on your PC. The game doe
 | On this page | |
 |---|---|
 | [1. Pack and install](#1-pack-and-install) | The simple way, with the game closed |
-| [Keep the game running](#keep-the-game-running) | Pack and Try, Pack and Play and REDnode |
+| [Keep the game running](#keep-the-game-running) | Pack and Play and REDnode |
 | [If REDmod packing is on](#if-redmod-packing-is-on) | A REDcode setting, and projects shared with EDGEwave |
 | [2. Put the item on V](#2-put-the-item-on-v) | The command, and where EDGEmat shows it |
 | [3. If you don't see your change](#3-if-you-dont-see-your-change) | What to check |
@@ -37,9 +37,9 @@ If you use [EDGEdeck](../edgedeck/), EDGE's mod manager, REDcode hands the mod t
 
 ### Keep the game running
 
-After EDGEmat saves into a project, its message has a **Pack and Try** button. It runs REDcode's **Pack and Play** (the flame button in REDcode's Project view), and it shows when REDcode has that project open.
+After EDGEmat saves into a project, its message has a **Pack and Play** button. It is REDcode's **Pack and Play**, the flame button in REDcode's Project view, and it shows when REDcode has that project open. (Before EDGEmat 0.3.3 and REDcode 0.10.5 it was called Pack and Try.)
 
-| The game is | Pack and Try, or Pack and Play |
+| The game is | Pack and Play |
 |---|---|
 | Closed, or running without REDnode | Packs and installs, like Pack and Install. Start or restart the game to see the change |
 | Running with [REDnode](../rednode/), at a loaded save | Packs, then swaps the new archive into the running game. No restart |
@@ -73,7 +73,7 @@ To see your change, V has to wear the item you changed. The quickest way is the 
    ```
 
 3. Press **Esc**, open the inventory and equip the item.
-4. Look at V from outside: photo mode, or a mirror.
+4. Look at V from outside: photo mode, or a mirror. For a close look at fine bumps or grain in photo mode, turn **Depth of Field** off on its **Camera** tab: its blur hides small details.
 
 | What you should see | |
 |---|---|

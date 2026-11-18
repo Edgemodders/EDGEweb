@@ -4,7 +4,7 @@ nav_title: New Material
 section: EDGEmat
 order: 8
 description: "Make a material from words, through an AI image service with your own key, or from a photo of your own, and put it on a garment: seamless, with bumps and shine, written into your mod project."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # New <span class="y">Material</span>
@@ -78,7 +78,7 @@ The take you pick shows **tiled 3 × 3, already made seamless**, so you can see 
 |---|---|
 | Name | The material's name, also used for its files: "worn leather" becomes `worn_leather` |
 | Repeat | How many times the picture repeats across the garment or object, 1 to 32 (default 4). A higher number makes the pattern smaller |
-| Bumps | Flat, Light, Moderate or Strong. Made from the picture's light and dark |
+| Bumps | Flat, Light, Moderate or Strong. Made from the picture's light and dark: light parts come out raised, dark parts sunk in |
 | Shine | Matte, Satin or Glossy. Light parts of the picture shine a little more |
 | Metal | Tick for a metal |
 
@@ -86,14 +86,25 @@ Press **Add to Project**. EDGEmat writes the material into REDcode's open projec
 
 | What you should see | |
 |---|---|
-| A message | "Saved ... and put on 2 mesh materials.", with **Pack and Try** and **Show Files** |
+| A message | "Saved ... and put on 2 mesh materials.", with **Pack and Play** and **Show Files** |
 | On the page | Each mesh listed, with "repeat in the texture, garment folds kept" |
 
-**Pack and Try** runs REDcode's Pack and Play. With the game closed it packs and installs the project, and you start the game afterwards. With the game running under REDnode it swaps the mod in. See [Your mod in the game](in-the-game.html).
+**Pack and Play** is REDcode's button. With the game closed it packs and installs the project, and you start the game afterwards. With the game running under REDnode it swaps the mod in. See [Your mod in the game](in-the-game.html).
 
 ### On a garment, the garment keeps its folds
 
-A garment's own material carries its folds, seams and wrinkles in a bump map. When a new material goes on a garment, EDGEmat keeps the garment's bump map, and builds one larger color picture with your pattern already repeated across it. So the pants keep their wrinkles at their real size, and the new pattern repeats over them. (Repeating the whole material instead would also repeat the folds, which shrinks them.) On an object, the material repeats as a whole.
+A garment's own material carries its folds, seams and wrinkles in a bump map. When a new material goes on a garment, EDGEmat keeps those folds at their real size, and builds larger pictures with your pattern already repeated across them:
+
+| Map | On a garment |
+|---|---|
+| Color and shine | Your picture, repeated across the garment as many times as **Repeat** says |
+| Bumps | Your material's bumps, repeated the same way, laid over the garment's own folds in one bump map. With **Bumps** Flat, the garment keeps its folds alone |
+
+So the pants keep their wrinkles, and the new pattern, with its bumps, repeats over them. (Repeating the whole material instead would also repeat the folds, which shrinks them.) On an object, the material repeats as a whole.
+
+**Fixed in 0.3.3.** Before EDGEmat 0.3.3, **Bumps** did nothing on a garment: only its folds showed. And bumps from words or a photo came out backwards, as dents where they should be raised, on objects too. A material made with an older EDGEmat keeps those faults: make it again to fix it.
+
+**To see fine bumps in the game**, look closely in photo mode with **Depth of Field** off (on its **Camera** tab). Its blur hides small details. Under light from above, a raised bump is lit along its top and has a shadow along its bottom.
 
 ## Good to know
 
@@ -112,7 +123,7 @@ In your project, under `source\archive\edgemat\materials\<name>\`:
 |---|---|
 | `<name>_d01.xbm`, `_n01.xbm`, `_r01.xbm` | The color, bumps and shine textures |
 | `<name>.mi` | The material, for objects and later use |
-| `<name>_x<repeat>_...` | On a garment: the larger color and shine textures with the repeat built in, and a material that keeps the garment's own bumps |
+| `<name>_x<repeat>_...` | On a garment: the larger color, shine and bump textures with the repeat built in (the bump texture also holds the garment's own folds), and the material that uses them |
 
 The garment's meshes are copied into the project and changed to use the new material. Beside it, in `source\raw\edgemat\materials\<name>\`, EDGEmat keeps the picture and `<name>.edgemat.json`: how it was made (the service, model and words, or the file).
 

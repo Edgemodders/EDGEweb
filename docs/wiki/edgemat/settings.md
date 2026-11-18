@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEmat
 order: 14
 description: "Every EDGEmat setting with its default and when to change it, every EDGEmat command and button, and the keyboard shortcuts."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Settings and <span class="y">commands</span>
@@ -49,6 +49,9 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEmat`. Most commands are 
 | Rename... | Right-click a line | Names a variation, such as `blue` |
 | Take Off the Desk | A line (**×**), or right-click | Takes that line off. Asks first if it has edits |
 | View in 3D, Copy Game Path, New Material Here..., Copy REDnode Command | Rows under a line | As in [Find](#find), below, on the Desk's own copy |
+| Use a Game Surface... | A part of a mesh from your project (colors icon), or right-click | A game surface in one of its colors on that part, as a one-layer setup ([A prop's parts](desk.html#a-props-parts)) |
+| Use a Game Material... | Right-click a part of a mesh from your project | A game material that suits any shape on that part, such as glass or a glow, or any `.mi` by its path |
+| Back to the Model's Texture | Right-click a part of a prop EDGEfab made | The part wears its model's own texture again |
 
 ### Game Materials
 
@@ -97,7 +100,7 @@ Up to EDGEmat 0.3.1 the view was called Library, and three of these were **Searc
 
 ## Buttons on the pages
 
-These are buttons and switches on the pages themselves, not commands: **Keep open**, **Copy**, **Raw values**, **Hide unused slots**, **All layers** / **Selected layer**, **Change** (the mask set, a layer's surface or microblend) and **Open** (a layer's surface or microblend). Each is explained on its page: [Surface pages](surfaces.html), [The setup editor](setup-editor.html), [New Material](new-material.html).
+These are buttons and switches on the pages themselves, not commands: **Keep open**, **Copy**, **Raw values**, **Hide unused slots**, **All layers** / **Selected layer**, the map's **+**, **−** and **Fit**, **Change** (the mask set, a layer's surface or microblend) and **Open** (a layer's surface or microblend). Each is explained on its page: [Surface pages](surfaces.html), [The setup editor](setup-editor.html), [New Material](new-material.html).
 
 The setup editor is also an editor you can pick for any `.mlsetup`: **Reopen Editor With...** › **EDGEmat Setup Editor**.
 

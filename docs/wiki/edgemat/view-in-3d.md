@@ -3,20 +3,20 @@ title: View in 3D with EDGEmat
 nav_title: View in 3D
 section: EDGEmat
 order: 6
-description: "See a garment on its mesh with its colors: EDGEmat's View in 3D opens REDcode's 3D viewer, gives it each material's colors, and follows your edits as you make them."
-reviewed: 2026-11-13
+description: "See a garment on its mesh with its colors: EDGEmat's View in 3D opens REDcode's 3D viewer, gives it each layer's surface and color, and follows your edits as you make them."
+reviewed: 2026-11-18
 ---
 
 # View in <span class="y">3D</span>
 
-The color map in the setup editor shows where each layer goes on a flat texture. **View in 3D** shows the same colors on the garment itself, in [REDcode](../redcode/)'s 3D viewer, where you can turn it around.
+The color map in the setup editor shows where each layer goes on a flat texture. **View in 3D** shows the garment itself, each layer with its own surface and color, in [REDcode](../redcode/)'s 3D viewer, where you can turn it around.
 
 EDGEmat doesn't have a viewer of its own: REDcode shows the mesh (the garment's 3D shape), and EDGEmat gives REDcode's viewer the colors. So you need REDcode installed. Its REDbridge starts by itself when VS Code opens.
 
 | On this page | |
 |---|---|
 | [How to use it](#how-to-use-it) | The eye button, and the one step people miss |
-| [What you see, and what you don't yet](#what-you-see-and-what-you-dont-yet) | Colors only |
+| [What you see, and what you don't yet](#what-you-see-and-what-you-dont-yet) | Colors and grain; no shine or bumps yet |
 | [Live while you edit](#live-while-you-edit) | And where the preview reaches |
 | [Good to know](#good-to-know) | |
 
@@ -33,7 +33,7 @@ EDGEmat doesn't have a viewer of its own: REDcode shows the mesh (the garment's 
 | What you should see | |
 |---|---|
 | After step 3 | The garment in 3D, in the colors of the mesh's first look |
-| After step 4 | The garment in its layers' colors, and an **approximate** note in the viewer |
+| After step 4 | The garment in its layers' surfaces and colors, and an **approximate** note in the viewer |
 
 Without REDcode installed, the eye says so and offers to show REDcode's extension page.
 
@@ -41,11 +41,21 @@ Without REDcode installed, the eye says so and offers to show REDcode's extensio
 
 | Kind of material | In the 3D view |
 |---|---|
-| Layered (`.mlsetup`) | Its color map, each layer's color where its mask puts it: the same picture as the setup editor's map, wrapped onto the model |
+| Layered (`.mlsetup`) | Each layer's own surface, such as felt, leather or plastic, with its grain, under the layer's color, where its mask puts it. As light as the game shows it: a light grey felt hat looks light grey |
 | Textured, such as decals, logos and stitches | Its own color texture, as in the game |
 | Others: glass, hair, skin details, lights | REDcode's own flat color, one plain color per material. That is normal |
 
-The viewer marks EDGEmat's colors **approximate**, because this first version gives **colors only**: no shine, no bumps, no metal, no detail patterns, and no lighting the way the game does it. The full preview with all of that is planned. Dark colors can also look darker here than in the game: see [Surface pages](surfaces.html#colors-on-screen-and-in-the-game).
+The viewer marks EDGEmat's picture **approximate**. It shows color and grain, but not yet:
+
+| Not yet | So |
+|---|---|
+| Shine and metal | Glossy and metal surfaces look matte. Glossy black leather looks dark grey here, darker in the game. Car paint looks flat |
+| Bumps | The surface looks smooth up close |
+| The game's lighting | Light and shadow are REDcode's viewer's own |
+
+Small differences remain too, such as a few specks or patches on some surfaces. Shine and the rest are planned. Trust the game over the preview.
+
+Before EDGEmat 0.3.3 the view showed one flat color per layer, and many came out far too dark. If yours still does, update EDGEmat.
 
 {% include shot.html caption="The Arasaka jacket in 3D" src="/assets/shots/edgemat/view-in-3d-jacket.png" alt="REDcode's 3D view of t2_078_ma_jacket__samurai.mesh on its default look: a dark grey patterned jacket with pale trim, five submeshes listed on the right." shows="REDcode's 3D view of t2_078_ma_jacket__samurai.mesh on its default look: a near-black jacket with the Arasaka decals and stitches showing as textures." %}
 
@@ -67,5 +77,5 @@ A 3D view of the game's mesh, opened from Find or from REDcode's Game Assets, ke
 
 - The first time a material is shown, EDGEmat makes its picture from the game's files. That takes about a second for a whole jacket. After that it is kept.
 - **Show Log** in Game Materials' **`...`** menu lists each request, such as `3D view: 5 of 5 materials for ...t2_078_ma_jacket__samurai.mesh, look default, in 1055 ms`.
-- **View in 3D** on a mesh in your project opens the project's copy, and EDGEmat reads your project's copies of its setups and textures first.
+- **View in 3D** on a mesh in your project opens the project's copy, and EDGEmat reads your project's copies of its setups and textures first. That holds for a project's mesh opened on the Desk too, such as a [prop's parts](desk.html#a-props-parts) with game surfaces or new materials on them. (Before 0.3.3 those showed flat, with "...is not in the loaded archives".)
 - You can go the other way too: **Open in EDGEmat** in the 3D view's toolbar puts the mesh you are looking at on the [Desk](desk.html).

@@ -4,7 +4,7 @@ nav_title: The setup editor
 section: EDGEmat
 order: 5
 description: "Open a garment's setup (.mlsetup) from the game, a project, a file or another mod, see each layer in plain words and where it goes, change its surface, color and finish, and save it into your mod project."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # The setup <span class="y">editor</span>
@@ -25,7 +25,7 @@ Each layer has:
 |---|---|
 | [Opening a setup](#opening-a-setup) | From Find, the Desk, the game, a file, another mod |
 | [The header](#the-header) | What the lines under the title say |
-| [The color map](#the-color-map) | Where each layer goes |
+| [The color map](#the-color-map) | Where each layer goes, and [zooming in](#zoom-in-on-the-map) |
 | [The layers](#the-layers) | Each layer's rows, and layers that don't show |
 | [Changing a layer](#changing-a-layer) | Surface, color, finish, with undo |
 | [Save to Project](#save-to-project) | The three choices, and what `Ctrl+S` does |
@@ -65,6 +65,18 @@ On the left is the garment's texture, unwrapped flat like a sewing pattern, with
 
 - **Click a spot** on the map. The layer that shows there is selected and scrolled into view in the list.
 - The switch under the map, **All layers** / **Selected layer**, shows the whole map, or dims it and lights up the selected layer's area, so you can see exactly which parts one layer covers.
+
+### Zoom in on the map
+
+To look at small details, such as stitching or a thin trim, zoom in on the map:
+
+| To | Do |
+|---|---|
+| Zoom in or out | Scroll over the map. It zooms on the spot under the pointer. Or hover the map and use **+** and **−** at its top right |
+| Move around | Drag the map. It stops at the map's edges |
+| See the whole map again | **Fit**, at its top right |
+
+The label beside the buttons says the zoom, from **1×** up to 16×. From 4× the map's pixels show as sharp squares: the map is 512 pixels across. A click without a drag still selects the layer there, and the zoom stays when you switch between **All layers** and **Selected layer**.
 
 Some layers show only as specks, such as lint or dirt. The map draws them as specks, as the game does, and their **share** (how much of the garment they cover) is counted the same way.
 
@@ -144,7 +156,7 @@ Choose **As a new setup** unless you know you need another. EDGEmat saves your r
 
 | What you should see | |
 |---|---|
-| A message | "Saved into ... : the setup and 2 meshes pointed at it", with **Pack and Try** and **Open the Saved Setup** |
+| A message | "Saved into ... : the setup and 2 meshes pointed at it", with **Pack and Play** and **Open the Saved Setup** |
 | The tab | No unsaved dot, and a line under the header saying where the setup went |
 
 Check the list in step 3 against the mesh name [Find](find.html) showed. If your garment's mesh isn't in it, the garment borrows a setup stored with another garment: cancel and use the Desk instead ([Two ways into a project](find.html#two-ways-into-a-project)). If your project already holds meshes that use the setup, only those are ticked.
@@ -169,11 +181,11 @@ The three choices in full:
 
 Once saved, the project's copy is yours: open it, change it, and `Ctrl+S` saves straight into it. If you later open the game's original again and save it as a new setup into the same project, EDGEmat overwrites the copy it made before. It does not make a second one.
 
-### Pack and Try
+### Pack and Play
 
-The **Pack and Try** button in the message runs REDcode's **Pack and Play** on the project. It appears when REDcode has that project open.
+The **Pack and Play** button in the message is REDcode's **Pack and Play**, on the project. It appears when REDcode has that project open. (Before EDGEmat 0.3.3 it was called Pack and Try.) With the game closed you can also use **Pack and Install** in REDcode's Project view.
 
-| The game is | Pack and Try |
+| The game is | Pack and Play |
 |---|---|
 | Closed, or running without REDnode | Packs the project and installs it. Start, or restart, the game to see it |
 | Running, with REDnode set up for swaps | Packs the project and swaps it into the running game |

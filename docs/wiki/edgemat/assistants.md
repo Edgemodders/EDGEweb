@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEmat
 order: 13
 description: "Let an AI assistant such as Claude use EDGEmat for you: what to ask, the easy way to connect it with EDGEchat, connecting Claude Code yourself, the key for new materials, and every tool."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # EDGEmat and <span class="y">assistants</span>
@@ -35,6 +35,7 @@ It works because EDGEmat comes with an **MCP server**: a small program that offe
 | "I opened a setup from a mod and one layer looks white in the game. Why?" | What looks wrong in the file, such as a color its surface doesn't have |
 | "Make the Sturdy-stitched punk jeans dark green on both bodies, and save it into my project `C:\Mods\my_materials`." | The files it saved: a new setup and a mesh for each body. Then pack and install |
 | "Make a dark green snakeskin material and put it on the Light Azure composite-lined slim-fits, both bodies, in my project `C:\Mods\my_materials`." | A new material in your project, on both meshes. Needs an image service key |
+| "What parts does the vending machine in my project have? Put red car paint on its front and glass on its window." | Each part and what it wears, then the parts changed in your project. Pack it to see them |
 
 The assistant answers from the same data you see in EDGEmat, and names the files behind it, so you can open them yourself. Some asks match many items ("samurai" fits 19): the assistant then picks one from the list, or asks you.
 
@@ -110,17 +111,19 @@ You never have to name a tool: ask in plain words and the assistant picks. The n
 | `mat_edit` | Changes a setup's layers in words ("dark red", "glossy", "leather standard clean") and saves it into a project, as a new setup with its meshes. It picks the surface's closest color and says how close. It can also show the result without saving | [Changing a layer](setup-editor.html#changing-a-layer) and [Save to Project](setup-editor.html#save-to-project) |
 | `mat_generate` | Makes a material from words through Gemini or OpenAI with your key, and puts it on a garment's materials. It can make just the picture first, for you to look at | [New Material](new-material.html) |
 | `mat_from_image` | Makes a material from an image file, with no service or key, and puts it on a garment's materials | New Material › From an image file |
-| `mat_apply` | Puts a material that is already in your project on a garment's materials. This is how a material made earlier gets onto a garment | No button yet |
+| `mat_apply` | Puts a material that is already in your project on a garment's materials. This is how a material made earlier gets onto a garment. On a part of a prop in your project, it can also put a game surface in a color (`surface`, with `color` and `tile`), a game material (`mi`), or the model's own texture back (`model: true`). Those three need the server connected from EDGEmat, below | A garment: no button yet. A prop's part: [Use a Game Surface..., Use a Game Material... and Back to the Model's Texture](desk.html#a-props-parts) |
 
 ### Newer tools
 
-Four more tools came with the current release. They are in the server you connect from EDGEmat, and in the npm package. The copies of the server inside EDGEchat and REDnode are an earlier version and don't have them yet.
+These tools came with the last few releases. They are in the server you connect from EDGEmat, and in the npm package. The copies of the server inside EDGEchat and REDnode are an earlier version and don't have them yet.
 
 | Tool | Does | Needs | Tested |
 |---|---|---|---|
 | `mat_desk` | Lists the [Desk](desk.html), puts a mesh or setup on it, names, takes off and clears lines, and adds lines to a project. `mat_edit` can also save an edit on a Desk line | Nothing extra | Yes, with Claude Code |
+| `mat_parts` | Lists a prop's parts in your project and what each wears: the model's own texture, a game surface and its color, a game material, or one made in the project. Change one with `mat_apply` | Nothing extra | Outside VS Code with a test script. The same code passed in the game through the Desk's buttons |
+| `mat_materials` | Finds the game's materials that suit any shape, for a prop's part: glass, glows, tiling metals, woods and more, by words such as "glass" or "glow blue". Decals and materials painted for one mesh are left out. The first search reads them from your game once | Nothing extra | As `mat_parts` |
 | `mat_restyle` | Restyles a whole clothing item in one go. Asked about an item, it returns the item's look in plain words. Given changes in words ("red", "denim", "glossy"), it saves the changed setups into a project, with the item's meshes. It can also put a print such as "woodland camo" over a whole material | A print needs your Gemini or OpenAI key | From a test client, outside the game. The same code passed in the game inside Wardrobe Designer, below |
-| `mat_reshape` | A first version, experimental. Changes a garment's **shape** by words, a step at a time: it draws the item from four sides, an image service changes the picture, and Tripo, a service that makes 3D models from pictures, builds the new shape, which is fitted onto the garment. Only garments that move with one bone, such as hats, helmets and glasses, can be fitted so far. Others say so before anything is paid | An image service key (OpenAI's GPT Image by default) and your own Tripo key, `TRIPO_API_KEY`. One model costs about 60 Tripo credits | The method was seen working in the game on one hat. The tool has not had a full test of its own |
+| `mat_reshape` | A first version, experimental. Changes a garment's **shape** by words, a step at a time: it draws the item from four sides, an image service changes the picture, and Tripo, a service that makes 3D models from pictures, builds the new shape, which is fitted onto the garment. The new shape keeps the game's own materials, so every look of the item keeps its colors and can still be restyled; small parts on top, such as a hat's band and buckle, stay the game's own, bent onto the new shape. Ask for Tripo's painted texture instead and it uses that (`wears: "tripo"`). Only garments that move with one bone, such as hats, helmets and glasses, can be fitted so far. Others say so before anything is paid | An image service key (OpenAI's GPT Image by default) and your own Tripo key, `TRIPO_API_KEY`. One model costs about 60 Tripo credits | The method was seen working in the game on a cowboy hat, in three of its looks with the game's own materials (the band a little bent by the fit). The tool has not had a full test of its own |
 | `mat_from_model` | Makes game materials from a textured 3D model (a `.glb` file) or from texture files: color, roughness, metal, bumps and glow. Made for EDGEfab, the asset maker, which is still being built | Nothing extra | Outside the game only. Not yet seen in the game |
 
 **Wardrobe Designer** is an app for players that runs in the game, on REDnode: pick a piece V is wearing, type how it should look, and it changes on V. It is built in EDGEmat's repo and uses the same code as `mat_restyle` and `mat_reshape`. It was tested in the game, but it is not released yet, so these pages don't cover it.

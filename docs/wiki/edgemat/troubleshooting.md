@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEmat
 order: 15
 description: "What to do when EDGEmat can't find the game or REDbridge, Find finds nothing, the color map looks scrambled, a save finds no mesh, a change doesn't show in the game, an image service refuses, the 3D view is flat, or Claude doesn't see the tools."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Troubleshooting <span class="y">EDGEmat</span>
@@ -50,6 +50,8 @@ Open it with **Show Log** in Game Materials' **`...`** menu, or **View**, **Outp
 | The color I want isn't in the grid | Each surface has a fixed list of colors. Pick the closest, or change the layer's surface to one with a better color. See [Colors come from a list](index.html#colors-come-from-a-list) |
 | `Ctrl+Z` does nothing in the setup editor | Click an empty part of the page first. While the cursor is in a box, the keys undo typing in that box |
 | A look on the Desk says **no item** | Only NPCs wear that look, so V can't. Edit another look of the mesh, one marked **worn by ...** |
+| **Use a Game Surface...** says "this works on a material of a mesh in a project" | The part commands change a mesh in your project. Open it from the project: in REDcode's **Project** view, right-click the `.mesh` › **Open in EDGEmat**, then right-click one of its materials on the Desk. See [A prop's parts](desk.html#a-props-parts) |
+| A game surface on a prop's part has its grain far too big or too small | Click the part's row to open its setup, change **Tiling** and press `Ctrl+S`. A higher number makes the grain smaller |
 | The Desk is empty after I deleted `%LOCALAPPDATA%\EDGEmat` | The Desk lived in that folder, in `desk`, and its unsaved edits are gone. What you added to projects is safe. Game Materials builds itself again |
 
 ## Saving into a project
@@ -60,7 +62,7 @@ Open it with **Show Log** in Game Materials' **`...`** menu, or **View**, **Outp
 | The list of meshes names another garment, not mine | The garment borrows a setup stored with another garment. Cancel, put your garment's mesh on the [Desk](desk.html), edit it there and use **Add to Project**. See [Two ways into a project](find.html#two-ways-into-a-project) |
 | The list has only one mesh | The two body types use different setups for this garment, such as the punk jeans. Recolor the other body's material too: open it from the other body's row in Find |
 | Add to Project says "nothing new to write" and the line stayed on the Desk | The project has its own copy of that mesh with other materials, and you chose **Keep the Project's**. Add the line again and choose **Replace with the Desk's** if you want the Desk's version. What the project's copy had is then lost |
-| There is no **Pack and Try** button in the message | It shows only when REDcode has that project open. Open the project's folder in VS Code, then use REDcode's **Pack and Install** |
+| There is no **Pack and Play** button in the message | It shows only when REDcode has that project open. Open the project's folder in VS Code, then use REDcode's **Pack and Install** |
 | "Saving into a project needs REDbridge" | See [Setting up](#setting-up) |
 
 ## In the game
@@ -71,7 +73,7 @@ Open it with **Show Log** in Game Materials' **`...`** menu, or **View**, **Outp
 | It shows on one body type only | The other body wears another mesh, and your project doesn't have it. A Desk line changes one mesh. Add the other body's mesh too: [Two ways into a project](find.html#two-ways-into-a-project) |
 | The color in the game is not quite the color I picked | Expected, within limits. The game adds lighting, shine and wear on top of the layer's color, and EDGEmat's swatches can look darker than the game for dark colors: [Colors on screen and in the game](surfaces.html#colors-on-screen-and-in-the-game) |
 | The mod went to `mods`, not `archive\pc\mod` | REDcode's `redcode.pack.redmod` setting is on. See [If REDmod packing is on](in-the-game.html#if-redmod-packing-is-on) |
-| Pack and Try installed the mod instead of swapping it in | The swap needs the game running with REDnode, its **MCP server** switched on, and a save loaded. Otherwise REDcode installs for the next start. See [Keep the game running](in-the-game.html#keep-the-game-running) |
+| Pack and Play installed the mod instead of swapping it in | The swap needs the game running with REDnode, its **MCP server** switched on, and a save loaded. Otherwise REDcode installs for the next start. See [Keep the game running](in-the-game.html#keep-the-game-running) |
 | REDnode's launcher has no **Console** | The Console needs REDnode 0.49.5 or later: [update REDnode](../rednode/install.html#updating-rednode) |
 | `addItem` answers with an error | Load a save first: at the main menu V isn't in the world. Then check the id, which must match exactly, capitals included |
 
@@ -85,6 +87,8 @@ Open it with **Show Log** in Game Materials' **`...`** menu, or **View**, **Outp
 | OpenAI asks to verify your organization | That is OpenAI's rule for GPT Image. Verify on platform.openai.com, or use Gemini |
 | "Cancelled." | You pressed Cancel. The service may still count the call |
 | Generate keeps failing with a new or free key | Press **List models** to see which image models your key can use, and pick one. The services set the limits, and a free key may not be allowed any image model |
+| A garment shows no bumps from my material, or the bumps look like dents | The material was made before EDGEmat 0.3.3. Make it again: bumps now lie over the garment's folds, and come out raised. See [On a garment](new-material.html#on-a-garment-the-garment-keeps-its-folds) |
+| I can't see the bumps in photo mode | Turn **Depth of Field** off on photo mode's **Camera** tab, and look close, with light from above |
 
 ## View in 3D
 
@@ -94,9 +98,11 @@ Open it with **Show Log** in Game Materials' **`...`** menu, or **View**, **Outp
 | "REDcode's REDbridge is not running" | Press **Restart REDbridge** in the message, wait for it, then click the eye again |
 | The garment shows other colors than I expect | Pick the look you came from in the viewer's **Appearance** list. REDcode starts on the mesh's first look, and the status bar names the right one |
 | Some parts are one flat color | Normal. Glass, hair and lights without a texture have no colors to give, and keep REDcode's flat color |
-| Every material is flat | Check the [log](#start-with-the-log) for `3D view:` lines. With none, REDcode didn't ask EDGEmat: restart VS Code with both extensions installed |
+| Every material is flat | Check the [log](#start-with-the-log) for `3D view:` lines. With none, REDcode didn't ask EDGEmat: restart VS Code with both extensions installed. Since EDGEmat 0.3.3 layers show their surface's grain: if each layer is one flat color, update EDGEmat |
+| A project's mesh on the Desk shows flat, and the log says "...is not in the loaded archives" | Fixed in EDGEmat 0.3.3, which reads the project's own materials for it. Update EDGEmat |
+| Glossy or metal parts look matte, and there are no bumps | Normal for now: the 3D view has no shine, metal or bumps yet. See [What you see, and what you don't yet](view-in-3d.html#what-you-see-and-what-you-dont-yet) |
 | My Desk edit doesn't show in 3D | Open the 3D view from the eye on that Desk line. A view opened from Find shows the game's own mesh. See [Live while you edit](view-in-3d.html#live-while-you-edit) |
-| Colors look darker than in the game | Known, for dark colors. Trust the game over the preview: [Colors on screen and in the game](surfaces.html#colors-on-screen-and-in-the-game) |
+| Colors look lighter or darker than in the game | The preview is approximate. Glossy dark surfaces look lighter here, as there is no shine yet. Trust the game over the preview: [Colors on screen and in the game](surfaces.html#colors-on-screen-and-in-the-game) |
 
 ## Assistants
 
