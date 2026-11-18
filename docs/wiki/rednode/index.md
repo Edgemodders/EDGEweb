@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDnode
 order: 0
 description: "REDnode, the EDGE platform's runtime for Cyberpunk 2077: what it is, why you might want it, what you need, and where to start."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # RED<span class="y">node</span>
@@ -52,7 +52,7 @@ Most Cyberpunk mods today are archives (replaced game files), redscript (scripts
 | Want to make a mod but don't know redscript or Lua | Write it in JavaScript or TypeScript, the most widely known programming languages, or ask [REDagent](../redagent/) to write it with you |
 | Know web development | Build in-game windows with HTML and CSS, with a ready-made UI kit in the game's look |
 | Want to change or add to the game's own UI | Panels the game draws on its HUD, written as [ink markup](ink-markup.html), and the [UI Tools](ui-tools.html) pack to inspect the game's UI and try changes live |
-| Make tools for other modders | Packages can read the game's files (through [REDbridge](../redbridge/)), place objects in the world, and swap changed archives into the running game. See [Game API](game-api.html) and [The world](world.html) |
+| Make tools for other modders | Packages can read the game's files (through [REDbridge](../redbridge/)), place objects and people in the world, animate them, set the weather, and swap changed archives into the running game. See [Game API](game-api.html) and [The world](world.html) |
 
 Three things hold for every package:
 
@@ -85,7 +85,7 @@ REDnode is the **Run** stage of the EDGE platform.
 
 ## Status
 
-**Released.** The current version is **0.62.4** (2026-11-11), for **game version 2.5**. For a game kept on 2.31, use REDnode 0.37.0, the last release for it.
+**Released.** The current version is **0.67.3** (2026-11-18), for **game version 2.5**. For a game kept on 2.31, use REDnode 0.37.0, the last release for it.
 
 Get it from [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419) or [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) on GitHub, then follow [Install and set up](install.html).
 
@@ -93,8 +93,8 @@ REDnode is still young. "Passed in game" on these pages means the developer test
 
 | | |
 |---|---|
-| **New in the latest releases** | Vortex can install REDnode (0.62.4). Tools on your PC, such as EDGEhack, can try a change in the running game after you allow them (0.62.4). Mods can drop labelled pins in the world, experimental (0.59.1) |
-| **Coming next** (built, not released) | A filter box in the launcher that finds any package by name. A **Pins** window that lists the world's pins and moves V to one. [EDGEhack](../edgehack/assistants.html)'s quickhack tools for REDagent |
+| **New in the latest releases** | A key of your own for any app, and REDnode stepping aside in the pause menu (0.67.3). You choose which mods may call another mod's tools (0.67.3). Mods can set the weather and animate the people they spawn (0.67.3). A **Pins** window, a filter box in the launcher, and the controller in mods (0.65.3). [EDGEhack](../edgehack/assistants.html)'s quickhack tools for REDagent (0.65.3) |
+| **Coming next** (agreed, not built yet) | A dropdown for windows that Node mods build. Loading only some kinds of objects from an EDGEbuilder scene |
 | **Planned** | Clicks and typing on panels the game draws itself. HDR, frame generation and ultrawide screens. TweakDB without the game running |
 
 What each release added is in the [changelog](https://edgemodders.github.io/REDnode/changelog.html). Part by part, see [What works today](#what-works-today).
@@ -105,7 +105,7 @@ Three app packs come as their own zips, attached to each REDnode release and on 
 
 | Pack | Apps | For | Needs | Read more |
 |---|---|---|---|---|
-| **REDnode Admin Tools** | Task Manager, Tools Manager | Seeing what each package costs, ending a stuck one, and choosing which tools AI assistants may use | REDnode 0.38.1 or later | [Admin Tools](admin-tools.html) |
+| **REDnode Admin Tools** | Task Manager, Tools Manager | Seeing what each package costs, ending a stuck one, and choosing which tools AI assistants and other mods may use | REDnode 0.66.0 or later for version 0.2.0, so 0.67.3 or later among releases | [Admin Tools](admin-tools.html) |
 | **REDnode Sound Tools** | Sound Tracer, Sound Search, Hot swap | Sound modders: see and hear every sound the game plays, and swap an archive in without a restart | REDnode 0.41.0 or later | [Sound Tools](sound-tools.html) |
 | **REDnode UI Tools** | UI Workbench | UI modders, and anyone curious how the game's UI is built: inspect it, try changes live, and write HUD panels of your own | REDnode 0.56.0 or later, Codeware 1.16 or later | [UI Tools](ui-tools.html) |
 
@@ -116,8 +116,8 @@ Three app packs come as their own zips, attached to each REDnode release and on 
 | Page | |
 |---|---|
 | [Install and set up](install.html) | What you need, installing, the first start, a first widget to try, updating and removing |
-| [Using the overlay](overlay.html) | F10 and the three modes, the launcher, moving windows, HUD widgets, themes, the Console |
-| [Mod Manager](mod-manager.html) | Every package in one table: on and off, pins, permissions, restart |
+| [Using the overlay](overlay.html) | F10 and the three modes, the pause menu, the launcher, moving windows, app keys, HUD widgets, the Pins window, themes, the Console |
+| [Mod Manager](mod-manager.html) | Every package in one table: on and off, pins, permissions, calls between mods, restart |
 | [Spaces and layers](spaces.html) | Sets of windows you switch between, the tool layer, solo mode |
 | [Admin Tools](admin-tools.html) | An optional pack: the Task Manager and the Tools Manager |
 | [Sound Tools](sound-tools.html) | An optional pack: Sound Tracer, Sound Search and Hot swap |
@@ -136,8 +136,8 @@ Three app packs come as their own zips, attached to each REDnode release and on 
 | [Native UI: ink markup](ink-markup.html) | HUD panels the game draws itself, written as `.ink.html` files |
 | [Game API](game-api.html) | How packages call the game: the Console, the game helper, any game function |
 | [TweakDB](tweakdb.html) | Reading and changing the game's database of items and stats from code |
-| [The world](world.html) | Placing objects and people, EDGEbuilder scenes, what is near V, pins |
-| [More of the game](more-apis.html) | Quests, text, quickhacks, sound, the game's files, the game's own UI |
+| [The world](world.html) | Placing objects and people, EDGEbuilder scenes, what is near V, animating people, the weather, the world's own objects, pins |
+| [More of the game](more-apis.html) | Quests, text, quickhacks, sound, the controller, the game's files, the game's own UI |
 | [Debugging](debugging.html) | The Mod log, Developer mode, DevTools in the game, attaching VS Code |
 
 **UI Tools** (an optional pack)
@@ -166,6 +166,11 @@ Each part of REDnode, and whether it passed the developer's test in the game. "E
 | The [Mod Manager](mod-manager.html), with Pin to launcher and Pin to HUD | Passed in game |
 | [Spaces](spaces.html), the tool layer and solo mode | Passed in game |
 | Windows you can resize, and title-bar buttons | Passed in game |
+| The launcher's filter box, which finds any package by name | Passed in game |
+| [App keys](overlay.html#app-keys): a key of your own that shows one app, or hides it | Passed in game |
+| REDnode [stepping aside in the pause menu](overlay.html#in-the-pause-menu) | Passed in game |
+| The [Pins window](overlay.html#the-pins-window): every pin in the world, **Go there**, your own pin sets | Passed in game |
+| [Choosing which mods may call](mod-manager.html#calls) another mod's tools | Passed in game |
 | The [Console](overlay.html#the-console) | Passed in game. Its `removeItem` and `tp` shortcuts are untested |
 | [Shared keys](settings.html#shared-keys): your AI service keys, set once for every EDGE tool | Passed in game |
 | [Claude Code connected to the game](agents.html), with sign-in by allowing it in the game | Passed in game |
@@ -183,6 +188,9 @@ Each part of REDnode, and whether it passed the developer's test in the game. "E
 | The quest API: quest facts, the journal, moving V | Passed in game |
 | The world API: placing objects and people, loading EDGEbuilder scenes, what is near V, objects that stay spawned far from V (needs Codeware) | Passed in game |
 | World pins: labelled posts in the world, drawn by the overlay | Passed in game. Experimental |
+| The weather: setting and holding it, then giving it back | Passed in game |
+| Animations on people a mod spawns: the game's workspots, and workspots a mod writes | Passed in game. The game's quest workspots play once, briefly |
+| The world's own objects: picking, outlining and hiding what the game placed | Experimental. Passed in game on static objects, such as a bench and a ground decal. Objects placed as entities, such as street lamps, can't be picked yet |
 | Quickhack functions: a mod decides whether a quickhack can be used on a target, and what happens when it lands | Passed in game |
 | Sound: the game's UI sounds, and a package's own audio files | Passed in game |
 | The game's own UI from a mod, and [ink markup](ink-markup.html) for HUD panels the game draws (need Codeware) | Passed in game. Experimental |
@@ -192,11 +200,13 @@ Each part of REDnode, and whether it passed the developer's test in the game. "E
 | Pages that cover the whole game view, and frames from other web addresses | Passed in game |
 | A window that holds the cursor, for example to turn a 3D camera (pointer lock) | Passed in game |
 | Mod services: mods calling each other, and offering tools to AI assistants | Passed in game |
+| Calls from mods: the player allows each call that changes something | Passed in game |
+| The controller: hearing the player's Xbox or Sony pad | Passed in game |
 | Roles: asking for a kind of service, such as a voice, whichever package provides it | Passed in game |
 | Asking REDagent a question from another mod | Passed in game |
 | Development folders: running a package from your own project folder | Passed in game |
 | The debuggers for windows and Node mods, in the game | Passed in game. Attaching VS Code is untested |
 | Tools on your PC playing a game sound in the running game, and trying a change live after you allow it (the editor channel) | Passed in game |
-| [EDGEmat](../edgemat/)'s material tools for REDagent | Passed in game |
+| [EDGEmat](../edgemat/)'s material tools and [EDGEhack](../edgehack/)'s quickhack tools for REDagent | Passed in game |
 | TweakDB without the game running | Not built yet |
 | Mod code that runs inside the game itself, and simple rules that need no code | Not started |

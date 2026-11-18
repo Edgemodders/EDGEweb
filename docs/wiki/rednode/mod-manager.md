@@ -3,8 +3,8 @@ title: The Mod Manager
 nav_title: Mod Manager
 section: REDnode
 order: 3
-description: "REDnode's built-in Mod Manager: every package in one table, switching them on and off, Pin to launcher and Pin to HUD, permissions, requirements and restarts."
-reviewed: 2026-11-13
+description: "REDnode's built-in Mod Manager: every package in one table, switching them on and off, Pin to launcher and Pin to HUD, app keys, permissions, calls between mods, requirements and restarts."
+reviewed: 2026-11-18
 ---
 
 # The Mod <span class="y">Manager</span>
@@ -20,6 +20,7 @@ The Mod Manager is a window built into REDnode that lists every REDnode **packag
 | [A package's details](#a-packages-details) | Everything about one package |
 | [Pin to launcher and Pin to HUD](#pin-to-launcher-and-pin-to-hud) | Where a package shows up |
 | [Permissions](#permissions) | Extra powers, each off until you allow it |
+| [Calls](#calls) | Which mods may call another mod's tools |
 | [Requirements](#requirements) | When a package needs another mod, or REDbridge |
 | [Node mods: restart and shared process](#node-mods-restart-and-shared-process) | Crashed and stuck mods, and saving memory |
 | [Bulk actions](#bulk-actions) | Several packages at once |
@@ -93,9 +94,11 @@ Select a row to see its details on the right.
 |---|---|
 | Name, version, author, description | What the package is |
 | **Switches** | On and off, **Pin to launcher** and **Pin to HUD** |
+| **Key** | For an app: its own key, with **Change** and **Remove**. See [App keys](overlay.html#app-keys) |
 | **Space** | Buttons for each space and **All**, to move the whole package's windows. Appears once you have two spaces |
 | A Node mod's state | Status, own or shared process, memory, **Shared process** and **Restart** |
 | Permissions | Each permission it asks for, with an **Allowed** switch |
+| **Calls** | The other mods' tools it wants to call that change something, each with an **Allowed** switch. See [Calls](#calls) |
 | **Requires** | The mods it needs, each found or missing, with the version found. A **Get REDbridge** button when it needs REDbridge and none is found |
 | "Window closed" with **Show** | Brings back a window you closed |
 | **Last error**, **Last lines** | What a Node mod printed most recently |
@@ -144,6 +147,22 @@ The launcher and the Mod Manager show each permission as a line starting **Asks 
 | "managing REDnode", with a warning under it | See what every package costs, end or restart any package, switch packages on and off, change the game's own UI widgets live, and switch AI assistants' tools on and off | It's an admin tool you trust, such as the [Admin Tools](admin-tools.html) pack's apps or the [UI Workbench](ui-tools.html) | It can stop any of your mods, and switch on AI tools you switched off |
 | "your Anthropic key, shared with every EDGE tool" (or another service's name) | Read your [shared key](settings.html#shared-keys) for that AI service | You trust the package with your key and your bill, such as REDagent with your Anthropic key | Calls made with your key may cost you |
 
+## Calls
+
+Mods can call each other's tools: a quest mod might ask a voice mod to speak a line. A tool that only reads is open to every mod. A tool that changes something is called only with your OK: the calling package lists the tool in its manifest, and you allow it here.
+
+Select the calling package. Its **Calls** section lists each tool it wants to call, the package that answers it, whether it needs your OK, and an **Allowed** switch. The switch is off until you turn it on, and you can turn it off again at any time.
+
+A call you haven't allowed is refused at once, and the reason goes to the calling mod's [Mod log](debugging.html#the-mod-log). You never get a prompt in the middle of play. The reason says what to do:
+
+| The reason says | Means |
+|---|---|
+| "... is not allowed for ... Allow it in the Mod Manager" | Switch on **Allowed** for that call here, if you trust the mod |
+| "... does not list ... in its manifest's "calls", so the player cannot allow it" | Only the mod's author can fix this, by listing the call |
+| "... is switched off for mods" | The tool is switched off for mods in the [Tools Manager](admin-tools.html#tools-manager) |
+
+The Tools Manager, in the optional Admin Tools pack, sets per tool which mods may call it: any, only those you allowed here, or none. AI assistants' calls have their own switches there.
+
 ## Requirements
 
 A package can say it needs other mods, such as Codeware or TweakXL. REDnode checks your game folder for them, with their versions. A package missing something:
@@ -163,7 +182,7 @@ A package can also require a newer REDnode, or another REDnode package.
 |---|---|
 | REDnode downloads REDbridge from GitHub | It goes into `%LOCALAPPDATA%\REDnode\bridge`. The button shows only when REDnode finds no REDbridge: a copy that EDGEdeck or REDcode downloaded counts |
 | REDbridge needs Microsoft's .NET 10 | If your PC doesn't have it, REDnode downloads that too, for your Windows account only, so no administrator prompt appears |
-| Updates | Each time you play, REDnode checks once for a newer REDbridge and shows **Update REDbridge** if there is one. It never updates without you |
+| Updates | Each time you play, REDnode checks once for a newer REDbridge and shows **Update REDbridge** if there is one. It never updates without you. A REDbridge that is running when you update stops as soon as no call waits for it, and the next call starts the new one |
 
 ## Node mods: restart and shared process
 

@@ -4,7 +4,7 @@ nav_title: Settings and controls
 section: REDnode
 order: 11
 description: "Every REDnode setting: the Settings drawer, per-package settings, shared keys, where REDnode keeps its files, and for mod makers development folders, permissions and manifest fields."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Settings and <span class="y">controls</span>
@@ -44,6 +44,7 @@ REDnode's settings are in the **Settings** drawer: press F10, open the launcher 
 | **Developer mode** | off | Adds a debug button to every window's title bar, and shows the [Development folders](#development-folders) list | You're [debugging](debugging.html) or making a package |
 | **Open at start** | on | On: the REDNODE tab and your HUD-pinned windows show as soon as the game starts. Off: the game starts with only HUD widgets showing, and the tab and pinned windows wait for your first F10 | You want a clean screen at start |
 | **Tooltips** | on | Hints when you hover a control, in every window | You know REDnode well and they get in the way |
+| **Hide in the pause menu** | on | Hides REDnode's windows, HUD widgets and tab while the game's pause menu is open. They come back as they were when it closes, and F10 still brings REDnode up there. See [In the pause menu](overlay.html#in-the-pause-menu) | You want your windows on screen in the pause menu |
 
 The bottom of the launcher itself has:
 
@@ -63,6 +64,8 @@ For each package, in the launcher or the [Mod Manager](mod-manager.html):
 | **Pin to HUD** | Off for packages installed after REDnode | Keeps its windows on screen during gameplay |
 | **Shared process** | Off | Runs the Node mod in one process with other shared mods, to save memory |
 | **Allowed**, per permission | Off | Grants a [permission](mod-manager.html#permissions) the package asks for |
+| **Allowed**, per call | Off | Lets the package call another mod's tool that changes something. See [Calls](mod-manager.html#calls) |
+| **Key** | None | For an app: a key that shows only it, or hides it. See [App keys](overlay.html#app-keys) |
 | Space | The space you were in when it first opened | Where its windows show |
 | **Debug (Node inspector)** | Off, not saved | For mod makers: runs the Node mod so a [debugger](debugging.html#the-node-debugger) can connect |
 
@@ -107,6 +110,7 @@ The short list. [Using the overlay](overlay.html#keyboard-shortcuts) has the ful
 | **F10** | Passive, interactive, hidden, and round again |
 | **Esc**, or a click on empty screen | From interactive mode back to passive |
 | **Ctrl+1** to **Ctrl+9** | In interactive mode, switches [space](spaces.html) |
+| An app's own key | Shows only that app, or hides it. You choose it: see [App keys](overlay.html#app-keys) |
 
 The F10 key can't be changed yet.
 
@@ -117,7 +121,8 @@ The F10 key can't be changed yet.
 | REDnode | `red4ext\plugins\REDnode` in the game folder: `REDnode.dll`, `Scripts`, `host`, `apps` |
 | Packages | `red4ext\plugins\REDnode\apps`, one folder each |
 | REDswap | `red4ext\plugins\REDswap` in the game folder |
-| Settings, positions, spaces, permissions, development folders, packages' data and secrets | `%APPDATA%\@rednode\overlay` |
+| Settings, positions, spaces, permissions, app keys, development folders, packages' data and secrets | `%APPDATA%\@rednode\overlay` |
+| The pin sets you make in the [Pins window](overlay.html#the-pins-window) | `%APPDATA%\@rednode\overlay\pins`, one `.pins.json` file per set. A set you opened from another folder stays there |
 | Shared keys | `%APPDATA%\Edgemodders\keys`, one encrypted file per service |
 | REDbridge, when **Get REDbridge** installed it | `%LOCALAPPDATA%\REDnode\bridge` |
 | The [UI Workbench](ui-tools.html)'s projects, and its exports | `Documents\REDnode\UI projects` (watched as a development folder) and `Documents\REDnode\UI exports` |
@@ -180,6 +185,7 @@ For mod makers. Every field of `rednode-app.json`, the file that describes a pac
 | `permissions` | All | Powers to ask the player for (above) |
 | `requires` | All | What it needs, with version ranges: game mods, `rednode`, `redbridge`, or another REDnode package by its id |
 | `provides` | All | Roles it answers for other packages through its service file, such as `voice`. `agent` is REDagent's |
+| `calls` | All | Other packages' tools it calls that change something: `"calls": ["counter-service.add", "voice.speak"]`, as `<package>.<function>` or `<role>.<function>`. The player allows each in the Mod Manager. See [Calls that change something](making-mods.html#calls-that-change-something) |
 
 ## Advanced: settings.json
 
@@ -190,11 +196,12 @@ A few settings have no switch. They are in the file `settings.json` in `%APPDATA
 | `mcp.port` | `41820` | The port REDnode's MCP server listens on | Another program on your PC must keep 41820. Assistants then need the new address |
 | `"editorChannel": "off"` | on | Turns off the **editor channel** (below) | You want no program on your PC to reach the game this way |
 | `"edgematTools": "all"` | in-game assistants only | Also shows EDGEmat's tools to desktop assistants such as Claude Code | Rarely: Claude Code gets EDGEmat through [EDGEchat](../edgechat/), and would then see each tool twice |
-| `"edgematBridge": "own"` | shared | Makes EDGEmat's tools start a REDbridge of their own in place of REDnode's | A problem with the shared one. It has no effect yet: see below |
+| `"edgehackTools": "all"` | in-game assistants only | Also shows EDGEhack's tools to desktop assistants such as Claude Code | Rarely, for the same reason as EDGEmat's |
+| `"edgematBridge": "own"` | shared | Makes EDGEmat's tools start a REDbridge of their own in place of REDnode's | A problem with the shared one |
 
 **The editor channel** lets EDGE tools on your PC, such as VS Code extensions, reach the running game without an MCP server. Through it a tool can play a game sound in the game, so you hear it with the game's own mix. A tool can also try a change in the game while you play, as [EDGEhack's Try Live](../edgehack/try-live.html) does: the first time, REDnode's **Editor request** window names the tool and waits for your **Allow** or **Deny**. The tool's changes are undone when REDnode stops. Only programs running as you, on your own PC, can use the channel.
 
-**EDGEmat's REDbridge.** REDnode can share its REDbridge with EDGEmat's tools, so one runs while you play, not two. This reaches players once REDnode comes with a newer EDGEmat than it does today; until then EDGEmat starts its own, whatever the setting.
+**One REDbridge while you play.** Since REDnode 0.65.3, EDGEmat's and EDGEhack's tools for in-game assistants use REDnode's own REDbridge, so one runs, not two.
 
 ## Running the host by hand
 

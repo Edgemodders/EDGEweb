@@ -3,26 +3,26 @@ title: "Admin Tools: the Task Manager and the Tools Manager"
 nav_title: Admin Tools
 section: REDnode
 order: 4.3
-description: "REDnode's optional Admin Tools pack: the Task Manager, which shows what every package costs and ends a stuck one, and the Tools Manager, which decides which tools AI assistants may use."
-reviewed: 2026-11-13
+description: "REDnode's optional Admin Tools pack: the Task Manager, which shows what every package costs and ends a stuck one, and the Tools Manager, which decides which tools AI assistants and other mods may use."
+reviewed: 2026-11-18
 ---
 
 # Admin <span class="y">Tools</span>
 
-**REDnode Admin Tools** is an optional pack of two apps for managing REDnode itself. Install it if you want to see what your mods cost, stop one that misbehaves, or decide which tools AI assistants may use.
+**REDnode Admin Tools** is an optional pack of two apps for managing REDnode itself. Install it if you want to see what your mods cost, stop one that misbehaves, or decide which tools AI assistants and your other mods may use.
 
 | App | What it does |
 |---|---|
 | [Task Manager](#task-manager) | Lists every running package with its CPU, memory and game calls. **End task** stops one, **Restart** starts it again |
-| [Tools Manager](#tools-manager) | Lists every tool an AI assistant can use through REDnode, with a switch for each |
+| [Tools Manager](#tools-manager) | Lists every tool an AI assistant can use through REDnode, with a switch for each, and a **MODS** switch for which of your other mods may call it |
 
-**Status:** released, for game 2.5. Both apps passed their test in the game on the pack's first release, for game 2.31. The 2.5 release has had no separate test.
+**Status:** released, for game 2.5. The current version is **0.2.0** (2026-11-18), which adds the Tools Manager's **MODS** switch; that Tools Manager passed its test in the game on 2.5. The Task Manager passed its test on the pack's first release, for game 2.31, and has had no separate test on 2.5.
 
 ## Install
 
 | You need | |
 |---|---|
-| REDnode 0.38.1 or later | [Install REDnode](install.html) first |
+| REDnode 0.66.0 or later for Admin Tools 0.2.0, so 0.67.3 or later among releases. The older 0.1.1 runs on 0.38.1 or later | [Install REDnode](install.html) first |
 | The pack's zip, `REDnode-Admin-Tools-<version>.zip` | From [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35793) or [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) |
 
 1. With the game closed, add the zip to EDGEdeck or Vortex and deploy, or extract it into the game folder. The two apps land in REDnode's apps folder, as `taskmanager` and `toolsmanager`.
@@ -77,23 +77,27 @@ REDnode's own windows, such as the Mod Manager and the Mod log, are listed but c
 
 ## Tools Manager
 
-Every tool an AI assistant can see through REDnode's [MCP server](agents.html), the way Claude Code and REDagent see it: REDnode's own tools first, then each running mod's. Each row says what the tool does and whether it **reads** (runs without asking), **asks first** or **acts**.
+Every tool an AI assistant can see through REDnode's [MCP server](agents.html), the way Claude Code and REDagent see it: REDnode's own tools first, then each running mod's. Each row says what the tool does and whether it **reads** (runs without asking), **asks first** or **acts**. Since 0.2.0 it also decides which of your other mods may call each mod's tools.
 
 {% include shot.html caption="The Tools Manager" shows="The Tools Manager window over the game: REDnode's tools as the first group, then a mod's tools, each row with its switch and whether it reads or asks first, and one tool selected with its description." %}
 
 | Control | Does |
 |---|---|
-| The switch on a tool | Takes the tool away from every assistant, from its next request |
-| The switch on a group | The same for all of REDnode's tools, or all of one mod's |
-| **Off for new packages** | A newly installed mod's tools start switched off, until you switch them on |
-| Select a tool | Shows its description and options, as an assistant reads them |
+| The assistants' switch on a tool | Takes the tool away from every assistant, from its next request |
+| The assistants' switch on a group | The same for all of REDnode's tools, or all of one mod's |
+| **Off for new packages** | A newly installed mod's tools start switched off for assistants, until you switch them on |
+| The **MODS** switch on a mod's tool | Which of your other mods may call it: **MODS ON** (any mod), **ALLOWED** (only mods you allowed in the [Mod Manager's Calls](mod-manager.html#calls)) or **MODS OFF** (none). A click goes to the next. Tools that only read start on, the rest allowed |
+| The **MODS** switch on a mod's group | The same for every tool of that mod. A tool's own switch wins over it; **Back to the default** in the tool's details undoes that |
+| **Mods: off for new packages** | A newly installed mod's tools start switched off for other mods |
+| Select a tool | Shows its description and options, as an assistant reads them, and the mods that ask to call it, each allowed or not |
 | **Assistants** | Which assistants have connected, and when |
-| **Recent calls of mods' tools** | The newest calls: when, by which assistant, and the result or error |
+| **Recent calls of mods' tools** | The newest calls: when, by which assistant or mod (marked `(mod)`), and the result or error, refusals included |
 
 Good to know:
 
 - Switching off `api_read` or `api_call` takes the game away from every assistant, REDagent included. The window says so beside them.
 - REDnode keeps the switches, not the pack. If you remove the pack, the tools you switched off stay off. Install the pack again to change them.
+- The **MODS** switch needs REDnode 0.66.0 or later, so 0.67.3 among releases.
 
 ## More
 

@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: REDnode
 order: 12
 description: "Fixes for common REDnode problems: no launcher tab, missing windows, crashed mods, the Console, archive swaps, Claude Code not connecting, the logs, and the UI Tools pack's UI Workbench."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Troubleshooting <span class="y">REDnode</span>
@@ -14,8 +14,8 @@ Find the part where you are stuck, then what you see in the left column. If it i
 | Where you are stuck | |
 |---|---|
 | [Starting up](#starting-up) | No REDNODE tab, GAME OFF, the game won't start, Vortex's "Invalid package" |
-| [Windows and the overlay](#windows-and-the-overlay) | A window is missing, flicker, the cursor, slow game, F9 |
-| [Packages and mods](#packages-and-mods) | Not in the launcher, CRASHED, NEEDS, a feature does nothing |
+| [Windows and the overlay](#windows-and-the-overlay) | A window is missing, flicker, the cursor, the pause menu, app keys, slow game, F9 |
+| [Packages and mods](#packages-and-mods) | Not in the launcher, CRASHED, NEEDS, a feature does nothing, a call that is not allowed |
 | [The Console](#the-console) | Errors, and commands that do nothing |
 | [Archive swaps](#archive-swaps) | A swap is refused, or doesn't show |
 | [Claude Code](#claude-code) | It can't reach REDnode, or shows it twice |
@@ -62,6 +62,8 @@ Work down this list:
 | Check | Fix |
 |---|---|
 | Is the overlay hidden? | Press **F10** until windows show |
+| Is the game's pause menu open? | REDnode hides there. Press **F10** to bring it up, or see [In the pause menu](overlay.html#in-the-pause-menu) |
+| Did you press an app's own key? | It shows only that app. Press the key again, or **F10** or **Esc**, and the rest come back. See [App keys](overlay.html#app-keys) |
 | Is it pinned to the HUD? | Unpinned windows show only in interactive mode, after F10. Pin it in the [Mod Manager](mod-manager.html#pin-to-launcher-and-pin-to-hud) or from its title bar |
 | Is it in another space? | Check the Mod Manager's **Space** column, or switch spaces with Ctrl+1 to 9 |
 | Is a package in solo mode? | The tab shows **SOLO**. Press **End** |
@@ -75,6 +77,8 @@ Work down this list:
 |---|---|
 | My HUD widgets and the tab vanished when I pressed F10 | You went from interactive mode to hidden mode. Press **F10** once more. To go back to playing, use **Esc**. See [F10 and the three modes](overlay.html#f10-and-the-three-modes) |
 | I can't click or type in a window | Press **F10** until a cursor shows |
+| REDnode vanished when I opened the pause menu | That's **Hide in the pause menu**, on by default. REDnode comes back when you close the pause menu, and **F10** brings it up there. Switch the setting off in the launcher's Settings drawer to keep it on screen |
+| The Key binding window won't take my key | The game uses that key, or REDnode or Windows does: the window says which. Pick one it accepts, such as F6, F7 or F8 |
 | Windows flicker, show garbage or don't update | Switch **GPU sharing** off in the launcher's Settings drawer (the gear). Every window reopens, drawn the other way. If that fixes it, please report it with your graphics card and the overlay host's log |
 | The cursor vanishes, or interactive mode ends by itself | Press **F10** to get back. Both problems were fixed in earlier versions. If you still see either on the current version, please report it and attach the plugin log, which records each time the game window loses and regains focus |
 | The cursor blinks with DLSS on | Update your graphics driver: an older NVIDIA driver caused this on one laptop |
@@ -90,6 +94,8 @@ Work down this list:
 | A package isn't in the Mod Manager either | Check that its folder is in `red4ext\plugins\REDnode\apps` in the game folder. Then read `rednode-overlay.log`: it names each package it skipped, and why |
 | A mod shows **CRASHED** or **NOT RESPONDING** | Only that mod is affected; the game and other mods keep running. Read **Last error** in the Mod Manager or the [Mod log](debugging.html#the-mod-log), then press **Restart**. If it keeps crashing, send its author the error: **Copy** in the Mod log puts it on the clipboard |
 | A package says **NEEDS**, or "Needs ..." | It requires a mod your game doesn't have, or has in an older version. The Mod Manager's **Requires** list says which, and what version. Install it with [EDGEdeck](../edgedeck/) or your mod manager and restart the game |
+| A mod's call fails with "... is not allowed ... Allow it in the Mod Manager" | The mod wants to call another mod's tool that changes something. If you trust it, select it in the Mod Manager and switch the call on under [Calls](mod-manager.html#calls). Other reasons are in that section |
+| **Update REDbridge** stays after I pressed it, and pressing it again does nothing | Fixed in REDnode 0.67.3: [update REDnode](install.html#updating-rednode) |
 | A package's feature does nothing | Three common causes. It waits for a permission: look for **Asks for** in its launcher row or Mod Manager details, and switch **Allowed** on if you trust it. It needs REDbridge: press [Get REDbridge](mod-manager.html#get-redbridge) in its details. Or it needs a loaded save: load one |
 
 ## The Console

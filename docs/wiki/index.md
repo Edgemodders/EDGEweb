@@ -4,7 +4,7 @@ nav_title: The EDGE platform
 section: Start here
 order: 0
 description: "An introduction to EDGE, the modding platform for Cyberpunk 2077 where you and an AI assistant build mods together, and the way into the EDGEmodders wiki."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # The EDGE <span class="y">platform</span>
@@ -25,7 +25,7 @@ EDGE is a family of toolkits. Five of them cover the whole life of a mod, and th
 | Create | [REDcode](redcode/) | An editor for the game's files, built on VS Code. Browse the game's files, change them and pack your mod | 0.10.9, a preview |
 | Build | [REDbridge](redbridge/) | The helper that reads and writes the game's files for the other tools, with WolvenKit's own code. The tools download it for you | 0.12.1 |
 | Deploy | [EDGEdeck](edgedeck/) | A mod manager. Add mods, turn them on or off, deploy them to the game, and undo | 0.31.0, a preview |
-| Run | [REDnode](rednode/) | The part that runs in the game. Mods load and reload while you play, and draw their windows over the game | 0.62.4 |
+| Run | [REDnode](rednode/) | The part that runs in the game. Mods load and reload while you play, and draw their windows over the game | 0.67.3 |
 
 More toolkits build on those five for particular jobs:
 

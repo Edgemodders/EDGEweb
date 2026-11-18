@@ -3,7 +3,7 @@ title: Agents and MCP
 section: REDnode
 order: 10
 description: "Connect Claude Code to the running game through REDnode's MCP server: the easy route with EDGEchat, first things to ask, what each tool does and what asks you first. For mod makers: tools from mods, and asking REDagent from a mod."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Agents and <span class="y">MCP</span>
@@ -104,6 +104,8 @@ The question comes from Claude Code, in its own window, not from the game. For t
 | `game_facts_set`, `game_journal_set` | Change quest facts or journal entries in your save |
 | `game_teleport` | Moves V |
 | `world_spawn`, `world_remove`, `world_load` | Put a prop, an object or a person in the world, remove it, or load an EDGEbuilder scene |
+| `world_animate` | Plays, stops or reads a workspot (an animation) on a person the assistant spawned |
+| `world_weather_set` | Sets and holds the weather, or gives it back to the game |
 | `mod_call`, and a mod's own tools | Run a tool one of your mods offers, unless the mod's author marked it as read-only |
 | `apps`, when it acts | Opens, closes, restarts or pins one of your packages |
 
@@ -123,6 +125,7 @@ The question comes from Claude Code, in its own window, not from the game. For t
 | `api_get` | One property of a game object |
 | `game_facts`, `game_journal` | Quest facts and journal entries |
 | `world_near`, `world_spawned` | What is around V, with the files each thing uses, and what the assistant put in the world |
+| `world_weather` | The weather now, who holds it, and every weather state |
 | `world_pin`, `world_unpin`, `world_pins` | Drop a labelled pin in the world, at a place or on an object. Pins are only drawn over the game and change nothing in it |
 | `mod_services`, `mod_read` | List the tools your mods offer, and run the ones that only read |
 
@@ -141,9 +144,9 @@ To see every tool an assistant can reach, and to switch any tool off for all ass
 | Tool | What an assistant can do | Where to read |
 |---|---|---|
 | [EDGEmat](../edgemat/) | REDagent, in the game, can find a garment's materials and describe them without asking. Recolours and new materials ask you first. REDnode starts EDGEmat's tools by itself the first time REDagent needs them | [EDGEmat and AI assistants](../edgemat/assistants.html) |
-| [EDGEhack](../edgehack/) | Coming in a later REDnode release, not out yet: REDagent making and changing quickhacks while you play. Built, and passed its test in the game | [EDGEhack with assistants](../edgehack/assistants.html) |
+| [EDGEhack](../edgehack/) | REDagent, in the game, can find and describe the game's quickhacks without asking. Making a quickhack, changing its costs, texts and effects, writing its script and trying it live ask you first. New ones go on EDGEhack's Desk unless you name a project. Since REDnode 0.65.3, with REDagent 0.4.4 | [EDGEhack with assistants](../edgehack/assistants.html) |
 
-These tools are for assistants inside the game. Claude Code on your desktop gets EDGEmat and EDGEhack from those tools themselves, or all at once through [EDGEchat](../edgechat/).
+Both share REDnode's own REDbridge, so only one runs while you play. These tools are for assistants inside the game. Claude Code on your desktop gets EDGEmat and EDGEhack from those tools themselves, or all at once through [EDGEchat](../edgechat/).
 
 ## Safety
 

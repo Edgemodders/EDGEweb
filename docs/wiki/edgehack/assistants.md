@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEhack
 order: 8
 description: "Ask Claude Code to find, make and change quickhacks with EDGEhack: what an assistant can do, which assistants work today, how to connect one, and what it asks before changing anything."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # EDGEhack with <span class="y">assistants</span>
@@ -19,7 +19,7 @@ It works through EDGEhack's **MCP server**. MCP is the standard that lets an AI 
 | [What an assistant can do](#what-an-assistant-can-do) | Eight tools, and which ask first |
 | [Connect Claude Code](#connect-claude-code) | From VS Code, or with one command |
 | [What the server needs](#what-the-server-needs) | |
-| [REDagent in the game](#redagent-in-the-game) | Coming |
+| [REDagent in the game](#redagent-in-the-game) | Making quickhacks while you play |
 | [Try it](#try-it) | |
 
 ## Which assistant
@@ -30,7 +30,7 @@ It works through EDGEhack's **MCP server**. MCP is the standard that lets an AI 
 | **[EDGEchat](../edgechat/)**, the EDGE plugin for Claude Code | Does not include EDGEhack yet. Connect EDGEhack as below, and the two work side by side |
 | **Agents inside VS Code** (VS Code 1.101 or later) | See EDGEhack's tools with no connecting. Not tested by EDGEhack's developer |
 | **Another MCP client** | Can run the server: see [Without VS Code](#without-vs-code) |
-| **[REDagent](../redagent/)**, the assistant inside the game | Coming, not released: see [below](#redagent-in-the-game) |
+| **[REDagent](../redagent/)**, the assistant inside the game | Works with REDnode 0.65.3 and REDagent 0.4.4 or later: see [below](#redagent-in-the-game) |
 
 New to Claude Code? Start with [Connect Claude Code](../connect-claude-code.html).
 
@@ -104,9 +104,9 @@ Then start a new Claude Code session in your project's folder. Quickhacks made t
 
 ## REDagent in the game
 
-**Coming, not released.** [REDagent](../redagent/) is the assistant inside the game. With EDGEhack's tools it will make a quickhack while you play: the quickhack lands on EDGEhack's Desk, REDagent can try it live and put the tier you asked for in V's backpack, and you add it to a project in VS Code later.
+[REDagent](../redagent/) is the assistant inside the game. With EDGEhack's tools it makes a quickhack while you play: the quickhack lands on EDGEhack's Desk, REDagent can try it live and put the tier you asked for in V's backpack, and you add it to a project in VS Code later. Its reads run at once; every change asks you first.
 
-This is built, and passed its test in the game. It needs a REDnode and a REDagent newer than the ones released today, so you can't use it yet. This page will say so when they are out.
+It needs REDnode 0.65.3 and REDagent 0.4.4 or later, both released on 2026-11-15, and passed its test in the game. REDnode comes with EDGEhack's tools: you install nothing else. Until the mod is packed, a new quickhack tried live shows its text key in place of its name.
 
 {% include shot.html src="/assets/shots/edgehack/assistants-redagent.webp" caption="REDagent making a quickhack" shows="The game with REDagent's window: the player's request for a new quickhack, REDagent's ask card for hack_new, and its answer saying the quickhack is on EDGEhack's Desk." %}
 

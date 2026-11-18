@@ -3,7 +3,7 @@ title: Node mods
 section: REDnode
 order: 6
 description: "Write REDnode mods in JavaScript that run in Node beside the game: a first mod step by step, windows without HTML, game events, logs, crashes, hot reload, saving data and secrets, a page and a mod together, npm packages and TypeScript."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Node <span class="y">mods</span>
@@ -302,7 +302,7 @@ REDnode undoes much by itself when a mod stops: its windows, its TweakDB changes
 | `pkg.dir` | Your package's folder. Read from it; don't write to it |
 | `pkg.dataDir` | A folder of your own, outside the apps folder, that survives updates. Write your files here. See [Where to save files](making-mods.html#where-to-save-files) |
 | `secrets.get(name)`, `secrets.set(name, value)`, `secrets.delete(name)` | A small safe for secrets such as an API key, encrypted with the player's Windows account. A package reads only its own. These work in a page too |
-| `secrets.shared(service)`, `secrets.askShared(service, { reason })` | The player's [shared key](settings.html#shared-keys) for an AI service, such as `anthropic`. Needs the `keys:<service>` permission |
+| `secrets.shared(service)`, `secrets.askShared(service, { reason, replace })` | The player's [shared key](settings.html#shared-keys) for an AI service, such as `anthropic`. Needs the `keys:<service>` permission. `replace: true` (REDnode 0.65.3) asks for a new key even when one is saved, for a key the service refused: the window shows the saved key's last 4 characters, and if the player says no, the saved key stays |
 
 A visit counter that survives restarts:
 

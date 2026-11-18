@@ -4,12 +4,12 @@ nav_title: Install and set up
 section: REDnode
 order: 1
 description: "Install REDnode into Cyberpunk 2077 from its release zip, check it works, try a first widget, and update or remove it."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Install and set up <span class="y">REDnode</span>
 
-REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.62.4** (2026-11-11), for **game version 2.5**. Allow about fifteen minutes.
+REDnode comes as one zip, laid out like the game folder, so you can install it with Vortex, [EDGEdeck](../edgedeck/) or by hand. The current release is **0.67.3** (2026-11-18), for **game version 2.5**. Allow about fifteen minutes.
 
 If you kept your game on version 2.31, install REDnode **0.37.0** instead, the last release for 2.31. The two don't mix: a REDnode made for 2.5 won't load on 2.31, and 0.37.0 won't load on 2.5.
 
@@ -96,9 +96,9 @@ One more folder, `red4ext\plugins\REDswap`, holds [REDswap](redswap.html).
 
 | Look at | You should see |
 |---|---|
-| The REDNODE tab | At the lower left of the main menu. Press F10 and click it: the launcher says **GAME LINKED**, and shows the version at the bottom, such as **Version 0.62.4** |
+| The REDNODE tab | At the lower left of the main menu. Press F10 and click it: the launcher says **GAME LINKED**, and shows the version at the bottom, such as **Version 0.67.3** |
 | `red4ext\logs\red4ext-*.log` in the game folder | A line saying REDnode `has been loaded` |
-| `red4ext\logs\rednode-overlay.log` | The overlay host's log. Its first line is `REDnode overlay host 0.62.4`, with your version |
+| `red4ext\logs\rednode-overlay.log` | The overlay host's log. Its first line is `REDnode overlay host 0.67.3`, with your version |
 
 If the tab doesn't appear, see [Troubleshooting](troubleshooting.html#no-rednode-tab).
 

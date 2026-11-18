@@ -2,8 +2,8 @@
 title: Using the overlay
 section: REDnode
 order: 2
-description: "REDnode's overlay in the game: F10 and the three modes, the launcher, moving and closing windows, HUD widgets, themes, the Console and keyboard shortcuts."
-reviewed: 2026-11-13
+description: "REDnode's overlay in the game: F10 and the three modes, the pause menu, the launcher, moving and closing windows, app keys, HUD widgets, the Pins window, themes, the Console and keyboard shortcuts."
+reviewed: 2026-11-18
 ---
 
 # Using the <span class="y">overlay</span>
@@ -12,10 +12,12 @@ The **overlay** is everything REDnode draws on top of the game: windows, HUD wid
 
 | On this page | |
 |---|---|
-| [F10 and the three modes](#f10-and-the-three-modes) | Showing, using and hiding the overlay |
+| [F10 and the three modes](#f10-and-the-three-modes) | Showing, using and hiding the overlay, and [the pause menu](#in-the-pause-menu) |
 | [The launcher](#the-launcher) | REDnode's home, behind the REDNODE tab |
 | [Windows](#windows) | Moving, closing, and the [title-bar buttons](#title-bar-buttons) |
+| [App keys](#app-keys) | A key of your own that shows one app, or hides it |
 | [HUD widgets](#hud-widgets) | Windows that act like part of the game's HUD |
+| [The Pins window](#the-pins-window) | Every pin in the world, Go there, and your own pin sets |
 | [Themes](#themes) | Three looks for every window |
 | [The Console](#the-console) | Type commands for the game, with a [first command to try](#try-it-your-first-command) |
 | [Keyboard shortcuts](#keyboard-shortcuts) | Every key REDnode uses |
@@ -48,6 +50,15 @@ Careful with **F9**, right beside F10: it is the game's Quick Load, not REDnode'
 
 {% include shot.html caption="Interactive mode" src="/assets/shots/rednode/overlay-interactive-mode.png" alt="Gameplay in interactive mode with several REDnode windows open: the launcher, Settings, the Mod Manager, the Counter panel, the Mod log and a round HUD widget, with REDnode&rsquo;s cursor over the Mod Manager." shows="Gameplay in interactive mode: several REDnode windows open, the REDnode cursor over one of them, and the launcher tab at the lower left." %}
 
+### In the pause menu
+
+When you open the game's pause menu (**Esc** while you play), REDnode hides: its windows, HUD widgets and the REDNODE tab. Close the pause menu and REDnode comes back as it was.
+
+| To | Do |
+|---|---|
+| Use REDnode in the pause menu | Press **F10** there, as anywhere else. If you change the mode with F10 while the pause menu is open, REDnode keeps your choice when it closes |
+| Keep REDnode on screen in the pause menu | Switch **Hide in the pause menu** off in the [Settings drawer](settings.html#launcher-settings). It is on by default |
+
 ## The launcher
 
 The launcher is REDnode's home. Its tab sits at the lower left of the screen: **REDNODE** with a count, such as `· 9/20` (open packages out of all of them). Press F10, then click the tab to open the launcher; click it again to close it.
@@ -57,8 +68,10 @@ The launcher is REDnode's home. Its tab sits at the lower left of the screen: **
 | Part | What it does |
 |---|---|
 | **GAME LINKED** or **GAME OFF** | Whether REDnode is connected to the game |
-| The list | The **Mod Manager** first, then REDnode's own tools, such as the Mod log and the Console, and every package pinned to the launcher. A package that crashed is listed even if it isn't pinned, so an error never hides |
-| "3 more in the Mod Manager · 1 new" | How many packages are not in the launcher, and how many are new. **Open** opens the [Mod Manager](mod-manager.html), which lists them all |
+| The list | The **Mod Manager** first, then REDnode's own tools, such as the Mod log, the Console and Pins, and every package pinned to the launcher. A package that crashed is listed even if it isn't pinned, so an error never hides |
+| **Filter mods...** | Type part of a name to find any installed package, pinned to the launcher or not. Names that start with what you typed come first. The box has the keyboard as soon as the launcher opens, so you can type at once |
+| **Open**, beside the filter | Opens the [Mod Manager](mod-manager.html), which lists every package. Its tooltip says how many packages are not in the launcher, and how many are new |
+| A package's name | A link. A click switches the package on if it is off, shows the windows you closed, or brings it into this [space](spaces.html) from another |
 | A package's switch | Turns it on or off: opens or closes an app, starts or stops a mod |
 | A line starting **Asks for**, with an **Allowed** switch | A permission the package wants. The feature that needs it waits until you allow it. See [Permissions](mod-manager.html#permissions) |
 | A line starting "Needs" | A mod the package requires that your game doesn't have. See [Requirements](mod-manager.html#requirements) |
@@ -67,8 +80,6 @@ The launcher is REDnode's home. Its tab sits at the lower left of the screen: **
 | The bottom | The [Space row](spaces.html), the **Theme** buttons, the gear that opens the **Settings** drawer beside the launcher, and the REDnode version. See [Settings and controls](settings.html) |
 
 The tab has a striped grip on its left: drag it to move the launcher. When you have more than one [space](spaces.html), the tab also shows **▾** and the current space's name. When a package is in [solo mode](spaces.html#solo-mode), it shows **SOLO**, the package's name and **End**.
-
-Coming in the next release: a filter box at the top of the launcher that finds any installed package by name, in place of the "more in the Mod Manager" line.
 
 ## Windows
 
@@ -95,11 +106,49 @@ Windows built with REDnode's UI kit show a few small buttons beside **✕**, rig
 | Roll up | Folds the window down to its title bar, and back | Usually. An app can leave it out |
 | Pin to HUD | Keeps the window on screen in passive mode | Usually |
 | Reset position | Puts the window back where it started | After you moved or resized it |
+| Key binding… (the key icon) | Gives the app a key of its own. See [App keys](#app-keys) | Usually. An app can leave it out |
 | Debug | Opens the window's debugger | [Developer mode](debugging.html#developer-mode) is on |
 
 Up to three buttons fit beside **✕**. When a window has more, the rest go into a **⋯** menu on the far left, each with its name. Some choices, such as which space to move to, open inside that menu, with **‹ Back** to return.
 
 A package can add buttons of its own, such as a gear for its settings. They sit nearest **✕** and count toward the three, so REDnode's buttons that no longer fit move into **⋯**.
+
+## App keys
+
+Any app can have a key of its own. The key shows only that app, with the cursor, so you can use it at once. Pressed again, it hides the app and gives the game its mouse and keyboard back. It suits a tool you dip into while you play, such as EDGEbuilder or the Mod Manager.
+
+To set one, press **F10**, then **Key binding…** in the app's title bar (the key icon, or in **⋯**), or **Key** in the app's details in the [Mod Manager](mod-manager.html#a-packages-details). Press the key you want. **Save** lights up when REDnode accepts it.
+
+| You press the app's key | What happens |
+|---|---|
+| While the app isn't on screen with the cursor (you're playing, or the overlay is hidden) | Only that app shows, with your HUD widgets and pins, and the cursor. A closed app opens; a stopped mod starts |
+| Again | The app hides and the game gets its input back |
+| **F10**, **Esc** or a click on empty screen, instead | Ends the one-app view: the overlay is back as it was |
+
+| Good to know | |
+|---|---|
+| An app that covers the whole screen | Such as EDGEbuilder. It keeps its view: the key hides only its panels. You still move what you selected with its gizmo and turn its camera with the right mouse button, and the next press brings the panels back |
+| The app stays as it was | Edit mode, solo mode and what you selected don't change |
+| Keys you can't use | Any key the game uses: REDnode reads the game's key bindings, your own changes to them and input mods' files, and the window says why it refuses a key. REDnode's and Windows' own keys too. On game 2.5 the free keys include F2, F6, F7, F8, F11, F12, the numpad, Page Up, Page Down, End, Insert and Delete |
+| Ctrl, Shift or Alt with the key | Allowed, with a note: the game hears them first (Ctrl crouches, Shift sprints) |
+| One app per key | A key another app has is refused |
+| To remove a key | **Remove** beside **Key** in the app's details in the Mod Manager |
+
+### Try it: a key for the Mod Manager
+
+1. Press **F10** and open the Mod Manager.
+2. In its title bar, press the key icon (or **⋯**, then **Key binding…**). The Key binding window opens.
+3. Press **Ctrl+B**, then **F7**, then **Save**.
+4. Press **Esc** to go back to playing, then **F7**.
+5. Press **F7** again.
+
+| After | You should see |
+|---|---|
+| Step 3 | Ctrl+B is refused with the reason (the game uses B to holster your weapon), and Save stays grey. F7 is accepted and Save lights up |
+| Step 4 | Only the Mod Manager, with the cursor. The tab and your other windows are gone |
+| Step 5 | The Mod Manager hides and V moves again |
+
+To take the key off, select **Mod Manager** in the Mod Manager and press **Remove** beside **Key**.
 
 ## HUD widgets
 
@@ -113,6 +162,45 @@ HUD widgets, and other windows that ask for it, hide by themselves:
 | Photo mode | While it's on |
 | The main menu | The main menu and loading screens |
 | A scene | A cinematic scene (a cutscene). Ordinary conversations with NPCs don't count. Which scenes count has not been fully tested yet: if a widget stays up in a cutscene, please report it |
+
+## The Pins window
+
+Mods, AI assistants and you can put **pins** in the world: glowing posts with a label and the distance, drawn by REDnode over the game. The **Pins** window lists them all and lets you drop your own. Switch on **Pins** in the launcher.
+
+{% include shot.html caption="The Pins window" shows="The Pins window at the right of the screen: a few pins listed nearest first, each with its colour, where it comes from and its distance, a Go there button on each, the name box with Drop a pin here, and two of the pins visible in the world behind it." %}
+
+| Part | Does |
+|---|---|
+| The list | Every pin, nearest first, with its colour, where it comes from (one of your sets, a mod, an assistant) and its distance. A filter box narrows it |
+| **Go there** | Moves V beside the pin, about 2.5 m from it, facing it |
+| The name box and **Drop a pin here** | Puts a pin with that name at V's feet, in the set in use. **Enter** in the box drops one too |
+| **✕** on one of your pins | Removes it from its set and its file at once. There is no undo |
+| **Click a pin to go there** | Off by default. On, a click on a pin's label or post in the world, in interactive mode, moves V there |
+| **Hide all** | Takes every pin out of the world for now. The list shows them dimmed |
+
+The **Sets** tab keeps your own pins in **sets**, one file each:
+
+| Part | Does |
+|---|---|
+| Your sets | Each one shown or hidden by its switch. **USE** picks the set that new pins go into |
+| **New set** | Makes an empty set, in use at once |
+| **Open** | Opens a `.pins.json` file by its full path, such as one from a mod project. Windows' Copy as path works |
+| **✕** on a set | Takes it off the list. Its file stays |
+
+Your sets, and which are shown, come back each time the game starts. A pin a mod or an assistant dropped goes when that mod stops, or when you load a save. A hidden set's pins are not listed.
+
+### Try it: drop a pin and go back to it
+
+1. Load a save, outdoors on open ground. Press **F10** and switch on **Pins** in the launcher.
+2. Type `Start` in the name box and press **Drop a pin here**.
+3. Walk about 50 m away. Press **Go there** on **Start**.
+
+| After | You should see |
+|---|---|
+| Step 2 | A cyan pin at V's feet, listed as **Start** in the set My pins, 0 to 3 m away |
+| Step 3 | The distance counts up as you walk. After **Go there**, V stands beside the pin, facing it |
+
+Mod makers: see [Pins](world.html#pins) on The world page.
 
 ## Themes
 
@@ -195,6 +283,8 @@ Closing the Console's window ends the Console. What you typed before is kept for
 | **Esc** | Interactive mode | Back to passive. If a window is holding the cursor, for example to turn a 3D camera, the first Esc releases the cursor. A window that asks for Esc, such as the UI Workbench while it picks, gets it instead |
 | Click empty screen | Interactive mode | Back to passive |
 | **Ctrl+1** to **Ctrl+9** | Interactive mode | Switches to that [space](spaces.html) |
+| An app's own key, such as **F7** | Anywhere in the game | Shows only that app, with the cursor, or hides it again. You choose the key: see [App keys](#app-keys) |
+| **Esc** | While you play | The game's pause menu. REDnode hides while it is open: see [In the pause menu](#in-the-pause-menu) |
 | **Ctrl+C**, **Ctrl+V**, **Ctrl+X**, **Ctrl+A**, **Ctrl+Z**, **Ctrl+Y** | In the front window | Copy, paste, cut, select all, undo, redo. A window with its own undo or copy, such as an editor, handles them itself |
 | Double-click, and **Ctrl**, **Shift** or **Alt** with a click | In a window | Reach the window as they would in a desktop program |
 | **F9** | Anywhere in the game | Not REDnode's: it is the game's Quick Load. Mind it, right beside F10 |

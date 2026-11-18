@@ -16,6 +16,7 @@ How to keep it:
 
 **New**
 
+- Wiki: REDnode caught up with 0.65.3 and 0.67.3: app keys, the pause menu, the Pins window and the launcher's filter for players; who may call a mod's tools (the Mod Manager's Calls, the Admin Tools 0.2.0 MODS switch); for mod makers the weather, animations on spawned people, the world's own objects (experimental) and the controller: https://edgemodders.ai/wiki/rednode/
 - Wiki: a section for EDGEfab, the asset maker, ahead of its first release: install, a first-prop tutorial, the Desk, pictures, 3D models, Add to Project, the Library, assistants (Claude Code, EDGEchat and the MCP server), settings and troubleshooting; with nine screenshots taken in VS Code: https://edgemodders.ai/wiki/edgefab/
 - Wiki: EDGEbuilder's baking page says how to get people into a baked scene's mod: one scene or several, and a script that spawns only the people: https://edgemodders.ai/wiki/edgebuilder/baking.html#people-in-a-baked-scene
 - A dashboard of the whole EDGE platform: each tool's build plan, last release, open requests, tests and who is waiting on whom: https://edgemodders.ai/dashboard.html

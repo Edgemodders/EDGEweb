@@ -4,7 +4,7 @@ nav_title: Making mods and apps
 section: REDnode
 order: 5
 description: "Where to start making something for REDnode, and what a package is: Node mods, overlay apps and HUD widgets, the rednode-app.json manifest, the apps folder, permissions, requirements, mod services, the samples, and sharing your package."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Making mods and <span class="y">apps</span>
@@ -102,7 +102,7 @@ The fields you'll use most:
 | `requires` | Other mods it needs, with versions. See [Requirements](#requirements) |
 | `service` | Functions other packages can call. See [Mod services](#mod-services) |
 
-The full list, with window placement (`anchor`, `x`, `y`), `kind`, `hideWith`, `sounds` and `isolation`, is on [Settings and controls](settings.html).
+The full list, with window placement (`anchor`, `x`, `y`), `kind`, `hideWith`, `sounds`, `isolation` and `calls`, is on [Settings and controls](settings.html#manifest-fields).
 
 ## The apps folder
 
@@ -219,8 +219,9 @@ Every package imports its tools from `rednode`. REDnode provides it: there is no
 | `game` | V's position and items, game events, what the game is showing, UI sounds | [Game API](game-api.html#the-game-helper) |
 | `api` | Any game function | [Game API](game-api.html#calling-any-game-function) |
 | `tweakdb` | Reading and changing TweakDB, the game's database of items and stats | [TweakDB](tweakdb.html) |
-| `world` | Spawning and moving objects (needs Codeware), and pins over places | [The world](world.html) |
-| `ui` | Windows from a Node mod, the clipboard, solo mode | [Node mods](node-mods.html#windows-without-html) |
+| `world` | Spawning and moving objects (needs Codeware), animating people, the weather, the world's own objects, and pins over places | [The world](world.html) |
+| `ui` | Windows from a Node mod, the clipboard, solo mode, an app's key | [Node mods](node-mods.html#windows-without-html), [Overlay apps](overlay-apps.html#an-apps-key) |
+| `input` | The player's controller | [More of the game](more-apis.html#the-controller) |
 | `pkg`, `secrets` | Your package's id, folders and secrets | [Node mods](node-mods.html#data-and-secrets) |
 | `channel` | Messages between your page and your Node mod | [Node mods](node-mods.html#a-page-and-a-mod-together) |
 | `service`, `use` | Calling other packages, and offering your own functions | [Mod services](#mod-services) |
@@ -280,7 +281,7 @@ counter.$on('changed', (e) => console.log(e.count)); // the events it sends with
 | Good to know | |
 |---|---|
 | Where it runs | The service file runs in your package's Node mod, after `main`. A package can have a service and no `main` |
-| Who can call | Any package's Node mod or page, your own page included |
+| Who can call | Any package's Node mod or page, your own page included. A `@tool` function that changes something needs more: see [Calls that change something](#calls-that-change-something) |
 | A page that needs files | A page can't read or write files. Give your package a service file for the file work and call it from the page. The UI Workbench works this way |
 | What can be passed | Plain values: numbers, strings, booleans, arrays, plain objects. Not game objects |
 | Errors and waiting | A call fails with a reason when the package isn't installed, is switched off or has crashed. A call gives up after 30 seconds: `counter.$with({ timeoutMs: 60000 }).add(1)` waits longer |
@@ -289,6 +290,26 @@ counter.$on('changed', (e) => console.log(e.count)); // the events it sends with
 | Requirements | Name the other package in `requires`, so players see when it's missing |
 
 The full rules are in REDnode's guide: [Calling other packages](https://edgemodders.github.io/REDnode/overlay-apps.html#calling-other-packages) and [Describing a service](https://edgemodders.github.io/REDnode/overlay-apps.html#describing-a-service).
+
+### Calls that change something
+
+The player decides which mods may call another mod's tools that change something. If your package calls a `@tool` function that isn't `@readonly`, list it in your manifest:
+
+```json
+"calls": ["counter-service.add", "voice.speak"]
+```
+
+Each entry is `<package>.<function>`, or `<role>.<function>` for a [role](#roles). The player allows each one in the Mod Manager's [Calls](mod-manager.html#calls) section. Until then the call fails at once with a reason, such as "counter-service.add is not allowed for Counter panel. Allow it in the Mod Manager". Catch the error and tell the player what to do.
+
+| Good to know | |
+|---|---|
+| What needs an entry | Only `@tool` functions that aren't `@readonly`. Read-only tools and other exports are open to every mod |
+| A call you didn't list | Refused, and the player can't allow it: only you can, by listing it |
+| The Tools Manager | Players with the [Admin Tools](admin-tools.html#tools-manager) pack can also switch a tool on or off for every mod |
+| Since | REDnode 0.67.3. Before it, any package could call any other's functions, so a package that calls a changing `@tool` must now list it |
+| Samples | **Counter panel** and **Roles test** in REDnode's repo list their calls. Counter panel leaves `reset` out, to show the refusal |
+
+The rules: REDnode's [Calls from mods](https://edgemodders.github.io/REDnode/services.html#calls-from-mods-22-built).
 
 ### Roles
 

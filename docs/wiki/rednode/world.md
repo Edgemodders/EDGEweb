@@ -3,20 +3,23 @@ title: "The world: objects, scenes and pins"
 nav_title: The world
 section: REDnode
 order: 8.2
-description: "Place things in Cyberpunk 2077's world from a REDnode package: spawn a box in front of V, people and props, moving and removing, objects far from V, EDGEbuilder scenes, what is near V, and labelled pins over places and objects."
-reviewed: 2026-11-13
+description: "Place things in Cyberpunk 2077's world from a REDnode package: spawn a box in front of V, people and props, moving and removing, objects far from V, EDGEbuilder scenes, what is near V, animations on the people you spawn, the weather, the world's own objects, and labelled pins over places and objects."
+reviewed: 2026-11-18
 ---
 
 # The world: objects, scenes and <span class="y">pins</span>
 
-The `world` part of the `rednode` package puts things into the running game: a prop, a person, a whole scene, or a labelled pin over a place. EDGEbuilder, EDGE's world builder, is built on it.
+The `world` part of the `rednode` package puts things into the running game: a prop, a person, a whole scene, or a labelled pin over a place. It can also animate the people you spawn and set the weather. EDGEbuilder, EDGE's world builder, is built on it.
 
 | On this page | Needs | Status |
 |---|---|---|
 | [Your first object](#your-first-object), [Spawning](#spawning), [Moving, removing and watching](#moving-removing-and-watching) | [Codeware](https://github.com/psiberx/cp2077-codeware) 1.14 or later | Passed in game |
 | [Objects far from V](#objects-far-from-v) | Codeware; REDnode 0.58.0 or later | Passed in game with boxes. Heavier objects and people are untried |
 | [Scenes, and what's near V](#scenes-and-whats-near-v) | Codeware | Passed in game |
-| [Pins](#pins) | REDnode 0.59.1 or later. Styles, pins on objects and `label` need 0.62.4 | Passed in game |
+| [Animations on people you spawn](#animations-on-people-you-spawn) | Codeware; REDnode 0.67.3 or later. [Your own workspots](#your-own-workspots) also need REDbridge and two permissions | Passed in game |
+| [Weather](#weather) | REDnode 0.67.3 or later | Passed in game |
+| [The world's own objects](#the-worlds-own-objects) | REDnode 0.67.3 or later | Experimental. Passed in game on static objects; objects placed as entities can't be picked yet |
+| [Pins](#pins) | REDnode 0.59.1 or later. Styles, pins on objects and `label` need 0.62.4; `goTo` and pin sets 0.65.3 | Passed in game |
 
 New to calling the game? Read [The game API](game-api.html) first: every call here needs `await`.
 
@@ -79,6 +82,7 @@ Every form takes:
 | `keep: true` | Keeps it in the save. It comes back about 8 seconds after that save loads; the delay is expected |
 | `wait: false` | Gives the id back as soon as the entity is made, without waiting for it to be in the world. For an object far from V, or one still loading |
 | `label: 'Name'` | Puts a [pin](#pins) on it that follows it |
+| `workspot: '<path>.workspot'` | For a person: gives them one of the game's workspots to play. See [Animations on people you spawn](#animations-on-people-you-spawn) |
 
 If the object isn't in the world in time, the call fails, and REDnode removes the object first, so a failed spawn leaves nothing behind.
 
@@ -155,6 +159,134 @@ await world.unload(r.name);
 
 The **World objects test** sample in REDnode's repo has a button for each of these.
 
+## Animations on people you spawn
+
+A **workspot** is the game's file (`.workspot`) that tells a person what to do in one spot: stand with arms crossed, lean on a wall, sit. Give one to a person when you spawn them, then play it. This uses `inFront` from [Your first object](#your-first-object):
+
+```js
+import { world } from 'rednode';
+
+const { id } = await world.spawn({
+  record: 'Character.trauma_team_paramedic',
+  position: await inFront(3),
+  workspot: 'base\\workspots\\common\\ground\\generic__stand_ground_arms_crossed__stand_around__02.workspot',
+});
+const r = await world.useWorkspot(id);
+console.log(r.started ? 'Playing' : `Not started: ${r.why}`);
+```
+
+| Do | You should see |
+|---|---|
+| Load a save, stand somewhere open, outside combat, and run the code | A Trauma Team paramedic 3 m ahead, who crosses their arms and holds the pose, and `Playing` in the log |
+| Run `await world.workspotState(id)` | `inWorkspot` true, and the workspot's path |
+| Run `await world.stopWorkspot(id)` | The paramedic leaves the pose |
+
+| Call | Does |
+|---|---|
+| `world.spawn({ record, workspot })` | Spawns a person who carries the workspot |
+| `world.useWorkspot(id, { workspot?, at?, entry? })` | Plays it, where the person stands (`at: "here"`, the default) or at the workspot's own place (`"workspot"`). Another `workspot` spawns the person again in the same place, carrying it, and gives back the new `id`. `entry` jumps to one animation by name, at once |
+| `world.workspotState(id)` | Whether the person is in the workspot, which one, and whether it is starting, ending or playing |
+| `world.stopWorkspot(id)` | Ends it, quickly by default. `{ fast: false }` lets the game end it its own way |
+
+| Good to know | |
+|---|---|
+| The game's workspots | Gameplay workspots, the poses and loops people use in the streets, loop. A quest's workspot plays once, briefly, after a moment in a T pose. To loop a quest's animation, [write your own workspot](#your-own-workspots) |
+| Bodies | A workspot made for a man's body plays only on one, and the other way round. When one doesn't start within 2 seconds, `why` says to check the path and the body |
+| Assistants | Claude Code and REDagent can do the same through REDnode's [MCP server](agents.html): `workspot` on `world_spawn`, then the `world_animate` tool. Both ask you first |
+
+### Your own workspots
+
+For directing a scene, as EDGEdir does: write a workspot that holds the animations you choose, from any of the game's animation sets, quest ones too. REDnode writes the file with [REDbridge](../redbridge/) and swaps it into the running game with [REDswap](redswap.html), so your package needs the `bridge` and `archives` permissions.
+
+```js
+import { world } from 'rednode';
+
+const SET = 'base\\animations\\npc\\generic_characters\\male_average\\interactive_scene\\';
+const ws = await world.writeWorkspot('director', {
+  clips: [
+    { set: SET + 'generic_male_average__stand__2h_on_sides__01.anims', anim: 'stand__2h_on_sides__01', name: 'stand' },
+    { set: SET + 'generic_male_average__stand__arms_crossed_front__01.anims', anim: 'stand__arms_crossed_front__01', name: 'crossed' },
+  ],
+});
+const { id } = await world.spawn({ record: 'Character.trauma_team_paramedic', position: await inFront(3), workspot: ws.path });
+await world.useWorkspot(id);           // starts with the first clip, "stand"
+await world.jumpWorkspot(id, 'crossed');
+```
+
+| Call | Does |
+|---|---|
+| `world.writeWorkspot(name, { clips, rig?, swap? })` | Writes a workspot with your clips and swaps it into the running game. Each clip is an animation set's path (`set`), the animation's name in it (`anim`) and a `name` to jump to it by. Each loops until you move on; `loop: false` plays it once and goes on to the next. `rig` is the body the clips are for: a man's by default, so a woman's clips need `woman_base.rig` and a woman. Gives back the workspot's `path` and its entries |
+| `world.jumpWorkspot(id, name)` | Moves the person to another clip at once, with a smooth blend. Gives `false` when the person isn't playing the workspot yet: call `world.useWorkspot` first |
+
+| Good to know | |
+|---|---|
+| Time | The first write took about 30 seconds in REDnode's test, with REDbridge's start. Write before the scene, not during it |
+| A T pose, once | Each person shows a brief T pose the first time they play a written workspot. Start it while they are out of view |
+| What a clip can't do | A clip has no in or out point, speed or repeat count. To cut one short, jump to the next on a timer of your own |
+
+## Weather
+
+Set the weather and hold it, as a quest does, then give it back:
+
+```js
+import { world } from 'rednode';
+
+const now = await world.weather();                          // the weather now, and every state
+console.log(now.states);
+await world.setWeather('24h_weather_rain', { blend: 10 });  // rain, coming in over 10 s, held
+// later
+await world.resetWeather();                                 // back to the weather from before
+```
+
+**Try it in the Console:** stand V outdoors and type `await world.setWeather('24h_weather_rain', { blend: 10 })`. The rain comes in over a few seconds. Then type `await world.resetWeather()`: over about 10 seconds the sky goes back to what it was.
+
+| Call | Does |
+|---|---|
+| `world.weather()` | The weather now, whether the game's cycle runs it or someone holds it (and who), and every weather state the world has |
+| `world.setWeather(state, { blend? })` | Sets a weather and holds it until it is given back. `state` is one of the world's states, such as `24h_weather_rain`, or a `WeatherPresets` record, such as `"WeatherPresets.Fog"`. `blend` is how long the change takes, in seconds |
+| `world.resetWeather()` | Gives it back: blends over 10 seconds to the weather from before your first set, then lets the game's cycle carry on. If a quest held the weather, it goes back to the quest |
+| `world.resetWeather({ restore: false })` | Only lets go. The weather then stays as it is until the game's cycle moves on, which can take minutes |
+
+| Good to know | |
+|---|---|
+| When your mod stops | REDnode gives the weather back the same way. The Console is a package too: closing it gives back what you set from it |
+| Saves | A save made while REDnode held the weather doesn't stay stuck: REDnode lets go when that save loads |
+| Needs | No permission. V must be in the world |
+| Assistants | `world_weather` reads the weather without asking; `world_weather_set` sets it or gives it back, and asks first |
+| How | Game 2.5 has no script call for the weather. REDnode does what the game's own quest weather does |
+
+## The world's own objects
+
+Experimental, for editors such as EDGEbuilder. Everything above is about what your package spawns. Most of the game's own world (buildings, benches and bins, decals on the ground, lights) isn't made of entities but of **nodes**, placed in **sectors**: the pieces the world streams in as V moves. `world.pick` finds those nodes along the camera's view.
+
+```js
+import { world } from 'rednode';
+
+await world.nodeRegistry();                  // starts the record: load a save after this
+// ... once the save has loaded, aim the camera at a bench
+const { hits } = await world.pick();
+console.log(hits[0]?.kind, hits[0]?.id);
+await world.highlight(hits[0].id);           // the game's own outline on it
+await world.setVisible(hits[0].id, false);   // hidden for the session
+```
+
+| Call | Does |
+|---|---|
+| `world.nodeRegistry()` | Starts REDnode's record of the world's nodes and says how many it knows. Only sectors that load after the first call are known, so load a save after it |
+| `world.pick({ max?, limit?, kinds? })` | The nodes along the camera's view, what you aim at first. Each has its kind, its sector and node, and an `id` that stays the same each time its sector loads |
+| `world.node(id)` | One node again, or `null` when its sector isn't loaded |
+| `world.highlight(id)`, `world.highlight(id, null)` | Outlines a node with the game's own highlight, or takes the outline off |
+| `world.setVisible(id, false)`, `world.setVisible(id, true)` | Hides a node for the session, even when it streams out and back in, or shows it again |
+
+| Good to know | |
+|---|---|
+| What passed on game 2.5 | Picking, outlining and hiding a bench, and outlining a ground decal. Outlines work on meshes, decals and bent meshes; other kinds answer `false` and say why |
+| Not yet | Objects placed as entities, such as street lamps and traffic lights, can't be picked yet. A field of copies (instanced meshes, foliage) shares one box |
+| Cost | A pick takes about 25 ms of the game's time, the first one after a load up to 0.8 s. Pick on a click, not every frame |
+| When your mod stops | What it hid shows again, and its outlines go |
+| Only when used | Nothing of it runs until a mod calls it |
+| Credit | A port of [RED Hot Tools](https://github.com/psiberx/cp2077-red-hot-tools)' world node registry (MIT licence) to game 2.5 |
+
 ## Pins
 
 A pin is a glowing post with a label: a title, a line of text and the distance. It marks a place or an object so it can be found from far away. REDnode's overlay draws pins on top of the game; they change nothing in the game itself and need no Codeware.
@@ -204,13 +336,15 @@ A style can also set `color` (`#rrggbb`), `font`, `titleSize`, `textSize` and `p
 |---|---|
 | `world.pin({ at, title, text?, style? })` | Drops a pin and gives back its number |
 | `world.unpin(id)`, `world.clearPins()` | Removes one pin, or all of your package's |
-| `world.pins()` | Lists your package's pins, each with its distance |
+| `world.pins()` | Lists your package's pins, each with its distance, its set and whether it is hidden |
 | `world.pinStyle(style)`, `world.pinStyle(id, style)` | Restyles all of your package's pins, or one |
+| `world.goTo(id)` | Moves V beside a pin, about 2.5 m from it, facing it |
+| `world.pinSet.save(file)`, `.load(file)`, `.show(name, on)`, `.remove(name)` | Keeps your pins in a `.pins.json` file, the same kind of file the [Pins window](overlay.html#the-pins-window) opens. A file name without a folder is in your package's data folder |
 
 | Good to know | |
 |---|---|
 | When pins go | Your package's pins go when it stops, and every pin goes when the game session ends |
 | Assistants | Claude Code and REDagent can drop pins too, through REDnode's [MCP server](agents.html). Pins only draw, so they don't ask first |
-| Coming | A **Pins** window for players, `world.goTo(id)` to move V beside a pin, and pin sets kept in files are built for a later REDnode release |
+| Players' pins | The [Pins window](overlay.html#the-pins-window) lists every pin, yours included, and keeps the player's own sets in `.pins.json` files |
 
 The developer's notes and test results are on REDnode's [World API page](https://edgemodders.github.io/REDnode/world.html).

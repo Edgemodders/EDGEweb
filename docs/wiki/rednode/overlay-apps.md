@@ -3,7 +3,7 @@ title: Overlay apps
 section: REDnode
 order: 7
 description: "Build in-game windows and HUD widgets from web pages with REDnode: a first app step by step, the UI kit and reading its widgets, themes, a complete HUD widget, game sounds, talking to the game, seeing errors, and the advanced parts: the title bar, keys, pointer lock and window sizes."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # Overlay <span class="y">apps</span>
@@ -317,7 +317,7 @@ You can make a good app without anything below. Come back when you need it.
 
 ### The title bar
 
-`rn-window` gives your window the standard title bar: **✕**, and up to three action buttons beside it (move to space, roll up, pin to HUD, reset position, debug), with **⋯** for the rest. [Using the overlay](overlay.html) shows them from the player's side. To leave one out, add `no-space`, `no-rollup` or `no-debug`:
+`rn-window` gives your window the standard title bar: **✕**, and up to three action buttons beside it (move to space, roll up, pin to HUD, reset position, key binding, debug), with **⋯** for the rest. [Using the overlay](overlay.html) shows them from the player's side. To leave one out, add `no-space`, `no-rollup`, `no-key` or `no-debug`:
 
 ```html
 <rn-window title="Speedometer" draggable no-rollup>...</rn-window>
@@ -359,6 +359,28 @@ function endMove() {
 ```
 
 The UI Workbench's Pick uses this: Esc ends a pick and leaves you in interactive mode. The **Input test** sample in REDnode's repo shows all of these. Details: [Keys and modifiers](https://edgemodders.github.io/REDnode/overlay-apps.html#keys-and-modifiers).
+
+### An app's key
+
+Players can give any app a key of its own ([App keys](overlay.html#app-keys)). Your app needs no code for it, and the key never changes your app's state: an editor stays in its edit mode while it is hidden. To react, for example to end a drag when the player hides the window, use `ui.onAppKey`, in a page or a Node mod:
+
+```js
+import { ui } from 'rednode';
+
+ui.onAppKey((shown) => {
+  if (!shown) endDrag();
+});
+```
+
+A page with `"fill": "screen"` isn't hidden by its key: the page stays, with the cursor, and only its `rn-window` panels hide, which the UI kit does for you. A page that draws panels of its own, outside `rn-window`, hides them when `panels` is true:
+
+```js
+ui.onAppKey((shown, panels) => {
+  if (panels) toolbar.hidden = !shown;
+});
+```
+
+Every `rn-window` of your app offers **Key binding…**; `<rn-window no-key>` leaves it out of that window's menu. REDnode 0.67.3 or later. Details: [An app's key](https://edgemodders.github.io/REDnode/overlay-apps.html#an-apps-key).
 
 ### Holding the cursor (pointer lock)
 

@@ -4,7 +4,7 @@ nav_title: Game API
 section: REDnode
 order: 8
 description: "How REDnode packages call the game: trying a call in the Console, the game helper, waiting for V to be in the world, calling any game function and finding the one you need, how values look in JavaScript, and the rules worth knowing. With a map of the other API pages."
-reviewed: 2026-11-13
+reviewed: 2026-11-18
 ---
 
 # The game <span class="y">API</span>
@@ -33,11 +33,15 @@ The `rednode` package has more than fits on one page. This table is the map. "Pa
 | `tweakdb` | Read TweakDB, the game's database of items and stats | Nothing | Passed in game | [TweakDB](tweakdb.html) |
 | `tweakdb` | Change TweakDB, undone when your package stops | [TweakXL](https://github.com/psiberx/cp2077-tweak-xl) 1.10 or later | Passed in game | [TweakDB](tweakdb.html#changing) |
 | <a id="placing-things-in-the-world"></a><a id="objects-far-from-v"></a><a id="scenes-and-whats-near-v"></a>`world` | Spawn, move and remove objects; load scenes; see what's near V | [Codeware](https://github.com/psiberx/cp2077-codeware) 1.14 or later | Passed in game | [The world](world.html) |
-| `world.pin` | Labelled pins over places and objects | REDnode 0.59.1 or later | Passed in game | [The world](world.html#pins) |
+| `world.pin` | Labelled pins over places and objects; moving V to one; pin sets in files | REDnode 0.59.1 or later; `goTo` and `pinSet` 0.65.3 | Passed in game | [The world](world.html#pins) |
+| `world.useWorkspot`, `world.writeWorkspot` | Animations on people you spawned: the game's workspots, and your own | Codeware; REDnode 0.67.3 or later. Writing your own also needs REDbridge and the `bridge` and `archives` permissions | Passed in game | [The world](world.html#animations-on-people-you-spawn) |
+| `world.weather`, `world.setWeather` | Read the weather, set and hold it, give it back | REDnode 0.67.3 or later | Passed in game | [The world](world.html#weather) |
+| `world.pick` | The world's own objects: find, outline and hide what the game placed | REDnode 0.67.3 or later | Experimental. Passed in game on static objects; not yet on objects placed as entities, such as street lamps | [The world](world.html#the-worlds-own-objects) |
 | `quests`, `journal` | Quest facts and journal entries | Nothing | Passed in game | [More of the game](more-apis.html#quests-and-the-journal) |
 | `t`, `loc` | Text in the player's language | Nothing | Passed in game | [More of the game](more-apis.html#text-in-the-players-language) |
 | `quickhacks` | Your own logic for a quickhack | REDnode 0.62.4 or later | Passed in game, except spreading hacks | [More of the game](more-apis.html#quickhack-functions) |
 | `audio`, `game.audio` | Your own audio files; the game's UI sounds | Nothing | Passed in game | [More of the game](more-apis.html#sound) |
+| `input` | The player's controller: Xbox and Sony pads | REDnode 0.65.3 or later | Passed in game | [More of the game](more-apis.html#the-controller) |
 | `kernel.bridge()` | The game's archives and files | [REDbridge](../redbridge/) and the `bridge` permission | Passed in game | [More of the game](more-apis.html#the-games-files-through-redbridge) |
 | <a id="swapping-archives-into-the-running-game"></a>`archives` | Swap changed archives into the running game | [REDswap](redswap.html), installed with REDnode, and the `archives` permission | Passed in game | [More of the game](more-apis.html#swapping-archives-into-the-running-game) |
 | <a id="the-games-own-ui"></a>`ink` | The game's own UI: panels on the HUD, and reading the game's widgets | Codeware 1.16 or later | Passed in game. Experimental | [Native UI: ink markup](ink-markup.html), [More of the game](more-apis.html#the-games-own-ui) |
@@ -105,6 +109,7 @@ if (s.world) console.log('V is in the world');
 | `world` | V is in the world: a save has loaded and no other load has started |
 | `mainMenu` | The main menu shows |
 | `menu` | A game menu is open: inventory, map, pause |
+| `pauseMenu` | The game's pause menu is open. REDnode 0.67.3 or later |
 | `photoMode` | Photo mode is on |
 | `scene` | A scene has taken control of V. Which scenes count is not yet confirmed |
 | `connected` | REDnode is linked to the game. When it isn't, every field above is false |

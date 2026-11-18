@@ -3,8 +3,8 @@ title: "More of the game: quests, text, quickhacks, sound, files and the game's 
 nav_title: More of the game
 section: REDnode
 order: 8.3
-description: "The rest of the rednode package, each part with a short example: quest facts and the journal, text in the player's language, quickhack functions, game sounds and your own audio, the game's files through REDbridge, swapping archives, and reading the game's own UI."
-reviewed: 2026-11-13
+description: "The rest of the rednode package, each part with a short example: quest facts and the journal, text in the player's language, quickhack functions, game sounds and your own audio, the controller, the game's files through REDbridge, swapping archives, and reading the game's own UI."
+reviewed: 2026-11-18
 ---
 
 # More of the <span class="y">game</span>
@@ -17,6 +17,7 @@ The parts of the `rednode` package that are not on [The game API](game-api.html)
 | [Text in the player's language](#text-in-the-players-language) | Your own translated text (`t`), and the game's own words (`loc`) | Nothing |
 | [Quickhack functions](#quickhack-functions) | Your own logic for when a quickhack can be used and what it does | REDnode 0.62.4 or later |
 | [Sound](#sound) | The game's UI sounds, and your own audio files | Nothing |
+| [The controller](#the-controller) | Hearing the player's Xbox or Sony pad | REDnode 0.65.3 or later |
 | [The game's files through REDbridge](#the-games-files-through-redbridge) | Searching and extracting the game's archives | REDbridge, and the `bridge` permission |
 | [Swapping archives into the running game](#swapping-archives-into-the-running-game) | Showing a changed archive without a restart | The `archives` permission |
 | [The game's own UI](#the-games-own-ui) | Reading the game's widgets from script | Codeware 1.16 or later |
@@ -220,6 +221,41 @@ You should hear your sound in the game, at the level of the game's own sounds. A
 | The rest | `audio.playing()` lists your sounds, `audio.stopAll()` stops them |
 
 The plan and its tests are on REDnode's [Sound API page](https://edgemodders.github.io/REDnode/sound.html). For replacing the game's own sounds, see [EDGEwave](../edgewave/).
+
+## The controller
+
+`input` hears the player's controller: which buttons are held and how far each trigger is pressed, at each change.
+
+```js
+import { input } from 'rednode';
+
+let held = false;
+input.onGamepad((pad) => {
+  if (!held && pad.rt > 0.5) { held = true; console.log('right trigger down'); }
+  if (held && pad.rt < 0.2) { held = false; console.log('right trigger up'); }
+  if (pad.pressed.includes('y')) console.log('Y pressed');
+});
+```
+
+| Call | Gives |
+|---|---|
+| `input.onGamepad(fn)` | Runs your function at each change: a button down or up, a trigger moving, the controller connected or gone. Gives back a function that stops listening |
+| `input.gamepad()` | The last state heard |
+
+| A state has | |
+|---|---|
+| `buttons`, `pressed`, `released` | The buttons held now, and those that went down or came up with this change, by their Xbox names: `a`, `b`, `x`, `y`, `lb`, `rb`, `ls`, `rs`, `up`, `down`, `left`, `right`, `start`, `back` |
+| `lt`, `rt` | The triggers, from 0 (let go) to 1 (pressed all the way), in steps of about 1/16 |
+| `connected` | False when the controller was unplugged or turned off |
+
+| Good to know | |
+|---|---|
+| Which pads | Xbox pads, read through Windows' XInput. Sony's DualSense, DualSense Edge and DualShock 4, over USB or Bluetooth |
+| It only reads | The game still gets every button, so give your own meaning to a button the game does nothing with at that moment. Sony pads keep their haptics, adaptive triggers and light bar |
+| When | Changes come only while the game is in front |
+| Try it | The **Controller test** sample, in the player zip, shows what REDnode reads from your controller and logs each press to the Mod log |
+
+Keys and the game's own input actions are planned.
 
 ## The game's files through REDbridge
 
