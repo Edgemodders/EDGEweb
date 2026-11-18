@@ -2733,7 +2733,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "REDnode",
-     "what": "A weather setter, and blend times at a jump measured in the game",
+     "what": "Blend times at a jump measured in the game (the weather calls are done and passed in the game)",
      "ref": "REDnode #46"
     },
     {
@@ -2773,7 +2773,7 @@ window.EDGE_STATUS = {
     "Which way an actor's Turn turns against the game is unverified until D5",
     "How the game's own join at a jump compares with the preview's transitions is not measured yet"
    ],
-   "checkedBy": "EDGEdir session, 2026-11-17"
+   "checkedBy": "EDGEdir session, 2026-11-18"
   },
   {
    "name": "EDGEmobile",
