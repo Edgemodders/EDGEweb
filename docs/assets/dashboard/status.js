@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.68.1 (test build; 0.67.3 released 2026-11-18)",
+   "version": "0.68.2 (test build; 0.67.3 released 2026-11-18)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -653,6 +653,11 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "TV",
+      "title": "Each app's version beside its title, with the launcher's Versions in title bars switch (REDnode 0.68.2)",
+      "status": "built, tests pending"
+     },
+     {
       "id": "WL",
       "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3); after the dropdown",
       "status": "planned"
@@ -680,18 +685,26 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.68.1",
+    "version": "0.68.2",
     "needs": [
-     "The resizable Mod log's in-game test (docs/overlay.md, Mod log: resizable (0.68.1))"
+     "The resizable Mod log's step 3, kept across a restart (docs/overlay.md, Mod log: resizable (0.68.1))",
+     "Versions in title bars' in-game test (docs/overlay.md, Versions in title bars (0.68.2))"
     ]
    },
    "handTests": [
     {
-     "name": "The Mod log resizable, REDnode 0.68.1",
-     "steps": 4,
+     "name": "Versions in title bars, REDnode 0.68.2",
+     "steps": 5,
      "status": "not run",
      "ranBy": null,
-     "note": "Mock check passed (9 checks)"
+     "note": "Mock check passed (12 checks)"
+    },
+    {
+     "name": "The Mod log resizable, REDnode 0.68.1",
+     "steps": 4,
+     "status": "partly run",
+     "ranBy": null,
+     "note": "2026-11-18: steps 1, 2 and 4 passed; step 3 at the next restart"
     },
     {
      "name": "The dropdown, REDnode 0.68.0",
@@ -775,8 +788,8 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Run the resizable Mod log's in-game test on 0.68.1 (deploy first)",
-     "ref": "docs/overlay.md, Mod log: resizable (0.68.1)"
+     "what": "Run Versions in title bars' test on 0.68.2 and the Mod log's step 3 at the next restart (deploy 0.68.2 first)",
+     "ref": "docs/overlay.md, Versions in title bars (0.68.2)"
     },
     {
      "who": "owner",
