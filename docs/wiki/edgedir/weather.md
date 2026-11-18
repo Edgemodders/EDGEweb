@@ -1,0 +1,63 @@
+---
+title: Weather
+nav_title: Weather
+section: EDGEdir
+order: 10
+description: "EDGEdir's weather track: a clip holds one of the game's weathers for as long as it lasts. Adding the track and a clip, choosing a weather and a blend, what the preview shows, and what happens in the game."
+reviewed: 2026-11-18
+---
+
+# <span class="y">Weather</span>
+
+A scene can change the weather. A clip on the **weather track** holds one of the game's weathers, such as rain or fog, for as long as the clip lasts. When the clip ends and no other follows it, the weather goes back to what it was.
+
+**Not tested yet**, in VS Code or in the game. REDnode's weather calls, which this rests on, passed their own test in the game on 2026-11-18.
+
+{% include shot.html src="/assets/shots/edgedir/weather-editor.png" caption="A weather clip" shows="The scene editor with a Weather lane under the two actors' lanes, a Rain clip selected and a Sunny clip after it: the preview has a grey tint and its line reads Weather: Rain; the inspector shows the clip's Weather list and its Blend in seconds." %}
+
+| On this page | |
+|---|---|
+| [Add weather to a scene](#add-weather-to-a-scene) | |
+| [In the preview](#in-the-preview) | |
+| [In the game](#in-the-game) | |
+
+## Add weather to a scene
+
+1. **Add Track**, then **Weather**. A scene has one weather track: the game has one weather at a time, so a second is refused.
+2. Select the lane and click **Add Clip**. Move and stretch the clip to cover the part of the scene the weather should hold.
+3. Select the clip. In the inspector choose a **Weather**, and set **Blend (s)**.
+
+| Field | Means |
+|---|---|
+| **Weather** | One of the game's weathers, by plain name: Cloudy, Fog, Heavy clouds, Light clouds, Pollution, Rain, Sandstorm, Sunny, Toxic rain, and a few the game made for single quests. The list is read from your game the first time a scene with a weather track opens, which can take about 15 seconds. Without the game's files you can type a name instead |
+| **Blend (s)** | How many seconds the change should take, from 0 to 60. The default is 5 |
+| The clip's length | How long the weather is held |
+
+Put a second clip right after the first to go from one weather straight to another, with no return between them.
+
+## In the preview
+
+The preview does not draw rain or fog. While the playhead is in a weather clip, the line at the bottom of the view starts with the weather's name, and the view takes a tint: grey for rain, fog and cloud, warm for sun, sand for dust and toxic rain.
+
+## In the game
+
+| When | What happens |
+|---|---|
+| A weather clip starts | The weather begins to change to the clip's weather |
+| A clip ends with another right after it | The weather changes to the next clip's |
+| A clip ends with nothing after it | The weather goes back to what it was before the scene, over about 10 seconds |
+| **Stop** | The weather goes back, too |
+| EDGE Director is switched off mid-scene | REDnode itself gives the weather back |
+
+{% include shot.html src="/assets/shots/edgedir/weather-in-game.png" caption="A scene's rain in the game" shows="The game with a scene playing in the rain its weather clip set, and EDGE Director's strip with the playhead inside the Rain clip." %}
+
+Two things to know:
+
+| | |
+|---|---|
+| The blend is the game's | In REDnode's own test, rain came over a couple of seconds though 10 were asked for. Treat **Blend** as a wish. The inspector says so under **In the game** |
+| It needs REDnode 0.67.2 or later | Earlier versions have no way to give the weather back. EDGE Director will not load on them |
+
+A scene with weather and no actors plays too: nobody is spawned, and the weather changes on time.
+
+A muted weather track is left out of the game.
