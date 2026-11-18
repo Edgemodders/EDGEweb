@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.67.3 (test build)",
+   "version": "0.67.3 (released 2026-11-18, with Admin Tools 0.2.0)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -619,8 +619,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#46b",
-      "title": "Weather API, for EDGEdir; weather passed in game (0.67.2: giving it back blends back to the weather from before)",
-      "status": "built, tests pending"
+      "title": "Weather API, for EDGEdir: passed in game (0.67.2: giving it back blends back to the weather from before)",
+      "status": "done"
      },
      {
       "id": "#46c",
@@ -672,9 +672,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The 'Update REDbridge while it runs' retest in the game: REDbridge 0.15.0 is out, so the Mod Manager has an update to offer",
-     "world.jumpWorkspot answering false outside a workspot: untested",
-     "Admin Tools 0.2.0 goes in the same release run (its Nexus page joins the run: nexus.json added, live page pulled)"
+     "Nothing built since 0.67.3 yet: next is the dropdown (rn-select, ui.select), then the WL build (#48, #49)"
     ]
    },
    "handTests": [
@@ -695,9 +693,9 @@ window.EDGE_STATUS = {
     {
      "name": "Update REDbridge while it runs (W3 retest)",
      "steps": null,
-     "status": "failed",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Found 2026-11-16: the old copy kept running. Fixed in 0.67.0, not retested"
+     "note": "Fixed in 0.67.0; passed its retest on 2026-11-18 with REDbridge 0.14.0 running"
     },
     {
      "name": "A written workspot: the call (#46), 0.66.9",
@@ -711,14 +709,14 @@ window.EDGE_STATUS = {
      "steps": 9,
      "status": "passed",
      "ranBy": "owner",
-     "note": "Steps 1 to 8 passed 2026-11-16; step 9, the MCP route, is optional"
+     "note": "Steps 1 to 8 passed 2026-11-16; step 9, the MCP route, passed 2026-11-18"
     },
     {
      "name": "S24 world node registry (#24), 0.66.7",
      "steps": 11,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Passed except the street lamp (entity nodes, left to N2)"
+     "note": "Passed except the street lamp (an entity node), moved to N2 by the owner on 2026-11-18"
     },
     {
      "name": "Calls from mods (#22), 0.66.7",
@@ -740,15 +738,17 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-18: 0.67.2 failed step 6 (every other open), 0.67.3 passed; the filter passed on 0.67.2"
+    },
+    {
+     "name": "world.jumpWorkspot answering false outside a workspot",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-18"
     }
    ],
    "ownerSpotTests": [],
    "waitingOn": [
-    {
-     "who": "owner",
-     "what": "Say which machine gets REDnode 0.67.0, then run its App keys, Weather and Update REDbridge tests",
-     "ref": "docs/overlay.md, docs/world.md"
-    },
     {
      "who": "owner",
      "what": "Talk through semi-native apps before its first spike starts",
@@ -756,17 +756,14 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the App keys, Weather (#46) and Update REDbridge tests on 0.67.0",
-    "Release Admin Tools 0.2.0",
-    "Start the next release run once the gate is met",
-    "Agree the order after EDGEdir's requests (Console resizing, N2 and others are asked for, not built)"
+    "Agree the order after the dropdown and the WL build (Console resizing, N2 and others are asked for, not built)",
+    "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)"
    ],
    "risks": [
-    "Five features sit unreleased since 0.65.3 (the count of commits is on this card)",
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-18"
+   "checkedBy": "REDnode session, 2026-11-18 (after the 0.67.3 release)"
   },
   {
    "name": "REDcode",
