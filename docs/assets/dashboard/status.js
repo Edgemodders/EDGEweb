@@ -2499,7 +2499,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.23",
+   "version": "0.0.24",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2542,8 +2542,23 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "DR1",
+      "title": "EDGE Director, the window in the game: open and play a scene there, as its own release file (built as 0.0.24 with EDGE Director 0.2.0; not run in the game)",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "DR2",
+      "title": "EDGE Director: adjust places and facings in the game, followed by VS Code",
+      "status": "planned"
+     },
+     {
+      "id": "DR3",
+      "title": "EDGE Director: pins (REDnode's world pins as named places)",
+      "status": "planned"
+     },
+     {
       "id": "D6",
-      "title": "Audio, camera, weather (plan written 2026-11-17, waits for the owner's review)",
+      "title": "Audio, camera, weather (plan written 2026-11-17, waits for the owner's answers; after DR3)",
       "status": "planned"
      },
      {
@@ -2566,10 +2581,12 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "D5 in the game (10 steps, on the owner's PC): not run",
-     "The owner's spot tests S1 to S13 (about 40 minutes): none run",
+     "D5 in the game (14 steps, with EDGE Director's window, on the owner's PC): not run",
+     "The owner's spot tests S1 to S14: none run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
-     "A Nexus page"
+     "A Nexus page",
+     "DR1 The Director's window (13 steps by script, with a stand-in): not run",
+     "EDGEdir #1: Nexus changelogs as a short summary block, before a release with Update Nexus Mods"
     ]
    },
    "handTests": [
@@ -2639,8 +2656,8 @@ window.EDGE_STATUS = {
     {
      "name": "D5d Play in game, in VS Code",
      "steps": 13,
-     "status": "passed",
-     "note": "13 of 13 on 0.0.22, with a stand-in for the player; the fix of 0.0.23 from its notes passed a rerun. The copy of the player into the game's folder was not run",
+     "status": "partly run",
+     "note": "13 of 13 on 0.0.22 and the fix of 0.0.23, against a stand-in. Step 3 changed in 0.0.24 (EDGEdir no longer copies its player into the game; it offers EDGE Director's download): not run",
      "ranBy": "script"
     },
     {
@@ -2648,6 +2665,12 @@ window.EDGE_STATUS = {
      "steps": 10,
      "status": "not run",
      "note": "In the game, on the owner's PC: EDGEdir 0.0.23 with EDGEdir Player 0.1.0; answers G1 to G7"
+    },
+    {
+     "name": "DR1 The Director's window",
+     "steps": 13,
+     "status": "not run",
+     "note": "With a stand-in for the game, in a browser and VS Code; on 0.0.24 with EDGE Director 0.2.0"
     }
    ],
    "ownerSpotTests": [
@@ -2715,6 +2738,11 @@ window.EDGE_STATUS = {
      "id": "S13",
      "feature": "Play in game",
      "status": "not run"
+    },
+    {
+     "id": "S14",
+     "feature": "EDGE Director",
+     "status": "not run"
     }
    ],
    "waitingOn": [
@@ -2750,16 +2778,15 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the in-game test of Play in game (10 steps: docs/testing.md, D5 in the game)",
-    "Run spot tests S1 to S13",
+    "Run the in-game test with EDGE Director's window (14 steps: docs/testing.md, D5 in the game)",
+    "Run spot tests S1 to S14",
     "Review D6's plan and its seven questions (docs/d6-audio-camera-weather.md)",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy",
-    "Answer the six questions N1 to N6 on pins (the design, \"Pins: named places from REDnode\", proposed 2026-11-18)",
-    "Review the plan for EDGE Director, EDGEdir's app in the game, and its nine questions R1 to R9 (docs/edge-director.md)"
+    "Answer N4 to N6 on pins (the design, \"Pins: named places from REDnode\"); N1 to N3 are settled by EDGE Director's plan"
    ],
    "risks": [
-    "The player package has never run in the game: where actors stand and face, and the T pose at the start, are unverified",
+    "EDGE Director (the player with a window) has never run in the game: where actors stand and face, the T pose at the start, and how its window looks with REDnode's kit are unverified",
     "Seen once in a scripted round: a message that unsaved changes were put back, with no window reload; not reproduced, nothing lost",
     "Every hand test was run by script with nobody watching",
     "V has no head in the preview: no V with a head can be exported",
