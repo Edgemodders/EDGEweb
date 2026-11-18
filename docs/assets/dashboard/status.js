@@ -1600,8 +1600,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.3.3",
     "needs": [
-     "The hand test 'Zoom on the setup map' (7 steps, F5), not run",
-     "A short check that new bumps are no longer backwards: no test row yet",
+     "The hand test 'Bumps the right way round' (6 steps: F5, then in the game), not run",
+     "The hand test 'Reshape with the game's materials' (in the game; it ships in EDGEmat's MCP), not run",
      "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, Reshape with the game's materials in the game, install test, three Nexus screenshots"
     ]
    },
@@ -1616,9 +1616,16 @@ window.EDGE_STATUS = {
     {
      "name": "Zoom on the setup map",
      "steps": 7,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Passed 2026-11-18"
+    },
+    {
+     "name": "Bumps the right way round",
+     "steps": 6,
      "status": "not run",
      "ranBy": null,
-     "note": "Built 2026-11-18 (owner's ask): wheel, drag, +, -, Fit; a click still picks the layer"
+     "note": "Added 2026-11-18: a New Material from a test image of studs on the slim-fits, judged in the game"
     },
     {
      "name": "Wardrobe Designer: Reshape and keys (in game)",
@@ -1662,7 +1669,7 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
-    "Run 'Zoom on the setup map' (F5)",
+    "Run 'Bumps the right way round' (F5, then in the game; no AI key)",
     "Run 'Reshape with the game's materials' in the game from step 3 (Claude put the archive in the game's mod folder; it loads before Wardrobe Designer's, so no Restore is needed)",
     "Install 0.3.2 from the Marketplace in a normal VS Code",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
@@ -1674,7 +1681,7 @@ window.EDGE_STATUS = {
     "EDGEfab 0.1.0 waits on EDGEmat's next release, which carries #12 (game materials on a prop's parts, tested 2026-11-18)",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-18 (late)"
+   "checkedBy": "EDGEmat session, 2026-11-18 (night)"
   },
   {
    "name": "EDGEquest",
