@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.67.2 (test build)",
+   "version": "0.67.3 (test build)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -619,7 +619,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#46b",
-      "title": "Weather API, for EDGEdir; weather passed in game but step 9 (a released hold left the rain); 0.67.2 blends back to the weather from before, retest pending",
+      "title": "Weather API, for EDGEdir; weather passed in game (0.67.2: giving it back blends back to the weather from before)",
       "status": "built, tests pending"
      },
      {
@@ -639,7 +639,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "PM",
-      "title": "Hide in the pause menu (on by default, F10 still works there) and the launcher's filter taking the keyboard (0.67.2)",
+      "title": "Hide in the pause menu (on by default, F10 still works there) and the launcher's filter taking the keyboard: filter passed; the pause menu failed step 6 on 0.67.2, fixed in 0.67.3, retest pending",
       "status": "built, tests pending"
      },
      {
@@ -672,8 +672,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The Weather (#46) retest of step 9 in the game (0.67.2: giving it back blends back)",
-     "The pause menu and launcher filter test in the game (0.67.2): not run",
+     "The pause menu retest in the game (0.67.3): 0.67.2 hid REDnode only every other open",
      "The 'Update REDbridge while it runs' fix needs its retest in the game; 0.67.0 carries it",
      "S24's street lamp step is open: decide whether it blocks the gate or moves to N2",
      "world.jumpWorkspot answering false outside a workspot: untested",
@@ -692,9 +691,9 @@ window.EDGE_STATUS = {
     {
      "name": "Weather (#46), REDnode 0.66.10",
      "steps": 10,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": null,
-     "note": "2026-11-18 on 0.67.0: all but step 9 passed; 0.67.2 retest pending"
+     "note": "2026-11-18: 0.67.0 all but step 9; 0.67.2's retest of giving it back passed"
     },
     {
      "name": "Update REDbridge while it runs (W3 retest)",
@@ -741,9 +740,9 @@ window.EDGE_STATUS = {
     {
      "name": "The pause menu and the launcher's filter, REDnode 0.67.2",
      "steps": null,
-     "status": "not run",
+     "status": "failed",
      "ranBy": "owner",
-     "note": null
+     "note": "2026-11-18 on 0.67.2: step 6 (every other open); the filter (step 8) passed; 0.67.3 retest pending"
     }
    ],
    "ownerSpotTests": [],
