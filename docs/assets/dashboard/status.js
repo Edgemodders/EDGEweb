@@ -2425,7 +2425,7 @@ window.EDGE_STATUS = {
      "steps": 3,
      "status": "passed",
      "ranBy": "script",
-     "note": "Passed again 2026-11-17 on the final build (main 8d0c9ed), after the Pictures tab and Rename going all the way in"
+     "note": "Passed again 2026-11-18 on the final build (main ac488ed), after the Pictures tab, Rename going all the way in and two small fixes"
     }
    ],
    "ownerSpotTests": [],
@@ -2451,6 +2451,11 @@ window.EDGE_STATUS = {
      "ref": "REDnode #39"
     },
     {
+     "who": "EDGEchat",
+     "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting, once 0.1.0 is on npm",
+     "ref": "EDGEchat #5"
+    },
+    {
      "who": "REDcode",
      "what": "Not blocking: the 3D view opened with a tab title, so a prop's tab says its name, not view.glb",
      "ref": "REDcode #29"
@@ -2468,6 +2473,7 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Decide whether 0.1.0 waits for part materials in the UI (EDGEmat #12; its in-game check passed 2026-11-17)",
+    "Read the wiki section (edgemodders.ai/wiki/edgefab/) and say what to change; two screenshots are yours (Claude Code using EDGEfab, the prop in the game)",
     "Then ask for the 0.1.0 release run",
     "Add the video to Nexus page 38605 before it goes live (the shot script is nexus/video-script.md)",
     "Fill the Nexus page's form fields and tags by hand (nexus/README.md lists them)"
