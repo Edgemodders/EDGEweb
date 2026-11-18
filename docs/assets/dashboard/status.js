@@ -2742,6 +2742,11 @@ window.EDGE_STATUS = {
      "who": "EDGEfab",
      "what": "Its first stored animation, to try EDGEdir's reader on",
      "ref": "EDGEfab #7"
+    },
+    {
+     "who": "REDnode",
+     "what": "For pins in scenes: whether EDGEdir may read the player's pin sets, a spike on a spawned person walking to a place, an id and facing on a pin",
+     "ref": "REDnode #50"
     }
    ],
    "ownerActions": [
@@ -2749,7 +2754,8 @@ window.EDGE_STATUS = {
     "Run spot tests S1 to S13",
     "Review D6's plan and its seven questions (docs/d6-audio-camera-weather.md)",
     "GitHub: social preview, Pages source; create a Nexus page",
-    "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy"
+    "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy",
+    "Answer the six questions N1 to N6 on pins (the design, \"Pins: named places from REDnode\", proposed 2026-11-18)"
    ],
    "risks": [
     "The player package has never run in the game: where actors stand and face, and the T pose at the start, are unverified",
