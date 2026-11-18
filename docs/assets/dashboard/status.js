@@ -2755,7 +2755,8 @@ window.EDGE_STATUS = {
     "Review D6's plan and its seven questions (docs/d6-audio-camera-weather.md)",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy",
-    "Answer the six questions N1 to N6 on pins (the design, \"Pins: named places from REDnode\", proposed 2026-11-18)"
+    "Answer the six questions N1 to N6 on pins (the design, \"Pins: named places from REDnode\", proposed 2026-11-18)",
+    "Review the plan for EDGE Director, EDGEdir's app in the game, and its nine questions R1 to R9 (docs/edge-director.md)"
    ],
    "risks": [
     "The player package has never run in the game: where actors stand and face, and the T pose at the start, are unverified",
