@@ -2845,7 +2845,8 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Run Tests E to H in the game with EDGE Director (docs/testing.md, The owner's tests)",
     "Run Tests A to D in VS Code (docs/testing.md, The owner's tests)",
-    "GitHub: the social preview; create a Nexus page"
+    "GitHub: the social preview; create a Nexus page",
+    "Wiki screenshots: nine placeholders in EDGEdir's wiki section wait for shots from VS Code and the game (save them into EDGEweb's docs/assets/shots/inbox/)"
    ],
    "risks": [
     "EDGE Director (the player with a window) has never run in the game: where actors stand and face, the T pose at the start, and how its window looks with REDnode's kit are unverified",
