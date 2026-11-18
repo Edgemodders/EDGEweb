@@ -66,7 +66,7 @@ NeonProps\source\raw\neonprops\props\neon_vending_machine\
 
 All paths are lowercase, as the game expects. Bumps are written the way the game reads them, so raised details don't shade as dents.
 
-{% include shot.html caption="A prop's files in the project" src="/assets/shots/edgefab/add-to-project-files.png" alt="The file tree of a mod project after Add to Project: under source, archive, the project's folder, props and the prop's name are the .ent, the .mesh, and a .mi with four .xbm textures for each part." shows="The project's file tree after Add to Project: the prop's folder with its .ent, its .mesh, and a .mi with its .xbm textures for each part." %}
+{% include shot.html caption="A prop's files in the project" src="/assets/shots/edgefab/add-to-project-files.png" alt="VS Code's Explorer after Add to Project: under source, archive, neonprops, props and neon_vending_machine are the .ent, the .mesh, and a .mi with four .xbm textures for each part. REDcode shows the .ent beside it." shows="The project's file tree after Add to Project: the prop's folder with its .ent, its .mesh, and a .mi with its .xbm textures for each part." %}
 
 ## Collision
 

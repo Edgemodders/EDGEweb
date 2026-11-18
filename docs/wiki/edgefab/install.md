@@ -49,7 +49,7 @@ Click the **EF** icon in the activity bar, the strip of icons at the far left. T
 | **Desk** | Two buttons, **Import a GLB...** and **Generate from Words...**, with a line on what EDGEfab does |
 | **Library** | **Set Up the Library...**, if no EDGE tool has set the Library up on this PC yet. The Library is optional |
 
-{% include shot.html caption="EDGEfab's views at the first start" src="/assets/shots/edgefab/install-first-start.png" alt="The EDGEfab side bar with an empty Desk showing the Import a GLB and Generate from Words buttons, and the Library view below it." shows="The EDGEfab side bar at the first start: an empty Desk with the Import a GLB and Generate from Words buttons, and the Library view below it." %}
+{% include shot.html caption="EDGEfab's views at the first start" src="/assets/shots/edgefab/install-first-start.png" alt="The EDGEfab side bar with an empty Desk showing the Import a GLB and Generate from Words buttons, and the Library view below it with Set Up the Library." shows="The EDGEfab side bar at the first start: an empty Desk with the Import a GLB and Generate from Words buttons, and the Library view below it." %}
 
 Nothing is asked until you make something. To check the install without a key, right-click any `.glb` file in VS Code's Explorer and choose **Make a Prop (EDGEfab)**: it appears on the Desk in under a minute.
 
