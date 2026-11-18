@@ -2508,7 +2508,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.24",
+   "version": "0.0.25",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2557,8 +2557,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "DR2",
-      "title": "EDGE Director: adjust places and facings in the game, followed by VS Code",
-      "status": "planned"
+      "title": "EDGE Director: adjust places and facings in the game, saved to the scene's file (built as 0.0.25 with EDGE Director 0.3.0; not run in the game or with VS Code)",
+      "status": "built, tests pending"
      },
      {
       "id": "DR3",
@@ -2590,11 +2590,12 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "D5 in the game (14 steps, with EDGE Director's window, on the owner's PC): not run",
-     "The owner's spot tests S1 to S14: none run",
+     "The owner's Tests A to D (in VS Code, about 40 minutes): none run",
+     "The owner's Tests E and F (in the game, with EDGE Director; about 45 minutes): none run",
+     "DR1 The Director's window (13 steps by script, with a stand-in): not run",
+     "DR2 Adjust (12 steps by script, with a stand-in): not run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page",
-     "DR1 The Director's window (13 steps by script, with a stand-in): not run",
      "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
     ]
    },
@@ -2680,77 +2681,43 @@ window.EDGE_STATUS = {
      "steps": 13,
      "status": "not run",
      "note": "With a stand-in for the game, in a browser and VS Code; on 0.0.24 with EDGE Director 0.2.0"
+    },
+    {
+     "name": "DR2 Adjust",
+     "steps": 12,
+     "status": "not run",
+     "note": "With a stand-in for the game, in a browser and VS Code; on 0.0.25 with EDGE Director 0.3.0"
     }
    ],
    "ownerSpotTests": [
     {
-     "id": "S1",
-     "feature": "The timeline",
+     "id": "A",
+     "feature": "The editor: timeline, play, save, the Desk (S1, S2)",
      "status": "not run"
     },
     {
-     "id": "S2",
-     "feature": "Play, save, the Desk",
+     "id": "B",
+     "feature": "Actors and animations (S3 to S7)",
      "status": "not run"
     },
     {
-     "id": "S3",
-     "feature": "The game's animations",
+     "id": "C",
+     "feature": "The 3D preview, transitions, sequences (S8 to S10)",
      "status": "not run"
     },
     {
-     "id": "S4",
-     "feature": "The actor picker",
+     "id": "D",
+     "feature": "Sets, and what the game will not match (S11, S12)",
      "status": "not run"
     },
     {
-     "id": "S5",
-     "feature": "Animations on a track",
+     "id": "E",
+     "feature": "EDGE Director in the game: open and play a scene (14 steps)",
      "status": "not run"
     },
     {
-     "id": "S6",
-     "feature": "The rig rule",
-     "status": "not run"
-    },
-    {
-     "id": "S7",
-     "feature": "A made animation",
-     "status": "not run"
-    },
-    {
-     "id": "S8",
-     "feature": "The 3D preview",
-     "status": "not run"
-    },
-    {
-     "id": "S9",
-     "feature": "Transitions",
-     "status": "not run"
-    },
-    {
-     "id": "S10",
-     "feature": "Sequences",
-     "status": "not run"
-    },
-    {
-     "id": "S11",
-     "feature": "What the game will not match",
-     "status": "not run"
-    },
-    {
-     "id": "S12",
-     "feature": "Sets",
-     "status": "not run"
-    },
-    {
-     "id": "S13",
-     "feature": "Play in game",
-     "status": "not run"
-    },
-    {
-     "id": "S14",
-     "feature": "EDGE Director",
+     "id": "F",
+     "feature": "EDGE Director in the game: adjust a scene (10 steps)",
      "status": "not run"
     }
    ],
@@ -2787,8 +2754,8 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the in-game test with EDGE Director's window (14 steps: docs/testing.md, D5 in the game)",
-    "Run spot tests S1 to S14",
+    "Run Tests E and F in the game with EDGE Director (docs/testing.md, The owner's tests)",
+    "Run Tests A to D in VS Code (docs/testing.md, The owner's tests)",
     "Review D6's plan and its seven questions (docs/d6-audio-camera-weather.md)",
     "GitHub: social preview, Pages source; create a Nexus page",
     "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy",
@@ -2801,7 +2768,8 @@ window.EDGE_STATUS = {
     "V has no head in the preview: no V with a head can be exported",
     "The first read of the game is slow: about 3.5 minutes for the animation index",
     "Which way an actor's Turn turns against the game is unverified until D5",
-    "How the game's own join at a jump compares with the preview's transitions is not measured yet"
+    "How the game's own join at a jump compares with the preview's transitions is not measured yet",
+    "Unverified: that a person in a workspot can be moved while they play (Adjust in the game), and that VS Code takes the Director's change to an open scene at once"
    ],
    "checkedBy": "EDGEdir session, 2026-11-18"
   },
