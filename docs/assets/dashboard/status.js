@@ -2397,8 +2397,10 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
-     "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18). Built on EDGEmat's main 2026-11-18, not released; EDGEfab's check against it passed. Open: the owner's hand test in EDGEmat, Game materials on a prop's parts", "The owner in VS Code: Add to Project again's kept and swapped words, Start Over, and the failed rename's message",
-     "EDGEmat's release with #12 goes out first (the owner's call, 2026-11-18)", "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
+     "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18). Built on EDGEmat's main 2026-11-18, not released; EDGEfab's check against it passed. Open: the owner's hand test in EDGEmat, Game materials on a prop's parts",
+     "The owner in VS Code: Add to Project again's kept and swapped words, Start Over, and the failed rename's message",
+     "EDGEmat's release with #12 goes out first (the owner's call, 2026-11-18)",
+     "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
      "The date in the README and changelog changes to the release day first"
     ]
@@ -2508,7 +2510,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.25",
+   "version": "0.0.26",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2562,8 +2564,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "DR3",
-      "title": "EDGE Director: pins (REDnode's world pins as named places)",
-      "status": "planned"
+      "title": "EDGE Director: pins. Part 1 built as 0.0.26 with EDGE Director 0.4.0 (pins dropped in the game; marks and the scene's place follow a pin); part 2, VS Code's side, not built",
+      "status": "in progress"
      },
      {
       "id": "D6",
@@ -2591,9 +2593,10 @@ window.EDGE_STATUS = {
     "version": "first release",
     "needs": [
      "The owner's Tests A to D (in VS Code, about 40 minutes): none run",
-     "The owner's Tests E and F (in the game, with EDGE Director; about 45 minutes): none run",
+     "The owner's Tests E, F and G (in the game, with EDGE Director; about an hour): none run",
      "DR1 The Director's window (13 steps by script, with a stand-in): not run",
      "DR2 Adjust (12 steps by script, with a stand-in): not run",
+     "DR3 Pins (10 steps by script, with a stand-in): not run",
      "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
      "A Nexus page",
      "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
@@ -2687,6 +2690,12 @@ window.EDGE_STATUS = {
      "steps": 12,
      "status": "not run",
      "note": "With a stand-in for the game, in a browser and VS Code; on 0.0.25 with EDGE Director 0.3.0"
+    },
+    {
+     "name": "DR3 Pins",
+     "steps": 10,
+     "status": "not run",
+     "note": "With a stand-in for the game, in a browser; on 0.0.26 with EDGE Director 0.4.0"
     }
    ],
    "ownerSpotTests": [
@@ -2718,6 +2727,11 @@ window.EDGE_STATUS = {
     {
      "id": "F",
      "feature": "EDGE Director in the game: adjust a scene (10 steps)",
+     "status": "not run"
+    },
+    {
+     "id": "G",
+     "feature": "EDGE Director in the game: pins (8 steps)",
      "status": "not run"
     }
    ],
@@ -2754,7 +2768,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run Tests E and F in the game with EDGE Director (docs/testing.md, The owner's tests)",
+    "Run Tests E, F and G in the game with EDGE Director (docs/testing.md, The owner's tests)",
     "Run Tests A to D in VS Code (docs/testing.md, The owner's tests)",
     "Review D6's plan and its seven questions (docs/d6-audio-camera-weather.md)",
     "GitHub: social preview, Pages source; create a Nexus page",
