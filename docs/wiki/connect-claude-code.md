@@ -21,7 +21,7 @@ Go to [Install and connect](edgechat/install.html). It has every step, with what
 
 ## What connects, and how
 
-Seven EDGE tools offer a connection. EDGEchat sets up four of them. The other three you add by hand today, and they work beside EDGEchat.
+Eight EDGE tools offer a connection. EDGEchat sets up four of them. The other four you add by hand today, and they work beside EDGEchat. One of them, EDGEfab, is not released yet.
 
 | Tool | Gives Claude | With EDGEchat | By hand |
 |---|---|---|---|
@@ -29,6 +29,7 @@ Seven EDGE tools offer a connection. EDGEchat sets up four of them. The other th
 | [REDcode](redcode/) | The game's files: browse and search the archives, read and change game files, textures, TweakDB, game sounds, pack, export and import. It works through REDbridge | Included | [Assistants and MCP](redcode/assistants.html#connect-it-by-hand) |
 | [EDGEdeck](edgedeck/) | Your mods: list, add, turn on or off, reorder, remove, deploy, undo, conflicts, loadouts, Vortex import | Included | [Assistants and the command line](edgedeck/assistants.html#connect-an-assistant) |
 | [EDGEmat](edgemat/) | Materials: a garment's materials from its in-game name, its layers in plain words, recolors saved into your project, new materials from words or an image | Included | [Assistants](edgemat/assistants.html#connect-claude-code) |
+| [EDGEfab](edgefab/) | Props: draw an object from your words, make it 3D, size it, make it glow, and put it into your project or the EDGE Library. Not released yet | Not yet | [Assistants](edgefab/assistants.html#connect-claude-code) |
 | [EDGEquest](edgequest/) | Quests: read the game's quests, write and check a quest | Not yet | [For assistants](edgequest/assistants.html#connect-it) |
 | [EDGEhack](edgehack/) | Quickhacks: find, make, change and pack them | Not yet | [Assistants](edgehack/assistants.html#connect-claude-code) |
 | [EDGEwave](edgewave/) | Sound: search sound events, make a sound into a new event, voice lines | Not yet | [Assistants](edgewave/assistants.html#connect-claude-code) |
@@ -37,7 +38,7 @@ Seven EDGE tools offer a connection. EDGEchat sets up four of them. The other th
 
 ## Connecting by hand
 
-Use this for EDGEquest, EDGEhack and EDGEwave, or for any tool if you don't want the plugin. Each tool's own page, linked in the table above, has the full steps, what the connection needs and what you should see. In short:
+Use this for EDGEfab, EDGEquest, EDGEhack and EDGEwave, or for any tool if you don't want the plugin. Each tool's own page, linked in the table above, has the full steps, what the connection needs and what you should see. In short:
 
 | Tool | What you do |
 |---|---|
@@ -45,6 +46,7 @@ Use this for EDGEquest, EDGEhack and EDGEwave, or for any tool if you don't want
 | REDcode | In a terminal, run `claude mcp add redcode -- npx -y @edgemodders/redcode-mcp` once. If that fails on Windows, the REDcode page has a longer command to use instead |
 | EDGEdeck | In the editor, press **Ctrl+Shift+P** and run **EDGEdeck: Connect an assistant (MCP)...**. Choose **Copy the Claude Code command** and paste it into a terminal once |
 | EDGEmat | In EDGEmat's **Game Materials** view, press **`...`** and choose **Connect an Assistant (MCP)...**, then **Connect Claude Code** |
+| EDGEfab | Press **Ctrl+Shift+P** and run **EDGEfab: Connect an Assistant (MCP)...**, then choose **Connect Claude Code**. For pictures and models from words, its server reads your keys from Windows' environment variables: [Keys for the server](edgefab/assistants.html#keys-for-the-server) |
 | EDGEquest | In a terminal, run `claude mcp add edgequest -- npx -y @edgemodders/edgequest-mcp` once |
 | EDGEhack | In EDGEhack's **Desk** view, press **`...`** and choose **Connect an Assistant (MCP)...**, then **Connect Claude Code** |
 | EDGEwave | Press **Ctrl+Shift+P** and run **EDGEwave: Connect an Assistant (MCP)...**, then choose **Connect Claude Code** |

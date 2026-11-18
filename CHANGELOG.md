@@ -16,6 +16,7 @@ How to keep it:
 
 **New**
 
+- Wiki: a section for EDGEfab, the asset maker, ahead of its first release: install, a first-prop tutorial, the Desk, pictures, 3D models, Add to Project, the Library, assistants (Claude Code, EDGEchat and the MCP server), settings and troubleshooting: https://edgemodders.ai/wiki/edgefab/
 - Wiki: EDGEbuilder's baking page says how to get people into a baked scene's mod: one scene or several, and a script that spawns only the people: https://edgemodders.ai/wiki/edgebuilder/baking.html#people-in-a-baked-scene
 - A dashboard of the whole EDGE platform: each tool's build plan, last release, open requests, tests and who is waiting on whom: https://edgemodders.ai/dashboard.html
 - Wiki: a screenshot of EDGEwave's Voice Lines panel with a quest's three lines voiced: https://edgemodders.ai/wiki/edgewave/voice-lines.html

@@ -9,7 +9,7 @@ reviewed: 2026-11-13
 
 # The EDGE <span class="y">Library</span>
 
-The **EDGE Library** is one folder of your own where the EDGE tools keep your work for good, outside any single mod. Today it holds EDGEbuilder's scenes and bakes, EDGEhack's quickhacks, and game files you set aside from REDcode. Sounds from EDGEwave and props from EDGEfab (an asset maker that is not released yet) are planned.
+The **EDGE Library** is one folder of your own where the EDGE tools keep your work for good, outside any single mod. Today it holds EDGEbuilder's scenes and bakes, EDGEhack's quickhacks, and game files you set aside from REDcode. Props from [EDGEfab](edgefab/library.html), the asset maker, are built and come with its first release, which is not out yet. Sounds from EDGEwave are planned.
 
 When you make a mod, you copy what it needs out of the Library into the mod's project. Several mods can use the same item.
 
@@ -46,7 +46,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | [REDcode](redcode/other-tools.html#the-edge-library) | **Add to Library** on a game file or a project file, with the files it needs | Released. Tested by hand |
 | [EDGEwave](edgewave/) | Sounds as Library items | Planned, after its Desk |
 | [EDGEmat](edgemat/) | Materials and looks on Library assets | Planned, later |
-| EDGEfab | Props as Library items. EDGEfab is not released | Planned |
+| [EDGEfab](edgefab/library.html) | Props as Library items: **Add to Library**, a Library view, **Add to Project**, **Edit on the Desk** and **Refresh Project from Library** | Built and tested in VS Code. EDGEfab is not released yet |
 
 ## What goes in it
 
