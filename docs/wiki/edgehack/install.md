@@ -39,7 +39,7 @@ A **framework** is a mod that other mods need. The mods EDGEhack makes need some
 | See a name, description or icon of your own | [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198) |
 | Use a new quickhack on enemies | [redscript](https://www.nexusmods.com/cyberpunk2077/mods/1511). Each mod with a new quickhack includes one small script. Without redscript the new quickhack does not show on enemies |
 | Run a quickhack's [script](scripts.html) | [REDnode](../rednode/install.html) 0.61.1 or later |
-| [Try Live](try-live.html), and the Console line that gives V a quickhack | REDnode 0.62.0 or later |
+| [Try Live](try-live.html), and the Console line that gives V a quickhack | REDnode 0.62.4 or later |
 | Have REDcode swap icons into the running game | REDnode with its **MCP server** switched on: see [Pack and Play](try-live.html#pack-and-play) |
 | Draw icons with **Generate** | An OpenAI API key of your own. Each picture is billed to your OpenAI account. Uploading your own pictures needs no key |
 | Ask [REDagent](../redagent/) for a quickhack in the game | Coming. It needs a REDnode and a REDagent that are not released yet |
