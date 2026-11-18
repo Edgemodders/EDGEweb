@@ -649,7 +649,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "WL",
-      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49); after the dropdown",
+      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3); after the dropdown",
+      "status": "planned"
+     },
+     {
+      "id": "SC1",
+      "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL",
       "status": "planned"
      },
      {
@@ -763,7 +768,7 @@ window.EDGE_STATUS = {
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-18 (after the 0.67.3 release)"
+   "checkedBy": "REDnode session, 2026-11-18"
   },
   {
    "name": "REDcode",
