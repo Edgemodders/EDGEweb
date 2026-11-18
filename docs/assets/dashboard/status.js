@@ -2397,7 +2397,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
-     "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18). EDGEfab's half is built: a second Add to Project keeps swapped parts and unchanged materials. Then EDGEfab's check against a part swapped by EDGEmat's tools, and the owner's look in the game",
+     "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18). Built on EDGEmat's main 2026-11-18, not released; EDGEfab's check against it passed. Open: the owner's hand test in EDGEmat, Game materials on a prop's parts", "The owner in VS Code: Add to Project again's kept and swapped words, Start Over, and the failed rename's message",
      "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
      "The date in the README and changelog changes to the release day first"
@@ -2416,7 +2416,7 @@ window.EDGE_STATUS = {
      "steps": 8,
      "status": "partly run",
      "ranBy": "script",
-     "note": "Offline check passed 2026-11-18 (22 checks, eight adds; 2.6 s for a second add, 173 s the first). Not run: in VS Code, and with a part swapped by EDGEmat's tools, then in the game (waits for EDGEmat #12)"
+     "note": "Offline checks passed 2026-11-18: 22 checks over eight adds (2.6 s for a second add, 173 s the first), and 18 checks with parts swapped by EDGEmat's own build (#12). Not run: the message's words and Start Over in VS Code (owner)"
     },
     {
      "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
@@ -2451,7 +2451,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Nothing now. Every test in testing.md has passed; the owner decided 2026-11-18 that 0.1.0 waits for part materials in EDGEmat's UI (EDGEmat #12). Then ask for the release run",
+     "what": "EDGEmat's hand test, Game materials on a prop's parts (EDGEmat #12 is built; EDGEfab's check against it passed 2026-11-18). In EDGEfab's VS Code: Add to Project again's words, Start Over, the failed rename's message. Then ask for the release run",
      "ref": "docs/testing.md"
     },
     {
@@ -2501,7 +2501,7 @@ window.EDGE_STATUS = {
     "EDGEbuilder is blocked on #5 (edgefab-core on npm) now, and on #6 for Watch; #5 closes with the 0.1.0 release",
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key"
    ],
-   "checkedBy": "EDGEfab session, 2026-11-17"
+   "checkedBy": "EDGEfab session, 2026-11-18"
   },
   {
    "name": "EDGEdir",
