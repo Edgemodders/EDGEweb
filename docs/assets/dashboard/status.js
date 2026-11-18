@@ -1332,7 +1332,13 @@ window.EDGE_STATUS = {
      "note": "2026-11-12 on 0.10.9, the owner's laptop"
     }
    ],
-   "ownerSpotTests": [],
+   "ownerSpotTests": [
+    {
+     "id": "B4-1 step 17",
+     "feature": "0.7.3's New tooltip on the Scene tab says press \"New Scene Here\" in quotes (released without its own look)",
+     "status": "not run"
+    }
+   ],
    "waitingOn": [
     {
      "who": "EDGEfab",
@@ -1346,8 +1352,13 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDnode",
-     "what": "World node registry, for the World inspector (B3b)",
+     "what": "World node registry for the inspector (B3b): pick, outline and hide shipped experimental in REDnode 0.67.3; entities and streaming around the camera wait on its N2",
      "ref": "REDnode #24"
+    },
+    {
+     "who": "REDnode",
+     "what": "A kinds option on world.load, so a script spawns only a baked scene's people (not urgent; a filter works meanwhile)",
+     "ref": "REDnode #49"
     },
     {
      "who": "REDbridge",
@@ -1357,8 +1368,7 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Run the B2d-1 test in the game (0.11.0 is on the desktop; allow the new Archives permission for EDGEbuilder in REDnode's Mod Manager; keep a REDcode project open)",
-    "Ask for the 0.11.0 release run once B2d-1 passes and edgefab-core is on npm",
-    "Close EDGEbuilder #1 (mod archives index): done in B2c, passed in the game 2026-10-30"
+    "Ask for the 0.11.0 release run once B2d-1 passes and edgefab-core is on npm"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
@@ -1366,7 +1376,7 @@ window.EDGE_STATUS = {
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-16"
+   "checkedBy": "EDGEbuilder session, 2026-11-18"
   },
   {
    "name": "EDGEwave",
