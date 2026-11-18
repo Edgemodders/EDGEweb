@@ -87,7 +87,7 @@ Right-click a prop. The two icons at the right of its line are **Open in 3D** an
 | **Rename...** | A new name, for it and its files | [Below](#rename) |
 | **Delete** | Removes it from the Desk, with its model, textures and pictures. It asks first. A copy in a project or the Library stays |
 
-On a prop that is still a picture, the menu has **Generate 3D Model...**, **Edit Picture...** and **Open the Pictures** instead.
+A prop made from words also has **Generate 3D Model...**, **Edit Picture...** and **Open the Pictures** at the top of its menu. While it is still a picture, those and **Reveal**, **Rename** and **Delete** are the whole menu.
 
 ## Rename
 
