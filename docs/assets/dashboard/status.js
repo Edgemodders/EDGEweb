@@ -1592,7 +1592,6 @@ window.EDGE_STATUS = {
     "needs": [
      "The hand test 'The bake: color' (4 steps), not run",
      "A short check that new bumps are no longer backwards: no test row yet",
-     "#3: about 35 places still say Pack and Try",
      "The hand test 'Game materials on a prop's parts' (#12, which EDGEfab 0.1.0 waits on), not run",
      "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, Reshape with the game's materials in the game, install test, three Nexus screenshots"
     ]
@@ -1657,7 +1656,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "EDGEfab 0.1.0 waits on #12 (game materials on a prop's parts, M4): built 2026-11-18, the owner's hand test open, then an EDGEmat release; the default tiling is unverified"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-18"
+   "checkedBy": "EDGEmat session, 2026-11-18 (later)"
   },
   {
    "name": "EDGEquest",
