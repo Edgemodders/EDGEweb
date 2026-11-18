@@ -1287,7 +1287,7 @@ window.EDGE_STATUS = {
      {
       "id": "B2d-1",
       "title": "Import a model",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "B2d-2",
@@ -1329,7 +1329,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.11.1",
     "needs": [
-     "The 0.11.1 retest in the game (R1 to R7: a refused swap retried by Drop, Stop within one texture, the outline after Edit), not run",
      "EDGEfab's first release, so edgefab-core is on npm (EDGEfab #5)",
      "Rebuild from the npm package, not EDGEfab's checkout"
     ]
@@ -1338,9 +1337,9 @@ window.EDGE_STATUS = {
     {
      "name": "0.11.1 retest (in game)",
      "steps": 7,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-18 for what B2d-1 found; not deployed yet (the game must be closed)"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-18 on 0.11.1, the desktop: a refused swap retried by Drop, Stop within one texture, the outline after Edit"
     },
     {
      "name": "B2d-1 Import a model (in game)",
@@ -1374,7 +1373,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "EDGEfab",
-     "what": "edgefab-core on npm with EDGEfab's first release: it gates 0.11.0",
+     "what": "edgefab-core on npm with EDGEfab's first release: it gates 0.11.1, which has passed in game",
      "ref": "EDGEfab #5"
     },
     {
@@ -1399,8 +1398,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Let 0.11.1 be deployed with the game closed, then run its retest R1 to R7 (docs/testing.md, B2d-1)",
-    "Ask for the 0.11.0 release run once B2d-1 passes and edgefab-core is on npm"
+    "Ask for the 0.11.1 release run once edgefab-core is on npm"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
