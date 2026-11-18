@@ -672,11 +672,9 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The 'Update REDbridge while it runs' fix needs its retest in the game; 0.67.0 carries it",
-     "S24's street lamp step is open: decide whether it blocks the gate or moves to N2",
+     "The 'Update REDbridge while it runs' retest in the game: REDbridge 0.15.0 is out, so the Mod Manager has an update to offer",
      "world.jumpWorkspot answering false outside a workspot: untested",
-     "Admin Tools has unreleased changes (0.2.0): release it first or the run stops",
-     "The owner's GIF on REDswap's Nexus page must be pulled first"
+     "Admin Tools 0.2.0 goes in the same release run (its Nexus page joins the run: nexus.json added, live page pulled)"
     ]
    },
    "handTests": [
@@ -920,7 +918,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
-   "version": "0.14.0",
+   "version": "0.15.0",
    "lastTag": "v0.14.0",
    "lastTagDate": "2026-11-16",
    "lastCommit": "2026-11-16",
@@ -970,7 +968,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#14",
-      "title": "Animations: export with rigs (0.13.0), anims.info (0.14.0), .anims import (built, unreleased); rig import parked until EDGEfab's F7a",
+      "title": "Animations: export with rigs (0.13.0), anims.info (0.14.0), .anims import (0.15.0) done; rig import parked until EDGEfab's F7a",
       "status": "in progress"
      },
      {
@@ -981,26 +979,18 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.15.0",
+    "version": null,
     "needs": [
-     ".anims import from glTF (#14) is built and passed the probe on 2.5; REDcode's smoke test before the release",
-     "The owner's ask to release"
+     "Nothing unreleased"
     ]
    },
    "handTests": [
     {
-     "name": "Probe on the .anims import build (round trip of the soldier's land clip)",
+     "name": "Probe and REDcode's smoke test on the 0.15.0 build",
      "steps": null,
      "status": "passed",
      "ranBy": "script",
-     "note": "2026-11-17, game 2.5"
-    },
-    {
-     "name": "REDcode's smoke test on the next release build",
-     "steps": null,
-     "status": "not run",
-     "ranBy": "script",
-     "note": null
+     "note": "2026-11-18, game 2.5"
     }
    ],
    "ownerSpotTests": [],
@@ -1026,7 +1016,7 @@ window.EDGE_STATUS = {
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
    ],
-   "checkedBy": "REDnode session, 2026-11-17"
+   "checkedBy": "REDnode session, 2026-11-18"
   },
   {
    "name": "EDGEdeck",
