@@ -73,7 +73,8 @@ Look in the log first: **EDGEfab: Show Log** in the command palette (`Ctrl+Shift
 | It asks for a project | No project is open in REDcode. Open one, or pick the project's folder |
 | "is not a WolvenKit project" | Pick the folder that holds the `.cpmodproj` file |
 | REDbridge can't start, or the game isn't found | Set REDcode up first: [REDcode: install](../redcode/install.html). EDGEfab uses REDcode's game folder and REDbridge |
-| It takes minutes | Normal for a prop in parts: about four textures are made for each part |
+| It takes minutes | Normal the first time for a prop in parts: about four textures are made for each part. Adding it again keeps the unchanged ones and is much faster |
+| A part lost the material you gave it | You pressed **Start Over...**, or the prop was renamed: a new name is a new prop in the project. Give the part its material again |
 | A material is listed as missing in the log | That part keeps a plain look. Say so in an issue, with the log |
 | After a rename, the project has the prop twice | The new name is a new folder. Delete the old one from the project |
 

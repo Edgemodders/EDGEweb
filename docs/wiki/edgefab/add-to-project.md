@@ -89,11 +89,20 @@ You can also spawn the entity by its game path with any tool that spawns entitie
 
 ## Changing a prop that's already in
 
-Change the prop on the Desk (its size, its glow, a new model), then **Add to Project** again. The same name replaces the files in the project. Then pack again.
+Change the prop on the Desk (its size, its glow, a new model), then **Add to Project** again. The same name replaces the prop in the project. Then pack again.
+
+**It keeps what didn't change.** A material made from the same pictures as last time keeps its files, and only the changed ones are made again. The message says what was kept:
+
+```text
+EDGEfab added Neon vending machine to NeonProps, solid (a physical mesh with a box).
+4 of its 6 materials are unchanged and were kept. front keeps the material you gave it.
+```
 
 | Good to know | |
 |---|---|
-| It remakes everything | Every texture is made again, so it takes as long as the first time. Keeping the unchanged ones is planned |
+| Only the size or shape changed | Every material is kept. It takes seconds |
+| A picture or a glow changed | Only that part's material is made again. This still takes a minute or more |
+| **Start Over...** | The button on the message, when something was kept. It makes every texture again and puts every part back on the model's own texture. It asks first |
 | After a rename | The prop goes in under its new name, beside the old one. Delete the old folder from the project |
 | From the Library | A prop added from the [Library](library.html) is a ready copy: it takes seconds |
 
@@ -107,9 +116,10 @@ A prop made in [parts](models.html#parts) wears Tripo's textures on each part. A
 
 It was seen in the game once, on a vending machine with three parts changed: red car paint, a blue glow and game glass, by day and night.
 
-| Know before you try | |
+| Good to know | |
 |---|---|
-| Add to Project again undoes it | It writes every part's material again from the model's textures. Change parts last |
-| The buttons are planned | In EDGEmat: **Use a Game Surface** and a game material for each part |
+| Add to Project again keeps it | A part you gave another material keeps it when you add the prop again, and the message names the part |
+| Going back | The model's own material for that part stays in the project. **Start Over...** on the message puts every part back on its own |
+| The buttons are planned | In EDGEmat: **Use a Game Surface** and a game material for each part. EDGEfab's first release waits for them |
 
 Next: [The Library](library.html), or [Assistants](assistants.html).

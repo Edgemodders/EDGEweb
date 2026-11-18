@@ -1816,6 +1816,11 @@ window.EDGE_STATUS = {
      "ref": "REDcode #21"
     },
     {
+     "who": "EDGEmat",
+     "what": "Not blocking: materialsFromModel keeps the textures whose source did not change, so a glow strength change is one .mi write",
+     "ref": "EDGEmat #13"
+    },
+    {
      "who": "EDGEchat",
      "what": "List edgequest-mcp in the plugin",
      "ref": "EDGEchat #3"
@@ -2397,7 +2402,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
-     "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18), and EDGEfab keeping swapped parts on a second Add to Project",
+     "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18). EDGEfab's half is built: a second Add to Project keeps swapped parts and unchanged materials. Then EDGEfab's check against a part swapped by EDGEmat's tools, and the owner's look in the game",
      "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
      "The date in the README and changelog changes to the release day first"
@@ -2410,6 +2415,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 11 VS Code steps, passed 2026-11-17 (owner)"
+    },
+    {
+     "name": "F1 Add to Project again: unchanged materials and swapped parts kept",
+     "steps": 8,
+     "status": "partly run",
+     "ranBy": "script",
+     "note": "Offline check passed 2026-11-18 (22 checks, eight adds; 2.6 s for a second add, 173 s the first). Not run: in VS Code, and with a part swapped by EDGEmat's tools, then in the game (waits for EDGEmat #12)"
     },
     {
      "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
@@ -2437,7 +2449,7 @@ window.EDGE_STATUS = {
      "steps": 3,
      "status": "passed",
      "ranBy": "script",
-     "note": "Passed again 2026-11-18 on main 8910f46, after the Pictures tab, Rename going all the way in, two small fixes and the Desk's labels. They run once more on the build that is released"
+     "note": "Passed again 2026-11-18 on main af59fb8, after the Pictures tab, Rename going all the way in, two small fixes, the Desk's labels and Add to Project again. They run once more on the build that is released"
     }
    ],
    "ownerSpotTests": [],

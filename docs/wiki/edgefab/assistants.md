@@ -172,7 +172,7 @@ You never have to name a tool: ask in plain words and the assistant picks.
 | `fab_glow` | `paint` makes painted lights glow, `strength` sets how strongly, `off` stops it | [Glow](models.html#glow) | |
 | `fab_desk` | Lists the Desk: each prop's name, size, parts, pictures and license | [The Desk](desk.html) | |
 | `fab_rename` | Renames a prop, its files and materials too | [Rename](desk.html#rename) | |
-| `fab_add` | Puts a prop into a project, from the Desk or from the Library | [Add to Project](add-to-project.html) | |
+| `fab_add` | Puts a prop into a project, from the Desk or from the Library. Adding it again keeps the materials that didn't change and the parts given another material | [Add to Project](add-to-project.html) | |
 | `fab_library` | Lists a Library folder. Sets the Library's folder or your game folder, when you say where | [The Library](library.html) | |
 | `fab_library_add` | Adds a Desk prop to the Library, or updates it there | Add to Library | |
 | `fab_library_edit` | Brings a Library prop back onto the Desk to change | Edit on the Desk | |
@@ -186,7 +186,7 @@ What the main tools take:
 | `fab_picture` | `words`. Optional: `prop` (a Desk prop to draw into), `from` (the number of the picture to change), `name` |
 | `fab_make` | `from`. Then `file`, or `prop` with optional `take`, or `prompt`. Optional: `name`, `height` in metres, `detail` (`standard` or `high`), `parts` (on by default), `plan` |
 | `fab_glow` | `prop`, `action`. Optional: `amount` 0 to 1 (how much counts as a light, 0.5 by default), `strength`, `material` (one part) |
-| `fab_add` | `prop`, `project`. Optional: `from` (`desk` or `library`), `name`, `mod` (the folder under `source\archive`), `collision` (`physical`, `box` or `none`) |
+| `fab_add` | `prop`, `project`. Optional: `from` (`desk` or `library`), `name`, `mod` (the folder under `source\archive`), `collision` (`physical`, `box` or `none`). Adding it again: `textures` (`keep-unchanged` or `remake`) and `parts` (`keep` or `model`). The answer's `kept` and `swapped` say what stayed |
 | `fab_library_add` | `prop`. Optional: `folder` (such as `Production/Props`), `useGamePath`, `collision` |
 
 ## Other assistants
