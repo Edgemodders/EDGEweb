@@ -1302,20 +1302,27 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.11.0",
+    "version": "0.11.1",
     "needs": [
-     "The B2d-1 Import test in the game (10 steps), not run",
+     "The 0.11.1 retest in the game (R1 to R7: a refused swap retried by Drop, Stop within one texture, the outline after Edit), not run",
      "EDGEfab's first release, so edgefab-core is on npm (EDGEfab #5)",
      "Rebuild from the npm package, not EDGEfab's checkout"
     ]
    },
    "handTests": [
     {
-     "name": "B2d-1 Import a model (in game)",
-     "steps": 10,
+     "name": "0.11.1 retest (in game)",
+     "steps": 7,
      "status": "not run",
      "ranBy": null,
-     "note": "0.11.0 is deployed on the desktop since 2026-11-15, so it can be run now"
+     "note": "Built 2026-11-18 for what B2d-1 found; not deployed yet (the game must be closed)"
+    },
+    {
+     "name": "B2d-1 Import a model (in game)",
+     "steps": 10,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-18 on 0.11.0, the desktop; 224 s an Import for 29 textures; three findings fixed in 0.11.1"
     },
     {
      "name": "B2d-0 Import probe",
@@ -1336,7 +1343,7 @@ window.EDGE_STATUS = {
     {
      "id": "B4-1 step 17",
      "feature": "0.7.3's New tooltip on the Scene tab says press \"New Scene Here\" in quotes (released without its own look)",
-     "status": "not run"
+     "status": "passed"
     }
    ],
    "waitingOn": [
@@ -1367,7 +1374,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the B2d-1 test in the game (0.11.0 is on the desktop; allow the new Archives permission for EDGEbuilder in REDnode's Mod Manager; keep a REDcode project open)",
+    "Let 0.11.1 be deployed with the game closed, then run its retest R1 to R7 (docs/testing.md, B2d-1)",
     "Ask for the 0.11.0 release run once B2d-1 passes and edgefab-core is on npm"
    ],
    "risks": [
