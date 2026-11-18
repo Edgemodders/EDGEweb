@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.68.0 (test build; 0.67.3 released 2026-11-18)",
+   "version": "0.68.1 (test build; 0.67.3 released 2026-11-18)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -644,7 +644,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "DD",
-      "title": "Dropdown: rn-select in the UI kit and ui.select (REDnode 0.68.0)",
+      "title": "Dropdown: rn-select in the UI kit and ui.select: passed in game (0.68.0)",
+      "status": "done"
+     },
+     {
+      "id": "ML",
+      "title": "The Mod log window resizable (REDnode 0.68.1)",
       "status": "built, tests pending"
      },
      {
@@ -675,18 +680,25 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.68.0",
+    "version": "0.68.1",
     "needs": [
-     "The dropdown's in-game test (docs/overlay.md, Dropdown: test)"
+     "The resizable Mod log's in-game test (docs/overlay.md, Mod log: resizable (0.68.1))"
     ]
    },
    "handTests": [
     {
-     "name": "The dropdown, REDnode 0.68.0",
-     "steps": 9,
+     "name": "The Mod log resizable, REDnode 0.68.1",
+     "steps": 4,
      "status": "not run",
      "ranBy": null,
-     "note": "Mock check passed (30 checks, dev and packaged host)"
+     "note": "Mock check passed (9 checks)"
+    },
+    {
+     "name": "The dropdown, REDnode 0.68.0",
+     "steps": 9,
+     "status": "passed",
+     "ranBy": null,
+     "note": "2026-11-18, dev PC, all steps"
     },
     {
      "name": "App keys, REDnode 0.67.0",
@@ -763,8 +775,8 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Run the dropdown's in-game test on 0.68.0 (deploy first)",
-     "ref": "docs/overlay.md, Dropdown: test"
+     "what": "Run the resizable Mod log's in-game test on 0.68.1 (deploy first)",
+     "ref": "docs/overlay.md, Mod log: resizable (0.68.1)"
     },
     {
      "who": "owner",
@@ -773,7 +785,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Agree the order after the dropdown and the WL build (Console resizing, N2 and others are asked for, not built)",
+    "Agree the order after the WL build (Console resizing, N2 and others are asked for, not built)",
     "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)"
    ],
    "risks": [
