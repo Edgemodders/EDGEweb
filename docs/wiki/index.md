@@ -33,7 +33,7 @@ More toolkits build on those five for particular jobs:
 |---|---|---|---|
 | Ask at your desk | [EDGEchat](edgechat/) | The EDGE plugin for Claude Code, Anthropic's AI assistant. One install connects Claude to the running game, the game's files, your mods and their materials | 0.1.1 |
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE editor tools built in. Or an extension pack that installs them in VS Code | App 1.140.6 and pack 0.6.0, both previews |
-| Materials | [EDGEmat](edgemat/) | A material editor. Recolor clothes layer by layer, or make a new material by describing it | 0.3.2, a preview |
+| Materials | [EDGEmat](edgemat/) | A material editor. Recolor clothes layer by layer, or make a new material by describing it | 0.3.3, a preview |
 | Props | [EDGEfab](edgefab/) | An asset maker. Turn a 3D model, or your own words, into a prop the game can use, and place it with EDGEbuilder | 0.1.0, a preview, not released yet |
 | Scenes with people | [EDGEdir](edgedir/) | A director's tool. Lay out what the game's people do on a timeline, watch it in 3D, and play and adjust it in the running game | 0.0.28, not released yet; untested in the game |
 | Quickhacks | [EDGEhack](edgehack/) | A quickhack editor. Read any quickhack in plain words, change it, or make new ones and try them in the running game | 0.1.2, a preview |
