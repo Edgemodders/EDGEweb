@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.67.3 (released 2026-11-18, with Admin Tools 0.2.0)",
+   "version": "0.68.0 (test build; 0.67.3 released 2026-11-18)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -644,8 +644,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "DD",
-      "title": "Dropdown: rn-select in the UI kit and ui.select (after the App keys test)",
-      "status": "planned"
+      "title": "Dropdown: rn-select in the UI kit and ui.select (REDnode 0.68.0)",
+      "status": "built, tests pending"
      },
      {
       "id": "WL",
@@ -675,12 +675,19 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.68.0",
     "needs": [
-     "Nothing built since 0.67.3 yet: next is the dropdown (rn-select, ui.select), then the WL build (#48, #49)"
+     "The dropdown's in-game test (docs/overlay.md, Dropdown: test)"
     ]
    },
    "handTests": [
+    {
+     "name": "The dropdown, REDnode 0.68.0",
+     "steps": 9,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Mock check passed (30 checks, dev and packaged host)"
+    },
     {
      "name": "App keys, REDnode 0.67.0",
      "steps": 9,
@@ -754,6 +761,11 @@ window.EDGE_STATUS = {
    ],
    "ownerSpotTests": [],
    "waitingOn": [
+    {
+     "who": "owner",
+     "what": "Run the dropdown's in-game test on 0.68.0 (deploy first)",
+     "ref": "docs/overlay.md, Dropdown: test"
+    },
     {
      "who": "owner",
      "what": "Talk through semi-native apps before its first spike starts",
