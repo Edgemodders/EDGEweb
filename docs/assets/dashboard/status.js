@@ -1630,7 +1630,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.3.3",
     "needs": [
-     "The hand test 'Bumps the right way round' (6 steps: F5, then in the game): failed on its first run (no bumps on a garment), fixed, rerun",
      "The hand test 'Reshape with the game's materials' (in the game; it ships in EDGEmat's MCP), not run",
      "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, Reshape with the game's materials in the game, install test, three Nexus screenshots"
     ]
@@ -1653,9 +1652,9 @@ window.EDGE_STATUS = {
     {
      "name": "Bumps the right way round",
      "steps": 6,
-     "status": "failed",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-18: white dots, no bumps; New Material dropped Bumps on a garment. Fixed the same day (bumps laid over the garment's folds); rerun from step 1"
+     "note": "Passed 2026-11-18 on the rerun, after the fix for bumps on a garment (the first run showed none); the studs read raised in the game"
     },
     {
      "name": "Wardrobe Designer: Reshape and keys (in game)",
@@ -1699,7 +1698,6 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
-    "Rerun 'Bumps the right way round' from step 1 (F5, then in the game; no AI key)",
     "Run 'Reshape with the game's materials' in the game from step 3 (Claude put the archive in the game's mod folder; it loads before Wardrobe Designer's, so no Restore is needed)",
     "Install 0.3.2 from the Marketplace in a normal VS Code",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
@@ -1711,7 +1709,7 @@ window.EDGE_STATUS = {
     "EDGEfab 0.1.0 waits on EDGEmat's next release, which carries #12 (game materials on a prop's parts, tested 2026-11-18)",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-18 (late night)"
+   "checkedBy": "EDGEmat session, 2026-11-18 (bumps passed)"
   },
   {
    "name": "EDGEquest",
