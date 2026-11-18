@@ -1592,7 +1592,6 @@ window.EDGE_STATUS = {
     "needs": [
      "The hand test 'The bake: color' (4 steps), not run",
      "A short check that new bumps are no longer backwards: no test row yet",
-     "The hand test 'Game materials on a prop's parts' (#12, which EDGEfab 0.1.0 waits on), not run",
      "Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, Reshape with the game's materials in the game, install test, three Nexus screenshots"
     ]
    },
@@ -1621,9 +1620,9 @@ window.EDGE_STATUS = {
     {
      "name": "Game materials on a prop's parts (#12)",
      "steps": 11,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-18; smoke and the parts check pass. EDGEfab 0.1.0 waits on it"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Passed 2026-11-18, all 11 steps, in the game: glossy car paint at the right size, glass, blue glow. #12 closed; EDGEfab 0.1.0 waits on the EDGEmat release"
     },
     {
      "name": "Wardrobe Designer: install from the release zip",
@@ -1645,8 +1644,7 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
     "Run 'The bake: color'",
-    "Run 'Reshape with the game's materials' in the game (the archive is packed; Restore Wardrobe Designer's hat first)",
-    "Run 'Game materials on a prop's parts' (F5, then in the game): EDGEfab 0.1.0 waits on it",
+    "Run 'Reshape with the game's materials' in the game from step 3 (Claude put the archive in the game's mod folder; it loads before Wardrobe Designer's, so no Restore is needed)",
     "Install 0.3.2 from the Marketplace in a normal VS Code",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
@@ -1654,9 +1652,10 @@ window.EDGE_STATUS = {
    "risks": [
     "Reshape's made pieces now keep the game's materials (Tripo's off-color paint is optional), untested in the game; Tripo on the new dark background is untested too",
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
-    "EDGEfab 0.1.0 waits on #12 (game materials on a prop's parts, M4): built 2026-11-18, the owner's hand test open, then an EDGEmat release; the default tiling is unverified"
+    "EDGEfab 0.1.0 waits on EDGEmat's next release, which carries #12 (game materials on a prop's parts, tested 2026-11-18)",
+    "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-18 (later)"
+   "checkedBy": "EDGEmat session, 2026-11-18 (evening)"
   },
   {
    "name": "EDGEquest",
