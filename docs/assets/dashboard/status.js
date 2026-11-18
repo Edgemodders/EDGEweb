@@ -2527,7 +2527,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.26",
+   "version": "0.0.28",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2581,13 +2581,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "DR3",
-      "title": "EDGE Director: pins. Part 1 built as 0.0.26 with EDGE Director 0.4.0 (pins dropped in the game; marks and the scene's place follow a pin); part 2, VS Code's side, not built",
-      "status": "in progress"
+      "title": "EDGE Director: pins, in the game and in the editor (built as 0.0.27 with EDGE Director 0.4.0; not run in the game or in VS Code)",
+      "status": "built, tests pending"
      },
      {
       "id": "D6",
-      "title": "Audio, camera, weather (plan written 2026-11-17, waits for the owner's answers; after DR3)",
-      "status": "planned"
+      "title": "Audio, camera, weather (agreed 2026-11-18). D6a Weather built as 0.0.28 with EDGE Director 0.5.0, not run; D6b Audio and D6c Camera not built",
+      "status": "in progress"
      },
      {
       "id": "D7",
@@ -2609,12 +2609,10 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The owner's Tests A to D (in VS Code, about 40 minutes): none run",
-     "The owner's Tests E, F and G (in the game, with EDGE Director; about an hour): none run",
-     "DR1 The Director's window (13 steps by script, with a stand-in): not run",
-     "DR2 Adjust (12 steps by script, with a stand-in): not run",
-     "DR3 Pins (10 steps by script, with a stand-in): not run",
-     "GitHub setup: Pages source, social preview; whether the publish secrets reach the repo is unchecked",
+     "The owner's Tests A to D (in VS Code, about 45 minutes): none run",
+     "The owner's Tests E to H (in the game, with EDGE Director; about 70 minutes): none run",
+     "Five rounds by script, none run: DR1 The Director's window (13 steps), DR2 Adjust (12), DR3 Pins (10), DR3 Pins in the editor (10), D6a Weather (11)",
+     "GitHub setup: the social preview; whether the publish secrets reach the repo is unchecked (Pages is on since 2026-11-18)",
      "A Nexus page",
      "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
     ]
@@ -2713,6 +2711,18 @@ window.EDGE_STATUS = {
      "steps": 10,
      "status": "not run",
      "note": "With a stand-in for the game, in a browser; on 0.0.26 with EDGE Director 0.4.0"
+    },
+    {
+     "name": "DR3 Pins in the editor",
+     "steps": 10,
+     "status": "not run",
+     "note": "In VS Code; on 0.0.27"
+    },
+    {
+     "name": "D6a Weather",
+     "steps": 11,
+     "status": "not run",
+     "note": "In VS Code with the game's files, and a stand-in for the game; on 0.0.28 with EDGE Director 0.5.0"
     }
    ],
    "ownerSpotTests": [
@@ -2733,7 +2743,7 @@ window.EDGE_STATUS = {
     },
     {
      "id": "D",
-     "feature": "Sets, and what the game will not match (S11, S12)",
+     "feature": "Sets, what the game will not match, pins in the editor (S11, S12, S15)",
      "status": "not run"
     },
     {
@@ -2750,6 +2760,11 @@ window.EDGE_STATUS = {
      "id": "G",
      "feature": "EDGE Director in the game: pins (8 steps)",
      "status": "not run"
+    },
+    {
+     "id": "H",
+     "feature": "Weather: in the editor, then in the game (8 steps)",
+     "status": "not run"
     }
    ],
    "waitingOn": [
@@ -2760,7 +2775,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDnode",
-     "what": "V as an actor in the game, for D5",
+     "what": "V as an actor in the game: the workspot on the real player (the owner's choice), a stand-in copy as the fallback; in the same spike",
      "ref": "REDnode #47"
     },
     {
@@ -2780,17 +2795,14 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDnode",
-     "what": "For pins in scenes: whether EDGEdir may read the player's pin sets, a spike on a spawned person walking to a place, an id and facing on a pin",
+     "what": "An optional id and facing on a pin (in REDnode's next build), and one in-game spike: a spawned person walking to a place, and whether a person can be moved while they play",
      "ref": "REDnode #50"
     }
    ],
    "ownerActions": [
-    "Run Tests E, F and G in the game with EDGE Director (docs/testing.md, The owner's tests)",
+    "Run Tests E to H in the game with EDGE Director (docs/testing.md, The owner's tests)",
     "Run Tests A to D in VS Code (docs/testing.md, The owner's tests)",
-    "Review D6's plan and its seven questions (docs/d6-audio-camera-weather.md)",
-    "GitHub: social preview, Pages source; create a Nexus page",
-    "Later, after REDnode's spike: decide whether the real player acts in the game or a stand-in copy",
-    "Answer N4 to N6 on pins (the design, \"Pins: named places from REDnode\"); N1 to N3 are settled by EDGE Director's plan"
+    "GitHub: the social preview; create a Nexus page"
    ],
    "risks": [
     "EDGE Director (the player with a window) has never run in the game: where actors stand and face, the T pose at the start, and how its window looks with REDnode's kit are unverified",
