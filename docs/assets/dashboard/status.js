@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.67.1 (test build)",
+   "version": "0.67.2 (test build)",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -619,7 +619,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#46b",
-      "title": "Weather API, for EDGEdir",
+      "title": "Weather API, for EDGEdir; weather passed in game but step 9 (a released hold left the rain); 0.67.2 blends back to the weather from before, retest pending",
       "status": "built, tests pending"
      },
      {
@@ -634,7 +634,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AK",
-      "title": "App keys: 0.67.0 failed step 4 in game (a full-screen page hid whole); 0.67.1 hides only its panels, awaiting its retest",
+      "title": "App keys: passed in game with 0.67.1 (a full-screen app keeps its view, the key hides its panels)",
+      "status": "done"
+     },
+     {
+      "id": "PM",
+      "title": "Hide in the pause menu (on by default, F10 still works there) and the launcher's filter taking the keyboard (0.67.2)",
       "status": "built, tests pending"
      },
      {
@@ -667,8 +672,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The App keys retest in the game (0.67.1): 0.67.0 failed step 4",
-     "The Weather (#46) test in the game: not run; 0.67.0 carries it",
+     "The Weather (#46) retest of step 9 in the game (0.67.2: giving it back blends back)",
+     "The pause menu and launcher filter test in the game (0.67.2): not run",
      "The 'Update REDbridge while it runs' fix needs its retest in the game; 0.67.0 carries it",
      "S24's street lamp step is open: decide whether it blocks the gate or moves to N2",
      "world.jumpWorkspot answering false outside a workspot: untested",
@@ -680,16 +685,16 @@ window.EDGE_STATUS = {
     {
      "name": "App keys, REDnode 0.67.0",
      "steps": 9,
-     "status": "failed",
+     "status": "passed",
      "ranBy": null,
-     "note": "2026-11-17 on 0.67.0: step 4 (EDGEbuilder's full-screen page hid whole, the mouse reached the game); fixed in 0.67.1, retest pending"
+     "note": "2026-11-18 on 0.67.1 (0.67.0 failed step 4)"
     },
     {
      "name": "Weather (#46), REDnode 0.66.10",
      "steps": 10,
-     "status": "not run",
+     "status": "partly run",
      "ranBy": null,
-     "note": "Stand-in checks passed; 0.67.0 carries it too"
+     "note": "2026-11-18 on 0.67.0: all but step 9 passed; 0.67.2 retest pending"
     },
     {
      "name": "Update REDbridge while it runs (W3 retest)",
@@ -732,6 +737,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-15, Xbox pad"
+    },
+    {
+     "name": "The pause menu and the launcher's filter, REDnode 0.67.2",
+     "steps": null,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": null
     }
    ],
    "ownerSpotTests": [],
@@ -758,7 +770,7 @@ window.EDGE_STATUS = {
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-17"
+   "checkedBy": "REDnode session, 2026-11-18"
   },
   {
    "name": "REDcode",
@@ -2386,7 +2398,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.0",
     "needs": [
-    "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18), and EDGEfab keeping swapped parts on a second Add to Project",
+     "EDGEmat #12: game materials on a prop's parts in EDGEmat's UI (the owner's call, 2026-11-18), and EDGEfab keeping swapped parts on a second Add to Project",
      "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
      "The owner's video on Nexus page 38605 before the page goes live",
      "The date in the README and changelog changes to the release day first"
