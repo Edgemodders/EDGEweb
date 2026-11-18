@@ -639,8 +639,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "PM",
-      "title": "Hide in the pause menu (on by default, F10 still works there) and the launcher's filter taking the keyboard: filter passed; the pause menu failed step 6 on 0.67.2, fixed in 0.67.3, retest pending",
-      "status": "built, tests pending"
+      "title": "Hide in the pause menu (on by default, F10 still works there) and the launcher's filter taking the keyboard: passed in game (0.67.3)",
+      "status": "done"
      },
      {
       "id": "DD",
@@ -672,7 +672,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The pause menu retest in the game (0.67.3): 0.67.2 hid REDnode only every other open",
      "The 'Update REDbridge while it runs' fix needs its retest in the game; 0.67.0 carries it",
      "S24's street lamp step is open: decide whether it blocks the gate or moves to N2",
      "world.jumpWorkspot answering false outside a workspot: untested",
@@ -740,9 +739,9 @@ window.EDGE_STATUS = {
     {
      "name": "The pause menu and the launcher's filter, REDnode 0.67.2",
      "steps": null,
-     "status": "failed",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-18 on 0.67.2: step 6 (every other open); the filter (step 8) passed; 0.67.3 retest pending"
+     "note": "2026-11-18: 0.67.2 failed step 6 (every other open), 0.67.3 passed; the filter passed on 0.67.2"
     }
    ],
    "ownerSpotTests": [],
