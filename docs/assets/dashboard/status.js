@@ -2144,8 +2144,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "1.143.1",
     "needs": [
-     "The smoke test of the 1.143.1 build (CI run 44424459811, unticked): starts, opens a folder, the onboarding's GitHub sign-in with the toast fix, the built-in extensions, no Copilot or Microsoft sign-in, Claude Code's first-run install",
-     "EDGEfab joins it if 0.1.0 is on Open VSX by then"
+     "The smoke test of the 1.143.1 build (CI run 44432333208, unticked): starts, opens a folder, the onboarding's GitHub sign-in with the toast fix, the built-in extensions, no Copilot or Microsoft sign-in, Claude Code's first-run install",
+     "EDGEfab 0.1.0 built in, with REDcode 0.10.13, EDGEdeck 0.32.0, EDGEmat 0.3.3 and pack 0.7.0 (built, in the same smoke test)"
     ]
    },
    "handTests": [
@@ -2196,7 +2196,7 @@ window.EDGE_STATUS = {
      "steps": null,
      "status": "not run",
      "ranBy": null,
-     "note": "Built 2026-11-18 by an unticked Release run; also checks the sign-in toast fix"
+     "note": "Built 2026-11-19 by the unticked Release run 44432333208, EDGEfab included; also checks the sign-in toast fix"
     }
    ],
    "ownerSpotTests": [],
@@ -2222,14 +2222,14 @@ window.EDGE_STATUS = {
     "Click Restart to Update on an older install: the first real click",
     "Close EDGEkit #7 (EDGEquest), left to the owner",
     "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up",
-    "Run the 1.143.1 smoke test (download EDGEkitSetup from CI run 44424459811)"
+    "Run the 1.143.1 smoke test (download EDGEkitSetup from CI run 44432333208)"
    ],
    "risks": [
     "The installer is not signed, so Windows SmartScreen may warn",
     "Three releases in a row shipped with no installer hand test",
     "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit's move to 1.143.1 is built, not yet tested or released"
    ],
-   "checkedBy": "EDGEkit session, 2026-11-18"
+   "checkedBy": "EDGEkit session, 2026-11-19"
   },
   {
    "name": "EDGEchat",
@@ -2416,204 +2416,204 @@ window.EDGE_STATUS = {
    ]
   },
   {
-    "name": "EDGEfab",
-    "group": "In development",
-    "role": "Asset maker: turns a GLB or a text prompt into game-ready props, added to a REDcode project or the EDGE Library",
-    "stage": "released",
-    "version": "0.1.0",
-    "lastTag": null,
-    "lastTagDate": null,
-    "lastCommit": "2026-11-17",
-    "commitsSinceTag": 0,
-    "sessions": [
-      "EDGEfab"
-    ],
-    "plan": {
-      "name": "Build plan F0 to F9",
-      "source": "docs/plan.md, docs/index.md",
-      "phases": [
-        {
-          "id": "F0",
-          "title": "Decisions and checks",
-          "status": "done"
-        },
-        {
-          "id": "F1",
-          "title": "Props: GLB or words into a project, placed with EDGEbuilder (released as 0.1.0, a preview, 2026-11-18)",
-          "status": "done"
-        },
-        {
-          "id": "F3",
-          "title": "Blender sources",
-          "status": "planned"
-        },
-        {
-          "id": "F2",
-          "title": "Workspace and prompts",
-          "status": "planned"
-        },
-        {
-          "id": "F7a",
-          "title": "Animated props",
-          "status": "planned"
-        },
-        {
-          "id": "F5a",
-          "title": "Characters, seen (uses EDGEdir's animation index)",
-          "status": "planned"
-        },
-        {
-          "id": "F7b-1",
-          "title": "Small animation edits",
-          "status": "planned"
-        },
-        {
-          "id": "F4",
-          "title": "Clothing",
-          "status": "planned"
-        },
-        {
-          "id": "F5b",
-          "title": "Characters, heard and read",
-          "status": "planned"
-        },
-        {
-          "id": "F7b-2",
-          "title": "Character animation",
-          "status": "planned"
-        },
-        {
-          "id": "FA",
-          "title": "The agent",
-          "status": "planned"
-        },
-        {
-          "id": "F6",
-          "title": "Characters, edited",
-          "status": "planned"
-        },
-        {
-          "id": "F8",
-          "title": "Unreal assets",
-          "status": "planned"
-        },
-        {
-          "id": "F9",
-          "title": "Ship",
-          "status": "planned"
-        }
-      ]
+   "name": "EDGEfab",
+   "group": "In development",
+   "role": "Asset maker: turns a GLB or a text prompt into game-ready props, added to a REDcode project or the EDGE Library",
+   "stage": "released",
+   "version": "0.1.0",
+   "lastTag": null,
+   "lastTagDate": null,
+   "lastCommit": "2026-11-17",
+   "commitsSinceTag": 0,
+   "sessions": [
+    "EDGEfab"
+   ],
+   "plan": {
+    "name": "Build plan F0 to F9",
+    "source": "docs/plan.md, docs/index.md",
+    "phases": [
+     {
+      "id": "F0",
+      "title": "Decisions and checks",
+      "status": "done"
+     },
+     {
+      "id": "F1",
+      "title": "Props: GLB or words into a project, placed with EDGEbuilder (released as 0.1.0, a preview, 2026-11-18)",
+      "status": "done"
+     },
+     {
+      "id": "F3",
+      "title": "Blender sources",
+      "status": "planned"
+     },
+     {
+      "id": "F2",
+      "title": "Workspace and prompts",
+      "status": "planned"
+     },
+     {
+      "id": "F7a",
+      "title": "Animated props",
+      "status": "planned"
+     },
+     {
+      "id": "F5a",
+      "title": "Characters, seen (uses EDGEdir's animation index)",
+      "status": "planned"
+     },
+     {
+      "id": "F7b-1",
+      "title": "Small animation edits",
+      "status": "planned"
+     },
+     {
+      "id": "F4",
+      "title": "Clothing",
+      "status": "planned"
+     },
+     {
+      "id": "F5b",
+      "title": "Characters, heard and read",
+      "status": "planned"
+     },
+     {
+      "id": "F7b-2",
+      "title": "Character animation",
+      "status": "planned"
+     },
+     {
+      "id": "FA",
+      "title": "The agent",
+      "status": "planned"
+     },
+     {
+      "id": "F6",
+      "title": "Characters, edited",
+      "status": "planned"
+     },
+     {
+      "id": "F8",
+      "title": "Unreal assets",
+      "status": "planned"
+     },
+     {
+      "id": "F9",
+      "title": "Ship",
+      "status": "planned"
+     }
+    ]
+   },
+   "nextRelease": {
+    "version": "0.1.1",
+    "needs": [
+     "0.1.0 released 2026-11-18 (Marketplace, Open VSX, GitHub, npm, the Nexus file uploaded). Nothing new built since",
+     "Next work: a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
+    ]
+   },
+   "handTests": [
+    {
+     "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
+     "steps": 11,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 11 VS Code steps, passed 2026-11-17 (owner)"
     },
-    "nextRelease": {
-      "version": "0.1.1",
-      "needs": [
-        "0.1.0 released 2026-11-18 (Marketplace, Open VSX, GitHub, npm, the Nexus file uploaded). Nothing new built since",
-        "Next work: a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
-      ]
+    {
+     "name": "F1 Add to Project again, Open in EDGEmat and Reveal in REDcode",
+     "steps": 7,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Offline checks passed 2026-11-18 (22 checks over eight adds; 18 checks with parts swapped by EDGEmat's own build). The owner's 7 VS Code steps passed 2026-11-18, after Open in EDGEmat and Reveal in REDcode were added at the owner's ask"
     },
-    "handTests": [
-      {
-        "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
-        "steps": 11,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 11 VS Code steps, passed 2026-11-17 (owner)"
-      },
-      {
-        "name": "F1 Add to Project again, Open in EDGEmat and Reveal in REDcode",
-        "steps": 7,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "Offline checks passed 2026-11-18 (22 checks over eight adds; 18 checks with parts swapped by EDGEmat's own build). The owner's 7 VS Code steps passed 2026-11-18, after Open in EDGEmat and Reveal in REDcode were added at the owner's ask"
-      },
-      {
-        "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
-        "steps": 6,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "Passed in the game 2026-11-17 (owner): all proper by day and night, every level of detail. Whether 0.1.0 waits for its UI (EDGEmat #12) is the owner's call"
-      },
-      {
-        "name": "F1 extension in VS Code",
-        "steps": 25,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "By the EDGEweb session 2026-11-14; step 20 by the owner; passed 2026-11-15"
-      },
-      {
-        "name": "F1 phase test: props placed with EDGEbuilder (in game)",
-        "steps": 10,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "Steps 1 to 6 by script, 7 to 10 by the owner"
-      },
-      {
-        "name": "Release tests on the final build: smoke, core package, package check",
-        "steps": 3,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "Passed again 2026-11-18 on main c579bf4, after Open in EDGEmat and Reveal in REDcode. They run once more if anything changes before the release"
-      }
-    ],
-    "ownerSpotTests": [],
-    "waitingOn": [
-      {
-        "who": "owner",
-        "what": "Publish Nexus page 38605 after adding the video. Nothing to test",
-        "ref": "nexus/README.md"
-      },
-      {
-        "who": "REDbridge",
-        "what": "Later phases, not blocking: .anims import and rig import, for characters and animation",
-        "ref": "REDbridge #14"
-      },
-      {
-        "who": "REDcode",
-        "what": "Later phase (F5a), not blocking: play a game animation in the mesh viewer",
-        "ref": "REDcode #21"
-      },
-      {
-        "who": "REDnode",
-        "what": "Later phase (F7b-1), not blocking: play an animation on a spawned character",
-        "ref": "REDnode #39"
-      },
-      {
-        "who": "EDGEchat",
-        "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting; 0.1.0 is published to npm",
-        "ref": "EDGEchat #5"
-      },
-      {
-        "who": "REDcode",
-        "what": "Not blocking: the 3D view opened with a tab title, so a prop's tab says its name, not view.glb",
-        "ref": "REDcode #29"
-      },
-      {
-        "who": "EDGEmat",
-        "what": "Not blocking: generateImage takes a size; EDGEfab makes its own image call until then",
-        "ref": "EDGEmat #9"
-      },
-      {
-        "who": "EDGEmat",
-        "what": "Not blocking: Reveal in REDcode on its messages and its name on every message",
-        "ref": "EDGEmat #15"
-      },
-      {
-        "who": "EDGEmat",
-        "what": "Not blocking: keep unchanged textures inside a changed material",
-        "ref": "EDGEmat #13"
-      }
-    ],
-    "ownerActions": [
-      "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
-      "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
-      "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one"
-    ],
-    "risks": [
-      "The Nexus page is not live until the owner publishes it; the wiki says it opens soon",
-      "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
-      "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
-    ],
-    "checkedBy": "EDGEfab session, 2026-11-18"
+    {
+     "name": "F1 check: game materials on a prop's parts (red car paint, blue glow, game glass) in the game",
+     "steps": 6,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Passed in the game 2026-11-17 (owner): all proper by day and night, every level of detail. Whether 0.1.0 waits for its UI (EDGEmat #12) is the owner's call"
+    },
+    {
+     "name": "F1 extension in VS Code",
+     "steps": 25,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "By the EDGEweb session 2026-11-14; step 20 by the owner; passed 2026-11-15"
+    },
+    {
+     "name": "F1 phase test: props placed with EDGEbuilder (in game)",
+     "steps": 10,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Steps 1 to 6 by script, 7 to 10 by the owner"
+    },
+    {
+     "name": "Release tests on the final build: smoke, core package, package check",
+     "steps": 3,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "Passed again 2026-11-18 on main c579bf4, after Open in EDGEmat and Reveal in REDcode. They run once more if anything changes before the release"
+    }
+   ],
+   "ownerSpotTests": [],
+   "waitingOn": [
+    {
+     "who": "owner",
+     "what": "Publish Nexus page 38605 after adding the video. Nothing to test",
+     "ref": "nexus/README.md"
+    },
+    {
+     "who": "REDbridge",
+     "what": "Later phases, not blocking: .anims import and rig import, for characters and animation",
+     "ref": "REDbridge #14"
+    },
+    {
+     "who": "REDcode",
+     "what": "Later phase (F5a), not blocking: play a game animation in the mesh viewer",
+     "ref": "REDcode #21"
+    },
+    {
+     "who": "REDnode",
+     "what": "Later phase (F7b-1), not blocking: play an animation on a spawned character",
+     "ref": "REDnode #39"
+    },
+    {
+     "who": "EDGEchat",
+     "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting; 0.1.0 is published to npm",
+     "ref": "EDGEchat #5"
+    },
+    {
+     "who": "REDcode",
+     "what": "Not blocking: the 3D view opened with a tab title, so a prop's tab says its name, not view.glb",
+     "ref": "REDcode #29"
+    },
+    {
+     "who": "EDGEmat",
+     "what": "Not blocking: generateImage takes a size; EDGEfab makes its own image call until then",
+     "ref": "EDGEmat #9"
+    },
+    {
+     "who": "EDGEmat",
+     "what": "Not blocking: Reveal in REDcode on its messages and its name on every message",
+     "ref": "EDGEmat #15"
+    },
+    {
+     "who": "EDGEmat",
+     "what": "Not blocking: keep unchanged textures inside a changed material",
+     "ref": "EDGEmat #13"
+    }
+   ],
+   "ownerActions": [
+    "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
+    "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
+    "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one"
+   ],
+   "risks": [
+    "The Nexus page is not live until the owner publishes it; the wiki says it opens soon",
+    "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
+    "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
+   ],
+   "checkedBy": "EDGEfab session, 2026-11-18"
   },
   {
    "name": "EDGEdir",
