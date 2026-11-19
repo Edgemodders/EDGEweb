@@ -2138,16 +2138,16 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K5",
-      "title": "Track upstream",
-      "status": "planned"
+      "title": "Track upstream (first move: 1.140.0 to 1.143.1, built, smoke test pending)",
+      "status": "in progress"
      }
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "1.143.1",
     "needs": [
-     "The onboarding sign-in toast fix is applied but not built or tested",
-     "EDGEquest built in (EDGEkit #7 is still open)"
+     "The smoke test of the 1.143.1 build (CI run 44424459811, unticked): starts, opens a folder, the onboarding's GitHub sign-in with the toast fix, the built-in extensions, no Copilot or Microsoft sign-in, Claude Code's first-run install",
+     "EDGEfab joins it if 0.1.0 is on Open VSX by then"
     ]
    },
    "handTests": [
@@ -2192,6 +2192,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Each released straight away at the owner's request"
+    },
+    {
+     "name": "1.143.1 smoke test (K5)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-18 by an unticked Release run; also checks the sign-in toast fix"
     }
    ],
    "ownerSpotTests": [],
@@ -2205,19 +2212,26 @@ window.EDGE_STATUS = {
      "who": "owner",
      "what": "Review of the onboarding and Welcome text",
      "ref": "CLAUDE.md, K3"
+    },
+    {
+     "who": "owner",
+     "what": "The 1.143.1 smoke test on a PC",
+     "ref": "CLAUDE.md, K5"
     }
    ],
    "ownerActions": [
     "Review the onboarding and Welcome page text",
     "Click Restart to Update on an older install: the first real click",
     "Close EDGEkit #7 (EDGEquest), left to the owner",
-    "Decide on a code-signing certificate: the installer is unsigned"
+    "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up",
+    "Run the 1.143.1 smoke test (download EDGEkitSetup from CI run 44424459811)"
    ],
    "risks": [
     "The installer is not signed, so Windows SmartScreen may warn",
     "Three releases in a row shipped with no installer hand test",
-    "Upstream is pinned at 1.140 and tracking it (K5) has not started"
-   ]
+    "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit's move to 1.143.1 is built, not yet tested or released"
+   ],
+   "checkedBy": "EDGEkit session, 2026-11-18"
   },
   {
    "name": "EDGEchat",
