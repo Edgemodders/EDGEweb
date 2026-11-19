@@ -887,7 +887,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SV",
-      "title": "Sector view: a shared three.js drawing package, a read-only sector mode and openSector (draft, with EDGEbuilder #8)",
+      "title": "Sector view: a shared three.js drawing package, a read-only sector mode and openSector (agreed; after A3 and New File, API with EDGEbuilder #8)",
       "status": "planned"
      }
     ]
@@ -969,8 +969,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the #24 hand test (Run Game on the exe route, then F10 in the game)",
-    "Agree the Sector view design (docs/design/sector-view.md, three decisions)"
+    "Run the #24 hand test (Run Game on the exe route, then F10 in the game)"
    ],
    "risks": [
     "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed on main, not released (#24)",
