@@ -3,7 +3,7 @@ title: Install and set up EDGEbuilder
 nav_title: Install and set up
 section: EDGEbuilder
 order: 1
-description: "What EDGEbuilder needs, getting REDbridge, installing it with EDGEdeck, opening it in the game, allowing its two permissions, and checking the three status pills."
+description: "What EDGEbuilder needs, getting REDbridge, installing it with EDGEdeck, opening it in the game, allowing its permissions, and checking the three status pills."
 reviewed: 2026-11-13
 ---
 
@@ -85,12 +85,13 @@ EDGEbuilder doesn't open by itself. A newly installed package is listed only in 
 3. Click the **REDNODE** tab to open the launcher, and switch on **Mod Manager**.
 4. Click the **EDGEbuilder** row. Its details open at the right.
 5. Switch EDGEbuilder **on**, and switch **Pin to launcher** on. Next time you only press F10 and switch EDGEbuilder on in the launcher.
-6. Under **Permissions** there are two lines, each with its own **Allowed** switch. Switch both on:
+6. Under **Permissions** there are three lines, each with its own **Allowed** switch. Switch them on:
 
 | The line starts | It lets EDGEbuilder | Without it |
 |---|---|---|
 | "REDbridge, WolvenKit's engine" | Read the game's files, and write your bakes | No list of models and no baking. The second pill says **Allow REDbridge (hover)** |
 | "hiding every other package's windows ... (solo mode)" | Hide other REDnode windows while you edit, and bring them back after | The other windows stay on screen while you edit. See [Builder mode and other windows](camera.html#builder-mode-and-other-windows) |
+| "swapping archives in the game's mod folder while the game runs" | Put a model you import into the game at once, without a restart | Import still adds the prop to your project, but it shows in the game only after you allow it. See [Importing a model](importing.html) |
 
 REDnode asks because REDbridge can read and write files on your PC. A permission stays off until you allow it, and you can switch it off again in the same place.
 

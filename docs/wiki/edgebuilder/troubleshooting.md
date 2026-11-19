@@ -20,6 +20,7 @@ Find the part where you are stuck, then what you see in the left column. If it i
 | [The camera and the HUD](#the-camera-and-the-hud) | A stuck view, a missing HUD, other windows |
 | [Scenes and previews](#scenes-and-previews) | Objects gone, or not in world |
 | [People](#people) | NPCs |
+| [Importing a model](#importing-a-model) | Import is off, or the prop isn't in the game |
 | [Baking](#baking) | The Bake tab, a bake that doesn't show, isn't solid or pops in |
 | [Anything else](#anything-else) | The logs, and where to ask |
 
@@ -113,6 +114,19 @@ The message line under the pills says why a drop failed:
 | A person won't tilt or scale | People always stand upright, and can't be scaled |
 | A person I placed is gone after baking | People are not baked. They show only while EDGEbuilder is running and their scene is open. If the scene's bake is in the game, its previews stay off, people included: press **Rebuild previews** to see them |
 | The NPCs tab is empty | The list of people is read from the game the first time, which takes a few seconds and needs REDbridge. Check the second pill |
+
+## Importing a model
+
+| You see | Do this |
+|---|---|
+| **Import** is greyed out | Import needs a REDcode project open in VS Code. Open one, then press **Refresh** on the Bake tab. It is also off while something else is busy |
+| My GLB isn't on the Library tab | The tree lists GLBs in your Library's folders, in the open project's `source\raw` and props on EDGEfab's Desk. Anywhere else, type the file's full path in **Import a GLB from anywhere** and press **Pick** |
+| "It is not in the game yet", and Drop says so too | EDGEbuilder may not put the prop into the game. In REDnode's Mod Manager, EDGEbuilder, **Permissions**, allow **Archives**, then press **Drop**: it puts the prop in, with no second Import |
+| An Import takes minutes | Making textures is slow: about 10 s for each large (4096 px) texture. A model with small textures takes seconds. **Stop** ends it within one texture |
+| The prop is huge or tiny | Its file has no real size. Import it again with the same name and a **Height** |
+| A placed copy didn't change after a second Import | Use the same **Name** as before: a new name makes a second prop beside the first |
+
+See [Importing a model](importing.html).
 
 ## Baking
 

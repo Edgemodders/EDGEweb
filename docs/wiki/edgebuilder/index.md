@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEbuilder
 order: 0
 description: "EDGEbuilder, a world builder that runs inside Cyberpunk 2077: place objects and people, arrange them into scenes, and bake scenes into the world. What it does, what it needs, and where to start."
-reviewed: 2026-11-13
+reviewed: 2026-11-19
 ---
 
 # EDGE<span class="y">builder</span>
@@ -24,6 +24,7 @@ EDGEbuilder lets you do it where you can see it: in the game, with the real ligh
 | You want to | You do this | Read |
 |---|---|---|
 | Find something to place | Search the game's models, the game's people, and the models in your mods | [Browsing and dropping](browsing.html) |
+| Place a model of your own | Import a GLB from Blender, a store or an AI model maker into the game | [Importing a model](importing.html) |
 | Put it in the world | Pick it and drop it where you look, or where you click | [Browsing and dropping](browsing.html#drop-it) |
 | Get it exactly right | Move, turn and scale it with the mouse, with keys or with typed numbers | [Positioning objects](positioning.html) |
 | See it from anywhere | Fly a camera of EDGEbuilder's own, while V stays put | [The camera and builder mode](camera.html) |
@@ -41,6 +42,7 @@ Two words you will meet on every page:
 - **Build where you see it.** Place objects in the running game, in its own lighting, instead of guessing coordinates in a file.
 - **The game's own models, with nothing to download.** EDGEbuilder reads a list of about 31,500 models from your own game files, in a few seconds, and about 6,600 of the game's people.
 - **Your mods' models too.** The models in your installed mods are listed beside the game's, tagged with the mod they come from.
+- **Your own models.** Import a textured GLB and it is a prop in the running game a few minutes later, ready to drop. Change it, import it again, and every placed copy changes.
 - **Precise placement.** Drag with the mouse, use the keys G, R and S, or type exact numbers. Snap to steps, and drop an object onto the floor.
 - **A free camera that leaves V alone.** Fly anywhere to place objects from any angle. V stays where V stood.
 - **Arrange like a 3D program.** Select several objects, group them, duplicate, copy and paste, and undo the last 100 changes.
@@ -52,20 +54,20 @@ Two words you will meet on every page:
 | To | You need |
 |---|---|
 | Place and arrange objects | Cyberpunk 2077 version 2.5 on PC, [REDnode](../rednode/), Codeware and [REDbridge](../redbridge/) |
-| Bake a scene into a mod | Also [REDcode](../redcode/) and [EDGEdeck](../edgedeck/), which run in VS Code (a free code editor), and ArchiveXL |
+| Bake a scene into a mod, or import a model | Also [REDcode](../redcode/) and [EDGEdeck](../edgedeck/), which run in VS Code (a free code editor), and ArchiveXL |
 
 [Install and set up](install.html) has the full list, with versions and links.
 
 ## Status
 
-**Released, as a public preview.** The latest is EDGEbuilder 0.10.9 (2026-11-12), for game 2.5, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) and [GitHub](https://github.com/Edgemodders/EDGEbuilder/releases). Everything on these pages passed its test in the game, unless a page says otherwise.
+**Released, as a public preview.** The latest is EDGEbuilder 0.11.1 (2026-11-19), for game 2.5, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/36627) and [GitHub](https://github.com/Edgemodders/EDGEbuilder/releases). Everything on these pages passed its test in the game, unless a page says otherwise.
 
 | | |
 |---|---|
-| **Works today** | Meshes and entities from the game, your mods and your REDcode project. People (NPCs). The editor camera. Groups, copy and paste, undo. Named scenes. Baking into a REDcode project, with solid meshes and a draw distance for each object. Bakes kept in the EDGE Library |
+| **Works today** | Meshes and entities from the game, your mods and your REDcode project. People (NPCs). The editor camera. Groups, copy and paste, undo. Named scenes. Baking into a REDcode project, with solid meshes and a draw distance for each object. Bakes kept in the EDGE Library. Importing your own 3D model |
 | **Not baked yet** | People. They show while EDGEbuilder is running, and a bake leaves them out |
-| **Coming next** | Importing your own 3D model. Built, and being tested in the game; not released yet |
-| **Planned, not started** | Picking and changing what the game itself placed. Places for quests. Lights, decals, effects and sounds. Favourites and prefabs. Working on a scene in REDcode with the game closed |
+| **Coming next** | Picking the game's own doors and removing them as part of a scene. Then importing a model again each time you save it (Watch) |
+| **Planned, not started** | Picking and changing the rest of what the game itself placed. Places for quests. Lights, decals, effects and sounds. Favourites and prefabs. Working on a scene in REDcode with the game closed |
 
 EDGEbuilder is inspired by World Builder by keanuWheeze, a Cyber Engine Tweaks mod that showed a world editor can live inside the running game. EDGEbuilder is its own design and uses none of World Builder's code, files or data.
 
@@ -79,14 +81,16 @@ EDGEbuilder is an add-on that [REDnode](../rednode/) runs inside the game. REDno
 | [REDbridge](../redbridge/) | Reads the game's files, and your mods', to build the list of models. Writes the files of a bake |
 | [EDGEdeck](../edgedeck/) | Installs EDGEbuilder from its zip. Later it also installs the mod that holds your baked scenes |
 | [REDcode](../redcode/) | Holds the project your bakes go into and packs it into a mod. The project's own models are listed in EDGEbuilder too |
+| [EDGEfab](../edgefab/) | Its core, inside EDGEbuilder, prepares a model you import. Props you make with EDGEfab can be imported from its Desk |
 
 ## In this section
 
 | Page | |
 |---|---|
-| [Install and set up](install.html) | What you need, installing, allowing its two permissions, the three status pills |
+| [Install and set up](install.html) | What you need, installing, allowing its permissions, the three status pills |
 | [Your first scene](first-scene.html) | A walk through from start to finish: make a scene, drop and stack crates, group and copy them, undo, bake them into the world |
 | [Browsing and dropping](browsing.html) | Meshes, entities and people, search, your mods and project, appearances, dropping |
+| [Importing a model](importing.html) | A GLB or an EDGEfab prop into your project and the game: what you need, the Import box, the wait, importing again |
 | [Positioning objects](positioning.html) | The Edit switch, the gizmo, G R S, typed numbers, snapping, drop to floor |
 | [The camera and builder mode](camera.html) | Flying the editor camera, orbit, pan, frame, the hidden HUD and other windows |
 | [Arranging a scene](arranging.html) | Several objects at once, groups, duplicate, copy, cut and paste, undo and redo |

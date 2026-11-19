@@ -72,6 +72,9 @@ EDGEbuilder's panel sits at the right of the screen. From the top:
 | **Name**, **New scene here**, **Save open scene here**, **New folder** | Make things in the picked folder | [The Library tab](scenes.html#the-library-tab) |
 | **Bake into Library** | Bakes the picked scene into the Library | [Bakes in the Library](baking.html#bakes-in-the-library) |
 | **Include in project**, **Add open scene**, **Bake again**, **Delete** | Act on a picked Library bake | [Bakes in the Library](baking.html#bakes-in-the-library) |
+| The models under the tree | GLBs in the Library and in the project's `source\raw`, and props on **EDGEfab's Desk** | [Find your model](importing.html#find-your-model) |
+| **Import a GLB from anywhere**, **Pick** | Picks a model by its full path | [Find your model](importing.html#find-your-model) |
+| **Name**, **Height, m**, **Solid** / **Solid, a box** / **Not solid**, **Import** | Import the picked model into the open REDcode project and the game | [Import it](importing.html#import-it) |
 | The pin on the Picked panel | Keeps the panel at the bottom of the tab while the tree scrolls. On at first | |
 
 ### Bake tab
