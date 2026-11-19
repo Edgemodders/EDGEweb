@@ -1211,7 +1211,7 @@ window.EDGE_STATUS = {
    "group": "Specialist toolkits",
    "role": "World builder on REDnode: pick game or mod assets, place them in the running game, bake scenes into the world",
    "stage": "released",
-   "version": "0.11.0",
+   "version": "0.11.1",
    "lastTag": "v0.10.9",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-13",
@@ -1342,13 +1342,19 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.11.1",
+    "version": "0.12.0",
     "needs": [
-     "EDGEfab's first release, so edgefab-core is on npm (EDGEfab #5)",
-     "Rebuild from the npm package, not EDGEfab's checkout"
+     "Doors D1 Remove built and passed in game (after D0 answers its questions and REDbridge #18)"
     ]
    },
    "handTests": [
+    {
+     "name": "0.11.1 import probe with the npm core (outside the game)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19: edgefab-core 0.1.0 from npm with EDGEmat's core 0.3.3, exactly as the zip bundles it; prepared, 24 textures in about 150 s, packed"
+    },
     {
      "name": "D0 Doors probe (in game)",
      "steps": 13,
@@ -1395,11 +1401,6 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "EDGEfab",
-     "what": "edgefab-core on npm with EDGEfab's first release: it gates 0.11.1, which has passed in game",
-     "ref": "EDGEfab #5"
-    },
-    {
-     "who": "EDGEfab",
      "what": "Keep unchanged textures on a second Add to Project, for Watch (B2d-2)",
      "ref": "EDGEfab #6"
     },
@@ -1425,8 +1426,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Let the door probe be deployed with the game closed, then run D0 steps 1 to 13 (docs/testing.md, D0 Doors probe)",
-    "Ask for the 0.11.1 release run once edgefab-core is on npm"
+    "Let the door probe be deployed with the game closed, then run D0 steps 1 to 13 (docs/testing.md, D0 Doors probe)"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
@@ -1434,7 +1434,7 @@ window.EDGE_STATUS = {
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-18"
+   "checkedBy": "EDGEbuilder session, 2026-11-19"
   },
   {
    "name": "EDGEwave",
