@@ -1656,9 +1656,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.3.3",
+    "version": "0.3.4",
     "needs": [
-     "Every test since 0.3.2 has passed (2026-11-18): the release chores (README status and badge, version, the 0.3.3 changelog section, wiki, Nexus description), then the release run when the owner asks",
+     "0.3.3 released 2026-11-18; nothing new built since. Next work: shine in View in 3D (waits on REDcode #31 for light)",
      "Separately, Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
    },
@@ -1713,11 +1713,11 @@ window.EDGE_STATUS = {
      "note": "Gate for Wardrobe Designer's first release"
     },
     {
-     "name": "Install of 0.3.2 from the Marketplace",
+     "name": "Install of 0.3.3 from the Marketplace, and Connect an assistant",
      "steps": null,
-     "status": "partly run",
-     "ranBy": "owner",
-     "note": "The test build passed 2026-11-13; the Marketplace install is still open"
+     "status": "not run",
+     "ranBy": null,
+     "note": "Released 2026-11-18; the test build's VSIX was not installed before the run"
     }
    ],
    "ownerSpotTests": [],
@@ -1727,18 +1727,16 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
     "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
-    "Say when to release EDGEmat 0.3.3 (every test has passed)",
-    "Install 0.3.2 from the Marketplace in a normal VS Code",
+    "Install 0.3.3 from the Marketplace in a normal VS Code, then Connect an assistant",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
    "risks": [
     "Reshape's game materials passed in the game, but the band bends a little out of shape on the new crown (EDGEmat's fit); Tripo on the new dark background is untested",
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
-    "EDGEfab 0.1.0 waits on EDGEmat's next release, which carries #12 (game materials on a prop's parts, tested 2026-11-18)",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-18 (all 0.3.3 tests passed)"
+   "checkedBy": "EDGEmat session, 2026-11-18 (0.3.3 released)"
   },
   {
    "name": "EDGEquest",
