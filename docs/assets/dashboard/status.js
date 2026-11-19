@@ -951,11 +951,15 @@ window.EDGE_STATUS = {
      "who": "EDGEmat",
      "what": "Ship renderMaterials, so the mesh viewer's material hook can be tested (unverified whether it has since)",
      "ref": "docs/testing.md"
+    },
+    {
+     "who": "REDbridge",
+     "what": "anims.sync (syncTrajectory tracks) and spline root motion keys in seconds, for A3 synced sets",
+     "ref": "https://github.com/Edgemodders/REDbridge/issues/19"
     }
    ],
    "ownerActions": [
-    "Run the #24 hand test (Run Game on the exe route, then F10 in the game)",
-    "Agree the A3 plan (docs/design/animation.md, A3 plan): it needs a REDbridge release after all, for the sync tracks and a root motion fix"
+    "Run the #24 hand test (Run Game on the exe route, then F10 in the game)"
    ],
    "risks": [
     "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed on main, not released (#24)",
