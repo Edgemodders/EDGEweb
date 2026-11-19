@@ -879,6 +879,11 @@ window.EDGE_STATUS = {
       "id": "A3",
       "title": "Animations: synced sets",
       "status": "planned"
+     },
+     {
+      "id": "NF",
+      "title": "New File: make game files from nothing (after A3)",
+      "status": "planned"
      }
     ]
    },
@@ -950,7 +955,8 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Run the #24 hand test (Run Game on the exe route, then F10 in the game)",
-    "Agree a start on A3 (synced sets)"
+    "Agree a start on A3 (synced sets)",
+    "Agree the New File design (docs/design/new-file.md, three decisions)"
    ],
    "risks": [
     "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed on main, not released (#24)",
