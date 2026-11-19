@@ -2144,7 +2144,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K5",
-      "title": "Track upstream (first move: 1.140.0 to 1.143.1, built, smoke test pending)",
+      "title": "Track upstream (first move: 1.140.0 to 1.143.1, built; the first smoke test failed, a fix built for the second)",
       "status": "in progress"
      }
     ]
@@ -2152,7 +2152,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "1.143.1",
     "needs": [
-     "The smoke test of the 1.143.1 build (CI run 44432333208, unticked): starts, opens a folder, the onboarding's GitHub sign-in with the toast fix, the built-in extensions, no Copilot or Microsoft sign-in, Claude Code's first-run install",
+     "The smoke test again, on the build with the onboarding under every toast (CI run 44497241722, unticked): starts, opens a folder, the onboarding's GitHub sign-in, REDcode's REDbridge and game folder questions visible, the built-in extensions, no Copilot or Microsoft sign-in, Claude Code's first-run install",
      "EDGEfab 0.1.0 built in, with REDcode 0.10.13, EDGEdeck 0.32.0, EDGEmat 0.3.3 and pack 0.7.0 (built, in the same smoke test)"
     ]
    },
@@ -2202,9 +2202,9 @@ window.EDGE_STATUS = {
     {
      "name": "1.143.1 smoke test (K5)",
      "steps": null,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-19 by the unticked Release run 44432333208, EDGEfab included; also checks the sign-in toast fix"
+     "status": "failed",
+     "ranBy": "owner",
+     "note": "2026-11-19 on the dev PC, run 44432333208's installer: a toast (REDcode's REDbridge offer) hid behind the onboarding, so REDbridge never installed and REDcode showed Set Game Folder. Fixed (the onboarding under every toast), rebuilt by run 44497241722; to run again"
     }
    ],
    "ownerSpotTests": [],
@@ -2230,7 +2230,7 @@ window.EDGE_STATUS = {
     "Click Restart to Update on an older install: the first real click",
     "Close EDGEkit #7 (EDGEquest), left to the owner",
     "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up",
-    "Run the 1.143.1 smoke test (download EDGEkitSetup from CI run 44432333208)"
+    "Run the 1.143.1 smoke test again (download EDGEkitSetup from CI run 44497241722)"
    ],
    "risks": [
     "The installer is not signed, so Windows SmartScreen may warn",
