@@ -2144,7 +2144,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K5",
-      "title": "Track upstream (first move: 1.140.0 to 1.143.1, built; the first smoke test failed, a fix built for the second)",
+      "title": "Track upstream (first move: 1.140.0 to 1.143.1, built, smoke test passed, release pending)",
       "status": "in progress"
      }
     ]
@@ -2152,7 +2152,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "1.143.1",
     "needs": [
-     "The smoke test again, on the build with the onboarding under every toast (CI run 44497241722, unticked): starts, opens a folder, the onboarding's GitHub sign-in, REDcode's REDbridge and game folder questions visible, the built-in extensions, no Copilot or Microsoft sign-in, Claude Code's first-run install",
+     "The owner's ticked Release run (the smoke test passed 2026-11-19 on CI run 44497241722's installer); before it, the README status line and badge, the Nexus status box, and the CHANGELOG's Unreleased section renamed 1.143.1",
      "EDGEfab 0.1.0 built in, with REDcode 0.10.13, EDGEdeck 0.32.0, EDGEmat 0.3.3 and pack 0.7.0 (built, in the same smoke test)"
     ]
    },
@@ -2202,9 +2202,9 @@ window.EDGE_STATUS = {
     {
      "name": "1.143.1 smoke test (K5)",
      "steps": null,
-     "status": "failed",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-19 on the dev PC, run 44432333208's installer: a toast (REDcode's REDbridge offer) hid behind the onboarding, so REDbridge never installed and REDcode showed Set Game Folder. Fixed (the onboarding under every toast), rebuilt by run 44497241722; to run again"
+     "note": "2026-11-19 on the dev PC. The first run (run 44432333208's installer) failed: REDcode's REDbridge toast hid behind the onboarding. The second, on run 44497241722's installer with the fix, passed: everything works"
     }
    ],
    "ownerSpotTests": [],
@@ -2221,7 +2221,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "owner",
-     "what": "The 1.143.1 smoke test on a PC",
+     "what": "The go-ahead for the 1.143.1 release (smoke test passed)",
      "ref": "CLAUDE.md, K5"
     }
    ],
@@ -2230,12 +2230,12 @@ window.EDGE_STATUS = {
     "Click Restart to Update on an older install: the first real click",
     "Close EDGEkit #7 (EDGEquest), left to the owner",
     "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up",
-    "Run the 1.143.1 smoke test again (download EDGEkitSetup from CI run 44497241722)"
+    "Say when to release 1.143.1 (the smoke test passed), then run the Release workflow with Make a release and Update Nexus Mods ticked"
    ],
    "risks": [
     "The installer is not signed, so Windows SmartScreen may warn",
     "Three releases in a row shipped with no installer hand test",
-    "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit's move to 1.143.1 is built, not yet tested or released"
+    "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit's move to 1.143.1 is built and tested, not yet released"
    ],
    "checkedBy": "EDGEkit session, 2026-11-19"
   },
