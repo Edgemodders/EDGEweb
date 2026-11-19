@@ -2507,7 +2507,7 @@ window.EDGE_STATUS = {
     "nextRelease": {
       "version": "0.1.0",
       "needs": [
-        "EDGEmat 0.3.3 released first (it carries #12, game materials on a prop's parts; the owner's call, 2026-11-18)",
+        "EDGEmat 0.3.3 is out (2026-11-18: Marketplace, npm, GitHub), so nothing waits on EDGEmat",
         "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
         "The owner's video on Nexus page 38605 before the page goes live",
         "The date in the README and changelog changes to the release day first"
