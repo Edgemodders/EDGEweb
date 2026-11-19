@@ -1658,11 +1658,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.3.4",
     "needs": [
-     "0.3.3 released 2026-11-18; nothing new built since. Next work: shine in View in 3D (waits on REDcode #31 for light)",
+     "0.3.3 released 2026-11-18. Since: View in 3D follows a part's change (built 2026-11-19, its hand test not run). Next work: shine in View in 3D (waits on REDcode #31 for light)",
      "Separately, Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
    },
    "handTests": [
+    {
+     "name": "View in 3D follows a part's change",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-19: the 3D view redraws after Use a Game Surface, Use a Game Material and Back to the Model's Texture"
+    },
     {
      "name": "The bake: color",
      "steps": 4,
@@ -1728,6 +1735,7 @@ window.EDGE_STATUS = {
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
     "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
     "Install 0.3.3 from the Marketplace in a normal VS Code, then Connect an assistant",
+    "Run the hand test 'View in 3D follows a part's change' (Ctrl+F5, EDGEmat_PropParts)",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
@@ -1736,7 +1744,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-18 (0.3.3 released)"
+   "checkedBy": "EDGEmat session, 2026-11-19 (View in 3D follows a part's change)"
   },
   {
    "name": "EDGEquest",
