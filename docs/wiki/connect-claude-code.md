@@ -21,7 +21,7 @@ Go to [Install and connect](edgechat/install.html). It has every step, with what
 
 ## What connects, and how
 
-Eight EDGE tools offer a connection. EDGEchat sets up four of them. The other four you add by hand today, and they work beside EDGEchat. One of them, EDGEfab, is not released yet.
+Eight EDGE tools offer a connection. EDGEchat sets up four of them. The other four you add by hand today, and they work beside EDGEchat.
 
 | Tool | Gives Claude | With EDGEchat | By hand |
 |---|---|---|---|
@@ -29,7 +29,7 @@ Eight EDGE tools offer a connection. EDGEchat sets up four of them. The other fo
 | [REDcode](redcode/) | The game's files: browse and search the archives, read and change game files, textures, TweakDB, game sounds, pack, export and import. It works through REDbridge | Included | [Assistants and MCP](redcode/assistants.html#connect-it-by-hand) |
 | [EDGEdeck](edgedeck/) | Your mods: list, add, turn on or off, reorder, remove, deploy, undo, conflicts, loadouts, Vortex import | Included | [Assistants and the command line](edgedeck/assistants.html#connect-an-assistant) |
 | [EDGEmat](edgemat/) | Materials: a garment's materials from its in-game name, its layers in plain words, recolors saved into your project, new materials from words or an image | Included | [Assistants](edgemat/assistants.html#connect-claude-code) |
-| [EDGEfab](edgefab/) | Props: draw an object from your words, make it 3D, size it, make it glow, and put it into your project or the EDGE Library. Not released yet | Not yet | [Assistants](edgefab/assistants.html#connect-claude-code) |
+| [EDGEfab](edgefab/) | Props: draw an object from your words, make it 3D, size it, make it glow, and put it into your project or the EDGE Library | Not yet | [Assistants](edgefab/assistants.html#connect-claude-code) |
 | [EDGEquest](edgequest/) | Quests: read the game's quests, write and check a quest | Not yet | [For assistants](edgequest/assistants.html#connect-it) |
 | [EDGEhack](edgehack/) | Quickhacks: find, make, change and pack them | Not yet | [Assistants](edgehack/assistants.html#connect-claude-code) |
 | [EDGEwave](edgewave/) | Sound: search sound events, make a sound into a new event, voice lines | Not yet | [Assistants](edgewave/assistants.html#connect-claude-code) |

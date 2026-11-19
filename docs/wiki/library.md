@@ -46,7 +46,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | [REDcode](redcode/other-tools.html#the-edge-library) | **Add to Library** on a game file or a project file, with the files it needs | Released. Tested by hand |
 | [EDGEwave](edgewave/) | Sounds as Library items | Planned, after its Desk |
 | [EDGEmat](edgemat/) | Materials and looks on Library assets | Planned, later |
-| [EDGEfab](edgefab/library.html) | Props as Library items: **Add to Library**, a Library view, **Add to Project**, **Edit on the Desk** and **Refresh Project from Library** | Built and tested in VS Code. EDGEfab is not released yet |
+| [EDGEfab](edgefab/library.html) | Props as Library items: **Add to Library**, a Library view, **Add to Project**, **Edit on the Desk** and **Refresh Project from Library** | In EDGEfab 0.1.0 |
 
 ## What goes in it
 

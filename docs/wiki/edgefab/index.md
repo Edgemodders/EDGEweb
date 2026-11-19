@@ -11,7 +11,7 @@ reviewed: 2026-11-17
 
 EDGEfab is the EDGE platform's asset maker for Cyberpunk 2077. It runs inside VS Code. Give it a textured 3D model, or describe an object in words, and it makes a **prop**: an object that stands in the world, such as a vending machine, a crate or a lamp. EDGEfab gets it ready for the game and puts it into your mod project. From there you place it in Night City with [EDGEbuilder](../edgebuilder/). An AI assistant such as Claude can do every step for you.
 
-> **EDGEfab 0.1.0 is a preview, and it is not released yet.** These pages describe the build that is about to come out. Until it does, you can't install it from a store. See [Status](#status).
+> **EDGEfab 0.1.0 is a preview**, released on 2026-11-18. See [Status](#status).
 
 **New here?** Read this page, then [Install and set up](install.html), then follow [Tutorial: your first prop](first-prop.html). It takes about 30 minutes.
 
@@ -90,7 +90,7 @@ EDGEfab comes with no game files, and it never changes your game: it writes into
 
 ## Status
 
-**0.1.0, a preview, built and tested but not released yet.** The release waits for one more thing: buttons in EDGEmat for giving a prop's part one of the game's materials. It will come out on the VS Code Marketplace, Open VSX, [GitHub](https://github.com/Edgemodders/EDGEfab/releases) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605). Windows only, tested with game version 2.5.
+**0.1.0, a preview, released on 2026-11-18** on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgefab), [Open VSX](https://open-vsx.org/extension/edgemodders/edgefab) and [GitHub](https://github.com/Edgemodders/EDGEfab/releases). Its page on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605) opens soon. Windows only, tested with game version 2.5.
 
 | | |
 |---|---|

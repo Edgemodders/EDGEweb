@@ -9,8 +9,6 @@ reviewed: 2026-11-17
 
 # Install and <span class="y">set up</span>
 
-> **EDGEfab 0.1.0 is not released yet.** The steps below are how it will install once it is out. Until then it isn't in the stores.
-
 | On this page | |
 |---|---|
 | [What you need](#what-you-need) | |

@@ -2419,7 +2419,7 @@ window.EDGE_STATUS = {
     "name": "EDGEfab",
     "group": "In development",
     "role": "Asset maker: turns a GLB or a text prompt into game-ready props, added to a REDcode project or the EDGE Library",
-    "stage": "in development",
+    "stage": "released",
     "version": "0.1.0",
     "lastTag": null,
     "lastTagDate": null,
@@ -2439,8 +2439,8 @@ window.EDGE_STATUS = {
         },
         {
           "id": "F1",
-          "title": "Props: GLB or Tripo into a project, placed with EDGEbuilder (passed its tests; the Pictures tab added and passed 2026-11-17; release pending)",
-          "status": "built, tests pending"
+          "title": "Props: GLB or words into a project, placed with EDGEbuilder (released as 0.1.0, a preview, 2026-11-18)",
+          "status": "done"
         },
         {
           "id": "F3",
@@ -2505,12 +2505,10 @@ window.EDGE_STATUS = {
       ]
     },
     "nextRelease": {
-      "version": "0.1.0",
+      "version": "0.1.1",
       "needs": [
-        "EDGEmat 0.3.3 is out (2026-11-18: Marketplace, npm, GitHub), so nothing waits on EDGEmat",
-        "The owner asks for the release run (extension, MCP server and edgefab-core to npm, which closes #5)",
-        "The owner's video on Nexus page 38605 before the page goes live",
-        "The date in the README and changelog changes to the release day first"
+        "0.1.0 released 2026-11-18 (Marketplace, Open VSX, GitHub, npm, the Nexus file uploaded). Nothing new built since",
+        "Next work: a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
       ]
     },
     "handTests": [
@@ -2561,8 +2559,8 @@ window.EDGE_STATUS = {
     "waitingOn": [
       {
         "who": "owner",
-        "what": "Nothing to test: every test in testing.md has passed. Ask for the release run once EDGEmat 0.3.3 is out; the Nexus video before the page goes live",
-        "ref": "docs/testing.md"
+        "what": "Publish Nexus page 38605 after adding the video. Nothing to test",
+        "ref": "nexus/README.md"
       },
       {
         "who": "REDbridge",
@@ -2581,7 +2579,7 @@ window.EDGE_STATUS = {
       },
       {
         "who": "EDGEchat",
-        "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting, once 0.1.0 is on npm",
+        "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting; 0.1.0 is published to npm",
         "ref": "EDGEchat #5"
       },
       {
@@ -2596,20 +2594,24 @@ window.EDGE_STATUS = {
       },
       {
         "who": "EDGEmat",
-        "what": "BLOCKS 0.1.0 (owner, 2026-11-18): game materials on an EDGEfab prop's parts in the UI (Use a Game Surface or Material per part); works today through MCP only",
-        "ref": "EDGEmat #12"
+        "what": "Not blocking: Reveal in REDcode on its messages and its name on every message",
+        "ref": "EDGEmat #15"
+      },
+      {
+        "who": "EDGEmat",
+        "what": "Not blocking: keep unchanged textures inside a changed material",
+        "ref": "EDGEmat #13"
       }
     ],
     "ownerActions": [
-      "Read the wiki section (edgemodders.ai/wiki/edgefab/) and say what to change; two screenshots are yours (Claude Code using EDGEfab, the prop in the game)",
-      "Ask for the 0.1.0 release run once EDGEmat #12 is in (the release waits for it)",
-      "Add the video to Nexus page 38605 before it goes live (the shot script is nexus/video-script.md)",
-      "Fill the Nexus page's form fields and tags by hand (nexus/README.md lists them)"
+      "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
+      "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
+      "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one"
     ],
     "risks": [
-      "The README and changelog are dated 2026-11-16 for 0.1.0: the date changes to the release day",
-      "EDGEbuilder is blocked on #5 (edgefab-core on npm) now, and on #6 for Watch; #5 closes with the 0.1.0 release",
-      "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key"
+      "The Nexus page is not live until the owner publishes it; the wiki says it opens soon",
+      "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
+      "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
     ],
     "checkedBy": "EDGEfab session, 2026-11-18"
   },
