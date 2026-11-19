@@ -32,7 +32,7 @@ EDGEfab added Neon vending machine to NeonProps, solid (a physical mesh with a b
 Place neon_vending_machine.ent with EDGEbuilder, or spawn it.
 ```
 
-The message has three buttons: **Pack and Play** packs the mod and gets it into the game, as the same button in REDcode does, **Reveal Entity** shows the `.ent` file, and **Show Log** lists every file written.
+The message has three buttons: **Open in EDGEmat** puts the prop's mesh on EDGEmat's Desk, to give its parts [game materials](#game-materials-on-a-part), **Pack and Play** packs the mod and gets it into the game, as the same button in REDcode does, and **Reveal in REDcode** shows the mesh in REDcode's Project view. Every file written is in the log (**EDGEfab: Show Log**).
 
 The prop needs a size first. If the Desk says **Size unknown**, use [Set Size](models.html#size).
 
@@ -110,7 +110,14 @@ EDGEfab added Neon vending machine to NeonProps, solid (a physical mesh with a b
 
 A prop made in [parts](models.html#parts) wears Tripo's textures on each part. Any part can wear one of the **game's own materials** instead: metallic car paint on the body, the game's vending machine glass on the shelves, a plain glow on a panel. Game materials shine and react to light as the rest of Night City does.
 
-**There are no buttons for this yet.** It works today by asking Claude, with EDGEmat connected (see [Assistants](assistants.html#edgefab-with-edgechat)). For example:
+It is done in EDGEmat (0.3.3 or later), on the prop in your project:
+
+1. On the prop on EDGEfab's Desk, **Open in EDGEmat** (its menu, or the palette icon on its line; also a button on Add to Project's message). A prop that isn't in the project yet is added first.
+2. EDGEmat's Desk opens with the prop's mesh, its look under it, and one row per part under that.
+3. Right-click a part: **Use a Game Surface...** (a surface, then a color), **Use a Game Material...**, or **Back to the Model's Texture**.
+4. **Pack and Play** in REDcode to see it in the game. There is no need to Add to Project again.
+
+Or ask Claude, with EDGEmat connected (see [Assistants](assistants.html#edgefab-with-edgechat)). For example:
 
 > In my project `D:\Mods\NeonProps`, put the game's blue emissive material on the `back` part of `neon_vending_machine.mesh`, and the game's vending machine glass on its `front_2` part.
 
@@ -120,6 +127,6 @@ It was seen in the game once, on a vending machine with three parts changed: red
 |---|---|
 | Add to Project again keeps it | A part you gave another material keeps it when you add the prop again, and the message names the part |
 | Going back | The model's own material for that part stays in the project. **Start Over...** on the message puts every part back on its own |
-| The buttons are planned | In EDGEmat: **Use a Game Surface** and a game material for each part. EDGEfab's first release waits for them |
+| It lives in the project | The new material is on the prop in that project only. The prop on the Desk and in the Library keeps the model's own textures |
 
 Next: [The Library](library.html), or [Assistants](assistants.html).

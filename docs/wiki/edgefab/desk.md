@@ -71,13 +71,14 @@ EDGEfab prepares it the same way as a generated one and puts it on the Desk. It 
 
 ## What you can do with a prop
 
-Right-click a prop. The two icons at the right of its line are **Open in 3D** and **Add to Project**.
+Right-click a prop. The three icons at the right of its line are **Open in 3D**, **Add to Project** and **Open in EDGEmat**.
 
 {% include shot.html caption="A prop's menu" src="/assets/shots/edgefab/desk-menu.png" alt="The right-click menu on a prop on the Desk, listing Generate 3D Model, Edit Picture, Open the Pictures, Add to Library, Add to Project, Open in 3D, Set Size, the glow entries, Rename and Delete." shows="The right-click menu on a prop on the Desk, with every action listed." %}
 
 | Action | Does | More |
 |---|---|---|
 | **Add to Project** | Puts the prop into your mod project as game files | [Add to Project](add-to-project.html) |
+| **Open in EDGEmat** | Opens the prop's mesh in your project on EDGEmat's Desk, to give its parts game materials. Adds the prop to the project first if it isn't there | [Game materials on a part](add-to-project.html#game-materials-on-a-part) |
 | **Add to Library...** | Keeps it in the EDGE Library, ready for any project | [The Library](library.html) |
 | **Open in 3D** | Shows it in REDcode's 3D view | [3D models](models.html#open-in-3d) |
 | **Set Size...** | Sets its height in metres | [Size](models.html#size) |
