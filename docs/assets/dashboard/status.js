@@ -1024,6 +1024,11 @@ window.EDGE_STATUS = {
       "status": "in progress"
      },
      {
+      "id": "#18",
+      "title": "sector.build removals (ArchiveXL node deletions) for EDGEbuilder's doors, on main; in game waits on EDGEbuilder's D0",
+      "status": "built, tests pending"
+     },
+     {
       "id": "Linux",
       "title": "Linux build (not scheduled)",
       "status": "planned"
@@ -1033,7 +1038,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Nothing unreleased"
+     "#18's removals are on main, unreleased: the probe passed on game 2.5; release when the owner asks"
     ]
    },
    "handTests": [
@@ -1043,6 +1048,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "2026-11-18, game 2.5"
+    },
+    {
+     "name": "Probe on #18's build (sector.build removals)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19, game 2.5"
     }
    ],
    "ownerSpotTests": [],
@@ -1056,6 +1068,11 @@ window.EDGE_STATUS = {
      "who": "EDGEfab",
      "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
      "ref": "REDbridge #14"
+    },
+    {
+     "who": "EDGEbuilder",
+     "what": "D0 probe (question D3: does ArchiveXL remove a door cleanly), then a bake that removes a door in game",
+     "ref": "REDbridge #18"
     }
    ],
    "ownerActions": [
@@ -1068,7 +1085,7 @@ window.EDGE_STATUS = {
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
    ],
-   "checkedBy": "REDnode session, 2026-11-18"
+   "checkedBy": "REDnode session, 2026-11-19"
   },
   {
    "name": "EDGEdeck",
