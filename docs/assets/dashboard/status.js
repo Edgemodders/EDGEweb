@@ -1374,7 +1374,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.12.0",
     "needs": [
-     "Doors D1 Remove built and passed in game (after D0 answers its questions and REDbridge #18)"
+     "Doors D1 Remove planned with the owner, built and passed in game",
+     "REDbridge #18 for the bake"
     ]
    },
    "handTests": [
@@ -1388,9 +1389,9 @@ window.EDGE_STATUS = {
     {
      "name": "D0 Doors probe (in game)",
      "steps": 13,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-18 (probes/door-probe, REDnode 0.67.3); in the EDGEdeck library, not deployed yet"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-19 on probe 0.1.1, the desktop: a door hidden live with its collision, also after a fast travel; baked removal works as ArchiveXL deletions of node data entries, with the door's proxy mesh; open, close, lock work and stay in the save; a bake cannot set a starting state in place"
     },
     {
      "name": "0.11.1 retest (in game)",
@@ -1451,12 +1452,13 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDbridge",
-     "what": "sector.build writes ArchiveXL node removals, checked against the sector, for Doors D1 (after D0 answers D3)",
+     "what": "sector.build writes ArchiveXL node deletions by node data entry with the entry count, and an entity's proxy mesh with it (D0 found both), for Doors D1",
      "ref": "REDbridge #18"
     }
    ],
    "ownerActions": [
-    "Let the door probe be deployed with the game closed, then run D0 steps 1 to 13 (docs/testing.md, D0 Doors probe)"
+    "Agree the D1 Remove plan (doors picked, hidden live, kept as world edits, baked with their proxies)",
+    "Switch off door-probe-removal in EDGEdeck and deploy, so V's flat has its door again"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
