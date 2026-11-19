@@ -2106,7 +2106,7 @@ window.EDGE_STATUS = {
    "group": "Specialist toolkits",
    "role": "The Edgemodders editor: a branded Code - OSS build with the EDGE extensions built in, and an extension pack",
    "stage": "released",
-   "version": "1.140.6",
+   "version": "1.143.1",
    "lastTag": "v1.140.6",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-12",
@@ -2144,16 +2144,16 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K5",
-      "title": "Track upstream (first move: 1.140.0 to 1.143.1, built, smoke test passed, release pending)",
+      "title": "Track upstream (first move, 1.140.0 to 1.143.1, released 2026-11-19; the next when needed)",
       "status": "in progress"
      }
     ]
    },
    "nextRelease": {
-    "version": "1.143.1",
+    "version": null,
     "needs": [
-     "The owner's ticked Release run (the smoke test passed 2026-11-19 on CI run 44497241722's installer); before it, the README status line and badge, the Nexus status box, and the CHANGELOG's Unreleased section renamed 1.143.1",
-     "EDGEfab 0.1.0 built in, with REDcode 0.10.13, EDGEdeck 0.32.0, EDGEmat 0.3.3 and pack 0.7.0 (built, in the same smoke test)"
+     "Nothing unreleased",
+     "The next move to a newer Code - OSS, or a new EDGE tool to build in (EDGEdir)"
     ]
    },
    "handTests": [
@@ -2218,24 +2218,18 @@ window.EDGE_STATUS = {
      "who": "owner",
      "what": "Review of the onboarding and Welcome text",
      "ref": "CLAUDE.md, K3"
-    },
-    {
-     "who": "owner",
-     "what": "The go-ahead for the 1.143.1 release (smoke test passed)",
-     "ref": "CLAUDE.md, K5"
     }
    ],
    "ownerActions": [
     "Review the onboarding and Welcome page text",
-    "Click Restart to Update on an older install: the first real click",
+    "Click Restart to Update on an older install (the laptop's 1.140.6 should offer 1.143.1): the first real click",
     "Close EDGEkit #7 (EDGEquest), left to the owner",
-    "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up",
-    "Say when to release 1.143.1 (the smoke test passed), then run the Release workflow with Make a release and Update Nexus Mods ticked"
+    "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up"
    ],
    "risks": [
     "The installer is not signed, so Windows SmartScreen may warn",
-    "Three releases in a row shipped with no installer hand test",
-    "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit's move to 1.143.1 is built and tested, not yet released"
+    "The 1.140.4 to 1.140.6 releases shipped with no installer hand test (1.143.1 had one)",
+    "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit is on 1.143.1 since 2026-11-19"
    ],
    "checkedBy": "EDGEkit session, 2026-11-19"
   },
