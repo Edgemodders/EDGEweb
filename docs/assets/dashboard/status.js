@@ -887,7 +887,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SV",
-      "title": "Sector view: a shared three.js drawing package, a read-only sector mode and openSector (agreed; after A3 and New File, API with EDGEbuilder #8)",
+      "title": "Sector view: a shared three.js drawing package, a read-only sector mode and openSector (design and API agreed with EDGEbuilder #8; after A3 and New File)",
       "status": "planned"
      }
     ]
@@ -961,11 +961,6 @@ window.EDGE_STATUS = {
      "who": "REDbridge",
      "what": "anims.sync (syncTrajectory tracks) and spline root motion keys in seconds, for A3 synced sets",
      "ref": "https://github.com/Edgemodders/REDbridge/issues/19"
-    },
-    {
-     "who": "EDGEbuilder",
-     "what": "Its answers to the drawing package API draft (three questions), for the Sector view; its E0 probe is done (2026-11-19)",
-     "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/8"
     }
    ],
    "ownerActions": [
