@@ -1511,6 +1511,11 @@ window.EDGE_STATUS = {
      "who": "REDnode",
      "what": "An entity node shown again after a load brings back the working entity, not its proxy (not urgent)",
      "ref": "REDnode #52"
+    },
+    {
+     "who": "REDcode",
+     "what": "Every open VS Code window's project in the redcode service, for a project picker on the Bake tab and Import (not urgent)",
+     "ref": "REDcode #32"
     }
    ],
    "ownerActions": [],
