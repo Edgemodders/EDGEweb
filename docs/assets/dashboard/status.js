@@ -1419,9 +1419,9 @@ window.EDGE_STATUS = {
     {
      "name": "D1a Remove from world (in game)",
      "steps": 13,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-19 as 0.12.0 (the World tab, a click picks a door, Remove from world live, world edits in scene format 3); checked in REDnode's host without the game"
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "2026-11-19 on 0.12.0, stopped at step 10: after a save load the door's proxy mesh stood in the doorway (step 9). 0.12.1 hides the proxy with the door and moves World edits above the objects; retest of steps 7, 9, 10 then 11 to 13 pending"
     },
     {
      "name": "0.11.1 import probe with the npm core (outside the game)",
@@ -1501,7 +1501,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Let EDGEbuilder 0.12.0 be deployed with the game closed, then run the D1a test, steps 1 to 13 (docs/testing.md, D1a Remove from world)"
+    "Let EDGEbuilder 0.12.1 be deployed with the game closed, then retest D1a steps 7, 9 and 10 and run 11 to 13 (docs/testing.md, D1a)"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
