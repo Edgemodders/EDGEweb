@@ -878,7 +878,7 @@ window.EDGE_STATUS = {
      {
       "id": "A3",
       "title": "Animations: synced sets",
-      "status": "in progress"
+      "status": "built, tests pending"
      },
      {
       "id": "RW",
@@ -906,7 +906,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
-     "Animations A3 (#21): REDbridge #19 is built on REDbridge main, to go out as REDbridge 0.17.0; A3 is then built and released on it"
+     "Animations A3 (#21) built on main (3686353); its hand test and the release wait on REDbridge 0.17.0, then redcode.minBridgeVersion goes to 0.17.0"
     ]
    },
    "handTests": [
@@ -972,6 +972,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "the owner",
      "note": "Passed 2026-11-20, all three steps. On main, unreleased"
+    },
+    {
+     "name": "Animations A3 (#21)",
+     "steps": 11,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Given to the owner 2026-11-20 (docs/testing.md, Animations A3). Needs REDbridge 0.17.0 (#19) first"
     }
    ],
    "ownerSpotTests": [],
@@ -994,11 +1001,13 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Ask the REDnode session to release REDbridge 0.17.0 (REDbridge #19, for A3) when A3 is ready for its hand test"
+    "Ask the REDnode session to release REDbridge 0.17.0 (REDbridge #19): A3 is built and its hand test needs it",
+    "Run the Animations A3 hand test (11 steps) once REDbridge 0.17.0 is installed"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
-    "REDbridge answers one call at a time"
+    "REDbridge answers one call at a time",
+    "A SIMD animation clip can export wrongly (the player's injector__fpp: zero translations, 0.19 scale); whether WolvenKit's or REDbridge's is unverified. The synced set marks SIMD members"
    ],
    "checkedBy": "REDcode session, 2026-11-20"
   },
