@@ -904,8 +904,8 @@ window.EDGE_STATUS = {
      "name": "Run Game without ELECTRON_RUN_AS_NODE (#24)",
      "steps": 4,
      "status": "passed",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-17. In the game, with REDcode: Launch set to exe. On REDnode 0.59.1 or later it shows only that nothing broke"
+     "ranBy": "the owner",
+     "note": "Passed 2026-11-20, all four steps, with REDcode: Launch set to exe. On REDnode 0.59.1 or later it shows only that nothing broke"
     },
     {
      "name": "Library view (#23)",
