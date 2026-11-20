@@ -124,3 +124,4 @@ You need a REDcode project open in VS Code (the Bake tab names it) and REDbridge
 - **Opening, closing and locking** doors as part of a scene comes next. Meanwhile a door's state is the game's.
 - **Picking around the camera** rather than V, and picking everything else the game placed, come later. See [EDGEbuilder's design](https://edgemodders.github.io/EDGEbuilder/world-objects.html).
 - **Other mods** that load your scene through REDnode see its objects but not yet its removals.
+- **Just want doors gone while you play?** [Remove Doors](remove-doors.html), a small app of its own, does that without scenes, REDbridge or a project.

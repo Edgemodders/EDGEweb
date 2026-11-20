@@ -98,6 +98,7 @@ EDGEbuilder is an add-on that [REDnode](../rednode/) runs inside the game. REDno
 | [Arranging a scene](arranging.html) | Several objects at once, groups, duplicate, copy, cut and paste, undo and redo |
 | [Scenes and the Library](scenes.html) | Previews and scenes, where scenes are kept, the Scene tab, the Library tab |
 | [Removing the game's doors](doors.html) | The World tab, picking a door, Remove from world, Restore, stand-ins, baking the removals, with walkthroughs |
+| [Remove Doors](remove-doors.html) | A small REDnode app of its own, beside EDGEbuilder: remove doors near V while you play, no REDbridge or project needed |
 | [Baking](baking.html) | Turning a scene into a mod: what you need, solid objects, draw distance, sharing, bakes in the Library |
 | [Settings and keys](settings.html) | Every tab, setting, key and mouse control |
 | [Troubleshooting](troubleshooting.html) | What to do when something goes wrong |

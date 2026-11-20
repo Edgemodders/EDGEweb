@@ -1377,8 +1377,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "RD",
-      "title": "Remove Doors app (its own Nexus page 39060)",
-      "status": "built, tests pending"
+      "title": "Remove Doors app 0.1.0 (Nexus 39060)",
+      "status": "done"
      },
      {
       "id": "D2",
@@ -1437,9 +1437,9 @@ window.EDGE_STATUS = {
     {
      "name": "Remove Doors 0.1.0 (in game)",
      "steps": 11,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-19: a small REDnode app beside EDGEbuilder (packs/remove-doors); checked in REDnode's host without the game"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-19, three runs: Scan Doors with the eye, Jump, Remove, a load, Bring back, the app off and on all passed; a door's outline is white whatever colour, the red PICKED pin marks it. Released as 0.1.0 (GitHub remove-doors-v0.1.0, Nexus 39060)"
     },
     {
      "name": "0.12.3 to 0.12.5 checks (in game)",
@@ -1552,7 +1552,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Let Remove Doors 0.1.0 be deployed with the game closed, then run its test, steps 1 to 11 (docs/testing.md, Remove Doors 0.1.0)"
+    "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
