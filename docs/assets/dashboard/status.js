@@ -2594,17 +2594,42 @@ window.EDGE_STATUS = {
       "id": "F9",
       "title": "Ship",
       "status": "planned"
+     },
+     {
+      "id": "FL",
+      "title": "Lip sync: the Lip Sync tab (FL1 See, a first slice: a character's lip synced lines, the voice, the clip as curves). Its place in the order is not set",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "LS",
+      "title": "Live lip sync for an NPC conversation mod: spikes LS1 to LS5. LS1 (a script moves a live NPC's jaw) decides whether it goes on",
+      "status": "in progress"
      }
     ]
    },
    "nextRelease": {
     "version": "0.1.1",
     "needs": [
-     "0.1.0 released 2026-11-18 (Marketplace, Open VSX, GitHub, npm, the Nexus file uploaded). Nothing new built since",
-     "Next work: a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
+     "0.1.0 released 2026-11-18. Since then: lip sync merged into main (2026-11-19), under Unreleased",
+     "The Lip Sync tab opened in VS Code with the voice heard (FL1's step 4), before any release that carries it",
+     "Next work: spike LS1 in the game; a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
     ]
    },
    "handTests": [
+    {
+     "name": "FL1 lip sync: reading the game, and the tab in VS Code",
+     "steps": 4,
+     "status": "partly run",
+     "ranBy": "script",
+     "note": "Steps 1 to 3 (the reading against the game, the MCP tools, the page in a browser) passed 2026-11-17, and step 1 again on main 2026-11-19. Step 4, the tab in VS Code with the voice, not run"
+    },
+    {
+     "name": "Spike LS1: the jaw on command (in game)",
+     "steps": 9,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Step 1, building the test archive (the women's face graph with jaw inputs), passed 2026-11-17. Steps 2 to 9 are in the game. The test app has never run"
+    },
     {
      "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
      "steps": 11,
@@ -2697,6 +2722,8 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Run spike LS1 in the game (Tests page, \"Spike LS1: the jaw on command\"): it decides whether live lip sync goes on",
+    "Open EDGEfab: Open Lip Sync in VS Code once, pick a character and a line, and say whether the voice plays under the curves",
     "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
     "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
     "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one"
@@ -2704,9 +2731,10 @@ window.EDGE_STATUS = {
    "risks": [
     "The Nexus page is not live until the owner publishes it; the wiki says it opens soon",
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
-    "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
+    "A part's game material lives in the project only: the Desk and Library copies keep the model's textures",
+    "Live lip sync replaces the game's face graphs in a mod; whether a script can drive a live face at all is unproven until LS1"
    ],
-   "checkedBy": "EDGEfab session, 2026-11-18"
+   "checkedBy": "EDGEfab lip sync session, 2026-11-19"
   },
   {
    "name": "EDGEdir",
