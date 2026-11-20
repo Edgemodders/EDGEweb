@@ -905,7 +905,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "New File hover button on main (d4c6b4f), hand test waits on the owner",
+     "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
      "Animations A3 (#21): REDbridge #19 is built on REDbridge main, to go out as REDbridge 0.17.0; A3 is then built and released on it"
     ]
    },
@@ -969,9 +969,9 @@ window.EDGE_STATUS = {
     {
      "name": "New File hover button",
      "steps": 3,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md): New File as a hover icon on folders, roots and the project. On main, after 0.10.14"
+     "status": "passed",
+     "ranBy": "the owner",
+     "note": "Passed 2026-11-20, all three steps. On main, unreleased"
     }
    ],
    "ownerSpotTests": [],
@@ -994,8 +994,7 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Agree the order after 0.10.14: A3 (with #29 and #32), then the Sector view package (with #31), then #33 Keys",
-    "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Run the New File hover button test (3 steps)"
+    "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
