@@ -2709,7 +2709,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "LS",
-      "title": "Live lip sync for an NPC conversation mod: spikes LS1 to LS5. LS1 (a script moves a live NPC's jaw) decides whether it goes on",
+      "title": "Live lip sync for an NPC conversation mod: spikes LS1 to LS5. LS1 passed 2026-11-20 (a script moves a live NPC's jaw); LS2 (whole mouth shapes) is next",
       "status": "in progress"
      }
     ]
@@ -2719,7 +2719,7 @@ window.EDGE_STATUS = {
     "needs": [
      "0.1.0 released 2026-11-18. Since then: lip sync merged into main (2026-11-19), under Unreleased",
      "The Lip Sync tab opened in VS Code with the voice heard (FL1's step 4), before any release that carries it",
-     "Next work: spike LS1 in the game; a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
+     "Next work: spikes LS2 (whole mouth shapes), LS3 and LS4; a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
     ]
    },
    "handTests": [
@@ -2733,9 +2733,9 @@ window.EDGE_STATUS = {
     {
      "name": "Spike LS1: the jaw on command (in game)",
      "steps": 9,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Step 1, building the test archive (the women's face graph with jaw inputs), passed 2026-11-17. Steps 2 to 9 are in the game. The test app has never run"
+     "note": "Passed in the game 2026-11-20 (owner): the jaw of a spawned NPC follows a number applied as an anim feature; SetInputFloat does nothing; about 50 ms a change. The live course goes on"
     },
     {
      "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
@@ -2829,7 +2829,6 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run spike LS1 in the game (Tests page, \"Spike LS1: the jaw on command\"): it decides whether live lip sync goes on",
     "Open EDGEfab: Open Lip Sync in VS Code once, pick a character and a line, and say whether the voice plays under the curves",
     "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
     "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
@@ -2839,9 +2838,9 @@ window.EDGE_STATUS = {
     "The Nexus page is not live until the owner publishes it; the wiki says it opens soon",
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
     "A part's game material lives in the project only: the Desk and Library copies keep the model's textures",
-    "Live lip sync replaces the game's face graphs in a mod; whether a script can drive a live face at all is unproven until LS1"
+    "Live lip sync replaces the game's face graphs in a mod; a change costs about 50 ms from a Node mod, so whole mouth shapes need few numbers sent seldom (LS2)"
    ],
-   "checkedBy": "EDGEfab lip sync session, 2026-11-19"
+   "checkedBy": "EDGEfab lip sync session, 2026-11-20"
   },
   {
    "name": "EDGEdir",
