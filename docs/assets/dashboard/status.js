@@ -2206,26 +2206,20 @@ window.EDGE_STATUS = {
    ],
    "waitingOn": [
     {
-     "who": "upstream",
-     "what": "The VS Code Marketplace: the refusal has a cooldown, so retry after about 2026-11-19",
-     "ref": "CHANGELOG 0.1.2"
-    },
-    {
      "who": "EDGEchat",
      "what": "List edgehack-mcp in the plugin",
      "ref": "EDGEchat #4"
     }
    ],
    "ownerActions": [
-    "Take the Marketplace refusals to Marketplace support",
     "Publish Nexus page 37293 (files are uploaded, the page is held back)",
     "Supply the screenshots the wiki guide names"
    ],
    "risks": [
-    "The VS Code Marketplace refused three versions with no reason given; retry after about 2026-11-19",
+    "The VS Code Marketplace took 0.1.2 on 2026-11-19 after support's review; whether later versions pass on their own is unverified",
     "Try Live cannot change names: the game reads its text tables at load"
    ],
-   "checkedBy": "REDnode session (its REDnode side), 2026-11-16"
+   "checkedBy": "REDnode session, 2026-11-19"
   },
   {
    "name": "EDGEkit",
