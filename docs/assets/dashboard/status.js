@@ -882,8 +882,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "NF",
-      "title": "New File: make game files from nothing",
-      "status": "built, tests pending"
+      "title": "New File: make game files from nothing (hand-tested 2026-11-20, unreleased)",
+      "status": "done"
      },
      {
       "id": "SV",
@@ -896,7 +896,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "#24 is fixed on main (9e24808) and its hand test passed on 2026-11-20: ready to release",
-     "New File is built on main (86a3978); its hand test waits on the owner"
+     "New File is built and its hand test passed on 2026-11-20: ready to release"
     ]
    },
    "handTests": [
@@ -952,9 +952,9 @@ window.EDGE_STATUS = {
     {
      "name": "New File",
      "steps": 15,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "the owner",
-     "note": "Run on the laptop 2026-11-20: step 3 failed on an odd-sided image (WolvenKit compresses only even sides), fixed on main (1490c07) with a size check and Import Uncompressed, step 3b added; the rest still to run. Step 14 is optional and needs a small test mod"
+     "note": "Passed 2026-11-20 on the laptop, steps 1 to 13 with four fixes (odd-sided images: Resize or Import Uncompressed; atlas picker wording; parts filter style; a message after Pack). The game reading the new files is not tried yet (docs/testing.md, Never run)"
     }
    ],
    "ownerSpotTests": [],
@@ -971,8 +971,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the New File hand test (docs/testing.md, New File)",
-    "Then say whether to release REDcode 0.10.14 (New File and the #24 fix)"
+    "Say whether to release REDcode 0.10.14 (New File and the #24 fix)"
    ],
    "risks": [
     "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed and tested on main, not released (#24)",
