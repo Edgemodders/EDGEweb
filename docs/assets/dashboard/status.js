@@ -1390,6 +1390,11 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+      "id": "E0",
+      "title": "Sector view probe",
+      "status": "done"
+     },
+     {
       "id": "B7",
       "title": "Project builder: VS Code, world map",
       "status": "planned"
@@ -1404,6 +1409,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "E0 sector view probe (outside the game)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19: City Center level 0 is 6,522 unique meshes in 605,801 copies; plain GLB exports 20 to 35 ms a mesh, textured 0.8 s and 6 MB; instancing draws a busy sector in 190 to 710 calls. Numbers on EDGEbuilder #8"
+    },
     {
      "name": "D1a Remove from world (in game)",
      "steps": 13,
@@ -1479,13 +1491,13 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDbridge",
-     "what": "sector.find and sector.nodes, for the world inspector (B3b) and the world view (B7)",
-     "ref": "REDbridge #11"
-    },
-    {
-     "who": "REDbridge",
      "what": "sector.build removals with D0's corrections: node data entries and the entry count, and an entity's proxy meshes (built on REDbridge's main before D0 with node indexes), for D1b",
      "ref": "REDbridge #18"
+    },
+    {
+     "who": "REDnode",
+     "what": "world.load reads scene format 3 (world edits), for other packages loading a scene that removes something",
+     "ref": "REDnode #51"
     }
    ],
    "ownerActions": [
