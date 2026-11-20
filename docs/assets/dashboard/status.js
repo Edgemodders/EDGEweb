@@ -892,7 +892,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "ST",
-      "title": "Sector Tools: a REDnode app pack with the sector renderer in the game, a free camera to a node, and a two-way link with REDcode (draft design, right after the sector view)",
+      "title": "REDcode's half of Sector Tools (the app is EDGEbuilder's, EDGEbuilder #9): Show in Game, Open in REDcode, live previews, the replaced-sector warning; right after the sector view",
       "status": "planned"
      }
     ]
@@ -972,11 +972,16 @@ window.EDGE_STATUS = {
      "who": "REDbridge",
      "what": "anims.sync (syncTrajectory tracks) and spline root motion keys in seconds, for A3 synced sets",
      "ref": "https://github.com/Edgemodders/REDbridge/issues/19"
+    },
+    {
+     "who": "EDGEbuilder",
+     "what": "Sector Tools, its app pack, and the shape of its service (select, focus, preview)",
+     "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
     }
    ],
    "ownerActions": [
     "Agree the order after 0.10.14: A3 (with #29 and #32), then the Sector view package (with #31), then #33 Keys",
-    "Agree the Sector Tools design (docs/design/sector-tools.md, five decisions, including its roles beside EDGEbuilder's world inspector)"
+    "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
