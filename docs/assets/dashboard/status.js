@@ -1092,13 +1092,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#19",
-      "title": "anims.sync and spline root motion in seconds, for REDcode's A3; released in 0.17.0 on 2026-11-20; waits on A3's hand test",
-      "status": "built, tests pending"
+      "title": "anims.sync and spline root motion in seconds, for REDcode's A3; released in 0.17.0 on 2026-11-20; passed in REDcode's A3 hand test, closed",
+      "status": "done"
      },
      {
       "id": "#20",
-      "title": "SIMD clips with sync joints exported as the game stores them (WolvenKit issue 3306), and their sync tracks read; released in 0.17.0; waits on A3's hand test",
-      "status": "built, tests pending"
+      "title": "SIMD clips with sync joints exported as the game stores them (WolvenKit issue 3306), and their sync tracks read; released in 0.17.0; passed in REDcode's A3 hand test, closed",
+      "status": "done"
      },
      {
       "id": "K4a",
@@ -1162,6 +1162,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "2026-11-20: 23 checks both ways against REDnode's keys.mjs; the dev PC's own store reads the same"
+    },
+    {
+     "name": "REDcode A3 on REDbridge 0.17.0 (#19, #20)",
+     "steps": 11,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-20: synced sets, the SIMD player whole"
     }
    ],
    "ownerSpotTests": [],
@@ -1175,10 +1182,6 @@ window.EDGE_STATUS = {
      "who": "EDGEfab",
      "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
      "ref": "REDbridge #14"
-    },
-    {
-     "ref": "REDbridge #19, #20",
-     "what": "REDcode's A3 hand test on 0.17.0 (A3's test page expects a collapsed player, no longer true)"
     }
    ],
    "ownerActions": [
