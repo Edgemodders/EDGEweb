@@ -895,7 +895,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "#24 is fixed on main (9e24808): Run Game starts the exe without ELECTRON_RUN_AS_NODE. Its hand test waits on the owner",
+     "#24 is fixed on main (9e24808) and its hand test passed on 2026-11-20: ready to release",
      "The next planned work is Animations A3, which closes #21"
     ]
    },
@@ -903,7 +903,7 @@ window.EDGE_STATUS = {
     {
      "name": "Run Game without ELECTRON_RUN_AS_NODE (#24)",
      "steps": 4,
-     "status": "not run",
+     "status": "passed",
      "ranBy": null,
      "note": "Given to the owner 2026-11-17. In the game, with REDcode: Launch set to exe. On REDnode 0.59.1 or later it shows only that nothing broke"
     },
@@ -964,10 +964,10 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the #24 hand test (Run Game on the exe route, then F10 in the game)"
+    "Say whether to release #24 now (REDcode 0.10.14, a fix only)"
    ],
    "risks": [
-    "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed on main, not released (#24)",
+    "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed and tested on main, not released (#24)",
     "REDcode #21 stays open on purpose: it closes when A3 ships",
     "REDbridge answers one call at a time"
    ],
