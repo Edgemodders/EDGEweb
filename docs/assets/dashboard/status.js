@@ -1038,7 +1038,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#18",
-      "title": "sector.build removals (ArchiveXL node deletions) for EDGEbuilder's doors, on main; in game waits on EDGEbuilder's D0",
+      "title": "sector.build removals (ArchiveXL node deletions of entries, with an entity's proxy meshes) for EDGEbuilder's doors, on main; corrected after D0; in game waits on EDGEbuilder's D1",
       "status": "built, tests pending"
      },
      {
@@ -1068,6 +1068,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "2026-11-19, game 2.5"
+    },
+    {
+     "name": "Probe on #18's correction (entries, proxies)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19, game 2.5: D0's door and its proxy written as D0's working .xl"
     }
    ],
    "ownerSpotTests": [],
@@ -1084,7 +1091,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEbuilder",
-     "what": "D0 probe (question D3: does ArchiveXL remove a door cleanly), then a bake that removes a door in game",
+     "what": "D1: a door removed through EDGEbuilder's bake stays gone in game (D0 passed and gave the form)",
      "ref": "REDbridge #18"
     }
    ],
