@@ -1352,7 +1352,7 @@ window.EDGE_STATUS = {
      {
       "id": "D1b",
       "title": "Bake door removals",
-      "status": "planned"
+      "status": "built, tests pending"
      },
      {
       "id": "D2",
@@ -1408,6 +1408,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "D1b Bake removals (in game)",
+     "steps": 10,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-19 as 0.12.2 with F10 pausing builder mode; checked outside the game: V's door bakes to the .xl D0 saw work, its stand-in found by REDbridge"
+    },
     {
      "name": "E0 sector view probe (outside the game)",
      "steps": null,
@@ -1490,16 +1497,23 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDbridge",
-     "what": "sector.build removals with D0's corrections: node data entries and the entry count, and an entity's proxy meshes (built on REDbridge's main before D0 with node indexes), for D1b",
+     "what": "A REDbridge release with sector.build removals (#18, on REDbridge's main with D0's corrections), before 0.12 can be released",
      "ref": "REDbridge #18"
     },
     {
      "who": "REDnode",
      "what": "world.load reads scene format 3 (world edits), for other packages loading a scene that removes something",
      "ref": "REDnode #51"
+    },
+    {
+     "who": "REDnode",
+     "what": "An entity node shown again after a load brings back the working entity, not its proxy (not urgent)",
+     "ref": "REDnode #52"
     }
    ],
-   "ownerActions": [],
+   "ownerActions": [
+    "Let EDGEbuilder 0.12.2 be deployed with the game closed (with REDbridge from its main as EDGEbuilder's bridge), then run the D1b test, steps 1 to 10 (docs/testing.md, D1b)"
+   ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
     "Watch (B2d-2) cannot work until EDGEfab #6 keeps unchanged textures",
