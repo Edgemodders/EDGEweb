@@ -2355,7 +2355,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Nothing unreleased",
+     "Pack 0.7.1 (EDGEhack in the Marketplace pack too) built, not published: the owner runs Pack with Make a release, or it goes out with the next EDGEkit release",
      "The next move to a newer Code - OSS, or a new EDGE tool to build in (EDGEdir)"
     ]
    },
@@ -2413,11 +2413,6 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [
     {
-     "who": "upstream",
-     "what": "The VS Code Marketplace refused EDGEhack, so the Marketplace pack lacks it",
-     "ref": "CLAUDE.md"
-    },
-    {
      "who": "owner",
      "what": "Review of the onboarding and Welcome text",
      "ref": "CLAUDE.md, K3"
@@ -2434,7 +2429,7 @@ window.EDGE_STATUS = {
     "The 1.140.4 to 1.140.6 releases shipped with no installer hand test (1.143.1 had one)",
     "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit is on 1.143.1 since 2026-11-19"
    ],
-   "checkedBy": "EDGEkit session, 2026-11-19"
+   "checkedBy": "EDGEkit session, 2026-11-20"
   },
   {
    "name": "EDGEchat",
