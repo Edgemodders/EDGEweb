@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdir
 order: 0
 description: "EDGEdir, a director's tool for Cyberpunk 2077: lay out what the game's people do over time on a timeline in VS Code, watch it in 3D, and play and adjust it in the running game with EDGE Director. What it is, what it can do, and where it stands."
-reviewed: 2026-11-18
+reviewed: 2026-11-20
 ---
 
 # EDGE<span class="y">dir</span>
@@ -20,7 +20,7 @@ It has two halves that work on the same scene:
 
 You don't write code for any of this.
 
-**EDGEdir is not released yet.** It is built and its tests in VS Code have passed, but nothing of it has run in the game so far. This section describes what is built; where something is untested, it says so. To try it now you build it from its source: see [Install and set up](install.html).
+**EDGEdir is not released yet.** It is built and its tests in VS Code have passed. In the game, only the first steps have run so far: EDGE Director played a scene of two people through on 2026-11-20. This section describes what is built; where something is untested, it says so. To try it now you build it from its source: see [Install and set up](install.html).
 
 {% include shot.html src="/assets/shots/edgedir/overview.png" caption="EDGEdir's scene editor" shows="The scene editor: the 3D preview on top with two actors' bodies mid-animation, the transport and the toolbar under it, the timeline with one lane for each actor and their clips, and the inspector on the right." %}
 
@@ -87,7 +87,7 @@ Not built yet: sound and camera tracks, packing a scene into a mod other players
 
 ## Status
 
-**Version 0.0.28 with EDGE Director 0.5.0, not released (2026-11-18).**
+**Version 0.0.29 with EDGE Director 0.6.0, not released (2026-11-20).**
 
 | Part | Built | Tested |
 |---|---|---|
@@ -97,7 +97,8 @@ Not built yet: sound and camera tracks, packing a scene into a mod other players
 | Transitions and sequences | Yes | In VS Code, by script: every step passed |
 | Sets | Yes | In VS Code, by script: every step passed, with a hand-written set file. Not yet with a scene EDGEbuilder itself saved |
 | Play in Game from VS Code | Yes | In VS Code against a stand-in for the game: passed. **Not in the game** |
-| EDGE Director's window: play, adjust, pins | Yes | Only by its makers against a stand-in. **Not in the game** |
+| EDGE Director's window: opening and playing a scene | Yes | **In the game, 2026-11-20:** it started, listed the Desk, and played two people through, on time and on the right sides. Pause, the playhead, Loop and the rest are not run there yet |
+| EDGE Director: adjust, pins | Yes | Only by its makers against a stand-in. **Not in the game** |
 | Weather | Yes | **Not yet**, in VS Code or in the game |
 | Sound, camera | No | |
 | Packing a scene into a mod | No | |

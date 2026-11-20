@@ -4,14 +4,14 @@ nav_title: Playing in the game
 section: EDGEdir
 order: 8
 description: "Playing an EDGEdir scene in the running game with EDGE Director: its window, opening a scene, Play, Stop, Start Again, the playhead and Loop, the cast and Go There, Play in Game from VS Code, and what the game will not play as the preview shows."
-reviewed: 2026-11-18
+reviewed: 2026-11-20
 ---
 
 # Playing in the <span class="y">game</span>
 
 **EDGE Director** is EDGEdir's app in the game. It opens the scenes on your Desk and plays them on real people: it spawns each actor, starts them on their first animation, and moves each to their next one on time. It works with VS Code open or closed.
 
-**None of this has run in the game yet.** It is built, and its steps were run against a stand-in for the game. Where the page says what you will see in the game, read it as what is meant to happen. The pictures of the window here were taken outside the game.
+**Only the first steps have run in the game so far.** On 2026-11-20 EDGE Director started in the game, listed the Desk, and played a scene of two people through, on time and on the right sides. Everything else on this page is built and was run against a stand-in for the game: where it says what you will see in the game, read it as what is meant to happen. The pictures of the window here were taken outside the game.
 
 {% include shot.html src="/assets/shots/edgedir/director-in-game.png" caption="EDGE Director over the game" shows="The game with EDGE Director's window at the right, a scene open and playing: two people in front of V acting their clips, the playhead running on the window's strip." %}
 
@@ -59,14 +59,17 @@ When you save a scene in VS Code, the window shows the change within a few secon
 | Button | Does |
 |---|---|
 | **Play** | Plays the scene from the playhead's moment. The line reads what it is doing: writing the animations, spawning the people, starting the cast, playing |
+| **Pause** | Holds the scene: everybody stands still mid-movement and the playhead stops. The button reads **Resume**, which goes on from there. Untested in the game |
 | **Stop** | Removes the people, the set and the scene's pins, and gives the weather back |
 | **Start Again** | Sends the cast back to their first clips. Nobody is removed or spawned again, so it is quick |
 | **Loop** | The scene starts again by itself at its end |
 | The playhead | Drag it on the strip's ruler. While the scene plays, the cast jumps to that moment and plays on. With nothing playing, the next Play starts there |
 
-The first play of a scene takes longer, about half a minute: each actor's animations are written into a form the game plays, once. After that only actors whose clips changed are written again.
+The first play of a scene takes a few seconds longer: each actor's animations are written into a form the game plays, once. After that only actors whose clips changed are written again.
 
-At the scene's end the people hold their last animations, looping, until **Stop**.
+An actor holds the last pose of their last clip until **Stop**. This is new and untested in the game; before it, the last clip played again and again.
+
+The bar under the strip makes the strip taller or shorter, and the lanes scroll inside it.
 
 Where the people stand: a scene with no place of its own plays **in front of V**, 3 m ahead, laid out as V sees it at the moment of Play. To keep it at one spot, see [The scene's place](adjust.html#the-scenes-place).
 

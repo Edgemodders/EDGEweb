@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEdir
 order: 12
 description: "What to do when EDGEdir or EDGE Director does not do what you expect: the game is not read, the preview is empty, an animation will not play, Play in Game says the Director is missing, nobody appears in the game."
-reviewed: 2026-11-18
+reviewed: 2026-11-20
 ---
 
 # <span class="y">Troubleshooting</span>
@@ -46,7 +46,8 @@ EDGEdir is not released, and its in-game half is untested. Some of what follows 
 | The line turns red: "Not played", with a reason | EDGE Director could not do a step, and says which: an animation could not be written, a person could not be spawned. Nobody is left behind |
 | "The player stopped: its people are gone from the game" | EDGE Director was switched off or ended while a scene played. Switch it on again and play |
 | "V was not found: load a save first" | The game is at a menu. Load a save |
-| The first play takes about half a minute | Each actor's animations are written once. Later plays of the same clips are quick |
+| The first Play fails and says to allow REDbridge | Allow EDGE Director's **bridge** permission (and **archives**) in REDnode's Mod Manager, then press Play again |
+| The first play of a scene takes a few seconds longer | Each actor's animations are written once. Later plays of the same clips are quicker |
 | A person stands stiff with arms out for a moment | The game's "T pose" at a person's first animation. EDGE Director starts everybody once before the scene to get past it; whether that is enough is one of the things the first tests must show |
 | The scene does not look like the preview | Read [what the game will not match](director.html#what-the-game-will-not-match): several differences are known and listed |
 | EDGE Director's Adjust and Pins buttons are off, with a yellow box | The scene has unsaved changes in VS Code. Save it there |

@@ -4,12 +4,12 @@ nav_title: Settings, commands and keys
 section: EDGEdir
 order: 11
 description: "Every setting, view, command and key of EDGEdir in VS Code, the buttons of EDGE Director's window, and where EDGEdir keeps its files on your PC."
-reviewed: 2026-11-18
+reviewed: 2026-11-20
 ---
 
 # Settings, commands and <span class="y">keys</span>
 
-A reference for EDGEdir 0.0.28 and EDGE Director 0.5.0.
+A reference for EDGEdir 0.0.29 and EDGE Director 0.6.0.
 
 | On this page | |
 |---|---|
@@ -90,7 +90,7 @@ They work while the timeline has the focus, not while you type in a field.
 |---|---|
 | Scenes | A scene's row opens it; **Refresh** |
 | The header | **Scenes** (back to the list), **The Scene Is Here**, **In Front of V** |
-| The transport | **Play**, **Stop**, **Start Again**, **Loop**; drag the playhead on the strip's ruler |
+| The transport | **Play**, **Pause** (then **Resume**), **Stop**, **Start Again**, **Loop**; drag the playhead on the strip's ruler; drag the bar under the strip to size it |
 | The strip | An actor's name chooses them |
 | Adjust | **Move to V**, **Left**, **Right**, **Forward**, **Back**, **Turn -15**, **Turn +15** |
 | Pins | The name box and **Drop a Pin Here** (or Enter); for each pin **Go There**, the actor **Here**, **Scene Here**, **Drop Again**, **Remove** |

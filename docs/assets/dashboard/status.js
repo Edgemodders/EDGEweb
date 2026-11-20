@@ -2869,7 +2869,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.28",
+   "version": "0.0.29",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -3090,8 +3090,8 @@ window.EDGE_STATUS = {
     },
     {
      "id": "E",
-     "feature": "EDGE Director in the game: open and play a scene (14 steps)",
-     "status": "not run"
+     "feature": "EDGE Director in the game: open and play a scene (E1, E2, E3, E5 pass on 2026-11-20, the first run in the game; the rest not run)",
+     "status": "partly run"
     },
     {
      "id": "F",
@@ -3148,7 +3148,7 @@ window.EDGE_STATUS = {
     "Wiki screenshots: nine placeholders in EDGEdir's wiki section wait for shots from VS Code and the game (save them into EDGEweb's docs/assets/shots/inbox/)"
    ],
    "risks": [
-    "EDGE Director (the player with a window) has never run in the game: where actors stand and face, the T pose at the start, and how its window looks with REDnode's kit are unverified",
+    "EDGE Director has run in the game only as far as playing one scene (2026-11-20). Pause and the last pose held (0.6.0), adjust, pins and the weather are untried there",
     "Seen once in a scripted round: a message that unsaved changes were put back, with no window reload; not reproduced, nothing lost",
     "Every hand test was run by script with nobody watching",
     "V has no head in the preview: no V with a head can be exported",
@@ -3157,7 +3157,7 @@ window.EDGE_STATUS = {
     "How the game's own join at a jump compares with the preview's transitions is not measured yet",
     "Unverified: that a person in a workspot can be moved while they play (Adjust in the game), and that VS Code takes the Director's change to an open scene at once"
    ],
-   "checkedBy": "EDGEdir session, 2026-11-18"
+   "checkedBy": "EDGEdir session, 2026-11-20"
   },
   {
    "name": "EDGEmobile",
