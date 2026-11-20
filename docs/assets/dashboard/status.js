@@ -906,7 +906,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
-     "Animations A3 (#21) built on main (3686353); its hand test and the release wait on REDbridge 0.17.0, then redcode.minBridgeVersion goes to 0.17.0",
+     "Animations A3 (#21) built on main; REDbridge 0.17.0 released 2026-11-20 and redcode.minBridgeVersion is 0.17.0 (65ba9ba); hand test waits on the owner",
      "Replace with a WAV, #29 openModel and #32 projects() built on main (3f8d87f), hand test waits on the owner",
      "Sector view and #31 built on main (d0bb84b, 2d0ffca), hand test waits on the owner"
     ]
@@ -980,7 +980,7 @@ window.EDGE_STATUS = {
      "steps": 11,
      "status": "not run",
      "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md, Animations A3). Needs REDbridge 0.17.0 (#19) first"
+     "note": "Given to the owner 2026-11-20 (docs/testing.md, Animations A3). Runnable: REDbridge 0.17.0 is out; install it with REDcode: Update REDbridge"
     },
     {
      "name": "Replace with a WAV, titled models (#29), every window's project (#32)",
@@ -1005,33 +1005,21 @@ window.EDGE_STATUS = {
      "ref": "docs/testing.md"
     },
     {
-     "who": "REDbridge",
-     "what": "anims.sync (syncTrajectory tracks) and spline root motion keys in seconds, for A3 synced sets",
-     "ref": "https://github.com/Edgemodders/REDbridge/issues/19"
-    },
-    {
      "who": "EDGEbuilder",
      "what": "Sector Tools, its app pack, and the shape of its service (select, focus, preview)",
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
-    },
-    {
-     "who": "REDbridge",
-     "what": "Why a SIMD animation clip exports with zero translations and a 0.19 scale",
-     "ref": "https://github.com/Edgemodders/REDbridge/issues/20"
     }
    ],
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Ask the REDnode session to release REDbridge 0.17.0 (REDbridge #19): A3 is built and its hand test needs it",
-    "Run the Animations A3 hand test (11 steps) once REDbridge 0.17.0 is installed",
+    "Run the Animations A3 hand test (11 steps), after REDcode: Update REDbridge to 0.17.0",
     "Run the Replace with a WAV, #29 and #32 hand test (12 steps)",
     "Run the Sector view hand test (11 steps)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
-    "REDbridge answers one call at a time",
-    "A SIMD animation clip can export wrongly (the player's injector__fpp: zero translations, 0.19 scale); whether WolvenKit's or REDbridge's is unverified. The synced set marks SIMD members (REDbridge #20)"
+    "REDbridge answers one call at a time"
    ],
    "checkedBy": "REDcode session, 2026-11-20"
   },
