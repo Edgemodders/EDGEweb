@@ -1102,6 +1102,11 @@ window.EDGE_STATUS = {
       "id": "#20",
       "title": "SIMD clips with sync joints exported as the game stores them (WolvenKit issue 3306), and their sync tracks read; released in 0.17.0; waits on A3's hand test",
       "status": "built, tests pending"
+     },
+     {
+      "id": "K4a",
+      "title": "keys.* on the shared key store, decrypted in .NET, off unless started with --keys; on main, for REDcode's Keys (REDcode #33)",
+      "status": "built, tests pending"
      }
     ]
    },
@@ -1153,6 +1158,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "2026-11-20, game 2.5: injector__fpp exports with the rig's translations and scale 1; its sync rotations match Sandra's"
+    },
+    {
+     "name": "keys-check.mjs (K4a)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-20: 23 checks both ways against REDnode's keys.mjs; the dev PC's own store reads the same"
     }
    ],
    "ownerSpotTests": [],
