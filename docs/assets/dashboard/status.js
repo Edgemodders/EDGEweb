@@ -964,7 +964,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEbuilder",
-     "what": "Its E0 sector probe and agreement on the drawing package shape, for the Sector view",
+     "what": "Its answers to the drawing package API draft (three questions), for the Sector view; its E0 probe is done (2026-11-19)",
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/8"
     }
    ],
@@ -976,7 +976,7 @@ window.EDGE_STATUS = {
     "REDcode #21 stays open on purpose: it closes when A3 ships",
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-19"
+   "checkedBy": "REDcode session, 2026-11-20"
   },
   {
    "name": "REDbridge",
