@@ -1033,8 +1033,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#18",
-      "title": "sector.build removals (ArchiveXL node deletions of entries, with an entity's proxy meshes) for EDGEbuilder's doors, on main; corrected after D0; in game waits on EDGEbuilder's D1",
-      "status": "built, tests pending"
+      "title": "sector.build removals (ArchiveXL node deletions of entries, with an entity's proxy meshes) for EDGEbuilder's doors; passed in game with EDGEbuilder's D1b; readied as 0.16.0, released when the owner asks",
+      "status": "done"
      },
      {
       "id": "Linux",
@@ -1070,6 +1070,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "2026-11-19, game 2.5: D0's door and its proxy written as D0's working .xl"
+    },
+    {
+     "name": "EDGEbuilder D1b: doors baked through sector.build",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-19, game 2.5, a build of main: four deletions with two stand-ins; both doorways stayed open"
     }
    ],
    "ownerSpotTests": [],
@@ -1085,9 +1092,8 @@ window.EDGE_STATUS = {
      "ref": "REDbridge #14"
     },
     {
-     "who": "EDGEbuilder",
-     "what": "D1: a door removed through EDGEbuilder's bake stays gone in game (D0 passed and gave the form)",
-     "ref": "REDbridge #18"
+     "ref": "REDbridge 0.16.0",
+     "what": "The owner's go to release 0.16.0 (#18); EDGEbuilder 0.12 waits on it"
     }
    ],
    "ownerActions": [
