@@ -951,10 +951,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "New File",
-     "steps": 14,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md, New File). Step 14, the game reading the new files, is optional and needs a small test mod"
+     "steps": 15,
+     "status": "partly run",
+     "ranBy": "the owner",
+     "note": "Run on the laptop 2026-11-20: step 3 failed on an odd-sided image (WolvenKit compresses only even sides), fixed on main (1490c07) with a size check and Import Uncompressed, step 3b added; the rest still to run. Step 14 is optional and needs a small test mod"
     }
    ],
    "ownerSpotTests": [],
