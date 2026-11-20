@@ -812,7 +812,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
-   "version": "0.10.13",
+   "version": "0.10.14",
    "lastTag": "v0.10.13",
    "lastTagDate": "2026-11-16",
    "lastCommit": "2026-11-16",
@@ -882,7 +882,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "NF",
-      "title": "New File: make game files from nothing (hand-tested 2026-11-20, unreleased)",
+      "title": "New File: make game files from nothing (released in 0.10.14)",
       "status": "done"
      },
      {
@@ -895,8 +895,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "#24 is fixed on main (9e24808) and its hand test passed on 2026-11-20: ready to release",
-     "New File is built and its hand test passed on 2026-11-20: ready to release"
+     "Animations A3 (#21): REDbridge #19 is built on REDbridge main, to go out as REDbridge 0.17.0; A3 is then built and released on it"
     ]
    },
    "handTests": [
@@ -971,10 +970,9 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Say whether to release REDcode 0.10.14 (New File and the #24 fix)"
+    "Agree the order after 0.10.14: A3 (with #29 and #32), then the Sector view package (with #31), then #33 Keys"
    ],
    "risks": [
-    "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed and tested on main, not released (#24)",
     "REDcode #21 stays open on purpose: it closes when A3 ships",
     "REDbridge answers one call at a time"
    ],
