@@ -882,8 +882,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "RW",
-      "title": "Replace with a WAV in the sound list and player (small, with #29 and #32); then revisit voice line (.wem) replacement through EDGEwave",
-      "status": "planned"
+      "title": "Replace with a WAV, titled 3D tabs (#29) and every window's project (#32); then revisit voice line (.wem) replacement through EDGEwave",
+      "status": "built, tests pending"
      },
      {
       "id": "NF",
@@ -906,7 +906,8 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
-     "Animations A3 (#21) built on main (3686353); its hand test and the release wait on REDbridge 0.17.0, then redcode.minBridgeVersion goes to 0.17.0"
+     "Animations A3 (#21) built on main (3686353); its hand test and the release wait on REDbridge 0.17.0, then redcode.minBridgeVersion goes to 0.17.0",
+     "Replace with a WAV, #29 openModel and #32 projects() built on main (3f8d87f), hand test waits on the owner"
     ]
    },
    "handTests": [
@@ -979,6 +980,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Given to the owner 2026-11-20 (docs/testing.md, Animations A3). Needs REDbridge 0.17.0 (#19) first"
+    },
+    {
+     "name": "Replace with a WAV, titled models (#29), every window's project (#32)",
+     "steps": 12,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Given to the owner 2026-11-20 (docs/testing.md). Steps 4, 11 and 12 are in the game"
     }
    ],
    "ownerSpotTests": [],
@@ -1007,7 +1015,8 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Ask the REDnode session to release REDbridge 0.17.0 (REDbridge #19): A3 is built and its hand test needs it",
-    "Run the Animations A3 hand test (11 steps) once REDbridge 0.17.0 is installed"
+    "Run the Animations A3 hand test (11 steps) once REDbridge 0.17.0 is installed",
+    "Run the Replace with a WAV, #29 and #32 hand test (12 steps)"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
