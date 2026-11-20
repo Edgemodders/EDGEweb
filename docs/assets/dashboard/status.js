@@ -1435,6 +1435,11 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+      "id": "ST",
+      "title": "Sector Tools under World (S1 Sectors, S2 3D view, S3 previews; EDGEbuilder #9)",
+      "status": "planned"
+     },
+     {
       "id": "B3b",
       "title": "World objects, inspector",
       "status": "planned"
@@ -1591,7 +1596,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDcode",
-     "what": "Every open VS Code window's project in the redcode service, for a project picker on the Bake tab and Import (not urgent)",
+     "what": "Every open VS Code window's project in the redcode service: built on REDcode's main (3f8d87f), ships in REDcode 0.10.15; then EDGEbuilder's project picker on the Bake tab and Import",
      "ref": "REDcode #32"
     }
    ],
@@ -1604,7 +1609,7 @@ window.EDGE_STATUS = {
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-19"
+   "checkedBy": "EDGEbuilder session, 2026-11-20"
   },
   {
    "name": "EDGEwave",
