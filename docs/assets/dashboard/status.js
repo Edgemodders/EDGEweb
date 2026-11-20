@@ -889,6 +889,11 @@ window.EDGE_STATUS = {
       "id": "SV",
       "title": "Sector view: a shared three.js drawing package, a read-only sector mode and openSector (design and API agreed with EDGEbuilder #8; after A3 and New File)",
       "status": "planned"
+     },
+     {
+      "id": "ST",
+      "title": "Sector Tools: a REDnode app pack with the sector renderer in the game, a free camera to a node, and a two-way link with REDcode (draft design, right after the sector view)",
+      "status": "planned"
      }
     ]
    },
@@ -970,7 +975,8 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Agree the order after 0.10.14: A3 (with #29 and #32), then the Sector view package (with #31), then #33 Keys"
+    "Agree the order after 0.10.14: A3 (with #29 and #32), then the Sector view package (with #31), then #33 Keys",
+    "Agree the Sector Tools design (docs/design/sector-tools.md, five decisions, including its roles beside EDGEbuilder's world inspector)"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
