@@ -993,8 +993,8 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Agree the order after 0.10.14: A3 (with #29 and #32), then the Sector view package (with #31), then #33 Keys",
-    "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)"
+    "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
+    "Ask the REDnode session to release REDbridge 0.17.0 (REDbridge #19, for A3) when A3 is ready for its hand test"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
