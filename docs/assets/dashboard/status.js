@@ -1095,7 +1095,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#19",
-      "title": "anims.sync (a synced clip's partner tracks) and spline root motion in seconds, for REDcode's A3; on main, not released",
+      "title": "anims.sync and spline root motion in seconds, for REDcode's A3; released in 0.17.0 on 2026-11-20; waits on A3's hand test",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "#20",
+      "title": "SIMD clips with sync joints exported as the game stores them (WolvenKit issue 3306), and their sync tracks read; released in 0.17.0; waits on A3's hand test",
       "status": "built, tests pending"
      }
     ]
@@ -1141,6 +1146,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "2026-11-19, game 2.5: the probe set's tracks; the AV's Root ends at 7.3 s; a round trip keeps its keys"
+    },
+    {
+     "name": "Probe on #20 (SIMD clip with sync joints)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-20, game 2.5: injector__fpp exports with the rig's translations and scale 1; its sync rotations match Sandra's"
     }
    ],
    "ownerSpotTests": [],
@@ -1156,8 +1168,8 @@ window.EDGE_STATUS = {
      "ref": "REDbridge #14"
     },
     {
-     "ref": "REDbridge #19",
-     "what": "A release with anims.sync when the owner asks; REDcode then raises its minimum"
+     "ref": "REDbridge #19, #20",
+     "what": "REDcode's A3 hand test on 0.17.0 (A3's test page expects a collapsed player, no longer true)"
     }
    ],
    "ownerActions": [
@@ -1170,7 +1182,7 @@ window.EDGE_STATUS = {
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
    ],
-   "checkedBy": "REDnode session, 2026-11-19"
+   "checkedBy": "REDnode session, 2026-11-20"
   },
   {
    "name": "EDGEdeck",
