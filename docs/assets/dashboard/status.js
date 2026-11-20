@@ -1352,6 +1352,11 @@ window.EDGE_STATUS = {
       "status": "done"
      },
      {
+      "id": "RD",
+      "title": "Remove Doors app (its own Nexus page 39060)",
+      "status": "built, tests pending"
+     },
+     {
       "id": "D2",
       "title": "Open, close, lock a door",
       "status": "planned"
@@ -1405,6 +1410,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "Remove Doors 0.1.0 (in game)",
+     "steps": 11,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-19: a small REDnode app beside EDGEbuilder (packs/remove-doors); checked in REDnode's host without the game"
+    },
     {
      "name": "0.12.3 to 0.12.5 checks (in game)",
      "steps": 4,
@@ -1515,7 +1527,9 @@ window.EDGE_STATUS = {
      "ref": "REDcode #32"
     }
    ],
-   "ownerActions": [],
+   "ownerActions": [
+    "Let Remove Doors 0.1.0 be deployed with the game closed, then run its test, steps 1 to 11 (docs/testing.md, Remove Doors 0.1.0)"
+   ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
     "Watch (B2d-2) cannot work until EDGEfab #6 keeps unchanged textures",
