@@ -1347,7 +1347,7 @@ window.EDGE_STATUS = {
      {
       "id": "D1a",
       "title": "Remove a door (live, World tab)",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "D1b",
@@ -1402,10 +1402,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.12.0",
+    "version": "0.12.x",
     "needs": [
-     "D1a passed in game",
-     "D1b, the bake of removals, built and passed in game (after REDbridge #18 takes D0's corrections)"
+     "D1b, the bake of removals with their proxies, built and passed in game (REDbridge #18 is on REDbridge main with D0's corrections, not released yet)"
     ]
    },
    "handTests": [
@@ -1419,9 +1418,9 @@ window.EDGE_STATUS = {
     {
      "name": "D1a Remove from world (in game)",
      "steps": 13,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-19 on 0.12.0, stopped at step 10: after a save load the door's proxy mesh stood in the doorway (step 9). 0.12.1 hides the proxy with the door and moves World edits above the objects; retest of steps 7, 9, 10 then 11 to 13 pending"
+     "note": "2026-11-19 on 0.12.1 (0.12.0 found the proxy in the doorway after a load): every retest step as written; a door shown again after a load comes back as its proxy until its area reloads (for D1b)"
     },
     {
      "name": "0.11.1 import probe with the npm core (outside the game)",
@@ -1500,9 +1499,7 @@ window.EDGE_STATUS = {
      "ref": "REDnode #51"
     }
    ],
-   "ownerActions": [
-    "Let EDGEbuilder 0.12.1 be deployed with the game closed, then retest D1a steps 7, 9 and 10 and run 11 to 13 (docs/testing.md, D1a)"
-   ],
+   "ownerActions": [],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
     "Watch (B2d-2) cannot work until EDGEfab #6 keeps unchanged textures",
