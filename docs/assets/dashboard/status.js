@@ -2355,7 +2355,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Pack 0.7.1 (EDGEhack in the Marketplace pack too) built, not published: the owner runs Pack with Make a release, or it goes out with the next EDGEkit release",
+     "The Nexus description (EDGEhack no longer Open VSX only in the pack) goes to Nexus with the next release; pack 0.7.1 published 2026-11-20",
      "The next move to a newer Code - OSS, or a new EDGE tool to build in (EDGEdir)"
     ]
    },
