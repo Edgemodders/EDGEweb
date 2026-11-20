@@ -881,6 +881,11 @@ window.EDGE_STATUS = {
       "status": "in progress"
      },
      {
+      "id": "RW",
+      "title": "Replace with a WAV in the sound list and player (small, with #29 and #32); then revisit voice line (.wem) replacement through EDGEwave",
+      "status": "planned"
+     },
+     {
       "id": "NF",
       "title": "New File: make game files from nothing (released in 0.10.14)",
       "status": "done"
