@@ -2726,7 +2726,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "FL",
-      "title": "Lip sync: the Lip Sync tab (FL1 See, a first slice: a character's lip synced lines, the voice, the clip as curves). Its place in the order is not set",
+      "title": "Lip sync: the Lip Sync tab. Built: a character's lines, the voice, the clip as curves, and the line on a 3D head (EDGEfab's own face solver). Next: Add a Line (typed words, EDGEwave's voice, played on the head)",
       "status": "built, tests pending"
      },
      {
@@ -2739,12 +2739,26 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.1",
     "needs": [
-     "0.1.0 released 2026-11-18. Since then: lip sync merged into main (2026-11-19), under Unreleased",
-     "The Lip Sync tab opened in VS Code with the voice heard (FL1's step 4), before any release that carries it",
-     "Next work: spikes LS2 (whole mouth shapes), LS3 and LS4; a rename that closes the prop's tabs in every VS Code window; a re-skin carried back to the Desk and the Library; then F3 Blender sources"
+     "0.1.0 released 2026-11-18. Since then, under Unreleased: the Lip Sync tab with a 3D head",
+     "Before any release that carries it: the Lip Sync tab opened in VS Code, with the voice heard and the head seen",
+     "Next work: Add a Line in the tab (typed words, EDGEwave's voice through ElevenLabs, lip sync made and played on the head); the head's textures and eyes; spike LS2 in the game"
     ]
    },
    "handTests": [
+    {
+     "name": "The head in the Lip Sync tab",
+     "steps": 3,
+     "status": "partly run",
+     "ranBy": "script",
+     "note": "Steps 1 and 2 (a head read and exported from the game, the solver on numbers, the page in a browser with a real line) passed 2026-11-20. Step 3, the tab in VS Code, not run"
+    },
+    {
+     "name": "Spike LS2: mouth shapes (in game)",
+     "steps": 9,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Step 1, building the test archive (13 hand-made shapes in the women's face graph), passed 2026-11-20. Steps 2 to 9 are in the game; the archive and the app are in the owner's game"
+    },
     {
      "name": "FL1 lip sync: reading the game, and the tab in VS Code",
      "steps": 4,
@@ -2851,7 +2865,8 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Open EDGEfab: Open Lip Sync in VS Code once, pick a character and a line, and say whether the voice plays under the curves",
+    "Open EDGEfab: Open Lip Sync in VS Code (F5 after npm run build): pick a character and a line, and say whether the head shows, moves with the voice and turns when dragged",
+    "Run spike LS2 in the game (Tests page, \"Spike LS2: mouth shapes\"): which of the 13 shapes look like their sounds",
     "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
     "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
     "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one"
