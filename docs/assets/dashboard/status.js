@@ -877,8 +877,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "A3",
-      "title": "Animations: synced sets",
-      "status": "built, tests pending"
+      "title": "Animations: synced sets (hand-tested 2026-11-20, in the next release)",
+      "status": "done"
      },
      {
       "id": "RW",
@@ -906,7 +906,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
-     "Animations A3 (#21) built on main; REDbridge 0.17.0 released 2026-11-20 and redcode.minBridgeVersion is 0.17.0 (65ba9ba); hand test waits on the owner",
+     "Animations A3 (#21): hand test passed 2026-11-20 on REDbridge 0.17.0; ready for the next release",
      "Replace with a WAV, #29 openModel and #32 projects() built on main (3f8d87f), hand test waits on the owner",
      "Sector view and #31 built on main (d0bb84b, 2d0ffca), hand test waits on the owner"
     ]
@@ -978,9 +978,9 @@ window.EDGE_STATUS = {
     {
      "name": "Animations A3 (#21)",
      "steps": 11,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md, Animations A3). Runnable: REDbridge 0.17.0 is out; install it with REDcode: Update REDbridge"
+     "status": "passed",
+     "ranBy": "the owner",
+     "note": "Passed 2026-11-20 on REDbridge 0.17.0, all 11 steps, with three fixes (list splitter, clip length from the file, themed checkboxes)"
     },
     {
      "name": "Replace with a WAV, titled models (#29), every window's project (#32)",
@@ -1012,7 +1012,6 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Run the Animations A3 hand test (11 steps), after REDcode: Update REDbridge to 0.17.0",
     "Run the Replace with a WAV, #29 and #32 hand test (12 steps)",
     "Run the Sector view hand test (11 steps)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
