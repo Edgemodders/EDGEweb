@@ -1033,7 +1033,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#18",
-      "title": "sector.build removals (ArchiveXL node deletions of entries, with an entity's proxy meshes) for EDGEbuilder's doors; passed in game with EDGEbuilder's D1b; readied as 0.16.0, released when the owner asks",
+      "title": "sector.build removals (ArchiveXL node deletions of entries, with an entity's proxy meshes) for EDGEbuilder's doors; passed in game with EDGEbuilder's D1b; released in 0.16.0 on 2026-11-19",
       "status": "done"
      },
      {
@@ -1090,10 +1090,6 @@ window.EDGE_STATUS = {
      "who": "EDGEfab",
      "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
      "ref": "REDbridge #14"
-    },
-    {
-     "ref": "REDbridge 0.16.0",
-     "what": "The owner's go to release 0.16.0 (#18); EDGEbuilder 0.12 waits on it"
     }
    ],
    "ownerActions": [
