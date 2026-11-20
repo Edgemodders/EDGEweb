@@ -1387,11 +1387,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.12.0",
     "needs": [
-     "Doors D1 Remove planned with the owner, built and passed in game",
-     "REDbridge #18 for the bake"
+     "D1a passed in game",
+     "D1b, the bake of removals, built and passed in game (after REDbridge #18 takes D0's corrections)"
     ]
    },
    "handTests": [
+    {
+     "name": "D1a Remove from world (in game)",
+     "steps": 13,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-19 as 0.12.0 (the World tab, a click picks a door, Remove from world live, world edits in scene format 3); checked in REDnode's host without the game"
+    },
     {
      "name": "0.11.1 import probe with the npm core (outside the game)",
      "steps": null,
@@ -1465,13 +1472,12 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDbridge",
-     "what": "sector.build writes ArchiveXL node deletions by node data entry with the entry count, and an entity's proxy mesh with it (D0 found both), for Doors D1",
+     "what": "sector.build removals with D0's corrections: node data entries and the entry count, and an entity's proxy meshes (built on REDbridge's main before D0 with node indexes), for D1b",
      "ref": "REDbridge #18"
     }
    ],
    "ownerActions": [
-    "Agree the D1 Remove plan (doors picked, hidden live, kept as world edits, baked with their proxies)",
-    "Switch off door-probe-removal in EDGEdeck and deploy, so V's flat has its door again"
+    "Let EDGEbuilder 0.12.0 be deployed with the game closed, then run the D1a test, steps 1 to 13 (docs/testing.md, D1a Remove from world)"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
