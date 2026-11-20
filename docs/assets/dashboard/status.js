@@ -1040,6 +1040,11 @@ window.EDGE_STATUS = {
       "id": "Linux",
       "title": "Linux build (not scheduled)",
       "status": "planned"
+     },
+     {
+      "id": "#19",
+      "title": "anims.sync (a synced clip's partner tracks) and spline root motion in seconds, for REDcode's A3; on main, not released",
+      "status": "built, tests pending"
      }
     ]
    },
@@ -1077,6 +1082,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-19, game 2.5, a build of main: four deletions with two stand-ins; both doorways stayed open"
+    },
+    {
+     "name": "Probe on #19 (anims.sync, spline root motion)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19, game 2.5: the probe set's tracks; the AV's Root ends at 7.3 s; a round trip keeps its keys"
     }
    ],
    "ownerSpotTests": [],
@@ -1090,6 +1102,10 @@ window.EDGE_STATUS = {
      "who": "EDGEfab",
      "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
      "ref": "REDbridge #14"
+    },
+    {
+     "ref": "REDbridge #19",
+     "what": "A release with anims.sync when the owner asks; REDcode then raises its minimum"
     }
    ],
    "ownerActions": [
