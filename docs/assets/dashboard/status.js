@@ -1258,7 +1258,7 @@ window.EDGE_STATUS = {
    "group": "Specialist toolkits",
    "role": "World builder on REDnode: pick game or mod assets, place them in the running game, bake scenes into the world",
    "stage": "released",
-   "version": "0.11.1",
+   "version": "0.12.5",
    "lastTag": "v0.10.9",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-13",
@@ -1399,13 +1399,19 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.12.3",
+    "version": "0.13.0",
     "needs": [
-     "A REDbridge release with sector.build removals (#18)",
-     "A quick in-game look at 0.12.3 (the Bake tab lists a bake of removals alone, and it is seen as in the game)"
+     "Doors D2 (open, close, lock in the game through REDnode) planned with the owner, built and passed in game"
     ]
    },
    "handTests": [
+    {
+     "name": "0.12.3 to 0.12.5 checks (in game)",
+     "steps": 4,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-19 with REDbridge 0.16.0: the removal bake seen as in the game and listed; the counts \"0 added, 2 removed\"; long paths wrap in tooltips. Released as 0.12.5"
+    },
     {
      "name": "D1b Bake removals (in game)",
      "steps": 10,
@@ -1492,11 +1498,6 @@ window.EDGE_STATUS = {
      "who": "REDnode",
      "what": "A kinds option on world.load, so a script spawns only a baked scene's people (not urgent; a filter works meanwhile)",
      "ref": "REDnode #49"
-    },
-    {
-     "who": "REDbridge",
-     "what": "A REDbridge release with sector.build removals (#18, on REDbridge's main with D0's corrections), before 0.12 can be released",
-     "ref": "REDbridge #18"
     },
     {
      "who": "REDnode",
