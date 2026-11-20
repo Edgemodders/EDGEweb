@@ -650,12 +650,12 @@ window.EDGE_STATUS = {
      {
       "id": "ML",
       "title": "The Mod log window resizable (REDnode 0.68.1)",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "TV",
       "title": "Each app's version beside its title, with the launcher's Versions in title bars switch (REDnode 0.68.2)",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "WL",
@@ -695,16 +695,16 @@ window.EDGE_STATUS = {
     {
      "name": "Versions in title bars, REDnode 0.68.2",
      "steps": 5,
-     "status": "not run",
+     "status": "passed",
      "ranBy": null,
-     "note": "Mock check passed (12 checks)"
+     "note": "2026-11-19, laptop, 0.68.2"
     },
     {
      "name": "The Mod log resizable, REDnode 0.68.1",
      "steps": 4,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": null,
-     "note": "2026-11-18: steps 1, 2 and 4 passed; step 3 at the next restart"
+     "note": "2026-11-19, laptop, 0.68.2"
     },
     {
      "name": "The dropdown, REDnode 0.68.0",
@@ -805,7 +805,7 @@ window.EDGE_STATUS = {
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-18"
+   "checkedBy": "REDnode session, 2026-11-19"
   },
   {
    "name": "REDcode",
