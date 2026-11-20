@@ -997,6 +997,11 @@ window.EDGE_STATUS = {
      "who": "EDGEbuilder",
      "what": "Sector Tools, its app pack, and the shape of its service (select, focus, preview)",
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
+    },
+    {
+     "who": "REDbridge",
+     "what": "Why a SIMD animation clip exports with zero translations and a 0.19 scale",
+     "ref": "https://github.com/Edgemodders/REDbridge/issues/20"
     }
    ],
    "ownerActions": [
@@ -1007,7 +1012,7 @@ window.EDGE_STATUS = {
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
     "REDbridge answers one call at a time",
-    "A SIMD animation clip can export wrongly (the player's injector__fpp: zero translations, 0.19 scale); whether WolvenKit's or REDbridge's is unverified. The synced set marks SIMD members"
+    "A SIMD animation clip can export wrongly (the player's injector__fpp: zero translations, 0.19 scale); whether WolvenKit's or REDbridge's is unverified. The synced set marks SIMD members (REDbridge #20)"
    ],
    "checkedBy": "REDcode session, 2026-11-20"
   },
