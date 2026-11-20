@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEbuilder
 order: 1
 description: "What EDGEbuilder needs, getting REDbridge, installing it with EDGEdeck, opening it in the game, allowing its permissions, and checking the three status pills."
-reviewed: 2026-11-13
+reviewed: 2026-11-19
 ---
 
 # Install and set up <span class="y">EDGEbuilder</span>
@@ -31,7 +31,7 @@ To place and arrange objects:
 | RED4ext | The framework that loads REDnode and Codeware into the game |
 | [REDnode](../rednode/install.html) 0.58.0 or later | Runs EDGEbuilder inside the game and draws its window |
 | [Codeware](https://www.nexusmods.com/cyberpunk2077/mods/7780) 1.14 or later | REDnode needs it to place and move objects |
-| [REDbridge](../redbridge/) 0.12.1 or later | The helper program that reads the game's files. It builds EDGEbuilder's list of models, and writes your bakes |
+| [REDbridge](../redbridge/) 0.12.1 or later (0.16.0 or later to bake removed doors) | The helper program that reads the game's files. It builds EDGEbuilder's list of models, and writes your bakes |
 | [EDGEdeck](../edgedeck/) 0.20.0 or later | Installs EDGEbuilder. Vortex or copying by hand work too: see [Other ways to install](#other-ways-to-install) |
 
 To bake a scene into a mod, also:

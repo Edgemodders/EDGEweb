@@ -4,7 +4,7 @@ nav_title: Settings and keys
 section: EDGEbuilder
 order: 9
 description: "A reference for EDGEbuilder: what is on each of its six tabs, every setting, and every key and mouse control."
-reviewed: 2026-11-13
+reviewed: 2026-11-19
 ---
 
 # Settings and <span class="y">keys</span>
@@ -28,7 +28,7 @@ EDGEbuilder's panel sits at the right of the screen. From the top:
 | Three status pills | The game, REDbridge and the list of models. See [Check the three pills](install.html#4-check-the-three-pills) |
 | The message line | What just happened, or why something didn't |
 | The busy bar, with **Stop** | Shows only while a long change runs. See [When EDGEbuilder is busy](arranging.html#when-edgebuilder-is-busy) |
-| Six tabs | Below |
+| Seven tabs | Below |
 
 ### Assets tab
 
@@ -50,6 +50,7 @@ EDGEbuilder's panel sits at the right of the screen. From the top:
 | **Open scene's name** | Shows the open scene's name. Change it and press Enter to rename the scene | [The Scene tab](scenes.html#the-scene-tab) |
 | **Save**, **Save as**, **New**, **Open**, **Close** | Keep, copy, start, open and close scenes | [The Scene tab](scenes.html#the-scene-tab) |
 | **Undo**, **Redo**, **Duplicate**, **Group**, **Ungroup** | The same as their keys | [Arranging a scene](arranging.html) |
+| **World edits** | The game's own objects the scene removes, each with **Restore**. Shown when there are some | [Removing the game's doors](doors.html#removing-and-bringing-back) |
 | The list | Every object and group in the scene. Click to select | |
 | The **Selected** panel: **X**, **Y**, **Z**, **Heading**, **Scale** | The selected object's numbers | [Typing numbers](positioning.html#typing-numbers) |
 | **Group name** | Shown for a group | [Groups](arranging.html#groups) |
@@ -76,6 +77,18 @@ EDGEbuilder's panel sits at the right of the screen. From the top:
 | **Import a GLB from anywhere**, **Pick** | Picks a model by its full path | [Find your model](importing.html#find-your-model) |
 | **Name**, **Height, m**, **Solid** / **Solid, a box** / **Not solid**, **Import** | Import the picked model into the open REDcode project and the game | [Import it](importing.html#import-it) |
 | The pin on the Picked panel | Keeps the panel at the bottom of the tab while the tree scrolls. On at first | |
+
+### World tab
+
+| Control | Does | See |
+|---|---|---|
+| **Doors**, **Painted-on doors**, **Meshes** | Which of the game's own objects a click picks and the list shows. EDGEbuilder remembers your choice | [Three kinds of door](doors.html#three-kinds-of-door) |
+| **Look again** | Reads the doors near V again | |
+| The list | The doors within 30 m of V, with their state and distance. Hover outlines one, a click picks it and flies the camera there | [Finding a door](doors.html#finding-a-door) |
+| The **Picked in the world** panel | What you picked, where it is, and any warnings | |
+| **Remove from world** | Removes the picked door from the world, kept in the open scene. Also **Delete** | [Removing and bringing back](doors.html#removing-and-bringing-back) |
+| **Restore** | Brings back a door the scene removes | |
+| **Go to** | Flies the camera to the picked door | |
 
 ### Bake tab
 
@@ -135,7 +148,7 @@ Keys work while [Edit](positioning.html#the-edit-switch) is on and the cursor is
 | **Enter** or a click | Keep |
 | **Esc** or a right-click | Cancel: the object goes back |
 | **Ctrl+E** | Drop the selection to the floor |
-| **Delete** | Remove the selection |
+| **Delete** | Remove the selection; with a door of the game's picked, remove that door from the world |
 | Click, after **Drop at click** | Drop the picked asset there. **Esc** or a right-click cancels |
 | **Enter** in a Selected field | Apply it and leave the field |
 
@@ -157,7 +170,7 @@ Keys work while [Edit](positioning.html#the-edit-switch) is on and the cursor is
 
 ### The camera
 
-These need **Use EDGEbuilder's own camera** on.
+These need **Use EDGEbuilder's own camera** on. **F10** pauses builder mode, so V gets the view back, and F10 again returns to the editor camera: see [The camera and builder mode](camera.html#what-builder-mode-changes).
 
 | Key or mouse | Does |
 |---|---|

@@ -4,7 +4,7 @@ nav_title: Baking
 section: EDGEbuilder
 order: 8
 description: "Bake an EDGEbuilder scene into a mod: what baking is, what you need, the steps from scene to world, solid objects, people in a baked scene, draw distance (Seen from), changing and removing a bake, sharing it, and bakes kept in the EDGE Library."
-reviewed: 2026-11-17
+reviewed: 2026-11-19
 ---
 
 # Baking a scene <span class="y">into the world</span>
@@ -33,7 +33,7 @@ New to baking? [Your first scene](first-scene.html#10-bake-it-into-the-world) wa
 | You need | Why | Where |
 |---|---|---|
 | [REDcode](../redcode/), with a project open in VS Code | The bake is written into the project, and REDcode packs it into a mod. Any project will do, even a new empty one | [REDcode projects](../redcode/projects.html) |
-| [REDbridge](../redbridge/) 0.12.1 or later | It writes the baked files | EDGEdeck's **Get REDbridge** or **Update REDbridge** |
+| [REDbridge](../redbridge/) 0.12.1 or later; **0.16.0** or later for a scene that removes the game's doors | It writes the baked files | EDGEdeck's **Get REDbridge** or **Update REDbridge** |
 | [EDGEdeck](../edgedeck/) | REDcode's **Pack and Install** puts the mod in the game through it | [Install EDGEdeck](../edgedeck/install.html) |
 | ArchiveXL, deployed in the game | A framework mod. The game reads a baked scene through it, so without it the bake never shows. Everyone who plays your mod needs it too | EDGEdeck's [Get the frameworks](../edgedeck/frameworks.html#getting-the-frameworks), or [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/4198) |
 
@@ -118,6 +118,10 @@ await world.unload('alley_people');
 `wait: false` lets the people load even when V is far away: they come in once V gets near. `world.unload` removes only what that load spawned, so the baked props stay. A people-only scene needs no filter: `world.load` it as it is. An option to do the filtering for you is [asked of REDnode](https://github.com/Edgemodders/REDnode/issues/49). [The world](../rednode/world.html#scenes-and-whats-near-v) has more on `world.load`.
 
 For now the people stand friendly and idle. Walking, sitting and talking are for later tools.
+
+## Doors you removed
+
+A scene that removes some of the game's own doors bakes them too: the bake writes instructions for ArchiveXL to leave those doors out of the world, with the stand-in copies the game shows of them from afar. A scene can do nothing but remove things; its bake is then one small `.archive.xl` file and no objects. The Bake tab and the list of bakes say both numbers, **0 added, 2 removed**. See [Removing the game's doors](doors.html#baking-the-removals), with a walkthrough.
 
 ## The Solid switch
 

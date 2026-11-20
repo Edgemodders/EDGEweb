@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEbuilder
 order: 10
 description: "What to do when EDGEbuilder's pills are red, REDbridge is missing, a search or a drop fails, keys do nothing, the camera is stuck, previews are missing, or a bake doesn't show, isn't solid or pops in."
-reviewed: 2026-11-13
+reviewed: 2026-11-19
 ---
 
 # Troubleshooting <span class="y">EDGEbuilder</span>
@@ -89,6 +89,7 @@ The message line under the pills says why a drop failed:
 | V's view is stuck on the editor camera, or the HUD is gone, with EDGEbuilder closed | EDGEbuilder stopped while Edit was on. **Load a save**: that gives V's camera back. EDGEbuilder also repairs it by itself the next time it starts. See [If V's view gets stuck](camera.html#if-vs-view-gets-stuck) |
 | The right mouse button doesn't look around | **Use EDGEbuilder's own camera** is off on the Settings tab. Switch it on |
 | The HUD stays on screen with Edit on | **Hide the game's HUD** is off on the Settings tab. Switch it on |
+| After F10, V moves but the view doesn't | Update EDGEbuilder: from 0.12.5, F10 with Edit on gives V the view back, and F10 again returns to the editor camera |
 | I can't click another REDnode window while Edit is on | EDGEbuilder's layer covers it. Switch **Edit** off, use the other window, and switch Edit back on |
 | Other REDnode windows stay on screen while Edit is on | EDGEbuilder isn't allowed solo mode. See [Builder mode and other windows](camera.html#builder-mode-and-other-windows) |
 | <a id="edgebuilder-disappears-when-i-open-a-menu"></a>EDGEbuilder disappears when I open a menu | That is on purpose. The whole window, with the gizmo, hides while the game shows a menu: pause, Settings, inventory or map. It comes back when the menu closes, with Edit and the camera as they were. A move under way when the menu opened is cancelled |
@@ -127,6 +128,18 @@ The message line under the pills says why a drop failed:
 | A placed copy didn't change after a second Import | Use the same **Name** as before: a new name makes a second prop beside the first |
 
 See [Importing a model](importing.html).
+
+## Removing doors
+
+| You see | Do this |
+|---|---|
+| The World tab's list is empty, or a click on a door picks nothing | The list shows doors within 30 m of **V**, not the camera: walk V closer, then **Look again**. **Doors** must be on. With Edit on, click the door itself |
+| The World tab says the registry "knows no part of the world yet" | EDGEbuilder started after your save loaded, so REDnode didn't see that part of the world load. **Load the save again**, or fast travel, and pick the door again |
+| **Remove from world** is greyed | No scene is open: a removal is kept in the open scene. Open or make one on the Library tab. Or the panel says the door's node was not found: move away and back, or load the save again |
+| A door I brought back looks right but doesn't open | It is the door's **stand-in**: after a save loads with a door removed, the real door never comes in. Fast travel away and back, or load a save. See [Stand-ins](doors.html#stand-ins) |
+| A removed door is back | Removals last while their scene is open in EDGEbuilder, or once baked. Open the scene, or bake it. Switching EDGEbuilder off brings every unbaked door back |
+| The Bake tab says REDbridge "cannot bake removals" | Update REDbridge to 0.16.0 or later: **Get REDbridge** in EDGEdeck, or **Update REDbridge** in REDnode's Mod Manager. Then **Refresh** |
+| A baked door is still there in the game | ArchiveXL must be in the game, and the project packed and installed after the bake. ArchiveXL's log (`red4ext\plugins\ArchiveXL`) says "All patches have been applied" for each part of the world it changed |
 
 ## Baking
 
@@ -167,6 +180,7 @@ REDcode tells EDGEbuilder which project is open through a small REDnode package 
 2. If the tab says REDcode's package is not in the game, open VS Code's settings and search for REDcode. **Game Path** must be your game folder, and **REDnode: Install Package** must be on (it is by default). REDcode's output then says "Installed REDcode's REDnode package". Press **Refresh** again.
 3. In REDnode's Mod Manager, check that a package called `redcode` is listed.
 4. With several VS Code windows, the last one you used with a project open counts.
+5. A project you just made with **New Project** opens in VS Code's **Restricted Mode** until you trust its folder, and REDcode stays off until then. Trust the folder when VS Code asks, and the project shows up in EDGEbuilder by itself.
 
 ## Anything else
 

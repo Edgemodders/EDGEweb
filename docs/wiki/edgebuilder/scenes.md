@@ -3,7 +3,7 @@ title: Scenes and the Library
 section: EDGEbuilder
 order: 7
 description: "How EDGEbuilder keeps your work: previews and scenes, the three places a scene can be kept, the Scene tab, the Library tab, the Objects drawer, and giving a scene to someone else."
-reviewed: 2026-11-13
+reviewed: 2026-11-19
 ---
 
 # Scenes and the <span class="y">Library</span>
@@ -67,7 +67,8 @@ The **Scene** tab shows the open scene. From top to bottom:
 | **Open scene's name** | A field holding the open scene's name. To rename the scene and its file, change the name and press **Enter**. It asks first: **Rename** or **Keep the name** |
 | The line under it | Where the scene is, for example **In Library > Alleys. Saved after every change.** |
 | **Save**, **Save as**, **New**, **Open**, **Close** | See the next table |
-| The count | How many objects and groups, and how many are selected: **5 objects, 1 group; 3 selected** |
+| The count | What the scene does to the world, how many groups, and how many are selected: **5 added, 2 removed, 1 group; 3 selected** means five objects of yours and two of the game's own removed |
+| **World edits** | Shown when the scene removes some of the game's own objects: each one, with **Restore** to bring it back. See [Removing the game's doors](doors.html) |
 | **This scene needs:** | Shown when the scene uses files from mods or a REDcode project. It names them. Without that mod installed, those objects can't be placed |
 | **Undo**, **Redo**, **Duplicate**, **Group**, **Ungroup** | The same as their keys. See [Arranging a scene](arranging.html) |
 | The list | Every object, with its kind at the right. Groups show as folders. Click an object to select it, Ctrl+click to add more |
@@ -99,7 +100,7 @@ The Selected panel's buttons:
 
 ## The Library tab
 
-The **Library** tab shows all three places as one tree: **Library** with your folders, **Project:** and the project's name while REDcode has a project open, and **This PC**. Each scene shows its object count and when it changed, and an **open** or **shown** tag.
+The **Library** tab shows all three places as one tree: **Library** with your folders, **Project:** and the project's name while REDcode has a project open, and **This PC**. Each scene shows what it adds and removes, such as **+5 −2** (five objects added, two of the game's removed), and when it changed, and an **open** or **shown** tag.
 
 Without a Library yet, the tab says **No Library folder yet** and offers **Make the Library**, which makes `Documents\EDGE Library`. To use another folder, see [Library folder](settings.html#settings) on the Settings tab.
 

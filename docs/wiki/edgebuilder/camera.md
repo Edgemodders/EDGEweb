@@ -4,7 +4,7 @@ nav_title: Camera and builder mode
 section: EDGEbuilder
 order: 5
 description: "EDGEbuilder's own camera: look, fly, orbit, pan and frame while V stays put, and builder mode, which hides the game's HUD and other windows while Edit is on."
-reviewed: 2026-11-13
+reviewed: 2026-11-19
 ---
 
 # The camera and <span class="y">builder mode</span>
@@ -31,6 +31,8 @@ Placing things from V's eyes is awkward: you can't see behind a crate, or look d
 | The help line | At the bottom of the screen, now also lists the camera keys |
 
 Switch **Edit** off and the view snaps back to V's eyes and the HUD returns. Switch it on again and the camera starts from V's view again. If you load a save with Edit on, Edit stays on, and the camera starts again from V's view.
+
+**F10 pauses builder mode.** Press F10 with Edit on, to leave REDnode's interactive mode, and V gets the view and the HUD back: you can walk and play. Press F10 again and you are back in EDGEbuilder's camera where you left it, with Edit still on and your selection kept.
 
 Builder mode has two parts, the editor camera and the hidden HUD. Each has its own switch on the Settings tab, in case one misbehaves. They apply as soon as you flip them. See [Settings](settings.html#settings).
 
