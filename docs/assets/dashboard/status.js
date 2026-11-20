@@ -1347,7 +1347,7 @@ window.EDGE_STATUS = {
      {
       "id": "D1b",
       "title": "Bake door removals",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "D2",
@@ -1397,18 +1397,19 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.12.x",
+    "version": "0.12.3",
     "needs": [
-     "D1b, the bake of removals with their proxies, built and passed in game (REDbridge #18 is on REDbridge main with D0's corrections, not released yet)"
+     "A REDbridge release with sector.build removals (#18)",
+     "A quick in-game look at 0.12.3 (the Bake tab lists a bake of removals alone, and it is seen as in the game)"
     ]
    },
    "handTests": [
     {
      "name": "D1b Bake removals (in game)",
      "steps": 10,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-19 as 0.12.2 with F10 pausing builder mode; checked outside the game: V's door bakes to the .xl D0 saw work, its stand-in found by REDbridge"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-19 on 0.12.2 with REDbridge from its main: V's door and the elevator door baked with both stand-ins, gone with EDGEbuilder off; F10 pauses and resumes. 0.12.3 finds a bake of removals alone by its .xl"
     },
     {
      "name": "E0 sector view probe (outside the game)",
@@ -1506,9 +1507,7 @@ window.EDGE_STATUS = {
      "ref": "REDnode #52"
     }
    ],
-   "ownerActions": [
-    "Let EDGEbuilder 0.12.2 be deployed with the game closed (with REDbridge from its main as EDGEbuilder's bridge), then run the D1b test, steps 1 to 10 (docs/testing.md, D1b)"
-   ],
+   "ownerActions": [],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
     "Watch (B2d-2) cannot work until EDGEfab #6 keeps unchanged textures",
