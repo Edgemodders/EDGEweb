@@ -882,8 +882,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "NF",
-      "title": "New File: make game files from nothing (design agreed, built after A3)",
-      "status": "planned"
+      "title": "New File: make game files from nothing",
+      "status": "built, tests pending"
      },
      {
       "id": "SV",
@@ -896,7 +896,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "#24 is fixed on main (9e24808) and its hand test passed on 2026-11-20: ready to release",
-     "The next planned work is Animations A3, which closes #21"
+     "New File is built on main (86a3978); its hand test waits on the owner"
     ]
    },
    "handTests": [
@@ -948,6 +948,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Each needs a special setup or another tool"
+    },
+    {
+     "name": "New File",
+     "steps": 14,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Given to the owner 2026-11-20 (docs/testing.md, New File). Step 14, the game reading the new files, is optional and needs a small test mod"
     }
    ],
    "ownerSpotTests": [],
@@ -964,7 +971,8 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Say whether to release #24 now (REDcode 0.10.14, a fix only)"
+    "Run the New File hand test (docs/testing.md, New File)",
+    "Then say whether to release REDcode 0.10.14 (New File and the #24 fix)"
    ],
    "risks": [
     "Run Game's exe route stops REDnode's overlay for players on REDnode 0.58.0 or older: fixed and tested on main, not released (#24)",
