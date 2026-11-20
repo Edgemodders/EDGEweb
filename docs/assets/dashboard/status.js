@@ -1335,11 +1335,16 @@ window.EDGE_STATUS = {
      {
       "id": "D0",
       "title": "Doors probe",
+      "status": "done"
+     },
+     {
+      "id": "D1a",
+      "title": "Remove a door (live, World tab)",
       "status": "built, tests pending"
      },
      {
-      "id": "D1",
-      "title": "Remove a door (baked)",
+      "id": "D1b",
+      "title": "Bake door removals",
       "status": "planned"
      },
      {
