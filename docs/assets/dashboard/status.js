@@ -1461,7 +1461,7 @@ window.EDGE_STATUS = {
      {
       "id": "D2",
       "title": "Open, close, lock a door",
-      "status": "planned"
+      "status": "built, tests pending"
      },
      {
       "id": "B2d-2",
@@ -1470,8 +1470,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "ST",
-      "title": "Sector Tools under World (S1 Sectors, S2 3D view, S3 previews; EDGEbuilder #9)",
-      "status": "planned"
+      "title": "Sector Tools under World (S1 Sectors built in 0.13.0; S2 3D view, S3 previews; EDGEbuilder #9)",
+      "status": "in progress"
+     },
+     {
+      "id": "PP",
+      "title": "Project picker (REDcode #32)",
+      "status": "built, tests pending"
      },
      {
       "id": "B3b",
@@ -1513,10 +1518,31 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.13.0",
     "needs": [
-     "Doors D2 (open, close, lock in the game through REDnode) planned with the owner, built and passed in game"
+     "The owner's in-game test of 0.13.0: D2 (12 steps), S1 Sectors (11 steps), the project picker (5 steps); docs/testing.md"
     ]
    },
    "handTests": [
+    {
+     "name": "D2 Open, close, lock (0.13.0, in game)",
+     "steps": 12,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-20; smoke test only. In the EDGEdeck library, not deployed"
+    },
+    {
+     "name": "S1 Sectors (0.13.0, in game)",
+     "steps": 11,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-20; checked against REDbridge 0.15.0 outside the game and in REDnode's host"
+    },
+    {
+     "name": "Project picker (0.13.0, with REDcode 0.10.15)",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-20; checked in REDnode's host with REDcode's package and two scratch projects"
+    },
     {
      "name": "Remove Doors 0.1.0 (in game)",
      "steps": 11,
@@ -1627,15 +1653,11 @@ window.EDGE_STATUS = {
      "who": "REDnode",
      "what": "An entity node shown again after a load brings back the working entity, not its proxy (not urgent)",
      "ref": "REDnode #52"
-    },
-    {
-     "who": "REDcode",
-     "what": "Every open VS Code window's project in the redcode service: built on REDcode's main (3f8d87f), ships in REDcode 0.10.15; then EDGEbuilder's project picker on the Bake tab and Import",
-     "ref": "REDcode #32"
     }
    ],
    "ownerActions": [
-    "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window"
+    "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
+    "Test EDGEbuilder 0.13.0 in game (D2, S1 Sectors, the project picker): ask the EDGEbuilder session to deploy it"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
