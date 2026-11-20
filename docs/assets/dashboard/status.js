@@ -892,8 +892,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SV",
-      "title": "Sector view: a shared three.js drawing package, a read-only sector mode and openSector (design and API agreed with EDGEbuilder #8; after A3 and New File)",
-      "status": "planned"
+      "title": "Sector view: the @edgemodders/world-view package (unpublished), a read-only 3D sector mode, openSector, and #31's light in every 3D view",
+      "status": "built, tests pending"
      },
      {
       "id": "ST",
@@ -907,7 +907,8 @@ window.EDGE_STATUS = {
     "needs": [
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
      "Animations A3 (#21) built on main (3686353); its hand test and the release wait on REDbridge 0.17.0, then redcode.minBridgeVersion goes to 0.17.0",
-     "Replace with a WAV, #29 openModel and #32 projects() built on main (3f8d87f), hand test waits on the owner"
+     "Replace with a WAV, #29 openModel and #32 projects() built on main (3f8d87f), hand test waits on the owner",
+     "Sector view and #31 built on main (d0bb84b, 2d0ffca), hand test waits on the owner"
     ]
    },
    "handTests": [
@@ -987,6 +988,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Given to the owner 2026-11-20 (docs/testing.md). Steps 4, 11 and 12 are in the game"
+    },
+    {
+     "name": "Sector view (and #31 light)",
+     "steps": 11,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Given to the owner 2026-11-20 (docs/testing.md, Sector view)"
     }
    ],
    "ownerSpotTests": [],
@@ -1016,7 +1024,9 @@ window.EDGE_STATUS = {
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Ask the REDnode session to release REDbridge 0.17.0 (REDbridge #19): A3 is built and its hand test needs it",
     "Run the Animations A3 hand test (11 steps) once REDbridge 0.17.0 is installed",
-    "Run the Replace with a WAV, #29 and #32 hand test (12 steps)"
+    "Run the Replace with a WAV, #29 and #32 hand test (12 steps)",
+    "Run the Sector view hand test (11 steps)",
+    "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
