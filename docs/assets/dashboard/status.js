@@ -916,6 +916,11 @@ window.EDGE_STATUS = {
       "id": "SM",
       "title": "Sector materials (docs/design/sector-materials.md, agreed 2026-11-21): M1 the picked thing's real material in the sector view, By material fixed (built); M2 live from EDGEmat's Desk; M3a every copy through Add to Project; M3b one node through an ArchiveXL mutation and EDGEbuilder's bake; with the sector view's camera row (built 2026-11-21)",
       "status": "in progress"
+     },
+     {
+      "id": "SS",
+      "title": "Sector selection: many things at once, a screen box and a volume, the selected list (docs/design/sector-selection.md, agreed and built 2026-11-21)",
+      "status": "built, tests pending"
      }
     ]
    },
@@ -925,10 +930,17 @@ window.EDGE_STATUS = {
      "Key rule, first half met: EDGEwave's K4c pilot passed the owner's hand test on 2026-11-21 (EDGEwave #12). Second half: K4d moves EDGEhack, EDGEmat and EDGEfab to REDcodeApi.keys, then all are released at once with REDbridge 0.18.0 as the minimum",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
-     "Add to Project's question before replacing a project's file: retest R1 to R3"
+     "Add to Project's question before replacing a project's file: retest R1 to R3",
+     "Sector selection: its hand test"
     ]
    },
    "handTests": [
+    {
+     "name": "Sector selection",
+     "steps": 12,
+     "status": "not run",
+     "note": "Ctrl+click, Shift+drag, Volume and Touching, the selected list (rows' buttons, Frame All, Isolate, Add Meshes to Project, Copy), Ctrl+A and Esc, openSector with a list; checked in Chrome over the real bridge (docs/testing.md, Sector selection)"
+    },
     {
      "name": "Sector camera",
      "steps": 10,
@@ -1099,7 +1111,7 @@ window.EDGE_STATUS = {
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)",
-    "Run the Sector camera hand test and the Add to Project retest R1 to R3 (docs/testing.md); decide the four questions in docs/design/sector-selection.md (multi-select and volume selection)"
+    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
    ],
    "risks": [
     "REDbridge answers one call at a time"
