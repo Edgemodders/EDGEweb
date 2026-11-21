@@ -57,6 +57,7 @@ The stack is TypeScript, JavaScript, Node, VS Code extensions, C# (.NET), C++ an
 | [EDGEmat](https://github.com/Edgemodders/EDGEmat) | Material editor | TypeScript |
 | [EDGEquest](https://github.com/Edgemodders/EDGEquest) | Quest maker beside REDcode | TypeScript |
 | [EDGEhack](https://github.com/Edgemodders/EDGEhack) | Quickhack editor beside REDcode | TypeScript |
+| [EDGEdir](https://github.com/Edgemodders/EDGEdir) | Director's tool: scenes of the game's people on a timeline, played in the game. Not released yet | TypeScript |
 | [EDGEkit](https://github.com/Edgemodders/EDGEkit) | The EDGEmodders editor app (built from Code - OSS) and its extension pack | JavaScript |
 | [EDGEchat](https://github.com/Edgemodders/EDGEchat) | The EDGE plugin for Claude Code: skills and MCP servers | Markdown |
 | [REDsave](https://github.com/Edgemodders/REDsave) | Save game manager for VS Code, built into EDGEkit | TypeScript |

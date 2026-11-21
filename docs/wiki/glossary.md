@@ -88,8 +88,9 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | Term | Meaning |
 |---|---|
 | <a id="deploy"></a>Deploy | EDGEdeck putting your switched-on mods into the game folder. On the same drive as the game it links the files (hardlinks), so they take no extra space; if your library is on another drive it copies them. Either way it records every file in its manifest |
-| <a id="desk"></a>The Desk | One tool's own scratch area for work in progress, kept across restarts until the work goes into a project or the EDGE Library. EDGEmat and EDGEhack have one. EDGEwave's is agreed but not built |
+| <a id="desk"></a>The Desk | One tool's own scratch area for work in progress, kept across restarts until the work goes into a project or the EDGE Library. EDGEmat, EDGEhack and EDGEdir have one. EDGEwave's is agreed but not built |
 | <a id="edge"></a>EDGE | The platform: the EDGE toolkits working together |
+| <a id="edge-director"></a>EDGE Director | [EDGEdir](edgedir/)'s app in the game, a REDnode window. It plays the scenes made in EDGEdir on real people and lets you adjust them where you stand. Not released yet |
 | <a id="edge-library"></a>EDGE Library | One folder of your own where the EDGE tools keep finished work for good, outside any project: scenes, bakes, quickhacks and game files you set aside. Optional. See [The EDGE Library](library.html) |
 | <a id="hardlink"></a>Hardlink | One file that appears in two folders at once. A deployed mod shows up in the game folder without taking extra space, because it is the very file in your library. It only works within one drive |
 | <a id="kind"></a>Kind | What is inside a mod, shown by EDGEdeck as small labels on each mod, such as framework or REDmod |
@@ -163,7 +164,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | <a id="collision"></a><a id="solid"></a>Collision, solid | Collision data is the invisible shape the game uses to stop V, bullets and cars. An object with it is solid. Many of the game's models have none, and those can't be made solid |
 | <a id="gizmo"></a>Gizmo | The handles drawn on a selected object that you drag to move, turn and scale it |
 | <a id="preview"></a>Preview (an object) | In EDGEbuilder, an object you placed that is not baked yet. Only you see it, and only while EDGEbuilder is running |
-| <a id="scene"></a>Scene | Two meanings. In EDGEbuilder, a saved arrangement of objects you placed, which you can bake into a mod. In EDGEquest and the game's quests, a conversation or a moment: lines and choices |
+| <a id="scene"></a>Scene | Three meanings. In EDGEbuilder, a saved arrangement of objects you placed, which you can bake into a mod. In [EDGEdir](edgedir/), a timeline of what people do and when; there an EDGEbuilder scene is called a set. In EDGEquest and the game's quests, a conversation or a moment: lines and choices |
 | <a id="sector"></a>Sector | The game's own file format for one piece of the world: a list of the objects there, loaded as you get near. A bake writes your scene as a sector |
 | <a id="seen-from"></a>Seen from | An object's draw distance in a bake: how many metres away the game still shows it |
 

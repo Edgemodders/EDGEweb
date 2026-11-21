@@ -13,7 +13,7 @@ reviewed: 2026-11-21
 
 A scene can change the weather. A clip on the **weather track** holds one of the game's weathers, such as rain or fog, for as long as the clip lasts. When the clip ends and no other follows it, the weather goes back to what it was.
 
-**Not tested yet**, in VS Code or in the game. REDnode's weather calls, which this rests on, passed their own test in the game on 2026-11-18.
+**Not tested in the game yet.** In VS Code and against a stand-in for the game, a test by script passed 8 of its 11 steps on 2026-11-21; the three that missed were the inspector's **In the game** lines for a weather clip, added in 0.0.30 and not run again yet. REDnode's weather calls, which this rests on, passed their own test in the game on 2026-11-18.
 
 {% include shot.html src="/assets/shots/edgedir/weather-editor.png" caption="A weather clip" shows="The scene editor with a Weather lane under the two actors' lanes, a Rain clip selected and a Sunny clip after it: the preview has a grey tint and its line reads Weather: Rain; the inspector shows the clip's Weather list and its Blend in seconds." %}
 
@@ -27,7 +27,7 @@ A scene can change the weather. A clip on the **weather track** holds one of the
 
 1. **Add Track**, then **Weather**. A scene has one weather track: the game has one weather at a time, so a second is refused.
 2. Select the lane and click **Add Clip**. Move and stretch the clip to cover the part of the scene the weather should hold.
-3. Select the clip. In the inspector choose a **Weather**, and set **Blend (s)**.
+3. Select the clip. In the inspector choose a **Weather**, and set **Blend (s)**. A blend outside 0 to 60 is refused, and the number goes back.
 
 | Field | Means |
 |---|---|

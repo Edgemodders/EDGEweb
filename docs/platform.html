@@ -54,6 +54,7 @@
       <tr><td>Build where you see it<span class="from">EDGEbuilder</span></td><td>Place the game&rsquo;s own objects and people in the running game by dragging their handles, with a free camera, instead of typing coordinates into a file. Arrange several objects with groups, copy and paste and undo. Bake a scene into a real mod that works with EDGEbuilder uninstalled. People are not baked yet.</td><td><span class="st on">Working</span></td></tr>
       <tr><td>Sound and material studios<span class="from">EDGEwave &middot; EDGEmat</span></td><td>Edit the game&rsquo;s sounds and recolor its clothes for your mod, with plain controls or by asking an assistant. Both are released previews. EDGEwave: replaced, silenced and new sounds were heard in the game; voiced quest lines are not there yet. EDGEmat: recolors, and new materials made from your words, were seen in the game.</td><td><span class="st on">Working</span></td></tr>
       <tr><td>Quickhacks in plain words<span class="from">EDGEhack</span></td><td>Read every tier of any quickhack from your own game: its cost, upload time, damage and effects. Change them, or make a new quickhack with effects and icons of your own, and try it in the running game. A released preview. Quickhacks for devices and vehicles can be read but not changed yet.</td><td><span class="st on">Working</span></td></tr>
+      <tr><td>Direct the game&rsquo;s people<span class="from">EDGEdir</span></td><td>Lay out what the game&rsquo;s own characters do on a timeline, with their own animations, and watch it in 3D with no game running. Then play the scene in the running game and adjust it where you stand. Built, not released yet: the editor passed its tests in VS Code; in the game a scene of two people has played through, and the rest is untested there.</td><td><span class="st wip">In progress</span></td></tr>
       <tr><td>Quests in plain words<span class="from">EDGEquest</span></td><td>Read any of the game&rsquo;s quests as steps and lines, and write your own as a short story with places, choices and music. EDGEquest makes the quest files. A released preview: small quests with choices and branches were played in the game. For now a quest has V alone, with subtitles only, and starts when a save loads. Phone calls, other people in a scene and voiced lines are coming.</td><td><span class="st wip">In progress</span></td></tr>
       <tr><td>HTML overlay apps with a UI kit<span class="from">REDnode</span></td><td>Build in-game windows and HUD widgets with HTML, CSS and JavaScript, styled with a ready-made UI kit. Use any web framework, browser dev tools and npm packages instead of Lua and ImGui.</td><td><span class="st on">Working</span></td></tr>
       <tr><td>Native game UI, inspected and built live<span class="from">REDnode &middot; UI Tools</span></td><td>Read the game&rsquo;s own HUD and menus as a live tree, try changes on them, and write HUD panels the game draws itself in HTML-style markup, run and exported from an editor in the game. Planned: clicks on those panels, and screens of your own.</td><td><span class="st wip">In progress</span></td></tr>
@@ -397,8 +398,37 @@
   </div>
 </section>
 
+<section id="edgedir">
+  <h2><span class="id">15</span>Direct scenes with EDGEdir</h2><div class="rule"></div>
+  <div class="kit">
+    <div>
+      <div class="head"><div><div class="name">EDGE<span>dir</span></div><div class="role">The director&rsquo;s tool &middot; in VS Code and in the game</div></div></div>
+      <p>A director&rsquo;s tool. A scene is a timeline that says what each person does, and when. You build it in VS Code with the game&rsquo;s own characters and animations, and EDGE Director, its app in the game, plays it there on real people. No code is written.</p>
+      <ul>
+        <li>A timeline with a track for each actor: add, move, trim, split, copy and undo clips</li>
+        <li>Actors from the game&rsquo;s own characters, about 6,600 of them, and animations found by name among about 147,000</li>
+        <li>A 3D preview: each actor&rsquo;s body plays the clip under the playhead, with no game running</li>
+        <li>Transitions join two animations into one movement, and sequences reuse a run of clips on another actor</li>
+        <li>Sets: play a scene on an EDGEbuilder scene, with its props and people</li>
+        <li>EDGE Director, a window in the game: play, stop and loop a scene, move an actor to where V stands, and name places with pins</li>
+        <li>A weather track: hold rain, fog or sun for part of a scene</li>
+        <li>Not built yet: sound and camera tracks, V acting in the game, and packing a scene into a mod others install</li>
+        <li>0.0.30, not released yet: for now you build it from its source. The editor and its 3D preview passed their tests in VS Code. In the game, EDGE Director has played a scene of two people through; adjusting, pins and weather are not tested there yet. Sound and camera tracks are not built. Needs REDbridge (REDcode fetches it), and REDnode to play in the game</li>
+      </ul>
+      <div class="links"><a href="wiki/edgedir/">Wiki</a><a href="https://edgemodders.github.io/EDGEdir/">Docs</a><a href="https://github.com/Edgemodders/EDGEdir">GitHub</a></div>
+    </div>
+    <div class="shots">
+      <div class="shot"><img src="assets/shots/edgedir/overview.png" alt="EDGEdir&rsquo;s scene editor: two grey bodies mid-animation in the 3D preview, the timeline with a lane of clips for each actor, and the inspector with the selected actor&rsquo;s details." loading="lazy"></div>
+      <div class="pair">
+        <div class="shot"><img src="assets/shots/edgedir/director-playing.png" alt="EDGE Director&rsquo;s window with a scene playing: the transport, a strip with a lane for each track, Adjust, Pins, the cast, and what the game will not match. Taken outside the game." loading="lazy"></div>
+        <div class="shot"><div><b>Screenshot</b>A scene playing in the game</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="edgekit">
-  <h2><span class="id">15</span>Get it all with EDGEkit</h2><div class="rule"></div>
+  <h2><span class="id">16</span>Get it all with EDGEkit</h2><div class="rule"></div>
   <div class="kit">
     <div>
       <div class="head"><img src="assets/tools/edgekit.png" alt=""><div><div class="name">EDGE<span>kit</span></div><div class="role">The editor app</div></div></div>
@@ -423,7 +453,7 @@
 </section>
 
 <section id="join" class="join">
-  <h2><span class="id">16</span>Build it with us</h2><div class="rule"></div>
+  <h2><span class="id">17</span>Build it with us</h2><div class="rule"></div>
   <p class="big">Bring your <span>mod ideas.</span></p>
   <p>Veterans and beginners alike: try the toolkits, tell us what's missing, and help shape EDGE.</p>
   <div class="cta">

@@ -39,7 +39,7 @@ The **Sets** view lists EDGEbuilder scenes (files ending in `.scene.json`) from 
 | Your EDGE Library | Any folder of it. Save a scene to the Library in EDGEbuilder |
 | The open REDcode project | Its `source/scenes` folder |
 
-Each row shows the set's name and how many people it has. Scenes EDGEbuilder keeps only for itself ("This PC") are not listed: save them to the Library or the project first. **Refresh Sets** looks again.
+Each row shows the set's name and how many people and props it has, and under it the Desk's scenes that play on that set. Scenes EDGEbuilder keeps only for itself ("This PC") are not listed: save them to the Library or the project first. **Refresh Sets** looks again.
 
 ## A new scene on a set
 

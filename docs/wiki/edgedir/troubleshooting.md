@@ -4,12 +4,12 @@ nav_title: Troubleshooting
 section: EDGEdir
 order: 12
 description: "What to do when EDGEdir or EDGE Director does not do what you expect: the game is not read, the preview is empty, an animation will not play, Play in Game says the Director is missing, nobody appears in the game."
-reviewed: 2026-11-20
+reviewed: 2026-11-21
 ---
 
 # <span class="y">Troubleshooting</span>
 
-EDGEdir is not released, and its in-game half is untested. Some of what follows is what should help, not what has been seen to help. If something here is wrong, or you hit something that is not here, please say so: [open an issue](https://github.com/Edgemodders/EDGEdir/issues), with the text of **EDGEdir: Show Log** if the trouble is in VS Code.
+EDGEdir is not released, and most of its in-game half is untested. Some of what follows is what should help, not what has been seen to help. If something here is wrong, or you hit something that is not here, please say so: [open an issue](https://github.com/Edgemodders/EDGEdir/issues), with the text of **EDGEdir: Show Log** if the trouble is in VS Code.
 
 | On this page | |
 |---|---|
@@ -50,7 +50,7 @@ EDGEdir is not released, and its in-game half is untested. Some of what follows 
 | The first play of a scene takes a few seconds longer | Each actor's animations are written once. Later plays of the same clips are quicker |
 | A person stands stiff with arms out for a moment | The game's "T pose" at a person's first animation. EDGE Director starts everybody once before the scene to get past it; whether that is enough is one of the things the first tests must show |
 | The scene does not look like the preview | Read [what the game will not match](director.html#what-the-game-will-not-match): several differences are known and listed |
-| EDGE Director's Adjust and Pins buttons are off, with a yellow box | The scene has unsaved changes in VS Code. Save it there |
+| EDGE Director's Adjust and Pins buttons are off, with a yellow box | The scene has unsaved changes in VS Code. Save it there. Until then EDGE Director plays the scene as it was last saved |
 | **Move to V** says the scene plays in front of V | Press Play first, or **The Scene Is Here**: [the scene's place](adjust.html#the-scenes-place) |
 | An actor cannot stand at a pin | The scene plays in front of V. Give it a place first |
 | The window does not take clicks | REDnode's overlay is in its passive mode. Press **F10** |

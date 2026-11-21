@@ -115,4 +115,4 @@ EDGE Director in the game lists the same Desk, so a scene made here can be opene
 
 A scene is one text file ending in `.edgedir`: readable JSON that names the tracks, the clips and the actors. It names animations by where they are in the game; it holds no game data itself, so it is small and safe to share. If a scene's file is ever damaged, the editor says what is wrong and offers **Open as Text** beside it.
 
-Two tools can change a scene: this editor and EDGE Director in the game. A change made in the game shows in the open editor by itself. While a scene has unsaved changes here, EDGE Director will play it but not change it, so neither overwrites the other.
+Two tools can change a scene: this editor and EDGE Director in the game. A change made in the game shows in the open editor by itself. While a scene has unsaved changes here, EDGE Director plays it as it was last saved and does not change it, so neither overwrites the other.

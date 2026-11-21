@@ -12,10 +12,14 @@ How to keep it:
 - For a release, rename **Unreleased** to `## <version> (<date>)`, start a new empty **Unreleased** above it, then tag `v<version>` and make the GitHub release from that section.
 - Links are full URLs, since the same text may go to GitHub, Discord and Nexus.
 
+- Wiki: EDGEdir's pages follow 0.0.30 and its tests of 2026-11-21: EDGE Director's own Play plays a scene as it was last saved while VS Code has unsaved changes; Stop keeps the scene's pins drawn; adjusting, pins and weather passed by script against a stand-in: https://edgemodders.ai/wiki/edgedir/#status
 ## Unreleased
 
 **New**
 
+- EDGEdir, the director's tool, is on the landing page and the platform page, marked not released yet: https://edgemodders.ai/platform.html#edgedir
+- Wiki: a section for EDGEdir, ahead of its first release: install from source, a first scene, the scene editor, actors and animations, the 3D preview, transitions and sequences, sets, playing in the game with EDGE Director, adjusting and pins, weather, settings and troubleshooting: https://edgemodders.ai/wiki/edgedir/
+- Wiki: EDGEdir is in the wiki home's benefits, Getting started, the glossary (EDGE Director, the third meaning of "scene") and the list of repositories: https://edgemodders.ai/wiki/
 - Wiki: EDGEfab 0.1.0 is released (2026-11-18): the "not released yet" notes are gone from its pages, the wiki home, Connect Claude Code and the Library page; new on its pages: Open in EDGEmat from the Desk, Reveal in REDcode, and game materials on a part with EDGEmat's buttons: https://edgemodders.ai/wiki/edgefab/
 - Wiki: EDGEmat follows 0.3.3: a prop's parts on the Desk (a game surface in a color, a game material such as glass or a glow, or back to the model's texture), zoom on the setup editor's map, View in 3D with each layer's surface and grain, bumps on clothing laid over its folds, Pack and Play in place of Pack and Try, and the new tools for assistants: https://edgemodders.ai/wiki/edgemat/desk.html#a-props-parts
 - Wiki: REDnode caught up with 0.65.3 and 0.67.3: app keys, the pause menu, the Pins window and the launcher's filter for players; who may call a mod's tools (the Mod Manager's Calls, the Admin Tools 0.2.0 MODS switch); for mod makers the weather, animations on spawned people, the world's own objects (experimental) and the controller: https://edgemodders.ai/wiki/rednode/

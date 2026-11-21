@@ -13,7 +13,7 @@ reviewed: 2026-11-21
 
 **EDGE Director** is EDGEdir's app in the game. It opens the scenes on your Desk and plays them on real people: it spawns each actor, starts them on their first animation, and moves each to their next one on time. It works with VS Code open or closed.
 
-**Only the first steps have run in the game so far.** On 2026-11-20 EDGE Director started in the game, listed the Desk, and played a scene of two people through, on time and on the right sides. Everything else on this page is built and was run against a stand-in for the game: where it says what you will see in the game, read it as what is meant to happen. The pictures of the window here were taken outside the game.
+**Only the first steps have run in the game so far.** On 2026-11-20 EDGE Director started in the game, listed the Desk, and played a scene of two people through, on time and on the right sides. Everything else on this page is built and was run, by script, against a stand-in for the game: where it says what you will see in the game, read it as what is meant to happen. The pictures of the window here were taken outside the game.
 
 {% include shot.html src="/assets/shots/edgedir/director-in-game.png" caption="EDGE Director over the game" shows="The game with EDGE Director's window at the right, a scene open and playing: two people in front of V acting their clips, the playhead running on the window's strip." %}
 
@@ -62,7 +62,7 @@ When you save a scene in VS Code, the window shows the change within a few secon
 |---|---|
 | **Play** | Plays the scene from the playhead's moment. The line reads what it is doing: writing the animations, spawning the people, starting the cast, playing |
 | **Pause** | Holds the scene: everybody stands still mid-movement and the playhead stops. The button reads **Resume**, which goes on from there. Untested in the game |
-| **Stop** | Removes the people, the set and the scene's pins, and gives the weather back |
+| **Stop** | Removes the people and the set, takes the chosen actor's pin away, and gives the weather back. The scene's own pins stay drawn until you go back to Scenes |
 | **Start Again** | Sends the cast back to their first clips. Nobody is removed or spawned again, so it is quick |
 | **Loop** | The scene starts again by itself at its end |
 | The playhead | Drag it on the strip's ruler. While the scene plays, the cast jumps to that moment and plays on. With nothing playing, the next Play starts there |
@@ -92,7 +92,7 @@ The scene editor's toolbar has **Play in Game**. It plays the scene through EDGE
 |---|---|
 | Before it plays | EDGEdir lists what the game will not match and asks **Play Anyway**. It asks again only when the list changes |
 | While it plays | The button reads **Stop in Game**, the line beside it says how the play goes, and the editor's playhead runs with the game |
-| Unsaved changes | They play too: VS Code sends the scene as it is in the editor |
+| Unsaved changes | They play too: VS Code sends the scene as it is in the editor. (EDGE Director's own **Play** plays the scene as it was last saved) |
 | EDGE Director's window | Shows the same play, marked "from VS Code" |
 | When EDGE Director is missing or too old | EDGEdir says so and offers its download. It never copies anything into the game folder itself |
 

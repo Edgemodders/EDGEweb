@@ -3,7 +3,7 @@ title: Getting started
 section: Start here
 order: 1
 description: "The three ways into EDGE, which tool to use for what, what you need before you start, and how each tool installs today."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Getting <span class="y">started</span>
@@ -40,6 +40,7 @@ REDagent and EDGEchat are both AI assistants. The difference is where they are a
 | Change one of the game's quickhacks, or make a new one | [EDGEhack](edgehack/) | [Install and set up EDGEhack](edgehack/install.html), then [Change a game quickhack](edgehack/edit-quickhack.html) |
 | Change how something in the game sounds | [EDGEwave](edgewave/) | [Install and set up EDGEwave](edgewave/install.html), then [Tutorial: your first sound mod](edgewave/tutorial.html) |
 | Read the game's quests, or write a small quest of my own | [EDGEquest](edgequest/) | [Install and set up EDGEquest](edgequest/install.html), then [Your first quest](edgequest/first-quest.html) |
+| Make the game's people act out a scene | [EDGEdir](edgedir/) | Not released yet: read [what it is](edgedir/), then [build it from its source](edgedir/install.html) and make [your first scene](edgedir/first-scene.html) |
 | Place objects in the game world and build a scene | [EDGEbuilder](edgebuilder/) | [Install and set up EDGEbuilder](edgebuilder/install.html), then [Your first scene](edgebuilder/first-scene.html) |
 | Look inside the game's files and change them by hand: a name, a texture, a stat | [REDcode](redcode/) | [Install and set up REDcode](redcode/install.html), then [Your first mod](redcode/first-mod.html) |
 | Find out why a mod doesn't work | [EDGEdeck](edgedeck/), or [EDGEchat](edgechat/) | [Conflicts and who wins](edgedeck/conflicts.html), or ask Claude: [When a mod doesn't work](edgechat/check-mod.html) |
@@ -73,6 +74,7 @@ A few optional features use an AI service with your own key. The [FAQ](faq.html#
 | EDGEhack | Open VSX, Nexus Mods and GitHub. Not on the VS Code Marketplace yet | In VS Code, from the downloaded file: [Install EDGEhack](edgehack/install.html#install-edgehack). Not needed in the EDGEkit app |
 | REDnode, REDagent, EDGEbuilder | A zip from Nexus Mods or GitHub | Into the game folder, with EDGEdeck or Vortex, or by hand |
 | REDbridge | GitHub | EDGEdeck, REDcode and REDnode download it for you |
+| EDGEdir | Not released yet: its source on [GitHub](https://github.com/Edgemodders/EDGEdir) | Built from source for now: [Install and set up EDGEdir](edgedir/install.html) |
 | EDGEchat | From inside Claude Code | One button in EDGEkit, or Claude Code's plugin dialog |
 
 All of them are young. Each tool's Overview page has a **Status** section that says what is released, what was tested in the game and what is still planned.

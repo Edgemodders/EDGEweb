@@ -11,7 +11,7 @@ reviewed: 2026-11-21
 
 **EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
-A reference for EDGEdir 0.0.29 and EDGE Director 0.6.0.
+A reference for EDGEdir 0.0.30 and EDGE Director 0.6.1.
 
 | On this page | |
 |---|---|

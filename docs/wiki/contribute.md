@@ -40,4 +40,4 @@ reviewed: 2026-11-13
 
 Put `description` in quotes, and any other value that contains a colon followed by a space. Without the quotes the page breaks and drops out of the sidebar.
 
-`section` is the sidebar group, one of: Start here, REDagent, EDGEchat, REDnode, REDcode, EDGEdeck, REDbridge, EDGEbuilder, EDGEwave, EDGEmat, EDGEquest, EDGEhack, EDGEkit. `order` sorts pages within it. `reviewed` is the date the page was last checked against the tool's docs.
+`section` is the sidebar group, one of: Start here, REDagent, EDGEchat, REDnode, REDcode, EDGEdeck, REDbridge, EDGEbuilder, EDGEwave, EDGEmat, EDGEfab, EDGEquest, EDGEhack, EDGEdir, EDGEkit. `order` sorts pages within it. `reviewed` is the date the page was last checked against the tool's docs.

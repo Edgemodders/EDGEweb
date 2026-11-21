@@ -35,7 +35,7 @@ More toolkits build on those five for particular jobs:
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE editor tools built in. Or an extension pack that installs them in VS Code | App 1.140.6 and pack 0.6.0, both previews |
 | Materials | [EDGEmat](edgemat/) | A material editor. Recolor clothes layer by layer, or make a new material by describing it | 0.3.3, a preview |
 | Props | [EDGEfab](edgefab/) | An asset maker. Turn a 3D model, or your own words, into a prop the game can use, and place it with EDGEbuilder | 0.1.0, a preview |
-| Scenes with people | [EDGEdir](edgedir/) | A director's tool. Lay out what the game's people do on a timeline, watch it in 3D, and play and adjust it in the running game | 0.0.29, not released yet; first steps run in the game |
+| Scenes with people | [EDGEdir](edgedir/) | A director's tool. Lay out what the game's people do on a timeline, watch it in 3D, and play and adjust it in the running game | 0.0.30, not released yet; first steps run in the game |
 | Quickhacks | [EDGEhack](edgehack/) | A quickhack editor. Read any quickhack in plain words, change it, or make new ones and try them in the running game | 0.1.2, a preview |
 | Sound | [EDGEwave](edgewave/) | A sound studio. Find a game sound, cut, fade and mix it, and put your version into the game | 0.2.0, a preview |
 | Quests | [EDGEquest](edgequest/) | A quest maker. Read the game's quests in plain words, and write a small quest of your own as a short story | 0.1.1, a preview |
@@ -61,6 +61,7 @@ Together, the toolkits add up to these. Each toolkit's Overview says why you mig
 | **Simple mod management** | One list and four things to learn: add, turn on or off, deploy, remove. Conflicts are shown even inside mod archives. The frameworks most mods need come in one click, and Vortex mods can be imported | [EDGEdeck](edgedeck/) |
 | **Materials and sound in plain controls** | Recolor a garment layer by layer, or make a new material from your words. Cut, fade and mix a game sound and hear your version in the game | [EDGEmat](edgemat/), [EDGEwave](edgewave/) |
 | **Quickhacks in plain words** | Every tier's cost, upload time, damage and effects, read from your own game. Change them, or make new quickhacks, and try them in the running game | [EDGEhack](edgehack/) |
+| **Direct the game's people** | Lay out what the game's own characters do on a timeline, watch it in 3D with no game running, then play it in the running game and adjust it where you stand. Not released yet, and mostly untested in the game | [EDGEdir](edgedir/) |
 | **Quests in plain words** | Read any of the game's quests as steps and lines, and write a small quest of your own as a story with places, choices and music | [EDGEquest](edgequest/) |
 | **Build where you see it** | Place the game's own objects and people in the running game by dragging them, with a free camera, instead of typing coordinates. Bake a scene into a mod | [EDGEbuilder](edgebuilder/) |
 | **One install** | The EDGEkit app comes with the editor tools built in and keeps them updated. The tools that run in the game install separately | [EDGEkit](edgekit/) |

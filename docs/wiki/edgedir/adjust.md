@@ -13,7 +13,7 @@ reviewed: 2026-11-21
 
 The 3D preview is good for timing. Where people should stand is easier to judge in the place itself. EDGE Director lets you put that right while you stand there: each change is saved into the scene's file at once, and the scene open in VS Code follows.
 
-**Untested in the game**, like the rest of EDGE Director. Moving a person while they play an animation is one of the things the first tests must show.
+**Untested in the game**, like most of EDGE Director; its steps passed by script against a stand-in for the game. Moving a person while they play an animation is one of the things the first tests must show.
 
 {% include shot.html src="/assets/shots/edgedir/director-adjust.png" caption="Adjust and Pins in EDGE Director" shows="EDGE Director's window with an actor chosen: the header says the scene is at the pin Stairs; Adjust shows the actor's mark with Move to V, Left, Right, Forward, Back and the two Turn buttons; Pins lists two pins with what follows each, their distance, and Go There, the actor Here, Scene Here, Drop Again and Remove." %}
 
@@ -107,7 +107,7 @@ There is one scene file, and both tools change it.
 | When | What happens |
 |---|---|
 | EDGE Director changes a scene that is open and saved in VS Code | The editor shows the change by itself |
-| The scene has unsaved changes in VS Code | EDGE Director shows a yellow box. It still plays the scene, with the unsaved changes, but its Adjust and Pins buttons are off until you save. So neither tool overwrites the other |
+| The scene has unsaved changes in VS Code | EDGE Director shows a yellow box within a few seconds. Its own **Play** still plays the scene, as it was last saved; its Adjust and Pins buttons and The Scene Is Here are off until you save. So neither tool overwrites the other. (**Play in Game** in VS Code plays the unsaved changes: see [Playing in the game](director.html#play-in-game-from-vs-code)) |
 | VS Code is closed | EDGE Director changes the file; VS Code sees it when it next opens the scene |
 
-That VS Code's editor shows a change from the game at once, and that Undo there takes it back, has not been checked yet.
+Against a stand-in for the game, a test by script showed both on 2026-11-21: a change made in EDGE Director's window appeared in the open, saved editor with no click and left the tab saved, and **Ctrl+Z** there took it back. Not checked in the game yet.
