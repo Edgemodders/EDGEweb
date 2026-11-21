@@ -3297,7 +3297,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C2",
-      "title": "Chooms!: the game's story (code parts built, waiting on the owner's test; knowledge cards not started)",
+      "title": "Chooms!: the game's story (code parts built and tested 2026-11-21, one step to check again after a fix; knowledge cards not started)",
       "status": "in progress"
      },
      {
@@ -3325,7 +3325,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The owner's C2 code test (9 steps) and the C2 knowledge cards",
+     "The C2 code test's steps 7 and 9 checked again, and the C2 knowledge cards",
      "C3: people and corporations post by themselves through REDagent",
      "Nexus pages for EDGEmobile and Chooms!",
      "A first run of the release workflow",
@@ -3336,9 +3336,9 @@ window.EDGE_STATUS = {
     {
      "name": "C2 code test (Chooms! reads the save's story)",
      "steps": 9,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Waiting for the owner, on the two scanned Corpo saves"
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Run 2026-11-21 on the laptop: steps 1 to 8 passed; step 9 found a bug (the Story tab not told on a switch back to a playthrough read before), fixed the same day; steps 7 and 9 to check again"
     },
     {
      "name": "C1 (Chooms! with hand-written posts)",
@@ -3384,7 +3384,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "The C2 code test, 9 steps, with log lines and the read time",
+     "what": "The C2 code test's steps 7 and 9 again, after the Story tab fix",
      "ref": "docs/design.md, C2"
     },
     {
@@ -3394,19 +3394,18 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the C2 code test: mostly in the game, steps 3 to 6 on the phone",
+    "Check the C2 code test's steps 7 and 9 again (load one save, then the other and back; the Story tab follows)",
     "Review the knowledge cards once drafted",
     "Create the Nexus pages for EDGEmobile and Chooms!",
     "Optional: photo mode pictures for Chooms!'s people and places (for C4)"
    ],
    "risks": [
     "Never tested on an iPhone, only Android",
-    "Only Corpo saves tested; some character ids are unverified (River, Kerry's contact)",
+    "Only Corpo saves tested (the story read takes under 2 seconds in the game); some character ids are unverified (River, Kerry's contact)",
     "Relies on Cloudflare quick tunnels: a private web address",
-    "How long the story read takes in the game is unverified (about 350 calls)",
-    "A game patch that renames quest paths would need Chooms!'s story file updated"
+        "A game patch that renames quest paths would need Chooms!'s story file updated"
    ],
-   "checkedBy": "EDGEmobile session, 2026-11-16"
+   "checkedBy": "EDGEmobile session, 2026-11-21"
   },
   {
    "name": "EDGEmods",
