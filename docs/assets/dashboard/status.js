@@ -1783,7 +1783,7 @@ window.EDGE_STATUS = {
      {
       "id": "#12",
       "title": "Shared keys: the ElevenLabs key from REDcode's key store (its pilot)",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "A4",
@@ -1806,7 +1806,6 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "#13 speakLine with timings: built 2026-11-20, the smoke test and hand test to run",
-     "#12 Shared keys: built 2026-11-21; unit tests and a script against REDbridge 0.18.0 pass; the owner's hand test to run (REDcode releases its key store after it)",
      "Desk, Project and Library: built and hand-tested 2026-11-16; the smoke test still to run on it, with the PC left alone",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
@@ -1865,9 +1864,9 @@ window.EDGE_STATUS = {
     {
      "name": "Shared keys (#12)",
      "steps": 5,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Built 2026-11-21. F5 > Run EDGEwave with REDcode main, REDbridge 0.18.0: moved, asked, read by the MCP server, changed, cleared (docs/testing.md, Shared keys)"
+     "note": "2026-11-21, first round, steps 1 to 5: moved, asked, read by the MCP server, changed, cleared; lifts the hold on REDcode's store releases"
     }
    ],
    "ownerSpotTests": [],
@@ -1879,7 +1878,6 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the Shared keys hand test (#12, 5 steps, F5 with REDcode main and REDbridge 0.18.0): REDcode releases its key store only after it passes",
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
