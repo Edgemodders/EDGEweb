@@ -3551,7 +3551,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "R3d",
-      "title": "Downloads, Downloaded mods, free monthly limit, first Admin page",
+      "title": "Downloads, Downloaded mods, first Admin page",
       "status": "built, tests pending"
      },
      {
@@ -3652,8 +3652,7 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Review and agree design draft 0.2 and the edgemods.json format",
     "Decide the subscription price and the free download speed",
-    "Get a legal reading on non-commercial mod licences before launch",
-    "Decide whether a subscription lifts the free monthly download limit (CD Projekt RED allows no paywalls on mods), before R3f"
+    "Get a legal reading on non-commercial mod licences before launch"
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
