@@ -3319,7 +3319,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C2",
-      "title": "Chooms!: the game's story (code parts built, passed in the game 2026-11-21; knowledge cards next)",
+      "title": "Chooms!: the game's story (code parts passed in the game 2026-11-21; knowledge cards for the main cast drafted 2026-11-21, waiting for the owner's review)",
       "status": "in progress"
      },
      {
@@ -3362,9 +3362,9 @@ window.EDGE_STATUS = {
     {
      "name": "Share a post (Chooms! on a real phone)",
      "steps": 6,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-21: the phone's share sheet with the post as a picture; Android"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-21 on Android: the phone's share sheet with the post as a picture"
     },
     {
      "name": "C2 code test (Chooms! reads the save's story)",
@@ -3417,8 +3417,8 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "The share test on Android, 6 steps",
-     "ref": "docs/design.md, Sharing a post"
+     "what": "A review of the knowledge cards (45 cards, 7 people, chooms/rednode/cards/)",
+     "ref": "docs/design.md, C2: the knowledge cards"
     },
     {
      "who": "REDagent",
@@ -3427,8 +3427,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the share test on Android (6 steps)",
-    "Review the knowledge cards once drafted",
+    "Review the knowledge cards in chooms/rednode/cards/ (five lines flagged as least certain in docs/design.md)",
     "Create the Nexus pages for EDGEmobile and Chooms!",
     "Drop photo mode pictures into Chooms!'s dossiers (chooms/dossiers/) when you have them (for C4)"
    ],
