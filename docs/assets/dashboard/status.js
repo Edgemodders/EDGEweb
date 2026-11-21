@@ -1071,13 +1071,18 @@ window.EDGE_STATUS = {
      "who": "EDGEwave",
      "what": "K4c: the key pilot on REDcodeApi.keys (its extension, its MCP server, its saved ElevenLabs key)",
      "ref": "https://github.com/Edgemodders/EDGEwave/issues/12"
+    },
+    {
+     "who": "EDGEmat",
+     "what": "Sector materials M2: say which game mesh a Desk change is for, and render the world's multilayered materials (flat grey now)",
+     "ref": "https://github.com/Edgemodders/EDGEmat/issues/17"
     }
    ],
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)",
-    "Sector materials: run the M1 hand test (docs/testing.md); say yes to posting the M2 request to EDGEmat and the package note on EDGEbuilder #8"
+    "Sector materials: run the M1 hand test (docs/testing.md), with the game closed"
    ],
    "risks": [
     "REDbridge answers one call at a time"
