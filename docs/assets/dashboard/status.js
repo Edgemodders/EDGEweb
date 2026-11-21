@@ -1757,6 +1757,11 @@ window.EDGE_STATUS = {
       "status": "done"
      },
      {
+      "id": "#13",
+      "title": "speakLine with ElevenLabs timings, for EDGEfab Lip Sync",
+      "status": "built, tests pending"
+     },
+     {
       "id": "A4",
       "title": "Index: sound banks, full search",
       "status": "planned"
@@ -1776,7 +1781,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "EDGEwave #13 speakLine with timings: asked by EDGEfab 2026-11-20, plan proposed, not built",
+     "#13 speakLine with timings: built 2026-11-20, the smoke test and hand test to run",
      "Desk, Project and Library: built and hand-tested 2026-11-16; the smoke test still to run on it, with the PC left alone",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
@@ -1824,6 +1829,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-16, one round, steps 1 to 15; four findings fixed during it. A step 16 (Reveal in File Explorer) was added after and is still to run"
+    },
+    {
+     "name": "Speaking a line with timings (#13)",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Steps 2 and 3 need EDGEfab's Lip Sync call; the real check of the timings passed by script 2026-11-20"
     }
    ],
    "ownerSpotTests": [],
@@ -1835,10 +1847,10 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Agree the plan for EDGEwave #13 (speakLine with ElevenLabs timings, for EDGEfab Lip Sync), and allow a few credits for the real check",
-    "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test on the Desk and Library",
+    "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
-    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat"
+    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
+    "Run the #13 hand test (docs/testing.md, Speaking a line with timings) once EDGEfab's Lip Sync calls speakLine"
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)",
