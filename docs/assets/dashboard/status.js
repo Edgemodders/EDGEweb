@@ -908,7 +908,7 @@ window.EDGE_STATUS = {
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
      "Animations A3 (#21): hand test passed 2026-11-20 on REDbridge 0.17.0; ready for the next release",
      "Replace with a WAV, Replace All, #29 and #32: hand tests passed 2026-11-20; ready for the next release",
-     "Sector view and #31: hand test passed 2026-11-20 (steps 1 to 10b); its three asked-for changes built, retest R1 to R3 waits on the owner",
+     "Sector view and #31: hand test passed 2026-11-20 (1 to 10b, R1 to R3); R4 and R5 (tree reveal past 200, Add to Project in the header) wait on the owner",
      "Edit in Blender fix for skinned meshes on main (8624c65, from the REDnode session), hand test (4 steps) waits on the owner"
     ]
    },
@@ -1006,10 +1006,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "Sector view (and #31 light)",
-     "steps": 14,
+     "steps": 16,
      "status": "partly run",
      "ranBy": "the owner",
-     "note": "Steps 1 to 10b passed 2026-11-20 with two fixes (the mesh cache folder name; one 3D view at a time). Three changes the owner asked for are built (Coarser levels progress; the 3D view kept across Tree and back): retest R1 to R3 not run"
+     "note": "Steps 1 to 10b and R1 to R3 passed 2026-11-20. R4 (Show in Tree past entry 200) and R5 (Add to Project in the header), built the same day, not run"
     }
    ],
    "ownerSpotTests": [],
@@ -1027,7 +1027,7 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Retest the Sector view changes R1 to R3 (Coarser levels progress; 3D kept across Tree and back)",
+    "Retest the Sector view R4 and R5 (Show in Tree past entry 200; Add to Project in the header)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the Edit in Blender: skinned meshes hand test (4 steps)"
    ],
