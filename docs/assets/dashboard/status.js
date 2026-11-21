@@ -3404,8 +3404,8 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDagent",
-     "what": "For C3, not blocking today: a choice of model in agent.ask; no issue filed yet",
-     "ref": "docs/design.md"
+     "what": "REDnode #54 (filed 2026-11-21): more context and no tools in agent.ask for C3, a choice of model for C5; not blocking today",
+     "ref": "https://github.com/Edgemodders/REDnode/issues/54"
     }
    ],
    "ownerActions": [
