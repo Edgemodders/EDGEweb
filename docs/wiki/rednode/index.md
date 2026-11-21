@@ -85,7 +85,7 @@ REDnode is the **Run** stage of the EDGE platform.
 
 ## Status
 
-**Released.** The current version is **0.67.3** (2026-11-18), for **game version 2.5**. For a game kept on 2.31, use REDnode 0.37.0, the last release for it.
+**Released.** The current version is **0.68.2** (2026-11-21), for **game version 2.5**. For a game kept on 2.31, use REDnode 0.37.0, the last release for it.
 
 Get it from [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419) or [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) on GitHub, then follow [Install and set up](install.html).
 
@@ -93,8 +93,8 @@ REDnode is still young. "Passed in game" on these pages means the developer test
 
 | | |
 |---|---|
-| **New in the latest releases** | A key of your own for any app, and REDnode stepping aside in the pause menu (0.67.3). You choose which mods may call another mod's tools (0.67.3). Mods can set the weather and animate the people they spawn (0.67.3). A **Pins** window, a filter box in the launcher, and the controller in mods (0.65.3). [EDGEhack](../edgehack/assistants.html)'s quickhack tools for REDagent (0.65.3) |
-| **Coming next** (agreed, not built yet) | A dropdown for windows that Node mods build. Loading only some kinds of objects from an EDGEbuilder scene |
+| **New in the latest releases** | A dropdown for the windows Node mods build and for pages, each app's version beside its title, and a Mod log you can resize (0.68.2). A key of your own for any app, and REDnode stepping aside in the pause menu (0.67.3). You choose which mods may call another mod's tools (0.67.3). Mods can set the weather and animate the people they spawn (0.67.3). A **Pins** window, a filter box in the launcher, and the controller in mods (0.65.3). [EDGEhack](../edgehack/assistants.html)'s quickhack tools for REDagent (0.65.3) |
+| **Coming next** (agreed, not built yet) | Loading only some kinds of objects from an EDGEbuilder scene, and calls from editors into mods' services |
 | **Planned** | Clicks and typing on panels the game draws itself. HDR, frame generation and ultrawide screens. TweakDB without the game running |
 
 What each release added is in the [changelog](https://edgemodders.github.io/REDnode/changelog.html). Part by part, see [What works today](#what-works-today).

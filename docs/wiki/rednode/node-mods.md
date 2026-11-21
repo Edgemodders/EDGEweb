@@ -149,6 +149,7 @@ You should see a window with a heading, a switch, a slider, a text field, two bu
 | `ui.toggle(label, onChange, { checked })` | An on and off switch | `true` or `false` |
 | `ui.slider(label, onChange, { min, max, step, value, unit, live })` | A slider | The number, when the player lets go. With `live: true`, also while they drag, about 20 times a second |
 | `ui.input({ label, placeholder, value, onChange, onSubmit, password })` | A text field. `password: true` shows dots, for a key | The text: `onChange` as it changes, `onSubmit` on Enter |
+| `ui.select(label, options, { value, placeholder, disabled, onChange })` | A dropdown. `options` are texts, or `{ value, label, disabled }` | The chosen option's value. Since REDnode 0.68.2 |
 | `ui.progress(value, { label, max })` | A progress bar | |
 | `ui.list({ lines, keep, height, follow })` | A list of lines that scrolls, for a log or a live feed. `push(...lines)` adds lines at the bottom and `clear()` empties it. `keep` is how many lines it holds (500 if left out) | |
 | `ui.image(src, { width, alt, onClick })` | A picture (PNG, JPEG, WebP or GIF) from your package's folder or its data folder | Nothing |

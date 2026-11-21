@@ -44,6 +44,7 @@ REDnode's settings are in the **Settings** drawer: press F10, open the launcher 
 | **Developer mode** | off | Adds a debug button to every window's title bar, and shows the [Development folders](#development-folders) list | You're [debugging](debugging.html) or making a package |
 | **Open at start** | on | On: the REDNODE tab and your HUD-pinned windows show as soon as the game starts. Off: the game starts with only HUD widgets showing, and the tab and pinned windows wait for your first F10 | You want a clean screen at start |
 | **Tooltips** | on | Hints when you hover a control, in every window | You know REDnode well and they get in the way |
+| **Versions in title bars** | on | Each app's version, dimmed, beside its window's title (since 0.68.2) | You report a bug and want the version at a glance, or you'd rather not see it |
 | **Hide in the pause menu** | on | Hides REDnode's windows, HUD widgets and tab while the game's pause menu is open. They come back as they were when it closes, and F10 still brings REDnode up there. See [In the pause menu](overlay.html#in-the-pause-menu) | You want your windows on screen in the pause menu |
 
 The bottom of the launcher itself has:

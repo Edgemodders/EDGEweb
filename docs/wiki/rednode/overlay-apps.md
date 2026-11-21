@@ -137,6 +137,7 @@ The UI kit is a set of ready-made widgets in the EDGE look, written as HTML tags
 | `rn-window` | A window with a title bar and a close button |
 | `rn-panel` | A titled section |
 | `rn-button` | A button. `variant="ghost"` is quiet, `variant="danger"` is red |
+| `rn-select` with `rn-option` | A dropdown. Its list opens inside the page, and Esc closes it. Since REDnode 0.68.2 |
 | `rn-toggle`, `rn-slider`, `rn-input` | A switch, a slider, a text field. `<rn-input clearable>` shows a **✕** in the field that empties it |
 | `rn-list` with `rn-item`, `rn-menu` with `rn-menu-item`, `rn-tabs` with `rn-tab` | Lists, menus and tabs |
 | `rn-progress`, `rn-tooltip`, `rn-notification` | A progress bar, a tooltip, a pop-up message |
@@ -157,6 +158,7 @@ Each widget tells your script when the player changes it, with an ordinary event
 | `rn-input` | `input` as you type, `change`, and `submit` on Enter | `e.detail.value`, or its `value` property |
 | `rn-list`, `rn-menu` | `select` | `e.detail.value`: the chosen item's `value` |
 | `rn-tabs` | `change` | `e.detail.index`, `e.detail.label` |
+| `rn-select` | `change` | `e.detail.value`, or its `value` property |
 
 A small window that uses them. Put it in the `<body>` of a page like the first app's:
 

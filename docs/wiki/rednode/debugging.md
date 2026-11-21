@@ -39,6 +39,7 @@ The **Mod log** is a built-in window with every line every Node mod prints, live
 | **Clear** | Empty the window |
 | **Copy** | Put the lines shown on the clipboard, ready to paste into a bug report or a chat with Claude |
 | **✕** | Close the Mod log |
+| The grip at its lower right corner | Make it larger or smaller (since 0.68.2). Its size is kept across starts |
 
 Errors are red, and a crash shows only the lines from the mod's own code, so you see the file and line that broke. The same lines are in the file `red4ext\logs\rednode-mods.log` in the game folder, each tagged with the mod's id.
 

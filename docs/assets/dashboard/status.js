@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.68.2 (test build; 0.67.3 released 2026-11-18)",
+   "version": "0.68.2",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -685,11 +685,12 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.68.2",
+    "version": null,
     "needs": [
      "The resizable Mod log's step 3, kept across a restart (docs/overlay.md, Mod log: resizable (0.68.1))",
      "Versions in title bars' in-game test (docs/overlay.md, Versions in title bars (0.68.2))"
-    ]
+    ],
+    "note": "0.68.2 released 2026-11-21; next: the WL build (#48, #49, #50 part 3)"
    },
    "handTests": [
     {
@@ -788,11 +789,6 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Run Versions in title bars' test on 0.68.2 and the Mod log's step 3 at the next restart (deploy 0.68.2 first)",
-     "ref": "docs/overlay.md, Versions in title bars (0.68.2)"
-    },
-    {
-     "who": "owner",
      "what": "Talk through semi-native apps before its first spike starts",
      "ref": "docs/semi-native.md"
     }
@@ -805,7 +801,7 @@ window.EDGE_STATUS = {
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-19"
+   "checkedBy": "REDnode session, 2026-11-21"
   },
   {
    "name": "REDcode",
@@ -1075,7 +1071,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
-   "version": "0.15.0",
+   "version": "0.18.0",
    "lastTag": "v0.14.0",
    "lastTagDate": "2026-11-16",
    "lastCommit": "2026-11-16",
@@ -1150,7 +1146,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K4a",
-      "title": "keys.* on the shared key store, decrypted in .NET, off unless started with --keys; on main, for REDcode's Keys (REDcode #33)",
+      "title": "keys.* on the shared key store, decrypted in .NET, off unless started with --keys; released in 0.18.0 on 2026-11-21, for REDcode's Keys (REDcode #33)",
       "status": "built, tests pending"
      }
     ]
@@ -1242,7 +1238,7 @@ window.EDGE_STATUS = {
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
    ],
-   "checkedBy": "REDnode session, 2026-11-20"
+   "checkedBy": "REDnode session, 2026-11-21"
   },
   {
    "name": "EDGEdeck",

@@ -63,7 +63,7 @@ REDbridge needs Microsoft's free .NET 10 runtime. EDGEdeck and REDnode install i
 
 ## Status
 
-**Released.** The latest is REDbridge 0.14.0 (2026-11-16), for game 2.5, built with WolvenKit 10.0.0-beta.1. 0.13.0 exports a character or vehicle in one look on its skeleton, and animations with their movement; 0.14.0 reads the game's animations without unpacking them and exports only the clips a tool asks for, for EDGEdir's animation index. It is on [GitHub](https://github.com/Edgemodders/REDbridge/releases), and the tools fetch it from there.
+**Released.** The latest is REDbridge 0.18.0 (2026-11-21), for game 2.5, built with WolvenKit 10.0.0-beta.1. 0.18.0 keeps the EDGE tools' shared AI service keys, for REDcode's Keys view: only a tool that asks for the key store when it starts REDbridge can read them, so REDnode's mods cannot. 0.17.0 reads where each member of a synced animation stands, for REDcode's synced sets, and fixes animations that collapsed to one point or moved too fast. 0.16.0 removes things such as doors from the game's own world, for EDGEbuilder. 0.15.0 imports animations from Blender. 0.14.0 reads the game's animations without unpacking them, for EDGEdir's animation index. It is on [GitHub](https://github.com/Edgemodders/REDbridge/releases), and the tools fetch it from there.
 
 | | |
 |---|---|
