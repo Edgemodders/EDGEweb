@@ -3023,7 +3023,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.29",
+   "version": "0.0.30",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -3106,8 +3106,8 @@ window.EDGE_STATUS = {
     "version": "first release",
     "needs": [
      "The owner's Tests A to D (in VS Code, about 45 minutes): none run",
-     "The owner's Tests E to H (in the game, with EDGE Director; about 70 minutes): none run",
-     "Five rounds by script, none run: DR1 The Director's window (13 steps), DR2 Adjust (12), DR3 Pins (10), DR3 Pins in the editor (10), D6a Weather (11)",
+     "The owner's Tests E to H (in the game, with EDGE Director; about 70 minutes): E partly run (E1, E2, E3, E5 pass), the rest not run",
+     "A rerun by script of the fixes in 0.0.30 with EDGE Director 0.6.1: DR1's steps 6 and 12, D6a's 3, 4, 6 and 11, DR3 Pins in the editor's 10, DR2's 10; and D5d's step 3 in its no Director case",
      "GitHub setup: the social preview; whether the publish secrets reach the repo is unchecked (Pages is on since 2026-11-18)",
      "A Nexus page",
      "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
@@ -3181,7 +3181,7 @@ window.EDGE_STATUS = {
      "name": "D5d Play in game, in VS Code",
      "steps": 13,
      "status": "partly run",
-     "note": "13 of 13 on 0.0.22 and the fix of 0.0.23, against a stand-in. Step 3 changed in 0.0.24 (EDGEdir no longer copies its player into the game; it offers EDGE Director's download): not run",
+     "note": "13 of 13 on 0.0.22 and the fix of 0.0.23, against a stand-in. Step 3 as changed in 0.0.24: the case with EDGE Director in the game's folder and not running passed on 2026-11-21; the case with no EDGE Director (the download offered) was not met",
      "ranBy": "script"
     },
     {
@@ -3193,32 +3193,37 @@ window.EDGE_STATUS = {
     {
      "name": "DR1 The Director's window",
      "steps": 13,
-     "status": "not run",
-     "note": "With a stand-in for the game, in a browser and VS Code; on 0.0.24 with EDGE Director 0.2.0"
+     "status": "failed",
+     "ranBy": "script",
+     "note": "12 of 13 on 0.0.29 with EDGE Director 0.6.0 (2026-11-21): step 12 missed the In the game tag for a play from VS Code. Fixed in EDGE Director 0.6.1, rerun not run"
     },
     {
      "name": "DR2 Adjust",
      "steps": 12,
-     "status": "not run",
-     "note": "With a stand-in for the game, in a browser and VS Code; on 0.0.25 with EDGE Director 0.3.0"
+     "status": "passed",
+     "ranBy": "script",
+     "note": "12 of 12 on 0.0.29 with EDGE Director 0.6.0 (2026-11-21), against a stand-in. One sentence changed in 0.6.1 from its notes"
     },
     {
      "name": "DR3 Pins",
      "steps": 10,
-     "status": "not run",
-     "note": "With a stand-in for the game, in a browser; on 0.0.26 with EDGE Director 0.4.0"
+     "status": "passed",
+     "ranBy": "script",
+     "note": "10 of 10 on 0.0.29 with EDGE Director 0.6.0 (2026-11-21), against a stand-in"
     },
     {
      "name": "DR3 Pins in the editor",
      "steps": 10,
-     "status": "not run",
-     "note": "In VS Code; on 0.0.27"
+     "status": "passed",
+     "ranBy": "script",
+     "note": "10 of 10 on 0.0.29 (2026-11-21). One change from its notes in 0.0.30 (a gone pin named in the scene's place), not run"
     },
     {
      "name": "D6a Weather",
      "steps": 11,
-     "status": "not run",
-     "note": "In VS Code with the game's files, and a stand-in for the game; on 0.0.28 with EDGE Director 0.5.0"
+     "status": "failed",
+     "ranBy": "script",
+     "note": "8 of 11 on 0.0.29 (2026-11-21): steps 3, 4 and 6 found no In the game lines on a weather clip. Fixed in 0.0.30, rerun not run"
     }
    ],
    "ownerSpotTests": [
@@ -3309,9 +3314,9 @@ window.EDGE_STATUS = {
     "The first read of the game is slow: about 3.5 minutes for the animation index",
     "Which way an actor's Turn turns against the game is unverified until D5",
     "How the game's own join at a jump compares with the preview's transitions is not measured yet",
-    "Unverified: that a person in a workspot can be moved while they play (Adjust in the game), and that VS Code takes the Director's change to an open scene at once"
+    "Unverified: that a person in a workspot can be moved while they play (Adjust in the game)"
    ],
-   "checkedBy": "EDGEdir session, 2026-11-20"
+   "checkedBy": "EDGEdir session, 2026-11-21"
   },
   {
    "name": "EDGEmobile",
