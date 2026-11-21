@@ -3551,12 +3551,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "R3d",
-      "title": "Downloads",
-      "status": "planned"
+      "title": "Downloads, Downloaded mods, free monthly limit, first Admin page",
+      "status": "built, tests pending"
      },
      {
       "id": "R3e",
-      "title": "Admin",
+      "title": "Admin: mods, users, blocking, reports",
       "status": "planned"
      },
      {
@@ -3594,7 +3594,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "R3d downloads",
+     "R3d: free-speed downloads through nginx, tested on the server",
      "R3e to R3h: admin, Stripe, webhooks, deploy",
      "The owner agrees design draft 0.2 and the format"
     ]
@@ -3627,6 +3627,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-21"
+    },
+    {
+     "name": "Free-speed downloads through nginx on the server (R3d, deploy/nginx/edgemods-downloads.conf)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Waits for the deploy (R3h)"
     }
    ],
    "ownerSpotTests": [],
@@ -3645,7 +3652,8 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Review and agree design draft 0.2 and the edgemods.json format",
     "Decide the subscription price and the free download speed",
-    "Get a legal reading on non-commercial mod licences before launch"
+    "Get a legal reading on non-commercial mod licences before launch",
+    "Decide whether a subscription lifts the free monthly download limit (CD Projekt RED allows no paywalls on mods), before R3f"
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
