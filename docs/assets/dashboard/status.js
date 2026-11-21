@@ -3339,7 +3339,6 @@ window.EDGE_STATUS = {
      "C5: DMs with Opus",
      "M5: installing on the phone, checked and finished",
      "M4: a sample mobile app and a guide for modders",
-     "Whether CD Projekt RED's fan content rules allow shipping screenshots of its characters",
      "Nexus pages for EDGEmobile and Chooms!",
      "A first run of the release workflow",
      "README status line and badge naming the version"
