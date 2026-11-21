@@ -3546,8 +3546,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "R3c",
-      "title": "Accounts, likes, Profile",
-      "status": "planned"
+      "title": "Accounts, likes, Account page",
+      "status": "done"
      },
      {
       "id": "R3d",
@@ -3594,8 +3594,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "R3c accounts, once the owner sets up the Auth0 tenant",
-     "R3d to R3h: downloads, admin, Stripe, webhooks, deploy",
+     "R3d downloads",
+     "R3e to R3h: admin, Stripe, webhooks, deploy",
      "The owner agrees design draft 0.2 and the format"
     ]
    },
@@ -3620,15 +3620,17 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Listed as still to do"
+    },
+    {
+     "name": "Sign in with GitHub, Google and email on the Auth0 development tenant (R3c)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-21"
     }
    ],
    "ownerSpotTests": [],
    "waitingOn": [
-    {
-     "who": "owner",
-     "what": "Set up the Auth0 development tenant, for R3c",
-     "ref": "docs/auth0-setup.md"
-    },
     {
      "who": "owner",
      "what": "Agree the first request issues (EDGEdeck install from an archive, REDcode publish button)",
@@ -3641,15 +3643,15 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Set up the Auth0 development tenant",
     "Review and agree design draft 0.2 and the edgemods.json format",
     "Decide the subscription price and the free download speed",
     "Get a legal reading on non-commercial mod licences before launch"
    ],
    "risks": [
-    "No commits since 2026-11-03: waiting on the owner's review and the Auth0 tenant",
-    "No release and no live site yet; the design is still a proposal"
-   ]
+    "No release and no live site yet; the design is still a proposal",
+    "Auth0 marks a GitHub sign-in's email unverified, so admin sign-in works through Google or email for now"
+   ],
+   "checkedBy": "EDGEmods session, 2026-11-21"
   },
   {
    "name": "EDGEguide",
