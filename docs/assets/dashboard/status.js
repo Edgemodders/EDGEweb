@@ -1800,6 +1800,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
+     "Released together with the other key tools after K4d (the owner's rule for keys, 2026-11-19), unless the owner decides otherwise",
      "#13 speakLine with timings: built 2026-11-20, the smoke test and hand test to run",
      "Desk, Project and Library: built and hand-tested 2026-11-16; the smoke test still to run on it, with the PC left alone",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
@@ -1870,6 +1871,11 @@ window.EDGE_STATUS = {
      "who": "REDnode",
      "what": "Sound API steps S2 to S4, for the in-game features (A6)",
      "ref": "REDnode docs/sound.md"
+    },
+    {
+     "who": "REDcode",
+     "what": "K4d: EDGEhack, EDGEmat and EDGEfab move to the key API; then every key-using tool is released at once, EDGEwave 0.3.0 and REDcode included (the owner's rule, 2026-11-19)",
+     "ref": "REDcode docs/design/keys.md, Releases"
     }
    ],
    "ownerActions": [
