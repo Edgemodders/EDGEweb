@@ -921,7 +921,7 @@ window.EDGE_STATUS = {
      "steps": 9,
      "status": "not run",
      "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md, Keys (K4b)); needs REDbridge built from main (0.18.0 not released)"
+     "note": "Given to the owner 2026-11-20 (docs/testing.md, Keys (K4b)); uses REDbridge 0.18.0 through Update REDbridge (released 2026-11-21)"
     },
     {
      "name": "Edit in Blender: the warning for objects the import leaves out",
@@ -1042,11 +1042,6 @@ window.EDGE_STATUS = {
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
     },
     {
-     "who": "REDbridge",
-     "what": "0.18.0 release with keys.* (K4a, on main e57f92c); asked of the REDnode session 2026-11-20",
-     "ref": "https://github.com/Edgemodders/REDcode/issues/33"
-    },
-    {
      "who": "EDGEwave",
      "what": "K4c: the key pilot on REDcodeApi.keys (its extension, its MCP server, its saved ElevenLabs key)",
      "ref": "https://github.com/Edgemodders/EDGEwave/issues/12"
@@ -1062,7 +1057,7 @@ window.EDGE_STATUS = {
    "risks": [
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-20"
+   "checkedBy": "REDcode session, 2026-11-21"
   },
   {
    "name": "REDbridge",
