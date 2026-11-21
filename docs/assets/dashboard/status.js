@@ -2778,7 +2778,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "FL",
-      "title": "Lip sync: the Lip Sync tab. Built: a character's lines, the voice, the clip as curves, and the line on a 3D head (EDGEfab's own face solver). Next: Add a Line (typed words, EDGEwave's voice, played on the head)",
+      "title": "Lip sync: the Lip Sync tab. Built: a character's lines, the voice, the clip as curves, the line on a 3D head (EDGEfab's own face solver), a timeline with transport, and Add a Line (typed words, EDGEwave's voice, lip sync made and played on the head). Next: the real voice through it, then finer mouth movement",
       "status": "built, tests pending"
      },
      {
@@ -2791,12 +2791,19 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.1.1",
     "needs": [
-     "0.1.0 released 2026-11-18. Since then, under Unreleased: the Lip Sync tab with a 3D head",
-     "Before any release that carries it: the Lip Sync tab opened in VS Code, with the voice heard and the head seen",
-     "Next work: Add a Line in the tab (typed words, EDGEwave's voice through ElevenLabs, lip sync made and played on the head); the head's textures and eyes; spike LS2 in the game"
+     "0.1.0 released 2026-11-18. Since then, under Unreleased: the Lip Sync tab with a 3D head and Add a Line",
+     "Before any release that carries it: the Lip Sync tab's steps in VS Code (the voice heard, the head seen, a line added with EDGEwave's voice), and EDGEwave's release with speakLine",
+     "Next work: the real voice through Add a Line; V's female head and Change Head; finer mouth movement from audio (Audio2Face-3D); writing a made line into a project; spike LS2 in the game"
     ]
    },
    "handTests": [
+    {
+     "name": "Add a Line in the Lip Sync tab",
+     "steps": 3,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Steps 1 and 2 (words and letter timings to mouth shapes and a clip; the page in a browser) passed 2026-11-20 with made-up timings. Step 3, with EDGEwave's real voice in VS Code, not run"
+    },
     {
      "name": "The head in the Lip Sync tab",
      "steps": 3,
@@ -2872,7 +2879,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "EDGEwave",
-     "what": "The Lip Sync tab's Add a Line waits on it: one line spoken with ElevenLabs' timings (speakLine)",
+     "what": "speakLine is built on EDGEwave's main, not released: Add a Line needs that release (or EDGEwave's build beside EDGEfab's) to work for a modder",
      "ref": "EDGEwave #13"
     },
     {
@@ -2922,7 +2929,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Open EDGEfab: Open Lip Sync in VS Code (F5 after npm run build): pick a character and a line, and say whether the head shows, moves with the voice and turns when dragged",
+    "In VS Code, F5 with \"Run EDGEfab with EDGEwave's build\": open Lip Sync, pick a character, type a new line and press Enter. Say how well the mouth matches the voice. The same pass covers the head, the transport row, dragging the marker and the tab coming back after a reload",
     "Run spike LS2 in the game (Tests page, \"Spike LS2: mouth shapes\"): which of the 13 shapes look like their sounds",
     "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
     "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
