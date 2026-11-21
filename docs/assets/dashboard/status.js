@@ -1948,7 +1948,7 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "View in 3D follows a part's change",
-     "steps": 5,
+     "steps": 6,
      "status": "not run",
      "ranBy": null,
      "note": "Built 2026-11-19: the 3D view redraws after Use a Game Surface, Use a Game Material and Back to the Model's Texture"
@@ -2027,7 +2027,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-19 (View in 3D follows a part's change)"
+   "checkedBy": "EDGEmat session, 2026-11-21 (#16 rule; Reveal in File Explorer)"
   },
   {
    "name": "EDGEquest",
