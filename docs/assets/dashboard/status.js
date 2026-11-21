@@ -685,12 +685,20 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.69.0",
     "needs": [
+     "Hide on a click in the game: its in-game test (6 steps)",
      "The WL build (#48, #49, #50 part 3), then its in-game test"
     ]
    },
    "handTests": [
+    {
+     "name": "Hide on a click in the game, REDnode 0.69.0",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-21; mock check passed (11 checks)"
+    },
     {
      "name": "Versions in title bars, REDnode 0.68.2",
      "steps": 5,
