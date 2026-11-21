@@ -1832,10 +1832,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "Speaking a line with timings (#13)",
-     "steps": 6,
+     "steps": 7,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-21: steps 2 and 3 pass through EDGEfab Lip Sync with a better Panam clone; 1, 4, 5 and 6 to run"
+     "note": "2026-11-21: steps 2 and 3 passed with a Panam clone; the owner then chose no game audio to ElevenLabs: voices are stock or designed from a description; steps 1, 3 (design), 4, 5, 6 and 7 to run"
     }
    ],
    "ownerSpotTests": [],
@@ -1850,7 +1850,7 @@ window.EDGE_STATUS = {
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
-    "Run the rest of the #13 hand test: steps 1, 4, 5 and 6 (docs/testing.md, Speaking a line with timings)"
+    "Run the rest of the #13 hand test: steps 1, 3 and 7 (designing a voice; game audio refused), 4, 5 and 6 (docs/testing.md, Speaking a line with timings)"
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)",
