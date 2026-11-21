@@ -919,9 +919,9 @@ window.EDGE_STATUS = {
     {
      "name": "Keys (K4b)",
      "steps": 9,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md, Keys (K4b)); uses REDbridge 0.18.0 through Update REDbridge (released 2026-11-21)"
+     "status": "passed",
+     "ranBy": "owner, 2026-11-21",
+     "note": "Steps 1 to 8 pass on REDbridge 0.18.0 (the optional step 9 not run). Next for the key API: K4c, EDGEwave's pilot (EDGEwave #12), before any REDcode release with it"
     },
     {
      "name": "Edit in Blender: the warning for objects the import leaves out",
