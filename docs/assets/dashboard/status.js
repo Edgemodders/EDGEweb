@@ -1781,6 +1781,11 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "#12",
+      "title": "Shared keys: the ElevenLabs key from REDcode's key store (its pilot)",
+      "status": "built, tests pending"
+     },
+     {
       "id": "A4",
       "title": "Index: sound banks, full search",
       "status": "planned"
@@ -1801,6 +1806,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "#13 speakLine with timings: built 2026-11-20, the smoke test and hand test to run",
+     "#12 Shared keys: built 2026-11-21; unit tests and a script against REDbridge 0.18.0 pass; the owner's hand test to run (REDcode releases its key store after it)",
      "Desk, Project and Library: built and hand-tested 2026-11-16; the smoke test still to run on it, with the PC left alone",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
@@ -1855,6 +1861,13 @@ window.EDGE_STATUS = {
      "status": "partly run",
      "ranBy": "owner",
      "note": "2026-11-21: steps 2 and 3 passed with a Panam clone; the owner then chose no game audio to ElevenLabs: voices are stock or designed from a description; steps 1, 3 (design), 4, 5, 6 and 7 to run"
+    },
+    {
+     "name": "Shared keys (#12)",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-21. F5 > Run EDGEwave with REDcode main, REDbridge 0.18.0: moved, asked, read by the MCP server, changed, cleared (docs/testing.md, Shared keys)"
     }
    ],
    "ownerSpotTests": [],
@@ -1866,6 +1879,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Run the Shared keys hand test (#12, 5 steps, F5 with REDcode main and REDbridge 0.18.0): REDcode releases its key store only after it passes",
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
