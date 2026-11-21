@@ -4,10 +4,12 @@ nav_title: The scene editor
 section: EDGEdir
 order: 3
 description: "EDGEdir's scene editor in VS Code: the timeline with its tracks and clips, moving, trimming and splitting, the transport, the inspector, the Desk where scenes are kept, and the scene's file."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # The scene <span class="y">editor</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 A scene opens in EDGEdir's own editor. From top to bottom it has the [3D preview](preview.html), the transport and toolbar, and the timeline with the inspector at its right.
 

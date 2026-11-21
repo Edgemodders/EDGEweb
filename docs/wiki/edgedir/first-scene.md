@@ -4,10 +4,12 @@ nav_title: Your first scene
 section: EDGEdir
 order: 2
 description: "A walk-through of EDGEdir in VS Code: make a scene, choose an actor, give them two animations, join them with a transition, and watch it in the 3D preview. About fifteen minutes, with no game running."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Your first <span class="y">scene</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 This walk-through makes a small scene: one of the game's characters does two things in a row, joined so they move as one. It takes about fifteen minutes and needs no game running. You need EDGEdir [installed and the game read](install.html#read-the-game).
 

@@ -4,10 +4,12 @@ nav_title: Weather
 section: EDGEdir
 order: 10
 description: "EDGEdir's weather track: a clip holds one of the game's weathers for as long as it lasts. Adding the track and a clip, choosing a weather and a blend, what the preview shows, and what happens in the game."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # <span class="y">Weather</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 A scene can change the weather. A clip on the **weather track** holds one of the game's weathers, such as rain or fog, for as long as the clip lasts. When the clip ends and no other follows it, the weather goes back to what it was.
 

@@ -4,10 +4,12 @@ nav_title: The 3D preview
 section: EDGEdir
 order: 5
 description: "EDGEdir's 3D preview: each actor's body plays the clip under the playhead, with no game running. Moving the view, what the bodies are, placing actors with marks, and what the preview does not show."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # The 3D <span class="y">preview</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 Above the timeline is a 3D view. Each actor stands there as a plain grey body and plays the clip under the playhead: when you drag the playhead, and when the scene plays. The game does not have to run.
 

@@ -4,10 +4,12 @@ nav_title: Adjusting and pins
 section: EDGEdir
 order: 9
 description: "Putting an EDGEdir scene right while standing in it: moving an actor to where V stands, nudging and turning them, fixing the scene to a spot in the world, and pins, named places that actors and the scene can follow, in the game and in VS Code."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Adjusting and <span class="y">pins</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 The 3D preview is good for timing. Where people should stand is easier to judge in the place itself. EDGE Director lets you put that right while you stand there: each change is saved into the scene's file at once, and the scene open in VS Code follows.
 

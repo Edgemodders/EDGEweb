@@ -4,10 +4,12 @@ nav_title: Transitions and sequences
 section: EDGEdir
 order: 6
 description: "Joining two animation clips with a transition so they move as one (Blend and Inertial, with an ease), what the game does at a join, and sequences: runs of clips stored by themselves and reused on other actors."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Transitions and <span class="y">sequences</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 Two animations placed end to end jump at the join: the body snaps from the last pose of one to the first pose of the next. A **transition** removes the jump. A **sequence** stores a run of clips with their transitions, so you build a movement once and use it again.
 

@@ -4,10 +4,12 @@ nav_title: Sets
 section: EDGEdir
 order: 7
 description: "Playing an EDGEdir scene on a set, an EDGEbuilder scene with its props and people: the Sets view, a new scene on a set, how the scene follows the set, what shows in the preview, and what happens in the game."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # <span class="y">Sets</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 A **set** is the stage a scene plays on. It is a scene made in [EDGEbuilder](../edgebuilder/): props, lights and people placed in the world. The two tools both say "scene" and mean two halves of one thing:
 

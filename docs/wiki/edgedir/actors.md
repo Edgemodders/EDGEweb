@@ -4,10 +4,12 @@ nav_title: Actors and animations
 section: EDGEdir
 order: 4
 description: "Choosing who acts on a track from the game's characters or V, the Animations view with its search and filters, putting an animation on a track, why an animation must fit the actor's rig, and animations made in EDGEfab."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Actors and <span class="y">animations</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 An **actor** is a character of the game chosen for a track. An **animation** is one movement from the game's files. A clip on an actor's track gives one to the other: this person does this, from here to here. Both come from your own game, read once: see [Read the game](install.html#read-the-game).
 

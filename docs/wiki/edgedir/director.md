@@ -4,10 +4,12 @@ nav_title: Playing in the game
 section: EDGEdir
 order: 8
 description: "Playing an EDGEdir scene in the running game with EDGE Director: its window, opening a scene, Play, Stop, Start Again, the playhead and Loop, the cast and Go There, Play in Game from VS Code, and what the game will not play as the preview shows."
-reviewed: 2026-11-20
+reviewed: 2026-11-21
 ---
 
 # Playing in the <span class="y">game</span>
+
+**EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
 **EDGE Director** is EDGEdir's app in the game. It opens the scenes on your Desk and plays them on real people: it spawns each actor, starts them on their first animation, and moves each to their next one on time. It works with VS Code open or closed.
 
