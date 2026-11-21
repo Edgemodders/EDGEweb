@@ -687,10 +687,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The resizable Mod log's step 3, kept across a restart (docs/overlay.md, Mod log: resizable (0.68.1))",
-     "Versions in title bars' in-game test (docs/overlay.md, Versions in title bars (0.68.2))"
-    ],
-    "note": "0.68.2 released 2026-11-21; next: the WL build (#48, #49, #50 part 3)"
+     "The WL build (#48, #49, #50 part 3), then its in-game test"
+    ]
    },
    "handTests": [
     {
