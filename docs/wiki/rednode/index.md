@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDnode
 order: 0
 description: "REDnode, the EDGE platform's runtime for Cyberpunk 2077: what it is, why you might want it, what you need, and where to start."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # RED<span class="y">node</span>

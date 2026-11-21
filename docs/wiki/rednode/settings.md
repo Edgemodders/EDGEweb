@@ -4,7 +4,7 @@ nav_title: Settings and controls
 section: REDnode
 order: 11
 description: "Every REDnode setting: the Settings drawer, per-package settings, shared keys, where REDnode keeps its files, and for mod makers development folders, permissions and manifest fields."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Settings and <span class="y">controls</span>

@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDbridge
 order: 0
 description: "REDbridge, the helper program that reads and writes Cyberpunk 2077's game files for the other EDGE tools: what it is, whether you need to do anything, whether it is safe, and its status."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # RED<span class="y">bridge</span>

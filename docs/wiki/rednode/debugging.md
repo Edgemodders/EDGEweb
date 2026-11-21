@@ -4,7 +4,7 @@ nav_title: Debugging
 section: REDnode
 order: 9
 description: "Find out why a REDnode package misbehaves: the Mod log, the Test timer, Developer mode, Chromium's DevTools for windows, the Node debugger for mods, and attaching VS Code."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # <span class="y">Debugging</span>

@@ -3,7 +3,7 @@ title: Node mods
 section: REDnode
 order: 6
 description: "Write REDnode mods in JavaScript that run in Node beside the game: a first mod step by step, windows without HTML, game events, logs, crashes, hot reload, saving data and secrets, a page and a mod together, npm packages and TypeScript."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Node <span class="y">mods</span>

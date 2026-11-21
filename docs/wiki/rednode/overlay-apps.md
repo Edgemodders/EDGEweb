@@ -3,7 +3,7 @@ title: Overlay apps
 section: REDnode
 order: 7
 description: "Build in-game windows and HUD widgets from web pages with REDnode: a first app step by step, the UI kit and reading its widgets, themes, a complete HUD widget, game sounds, talking to the game, seeing errors, and the advanced parts: the title bar, keys, pointer lock and window sizes."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Overlay <span class="y">apps</span>
