@@ -3346,7 +3346,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C2",
-      "title": "Chooms!: the game's story (code parts passed in the game 2026-11-21; knowledge cards for the main cast drafted 2026-11-21, waiting for the owner's review)",
+      "title": "Chooms!: the game's story (code parts passed in the game 2026-11-21; knowledge cards for the main cast, the fixers, Delamain, Hanako and Kurt Hansen drafted 2026-11-21, waiting for the owner's review)",
       "status": "in progress"
      },
      {
@@ -3444,7 +3444,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "owner",
-     "what": "A review of the knowledge cards (45 cards, 7 people, chooms/rednode/cards/)",
+     "what": "A review of the knowledge cards (82 cards, 18 people, chooms/rednode/cards/)",
      "ref": "docs/design.md, C2: the knowledge cards"
     },
     {
@@ -3454,7 +3454,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Review the knowledge cards in chooms/rednode/cards/ (five lines flagged as least certain in docs/design.md)",
+    "Review the knowledge cards in chooms/rednode/cards/ (twelve lines flagged as least certain in docs/design.md)",
     "Create the Nexus pages for EDGEmobile and Chooms!",
     "Drop photo mode pictures into Chooms!'s dossiers (chooms/dossiers/) when you have them (for C4)"
    ],
