@@ -1776,6 +1776,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
+     "EDGEwave #13 speakLine with timings: asked by EDGEfab 2026-11-20, plan proposed, not built",
      "Desk, Project and Library: built and hand-tested 2026-11-16; the smoke test still to run on it, with the PC left alone",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
@@ -1834,6 +1835,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Agree the plan for EDGEwave #13 (speakLine with ElevenLabs timings, for EDGEfab Lip Sync), and allow a few credits for the real check",
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test on the Desk and Library",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat"
@@ -1842,7 +1844,7 @@ window.EDGE_STATUS = {
     "Voice lines have no route into the game yet (the .wem route)",
     "Desk, Project and Library are on main, not in a release yet"
    ],
-   "checkedBy": "EDGEwave session, 2026-11-16"
+   "checkedBy": "EDGEwave session, 2026-11-20"
   },
   {
    "name": "EDGEmat",
