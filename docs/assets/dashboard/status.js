@@ -905,16 +905,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Edit in Blender names mesh objects the import leaves out: built on main (24e2896), hand test W1 and W2 waits on the owner"
+     "Edit in Blender names mesh objects the import leaves out: on main, hand-tested 2026-11-20; ready for the next release"
     ]
    },
    "handTests": [
     {
      "name": "Edit in Blender: the warning for objects the import leaves out",
      "steps": 2,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md, W1 and W2 under Edit in Blender: skinned meshes)"
+     "status": "passed",
+     "ranBy": "the owner",
+     "note": "Passed 2026-11-20 (W1, W2)"
     },
     {
      "name": "Replace All (an event's sound variations)",
@@ -1029,7 +1029,6 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the Edit in Blender warning test (W1, W2)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
    ],
