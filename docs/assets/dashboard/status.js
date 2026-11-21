@@ -916,6 +916,13 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Animation Probe A (in the game)",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Offline half run 2026-11-20 (round trip exact; Blender drops WolvenKit's clip extras, copied back). The game half waits on the owner: package anim-probe-a installed (docs/testing.md, Animation Probe A)"
+    },
+    {
      "name": "Keys (K4b)",
      "steps": 9,
      "status": "not run",
@@ -1042,19 +1049,21 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDbridge",
-     "what": "0.18.0 release with keys.* (K4a, on main e57f92c)",
+     "what": "0.18.0 release with keys.* (K4a, on main e57f92c); asked of the REDnode session 2026-11-20",
      "ref": "https://github.com/Edgemodders/REDcode/issues/33"
     },
     {
      "who": "EDGEwave",
      "what": "K4c: the key pilot on REDcodeApi.keys (its extension, its MCP server, its saved ElevenLabs key)",
-     "ref": "https://github.com/Edgemodders/REDcode/blob/main/docs/design/keys.md"
+     "ref": "https://github.com/Edgemodders/EDGEwave/issues/12"
     }
    ],
    "ownerActions": [
+    "Run Animation Probe A in the game (6 steps): does an imported clip play?",
     "Run the Keys (K4b) hand test (9 steps, with REDbridge built from main)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
+    "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
+    "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)"
    ],
    "risks": [
     "REDbridge answers one call at a time"
