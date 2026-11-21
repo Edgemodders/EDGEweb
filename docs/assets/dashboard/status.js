@@ -922,7 +922,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Blocked by the owner's key rule: main carries REDcodeApi.keys (K4b, 598c72c), so no REDcode store release until EDGEwave's pilot (K4c) has run the whole key lifecycle, MCP use included",
+     "Key rule, first half met: EDGEwave's K4c pilot passed the owner's hand test on 2026-11-21 (EDGEwave #12). Second half: K4d moves EDGEhack, EDGEmat and EDGEfab to REDcodeApi.keys, then all are released at once with REDbridge 0.18.0 as the minimum",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector materials M1: its hand test"
     ]
@@ -1066,11 +1066,6 @@ window.EDGE_STATUS = {
      "who": "EDGEbuilder",
      "what": "Sector Tools S1, before REDcode's half (docs/design/sector-tools.md, three owner decisions)",
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
-    },
-    {
-     "who": "EDGEwave",
-     "what": "K4c is built on EDGEwave main (8f0c586, 2026-11-21); waiting on the owner's hand test of the whole key lifecycle, MCP use included (EDGEwave's docs/testing.md, Shared keys)",
-     "ref": "https://github.com/Edgemodders/EDGEwave/issues/12#issuecomment-7068351109"
     },
     {
      "who": "EDGEmat",
