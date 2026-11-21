@@ -896,8 +896,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K4",
-      "title": "Keys (#33): REDcode keeps the shared key store; K4b (Keys view, REDcodeApi.keys, consent) on main, K4c EDGEwave pilot next",
+      "title": "Keys (#33): REDcode keeps the shared key store; K4b (Keys view, REDcodeApi.keys, consent) hand-tested 2026-11-21, K4c EDGEwave pilot next",
       "status": "built, tests pending"
+     },
+     {
+      "id": "AR",
+      "title": "Animation authoring research (docs/research/animation-authoring.md): Probe A passed in the game 2026-11-21; Probe D (Uthana) waits on the owner's account; then R1 Edit in Blender for clips and R2 Try in Game",
+      "status": "in progress"
      }
     ]
    },
@@ -912,9 +917,9 @@ window.EDGE_STATUS = {
     {
      "name": "Animation Probe A (in the game)",
      "steps": 6,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Offline half run 2026-11-20 (round trip exact; Blender drops WolvenKit's clip extras, copied back). The game half waits on the owner: package anim-probe-a installed (docs/testing.md, Animation Probe A)"
+     "status": "passed",
+     "ranBy": "owner, 2026-11-21",
+     "note": "Run 2 passes: an imported clip plays in the game, unchanged and edited in Blender. Run 1 crashed on the imported clip: WolvenKit's new set has empty fallback tables while each clip keeps fallbackFrameIndices; clearing them fixed it (docs/testing.md, Animation Probe A)"
     },
     {
      "name": "Keys (K4b)",
@@ -1048,8 +1053,6 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run Animation Probe A in the game (6 steps): does an imported clip play?",
-    "Run the Keys (K4b) hand test (9 steps, with REDbridge built from main)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)"
