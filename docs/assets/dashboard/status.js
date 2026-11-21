@@ -812,7 +812,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
-   "version": "0.10.14",
+   "version": "0.10.15",
    "lastTag": "v0.10.13",
    "lastTagDate": "2026-11-16",
    "lastCommit": "2026-11-16",
@@ -877,12 +877,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "A3",
-      "title": "Animations: synced sets (hand-tested 2026-11-20, in the next release)",
+      "title": "Animations: synced sets (released in 0.10.15)",
       "status": "done"
      },
      {
       "id": "RW",
-      "title": "Replace with a WAV, Replace All, titled 3D tabs (#29) and every window's project (#32): hand-tested 2026-11-20, in the next release; voice line (.wem) replacement through EDGEwave to revisit",
+      "title": "Replace with a WAV, Replace All, titled 3D tabs (#29) and every window's project (#32): released in 0.10.15; voice line (.wem) replacement through EDGEwave to revisit",
       "status": "done"
      },
      {
@@ -892,7 +892,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SV",
-      "title": "Sector view: the @edgemodders/world-view package (unpublished), a read-only 3D sector mode, openSector, and #31's light in every 3D view (hand-tested 2026-11-20, in the next release)",
+      "title": "Sector view: the @edgemodders/world-view package, a read-only 3D sector mode, openSector, and #31's light in every 3D view (released in 0.10.15)",
       "status": "done"
      },
      {
@@ -903,12 +903,19 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.10.15",
+    "version": null,
     "needs": [
-     "Prepared on main 2026-11-20: every hand test passed (A3, Replace with a WAV and Replace All, #29, #32, Sector view and #31, New File hover, Edit in Blender skinned meshes); the release run waits on the owner's go"
+     "Edit in Blender names mesh objects the import leaves out: built on main (24e2896), hand test W1 and W2 waits on the owner"
     ]
    },
    "handTests": [
+    {
+     "name": "Edit in Blender: the warning for objects the import leaves out",
+     "steps": 2,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Given to the owner 2026-11-20 (docs/testing.md, W1 and W2 under Edit in Blender: skinned meshes)"
+    },
     {
      "name": "Replace All (an event's sound variations)",
      "steps": 5,
@@ -1017,17 +1024,16 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEbuilder",
-     "what": "Sector Tools, its app pack, and the shape of its service (select, focus, preview)",
+     "what": "Sector Tools S1, before REDcode's half (docs/design/sector-tools.md, three owner decisions)",
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
     }
    ],
    "ownerActions": [
-    "Say go for the REDcode 0.10.15 release (prepared on main)",
+    "Run the Edit in Blender warning test (W1, W2)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
    ],
    "risks": [
-    "REDcode #21 stays open on purpose: it closes when A3 ships",
     "REDbridge answers one call at a time"
    ],
    "checkedBy": "REDcode session, 2026-11-20"
