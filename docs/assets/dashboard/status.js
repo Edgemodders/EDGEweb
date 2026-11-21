@@ -3342,6 +3342,13 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Share a post (Chooms! on a real phone)",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-21: the phone's share sheet with the post as a picture; Android"
+    },
+    {
      "name": "C2 code test (Chooms! reads the save's story)",
      "steps": 9,
      "status": "passed",
@@ -3391,15 +3398,21 @@ window.EDGE_STATUS = {
    ],
    "waitingOn": [
     {
+     "who": "owner",
+     "what": "The share test on Android, 6 steps",
+     "ref": "docs/design.md, Sharing a post"
+    },
+    {
      "who": "REDagent",
      "what": "For C3, not blocking today: a choice of model in agent.ask; no issue filed yet",
      "ref": "docs/design.md"
     }
    ],
    "ownerActions": [
+    "Run the share test on Android (6 steps)",
     "Review the knowledge cards once drafted",
     "Create the Nexus pages for EDGEmobile and Chooms!",
-    "Optional: photo mode pictures for Chooms!'s people and places (for C4)"
+    "Drop photo mode pictures into Chooms!'s dossiers (chooms/dossiers/) when you have them (for C4)"
    ],
    "risks": [
     "Never tested on an iPhone, only Android",
