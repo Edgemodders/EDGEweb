@@ -911,6 +911,11 @@ window.EDGE_STATUS = {
       "id": "AR",
       "title": "Animation authoring research (docs/research/animation-authoring.md): Probe A passed in the game 2026-11-21; Probe D (Uthana) waits on the owner's account; then R1 Edit in Blender for clips and R2 Try in Game",
       "status": "in progress"
+     },
+     {
+      "id": "SM",
+      "title": "Sector materials (docs/design/sector-materials.md, agreed 2026-11-21): M1 the picked thing's real material in the sector view, By material fixed (built); M2 live from EDGEmat's Desk; M3a every copy through Add to Project; M3b one node through an ArchiveXL mutation and EDGEbuilder's bake",
+      "status": "built, tests pending"
      }
     ]
    },
@@ -918,7 +923,8 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "Blocked by the owner's key rule: main carries REDcodeApi.keys (K4b, 598c72c), so no REDcode store release until EDGEwave's pilot (K4c) has run the whole key lifecycle, MCP use included",
-     "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it"
+     "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
+     "Sector materials M1: its hand test"
     ]
    },
    "handTests": [
@@ -1040,6 +1046,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "the owner",
      "note": "Passed 2026-11-20: steps 1 to 10b and R1 to R5, with two fixes and five changes the owner asked for, each retested"
+    },
+    {
+     "name": "Sector materials (M1)",
+     "steps": 10,
+     "status": "not run",
+     "ranBy": "the owner",
+     "note": "Checked in Chrome over REDbridge 0.18.0 first; world multilayered materials render flat grey (EDGEmat's renderer)"
     }
    ],
    "ownerSpotTests": [],
@@ -1063,7 +1076,8 @@ window.EDGE_STATUS = {
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-    "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)"
+    "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)",
+    "Sector materials: run the M1 hand test (docs/testing.md); say yes to posting the M2 request to EDGEmat and the package note on EDGEbuilder #8"
    ],
    "risks": [
     "REDbridge answers one call at a time"
