@@ -915,7 +915,7 @@ window.EDGE_STATUS = {
      {
       "id": "SM",
       "title": "Sector materials (docs/design/sector-materials.md, agreed 2026-11-21): M1 the picked thing's real material in the sector view, By material fixed (built); M2 live from EDGEmat's Desk; M3a every copy through Add to Project; M3b one node through an ArchiveXL mutation and EDGEbuilder's bake; with the sector view's camera row (built 2026-11-21)",
-      "status": "built, tests pending"
+      "status": "in progress"
      }
     ]
    },
@@ -924,8 +924,8 @@ window.EDGE_STATUS = {
     "needs": [
      "Key rule, first half met: EDGEwave's K4c pilot passed the owner's hand test on 2026-11-21 (EDGEwave #12). Second half: K4d moves EDGEhack, EDGEmat and EDGEfab to REDcodeApi.keys, then all are released at once with REDbridge 0.18.0 as the minimum",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
-     "Sector materials M1: its hand test",
-     "Sector camera: its hand test"
+     "Sector camera: its hand test",
+     "Add to Project's question before replacing a project's file: retest R1 to R3"
     ]
    },
    "handTests": [
@@ -1057,9 +1057,9 @@ window.EDGE_STATUS = {
     {
      "name": "Sector materials (M1)",
      "steps": 10,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner, 2026-11-21",
-     "note": "Stopped early: EDGEmat was not loaded in the no-extensions F5 window. Steps 1 to 8 need no EDGEmat; step 9 uses Run REDcode with Opens Test and EDGEmat, then step 10 (docs/testing.md, Sector materials (M1))"
+     "note": "All 10 steps pass. Found: Add to Project wrote over a file already in the project without asking; fixed the same day (it asks: open the project's copy or replace it), retest R1 to R3 not run (docs/testing.md, Sector materials (M1))"
     }
    ],
    "ownerSpotTests": [],
@@ -1099,7 +1099,7 @@ window.EDGE_STATUS = {
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)",
-    "Sector materials: finish the M1 hand test (step 9 with the EDGEmat launch config, then step 10), and run Sector camera (docs/testing.md)"
+    "Run the Sector camera hand test and the Add to Project retest R1 to R3 (docs/testing.md); decide the four questions in docs/design/sector-selection.md (multi-select and volume selection)"
    ],
    "risks": [
     "REDbridge answers one call at a time"
