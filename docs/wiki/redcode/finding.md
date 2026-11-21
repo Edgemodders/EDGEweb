@@ -4,7 +4,7 @@ nav_title: Finding things
 section: REDcode
 order: 5
 description: "How to get from something you know in Cyberpunk 2077, such as an item's name, to the text, the TweakDB record and the game files behind it, with REDcode's LocKeys view, TweakDB view, Game Assets filter and Find Items."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Finding what you want to <span class="y">change</span>
@@ -17,6 +17,7 @@ You know the thing from the game: a jacket, a gun, a name on a menu. The game's 
 | [The pieces of an item](#the-pieces-of-an-item) | Text, record, files |
 | [From a name to its text](#from-a-name-to-its-text) | The LocKeys view |
 | [From a name to its record](#from-a-name-to-its-record) | The TweakDB view |
+| [From a name to its files: clothing](#from-a-name-to-its-files-clothing) | Search game files, by the name in the game |
 | [From a guess to its files](#from-a-guess-to-its-files) | The Game Assets filter, and Find Items to check |
 | [From a record to its files](#from-a-record-to-its-files) | The long way, and the assistant's way |
 | [The file types you'll meet](#the-file-types-youll-meet) | One line each |
@@ -27,7 +28,9 @@ You know the thing from the game: a jacket, a gun, a name on a menu. The game's 
 |---|---|---|
 | A name, a description, any text on screen | The game's texts (LocKeys) | [The LocKeys view](#from-a-name-to-its-text) |
 | A price, damage, a stat, what a shop sells | TweakDB, the game's database | [The TweakDB view](#from-a-name-to-its-record) |
-| How something looks: shape, colour, texture | Game files: meshes, materials, textures | [The Game Assets filter](#from-a-guess-to-its-files), then Find Items |
+| How a piece of clothing looks | Game files: meshes, materials, textures | [Search game files, by its name](#from-a-name-to-its-files-clothing) |
+| How anything else looks: shape, colour, texture | Game files: meshes, materials, textures | [The Game Assets filter](#from-a-guess-to-its-files), then Find Items |
+| Where things stand in the world | Streaming sectors (`.streamingsector`) | Game Assets, then [the sector's 3D view](viewers.html#streaming-sectors) |
 | A sound effect | The game's sound packs | [The game sound list](viewers.html#the-games-sound-effects) |
 | An icon or a piece of the interface | Atlases (`.inkatlas`) and their textures | The Game Assets filter, with `*.inkatlas` |
 
@@ -66,7 +69,17 @@ Records are found by their **path**, the internal name, not by the name on scree
 
 If you have the item in the game, [REDnode's Console](../rednode/overlay.html#finding-an-items-id) can tell you its record path directly.
 
-There is no search from an on-screen name straight to a record yet. An assistant can do it for you: "find the TweakDB record of the Sunny Ammo synthetic high-tops" (see [Assistants and MCP](assistants.html)).
+For **clothing**, [Search game files](game-assets.html#search) goes from the on-screen name to the record: type `sunny ammo` and it lists the items by their names in the game, with their TweakDB ids. For anything else, an assistant can do it for you: "find the TweakDB record of the Quadra Type-66" (see [Assistants and MCP](assistants.html)).
+
+## From a name to its files: clothing
+
+For clothing, you can skip the guessing.
+
+1. Press **Search game files** (the magnifier, in Game Assets' title bar).
+2. Type words of the item's name as the game shows it, such as `comfy rocker`, or its TweakDB id.
+3. Pick the item. **You should see** the meshes it wears, for each body. Pick one to open it in 3D.
+
+The first such search after a game update takes about 15 seconds, while the item names load. It covers clothing only; for weapons, vehicles and the rest, guess the path as below.
 
 ## From a guess to its files
 
@@ -119,6 +132,7 @@ Clothing has separate looks for female and male V, and for first and third perso
 | `.mi` | A material: which textures and settings a surface uses |
 | `.inkatlas` | Interface pictures, such as icons, cut from one texture |
 | `.anims` | Animations |
+| `.streamingsector` | A piece of the game's world: what stands where |
 | `.csv`, `.json` inside the archives | Tables and texts in the game's own wrapper. They open in the CR2W editor |
 
 Next: [Editing game files](editing.html), or [Export and import](export-import.html) to change a texture or a shape.

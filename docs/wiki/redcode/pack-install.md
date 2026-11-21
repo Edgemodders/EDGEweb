@@ -3,7 +3,7 @@ title: Pack, install and run
 section: REDcode
 order: 10
 description: "Turn a REDcode project into a mod with Pack, put it in the game through EDGEdeck or directly, swap it into the running game with Pack and Play, take it out again, start the game, and share the mod."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Pack, install and <span class="y">run</span>
@@ -60,7 +60,7 @@ A few files are left out, as in WolvenKit: `.script` and `.ws` files, `info.json
 - `packed` is **emptied first**, so a file you removed from the project doesn't linger in the mod. The setting is `redcode.pack.clean`.
 - A project with nothing in `source/archive` is fine: the mod may be tweaks or scripts only. A project with nothing in `source/archive` or `source/resources` has nothing to pack, and REDcode says so.
 
-**You should see** the archive selected under **Packed** in the Project view, and a line in the status bar saying how many files went into it.
+**You should see** the archive selected under **Packed** in the Project view, and a message saying what was packed: how many files went into the archive, and the ArchiveXL and other resource files beside it, with **Show log**. Pack and Install and Pack and Play show only the install's own message.
 
 **Warnings.** Pack warns, with **Show log**, about things that will stop the mod working:
 
@@ -98,7 +98,7 @@ If the game is running, EDGEdeck asks you to quit it first, because the game kee
 
 REDcode copies `packed` into the game folder and records every file in the project's `.redcode/installed.json`.
 
-- If a file is already in the game, put there by something else, REDcode asks, then backs it up before replacing it.
+- If a file is already in the game, put there by something else, REDcode asks, then backs it up before replacing it. An archive that [Pack and Play](#pack-and-play-into-the-running-game) swapped in counts as your project's own, so it isn't asked about.
 - Installing again first removes the previous set of files, so a file you dropped from the project doesn't stay behind.
 
 > **Use EDGEdeck if you use any mod manager.** A tool that copies files into the game behind a mod manager's back confuses it. Through EDGEdeck, your own mod sits in the same list as everything else, and conflicts with other mods show up. See [EDGEdeck and REDcode](../edgedeck/redcode.html).
@@ -158,7 +158,7 @@ A swap is not temporary: the archive stays in the game's `archive\pc\mod` folder
 
 ### Sound mods
 
-An archive that replaces game sounds (from [Replacing a sound](viewers.html#replacing-a-sound)) swaps through REDnode too, which pauses the game for a moment and loads the game's sound index again. Sound swaps on game 2.5 are untested so far. If one doesn't work, use Pack and Install and restart the game.
+An archive that replaces game sounds (from [Replacing a sound](viewers.html#replacing-a-sound)) swaps through REDnode too, which pauses the game for a moment and loads the game's sound index again. This was tested on game 2.5 by REDcode's developer: after Pack and Play, the replaced sound played in the running game. If one doesn't work, use Pack and Install and restart the game.
 
 ### Red Hot Tools
 
@@ -170,6 +170,7 @@ Older versions of REDcode could also swap through Red Hot Tools, a plugin by psi
 
 - For a Steam install it starts the game through Steam, so the overlay and achievements work. Otherwise it starts `bin\x64\Cyberpunk2077.exe`.
 - `redcode.launch` chooses: `auto` (the default, as above), `steam` or `exe`.
+- Started from the exe (a GOG or Epic install, or `exe` above), REDnode's overlay works as it does from Steam. Before REDcode 0.10.14, with REDnode 0.58.0 or older, F10 showed only the cursor that way.
 - If the project packs as a REDmod, REDcode adds `-modded`, the game's launch option for REDmods.
 
 ## Sharing your mod

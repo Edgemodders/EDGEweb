@@ -3,7 +3,7 @@ title: Game Assets
 section: REDcode
 order: 4
 description: "Browse the game's archives in REDcode's Game Assets view, filter and search them, open any file read-only, add files to your project, and find the game's texts in the LocKeys view."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Game <span class="y">Assets</span>
@@ -15,7 +15,7 @@ The game keeps its files in **archives**: `.archive` files, each a package of th
 | [Browsing](#browsing) | Open any game file, read-only |
 | [Add to Project](#add-to-project) | Take a file into your mod |
 | [Right-click menu](#right-click-menu) | Everything a row can do |
-| [Filter](#filter) and [Search](#search) | Two ways to find a file by its path |
+| [Filter](#filter) and [Search](#search) | Find a file by its path, or clothing by its name in the game |
 | [Sounds, TweakDB and texts](#sounds-tweakdb-and-texts) | The other ways into the game's data |
 | [The LocKeys view](#the-lockeys-view) | The game's on-screen texts, with a [Try it](#try-it-find-a-text) |
 
@@ -32,11 +32,12 @@ Folders open when you expand them and show how many files they hold. Click a fil
 | A texture (`.xbm`) | The [texture viewer](viewers.html#textures) |
 | A mesh (`.mesh`) | The CR2W editor's [3D view](viewers.html#meshes-in-3d) |
 | Animations (`.anims`) | The [Animations view](viewers.html#animations) |
+| A streaming sector (`.streamingsector`) | The CR2W editor's [3D view of the sector](viewers.html#streaming-sectors) |
 | A sound (`.wem`) | The [audio player](viewers.html#sounds) |
 | The sound effect index (`sfx_container.opusinfo`) | The [game sound list](viewers.html#the-games-sound-effects) |
 | Any other game file | The [CR2W editor](editing.html) |
 
-Files opened from Game Assets are **read-only**, and a banner says so. The game's own files are never changed. To change a file, add it to your project first.
+Files opened from Game Assets are **read-only**, and a banner says so. The game's own files are never changed. To change a file, add it to your project first: **Add to Project** in the editor's header does it from the file you are looking at.
 
 ## Add to Project
 
@@ -77,11 +78,20 @@ The filter matches **file paths**, not the names you see in the game. The Osprey
 
 ## Search
 
-The **Search game files** button (the magnifier) opens a search box that finds files across all archives as you type, by file name or path. Pick a file and choose what to do with it: **Open as JSON**, **Add to project** or **Copy path**.
+The **Search game files** button (the magnifier) opens a search box that finds, as you type:
+
+- **files** across all archives, by file name or path;
+- **clothing**, by its name in the game or its TweakDB id: `comfy rocker` lists the Comfy rocker aramid-weave slim-fits. Picking an item lists the meshes it wears, for each body.
+
+Pick a file to open it, as a click in Game Assets does: a mesh on its 3D view, a sector in 3D. The buttons on each row do the rest: **Add to project** (the **+**), **Copy path** and **Open as JSON**.
+
+The first search for clothing after a game update loads the item names in the background, which takes about 15 seconds; file results wait for it that once. [EDGEmat](../edgemat/) shares that list, so whichever tool runs first spares the other the wait.
 
 **REDcode: Open game file as JSON**, from the command palette, is the same search, and opens the file you pick as JSON straight away.
 
-Filter or search? The filter keeps you in the tree, so you can see where files sit and add whole folders. Search is quicker when you know part of a file's name.
+Filter or search? The filter keeps you in the tree, so you can see where files sit and add whole folders. Search is quicker when you know part of a file's name, or the item's name in the game.
+
+{% include shot.html caption="Search game files" shows="The Search game files box with comfy rocker typed in: clothing items by their in-game names, and under them file results, each row with its Add to project, Copy path and Open as JSON buttons." %}
 
 ## Sounds, TweakDB and texts
 

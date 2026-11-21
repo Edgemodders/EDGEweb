@@ -3,7 +3,7 @@ title: Export and import
 section: REDcode
 order: 9
 description: "Export game files from a REDcode project to PNG, glTF and Ogg, edit them in other tools, and import them back with their settings kept. With Edit in Blender and a texture to try."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Export and <span class="y">import</span>
@@ -80,6 +80,11 @@ For meshes there's a shortcut. Right-click a `.mesh` under Archive, or a `.glb` 
 4. Carry on as long as you like. When you close Blender, REDcode stops watching.
 
 **You should see** an item in VS Code's status bar, **Blender:** and the model's file name, while REDcode is watching for your saves. Click it to stop watching before you close Blender. After each save, the 3D view of the mesh in REDcode shows the new shape.
+
+Good to know:
+
+- **Skinned meshes** work too: a body or a garment opens in Blender on its armature, its skeleton of bones. Tested with Blender 5.3 on the game's base male body.
+- **Only the mesh's own parts come back.** The import writes back the parts the mesh had, by their names. An object you add in Blender, such as a sphere, is left out: to keep it, join it into one of the parts (select it, then the part, and press `Ctrl+J`).
 
 REDcode finds Blender in Program Files or a Steam library and writes the one it found to `redcode.blenderPath`. If it finds none, set that setting to `blender.exe` or its folder.
 

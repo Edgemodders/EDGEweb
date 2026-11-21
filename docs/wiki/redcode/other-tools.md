@@ -3,7 +3,7 @@ title: Working with other tools
 section: REDcode
 order: 12
 description: "How REDcode works with EDGEdeck, EDGEmat, EDGEwave, EDGEbuilder, the EDGE Library, REDnode, WolvenKit, Blender and the redscript extension, and the API it offers other VS Code extensions."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Working with other <span class="y">tools</span>
@@ -36,6 +36,10 @@ Today REDcode and EDGEdeck each download their own copy of REDbridge. Sharing on
 
 **Open in EDGEmat**, in the 3D view's toolbar, puts the mesh on EDGEmat's Desk with the appearance you're looking at open, ready to change its materials. Without EDGEmat installed, it offers to install it. EDGEmat's own **Open in EDGEmat** shows when you right-click a `.mesh` or `.mlsetup`.
 
+- When EDGEmat adds a mesh to a project, REDcode's Project view selects it, so you see where it went.
+- REDcode's [search for clothing by name](game-assets.html#search) uses the same list of item names as EDGEmat, so whichever tool loads it first spares the other the wait.
+- The 3D views' [light](viewers.html#the-light), with reflections and Fixed light, was made for judging EDGEmat's materials: metals and gloss look like metals and gloss.
+
 ## EDGEwave
 
 [EDGEwave](../edgewave/) is the EDGE platform's sound studio, for editing, mixing and re-voicing the game's sounds. REDcode finds sounds; EDGEwave works on them.
@@ -56,6 +60,21 @@ The [EDGE Library](../library.html) is one folder of your own where the EDGE too
 - With no Library yet, it asks where to make one, and suggests `Documents\EDGE Library`.
 - An item that is already there can be replaced or added again beside it.
 
+### The Library view
+
+The **Library** view in REDcode's sidebar shows the Library: your folders, the items in them by name, and loose model files. It refreshes as soon as Add to Library writes.
+
+| Action | Does |
+|---|---|
+| **Add to Project** (the **+** on an item) | Copies a mesh, entity, texture or other game file item into the open project, with the files it needs. If the project already has files of its own at those paths, it asks before replacing them, and closes REDcode's editors on them first |
+| **Refresh Project from Library** (in the view's title bar) | Brings in the items your project took from the Library that have a newer version there |
+| **Open**, **Reveal in File Explorer** | Opens an item's file, or shows it on disk |
+| **Set Up the Library...** | Makes a Library, or picks the folder of one you have, when there is none yet |
+
+Items from other tools, such as [EDGEfab](../edgefab/)'s props, show too; their own tool adds those to a project. The view doesn't rename or delete: do that in the tool that made the item, or in File Explorer. Each EDGE tool keeps its own Library view of the same Library, so you needn't switch tools to see it.
+
+{% include shot.html caption="The Library view" shows="REDcode's Library view in the sidebar: a few Library folders opened to items named in plain words, one with the Add to Project button on its row, and the Refresh Project from Library button in the title bar." %}
+
 ## REDnode
 
 [REDnode](../rednode/) runs mods written in JavaScript inside the game. Two things already work between them:
@@ -63,7 +82,7 @@ The [EDGE Library](../library.html) is one folder of your own where the EDGE too
 - **Pack and Play** hands your packed archive to REDnode, which swaps it into the running game. See [Pack and Play](pack-install.html#pack-and-play-into-the-running-game).
 - **A package called REDcode in REDnode's Mod Manager.** When the game has REDnode, REDcode puts a small package named `redcode` into REDnode's apps folder. It has no window. Its one job is to tell REDnode mods, such as EDGEbuilder, which project is open in REDcode, so they can save into it. You can leave it alone. To stop REDcode adding it, turn off `redcode.rednode.installPackage`.
 
-For developers: the package answers with the project's name, mod name and folders, and says when the project changes. Assistants connected to REDnode get it as the read-only tool `redcode__project`. With several VS Code windows, the one you last used with a project open counts.
+For developers: the package answers with the project's name, mod name and folders, and says when the project changes. Assistants connected to REDnode get it as the read-only tool `redcode__project`. With several VS Code windows, the one you last used with a project open counts, and `redcode__projects` lists every window's project, the last used first, so a tool such as EDGEbuilder can offer them all. Every window needs REDcode 0.10.15 or later for that: an older one puts back its older package.
 
 The bigger loop is still **planned, not built**: write a REDnode mod in REDcode, send it into the running game without restarting, and see the game's logs and a debugger in VS Code.
 
@@ -89,4 +108,4 @@ REDcode doesn't handle [redscript](../glossary.html#game-and-modding-terms), the
 
 ## For extension authors: REDcode's API
 
-REDcode hands other VS Code extensions an API, so they can use its REDbridge, its project, its editors, its import and its pack without copying its code. EDGEwave, EDGEmat, EDGEquest and EDGEhack use it. See [Extension API](https://edgemodders.github.io/REDcode/api.html) on REDcode's docs site.
+REDcode hands other VS Code extensions an API, so they can use its REDbridge, its project, its editors, its import and its pack without copying its code. EDGEwave, EDGEmat, EDGEquest and EDGEhack use it. Among its calls: select a file in the Project view (`revealInProject`), open a model in a titled 3D tab and close it again (`openModel`, `closeModel`, made for EDGEfab's props), open an animation on a character's meshes or with its synced set (`openAnimation`), and open a streaming sector at one of its entries (`openSector`). See [Extension API](https://edgemodders.github.io/REDcode/api.html) on REDcode's docs site.

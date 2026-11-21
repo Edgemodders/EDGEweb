@@ -4,7 +4,7 @@ nav_title: The Library
 section: Start here
 order: 6
 description: "The EDGE Library: one folder of your own where the EDGE tools keep scenes, bakes, quickhacks and game files for good, outside any project, which tools use it today, and the rules every tool follows there."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # The EDGE <span class="y">Library</span>
@@ -43,7 +43,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | [EDGEbuilder](edgebuilder/scenes.html) | Scenes in Library folders, the in-game **Library** tab, scenes shown beside the one you edit | Released. Passed in the game |
 | [EDGEbuilder](edgebuilder/baking.html#bakes-in-the-library) | Bakes in the Library, and **Include in project** | Released. Passed in the game |
 | [EDGEhack](edgehack/desk-library.html) | Quickhacks kept in the Library: **Add to Library**, **Add to Project**, a Library view and **Refresh from Library** | Released. Tested in VS Code |
-| [REDcode](redcode/other-tools.html#the-edge-library) | **Add to Library** on a game file or a project file, with the files it needs | Released. Tested by hand |
+| [REDcode](redcode/other-tools.html#the-edge-library) | **Add to Library** on a game file or a project file, with the files it needs; a [Library view](redcode/other-tools.html#the-library-view) with **Add to Project** and **Refresh Project from Library** | Released. Tested by hand |
 | [EDGEwave](edgewave/) | Sounds as Library items | Planned, after its Desk |
 | [EDGEmat](edgemat/) | Materials and looks on Library assets | Planned, later |
 | [EDGEfab](edgefab/library.html) | Props as Library items: **Add to Library**, a Library view, **Add to Project**, **Edit on the Desk** and **Refresh Project from Library** | In EDGEfab 0.1.0 |
@@ -64,8 +64,8 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 |---|---|---|
 | **Save** a scene | EDGEbuilder | Into a Library folder you pick, or into the project, or on this PC |
 | **Add to Library** | REDcode, EDGEhack | Copies a game file or a quickhack into a Library folder you pick |
-| **Add to Project**, **Include in project** | EDGEhack, EDGEbuilder | Copies a Library item's files into the open project and notes where they came from |
-| **Refresh from Library** | EDGEhack, on a quickhack in a project | Shows that the Library has a newer version, and copies it when you ask |
+| **Add to Project**, **Include in project** | REDcode, EDGEhack, EDGEbuilder | Copies a Library item's files into the open project and notes where they came from |
+| **Refresh from Library** | EDGEhack, on a quickhack in a project; REDcode's **Refresh Project from Library**, for the project's items | Shows that the Library has a newer version, and copies it when you ask |
 
 For a first try, EDGEbuilder's [Named scenes and the Library](edgebuilder/scenes.html#named-scenes-and-the-library) and EDGEhack's [The Desk and the Library](edgehack/desk-library.html) each walk through it.
 

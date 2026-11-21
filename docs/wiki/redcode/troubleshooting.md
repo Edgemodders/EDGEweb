@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: REDcode
 order: 14
 description: "What to do when REDcode can't find REDbridge or the game, a view is empty, an edit vanishes, an import isn't offered, a mod doesn't show in the game, or Pack and Play installs instead of swapping."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Troubleshooting <span class="y">REDcode</span>
@@ -14,7 +14,7 @@ Find what you see in the left column of the group where you're stuck. If it isn'
 | Where you're stuck | |
 |---|---|
 | [Setting up](#setting-up) | Installing, REDbridge, .NET, an empty Game Assets view |
-| [Browsing and viewing](#browsing-and-viewing) | TweakDB, the 3D view, Find Items, sounds |
+| [Browsing and viewing](#browsing-and-viewing) | TweakDB, the 3D views, Find Items, animations, sectors, sounds |
 | [Editing, export and import](#editing-export-and-import) | Edits that vanish, imports that aren't offered, Blender |
 | [Pack, install and the game](#pack-install-and-the-game) | A mod that doesn't show, a game that won't start, Pack and Play |
 | [Other tools](#other-tools) | EDGEdeck, EDGEwave, EDGEmat |
@@ -35,6 +35,7 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 | Game Assets is empty, with **Set Game Folder**, **Show REDbridge log** and **Restart REDbridge** buttons | REDbridge isn't running, or has no game. Check the status bar for one of the messages above. Then run **REDcode: Set Game Folder** and pick the folder with `bin`, `archive` and `r6`. Then **REDcode: Restart REDbridge** |
 | "the bridge stopped (exit code ...)" | REDbridge closed unexpectedly. Press **Restart REDbridge**. If it keeps happening, press **Show log** and include the last lines when you ask for help |
 | "REDbridge is being updated in another window" | Another VS Code window is updating REDbridge. Wait: this window restarts its bridge when the update finishes |
+| The REDcode sidebar is empty or REDcode's tools can't see the project, and VS Code says **Restricted Mode** | VS Code doesn't trust the folder yet, and REDcode stays off until it does. Click **Restricted Mode** in the status bar and choose to trust the folder. New Project reminds you of this before it opens a new one |
 
 ## Browsing and viewing
 
@@ -48,6 +49,10 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 | Find Items says it needs a newer REDbridge | Run **REDcode: Update REDbridge** |
 | Find Items finds nothing for a weapon | Normal. Find Items works for clothing and similar items, not for weapons. For a mesh no item shows, it lists the `.app` looks that use it, to open instead |
 | An animation file takes a long time to open | A large `.anims` file takes about a minute the first time, and is quick after that |
+| An animation shows bones only, no body | Normal for rigs other than the game's base man and woman, such as a vehicle's or the player's: only those two have a base body |
+| A synced set member says **not placed** | The game's sync tracks don't say where that clip goes beside this one. Hover the row for the reason. **placed, unsure** means another member fits the same track, so the two may be swapped |
+| A sector shows markers but few or no meshes, the first time | Its meshes are still exporting: the line under the view counts them. A busy sector takes a few seconds, **Coarser levels** can take minutes. After that it opens at once. If the count stops, press **Show REDbridge log** |
+| I replaced a sound, but hear the game's sound some of the time | The event plays one of several sounds at random. Press **Replace…** again and choose **Replace All** |
 | The game sound list shows numbers, not names | About a third of the sound events have no known name: WolvenKit's list doesn't cover them. Filter by a name that is known, or play your way to the sound |
 | No sound plays after a game update, or EDGEwave says "could not read sound" | An old REDcode kept sound files from before the update. Update REDcode: it now empties that cache when the game changes |
 
@@ -82,6 +87,8 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 | Pack and Play swapped, but nothing changed | The game still shows the copy it loaded before. Unequip and equip the item, or walk away and come back. See [Pack and Play](pack-install.html#pack-and-play-into-the-running-game) |
 | The game closed at a swap | A broken archive crashes the game at a swap as it would at the start. Check that the mod loads after Pack and Install and a normal start |
 | The Hot Folder button is gone | REDcode no longer uses Red Hot Tools, which has no build for game 2.5. **Pack and Play** swaps through REDnode instead. See [Red Hot Tools](pack-install.html#red-hot-tools) |
+| Pack and Install asks to back up my own archive after Pack and Play | Fixed in REDcode 0.10.15: an archive swapped in through REDnode counts as the project's own. Update REDcode |
+| After **Run Game**, REDnode's F10 shows only the cursor | Seen when REDcode started the game's exe directly (GOG, Epic, or `redcode.launch` set to `exe`) before REDcode 0.10.14. Update REDcode, or REDnode past 0.58.0 |
 
 ### My mod doesn't show in the game
 
@@ -101,6 +108,7 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 | Open in EDGEwave offers to install EDGEwave | EDGEwave isn't installed. See [EDGEwave](../edgewave/) for how to get it |
 | Open in EDGEmat says it needs EDGEmat | EDGEmat isn't installed. Press **Install EDGEmat**, or see [EDGEmat](../edgemat/) |
 | A package called REDcode is in REDnode's Mod Manager | REDcode put it there. It tells REDnode mods which project is open. See [REDnode](other-tools.html#rednode) |
+| An assistant's `redcode__projects` lists only one window, or the REDcode package in the game goes back to an older version | A window runs a REDcode older than 0.10.15, which puts its own older package back. Update REDcode in every window |
 | An assistant has REDcode's tools twice | `redcode-mcp` is connected both by hand and through EDGEchat. Run `/edge:setup` in Claude Code. See [Assistants and MCP](assistants.html#connect-it-the-easy-way) |
 
 ## Anything else

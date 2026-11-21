@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDcode
 order: 0
 description: "REDcode, the EDGE platform's Cyberpunk 2077 modding workspace in VS Code: what it is, what it's for, why you might want it, and where to start."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # RED<span class="y">code</span>
@@ -24,12 +24,14 @@ A Cyberpunk 2077 mod is mostly game files that have been changed. Those files li
 - **browse the game** in a folder tree, with a filter and a search;
 - **keep your work in a project**, the same `.cpmodproj` project WolvenKit uses;
 - **edit game files** in a tree and property grid, or as readable JSON text;
-- **look and listen**: textures, atlases, 3D meshes, animations, voice lines and the game's sound effects;
-- **find the items** that wear a mesh, and open a mesh in EDGEmat to change its materials;
+- **look and listen**: textures, atlases, 3D meshes, animations on a body, pieces of the world in 3D, voice lines and the game's sound effects;
+- **find clothing by its name in the game**, find the items that wear a mesh, and open a mesh in EDGEmat to change its materials;
+- **make new files**: a texture from an image, an atlas, a material and more;
 - **look things up** in TweakDB, the game's database of items and stats, and start a tweak from any record;
 - **find the game's texts** (LocKeys) in any of its 19 languages, and change them;
 - **export and import** to formats other tools edit, such as PNG and glTF, and send a model to Blender and back;
-- **replace game sound effects** with your own WAV files;
+- **replace game sound effects** with your own WAV files, in one step;
+- **reuse your work** from the [EDGE Library](../library.html), the store the EDGE tools share;
 - **pack, install and run**: build the mod, put it in the game (through [EDGEdeck](../edgedeck/) when you have it) and start the game, or swap it into the game while it runs, through [REDnode](../rednode/).
 
 ## Where to start
@@ -65,37 +67,41 @@ REDcode is the **Create** stage of the [EDGE platform](../index.html). It works 
 | [EDGEdeck](../edgedeck/) | Install goes through EDGEdeck, with its record of every file and its undo. EDGEdeck can also copy files from installed mods into your project |
 | Claude Code and other assistants | `redcode-mcp` lets an assistant browse the archives, read and change game files, query TweakDB, export, import and pack. The easy way to connect it is [EDGEchat](../edgechat/) |
 | [EDGEwave](../edgewave/) | **Open in EDGEwave** hands a sound to the EDGE sound studio |
-| [EDGEmat](../edgemat/) | The 3D view shows a mesh's materials as EDGEmat renders them: colours only, approximate. **Open in EDGEmat** puts the mesh on EDGEmat's Desk |
-| [REDnode](../rednode/) | **Pack and Play** swaps your mod into the running game through REDnode. REDnode mods and assistants can ask which project is open. Editing and debugging a REDnode mod from REDcode is planned |
+| [EDGEmat](../edgemat/) | The 3D view shows a mesh's materials as EDGEmat renders them: colours only, approximate. **Open in EDGEmat** puts the mesh on EDGEmat's Desk. The two share the list of clothing names |
+| [REDnode](../rednode/) | **Pack and Play** swaps your mod into the running game through REDnode. REDnode mods and assistants can ask which project is open, in every VS Code window. Editing and debugging a REDnode mod from REDcode is planned |
 | [EDGEbuilder](../edgebuilder/) | Its scenes show in the Project view as **Scenes** |
+| [EDGEfab](../edgefab/) and the [EDGE Library](../library.html) | The **Library** view shows the Library, EDGEfab's props included, and adds its items to your project |
 | [EDGEhack](../edgehack/), [EDGEquest](../edgequest/) and other EDGE tools | They build on REDcode: a click on a TweakDB record can open it in the tool made for it, and they use REDcode's editors and its pack |
 
 ## Status
 
-REDcode **0.10.9** is the latest release (12 November 2026). It is on the **VS Code Marketplace**, as a Preview, and on **Open VSX**, under the id `edgemodders.redcode-cyberpunk`, and on [GitHub](https://github.com/Edgemodders/REDcode/releases). [EDGEkit](../edgekit/) has it built in. It runs on Windows and needs REDbridge 0.12.0 or later, which it fetches for you. Its companion for assistants, `redcode-mcp`, is at 0.5.1 on npm.
+REDcode **0.10.15** is the latest release (20 November 2026). It is on the **VS Code Marketplace**, as a Preview, and on **Open VSX**, under the id `edgemodders.redcode-cyberpunk`, and on [GitHub](https://github.com/Edgemodders/REDcode/releases). [EDGEkit](../edgekit/) has it built in. It runs on Windows and needs REDbridge 0.17.0 or later, which it offers to fetch for you. Its companion for assistants, `redcode-mcp`, is at 0.5.1 on npm.
 
 "Tested" below means tested by hand by REDcode's developer, on game 2.5 with Phantom Liberty.
 
 | State | What |
 |---|---|
-| **Works, tested** | Projects, Game Assets, the filter and the search |
+| **Works, tested** | Projects, Game Assets, the filter and the search, including clothing by its name in the game |
+| | New File: textures from images, atlases, material instances and the rest, made, opened and packed |
 | | The CR2W editor: tree, property grid, search, the table view for texts, the atlas view, the Properties view, and editing as JSON |
 | | The texture viewer, the 3D mesh viewer, the audio player and the game sound list. Game meshes show a colour per material, not their textures |
-| | Animations: an `.anims` file plays on its rig, drawn as bones and joints. Bodies on the rig come next |
+| | Animations: an `.anims` file plays on its rig, on the game's base body or a character's meshes, with root motion, and a synced set plays together |
+| | Streaming sectors in 3D, with Coarser levels and Show in Tree |
 | | Find Items and Open in EDGEmat in the 3D view |
 | | The TweakDB view, the record page, New Tweak from This Record and the hover |
 | | The LocKeys view: the game's texts, hovers, Add to Project Onscreens |
-| | Export and import, Edit in Blender (with Blender 5.2.2), and replacing a sound effect from a WAV file, as far as the files in the project |
+| | Export and import, Edit in Blender (with Blender 5.3, skinned meshes included), and replacing a sound effect from a WAV file, heard in the game |
 | | Pack: the archive matched a WolvenKit pack of the same project |
 | | Install and Uninstall through EDGEdeck, and Run Game |
-| | Pack and Play through REDnode, for an archive |
-| | Add to Library, and EDGEbuilder's scenes in the Project view |
+| | Pack and Play through REDnode, for an archive, a sound mod included |
+| | Add to Library, the Library view, and EDGEbuilder's scenes in the Project view |
 | | `redcode-mcp`: each group of tools was checked with an MCP client against the game when it was added |
 | **Works, not yet tested in a real game** | Install without EDGEdeck: tested only against a stand-in game folder |
-| | A replaced sound effect, and a REDmod's custom sound, heard in the game. Swapping a sound mod into the running game |
+| | A REDmod's custom sound, heard in the game |
+| | The game reading each kind of file New File makes |
 | | A new mesh from a template with a different number of parts than the model |
 | | TweakDB on a game without Phantom Liberty |
-| **Planned** | Importing voice lines; bodies on the animation rig |
+| **Planned** | Importing voice lines; editing animations, being researched (see the [report](https://edgemodders.github.io/REDcode/research/animation-authoring.html)) |
 | | Editing and debugging a REDnode mod from REDcode |
 | | A preview of the game's interface widgets, and a branded REDcode app. Graph views for quests and scenes are in [EDGEquest](../edgequest/) instead |
 
@@ -105,16 +111,16 @@ REDcode **0.10.9** is the latest release (12 November 2026). It is on the **VS C
 |---|---|
 | [Install and set up](install.html) | Requirements, installing, REDbridge, the HUD theme, updating |
 | [Your first mod](first-mod.html) | A walkthrough: rename an item, from a new project to the game |
-| [Projects](projects.html) | New projects, the Project view and its buttons, and how a project is laid out |
+| [Projects](projects.html) | New projects, the Project view and its buttons, New File, and how a project is laid out |
 | [Game Assets](game-assets.html) | Browsing, filtering and searching the game, taking files out, and the game's texts in the LocKeys view |
 | [Finding what you want to change](finding.html) | From an item you know in the game to the files and records behind it |
 | [Editing game files](editing.html) | The CR2W editor, the Properties view, and editing as JSON |
-| [Textures, meshes and sounds](viewers.html) | The texture viewer, the 3D mesh viewer and Find Items, animations, the audio player, the game's sound effects and replacing one |
+| [Textures, meshes and sounds](viewers.html) | The texture viewer, the 3D mesh viewer and Find Items, animations and synced sets, streaming sectors, the audio player, the game's sound effects and replacing one |
 | [TweakDB and tweaks](tweakdb.html) | Looking up records, starting a tweak from one, and `.tweak` files |
 | [Export and import](export-import.html) | Out to PNG, glTF and Ogg, and back into the game's formats; Blender |
 | [Pack, install and run](pack-install.html) | Turning a project into a mod and trying it in the game, with Pack and Play; sharing it |
 | [Assistants and MCP](assistants.html) | Let Claude work on your mod with you |
-| [Working with other tools](other-tools.html) | EDGEdeck, WolvenKit, EDGEwave, EDGEmat, EDGEbuilder, the EDGE Library, REDnode, redscript, and REDcode's API |
+| [Working with other tools](other-tools.html) | EDGEdeck, WolvenKit, EDGEwave, EDGEmat, EDGEbuilder, the EDGE Library and its view, REDnode, redscript, and REDcode's API |
 | [Settings and commands](settings.html) | Every setting, command, button and key |
 | [Troubleshooting](troubleshooting.html) | What you see, and what to do |
 

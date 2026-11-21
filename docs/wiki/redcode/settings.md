@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: REDcode
 order: 13
 description: "Every REDcode setting with its default and when to change it, every REDcode command with its icon, the keys, and the editors it adds to Open With."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Settings and <span class="y">commands</span>
@@ -64,7 +64,8 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 
 | Command | Icon | Does |
 |---|---|---|
-| New Project | A folder with a plus | Asks for a name and a folder, creates a WolvenKit project and opens it |
+| New Project | A folder with a plus | Asks for a name and a folder, creates a WolvenKit project and opens it, after a reminder to trust the folder if VS Code asks |
+| New File... | A page with a plus | Makes a new game or text file in the project: a texture from an image, an atlas, a material instance and more. Also a hover button on folders, the roots and the project, and in the **`...`** menu |
 | Pack | A package | Builds the project's `packed` folder. Also `Ctrl+Shift+B` |
 | Pack and Install | A rocket | Packs, then installs |
 | Pack and Play | A flame | Packs, then swaps the archive into the running game through REDnode. Without REDnode running, Pack and Install. It was called Pack and Try before 0.10.5, and the old command id, `redcode.packAndTry`, still works for keybindings |
@@ -80,6 +81,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 
 | Command | Icon | Does |
 |---|---|---|
+| New File... | A page with a plus | On a folder, a root or the project: makes a new file there |
 | Export to Raw | An arrow out of a box | Converts a game file to PNG, glTF, Ogg and so on under Raw |
 | Import from Raw | An arrow into a screen | Converts it back into the game's format under Archive. Also takes sound effect WAVs named after their hash |
 | Edit in Blender | A pencil | On a `.mesh` under Archive or a `.glb`/`.gltf` under Raw: opens it in Blender and imports each save |
@@ -96,7 +98,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Command | Icon | Does |
 |---|---|---|
 | Open game file as JSON | | Searches the game as you type and opens the file you pick as JSON |
-| Search game files | A magnifier | The same search, then Open as JSON, Add to project or Copy path |
+| Search game files | A magnifier | Finds files by name or path, and clothing by its name in the game or TweakDB id. A pick opens the file; Add to project, Copy path and Open as JSON are buttons on each row |
 | Browse Game Sounds | A speaker | Opens the game's sound effects as a list to filter and play. In the view's **`...`** menu |
 | Refresh Game Assets | A circling arrow | Re-reads the tree |
 | Filter Game Assets | A funnel | Narrows the tree to matching files |
@@ -132,11 +134,23 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Copy Text *(menu only)* | | Copies the entry's text |
 | Open in Its File *(menu only)* | | Opens the entry on its row in its localization file. A click on the entry does this |
 
+### Library
+
+| Command | Icon | Does |
+|---|---|---|
+| Refresh | A circling arrow | Reads the Library again |
+| Set Up the Library... | | Makes a Library, or picks one you have. Shown when there is none |
+| Refresh Project from Library | Two circling arrows | Brings in the project's Library items that have a newer version |
+| Add to Project *(menu only)* | A plus | Copies the item, with the files it needs, into the project. Asks before replacing the project's own files |
+| Open *(menu only)* | A page with an arrow | Opens the item's file |
+| Reveal in File Explorer *(menu only)* | | Shows the item on disk |
+
 ### Editing
 
 | Command | Icon | Does |
 |---|---|---|
 | Save JSON to Project | A yellow save mark | On JSON opened from a project file: rebuilds the game file from it. The button is in the editor's title bar |
+| Add to Project | | In the CR2W editor's header, on a game file: copies it into the project at its game path |
 
 ### Setup and REDbridge
 
@@ -165,6 +179,7 @@ REDcode adds no global shortcuts of its own. These work in its views:
 | `Ctrl+S`, `Ctrl+Z`, `Ctrl+Y` | The CR2W editor | Save, undo, redo |
 | `Esc` | The CR2W editor's search | Clears the results |
 | `Alt+Left`, `Alt+Right` | A TweakDB record page | Back and forward through the records you opened |
+| `W`, `A`, `S`, `D`, `Q`, `E` | A sector's 3D view, after a click on it | Fly the camera; with `Shift`, faster |
 | `Space` | The audio player | Play and pause |
 | Arrow keys | The game sound list | Step through the sounds, playing each |
 | `Ctrl+/` | A tweak file | Comment a line in or out |

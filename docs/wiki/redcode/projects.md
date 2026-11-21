@@ -3,8 +3,8 @@ title: REDcode projects
 nav_title: Projects
 section: REDcode
 order: 3
-description: "Make or open a WolvenKit project in REDcode, find your way around the Project view and its buttons, and learn what goes in each folder."
-reviewed: 2026-11-13
+description: "Make or open a WolvenKit project in REDcode, find your way around the Project view and its buttons, make new game files with New File, and learn what goes in each folder."
+reviewed: 2026-11-21
 ---
 
 # <span class="y">Projects</span>
@@ -17,7 +17,8 @@ A mod starts as a **project**: a folder where you collect the game files you cha
 | [Make a new project](#make-a-new-project), [Open](#open-a-project), [Close](#close-a-project) | |
 | [The Project view](#the-project-view) | [Opening files](#opening-files), [the buttons](#the-buttons), [the right-click menu](#the-right-click-menu) |
 | [Filter the project](#filter-the-project) | Narrow the list |
-| [Getting files into a project](#getting-files-into-a-project) | From the game, a mod, TweakDB or another tool |
+| [New File](#new-file) | A texture from an image, an atlas, a material and more, from nothing |
+| [Getting files into a project](#getting-files-into-a-project) | From the game, a mod, the Library, TweakDB or another tool |
 
 ## What a project is
 
@@ -47,6 +48,8 @@ REDcode adds one folder of its own, `.redcode`, only when it installs a mod with
 2. Type a name, for example `my_jacket`. It's also the mod's name, and the name of the mod's `.archive` file.
 3. Choose the folder to create the project in: anywhere outside the game folder. REDcode makes a folder with the project's name there.
 
+Before it opens the folder, REDcode reminds you to **trust** it if VS Code asks. VS Code asks whether you trust the authors of a folder it hasn't seen; in Restricted Mode, REDcode stays off and the other EDGE tools can't see the project. **Open, and Don't Say This Again** stops the reminder.
+
 **You should see** VS Code open the new folder, and the Project view show the project with **Archive**, **Raw**, **Resources** and **Packed** under it.
 
 **Naming.** REDcode accepts letters, digits, spaces, `-` and `_`. This wiki uses short names in small letters with no spaces, such as `my_jacket`, and recommends you do the same: some features use the mod's name inside game paths (your project's text file is `my_jacket\localization\en-us.json`), and Pack warns about game paths with capital letters or spaces, because the game may not find them.
@@ -75,7 +78,7 @@ Click a file and REDcode opens it in the right place:
 
 | File | Opens in |
 |---|---|
-| Game files: `.ent`, `.app`, `.mesh`, `.inkatlas`, materials, animations, scenes and the other CR2W types | The [CR2W editor](editing.html). A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d), an `.anims` file on its [Animations view](viewers.html#animations) |
+| Game files: `.ent`, `.app`, `.mesh`, `.inkatlas`, materials, animations, scenes and the other CR2W types | The [CR2W editor](editing.html). A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d), an `.anims` file on its [Animations view](viewers.html#animations), a `.streamingsector` on [its 3D view](viewers.html#streaming-sectors) |
 | Textures: `.xbm`, `.dds`, `.tga`, and in the Project view PNG, JPG, BMP and TIFF too | The [texture viewer](viewers.html#textures) |
 | Sounds: `.wem`, `.opus` | The [audio player](viewers.html#sounds) |
 | `.glb` and `.gltf` | The [3D mesh viewer](viewers.html#meshes-in-3d) |
@@ -95,16 +98,17 @@ The view's title bar holds the buttons you use most. Hover over one to see its n
 | A folder with a plus | **New Project** | Makes a new project |
 | A circling arrow | **Refresh Project** | Reads the project folder again |
 | A funnel | **Filter the Project** | Narrows the tree as you type |
-| **`...`** | The menu | **Install**, **Uninstall** and **Close Project** |
+| **`...`** | The menu | **New File...**, **Install**, **Uninstall** and **Close Project** |
 
 What each of the first four does, and when to use which, is on [Pack, install and run](pack-install.html#which-button).
 
-Hover over a file or folder and more buttons appear on the right of its row: **Export to Raw** or **Import from Raw** where the file can be converted, **Copy Path**, **Reveal in File Explorer** and **Delete**.
+Hover over a file or folder and more buttons appear on the right of its row: **Export to Raw** or **Import from Raw** where the file can be converted, **Copy Path**, **Reveal in File Explorer** and **Delete**. On a folder, a root such as Archive, or the project itself, **New File...** is there too.
 
 ### The right-click menu
 
 | Command | Does |
 |---|---|
+| New File... | On a folder, a root or the project: makes a new file there. See [New File](#new-file) |
 | Export to Raw, Import from Raw | Convert between game formats and editable ones. Shown only on files and folders that can be converted. See [Export and import](export-import.html) |
 | Edit in Blender | On a `.glb`, `.gltf` or `.mesh`: opens the model in Blender, and imports it back each time you save there. See [Edit in Blender](export-import.html#edit-in-blender) |
 | Add to Library... | On a file under Archive: saves it, with the files it needs, as one item in the [EDGE Library](../library.html), the store the EDGE tools share. See [The EDGE Library](other-tools.html#the-edge-library) |
@@ -119,11 +123,35 @@ Hover over a file or folder and more buttons appear on the right of its row: **E
 
 **Filter the Project**, the funnel in the title bar, narrows the tree to matching files as you type. It works the same as the Game Assets filter: see [Filter](game-assets.html#filter). **Clear the Project Filter** brings the whole tree back.
 
+## New File
+
+**New File...** makes a game file from nothing, where WolvenKit would have you copy a game file and empty it. Press it on a folder, a root or the project (the hover button, or the right-click menu), pick a kind, and type a name.
+
+| Kind | Starts as |
+|---|---|
+| **Texture from an Image...** (`.xbm`) | Pick a PNG, JPG, TGA, DDS or BMP and how it is used: **color**, **normal map**, **mask** or **UI**. The image is copied into Raw and imported, so you can change it there and import it again |
+| **Ink Atlas** (`.inkatlas`) | Pick its texture, from the project or a new one from an image. It starts with one part, `whole`, covering the texture, ready to [cut into parts](editing.html#atlases-the-atlas-view) |
+| **Material Instance** (`.mi`) | Pick its base material from the ones the game uses most, such as `multilayered.mt`, or type any path |
+| **Entity**, **Appearance**, **Multilayer Setup** (`.ent`, `.app`, `.mlsetup`) | Empty, with the game's defaults |
+| **Start from a Game File...** | Search the game, and the file you pick is copied here under your new name |
+| **TweakXL**, **ArchiveXL**, **Redscript** | A blank file with a comment saying what it is, in its usual place (`r6\tweaks`, beside the archive, `r6\scripts`), whichever folder you clicked |
+
+The new file opens in its editor and is selected in the Project view.
+
+- **Names** are checked as game paths: small letters, no spaces. Clicked on a folder under Archive, the file goes in that folder; anywhere else, the name box offers `<mod name>\<name>`, and you can type folders with `\` or `/`.
+- **An image with an odd width or height** can't be compressed by the game's format. REDcode says so first and offers **Resize** (a copy, each odd side one pixel shorter, with the size shown) or **Import Uncompressed**. Your image itself is never changed.
+
+These files were made, opened and packed in REDcode's tests. Whether the game takes each new kind has not been tried yet.
+
+{% include shot.html caption="New File" shows="The New File list over the Project view: Game files (Texture from an Image, Ink Atlas, Material Instance, Entity, Appearance, Multilayer Setup, Start from a Game File) and Text files (TweakXL, ArchiveXL, Redscript), with the folder it will be made in at the top." %}
+
 ## Getting files into a project
 
 | From | How |
 |---|---|
-| The game | **Add to Project** in [Game Assets](game-assets.html#add-to-project). The file lands under Archive at its game path |
+| Nothing | **New File...** on a folder. See [New File](#new-file) |
+| The game | **Add to Project** in [Game Assets](game-assets.html#add-to-project), in Search game files, or in the editor's header on a game file you are looking at. The file lands under Archive at its game path |
+| The EDGE Library | **Add to Project** in the [Library view](other-tools.html#the-edge-library) |
 | The game's texts | **Add to Project Onscreens** in the [LocKeys view](game-assets.html#the-lockeys-view) |
 | A mod you have installed in EDGEdeck | EDGEdeck's **Add to Project**. See [EDGEdeck and REDcode](../edgedeck/redcode.html) |
 | TweakDB | **New Tweak from This Record** writes a tweak file under Resources. See [TweakDB and tweaks](tweakdb.html) |

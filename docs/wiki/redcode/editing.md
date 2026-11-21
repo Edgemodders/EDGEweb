@@ -3,7 +3,7 @@ title: Editing game files
 section: REDcode
 order: 6
 description: "Change game files in REDcode's CR2W editor: reading the tree, the property grid, search, the table and atlas views, the Properties view, undo and save, and editing as JSON."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Editing game <span class="y">files</span>
@@ -28,11 +28,11 @@ Most game files are in a binary format called **CR2W**: data only the game and m
 
 Clicking a game file in the Project view or Game Assets opens the CR2W editor. That covers about forty file types, including entities (`.ent`, `.app`), meshes, atlases (`.inkatlas`), materials (`.mi`, `.mt`, `.mlsetup`, `.mlmask`), animations, rigs, interface widgets, scenes, quests, journals and the world's streaming sectors. [The file types you'll meet](finding.html#the-file-types-youll-meet) says what the common ones are.
 
-- A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d) first, and an `.anims` file on its [Animations view](viewers.html#animations). **Tree** switches to the editor.
+- A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d) first, an `.anims` file on its [Animations view](viewers.html#animations), and a `.streamingsector` on its [3D view of the sector](viewers.html#streaming-sectors). **Tree** switches to the editor, and the 3D view is as you left it when you come back.
 - A texture (`.xbm`) opens in the texture viewer. **Open in CR2W Editor** in the Project view's right-click menu shows it in the editor instead, with the image above the grid and the texture's settings (format, compression, flags) in the grid.
 - `.json` and `.csv` files that are CR2W inside, such as the game's localization files, offer the editor under **Open With...**.
 
-Files from Game Assets open read-only, with a banner: *This is the game's copy and is read-only. Add the file to the project to edit it.*
+Files from Game Assets open read-only, with a banner: *This is the game's copy and is read-only. Add the file to the project to edit it.* **Add to Project** in the editor's header does that: it copies the file into your project at its game path and selects it in the Project view. Open the project's copy to edit it.
 
 ## Reading the tree
 
@@ -72,7 +72,7 @@ The CR2W editor works like any VS Code editor:
 
 ## Search in a file
 
-The search box in the editor's footer finds values and property names anywhere in the file. Press Enter to search, click a hit to jump to it in the tree, and press Esc to clear the results.
+The search box in the editor's footer finds values and property names anywhere in the file. Press Enter to search, click a hit to jump to it in the tree, and press Esc to clear the results. A hit far down a long list, past its first 200 entries, opens the tree at that entry and scrolls to it, as **Show in Tree** in the 3D views does.
 
 ## Try it: change one value
 
