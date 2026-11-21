@@ -1069,8 +1069,8 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEwave",
-     "what": "K4c: the key pilot on REDcodeApi.keys (its extension, its MCP server, its saved ElevenLabs key)",
-     "ref": "https://github.com/Edgemodders/EDGEwave/issues/12"
+     "what": "K4c is built on EDGEwave main (8f0c586, 2026-11-21); waiting on the owner's hand test of the whole key lifecycle, MCP use included (EDGEwave's docs/testing.md, Shared keys)",
+     "ref": "https://github.com/Edgemodders/EDGEwave/issues/12#issuecomment-7068351109"
     },
     {
      "who": "EDGEmat",
