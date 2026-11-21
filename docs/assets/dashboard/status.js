@@ -882,8 +882,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "RW",
-      "title": "Replace with a WAV, titled 3D tabs (#29) and every window's project (#32); then revisit voice line (.wem) replacement through EDGEwave",
-      "status": "built, tests pending"
+      "title": "Replace with a WAV, titled 3D tabs (#29) and every window's project (#32): hand-tested 2026-11-20; Replace All (an event's variations) being built; then revisit voice line (.wem) replacement through EDGEwave",
+      "status": "in progress"
      },
      {
       "id": "NF",
@@ -907,7 +907,7 @@ window.EDGE_STATUS = {
     "needs": [
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
      "Animations A3 (#21): hand test passed 2026-11-20 on REDbridge 0.17.0; ready for the next release",
-     "Replace with a WAV, #29 openModel and #32 projects() built on main (3f8d87f), hand test waits on the owner",
+     "Replace with a WAV, #29 and #32: hand test passed 2026-11-20; Replace All for an event's variations being built",
      "Sector view and #31 built on main (d0bb84b, 2d0ffca), hand test waits on the owner",
      "Edit in Blender fix for skinned meshes on main (8624c65, from the REDnode session), hand test (4 steps) waits on the owner"
     ]
@@ -993,9 +993,9 @@ window.EDGE_STATUS = {
     {
      "name": "Replace with a WAV, titled models (#29), every window's project (#32)",
      "steps": 12,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-20 (docs/testing.md). Steps 4, 11 and 12 are in the game"
+     "status": "passed",
+     "ranBy": "the owner",
+     "note": "Passed 2026-11-20, all 12 steps, with two fixes (Replace without a project; no REDnode package downgrade)"
     },
     {
      "name": "Sector view (and #31 light)",
@@ -1020,7 +1020,6 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Run the Replace with a WAV, #29 and #32 hand test (12 steps)",
     "Run the Sector view hand test (11 steps)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the Edit in Blender: skinned meshes hand test (4 steps)"
