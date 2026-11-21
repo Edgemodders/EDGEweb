@@ -3384,8 +3384,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C2",
-      "title": "Chooms!: the game's story (code parts passed in the game 2026-11-21; knowledge cards for the main cast, the fixers, Delamain, Hanako and Kurt Hansen drafted 2026-11-21, waiting for the owner's review)",
-      "status": "in progress"
+      "title": "Chooms!: the game's story (done 2026-11-21: the save's story read, 59 story points, 82 knowledge cards for 18 people, reviewed by the owner and tested in the game)",
+      "status": "done"
      },
      {
       "id": "C3",
@@ -3412,7 +3412,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "The C2 knowledge cards, drafted and reviewed by the owner",
      "C3: people and corporations post by themselves through REDagent",
      "C4: images (the bundled pictures from the dossiers, generated photos with the player's key)",
      "C5: DMs with Opus",
@@ -3488,18 +3487,12 @@ window.EDGE_STATUS = {
    ],
    "waitingOn": [
     {
-     "who": "owner",
-     "what": "A review of the knowledge cards (82 cards, 18 people, chooms/rednode/cards/)",
-     "ref": "docs/design.md, C2: the knowledge cards"
-    },
-    {
      "who": "REDagent",
      "what": "REDnode #54 (filed 2026-11-21): more context and no tools in agent.ask for C3, a choice of model for C5; not blocking today",
      "ref": "https://github.com/Edgemodders/REDnode/issues/54"
     }
    ],
    "ownerActions": [
-    "Review the knowledge cards in chooms/rednode/cards/ (twelve lines flagged as least certain in docs/design.md)",
     "Create the Nexus pages for EDGEmobile and Chooms!",
     "Drop photo mode pictures into Chooms!'s dossiers (chooms/dossiers/) when you have them (for C4)"
    ],
