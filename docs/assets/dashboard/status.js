@@ -899,16 +899,29 @@ window.EDGE_STATUS = {
       "id": "ST",
       "title": "REDcode's half of Sector Tools (the app is EDGEbuilder's, EDGEbuilder #9): Show in Game, Open in REDcode, live previews, the replaced-sector warning; right after the sector view",
       "status": "planned"
+     },
+     {
+      "id": "K4",
+      "title": "Keys (#33): REDcode keeps the shared key store; K4b (Keys view, REDcodeApi.keys, consent) on main, K4c EDGEwave pilot next",
+      "status": "built, tests pending"
      }
     ]
    },
    "nextRelease": {
     "version": null,
     "needs": [
-     "Edit in Blender names mesh objects the import leaves out: on main, hand-tested 2026-11-20; ready for the next release"
+     "Blocked by the owner's key rule: main carries REDcodeApi.keys (K4b, 598c72c), so no REDcode store release until EDGEwave's pilot (K4c) has run the whole key lifecycle, MCP use included",
+     "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it"
     ]
    },
    "handTests": [
+    {
+     "name": "Keys (K4b)",
+     "steps": 9,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Given to the owner 2026-11-20 (docs/testing.md, Keys (K4b)); needs REDbridge built from main (0.18.0 not released)"
+    },
     {
      "name": "Edit in Blender: the warning for objects the import leaves out",
      "steps": 2,
@@ -1026,9 +1039,20 @@ window.EDGE_STATUS = {
      "who": "EDGEbuilder",
      "what": "Sector Tools S1, before REDcode's half (docs/design/sector-tools.md, three owner decisions)",
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
+    },
+    {
+     "who": "REDbridge",
+     "what": "0.18.0 release with keys.* (K4a, on main e57f92c)",
+     "ref": "https://github.com/Edgemodders/REDcode/issues/33"
+    },
+    {
+     "who": "EDGEwave",
+     "what": "K4c: the key pilot on REDcodeApi.keys (its extension, its MCP server, its saved ElevenLabs key)",
+     "ref": "https://github.com/Edgemodders/REDcode/blob/main/docs/design/keys.md"
     }
    ],
    "ownerActions": [
+    "Run the Keys (K4b) hand test (9 steps, with REDbridge built from main)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
    ],
