@@ -1833,9 +1833,9 @@ window.EDGE_STATUS = {
     {
      "name": "Speaking a line with timings (#13)",
      "steps": 6,
-     "status": "not run",
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "Steps 2 and 3 need EDGEfab's Lip Sync call; the real check of the timings passed by script 2026-11-20"
+     "note": "2026-11-21: speakLine worked through EDGEfab, but the cloned voice did not sound like Panam; samples or approach to decide with the owner"
     }
    ],
    "ownerSpotTests": [],
@@ -1847,6 +1847,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Decide how EDGEwave makes a character voice for speakLine: better game-line samples for a clone, or a voice designed from a description (cloning a game actor raises consent)",
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
@@ -1856,7 +1857,7 @@ window.EDGE_STATUS = {
     "Voice lines have no route into the game yet (the .wem route)",
     "Desk, Project and Library are on main, not in a release yet"
    ],
-   "checkedBy": "EDGEwave session, 2026-11-20"
+   "checkedBy": "EDGEwave session, 2026-11-21"
   },
   {
    "name": "EDGEmat",
