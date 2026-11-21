@@ -2857,6 +2857,11 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [
     {
+     "who": "EDGEwave",
+     "what": "The Lip Sync tab's Add a Line waits on it: one line spoken with ElevenLabs' timings (speakLine)",
+     "ref": "EDGEwave #13"
+    },
+    {
      "who": "owner",
      "what": "Publish Nexus page 38605 after adding the video. Nothing to test",
      "ref": "nexus/README.md"
