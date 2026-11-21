@@ -903,13 +903,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.10.15",
     "needs": [
-     "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
-     "Animations A3 (#21): hand test passed 2026-11-20 on REDbridge 0.17.0; ready for the next release",
-     "Replace with a WAV, Replace All, #29 and #32: hand tests passed 2026-11-20; ready for the next release",
-     "Sector view and #31: hand test passed 2026-11-20; ready for the next release",
-     "Edit in Blender fix for skinned meshes on main (8624c65, from the REDnode session), hand test (4 steps) waits on the owner"
+     "Prepared on main 2026-11-20: every hand test passed (A3, Replace with a WAV and Replace All, #29, #32, Sector view and #31, New File hover, Edit in Blender skinned meshes); the release run waits on the owner's go"
     ]
    },
    "handTests": [
@@ -923,9 +919,9 @@ window.EDGE_STATUS = {
     {
      "name": "Edit in Blender: skinned meshes",
      "steps": 4,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Given to the owner 2026-11-20 by the REDnode session (8624c65)"
+     "status": "passed",
+     "ranBy": "the owner",
+     "note": "Passed 2026-11-20, all 4 steps, on the base male body in Blender 5.3"
     },
     {
      "name": "Run Game without ELECTRON_RUN_AS_NODE (#24)",
@@ -1026,9 +1022,9 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Say go for the REDcode 0.10.15 release (prepared on main)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-    "Run the Edit in Blender: skinned meshes hand test (4 steps)"
+    "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)"
    ],
    "risks": [
     "REDcode #21 stays open on purpose: it closes when A3 ships",
