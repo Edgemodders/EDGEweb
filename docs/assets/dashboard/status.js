@@ -1071,6 +1071,21 @@ window.EDGE_STATUS = {
      "who": "EDGEmat",
      "what": "Sector materials M2: say which game mesh a Desk change is for, and render the world's multilayered materials (flat grey now)",
      "ref": "https://github.com/Edgemodders/EDGEmat/issues/17"
+    },
+    {
+     "who": "EDGEhack",
+     "what": "K4d: move its keys to REDcodeApi.keys on EDGEwave's model, then the joint release of every key-using tool",
+     "ref": "https://github.com/Edgemodders/EDGEhack/issues/3"
+    },
+    {
+     "who": "EDGEmat",
+     "what": "K4d: move its keys to REDcodeApi.keys on EDGEwave's model, then the joint release of every key-using tool",
+     "ref": "https://github.com/Edgemodders/EDGEmat/issues/18"
+    },
+    {
+     "who": "EDGEfab",
+     "what": "K4d: move its keys to REDcodeApi.keys on EDGEwave's model, then the joint release of every key-using tool",
+     "ref": "https://github.com/Edgemodders/EDGEfab/issues/10"
     }
    ],
    "ownerActions": [
