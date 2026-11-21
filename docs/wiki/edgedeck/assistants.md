@@ -4,7 +4,7 @@ nav_title: Assistants and command line
 section: EDGEdeck
 order: 13
 description: "Let Claude or another AI assistant manage your mods through EDGEdeck: what you can ask, what it can and can't do, how to connect it with EDGEchat or by hand, and the edgedeck command line."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Assistants and the <span class="y">command line</span>
@@ -91,7 +91,7 @@ Add `--json` to any command for output a script can read.
 |---|---|
 | `list [--size]` | What's in the library, with sizes and status. `--size` sorts by size |
 | `mod <id>` | One mod in full: files, sizes, source, Nexus data, conflicts |
-| `add <file or folder> [--name N] [--option FOLDER]` | Add a mod from a zip, 7z or rar, a single mod file or a folder. `--option` picks one of a download's option folders |
+| `add <file or folder> [--name N] [--option FOLDER]` | Add a mod from a zip, 7z or rar, a single mod file or a folder. `--option` picks one of a download's option folders. A mod with a FOMOD installer installs with its saved choices when they still fit; otherwise it lists its options, and `--fomod-choices` gives them (an assistant does this for you) |
 | `install-project <.cpmodproj> [--follow \| --keep-both]` | Add a REDcode or WolvenKit project's packed output, or refresh it, and turn it on. Beside a mod of the same name, `--follow` makes that mod follow this project and `--keep-both` adds the project as another version of it |
 | `on <id>`, `off <id>` | Turn a mod on or off |
 | `up <id>`, `down <id>` | Move it in the order (first wins conflicts) |

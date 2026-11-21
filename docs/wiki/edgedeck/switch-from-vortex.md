@@ -4,7 +4,7 @@ nav_title: Switch from Vortex
 section: EDGEdeck
 order: 8
 description: "Move your Cyberpunk 2077 mods from Vortex to EDGEdeck without losing anything: import, purge in Vortex, deploy in EDGEdeck, and how to go back."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Switch from Vortex to <span class="y">EDGEdeck</span>
@@ -35,10 +35,11 @@ It works the same the other way round: before you deploy in Vortex again, press 
 1. **Install EDGEdeck** and open its Mods view. See [Install and set up](install.html).
 2. **Import.** Press **Import from Vortex** in the Mods view, or in its **`...`** menu. EDGEdeck lists the mods Vortex has for Cyberpunk. Nothing is ticked at first: tick the ones you want, or the box at the top for all of them, and press **OK**. If you tick more than 20, EDGEdeck asks you to confirm before it copies them.
 3. **Wait for the copy.** EDGEdeck copies the mods into its library, with their names, versions and Nexus links. This needs as much free disk space as the mods take, and can take a few minutes. Nothing has changed in the game yet.
-4. **Check the list.** The **Frameworks** group at the top holds RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and the other [frameworks](frameworks.html) most mods need. The **Mods** group holds the rest. The mods Vortex had deployed are ticked. Untick anything you no longer want. If a framework is missing or old, **Get the frameworks...** in the **`...`** menu fetches the current one.
-5. **Purge in Vortex.** In Vortex, go to **Mods** and press **Purge**. This only takes Vortex's files out of the game folder. Your mods stay in Vortex.
-6. **Deploy in EDGEdeck.** Close the game if it's running, then press **Deploy**. To see first what it will place, and why, use **Show pending changes** in the **`...`** menu.
-7. **Play.** Press **Run game**. If something looks wrong, **Undo deploy** removes everything EDGEdeck placed and nothing else.
+4. **Bring the installer choices over**, if you installed any mods through a FOMOD installer in Vortex (the pages of options some mods ask you to pick from). Run **EDGEdeck: Import FOMOD choices from Vortex** from the command palette. A message counts the mods that got their choices. Their next updates then install with those choices, without asking. See [Mods with an installer](adding-mods.html#mods-with-an-installer-fomod).
+5. **Check the list.** The **Frameworks** group at the top holds RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and the other [frameworks](frameworks.html) most mods need. The **Mods** group holds the rest. The mods Vortex had deployed are ticked. Untick anything you no longer want. If a framework is missing or old, **Get the frameworks...** in the **`...`** menu fetches the current one.
+6. **Purge in Vortex.** In Vortex, go to **Mods** and press **Purge**. This only takes Vortex's files out of the game folder. Your mods stay in Vortex.
+7. **Deploy in EDGEdeck.** Close the game if it's running, then press **Deploy**. To see first what it will place, and why, use **Show pending changes** in the **`...`** menu.
+8. **Play.** Press **Run game**. If something looks wrong, **Undo deploy** removes everything EDGEdeck placed and nothing else.
 
 {% include shot.html caption="Import from Vortex" shows="The Mods view straight after an import: Vortex's mods in the library, the frameworks pinned at the top, and the Deploy button counting the changes waiting." %}
 
@@ -58,7 +59,7 @@ It works the same the other way round: before you deploy in Vortex again, press 
 - **Updates.** Imported mods keep their link to Nexus, so [update checks](nexus.html#updates) work for them once you sign in. Each file from a Nexus page becomes a mod of its own, as for files downloaded from Nexus.
 - **Download links.** Vortex takes back the Nexus **Mod manager download** links every time it starts. If you keep both installed, EDGEdeck's **Handle Nexus download links** step comes back so you can reclaim them. See [Download links](nexus.html#download-links).
 - **Conflicts.** After the switch, press **Get REDbridge** to see conflicts inside mod archives, which Vortex can't show. You may find some you didn't know about. See [Conflicts and who wins](conflicts.html).
-- **"Vortex manages the game"** in the status bar, or "Vortex manages this game folder" when you press Deploy, means step 5 is still to do.
+- **"Vortex manages the game"** in the status bar, or "Vortex manages this game folder" when you press Deploy, means step 6 is still to do.
 
 ## Going back to Vortex
 

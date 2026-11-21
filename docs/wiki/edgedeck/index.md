@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdeck
 order: 0
 description: "EDGEdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, why you might want it, and where to start."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # EDGE<span class="y">deck</span>
@@ -39,7 +39,7 @@ There are four things to learn: **add** a mod, **turn it on or off**, **deploy**
 | Worry about breaking your game | Every deploy is recorded and can be undone. EDGEdeck never deletes a file it didn't put there |
 | Have mods that clash in strange ways | EDGEdeck sees conflicts *inside* mod archives, which managers that only compare file names can't see, and says who wins |
 | Don't want to hunt down frameworks | **Get the frameworks** fetches the six that most mods need in one go, and **Update all** brings every mod up to date after one question |
-| Already use Vortex | A guided import of your Vortex mods. Vortex keeps its copies, so you can go back |
+| Already use Vortex | A guided import of your Vortex mods, with the choices you made in their installers. Vortex keeps its copies, so you can go back |
 | Want an AI assistant to manage mods for you | Claude or another assistant can list, add, switch and deploy your mods, and asks before it touches the game. See [Assistants](assistants.html) |
 | Make mods in REDcode | Your project becomes a mod in the list that refreshes every time you pack it |
 
@@ -55,12 +55,13 @@ EDGEdeck is the part of EDGE that puts mods into the game. It works on its own, 
 
 ## Status
 
-**Released, as a preview.** The latest is EDGEdeck 0.31.0 (2026-11-10), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
+**Released, as a preview.** The latest is EDGEdeck 0.32.0 (2026-11-15), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
 
 | | |
 |---|---|
 | **In daily use** | The library, deploy, undo, conflicts, loadouts |
 | **Passed the developer's tests, little use beyond them** | Nexus downloads and updates, Get the frameworks, REDmod deploys |
+| **New in 0.32.0, tested by its contributor** | [FOMOD installers](adding-mods.html#mods-with-an-installer-fomod): pick a mod's options, keep them across updates, bring them over from Vortex. The developer's own tests are still to run |
 | **Game version** | EDGEdeck places files and isn't tied to one game version. Its recorded tests ran on game 2.31; a test on game 2.5 is not recorded in its repo |
 | **Not switched on yet** | Signing in to Nexus through your browser. Nexus has to approve EDGEdeck first. Until then you copy a personal key from your Nexus account page and paste it in once: see [Signing in](nexus.html#signing-in) |
 

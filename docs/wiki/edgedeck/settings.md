@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEdeck
 order: 14
 description: "Every EDGEdeck setting with its default and when to change it, every EDGEdeck command, and the buttons that exist only on the EDGEdeck page."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Settings and <span class="y">commands</span>
@@ -96,6 +96,8 @@ Commands that act on one mod aren't in the command palette. They are on the mod'
 | Get REDbridge | Downloads REDbridge for conflicts inside archives |
 | Update REDbridge | Checks for and installs a newer REDbridge |
 | Import from Vortex | Copies Vortex's mods into the library |
+| Import FOMOD choices from Vortex | Brings over the choices Vortex kept for mods you installed through a [FOMOD installer](adding-mods.html#mods-with-an-installer-fomod), so their updates install with them |
+| Review FOMOD options | Opens the installer for an update waiting with `options to review` |
 | Add from REDcode project | Adds a project's packed output as a mod |
 | Add to REDcode project (for an `.archive` file) | Puts the contents of any `.archive` file into the open REDcode project, without adding it to the library. On an archive's right-click menu in the editor's Explorer, or run it and pick the file. In the command palette only while a project is open |
 | Switch loadout... | Makes another loadout active. Deploy afterwards |

@@ -3,7 +3,7 @@ title: Glossary
 section: Start here
 order: 4
 description: "Plain-language definitions of the Cyberpunk 2077 modding terms and EDGE terms this wiki uses, grouped by subject, each with its own link."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # <span class="y">Glossary</span>
@@ -61,6 +61,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | <a id="cr2w"></a>CR2W | The binary format of most game files inside archives. You never edit it directly: REDcode shows such files as a tree or as readable JSON |
 | <a id="entity"></a>Entity | A `.ent` file: a ready-made game object with its own parts, such as lights or doors |
 | <a id="flat"></a>Flat | One value inside a TweakDB record, such as an item's price |
+| <a id="fomod"></a>FOMOD | An installer that comes inside some mod downloads: a few pages of options, such as which color or which extras, that decide which of the mod's files are installed. EDGEdeck shows it and remembers your choices. See [Mods with an installer](edgedeck/adding-mods.html#mods-with-an-installer-fomod) |
 | <a id="framework"></a>Framework | A mod that other mods need in order to work. Six cover most mods: RED4ext, Cyber Engine Tweaks, redscript, ArchiveXL, TweakXL and Codeware. EDGEdeck's [Get the frameworks](edgedeck/frameworks.html#getting-the-frameworks) installs them |
 | <a id="hash"></a>Hash | A number that stands for a name. Inside an archive, each file path is stored as a hash; if a tool shows a long number instead of a file name, it is a hash the tool could not turn back into a path. Sounds and sound events are known by hashes too |
 | <a id="ink"></a>Ink | The game's UI system: the HUD, the menus and their widgets. Its files are `.inkwidget` (a piece of UI), `.inkatlas` (pictures) and `.inkstyle` (colors and text styles) |

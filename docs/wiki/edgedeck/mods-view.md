@@ -4,7 +4,7 @@ nav_title: The Mods view and page
 section: EDGEdeck
 order: 9
 description: "Find your way around EDGEdeck: a short tour of the Mods view and the wide EDGEdeck page, then a reference for every status, button, column, filter and section control."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # The Mods view and the <span class="y">EDGEdeck page</span>
@@ -119,6 +119,7 @@ Click a mod's name for its detail panel, which opens in the middle of the window
 | `changed, deploy again` | The mod is in the game, but some of its files still need to go in: its copy in the library changed (for example your own project was packed again), a file went missing from the game, or it now wins a file it used to lose | Deploy |
 | `..., 2 conflicts` | Added after any status: the mod shares files with other mods | Nothing, unless the wrong mod wins. See [Conflicts](conflicts.html) |
 | `update 1.2 available` | Nexus has a newer version | Click it to update. See [Updates](nexus.html#updates) |
+| `options to review` | An update of a mod with a FOMOD installer is downloaded, but its installer changed, so your choices no longer fit. The old version stays in use | Click it to pick again. See [Mods with an installer](adding-mods.html#mods-with-an-installer-fomod) |
 | `loses 3 archive files` | Another mod replaces 3 of the things (models, textures and so on) packed inside this mod's archives, so this mod's versions of them won't show in the game | Check [Conflicts](conflicts.html) if that's not what you want |
 | `overrides 2 archive files` | It replaces 2 things packed inside another mod's archives | Usually intended |
 
@@ -177,8 +178,8 @@ The Frameworks group's header has two buttons of its own when you hover it: **Ge
 | **Toolbar** | **+ Add mod**. **Check updates**, which reads **Nexus sign in** until you are signed in. **Update all**, greyed out while nothing waits and with a count when something does; it reads **Update shown** while a search or filter narrows the list. **Conflicts**, with a count. **Undo deploy**, once something is deployed. The number of changes waiting: click it to list them. **Deploy**, which reads **Deployed** when nothing waits. **Run game** |
 | **Set up** | A strip of buttons for the [Set up steps](install.html#the-set-up-steps) still to do |
 | **Loadout** | A dropdown of your [loadouts](loadouts.html) (saved sets of which mods are on), with buttons to make, rename, export, import and delete one. **Library**, at the right of the row, counts your mods and versions; click it to open the library folder |
-| **Search** | Matches name, version, kind and status |
-| **Filter chips** | **All**, **On** and **Off** are always there. **Deployed**, **Not deployed**, **Needs deploy**, **Changed in game folder**, **Conflicts** and **Update available** appear when at least one mod fits. Each shows its count |
+| **Search** | Matches name, version, kind and status. `fomod` lists the mods from a [FOMOD installer](adding-mods.html#mods-with-an-installer-fomod) |
+| **Filter chips** | **All**, **On** and **Off** are always there. **Deployed**, **Not deployed**, **Needs deploy**, **Changed in game folder**, **Conflicts**, **Update available** and **Options to review** appear when at least one mod fits. Each shows its count |
 | **Largest first** | Lists every mod by size, across every section |
 | **Newest update first** | Lists every mod by when the version in use came into the library, newest on top. While either sort is on, rows can't be dragged |
 | **Columns** | A button that picks which columns show: Version, Kind, Size, Added, Updated and Status. The mod's box, its name and its buttons always show. Added and Updated start hidden. **Added** is when the mod first came into your library; **Updated** is when the version in use did |

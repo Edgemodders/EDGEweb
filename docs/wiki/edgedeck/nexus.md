@@ -4,7 +4,7 @@ nav_title: Nexus Mods
 section: EDGEdeck
 order: 7
 description: "Sign EDGEdeck in to Nexus Mods with a personal API key, send Mod manager download to EDGEdeck, watch and cancel downloads, check for updates, update everything at once, and keep several files from one page."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Nexus <span class="y">Mods</span>
@@ -113,6 +113,7 @@ Good to know:
 - **Other mods** come from Nexus. Premium members get them straight away. For free members, EDGEdeck opens each file's download page: press the button on each.
 - **With a search typed or a filter chip picked** on the EDGEdeck page, the button reads **Update shown** and updates only the mods left showing.
 - **A cancelled download** is skipped, and the others go on.
+- **Mods with a [FOMOD installer](adding-mods.html#mods-with-an-installer-fomod)** update with the choices you made before. Update all never opens an installer: an update whose installer changed waits as `options to review`.
 - **At the end**, one summary offers **Deploy**. The older versions stay in the library, switched off.
 
 {% include shot.html caption="Update all" shows="The EDGEdeck page's toolbar with Update all and its count, and the one question listing the mods it will update." %}

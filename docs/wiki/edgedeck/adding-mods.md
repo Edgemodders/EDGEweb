@@ -3,8 +3,8 @@ title: Adding and removing mods
 nav_title: Adding and removing mods
 section: EDGEdeck
 order: 4
-description: "Add mods to EDGEdeck from zip, 7z and rar files, single mod files, folders, Nexus Mods and Vortex; keep several versions; remove a mod; and how EDGEdeck decides where each file goes."
-reviewed: 2026-11-13
+description: "Add mods to EDGEdeck from zip, 7z and rar files, single mod files, folders, Nexus Mods and Vortex; pick a FOMOD installer's options; keep several versions; remove a mod; and how EDGEdeck decides where each file goes."
+reviewed: 2026-11-21
 ---
 
 # Adding and removing <span class="y">mods</span>
@@ -18,6 +18,7 @@ Never added a mod before? [Your first mod](first-mod.html) walks through it once
 | [From a file or folder](#from-a-file-or-folder) | A download you already have |
 | [From Nexus Mods](#from-nexus-mods) | With one click, or from a link |
 | [From Vortex](#from-vortex), [from a REDcode project](#from-a-redcode-project) | |
+| [Mods with an installer (FOMOD)](#mods-with-an-installer-fomod) | Pick a mod's options, and keep them across updates |
 | [Versions](#versions) | Several versions of one mod |
 | [Removing a mod](#removing-a-mod) | |
 | [How EDGEdeck decides where files go](#how-edgedeck-decides-where-files-go) | Reference: [kinds](#kinds) and folders |
@@ -60,11 +61,31 @@ A mod added from Nexus remembers its Nexus page, so EDGEdeck can check it for up
 
 ## From Vortex
 
-**Import from Vortex** lists the mods Vortex has for Cyberpunk. Tick the ones you want, and EDGEdeck copies them into the library with their names, versions and Nexus links. Vortex keeps its own copies. See [Switch from Vortex](switch-from-vortex.html).
+**Import from Vortex** lists the mods Vortex has for Cyberpunk. Tick the ones you want, and EDGEdeck copies them into the library with their names, versions and Nexus links. Vortex keeps its own copies. Mods you installed through a [FOMOD installer](#mods-with-an-installer-fomod) in Vortex can bring their choices along. See [Switch from Vortex](switch-from-vortex.html).
 
 ## From a REDcode project
 
 For mod makers: **Add from REDcode project** adds your own project as a mod that follows the project. See [EDGEdeck and REDcode](redcode.html).
+
+## Mods with an installer (FOMOD)
+
+Some mods come with an installer, called a FOMOD: a few pages of options, such as which color, which body type or which extras. EDGEdeck shows the installer in a window and installs only the files your choices need.
+
+1. Add the mod the usual way: from a file, or with **Mod manager download**.
+2. The installer opens in the editor. Its steps are on the left, and each step shows its options with their pictures. The mod author's defaults are ticked.
+3. Pick your options, step by step, and press **Install**.
+
+{% include shot.html caption="A FOMOD installer" shows="The installer window: its steps on the left, one ticked as done, and a step's options with their pictures and the defaults ticked." %}
+
+| | |
+|---|---|
+| **What you get** | One mod with only the files your choices need, and a `fomod` tag after its kinds. Type `fomod` in the EDGEdeck page's search box to list these mods |
+| **To change your options** | Add the same file again, or press **Mod manager download** again on Nexus. The installer opens with your current choices ticked. Installing goes over the same mod, so you don't get a second one |
+| **Updates** | EDGEdeck remembers your choices. An update whose installer still fits them installs without asking, in [Update all](nexus.html#update-all) too |
+| **`options to review`** | An update changed its installer, so your choices no longer fit. The old version stays in use. Click the status, or run **Review FOMOD options** from the command palette, to pick again. The new version takes over when you press **Install** |
+| **Coming from Vortex** | **Import FOMOD choices from Vortex** brings over the choices Vortex kept. See [Switch from Vortex](switch-from-vortex.html) |
+
+The FOMOD installer is new in EDGEdeck 0.32.0 (2026-11-15). If one installs the wrong files, [report it](https://github.com/Edgemodders/EDGEdeck/issues) with the mod's Nexus page.
 
 ## Versions
 
@@ -114,7 +135,7 @@ Mod downloads from Nexus aren't consistent. Some are laid out from the game fold
 
 ### When EDGEdeck asks
 
-If a download offers a choice (folders such as "Option A" and "Option B" that contain the same kinds of files), EDGEdeck lists the options and you pick one.
+If a download offers a choice (folders such as "Option A" and "Option B" that contain the same kinds of files), EDGEdeck lists the options and you pick one. A download with a FOMOD installer opens [its installer](#mods-with-an-installer-fomod) instead.
 
 If nothing in a download looks like a mod file, EDGEdeck says so and adds nothing. If only some files have no place, the mod is added without them, a message says how many were left out, and the log names them (**Show log** in the **`...`** menu).
 
@@ -136,3 +157,5 @@ Each mod shows **kind** chips that say what's inside it. A mod can be several ki
 | `rednode` | A [REDnode](../rednode/) app or mod |
 | `audioware`, `input`, `config`, `asi` | Sound packs, key bindings, settings overrides, ASI plugins |
 | `framework` | One of the [frameworks](frameworks.html) other mods build on |
+
+A mod from a [FOMOD installer](#mods-with-an-installer-fomod) also shows a `fomod` tag after its kinds. It isn't a kind: it says how the mod came in.
