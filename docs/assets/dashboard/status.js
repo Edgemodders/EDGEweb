@@ -1835,7 +1835,7 @@ window.EDGE_STATUS = {
      "steps": 6,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-21: speakLine worked through EDGEfab, but the cloned voice did not sound like Panam; samples or approach to decide with the owner"
+     "note": "2026-11-21: speakLine worked through EDGEfab; the first Panam clone did not sound like her; the clone now takes better samples, to retest"
     }
    ],
    "ownerSpotTests": [],
@@ -1847,7 +1847,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Decide how EDGEwave makes a character voice for speakLine: better game-line samples for a clone, or a voice designed from a description (cloning a game actor raises consent)",
+    "Retest the Panam clone: Character Voices > panam > Change the voice > Clone (now about two minutes of clean, varied lines), then a line in EDGEfab Lip Sync",
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
