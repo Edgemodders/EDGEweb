@@ -3408,6 +3408,13 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "C2 cards test (the Story tab's knowledge cards)",
+     "steps": 2,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-21 on the PC, before the review: the late save 33 of 59 points with every count as expected; another playthrough 21 of 59 with its own counts"
+    },
+    {
      "name": "Share a post (Chooms! on a real phone)",
      "steps": 6,
      "status": "passed",
