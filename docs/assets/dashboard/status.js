@@ -892,8 +892,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SV",
-      "title": "Sector view: the @edgemodders/world-view package (unpublished), a read-only 3D sector mode, openSector, and #31's light in every 3D view",
-      "status": "built, tests pending"
+      "title": "Sector view: the @edgemodders/world-view package (unpublished), a read-only 3D sector mode, openSector, and #31's light in every 3D view (hand-tested 2026-11-20, in the next release)",
+      "status": "done"
      },
      {
       "id": "ST",
@@ -908,7 +908,7 @@ window.EDGE_STATUS = {
      "New File hover button on main (d4c6b4f), hand-tested 2026-11-20: ready for the next release",
      "Animations A3 (#21): hand test passed 2026-11-20 on REDbridge 0.17.0; ready for the next release",
      "Replace with a WAV, Replace All, #29 and #32: hand tests passed 2026-11-20; ready for the next release",
-     "Sector view and #31: hand test passed 2026-11-20 (1 to 10b, R1 to R3); R4 and R5 (tree reveal past 200, Add to Project in the header) wait on the owner",
+     "Sector view and #31: hand test passed 2026-11-20; ready for the next release",
      "Edit in Blender fix for skinned meshes on main (8624c65, from the REDnode session), hand test (4 steps) waits on the owner"
     ]
    },
@@ -1007,9 +1007,9 @@ window.EDGE_STATUS = {
     {
      "name": "Sector view (and #31 light)",
      "steps": 16,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "the owner",
-     "note": "Steps 1 to 10b and R1 to R3 passed 2026-11-20. R4 (Show in Tree past entry 200) and R5 (Add to Project in the header), built the same day, not run"
+     "note": "Passed 2026-11-20: steps 1 to 10b and R1 to R5, with two fixes and five changes the owner asked for, each retested"
     }
    ],
    "ownerSpotTests": [],
@@ -1027,7 +1027,6 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Retest the Sector view R4 and R5 (Show in Tree past entry 200; Add to Project in the header)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the Edit in Blender: skinned meshes hand test (4 steps)"
    ],
