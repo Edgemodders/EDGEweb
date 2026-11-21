@@ -2785,6 +2785,11 @@ window.EDGE_STATUS = {
       "id": "LS",
       "title": "Live lip sync for an NPC conversation mod: spikes LS1 to LS5. LS1 passed 2026-11-20 (a script moves a live NPC's jaw); LS2 (whole mouth shapes) is next",
       "status": "in progress"
+     },
+     {
+      "id": "A2F",
+      "title": "Spike: finer mouth movement from a line's audio (NVIDIA Audio2Face-3D, run locally), beside the game's own clip",
+      "status": "in progress"
      }
     ]
    },
@@ -2798,11 +2803,18 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Spike A2F: Audio2Face against the game's clip",
+     "steps": 4,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Steps 1 to 3 ran 2026-11-21 on the owner's PC: NVIDIA's container runs locally, four of Panam's lines made and mapped to the game's tracks. Step 4, the owner comparing them with the game's clips in the tab, not run"
+    },
+    {
      "name": "Add a Line in the Lip Sync tab",
      "steps": 3,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Steps 1 and 2 (words and letter timings to mouth shapes and a clip; the page in a browser) passed 2026-11-20 with made-up timings. Step 3, with EDGEwave's real voice in VS Code, not run"
+     "note": "Steps 1 and 2 passed 2026-11-20. Step 3 ran 2026-11-21 (owner): a typed line was voiced and played on the head; the mouth was exaggerated, so the shapes were retuned to the game's range (not seen again yet). The voice is now one of ElevenLabs' own or a designed one (owner: no game audio sent out)"
     },
     {
      "name": "The head in the Lip Sync tab",
@@ -2879,7 +2891,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "EDGEwave",
-     "what": "speakLine is built on EDGEwave's main, not released: Add a Line needs that release (or EDGEwave's build beside EDGEfab's) to work for a modder",
+     "what": "speakLine is on EDGEwave's main, not released: Add a Line needs that release to work for a modder. Voices are ElevenLabs' own or designed from a description; cloning game lines was removed",
      "ref": "EDGEwave #13"
     },
     {
@@ -2929,6 +2941,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Lip Sync tab, Panam, the four lines under finalboards: switch between The game's, Audio2Face and Audio2Face, full strength, and say which reads better on the words. Name lines you find stiff in the game, to run those too",
     "In VS Code, F5 with \"Run EDGEfab with EDGEwave's build\": open Lip Sync, pick a character, type a new line and press Enter. Say how well the mouth matches the voice. The same pass covers the head, the transport row, dragging the marker and the tab coming back after a reload",
     "Run spike LS2 in the game (Tests page, \"Spike LS2: mouth shapes\"): which of the 13 shapes look like their sounds",
     "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
@@ -2941,7 +2954,7 @@ window.EDGE_STATUS = {
     "A part's game material lives in the project only: the Desk and Library copies keep the model's textures",
     "Live lip sync replaces the game's face graphs in a mod; a change costs about 50 ms from a Node mod, so whole mouth shapes need few numbers sent seldom (LS2)"
    ],
-   "checkedBy": "EDGEfab lip sync session, 2026-11-20"
+   "checkedBy": "EDGEfab lip sync session, 2026-11-21"
   },
   {
    "name": "EDGEdir",
