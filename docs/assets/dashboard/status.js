@@ -2125,9 +2125,9 @@ window.EDGE_STATUS ={
     {
      "name": "View in 3D follows a part's change",
      "steps": 6,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-19: the 3D view redraws after Use a Game Surface, Use a Game Material and Back to the Model's Texture"
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "2026-11-22: step 6 (New Material Here, Add to Project) failed, fixed the same day (the Desk and its 3D view kept their old copy of the mesh); step 6 to run again, steps 1 to 5 not reported yet"
     },
     {
      "name": "The bake: color",
@@ -2204,7 +2204,7 @@ window.EDGE_STATUS ={
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-22 (Shared keys passed, all 7 steps; release held for K4d)"
+   "checkedBy": "EDGEmat session, 2026-11-22 (View in 3D follows a part's change: step 6 failed and fixed; Shared keys passed)"
   },
   {
    "name": "EDGEquest",
