@@ -973,7 +973,6 @@ window.EDGE_STATUS ={
      "REDbridge 0.18.0 as the minimum (0.19.0 not needed: it only names Uthana; the fit clears fallback frames itself)",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
-     "Add to Project's question before replacing a project's file: retest R1 to R3",
      "Animation Tools AT2 and Key status: their hand tests"
     ]
    },
