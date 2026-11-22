@@ -2098,17 +2098,17 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": "0.3.4",
     "needs": [
-     "0.3.3 released 2026-11-18. Since: View in 3D follows a part's change (built 2026-11-19, its hand test not run); #17 for REDcode's sector view (built 2026-11-21, its hand test not run); #18 keys from REDcode's shared store (K4d, built 2026-11-22, its hand test passed the same day). Release held by the owner's rule: REDcode, EDGEwave 0.3.0 and every K4d tool go out together. Next work: shine in View in 3D (waits on REDcode #31 for light)",
+     "0.3.3 released 2026-11-18. Since: View in 3D follows a part's change (built 2026-11-19, its hand test not run); #17 for REDcode's sector view (built 2026-11-21, its hand test not run); #18 keys from REDcode's shared store (K4d, built 2026-11-22; its hand test's steps 1 to 6 passed the same day, step 7 for Don't Allow added after). Release held by the owner's rule: REDcode, EDGEwave 0.3.0 and every K4d tool go out together. Next work: shine in View in 3D (waits on REDcode #31 for light)",
      "Separately, Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
    },
    "handTests": [
     {
      "name": "Shared keys",
-     "steps": 6,
-     "status": "passed",
+     "steps": 7,
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "Passed 2026-11-22 (owner, all 6 steps) for #18 (K4d): Gemini and OpenAI from REDcode's Keys, the move from secret storage, Set and Clear, the MCP server reading the store. With one image key removed, a request naming no service uses the other"
+     "note": "Steps 1 to 6 passed 2026-11-22 (owner) for #18 (K4d). Step 7, added the same day: after Don't Allow, EDGEmat says how to allow it instead of opening REDcode's password box (REDcode main f6c7cbf's keys.status); not run"
     },
     {
      "name": "The Desk's edits in the 3D view",
@@ -2191,6 +2191,7 @@ window.EDGE_STATUS ={
     "Install 0.3.3 from the Marketplace in a normal VS Code, then Connect an assistant",
     "Run the hand test 'View in 3D follows a part's change' (Ctrl+F5, EDGEmat_PropParts)",
     "Run the hand test 'The Desk's edits in the 3D view' (Ctrl+F5, the Rocker's heart jacket)",
+    "Run step 7 of the hand test 'Shared keys' (#18): Don't Allow in REDcode's question",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
@@ -2199,7 +2200,7 @@ window.EDGE_STATUS ={
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-22 (Shared keys passed; #18 built, release held for K4d; #19 done)"
+   "checkedBy": "EDGEmat session, 2026-11-22 (Shared keys steps 1 to 6 passed, step 7 added; release held for K4d)"
   },
   {
    "name": "EDGEquest",
