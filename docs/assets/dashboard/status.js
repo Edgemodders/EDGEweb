@@ -1982,7 +1982,7 @@ window.EDGE_STATUS ={
      "steps": 8,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-22: steps 1 and 1b pass (designing a voice, the character's menu), after step 1's findings were fixed the same day; step 2 passed 2026-11-21. Steps 3 (designing), 4, 5, 6 and 7 to run"
+     "note": "2026-11-22: steps 1 and 1b pass; step 2 passed 2026-11-21. Steps 4, 5, 6 and 7 to run; step 3 waits for the Lip Sync tab in REDcode (moving from EDGEfab, merged after REDcode's next release)"
     },
     {
      "name": "Shared keys (#12, #14)",
@@ -2003,12 +2003,17 @@ window.EDGE_STATUS ={
      "who": "REDcode",
      "what": "K4d: EDGEhack, EDGEmat and EDGEfab move to the key API; then every key-using tool is released at once, EDGEwave 0.3.0 and REDcode included (the owner's rule, 2026-11-19)",
      "ref": "REDcode docs/design/keys.md, Releases"
+    },
+    {
+     "who": "REDcode",
+     "what": "The Lip Sync tab, moving from EDGEfab into REDcode (a branch, merged after REDcode's next release), for #13 hand test step 3",
+     "ref": "EDGEwave docs/testing.md, Speaking a line with timings"
     }
    ],
    "ownerActions": [
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
-    "Run the rest of the #13 hand test: steps 3 (a character with no voice), 4, 5, 6 and 7 (docs/testing.md, Speaking a line with timings)"
+    "Run the rest of the #13 hand test: steps 4, 5, 6 and 7 (docs/testing.md, Speaking a line with timings); step 3 waits for the Lip Sync tab in REDcode"
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)",
