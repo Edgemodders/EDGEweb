@@ -1350,7 +1350,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "No next version named; nothing unreleased",
+     "No next version named; unreleased: EDGEmods links (EDGEdeck#16 part 1), built, automated tests pass",
      "M6's last part (requirements) waits on Nexus"
     ]
    },
@@ -1403,6 +1403,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "The contributor's account is free"
+    },
+    {
+     "name": "EDGEmods link from a browser click (EDGEdeck#16 part 1)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Unreleased; without the EDGEmods extension (R4) only the 'needs the extension' message can be seen"
     }
    ],
    "ownerSpotTests": [
@@ -1425,8 +1432,8 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEmods",
-     "what": "Its request to install from a downloaded archive (not filed yet)",
-     "ref": "docs/design.html"
+     "what": "Its extension (R4), for EDGEdeck#16 parts 2 and 3 (installMods, edgemodsMods); part 1, the links, is built",
+     "ref": "EDGEdeck#16"
     }
    ],
    "ownerActions": [
@@ -1439,7 +1446,7 @@ window.EDGE_STATUS = {
    "risks": [
     "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
    ],
-   "checkedBy": "EDGEdeck session, 2026-11-16"
+   "checkedBy": "EDGEdeck session, 2026-11-21"
   },
   {
    "name": "EDGEbuilder",
