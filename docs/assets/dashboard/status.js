@@ -2559,7 +2559,7 @@ window.EDGE_STATUS ={
     "Supply the screenshots the wiki guide names"
    ],
    "risks": [
-    "The VS Code Marketplace took 0.1.2 on 2026-11-19 after support's review, and its publish step accepted 0.1.3 on 2026-11-22 (the listing showing it is still to check)",
+    "The VS Code Marketplace took 0.1.2 on 2026-11-19 after support's review, and 0.1.3 passed on its own on 2026-11-22 (listed minutes after the run)",
     "Try Live cannot change names: the game reads its text tables at load"
    ],
    "checkedBy": "REDnode session, 2026-11-22 (0.1.3 released with the K4d tools)"
