@@ -3634,8 +3634,23 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
-      "id": "R4",
-      "title": "Browse and install (extension)",
+      "id": "R4a",
+      "title": "Extension foundations and sign-in",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "R4b",
+      "title": "Browse in VS Code",
+      "status": "planned"
+     },
+     {
+      "id": "R4c",
+      "title": "Install through EDGEdeck",
+      "status": "planned"
+     },
+     {
+      "id": "R4d",
+      "title": "MCP server",
       "status": "planned"
      },
      {
@@ -3700,6 +3715,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "The registry workflow calls it once the server is live (R3h)"
+    },
+    {
+     "name": "Sign in from VS Code with GitHub, Google and email; the status bar shows the username (R4a)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Waits for the Auth0 application \"EDGEmods for VS Code\" (docs/auth0-setup.md, step 9)"
     }
    ],
    "ownerSpotTests": [],
@@ -3711,16 +3733,22 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEdeck",
-     "what": "edgemods: links, installMods all or nothing, edgemodsMods() (part 1 can land first; parts 2 and 3 for R4)",
+     "what": "installMods all or nothing and edgemodsMods() (parts 2 and 3, for R4c); part 1, edgemods: links, released in 0.33.0",
      "ref": "EDGEdeck#16"
     },
     {
      "who": "owner",
      "what": "Agree the REDcode request (the Publish button)",
      "ref": "CLAUDE.md"
+    },
+    {
+     "who": "owner",
+     "what": "Make the Auth0 application \"EDGEmods for VS Code\" and add EDGEMODS_AUTH0_EXTENSION_CLIENT_ID to .env (Auth0 setup, step 9)",
+     "ref": "docs/auth0-setup.md"
     }
    ],
    "ownerActions": [
+    "Make the Auth0 application for VS Code (docs/auth0-setup.md, step 9), then hand-test signing in from VS Code",
     "Review and agree design draft 0.2 and the edgemods.json format",
     "Decide the subscription price and the free download speed",
     "Get a legal reading on non-commercial mod licences before launch"
@@ -3729,7 +3757,7 @@ window.EDGE_STATUS = {
     "No release and no live site yet; the design is still a proposal",
     "Auth0 marks a GitHub sign-in's email unverified, so admin sign-in works through Google or email for now"
    ],
-   "checkedBy": "EDGEmods session, 2026-11-21"
+   "checkedBy": "EDGEmods session, 2026-11-22"
   },
   {
    "name": "EDGEguide",
