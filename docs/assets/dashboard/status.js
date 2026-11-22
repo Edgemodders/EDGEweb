@@ -846,7 +846,7 @@ window.EDGE_STATUS ={
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
-   "version": "0.10.15",
+   "version": "0.10.16",
    "lastTag": "v0.10.13",
    "lastTagDate": "2026-11-16",
    "lastCommit": "2026-11-16",
@@ -936,8 +936,8 @@ window.EDGE_STATUS ={
      },
      {
       "id": "K4",
-      "title": "Keys (#33): REDcode keeps the shared key store; K4b, K4c and K4d (EDGEhack, EDGEmat, EDGEfab) all hand-tested by 2026-11-22, every tool on keys.status; the joint release on the owner's go",
-      "status": "built, tests pending"
+      "title": "Keys (#33, closed): the Keys view and REDcodeApi.keys with status, released in REDcode 0.10.16 (2026-11-22); the joint K4d release of EDGEwave, EDGEhack and EDGEfab started the same day, EDGEmat 0.3.4 waits on its own test",
+      "status": "done"
      },
      {
       "id": "AR",
@@ -946,17 +946,17 @@ window.EDGE_STATUS ={
      },
      {
       "id": "SM",
-      "title": "Sector materials (docs/design/sector-materials.md, agreed 2026-11-21): M1 the picked thing's real material in the sector view, By material fixed (built); M2 live from EDGEmat's Desk; M3a every copy through Add to Project; M3b one node through an ArchiveXL mutation and EDGEbuilder's bake; with the sector view's camera row (built 2026-11-21)",
+      "title": "Sector materials: M1 done (released in 0.10.16, with the camera row and selection); M2 live from EDGEmat's Desk next (EDGEmat #17 passed); M3a, M3b; every copy of a mesh agreed",
       "status": "in progress"
      },
      {
       "id": "SS",
-      "title": "Sector selection: many things at once, a screen box and a volume, the selected list (docs/design/sector-selection.md, agreed and built 2026-11-21)",
+      "title": "Sector selection: many things at once, a screen box and a volume, the selected list (docs/design/sector-selection.md, agreed and built 2026-11-21) (released in 0.10.16)",
       "status": "done"
      },
      {
       "id": "AT",
-      "title": "Animation Tools: AT1 anim-core done; AT2 Make in REDcode built, hand test pending; AT3 the REDnode pack built, hand test run 1 in progress (fixed: busy Generate, facing V, a grounding rule, Upper body only, a Generating tooltip waiting on REDnode #55 in 0.70.0); AT3r the pack release (own Nexus page), AT4 V",
+      "title": "Animation Tools: AT1 anim-core and AT2 Make in REDcode done (released in 0.10.16); AT3 the REDnode pack built, hand test run 1 in progress; AT3r the pack release (own Nexus page); takes for made clips agreed; AT4 V",
       "status": "in progress"
      },
      {
@@ -969,19 +969,16 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": null,
     "needs": [
-     "Key rule met: K4c and every K4d tool passed, and EDGEmat, EDGEhack, EDGEwave and EDGEfab all use keys.status (2026-11-22); the joint release waits on the owner's go",
-     "REDbridge 0.18.0 as the minimum (0.19.0 not needed: it only names Uthana; the fit clears fallback frames itself)",
-     "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
-     "Sector camera: its hand test",
-     "Animation Tools AT2 and Key status: their hand tests"
+     "Lip Sync L1 (merge the lipsync branch, design draft 0.1 with four decisions), M2, every copy of a mesh, takes: agreed for the next release"
     ]
    },
    "handTests": [
     {
      "name": "Key status",
      "steps": 7,
-     "status": "not run",
-     "note": "REDcodeApi.keys.status tells no key from the modder's no; Opens Test's Read a Key says why; also checks that closing the question saves nothing; each key's unlock button forgets that key's tool permissions, its tooltip names who was allowed or refused (docs/testing.md, Key status)"
+     "status": "passed",
+     "note": "S1 to S7 pass; closing the question saves nothing (docs/testing.md, Key status)",
+     "ranBy": "owner, 2026-11-22"
     },
     {
      "name": "Animation Tools pack (AT3)",
@@ -992,8 +989,9 @@ window.EDGE_STATUS ={
     {
      "name": "Animation Tools AT2",
      "steps": 9,
-     "status": "not run",
-     "note": "The Make panel in the animation view (Generate with Uthana, From a GLB, new clip or replace), the commands, Add a Clip from GLB in the Project view, then Probe D's package in the game; two paid Generates, about $1 (docs/testing.md, Animation Tools AT2)"
+     "status": "passed",
+     "note": "All steps pass with 3b, after fixes: the busy panel and notification, the made clip's words, New Clip and Replace Clip, Add a Clip from GLB in the menu; the drop and 45-degree turn in step 8 measured as the game's side (docs/testing.md)",
+     "ranBy": "owner, 2026-11-22"
     },
     {
      "name": "Animation Probe D (in the game)",
@@ -1012,8 +1010,9 @@ window.EDGE_STATUS ={
     {
      "name": "Sector camera",
      "steps": 10,
-     "status": "not run",
-     "note": "The camera row (zoom, move, pan, height, orbit, speed, Top, Reset), right-button look and fly, wheel to the cursor, F and double-click to fly to a thing; checked in Chrome over the real bridge (docs/testing.md, Sector camera)"
+     "status": "passed",
+     "note": "All 10 steps pass (docs/testing.md, Sector camera)",
+     "ranBy": "owner, 2026-11-22"
     },
     {
      "name": "Animation Probe A (in the game)",
