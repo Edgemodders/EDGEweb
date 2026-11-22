@@ -948,8 +948,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AT",
-      "title": "Animation Tools: anim-core, Generate, Add and Replace Clip, a REDnode pack (design draft 0.1)",
-      "status": "planned"
+      "title": "Animation Tools: AT1 anim-core built and checked; AT2 REDcode, AT3 the pack (own Nexus page), AT4 V",
+      "status": "in progress"
      }
     ]
    },
@@ -1144,7 +1144,6 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Agree docs/design/animation-tools.md (draft 0.1: four smaller decisions; the two on where clips go and the pack without VS Code are taken)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
