@@ -658,6 +658,11 @@ window.EDGE_STATUS = {
       "status": "done"
      },
      {
+      "id": "HC",
+      "title": "Hide on a click in the game, a launcher switch: passed in game (0.69.0)",
+      "status": "done"
+     },
+     {
       "id": "WL",
       "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3); after the dropdown",
       "status": "planned"
@@ -687,7 +692,6 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.69.0",
     "needs": [
-     "Hide on a click in the game: its in-game test (6 steps)",
      "The WL build (#48, #49, #50 part 3), then its in-game test"
     ]
    },
@@ -695,9 +699,9 @@ window.EDGE_STATUS = {
     {
      "name": "Hide on a click in the game, REDnode 0.69.0",
      "steps": 6,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Built 2026-11-21; mock check passed (11 checks)"
+     "note": "2026-11-21, dev PC, 0.69.0, all six steps"
     },
     {
      "name": "Versions in title bars, REDnode 0.68.2",
