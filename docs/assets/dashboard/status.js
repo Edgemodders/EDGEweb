@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS = {
+window.EDGE_STATUS ={
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -936,7 +936,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K4",
-      "title": "Keys (#33, closed): the Keys view and REDcodeApi.keys with status, released in REDcode 0.10.16 (2026-11-22); the joint K4d release of EDGEwave, EDGEhack and EDGEfab started the same day, EDGEmat 0.3.4 waits on its own test",
+      "title": "Keys (#33, closed): the Keys view and REDcodeApi.keys with status, released in REDcode 0.10.16 (2026-11-22) with the joint K4d release, complete the same day: EDGEhack 0.1.3, EDGEfab 0.2.0, EDGEmat 0.3.4, EDGEwave 0.3.0",
       "status": "done"
      },
      {
