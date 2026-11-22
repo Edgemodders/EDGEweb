@@ -965,11 +965,11 @@ window.EDGE_STATUS ={
     "version": null,
     "needs": [
      "Key rule met: K4c and every K4d tool passed, and EDGEmat, EDGEhack, EDGEwave and EDGEfab all use keys.status (2026-11-22); the joint release waits on the owner's go",
+     "REDbridge 0.18.0 as the minimum (0.19.0 not needed: it only names Uthana; the fit clears fallback frames itself)",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
      "Add to Project's question before replacing a project's file: retest R1 to R3",
      "Sector selection: its hand test",
-     "REDbridge 0.19.0 (Uthana in the key store, the fallback frames fix), released by the REDnode session, as the new minimum",
      "Animation Tools AT2 and Key status: their hand tests"
     ]
    },
