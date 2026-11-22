@@ -698,16 +698,16 @@ window.EDGE_STATUS = {
     "version": "0.70.0",
     "needs": [
      "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)",
-     "#47's spike (0.70.0): its in-game test (12 steps)"
+     "#47's spike (0.70.0): its in-game test (17 steps)"
     ]
    },
    "handTests": [
     {
      "name": "V as an actor (#47), REDnode 0.70.0",
-     "steps": 12,
+     "steps": 17,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Built 2026-11-22; stand-in check (17) passed"
+     "note": "Built 2026-11-22; stand-in check (26) passed; spike 0.2.0 adds REDcode's written workspots on V"
     },
     {
      "name": "The WL build, REDnode 0.70.0",
