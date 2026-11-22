@@ -2103,7 +2103,6 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": "0.3.4",
     "needs": [
-     "0.3.3 released 2026-11-18. Since: View in 3D follows a part's change (built 2026-11-19, its hand test not run); #17 for REDcode's sector view (built 2026-11-21, its hand test not run); #18 keys from REDcode's shared store (K4d, built 2026-11-22, its hand test passed the same day). Release held by the owner's rule: REDcode, EDGEwave 0.3.0 and every K4d tool go out together. Next work: shine in View in 3D (waits on REDcode #31 for light)",
      "Separately, Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
    },
@@ -2125,9 +2124,9 @@ window.EDGE_STATUS ={
     {
      "name": "View in 3D follows a part's change",
      "steps": 6,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-22: step 6 (New Material Here, Add to Project) failed, fixed the same day (the Desk and its 3D view kept their old copy of the mesh); step 6 to run again, steps 1 to 5 not reported yet"
+     "note": "Passed 2026-11-22 (owner, all 6 steps). Step 6 found New Material Here did not refresh the Desk's copy of the mesh; fixed the same day"
     },
     {
      "name": "The bake: color",
@@ -2204,7 +2203,7 @@ window.EDGE_STATUS ={
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-22 (View in 3D follows a part's change: step 6 failed and fixed; Shared keys passed)"
+   "checkedBy": "EDGEmat session, 2026-11-22 (View in 3D follows a part's change passed; Shared keys passed; The Desk's edits in the 3D view being run)"
   },
   {
    "name": "EDGEquest",
