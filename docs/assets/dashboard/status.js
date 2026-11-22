@@ -1850,7 +1850,7 @@ window.EDGE_STATUS = {
    "group": "Specialist toolkits",
    "role": "Sound studio: edit, mix and re-voice game sounds into a mod, with voice tools, an API and an MCP server",
    "stage": "released",
-   "version": "0.2.0",
+   "version": "0.3.0",
    "lastTag": "v0.2.0",
    "lastTagDate": "2026-11-07",
    "lastCommit": "2026-11-17",
@@ -1926,8 +1926,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Released together with the other key tools after K4d (the owner's rule for keys, 2026-11-19), unless the owner decides otherwise",
-     "#13 speakLine with timings: smoke test passed; hand test passed but for step 3, which waits for the Lip Sync tab in REDcode",
+     "#13 speakLine with timings: hand test passed but for step 3, which waits for the Lip Sync tab in REDcode",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
     ]
@@ -1970,10 +1969,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "Desk, Project and Library",
-     "steps": 15,
+     "steps": 16,
      "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-16, one round, steps 1 to 15; four findings fixed during it. A step 16 (Reveal in File Explorer) was added after and is still to run"
+     "note": "2026-11-16, round 1, steps 1 to 15, four findings fixed during it; round 2, 2026-11-22, step 16 (Reveal in File Explorer)"
     },
     {
      "name": "Speaking a line with timings (#13)",
@@ -1999,22 +1998,17 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDcode",
-     "what": "K4d: EDGEhack, EDGEmat and EDGEfab move to the key API; then every key-using tool is released at once, EDGEwave 0.3.0 and REDcode included (the owner's rule, 2026-11-19)",
-     "ref": "REDcode docs/design/keys.md, Releases"
-    },
-    {
-     "who": "REDcode",
      "what": "The Lip Sync tab, moving from EDGEfab into REDcode (a branch, merged after REDcode's next release), for #13 hand test step 3",
      "ref": "EDGEwave docs/testing.md, Speaking a line with timings"
     }
    ],
    "ownerActions": [
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
-    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat"
+    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
+    "New wiki screenshots: tutorial-katana-event.png and finding-open-in-edgewave.png still show the Sounds view, which 0.3.0 split into the Desk, Project and Library views"
    ],
    "risks": [
-    "Voice lines have no route into the game yet (the .wem route)",
-    "Desk, Project and Library are on main, not in a release yet"
+    "Voice lines have no route into the game yet (the .wem route)"
    ],
    "checkedBy": "EDGEwave session, 2026-11-22"
   },
