@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS ={
+window.EDGE_STATUS = {
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -2976,7 +2976,7 @@ window.EDGE_STATUS ={
     "version": "0.1.1",
     "needs": [
      "0.1.0 released 2026-11-18. Since then, under Unreleased: the Lip Sync tab with a 3D head and Add a Line",
-     "Keys in REDcode's Keys (EDGEfab #10, REDcode's K4d): steps 1 to 5 passed 2026-11-22; step 6, Don't Allow, built and not run. Released with REDcode, EDGEwave 0.3.0 and the other K4d tools at once, when the owner says",
+     "Keys in REDcode's Keys (EDGEfab #10, REDcode's K4d) built and passed 2026-11-22, Don't Allow included; released with REDcode, EDGEwave 0.3.0 and the other K4d tools at once, when the owner says",
      "Before any release that carries it: the Lip Sync tab's steps in VS Code (the voice heard, the head seen, a line added with EDGEwave's voice), and EDGEwave's release with speakLine",
      "Next work: the real voice through Add a Line; V's female head and Change Head; finer mouth movement from audio (Audio2Face-3D); writing a made line into a project; spike LS2 in the game"
     ]
@@ -2985,9 +2985,9 @@ window.EDGE_STATUS ={
     {
      "name": "Keys in REDcode's Keys (EDGEfab #10): moved, asked, read over MCP, changed, cleared, Don't Allow",
      "steps": 6,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Steps 1 to 5 passed 2026-11-22 (owner), part A by Claude too. Step 6, Don't Allow (added at the owner's ask, with REDcode main f6c7cbf's keys.status): EDGEfab says why and opens no password box. Not run"
+     "note": "Passed 2026-11-22: part A by Claude (13 offline checks, the real store, 8 checks of the no-key reasons), part B by the owner (6 VS Code steps with REDcode main, step 6 Don't Allow included). EDGEfab #10 closed"
     },
     {
      "name": "Spike A2F: Audio2Face against the game's clip",
@@ -3078,7 +3078,7 @@ window.EDGE_STATUS ={
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Run step 6 of the keys test (Don't Allow, REDcode main f6c7cbf or later). Then say when K4d releases: EDGEfab goes out with REDcode, EDGEwave 0.3.0 and the other key tools",
+     "what": "Say when K4d releases: EDGEfab goes out with REDcode, EDGEwave 0.3.0 and the other key tools (EDGEfab's keys test passed 2026-11-22, all 6 steps)",
      "ref": "REDcode K4d"
     },
     {
