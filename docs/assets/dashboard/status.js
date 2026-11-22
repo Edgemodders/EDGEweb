@@ -947,6 +947,12 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Animation Probe D (in the game)",
+     "steps": 6,
+     "status": "not run",
+     "note": "Uthana's text to motion onto the game's own skeleton: offline half run 2026-11-22 (the base body uploaded as is; a 5 s wave came back with every bone by the game's name and the rest pose identical, fitted by name, imported as a new clip and over the game's idle clip). The package anim-probe-d plays kept, added and replaced on a paramedic (docs/testing.md, Animation Probe D)"
+    },
+    {
      "name": "Sector selection",
      "steps": 12,
      "status": "not run",
@@ -1119,15 +1125,15 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Run Animation Probe D in the game (docs/testing.md; the AnimProbeD project and the anim-probe-d package are ready)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-    "Uthana: a paid account and its key in the Keys view; decide on uploading a character made from the game files (Probe D)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
    ],
    "risks": [
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-21"
+   "checkedBy": "REDcode session, 2026-11-22"
   },
   {
    "name": "REDbridge",
