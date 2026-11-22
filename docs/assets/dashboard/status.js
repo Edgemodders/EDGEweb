@@ -3703,7 +3703,7 @@ window.EDGE_STATUS = {
      {
       "id": "R4d",
       "title": "MCP server",
-      "status": "planned"
+      "status": "in progress"
      },
      {
       "id": "R5",
@@ -3781,6 +3781,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-22"
+    },
+    {
+     "name": "An assistant (an agent in VS Code, or Claude Code) finds the test mod, its details and its install plan through the EDGEmods MCP server (R4d, first part)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "mods_search, mods_info, mods_plan; mods_install comes with R4c"
     }
    ],
    "ownerSpotTests": [],
