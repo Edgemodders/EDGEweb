@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS = {
+window.EDGE_STATUS ={
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -936,13 +936,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "K4",
-      "title": "Keys (#33): REDcode keeps the shared key store; K4b (Keys view, REDcodeApi.keys, consent) hand-tested 2026-11-21, K4c EDGEwave pilot next",
+      "title": "Keys (#33): REDcode keeps the shared key store; K4b hand-tested 2026-11-21, K4c EDGEwave pilot passed 2026-11-21, K4d built in EDGEhack, EDGEmat and EDGEfab (EDGEfab #10 passed 2026-11-22); keys.status added 2026-11-22 (hand test pending); then the joint release",
       "status": "built, tests pending"
      },
      {
       "id": "AR",
-      "title": "Animation authoring research (docs/research/animation-authoring.md): Probe A passed in the game 2026-11-21; Probe D (Uthana) waits on the owner's account; then R1 Edit in Blender for clips and R2 Try in Game",
-      "status": "in progress"
+      "title": "Animation authoring research (docs/research/animation-authoring.md): Probe A passed in the game 2026-11-21, Probe D (Uthana, text to motion on the game's skeleton) passed 2026-11-22; continued as Animation Tools (AT)",
+      "status": "done"
      },
      {
       "id": "SM",
@@ -956,7 +956,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AT",
-      "title": "Animation Tools: AT1 anim-core done; AT2 Make in REDcode and AT3 the REDnode pack built, hand tests pending; AT3r the pack release (own Nexus page), AT4 V",
+      "title": "Animation Tools: AT1 anim-core done; AT2 Make in REDcode built, hand test pending; AT3 the REDnode pack built, hand test run 1 in progress (fixed: busy Generate, facing V, a grounding rule, Upper body only, a Generating tooltip waiting on REDnode #55 in 0.70.0); AT3r the pack release (own Nexus page), AT4 V",
       "status": "in progress"
      }
     ]
@@ -964,19 +964,27 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Key rule, first half met: EDGEwave's K4c pilot passed the owner's hand test on 2026-11-21 (EDGEwave #12). Second half: K4d moves EDGEhack, EDGEmat and EDGEfab to REDcodeApi.keys, then all are released at once with REDbridge 0.18.0 as the minimum",
+     "Key rule: K4c passed 2026-11-21; K4d built in EDGEhack, EDGEmat and EDGEfab, EDGEfab's hand test passed 2026-11-22, EDGEhack's and EDGEmat's pending; then all are released at once",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
      "Add to Project's question before replacing a project's file: retest R1 to R3",
-     "Sector selection: its hand test"
+     "Sector selection: its hand test",
+     "REDbridge 0.19.0 (Uthana in the key store, the fallback frames fix), released by the REDnode session, as the new minimum",
+     "Animation Tools AT2 and Key status: their hand tests"
     ]
    },
    "handTests": [
     {
+     "name": "Key status",
+     "steps": 5,
+     "status": "not run",
+     "note": "REDcodeApi.keys.status tells no key from the modder's no; Opens Test's Read a Key says why; also checks that closing the question saves nothing (docs/testing.md, Key status)"
+    },
+    {
      "name": "Animation Tools pack (AT3)",
      "steps": 11,
-     "status": "not run",
-     "note": "In the game with REDcode closed, then open: pick a character, Spawn, Generate (up to about $2), the custom animations list, Play and Stop, a woman on her rig (docs/testing.md, Animation Tools pack (AT3)); checked outside the game by packs/animation-tools/check.mjs"
+     "status": "partly run",
+     "note": "Run 1 in progress (owner, 2026-11-22): fixed from it, a busy Generate (spinner, stages, progress), the character facing V, a grounding rule in every prompt, Upper body only, a Generating tooltip once REDnode 0.70.0 is out (REDnode #55); next, Generate again to see the feet (docs/testing.md, Animation Tools pack (AT3))"
     },
     {
      "name": "Animation Tools AT2",
