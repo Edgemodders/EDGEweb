@@ -949,8 +949,9 @@ window.EDGE_STATUS = {
     {
      "name": "Animation Probe D (in the game)",
      "steps": 6,
-     "status": "not run",
-     "note": "Uthana's text to motion onto the game's own skeleton: offline half run 2026-11-22 (the base body uploaded as is; a 5 s wave came back with every bone by the game's name and the rest pose identical, fitted by name, imported as a new clip and over the game's idle clip). The package anim-probe-d plays kept, added and replaced on a paramedic (docs/testing.md, Animation Probe D)"
+     "status": "failed",
+     "note": "Run 1: kept played; added and replaced warped the body (the fit keyed translation on Hips only, and the game needs every bone's). Fixed the same day (every channel the game clip has); run 2 pending (docs/testing.md, Animation Probe D)",
+     "ranBy": "owner, 2026-11-22"
     },
     {
      "name": "Sector selection",
@@ -1125,7 +1126,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run Animation Probe D in the game (docs/testing.md; the AnimProbeD project and the anim-probe-d package are ready)",
+    "Run Animation Probe D again in the game: Pack and Play the AnimProbeD project first (docs/testing.md)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
