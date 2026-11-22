@@ -4,7 +4,7 @@ nav_title: Install and update
 section: REDbridge
 order: 1
 description: "How EDGEdeck, REDcode and REDnode get REDbridge for you, which copy each tool uses, which version you need, updating, the .NET 10 runtime, installing it by hand and removing it."
-reviewed: 2026-11-21
+reviewed: 2026-11-22
 ---
 
 # Install and update <span class="y">REDbridge</span>
@@ -90,7 +90,7 @@ A copy that a tool fetched some time ago can be too old for another tool that sh
 | Tool | Needs REDbridge |
 |---|---|
 | [EDGEbuilder](../edgebuilder/install.html) 0.10.9 | 0.12.1 or later. An older copy still lists the game's models, but leaves parts out of a bake, and the Bake tab warns about it |
-| [REDcode](../redcode/) 0.10.15 | 0.17.0 or later. If yours is older, REDcode says so and offers **Update REDbridge** |
+| [REDcode](../redcode/) 0.10.16 | 0.18.0 or later. The Keys view needs it; 0.19.0 also gives Uthana its name there. If yours is older, REDcode says so and offers **Update REDbridge** |
 | [EDGEchat](../edgechat/install.html) | 0.11.0 or later |
 | [EDGEmat](../edgemat/install.html) | 0.8.0 or later |
 | EDGEdeck | Any release it fetched |

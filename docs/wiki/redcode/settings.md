@@ -3,8 +3,8 @@ title: REDcode settings and commands
 nav_title: Settings and commands
 section: REDcode
 order: 13
-description: "Every REDcode setting with its default and when to change it, every REDcode command with its icon, the keys, and the editors it adds to Open With."
-reviewed: 2026-11-21
+description: "Every REDcode setting with its default and when to change it, the Keys view for the AI service keys the EDGE tools share, every REDcode command with its icon, the keyboard shortcuts, and the editors it adds to Open With."
+reviewed: 2026-11-22
 ---
 
 # Settings and <span class="y">commands</span>
@@ -12,8 +12,9 @@ reviewed: 2026-11-21
 | On this page | |
 |---|---|
 | [Settings](#settings) | [Game and REDbridge](#game-and-redbridge), [Projects and packing](#projects-and-packing), [Export and import](#export-and-import) |
+| [The Keys view](#the-keys-view) | The AI service keys every EDGE tool shares, and which tools may read each |
 | [Commands](#commands) | By where they live, with their icons |
-| [Keys](#keys) | The shortcuts in one place |
+| [Keyboard shortcuts](#keyboard-shortcuts) | The shortcuts in one place |
 | [Editors under Open With](#editors-under-open-with) | Which editor opens which file |
 
 ## Settings
@@ -56,6 +57,37 @@ Open VS Code's settings (`Ctrl+,`) and search for `redcode`. Most people never c
 | `redcode.import.keepSettings` | on | Import keeps the settings of the file it replaces: a texture's format, compression and flags, a mesh's materials | You want WolvenKit's defaults instead |
 | `redcode.blenderPath` | empty | `blender.exe`, or its folder, for Edit in Blender. REDcode fills it in when it finds Blender | REDcode can't find your Blender |
 
+## The Keys view
+
+Some EDGE tools use an AI service on your own account: Uthana for [making animations](viewers.html#making-a-clip), and OpenAI, Anthropic, Gemini, ElevenLabs or Tripo in other tools. Each needs your **[API key](../glossary.html#api-key)** for it. The EDGE tools share one store of keys, in VS Code and in the game, so you type each key once. REDcode keeps that store for every EDGE tool in VS Code: the others ask REDcode for a key, and REDcode asks you.
+
+The **Keys** view is in REDcode's sidebar, below LocKeys. It starts folded: click its title to open it. It needs REDbridge 0.18.0 or later, and says so on an older one.
+
+| A row shows | Means |
+|---|---|
+| `…abcd · used by EDGEwave` | Set: the key's last 4 characters, and the tools that have read it. The key itself is never shown |
+| `…abcd · not used yet` | Set, and no tool has read it yet |
+| `…abcd from GEMINI_API_KEY` | An environment variable on your PC holds the key, and wins over the store. Change it where the variable is set |
+| can't be read here | Saved by another Windows user or on another PC. Set it again |
+| not set | No key yet |
+
+Hover a row to see when the key was saved and which tools you allowed or refused.
+
+| Button | Does |
+|---|---|
+| **Set Key...** (a pencil) | Opens a box that shows dots: paste the key and press Enter. A key that doesn't look right for its service is refused, with the reason, and the box asks again. Escape leaves the key as it was |
+| **Remove Key...** (a bin) | Removes the key for every tool, after asking |
+| **Forget Tool Permissions for This Key...** (an unlock) | Shows on a key some tool has asked for. It lists the tools and your answers, then forgets them for this key only: each tool asks again next time |
+| **Add a Key for Another Service...** (a plus, in the title bar) | Adds a row for a service not in the list |
+| **Refresh Keys** (a circling arrow, in the title bar) | Reads the store again |
+| **Forget Tool Permissions for Keys** (in the view's **`...`** menu) | Forgets every answer, for every key |
+
+**Asking you.** The first time a tool wants a key, REDcode asks, for example "EDGEwave wants your ElevenLabs key", with **Allow** and **Don't Allow**, and remembers your answer for that tool and that key. After a **Don't Allow**, the tool can tell that you said no, rather than that no key is set, so it doesn't keep asking you to type one. Closing the question without an answer saves nothing: it asks again next time.
+
+The keys are the same ones REDnode's [Keys panel](../rednode/settings.html#shared-keys) shows in the game, kept encrypted for your Windows account in `%APPDATA%\Edgemodders\keys`. A key set in the game shows here at once, and the other way round.
+
+{% include shot.html caption="The Keys view" shows="REDcode's Keys view in the sidebar: Anthropic, Gemini, OpenAI, ElevenLabs, Tripo and Uthana, one set with its last four characters and used by a tool, with the pencil, unlock and bin buttons on its row, the others not set, and the tooltip naming the tools allowed and refused." %}
+
 ## Commands
 
 Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most are also buttons or right-click items in the REDcode sidebar; the Icon column shows the button's picture where there is one. Commands marked *menu only* act on the row you clicked, so they don't appear in the palette. Some palette commands show only when they can work, for example once a project is open or the game is loaded.
@@ -85,6 +117,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Export to Raw | An arrow out of a box | Converts a game file to PNG, glTF, Ogg and so on under Raw |
 | Import from Raw | An arrow into a screen | Converts it back into the game's format under Archive. Also takes sound effect WAVs named after their hash |
 | Edit in Blender | A pencil | On a `.mesh` under Archive or a `.glb`/`.gltf` under Raw: opens it in Blender and imports each save |
+| Add a Clip from GLB | | On a `.glb` with an animation on the game's rig: makes an animation clip from it on the game's rig, in a set of its own. See [Making a clip](viewers.html#making-a-clip) |
 | Add to Library... | Books | On a file under Archive: saves it with the files it needs as an item in the EDGE Library |
 | Open as JSON | | Opens the game file as WolvenKit JSON |
 | Open in CR2W Editor | | On a texture: opens it in the CR2W editor |
@@ -145,12 +178,33 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Open *(menu only)* | A page with an arrow | Opens the item's file |
 | Reveal in File Explorer *(menu only)* | | Shows the item on disk |
 
+### Keys
+
+| Command | Icon | Does |
+|---|---|---|
+| Set Key... | A pencil | Sets or replaces a key, for every tool. On each row of the Keys view |
+| Remove Key... | A bin | Removes a key, for every tool, after asking. On each set key's row |
+| Forget Tool Permissions for This Key... *(menu only)* | An unlock | Forgets which tools you allowed or refused for this key only |
+| Add a Key for Another Service... | A plus | Adds a key for a service not in the list. In the view's title bar |
+| Refresh Keys | A circling arrow | Reads the key store again. In the view's title bar |
+| Forget Tool Permissions for Keys | | Forgets every answer you gave tools, for every key. In the view's **`...`** menu |
+
+### Animations
+
+| Command | Icon | Does |
+|---|---|---|
+| Generate an Animation with Uthana | A sparkle | Asks the rig, the words and the length, makes the clip with Uthana and opens it. Paid, with your own key. Needs a project. See [Making a clip](viewers.html#making-a-clip) |
+| Add a Clip from GLB | | Makes a clip from a `.glb` on the game's rig, in a set of its own. Needs a project. Also on a `.glb` in the Project view |
+| Replace a Game Clip | | Puts a clip from Uthana or a `.glb` in place of one of the game's clips, in a copy of its set. Needs a project |
+
+The **Make** panel in the animation view does all three with buttons.
+
 ### Editing
 
 | Command | Icon | Does |
 |---|---|---|
 | Save JSON to Project | A yellow save mark | On JSON opened from a project file: rebuilds the game file from it. The button is in the editor's title bar |
-| Add to Project | | In the CR2W editor's header, on a game file: copies it into the project at its game path |
+| Add to Project | | In the CR2W editor's header, on a game file: copies it into the project at its game path. If the project has the file already, it asks first |
 
 ### Setup and REDbridge
 
@@ -169,7 +223,7 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Extract from a Mod Archive into the Project | Not for typing: EDGEdeck calls it for its **Add to Project** on a mod's `.archive` |
 | Stop Watching Blender | Not in the palette: click the **Blender** item in the status bar to end Edit in Blender's watch |
 
-## Keys
+## Keyboard shortcuts
 
 REDcode adds no global shortcuts of its own. These work in its views:
 
@@ -179,7 +233,9 @@ REDcode adds no global shortcuts of its own. These work in its views:
 | `Ctrl+S`, `Ctrl+Z`, `Ctrl+Y` | The CR2W editor | Save, undo, redo |
 | `Esc` | The CR2W editor's search | Clears the results |
 | `Alt+Left`, `Alt+Right` | A TweakDB record page | Back and forward through the records you opened |
-| `W`, `A`, `S`, `D`, `Q`, `E` | A sector's 3D view, after a click on it | Fly the camera; with `Shift`, faster |
+| `W`, `A`, `S`, `D`, `Q`, `E` | A sector's 3D view, while the right button is held or after a click on it | Fly the camera; with `Shift`, faster, with `Ctrl`, slower |
+| `F` | A sector's 3D view | Frame the picked thing |
+| `Ctrl+A`, `Esc` | A sector's 3D view, after a click in it | Select everything shown; select nothing, and take away the volume and Isolate |
 | `Space` | The audio player | Play and pause |
 | Arrow keys | The game sound list | Step through the sounds, playing each |
 | `Ctrl+/` | A tweak file | Comment a line in or out |

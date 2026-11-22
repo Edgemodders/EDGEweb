@@ -3,7 +3,7 @@ title: Editing game files
 section: REDcode
 order: 6
 description: "Change game files in REDcode's CR2W editor: reading the tree, the property grid, search, the table and atlas views, the Properties view, undo and save, and editing as JSON."
-reviewed: 2026-11-21
+reviewed: 2026-11-22
 ---
 
 # Editing game <span class="y">files</span>
@@ -32,7 +32,7 @@ Clicking a game file in the Project view or Game Assets opens the CR2W editor. T
 - A texture (`.xbm`) opens in the texture viewer. **Open in CR2W Editor** in the Project view's right-click menu shows it in the editor instead, with the image above the grid and the texture's settings (format, compression, flags) in the grid.
 - `.json` and `.csv` files that are CR2W inside, such as the game's localization files, offer the editor under **Open With...**.
 
-Files from Game Assets open read-only, with a banner: *This is the game's copy and is read-only. Add the file to the project to edit it.* **Add to Project** in the editor's header does that: it copies the file into your project at its game path and selects it in the Project view. Open the project's copy to edit it.
+Files from Game Assets open read-only, with a banner: *This is the game's copy and is read-only. Add the file to the project to edit it.* **Add to Project** in the editor's header does that: it copies the file into your project at its game path and selects it in the Project view. Open the project's copy to edit it. If the project has the file already, it asks first: open the project's copy, or replace it with the game's. See [Add to Project](game-assets.html#add-to-project).
 
 ## Reading the tree
 

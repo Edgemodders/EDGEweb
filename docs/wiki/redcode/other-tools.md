@@ -2,8 +2,8 @@
 title: Working with other tools
 section: REDcode
 order: 12
-description: "How REDcode works with EDGEdeck, EDGEmat, EDGEwave, EDGEbuilder, the EDGE Library, REDnode, WolvenKit, Blender and the redscript extension, and the API it offers other VS Code extensions."
-reviewed: 2026-11-21
+description: "How REDcode works with EDGEdeck, EDGEmat, EDGEwave, EDGEbuilder, the EDGE Library, REDnode, EDGEdir and EDGEfab, the EDGE tools that use your AI keys, Uthana, WolvenKit, Blender and the redscript extension, and the API it offers other VS Code extensions."
+reviewed: 2026-11-22
 ---
 
 # Working with other <span class="y">tools</span>
@@ -12,7 +12,7 @@ REDcode does one job, making mods from game files, and leaves the rest to tools 
 
 | EDGE toolkits | Other tools |
 |---|---|
-| [EDGEdeck](#edgedeck), [EDGEmat](#edgemat), [EDGEwave](#edgewave), [EDGEbuilder](#edgebuilder), [the EDGE Library](#the-edge-library), [REDnode](#rednode), [EDGEhack and EDGEquest](#edgehack-and-edgequest) | [WolvenKit](#wolvenkit), [Blender](#blender), [redscript](#redscript), [REDcode's API](#for-extension-authors-redcodes-api) |
+| [EDGEdeck](#edgedeck), [EDGEmat](#edgemat), [EDGEwave](#edgewave), [EDGEbuilder](#edgebuilder), [the EDGE Library](#the-edge-library), [REDnode](#rednode), [EDGEhack and EDGEquest](#edgehack-and-edgequest), [EDGEdir and EDGEfab](#edgedir-and-edgefab), [your AI keys](#your-ai-keys-for-every-edge-tool) | [WolvenKit](#wolvenkit), [Blender](#blender), [Uthana](#uthana), [redscript](#redscript), [REDcode's API](#for-extension-authors-redcodes-api) |
 
 ## EDGEdeck
 
@@ -39,6 +39,7 @@ Today REDcode and EDGEdeck each download their own copy of REDbridge. Sharing on
 - When EDGEmat adds a mesh to a project, REDcode's Project view selects it, so you see where it went.
 - REDcode's [search for clothing by name](game-assets.html#search) uses the same list of item names as EDGEmat, so whichever tool loads it first spares the other the wait.
 - The 3D views' [light](viewers.html#the-light), with reflections and Fixed light, was made for judging EDGEmat's materials: metals and gloss look like metals and gloss.
+- In a [streaming sector](viewers.html#picking-a-thing-and-its-materials), **Materials** draws the thing you pick as EDGEmat renders it, and **Open in EDGEmat** opens its mesh at the appearance that thing uses. Without EDGEmat, REDcode draws the materials itself with EDGEmat's renderer.
 
 ## EDGEwave
 
@@ -90,6 +91,18 @@ The bigger loop is still **planned, not built**: write a REDnode mod in REDcode,
 
 [EDGEhack](../edgehack/) (quickhacks) and [EDGEquest](../edgequest/) (quests) are their own extensions and build on REDcode through its API: its REDbridge, its editors, its import and its pack. A tool like these can claim the TweakDB records it is made for, so a click on one in REDcode's TweakDB view opens it in that tool. See [The TweakDB view](tweakdb.html#the-tweakdb-view).
 
+## EDGEdir and EDGEfab
+
+Each animation REDcode [makes](viewers.html#making-a-clip) gets a set of its own and a record beside it, `<name>.edgefab.json` under Raw, saying what it was made from. That is the layout [EDGEfab](../edgefab/) uses for made animations, so [EDGEdir](../edgedir/) and EDGEfab read REDcode's clips as their own: see [Animations made in EDGEfab](../edgedir/actors.html#animations-made-in-edgefab). If EDGEfab has edited a clip, REDcode says so before you make it again.
+
+## Your AI keys, for every EDGE tool
+
+Some EDGE tools use an AI service on your own account, such as OpenAI, ElevenLabs or Tripo, and need your key for it. REDcode keeps one store of those keys for every EDGE tool in VS Code, shared with REDnode in the game.
+
+- A tool that needs a key asks REDcode, not you. The first time, REDcode asks you whether that tool may read it (**Allow** or **Don't Allow**) and remembers your answer.
+- You see, set and remove every key, and which tools read each, in REDcode's [Keys view](settings.html#the-keys-view). A key set there works in the game too, and the other way round.
+- The other tools keep no key code of their own. Each tool's own pages say which keys it uses.
+
 ## WolvenKit
 
 REDcode isn't a replacement for [WolvenKit](https://github.com/WolvenKit/WolvenKit); it's built on it. WolvenKit's libraries read and write every game file in REDcode, so the results are the same.
@@ -102,10 +115,16 @@ REDcode isn't a replacement for [WolvenKit](https://github.com/WolvenKit/WolvenK
 
 **Edit in Blender** opens a project model in [Blender](https://www.blender.org/) and imports it back each time you save there. See [Edit in Blender](export-import.html#edit-in-blender).
 
+An animation made in Blender on the game's rig becomes a clip with **From a GLB…** in the animation view's Make panel, or **Add a Clip from GLB** on the `.glb`. See [Making a clip](viewers.html#making-a-clip).
+
+## Uthana
+
+[Uthana](https://uthana.com) is an AI service that makes body motion from a sentence. REDcode's **Generate** sends your words there and fits the motion it sends back onto the game's own skeleton. It is paid, at $0.10 a second for its main model, with your own Uthana account and key, which you set in the [Keys view](settings.html#the-keys-view). You are charged only when a clip finishes. See [Making a clip](viewers.html#making-a-clip).
+
 ## redscript
 
 REDcode doesn't handle [redscript](../glossary.html#game-and-modding-terms), the game's scripting language. The community's **Redscript IDE** extension for VS Code (`jac3km4.redscript-ide-vscode`, on the VS Code Marketplace) already does, and EDGE reuses it rather than rebuilding it. Install it beside REDcode if you write redscript. Pack copies your `.reds` files under `source/resources` into the mod like any other resource.
 
 ## For extension authors: REDcode's API
 
-REDcode hands other VS Code extensions an API, so they can use its REDbridge, its project, its editors, its import and its pack without copying its code. EDGEwave, EDGEmat, EDGEquest and EDGEhack use it. Among its calls: select a file in the Project view (`revealInProject`), open a model in a titled 3D tab and close it again (`openModel`, `closeModel`, made for EDGEfab's props), open an animation on a character's meshes or with its synced set (`openAnimation`), and open a streaming sector at one of its entries (`openSector`). See [Extension API](https://edgemodders.github.io/REDcode/api.html) on REDcode's docs site.
+REDcode hands other VS Code extensions an API, so they can use its REDbridge, its project, its editors, its import and its pack without copying its code. EDGEwave, EDGEmat, EDGEquest and EDGEhack use it. Among its calls: select a file in the Project view (`revealInProject`), open a model in a titled 3D tab and close it again (`openModel`, `closeModel`, made for EDGEfab's props), open an animation on a character's meshes or with its synced set (`openAnimation`), open a streaming sector with one entry or a list of entries selected (`openSector`), read the shared AI keys, with your permission (`keys`: `get`, `ask`, `status`, `onDidChange`), and make an animation with Uthana on your key (`generateAnimation`). See [Extension API](https://edgemodders.github.io/REDcode/api.html) on REDcode's docs site.

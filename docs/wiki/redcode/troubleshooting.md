@@ -3,8 +3,8 @@ title: Troubleshooting REDcode
 nav_title: Troubleshooting
 section: REDcode
 order: 14
-description: "What to do when REDcode can't find REDbridge or the game, a view is empty, an edit vanishes, an import isn't offered, a mod doesn't show in the game, or Pack and Play installs instead of swapping."
-reviewed: 2026-11-21
+description: "What to do when REDcode can't find REDbridge or the game, a view is empty, an edit vanishes, a clip won't make, a tool gets no key, an import isn't offered, a mod doesn't show in the game, or Pack and Play installs instead of swapping."
+reviewed: 2026-11-22
 ---
 
 # Troubleshooting <span class="y">REDcode</span>
@@ -15,7 +15,9 @@ Find what you see in the left column of the group where you're stuck. If it isn'
 |---|---|
 | [Setting up](#setting-up) | Installing, REDbridge, .NET, an empty Game Assets view |
 | [Browsing and viewing](#browsing-and-viewing) | TweakDB, the 3D views, Find Items, animations, sectors, sounds |
-| [Editing, export and import](#editing-export-and-import) | Edits that vanish, imports that aren't offered, Blender |
+| [Making animations](#making-animations) | The Make panel, Uthana |
+| [Keys](#keys) | The Keys view, a tool that gets no key |
+| [Editing, export and import](#editing-export-and-import) | Edits that vanish, a question before Add to Project, imports that aren't offered, Blender |
 | [Pack, install and the game](#pack-install-and-the-game) | A mod that doesn't show, a game that won't start, Pack and Play |
 | [Other tools](#other-tools) | EDGEdeck, EDGEwave, EDGEmat |
 
@@ -52,15 +54,43 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 | An animation shows bones only, no body | Normal for rigs other than the game's base man and woman, such as a vehicle's or the player's: only those two have a base body |
 | A synced set member says **not placed** | The game's sync tracks don't say where that clip goes beside this one. Hover the row for the reason. **placed, unsure** means another member fits the same track, so the two may be swapped |
 | A sector shows markers but few or no meshes, the first time | Its meshes are still exporting: the line under the view counts them. A busy sector takes a few seconds, **Coarser levels** can take minutes. After that it opens at once. If the count stops, press **Show REDbridge log** |
+| With **Materials** on, a building or the pavement is flat grey | Normal for now. The world's multilayered materials don't render yet; smaller things with plain materials do |
+| Shift+drag in a sector no longer pans | Shift+drag now selects in a box. Pan with the middle button, or with the left and Ctrl held |
+| `Ctrl+A` or `F` does nothing in a sector | Click in the view first (the 3D view, the list or the line below it), so the view has the keys |
 | I replaced a sound, but hear the game's sound some of the time | The event plays one of several sounds at random. Press **Replace…** again and choose **Replace All** |
 | The game sound list shows numbers, not names | About a third of the sound events have no known name: WolvenKit's list doesn't cover them. Filter by a name that is known, or play your way to the sound |
 | No sound plays after a game update, or EDGEwave says "could not read sound" | An old REDcode kept sound files from before the update. Update REDcode: it now empties that cache when the game changes |
+
+## Making animations
+
+| You see | Do this |
+|---|---|
+| **Make** says why it can't make a clip | It works on a man's or a woman's animations (the ones that play on the base body), with a project open. Open such a file, or a project |
+| REDcode asks for an Uthana key | Making a clip with words uses [Uthana](other-tools.html#uthana) on your own account. Make an account on uthana.com, then paste its key. It is kept in the [Keys view](settings.html#the-keys-view) for every tool |
+| The Uthana row in the Keys view reads `uthana` in small letters | REDbridge 0.18.0 doesn't know the service's name. It works the same; REDbridge 0.19.0 names it. Run **REDcode: Update REDbridge** |
+| REDcode says a clip is already being made | One clip is made at a time, from any animation view. Wait for it to end: the notification shows its stage |
+| REDcode asks **Make It Again** or **Keep Both** | You typed the name of a clip you made before. **Make It Again** replaces it and keeps its id; **Keep Both** makes a new one beside it. Escape makes nothing, and nothing is paid |
+| In the game, a brief T pose before a made clip plays | Seen the first time a clip plays on a character. It looks like the game's side, not the clip's (unverified) |
+| The legs move in a clip that should only use the arms | Make it again with **Upper body only** on: it holds the legs still |
+
+## Keys
+
+| You see | Do this |
+|---|---|
+| The Keys view says the key store needs REDbridge 0.18.0 | Run **REDcode: Update REDbridge** |
+| A tool says it has no key, but the Keys view shows one | You may have pressed **Don't Allow** for that tool. Hover the key's row: the tooltip names the tools you allowed and refused. Press its unlock button to forget the answers for that key, and the tool asks again |
+| A key row says "can't be read here" | It was saved by another Windows user or on another PC. Set it again |
+| A key row says "from" a variable, such as `OPENAI_API_KEY` | An environment variable on your PC holds the key, and wins over the store. Change or remove it where it is set |
+| A key I set in the game doesn't show | It should show at once. If it doesn't, press **Refresh Keys** in the view's title bar |
 
 ## Editing, export and import
 
 | You see | Do this |
 |---|---|
 | Add to Project says to open a project first | REDcode needs somewhere to put the file. Make one with **New Project** in the Project view. See [Projects](projects.html#make-a-new-project) |
+| Add to Project says the file "is already in" the project | Your project has its own copy, maybe with your changes. **Open the Project's Copy** opens it. **Replace It** puts the game's file over it, and your changes to it are lost: an editor open on it closes first, and asks about unsaved changes. For a folder, **Add the Others** adds only the files not there yet, and **Replace All** replaces them all |
+| Add to Project wrote over my project's copy without asking | Fixed in REDcode 0.10.16: it now asks first, as above. Update REDcode |
+| Folders I shut with **Collapse All** open again after a reload | The Project view keeps the folders you open and shut by hand, but doesn't see Collapse All. Shut them one by one once, and they stay shut |
 | The file is read-only | You opened the game's copy, from Game Assets. Press **Add to Project** on it, and open the copy under **Archive** in the Project view |
 | My edit vanished after saving | Most likely it was inside `compiledData` in an `.ent` or `.app` file, which is rebuilt from `components` on every save. Make the same change under `components`. See [Why a value looks different after saving](editing.html#why-a-value-looks-different-after-saving) |
 | A number reads back slightly different, such as `0.219999999` for `0.22` | Normal. The game stores numbers to about seven digits, and both are the same number to it |
@@ -68,6 +98,7 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 | Export to Raw or Import from Raw isn't on a file | Only files that can be converted show them: textures, meshes, sounds and a few more. Entities and appearances are edited in the CR2W editor instead. See [What converts](export-import.html#what-converts) |
 | Import from Raw isn't offered on my sound | Only game sound effects import, from a WAV file named exactly after the sound's hash, such as `832549876.wav` (from **Copy Hash** in the game sound list). Voice lines (`.wem`) and WAVs with other names can't be imported. See [Replacing a sound](viewers.html#replacing-a-sound) |
 | Edit in Blender says it can't find Blender | REDcode looks in Program Files and your Steam libraries. Press **Open Setting** and set `redcode.blenderPath` to `blender.exe` or its folder |
+| After a save in Blender, REDcode names an object it left out | The import writes back only the mesh's own parts. Join the object into one of them: select it, then the part, press `Ctrl+J`, and save again. See [Edit in Blender](export-import.html#edit-in-blender) |
 | Add to Project Onscreens isn't on a LocKeys entry | It needs a project open |
 
 ## Pack, install and the game

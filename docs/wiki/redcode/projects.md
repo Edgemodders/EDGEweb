@@ -4,7 +4,7 @@ nav_title: Projects
 section: REDcode
 order: 3
 description: "Make or open a WolvenKit project in REDcode, find your way around the Project view and its buttons, make new game files with New File, and learn what goes in each folder."
-reviewed: 2026-11-21
+reviewed: 2026-11-22
 ---
 
 # <span class="y">Projects</span>
@@ -70,6 +70,8 @@ With no project open, the Project view shows **New Project** and **Open Folder**
 
 Click the REDcode icon in the activity bar. The Project view shows the open project as one tree: the project at the top, with the mod name and version beside it, and its folders below.
 
+The folders you leave open stay open after a reload of the window, and the ones you shut stay shut. Folders shut with VS Code's **Collapse All** are the exception: they open again.
+
 {% include shot.html caption="The Project view" src="/assets/shots/redcode/projects-view.png" alt="The Project view with the sample project open: Archive with a texture, a mesh and two folders, Raw with the exported PNG, Resources with a tweak file and an .xl file, and Packed with the mod archive." shows="The Project view with a small project expanded: the project row with mod name and version, then Archive with a few game files, Raw with an exported PNG, Resources with a tweak file, and Packed." %}
 
 ### Opening files
@@ -111,6 +113,7 @@ Hover over a file or folder and more buttons appear on the right of its row: **E
 | New File... | On a folder, a root or the project: makes a new file there. See [New File](#new-file) |
 | Export to Raw, Import from Raw | Convert between game formats and editable ones. Shown only on files and folders that can be converted. See [Export and import](export-import.html) |
 | Edit in Blender | On a `.glb`, `.gltf` or `.mesh`: opens the model in Blender, and imports it back each time you save there. See [Edit in Blender](export-import.html#edit-in-blender) |
+| Add a Clip from GLB | On a `.glb` with an animation on the game's rig: makes it a clip in a set of its own. See [Making a clip](viewers.html#making-a-clip) |
 | Add to Library... | On a file under Archive: saves it, with the files it needs, as one item in the [EDGE Library](../library.html), the store the EDGE tools share. See [The EDGE Library](other-tools.html#the-edge-library) |
 | Open as JSON | Opens the game file as WolvenKit JSON text. See [Editing as JSON](editing.html#editing-as-json) |
 | Open in CR2W Editor | On a texture: opens it in the CR2W editor, with its image above the property grid |
@@ -150,7 +153,8 @@ These files were made, opened and packed in REDcode's tests. Whether the game ta
 | From | How |
 |---|---|
 | Nothing | **New File...** on a folder. See [New File](#new-file) |
-| The game | **Add to Project** in [Game Assets](game-assets.html#add-to-project), in Search game files, or in the editor's header on a game file you are looking at. The file lands under Archive at its game path |
+| The game | **Add to Project** in [Game Assets](game-assets.html#add-to-project), in Search game files, in the editor's header on a game file you are looking at, or **Add Mesh to Project** in a [sector's 3D view](viewers.html#picking-a-thing-and-its-materials). The file lands under Archive at its game path. If the project has it already, REDcode asks before it replaces it |
+| Words, or a GLB from Blender | A new animation clip, with the **Make** panel in the animation view. See [Making a clip](viewers.html#making-a-clip) |
 | The EDGE Library | **Add to Project** in the [Library view](other-tools.html#the-edge-library) |
 | The game's texts | **Add to Project Onscreens** in the [LocKeys view](game-assets.html#the-lockeys-view) |
 | A mod you have installed in EDGEdeck | EDGEdeck's **Add to Project**. See [EDGEdeck and REDcode](../edgedeck/redcode.html) |

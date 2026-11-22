@@ -3,7 +3,7 @@ title: Game Assets
 section: REDcode
 order: 4
 description: "Browse the game's archives in REDcode's Game Assets view, filter and search them, open any file read-only, add files to your project, and find the game's texts in the LocKeys view."
-reviewed: 2026-11-21
+reviewed: 2026-11-22
 ---
 
 # Game <span class="y">Assets</span>
@@ -46,6 +46,17 @@ Files opened from Game Assets are **read-only**, and a banner says so. The game'
 - REDcode then shows what it added in the Project view, opened down to the file, because editing it is usually the next step.
 - For a folder, REDcode asks first and says how many files it will add.
 - It needs a project open. Without one, make one with **REDcode: New Project**. See [Projects](projects.html).
+
+**When the project has the file already**, REDcode asks before it writes over it, because your copy may hold changes:
+
+| Choice | Does |
+|---|---|
+| **Open the Project's Copy** | Opens your copy and shows it in the Project view. Nothing is changed |
+| **Replace It** | Puts the game's file over your copy. An editor open on your copy closes first, and asks about unsaved changes |
+| **Add the Others** | For a folder: adds only the files not in the project yet, and leaves yours as they are |
+| **Replace All** | For a folder: replaces every file, yours included |
+
+Closing the question changes nothing. The same question comes from Search game files, the editor's header and the sector view. Before REDcode 0.10.16, Add to Project replaced your copy without asking.
 
 Only add the files you mean to change. Every file in `source/archive` goes into your mod and replaces the game's copy.
 

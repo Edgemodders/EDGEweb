@@ -3,7 +3,7 @@ title: Glossary
 section: Start here
 order: 4
 description: "Plain-language definitions of the Cyberpunk 2077 modding terms and EDGE terms this wiki uses, grouped by subject, each with its own link."
-reviewed: 2026-11-21
+reviewed: 2026-11-22
 ---
 
 # <span class="y">Glossary</span>
@@ -12,7 +12,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 
 | Group | What's in it |
 |---|---|
-| [Assistants and AI](#assistants-and-ai) | Agent, API key, Claude Code, MCP server, plugin, skill |
+| [Assistants and AI](#assistants-and-ai) | Agent, API key, Claude Code, MCP server, plugin, skill, Uthana |
 | [The editor](#the-editor) | Extension, activity bar, command palette, Open VSX |
 | [Game and modding terms](#game-and-modding-terms) | Archive, framework, record, TweakDB, WolvenKit and the rest |
 | [EDGE terms](#edge-terms) | Words every EDGE tool shares: project, pack, deploy, the Desk, the Library, preview |
@@ -28,7 +28,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | Term | Meaning |
 |---|---|
 | <a id="agent"></a>Agent | An AI that can use tools, not only chat: it reads files, runs things and checks the result. REDagent is one; Claude Code is another. These pages also say assistant |
-| <a id="api-key"></a>API key | A long password that lets a program use a paid service on your account. REDagent needs one from Anthropic; a few optional features need one from Google, OpenAI or ElevenLabs. Treat it like a password: anyone who has it can spend your credit |
+| <a id="api-key"></a>API key | A long password that lets a program use a paid service on your account. REDagent needs one from Anthropic; a few optional features need one from Google, OpenAI, ElevenLabs, Tripo or Uthana. The EDGE tools share your keys: see [Shared keys](#shared-keys). Treat it like a password: anyone who has it can spend your credit |
 | <a id="change-card"></a>Change card | REDagent's preview of a file change, with **Allow** and **Deny**. Nothing is written until you allow it |
 | <a id="claude"></a>Claude | The AI made by Anthropic. REDagent and Claude Code both run on it |
 | <a id="claude-code"></a>Claude Code | Anthropic's AI assistant that works on your PC: a chat panel in VS Code or EDGEkit, or in a terminal, that can read files and do work for you. It needs a Claude plan that includes it. See [EDGEchat](edgechat/) |
@@ -36,6 +36,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | <a id="permission-prompt"></a>Permission prompt | The box Claude Code shows before an action that needs your OK. It names the tool and what it is about to do. See [EDGEchat: Safety](edgechat/safety.html) |
 | <a id="plugin"></a>Plugin | An add-on. For Claude Code, a plugin adds connections, knowledge and commands: EDGEchat is one. For the game, a RED4ext plugin is a program RED4ext loads into the game: REDnode is one |
 | <a id="skill"></a>Skill | A piece of knowledge a plugin gives Claude, loaded when a task needs it. EDGEchat's skills teach Claude how the EDGE tools and the game's files work |
+| <a id="uthana"></a>Uthana | An AI service ([uthana.com](https://uthana.com)) that makes body motion from a sentence. REDcode uses it to [make animations](redcode/viewers.html#making-a-clip) on the game's own skeleton. It is paid, with your own account and key. Under Uthana's terms a paying customer owns what it makes, and Uthana may train on what you send and get back |
 
 ## The editor
 
@@ -129,7 +130,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | <a id="pin"></a>Pin to HUD, Pin to launcher | Two switches in the Mod Manager. Pin to HUD keeps a window on screen while you play. Pin to launcher gives a package its own entry in the launcher |
 | <a id="redswap"></a>REDswap | The part of REDnode that swaps a changed archive into the running game, so you see a new texture or color without restarting. See [REDswap](rednode/redswap.html) |
 | <a id="role"></a>Role | A kind of service, such as a voice that speaks lines, that a mod can ask for whichever package provides it |
-| <a id="shared-keys"></a>Shared keys | REDnode's store for your API keys. You set each key once, in the game, and every EDGE tool you allow can use it |
+| <a id="shared-keys"></a>Shared keys | The one store of your API keys that every EDGE tool shares, in the game and in VS Code. You set each key once, in REDnode's Keys panel in the game or in REDcode's [Keys view](redcode/settings.html#the-keys-view), and every EDGE tool you allow can use it |
 | <a id="solo-mode"></a>Solo mode | A package hiding every other package's windows and HUD widgets while it works. EDGEbuilder uses it |
 | <a id="space"></a>Space | A named set of windows, like a virtual desktop. You might keep a "Combat" space and a "Build" space and switch between them |
 | <a id="tier-code"></a>Tier 1 and Tier 2 code | REDnode's two kinds of mod code. Tier 2 runs outside the game (every mod today). Tier 1 would run inside it, for rare cases; it is planned. Not the tiers of a quickhack |
