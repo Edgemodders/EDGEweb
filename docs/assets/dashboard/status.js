@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS = {
+window.EDGE_STATUS ={
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -964,7 +964,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Key rule: K4c and every K4d tool passed (2026-11-21, 2026-11-22). Before the joint release, the owner asked that EDGEfab and EDGEwave (EDGEwave #14) use keys.status too, each with a passed hand step; EDGEmat and EDGEhack already do",
+     "Key rule: K4c and every K4d tool passed (2026-11-21, 2026-11-22). Before the joint release, the owner asked that every key-using tool use keys.status: EDGEmat, EDGEhack and EDGEwave (#14) do; EDGEfab waits",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
      "Add to Project's question before replacing a project's file: retest R1 to R3",
