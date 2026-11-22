@@ -1354,7 +1354,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "No next version named; unreleased: EDGEmods links (EDGEdeck#16 part 1), built, automated tests pass",
+     "No next version named; unreleased, automated tests pass: a security fix for Nexus links, EDGEmods links (EDGEdeck#16 part 1), Keep all / Put all back for files changed in the game folder",
      "M6's last part (requirements) waits on Nexus"
     ]
    },
@@ -1409,7 +1409,21 @@ window.EDGE_STATUS = {
      "note": "The contributor's account is free"
     },
     {
-     "name": "EDGEmods link from a browser click (EDGEdeck#16 part 1)",
+     "name": "36 Changed files: Keep all / Put all back",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Unreleased"
+    },
+    {
+     "name": "38 Nexus links after the forwarder fix",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Unreleased; on a PC where EDGEdeck held Nexus links with 0.32.0 or older"
+    },
+    {
+     "name": "37 EDGEmods link from a browser click (EDGEdeck#16 part 1)",
      "steps": null,
      "status": "not run",
      "ranBy": null,
@@ -1448,6 +1462,7 @@ window.EDGE_STATUS = {
     "Decide when to drop the stores' preview flag"
    ],
    "risks": [
+    "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed on main 2026-11-21, not released yet",
     "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
    ],
    "checkedBy": "EDGEdeck session, 2026-11-21"

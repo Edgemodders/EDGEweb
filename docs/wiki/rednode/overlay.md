@@ -3,7 +3,7 @@ title: Using the overlay
 section: REDnode
 order: 2
 description: "REDnode's overlay in the game: F10 and the three modes, the pause menu, the launcher, moving and closing windows, app keys, HUD widgets, the Pins window, themes, the Console and keyboard shortcuts."
-reviewed: 2026-11-18
+reviewed: 2026-11-21
 ---
 
 # Using the <span class="y">overlay</span>
@@ -40,7 +40,7 @@ In daily use you need two keys:
 | To | Press |
 |---|---|
 | Use REDnode's windows | **F10** once, from play |
-| Go back to playing, with your HUD widgets still showing | **Esc**, or click empty screen away from any window |
+| Go back to playing, with your HUD widgets still showing | **Esc**, or click empty screen away from any window. With [Hide on a click in the game](settings.html) on, that click hides everything instead |
 
 > **F10 pressed in interactive mode hides everything.** It does not take you back to play with your widgets: it goes on to hidden mode, and the HUD widgets and the REDNODE tab vanish. Nothing is lost. Press **F10** once more and they are back. To leave interactive mode, use **Esc**.
 
@@ -281,7 +281,7 @@ Closing the Console's window ends the Console. What you typed before is kept for
 |---|---|---|
 | **F10** | Anywhere in the game | Passive, interactive, hidden, and round again. It always leaves interactive mode |
 | **Esc** | Interactive mode | Back to passive. If a window is holding the cursor, for example to turn a 3D camera, the first Esc releases the cursor. A window that asks for Esc, such as the UI Workbench while it picks, gets it instead |
-| Click empty screen | Interactive mode | Back to passive |
+| Click empty screen | Interactive mode | Back to passive, or to hidden with **Hide on a click in the game** on (since 0.69.0) |
 | **Ctrl+1** to **Ctrl+9** | Interactive mode | Switches to that [space](spaces.html) |
 | An app's own key, such as **F7** | Anywhere in the game | Shows only that app, with the cursor, or hides it again. You choose the key: see [App keys](#app-keys) |
 | **Esc** | While you play | The game's pause menu. REDnode hides while it is open: see [In the pause menu](#in-the-pause-menu) |
