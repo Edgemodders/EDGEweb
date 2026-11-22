@@ -1902,8 +1902,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#12",
-      "title": "Shared keys: the ElevenLabs key from REDcode's key store (its pilot)",
-      "status": "done"
+      "title": "Shared keys: the ElevenLabs key from REDcode's key store (its pilot), and Don't Allow (#14)",
+      "status": "built, tests pending"
      },
      {
       "id": "A4",
@@ -1983,11 +1983,11 @@ window.EDGE_STATUS = {
      "note": "2026-11-21: steps 2 and 3 passed with a Panam clone; the owner then chose no game audio to ElevenLabs: voices are stock or designed from a description; steps 1, 3 (design), 4, 5, 6 and 7 to run"
     },
     {
-     "name": "Shared keys (#12)",
-     "steps": 5,
-     "status": "passed",
+     "name": "Shared keys (#12, #14)",
+     "steps": 6,
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-21, first round, steps 1 to 5: moved, asked, read by the MCP server, changed, cleared; lifts the hold on REDcode's store releases"
+     "note": "2026-11-21, steps 1 to 5 passed (moved, asked, read by the MCP server, changed, cleared); step 6, Don't Allow (#14, built 2026-11-22), to run"
     }
    ],
    "ownerSpotTests": [],
@@ -2004,6 +2004,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    "Run Shared keys step 6 (Don't Allow, #14), F5 with REDcode main f6c7cbf or later: docs/testing.md, Shared keys",
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
@@ -2013,7 +2014,7 @@ window.EDGE_STATUS = {
     "Voice lines have no route into the game yet (the .wem route)",
     "Desk, Project and Library are on main, not in a release yet"
    ],
-   "checkedBy": "EDGEwave session, 2026-11-21"
+   "checkedBy": "EDGEwave session, 2026-11-22"
   },
   {
    "name": "EDGEmat",
