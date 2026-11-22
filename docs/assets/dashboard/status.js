@@ -698,10 +698,18 @@ window.EDGE_STATUS = {
     "version": "0.70.0",
     "needs": [
      "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)",
-     "#47's spike (0.70.0): its in-game test (17 steps)"
+     "#47's spike (0.70.0): its in-game test (17 steps)",
+     "Tooltips on ui controls (#55, 0.70.0): its in-game test (6 steps)"
     ]
    },
    "handTests": [
+    {
+     "name": "Tooltips on ui controls (#55), REDnode 0.70.0",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-22 for REDcode's Animation Tools pack; mock check (16, dev and packaged host) passed"
+    },
     {
      "name": "V as an actor (#47), REDnode 0.70.0",
      "steps": 17,
