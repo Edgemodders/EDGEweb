@@ -3455,6 +3455,11 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+      "id": "Docs",
+      "title": "The wiki and the guides: EDGEmobile and EDGEphone wiki sections (EDGEphone with quickstarts, coding examples, a tutorial), Chooms!'s pages, the modders' guide; marked not released yet until the launch",
+      "status": "planned"
+     },
+     {
       "id": "Release",
       "title": "Zips, Nexus pages, changelog (tooling built 2026-11-10, never run)",
       "status": "planned"
@@ -3469,6 +3474,8 @@ window.EDGE_STATUS = {
      "C5: DMs with Opus",
      "M5: installing on the phone, checked and finished",
      "M4: a sample mobile app and a guide for modders",
+     "The modders' guide for mobile apps on EDGEmobile's docs site",
+     "Wiki sections in EDGEweb for EDGEmobile and EDGEphone (quickstarts, coding examples, a tutorial with screenshots) and Chooms!'s pages",
      "Nexus pages for EDGEmobile and Chooms!",
      "A first run of the release workflow",
      "README status line and badge naming the version"
@@ -3554,7 +3561,7 @@ window.EDGE_STATUS = {
     "Relies on Cloudflare quick tunnels: a private web address",
     "A game patch that renames quest paths would need Chooms!'s story file updated"
    ],
-   "checkedBy": "EDGEmobile session, 2026-11-21"
+   "checkedBy": "EDGEmobile session, 2026-11-22"
   },
   {
    "name": "EDGEmods",
