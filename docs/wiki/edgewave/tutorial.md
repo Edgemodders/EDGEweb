@@ -61,7 +61,7 @@ Leave the project open. EDGEwave saves into the project REDcode has open.
 
 Press **▶** on each variation to hear how they differ.
 
-{% include shot.html caption="The katana's event in Game Assets" src="/assets/shots/edgewave/tutorial-katana-event.png" alt="EDGEwave's side bar with the Sounds view on top and Game Assets below, filtered by katana equip: Sound effects with w_melee_katana_equip opened into Variation 1, 2 and 3 with their numbers, and the play, add and open buttons on the hovered row." shows="EDGEwave's Game Assets view filtered by 'katana equip': the Sound effects group with w_melee_katana_equip unfolded into Variation 1, 2 and 3 with their hashes, and the play, add and open buttons showing on the hovered row." %}
+{% include shot.html caption="The katana's event in Game Assets" src="/assets/shots/edgewave/tutorial-katana-event.png" alt="EDGEwave's side bar with the Desk and the Project view on top, the Library folded, and Game Assets below, filtered by katana equip: Sound effects with w_melee_katana_equip opened into Variation 1, 2 and 3 with their numbers, and the play, add and open buttons on the hovered row. The katana mix is open in the editor." shows="EDGEwave's Game Assets view filtered by 'katana equip': the Sound effects group with w_melee_katana_equip unfolded into Variation 1, 2 and 3 with their hashes, and the play, add and open buttons showing on the hovered row." %}
 
 ## 3. Open it
 

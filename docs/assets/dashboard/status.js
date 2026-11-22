@@ -2004,8 +2004,7 @@ window.EDGE_STATUS ={
    ],
    "ownerActions": [
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
-    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
-    "New wiki screenshots: tutorial-katana-event.png and finding-open-in-edgewave.png still show the Sounds view, which 0.3.0 split into the Desk, Project and Library views"
+    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat"
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)"

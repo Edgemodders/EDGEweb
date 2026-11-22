@@ -57,7 +57,7 @@ Move the mouse over a sound and buttons appear on its row. Right-click it for th
 
 **▶** plays through Windows' default sound output. If it can't play a sound, a message says why and offers the Hear tab.
 
-{% include shot.html caption="Game Assets" src="/assets/shots/edgewave/tutorial-katana-event.png" alt="EDGEwave's side bar with the Sounds view on top and Game Assets below, filtered by katana equip: Sound effects with w_melee_katana_equip opened into Variation 1, 2 and 3 with their numbers, and the play, add and open buttons on the hovered row." shows="EDGEwave's sidebar with the Sounds view on top and Game Assets below it: Sound effects unfolded to an event with three variations, Voice lines and Music and streamed sounds folded, and the play, add and open buttons on the hovered row." %}
+{% include shot.html caption="Game Assets" src="/assets/shots/edgewave/tutorial-katana-event.png" alt="EDGEwave's side bar with the Desk and the Project view on top, the Library folded, and Game Assets below, filtered by katana equip: Sound effects with w_melee_katana_equip opened into Variation 1, 2 and 3 with their numbers, and the play, add and open buttons on the hovered row. The katana mix is open in the editor." shows="EDGEwave's sidebar with the Desk and Project views on top and Game Assets below it: Sound effects unfolded to an event with three variations, Voice lines and Music and streamed sounds folded, and the play, add and open buttons on the hovered row." %}
 
 ## Filter
 
@@ -98,7 +98,7 @@ Opening a sound makes a **sound document** for it, a `.edgewave` file in your pr
 
 To add a sound to a mix you already have open, use **+** instead: see [Tracks](editing.html#tracks).
 
-{% include shot.html caption="The Sounds view and Open in EDGEwave" src="/assets/shots/edgewave/finding-open-in-edgewave.png" alt="REDcode's sound browser filtered by katana equip with the Open in EDGEwave button at its top right, and EDGEwave's Sounds view in the side bar listing the project's sound document." shows="REDcode's sound browser with the Open in EDGEwave button, and EDGEwave's Sounds view in the activity bar listing two sound documents." %}
+{% include shot.html caption="Open in EDGEwave, and the mix in the Project view" src="/assets/shots/edgewave/finding-open-in-edgewave.png" alt="REDcode's sound browser filtered by katana equip, w_melee_katana_equip's first variation picked, with the Open in EDGEwave button at its top right; in the side bar, EDGEwave's Desk with its sounds and Recent, and the Project view listing the project's mix and its two project sounds." shows="REDcode's sound browser with the Open in EDGEwave button, and EDGEwave's Desk and Project views in the side bar listing the project's mix." %}
 
 ## A new, empty sound
 
@@ -218,4 +218,4 @@ The [EDGE Library](../library.html) is one folder of your own that every EDGE to
 
 **Set the Library Folder...**, in the title bar, picks another folder.
 
-{% include shot.html caption="The Desk, Project and Library views" shows="EDGEwave's side bar with the Desk (a sound or two, one with its ▶ and Add to Library buttons on hover, and Recent below), the Project view (Mixes and Project sounds), the Library view with a folder unfolded, and Game Assets below." %}
+{% include shot.html caption="The Desk, Project and Library views" src="/assets/shots/edgewave/finding-desk-project-library.png" alt="EDGEwave's side bar: the Desk with four sounds, the first hovered with its play and Add to Library buttons, and Recent below; the Project view with the katana mix under Mixes and two Project sounds; the Library with Sounds, then Doors unfolded to a sound item, Front door v3, and a plain sound file; Game Assets folded below. The katana mix is open in the editor." shows="EDGEwave's side bar with the Desk (a sound or two, one with its ▶ and Add to Library buttons on hover, and Recent below), the Project view (Mixes and Project sounds), the Library view with a folder unfolded, and Game Assets below." %}
