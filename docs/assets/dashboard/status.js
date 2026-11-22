@@ -3639,13 +3639,18 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [
     {
-     "who": "owner",
-     "what": "Agree the first request issues (EDGEdeck install from an archive, REDcode publish button)",
+     "who": "EDGEweb",
+     "what": "Where the mod website lives: EDGEweb owns the domain",
      "ref": "CLAUDE.md"
     },
     {
-     "who": "EDGEweb",
-     "what": "Where the mod website lives: EDGEweb owns the domain",
+     "who": "EDGEdeck",
+     "what": "edgemods: links, installMods all or nothing, edgemodsMods() (part 1 can land first; parts 2 and 3 for R4)",
+     "ref": "EDGEdeck#16"
+    },
+    {
+     "who": "owner",
+     "what": "Agree the REDcode request (the Publish button)",
      "ref": "CLAUDE.md"
     }
    ],
