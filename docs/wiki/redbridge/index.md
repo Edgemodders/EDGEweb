@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDbridge
 order: 0
 description: "REDbridge, the helper program that reads and writes Cyberpunk 2077's game files for the other EDGE tools: what it is, whether you need to do anything, whether it is safe, and its status."
-reviewed: 2026-11-21
+reviewed: 2026-11-22
 ---
 
 # RED<span class="y">bridge</span>
@@ -63,7 +63,7 @@ REDbridge needs Microsoft's free .NET 10 runtime. EDGEdeck and REDnode install i
 
 ## Status
 
-**Released.** The latest is REDbridge 0.18.0 (2026-11-21), for game 2.5, built with WolvenKit 10.0.0-beta.1. 0.18.0 keeps the EDGE tools' shared AI service keys, for REDcode's Keys view: only a tool that asks for the key store when it starts REDbridge can read them, so REDnode's mods cannot. 0.17.0 reads where each member of a synced animation stands, for REDcode's synced sets, and fixes animations that collapsed to one point or moved too fast. 0.16.0 removes things such as doors from the game's own world, for EDGEbuilder. 0.15.0 imports animations from Blender. 0.14.0 reads the game's animations without unpacking them, for EDGEdir's animation index. It is on [GitHub](https://github.com/Edgemodders/REDbridge/releases), and the tools fetch it from there.
+**Released.** The latest is REDbridge 0.19.0 (2026-11-22), for game 2.5, built with WolvenKit 10.0.0-beta.1. 0.19.0 names Uthana in the shared key store, and an animation imported from Blender no longer crashes the game when it starts, for REDcode's Animation Tools. 0.18.0 keeps the EDGE tools' shared AI service keys, for REDcode's Keys view: only a tool that asks for the key store when it starts REDbridge can read them, so REDnode's mods cannot. 0.17.0 reads where each member of a synced animation stands, for REDcode's synced sets, and fixes animations that collapsed to one point or moved too fast. 0.16.0 removes things such as doors from the game's own world, for EDGEbuilder. 0.15.0 imports animations from Blender. 0.14.0 reads the game's animations without unpacking them, for EDGEdir's animation index. It is on [GitHub](https://github.com/Edgemodders/REDbridge/releases), and the tools fetch it from there.
 
 | | |
 |---|---|

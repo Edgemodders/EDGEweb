@@ -1197,7 +1197,7 @@ window.EDGE_STATUS ={
    "group": "Core toolkits",
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
-   "version": "0.18.0",
+   "version": "0.19.0",
    "lastTag": "v0.14.0",
    "lastTagDate": "2026-11-16",
    "lastCommit": "2026-11-16",
@@ -1279,9 +1279,7 @@ window.EDGE_STATUS ={
    },
    "nextRelease": {
     "version": null,
-    "needs": [
-     "#18's removals are on main, unreleased: the probe passed on game 2.5; release when the owner asks"
-    ]
+    "needs": []
    },
    "handTests": [
     {
@@ -1364,7 +1362,7 @@ window.EDGE_STATUS ={
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
    ],
-   "checkedBy": "REDnode session, 2026-11-21"
+   "checkedBy": "REDnode session, 2026-11-22 (0.19.0 released)"
   },
   {
    "name": "EDGEdeck",
