@@ -1982,7 +1982,7 @@ window.EDGE_STATUS ={
      "steps": 8,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-22: steps 1 and 1b pass; step 2 passed 2026-11-21. Steps 4, 5, 6 and 7 to run; step 3 waits for the Lip Sync tab in REDcode (moving from EDGEfab, merged after REDcode's next release)"
+     "note": "2026-11-22: steps 1, 1b and 4 pass; step 2 passed 2026-11-21. Steps 5, 6 and 7 to run; step 3 waits for the Lip Sync tab in REDcode (moving from EDGEfab, merged after REDcode's next release)"
     },
     {
      "name": "Shared keys (#12, #14)",
@@ -2013,7 +2013,7 @@ window.EDGE_STATUS ={
    "ownerActions": [
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
-    "Run the rest of the #13 hand test: steps 4, 5, 6 and 7 (docs/testing.md, Speaking a line with timings); step 3 waits for the Lip Sync tab in REDcode"
+    "Run the rest of the #13 hand test: steps 5, 6 and 7 (docs/testing.md, Speaking a line with timings); step 3 waits for the Lip Sync tab in REDcode"
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)",
