@@ -2065,11 +2065,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.3.4",
     "needs": [
-     "0.3.3 released 2026-11-18. Since: View in 3D follows a part's change (built 2026-11-19, its hand test not run); #17 for REDcode's sector view (built 2026-11-21, its hand test not run). Next work: shine in View in 3D (waits on REDcode #31 for light)",
+     "0.3.3 released 2026-11-18. Since: View in 3D follows a part's change (built 2026-11-19, its hand test not run); #17 for REDcode's sector view (built 2026-11-21, its hand test not run); #18 keys from REDcode's shared store (K4d, built 2026-11-22, its hand test not run). Release held by the owner's rule: REDcode, EDGEwave 0.3.0 and every K4d tool go out together. Next work: shine in View in 3D (waits on REDcode #31 for light)",
      "Separately, Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
    },
    "handTests": [
+    {
+     "name": "Shared keys",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-22 for #18 (K4d): Gemini and OpenAI from REDcode's Keys, the move from secret storage, Set and Clear, the MCP server reading the store. Needs F5 'Run EDGEmat with REDcode main' and REDbridge 0.18.0"
+    },
     {
      "name": "The Desk's edits in the 3D view",
      "steps": 8,
@@ -2151,6 +2158,7 @@ window.EDGE_STATUS = {
     "Install 0.3.3 from the Marketplace in a normal VS Code, then Connect an assistant",
     "Run the hand test 'View in 3D follows a part's change' (Ctrl+F5, EDGEmat_PropParts)",
     "Run the hand test 'The Desk's edits in the 3D view' (Ctrl+F5, the Rocker's heart jacket)",
+    "Run the hand test 'Shared keys' (#18): F5 'Run EDGEmat with REDcode main', a Gemini or OpenAI key",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
@@ -2159,7 +2167,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-21 (#17 built for REDcode's sector view)"
+   "checkedBy": "EDGEmat session, 2026-11-22 (#18 keys from REDcode's shared store built; release held for K4d)"
   },
   {
    "name": "EDGEquest",
