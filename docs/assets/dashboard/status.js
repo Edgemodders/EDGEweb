@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS ={
+window.EDGE_STATUS = {
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -2871,7 +2871,7 @@ window.EDGE_STATUS ={
   {
    "name": "EDGEfab",
    "group": "In development",
-   "role": "Asset maker: turns a GLB or a text prompt into game-ready props, added to a REDcode project or the EDGE Library",
+   "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next), added to a REDcode project or the EDGE Library",
    "stage": "released",
    "version": "0.1.0",
    "lastTag": null,
@@ -2911,28 +2911,8 @@ window.EDGE_STATUS ={
       "status": "planned"
      },
      {
-      "id": "F5a",
-      "title": "Characters, seen (uses EDGEdir's animation index)",
-      "status": "planned"
-     },
-     {
-      "id": "F7b-1",
-      "title": "Small animation edits",
-      "status": "planned"
-     },
-     {
       "id": "F4",
       "title": "Clothing",
-      "status": "planned"
-     },
-     {
-      "id": "F5b",
-      "title": "Characters, heard and read",
-      "status": "planned"
-     },
-     {
-      "id": "F7b-2",
-      "title": "Character animation",
       "status": "planned"
      },
      {
@@ -2941,44 +2921,22 @@ window.EDGE_STATUS ={
       "status": "planned"
      },
      {
-      "id": "F6",
-      "title": "Characters, edited",
-      "status": "planned"
-     },
-     {
       "id": "F8",
-      "title": "Unreal assets",
+      "title": "Unreal assets (props)",
       "status": "planned"
      },
      {
       "id": "F9",
       "title": "Ship",
       "status": "planned"
-     },
-     {
-      "id": "FL",
-      "title": "Lip sync: the Lip Sync tab. Built: a character's lines, the voice, the clip as curves, the line on a 3D head (EDGEfab's own face solver), a timeline with transport, and Add a Line (typed words, EDGEwave's voice, lip sync made and played on the head). Next: the real voice through it, then finer mouth movement",
-      "status": "built, tests pending"
-     },
-     {
-      "id": "LS",
-      "title": "Live lip sync for an NPC conversation mod: spikes LS1 to LS5. LS1 passed 2026-11-20 (a script moves a live NPC's jaw); LS2 (whole mouth shapes) is next",
-      "status": "in progress"
-     },
-     {
-      "id": "A2F",
-      "title": "Spike: finer mouth movement from a line's audio (NVIDIA Audio2Face-3D, run locally), beside the game's own clip",
-      "status": "in progress"
      }
     ]
    },
    "nextRelease": {
     "version": "0.1.1",
     "needs": [
-     "0.1.0 released 2026-11-18. Since then, under Unreleased: the Lip Sync tab with a 3D head and Add a Line",
-     "Keys in REDcode's Keys (EDGEfab #10, REDcode's K4d) built and passed 2026-11-22, Don't Allow included; released with REDcode, EDGEwave 0.3.0 and the other K4d tools at once, when the owner says",
-     "Before any release that carries it: the Lip Sync tab's steps in VS Code (the voice heard, the head seen, a line added with EDGEwave's voice), and EDGEwave's release with speakLine",
-     "Next work: the real voice through Add a Line; V's female head and Change Head; finer mouth movement from audio (Audio2Face-3D); writing a made line into a project; spike LS2 in the game"
+     "0.1.0 released 2026-11-18. Since then, under Unreleased: keys in REDcode's Keys. The Lip Sync editor moved to REDcode's branch lipsync (owner, 2026-11-22): EDGEfab covers props and clothing only",
+     "Next work: F3 Blender sources, then F2; a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
    "handTests": [
@@ -2988,48 +2946,6 @@ window.EDGE_STATUS ={
      "status": "passed",
      "ranBy": "owner",
      "note": "Passed 2026-11-22: part A by Claude (13 offline checks, the real store, 8 checks of the no-key reasons), part B by the owner (6 VS Code steps with REDcode main, step 6 Don't Allow included). EDGEfab #10 closed"
-    },
-    {
-     "name": "Spike A2F: Audio2Face against the game's clip",
-     "steps": 4,
-     "status": "partly run",
-     "ranBy": "owner",
-     "note": "Steps 1 to 3 ran 2026-11-21 on the owner's PC: NVIDIA's container runs locally, four of Panam's lines made and mapped to the game's tracks. Step 4, the owner comparing them with the game's clips in the tab, not run"
-    },
-    {
-     "name": "Add a Line in the Lip Sync tab",
-     "steps": 3,
-     "status": "partly run",
-     "ranBy": "owner",
-     "note": "Steps 1 and 2 passed 2026-11-20. Step 3 ran 2026-11-21 (owner): a typed line was voiced and played on the head; the mouth was exaggerated, so the shapes were retuned to the game's range (not seen again yet). The voice is now one of ElevenLabs' own or a designed one (owner: no game audio sent out)"
-    },
-    {
-     "name": "The head in the Lip Sync tab",
-     "steps": 3,
-     "status": "partly run",
-     "ranBy": "script",
-     "note": "Steps 1 and 2 (a head read and exported from the game, the solver on numbers, the page in a browser with a real line) passed 2026-11-20. Step 3, the tab in VS Code, not run"
-    },
-    {
-     "name": "Spike LS2: mouth shapes (in game)",
-     "steps": 9,
-     "status": "partly run",
-     "ranBy": "owner",
-     "note": "Step 1, building the test archive (13 hand-made shapes in the women's face graph), passed 2026-11-20. Steps 2 to 9 are in the game; the archive and the app are in the owner's game"
-    },
-    {
-     "name": "FL1 lip sync: reading the game, and the tab in VS Code",
-     "steps": 4,
-     "status": "partly run",
-     "ranBy": "script",
-     "note": "Steps 1 to 3 (the reading against the game, the MCP tools, the page in a browser) passed 2026-11-17, and step 1 again on main 2026-11-19. Step 4, the tab in VS Code with the voice, not run"
-    },
-    {
-     "name": "Spike LS1: the jaw on command (in game)",
-     "steps": 9,
-     "status": "passed",
-     "ranBy": "owner",
-     "note": "Passed in the game 2026-11-20 (owner): the jaw of a spawned NPC follows a number applied as an anim feature; SetInputFloat does nothing; about 50 ms a change. The live course goes on"
     },
     {
      "name": "F1 the Pictures tab (change a picture by words, its history, Make 3D from any picture)",
@@ -3082,11 +2998,6 @@ window.EDGE_STATUS ={
      "ref": "REDcode K4d"
     },
     {
-     "who": "EDGEwave",
-     "what": "speakLine is on EDGEwave's main, not released: Add a Line needs that release to work for a modder. Voices are ElevenLabs' own or designed from a description; cloning game lines was removed",
-     "ref": "EDGEwave #13"
-    },
-    {
      "who": "owner",
      "what": "Publish Nexus page 38605 after adding the video. Nothing to test",
      "ref": "nexus/README.md"
@@ -3133,18 +3044,15 @@ window.EDGE_STATUS ={
     }
    ],
    "ownerActions": [
-    "Lip Sync tab, Panam, the four lines under finalboards: switch between The game's, Audio2Face and Audio2Face, full strength, and say which reads better on the words. Name lines you find stiff in the game, to run those too",
-    "In VS Code, F5 with \"Run EDGEfab with EDGEwave's build\": open Lip Sync, pick a character, type a new line and press Enter. Say how well the mouth matches the voice. The same pass covers the head, the transport row, dragging the marker and the tab coming back after a reload",
-    "Run spike LS2 in the game (Tests page, \"Spike LS2: mouth shapes\"): which of the 13 shapes look like their sounds",
     "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
     "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
-    "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one"
+    "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one",
+    "Say whether EDGEfab keeps any single-clip animation editing (EDGEfab #7) now that it covers props and clothing only, beyond an animated prop's own clip"
    ],
    "risks": [
     "The Nexus page is not live until the owner publishes it; the wiki says it opens soon",
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
-    "A part's game material lives in the project only: the Desk and Library copies keep the model's textures",
-    "Live lip sync replaces the game's face graphs in a mod; a change costs about 50 ms from a Node mod, so whole mouth shapes need few numbers sent seldom (LS2)"
+    "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
    ],
    "checkedBy": "EDGEfab session, 2026-11-22"
   },
