@@ -3577,13 +3577,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "R3d",
-      "title": "Downloads, Downloaded mods, first Admin page",
+      "title": "Downloads, Downloaded mods, Mod manager links",
       "status": "built, tests pending"
      },
      {
       "id": "R3e",
-      "title": "Admin: mods, users, blocking, reports",
-      "status": "planned"
+      "title": "Admin: mods, users, reports, blocklist, spot review, log",
+      "status": "done"
      },
      {
       "id": "R3f",
@@ -3621,7 +3621,7 @@ window.EDGE_STATUS = {
     "version": "first release",
     "needs": [
      "R3d: free-speed downloads through nginx, tested on the server",
-     "R3e to R3h: admin, Stripe, webhooks, deploy",
+     "R3f to R3h: Stripe, webhooks, deploy",
      "The owner agrees design draft 0.2 and the format"
     ]
    },
@@ -3660,6 +3660,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Waits for the deploy (R3h)"
+    },
+    {
+     "name": "Merge checks ask the server's blocklist (POST /api/v1/blocklist/check) before merging",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "The registry workflow calls it once the server is live (R3h)"
     }
    ],
    "ownerSpotTests": [],
