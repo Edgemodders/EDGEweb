@@ -2108,6 +2108,13 @@ window.EDGE_STATUS ={
    },
    "handTests": [
     {
+     "name": "Glow and tint in the 3D view",
+     "steps": 4,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-22 (owner's ask): View in 3D draws a textured material's BaseColorScale tint and its glow's color (z emissive blue is blue, the sneakers' lights amber), until REDcode draws glow"
+    },
+    {
      "name": "Shared keys",
      "steps": 7,
      "status": "passed",
@@ -2190,6 +2197,7 @@ window.EDGE_STATUS ={
     "REDcode #31: light and reflections in the 3D view (an environment, tone mapping, a light control), so shine and dark materials show; filed 2026-11-18"
    ],
    "ownerActions": [
+    "Run the hand test 'Glow and tint in the 3D view' (Ctrl+F5, EDGEmat_PropParts and the Sunny Ammo High-Tops)",
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
     "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
     "Install 0.3.3 from the Marketplace in a normal VS Code, then Connect an assistant",
@@ -2202,7 +2210,7 @@ window.EDGE_STATUS ={
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-22 (every test for 0.3.4 passed; release held for K4d)"
+   "checkedBy": "EDGEmat session, 2026-11-22 (glow and tint in View in 3D built, its test not run; Desk Remove; next: part commands for game meshes on the Desk)"
   },
   {
    "name": "EDGEquest",
