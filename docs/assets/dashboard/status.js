@@ -1903,7 +1903,7 @@ window.EDGE_STATUS = {
      {
       "id": "#12",
       "title": "Shared keys: the ElevenLabs key from REDcode's key store (its pilot), and Don't Allow (#14)",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "A4",
@@ -1985,9 +1985,9 @@ window.EDGE_STATUS = {
     {
      "name": "Shared keys (#12, #14)",
      "steps": 6,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-21, steps 1 to 5 passed (moved, asked, read by the MCP server, changed, cleared); step 6, Don't Allow (#14, built 2026-11-22), to run"
+     "note": "Steps 1 to 5 passed 2026-11-21 (moved, asked, read by the MCP server, changed, cleared); step 6, Don't Allow (#14), passed 2026-11-22"
     }
    ],
    "ownerSpotTests": [],
@@ -2004,7 +2004,6 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run Shared keys step 6 (Don't Allow, #14), F5 with REDcode main f6c7cbf or later: docs/testing.md, Shared keys",
     "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
