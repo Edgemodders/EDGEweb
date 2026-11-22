@@ -2117,9 +2117,9 @@ window.EDGE_STATUS ={
     {
      "name": "The Desk's edits in the 3D view",
      "steps": 8,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-21 for #17 (REDcode's sector view): a Desk change names the entry's mesh copy; the no-library half is in the smoke test, passed"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Passed 2026-11-22 (owner, all 8 steps) for #17 (REDcode's sector view)"
     },
     {
      "name": "View in 3D follows a part's change",
@@ -2194,7 +2194,6 @@ window.EDGE_STATUS ={
     "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
     "Install 0.3.3 from the Marketplace in a normal VS Code, then Connect an assistant",
     "Run the hand test 'View in 3D follows a part's change' (Ctrl+F5, EDGEmat_PropParts)",
-    "Run the hand test 'The Desk's edits in the 3D view' (Ctrl+F5, the Rocker's heart jacket)",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
@@ -2203,7 +2202,7 @@ window.EDGE_STATUS ={
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-22 (View in 3D follows a part's change passed; Shared keys passed; The Desk's edits in the 3D view being run)"
+   "checkedBy": "EDGEmat session, 2026-11-22 (every test for 0.3.4 passed; release held for K4d)"
   },
   {
    "name": "EDGEquest",
