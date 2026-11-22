@@ -59,6 +59,7 @@ To make EDGEdeck that program, press **Handle Nexus download links** in the Set 
 | **Giving the links up** | **Nexus: stop handling download links**, in the command palette |
 | **Without link handling** | Run **Nexus: add from a link** and paste an `nxm://` link |
 | **Who has the links** | Each time EDGEdeck starts, its log has a line "Nexus download links go to:" |
+| **EDGEdeck 0.32.0 and older** | A crafted link opened from a web page could run commands on your PC through the link handler those versions registered. Update to 0.33.0 or later: it replaces that handler the first time it starts. See the [security advisory](https://github.com/Edgemodders/EDGEdeck/security/advisories/GHSA-crv2-8m58-wxvv) |
 
 ## Downloads
 

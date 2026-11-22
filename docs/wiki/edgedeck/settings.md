@@ -85,6 +85,8 @@ Commands that act on one mod aren't in the command palette. They are on the mod'
 | Nexus: add from a link | Adds a mod from a pasted `nxm://` link |
 | Nexus: handle download links (nxm) | Makes **Mod manager download** on Nexus send files to EDGEdeck. **Handle Nexus download links** among the Set up steps |
 | Nexus: stop handling download links | Gives the links up |
+| EDGEmods: handle links | Makes the **Mod manager** button on [EDGEmods](https://edgemods.ai) open in EDGEdeck, which hands the link to the EDGEmods extension. EDGEdeck takes these links by itself when no other program has them |
+| EDGEmods: stop handling links | Gives the EDGEmods links up, and EDGEdeck won't take them back by itself |
 
 ### Setup and maintenance
 

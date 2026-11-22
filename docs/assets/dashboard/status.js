@@ -1308,7 +1308,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "Mod manager: a library of mods outside the game folder, deployed with hardlinks; extension, command line and MCP server",
    "stage": "released",
-   "version": "0.32.0",
+   "version": "0.33.0",
    "lastTag": "v0.32.0",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-17",
@@ -1361,7 +1361,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "No next version named; unreleased, automated tests pass: a security fix for Nexus links, EDGEmods links (EDGEdeck#16 part 1), Keep all / Put all back for files changed in the game folder",
+     "No next version named; nothing unreleased",
      "M6's last part (requirements) waits on Nexus"
     ]
    },
@@ -1420,21 +1420,21 @@ window.EDGE_STATUS = {
      "steps": null,
      "status": "not run",
      "ranBy": null,
-     "note": "Unreleased"
+     "note": "Since 0.33.0"
     },
     {
      "name": "38 Nexus links after the forwarder fix",
      "steps": null,
      "status": "not run",
      "ranBy": null,
-     "note": "Unreleased; on a PC where EDGEdeck held Nexus links with 0.32.0 or older"
+     "note": "Since 0.33.0; on a PC where EDGEdeck held Nexus links with 0.32.0 or older"
     },
     {
      "name": "37 EDGEmods link from a browser click (EDGEdeck#16 part 1)",
      "steps": null,
      "status": "not run",
      "ranBy": null,
-     "note": "Unreleased; without the EDGEmods extension (R4) only the 'needs the extension' message can be seen"
+     "note": "Since 0.33.0; without the EDGEmods extension (R4) only the 'needs the extension' message can be seen"
     }
    ],
    "ownerSpotTests": [
@@ -1457,7 +1457,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEmods",
-     "what": "Its extension (R4), for EDGEdeck#16 parts 2 and 3 (installMods, edgemodsMods); part 1, the links, is built",
+     "what": "Its extension (R4), for EDGEdeck#16 parts 2 and 3 (installMods, edgemodsMods); part 1, the links, shipped in 0.33.0",
      "ref": "EDGEdeck#16"
     }
    ],
@@ -1469,7 +1469,7 @@ window.EDGE_STATUS = {
     "Decide when to drop the stores' preview flag"
    ],
    "risks": [
-    "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed on main 2026-11-21, not released yet",
+    "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed in 0.33.0 (advisory GHSA-crv2-8m58-wxvv), players on older versions stay exposed until they update",
     "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
    ],
    "checkedBy": "EDGEdeck session, 2026-11-21"

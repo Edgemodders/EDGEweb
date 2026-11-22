@@ -55,12 +55,13 @@ EDGEdeck is the part of EDGE that puts mods into the game. It works on its own, 
 
 ## Status
 
-**Released, as a preview.** The latest is EDGEdeck 0.32.0 (2026-11-15), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
+**Released, as a preview.** The latest is EDGEdeck 0.33.0 (2026-11-21), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
 
 | | |
 |---|---|
 | **In daily use** | The library, deploy, undo, conflicts, loadouts |
 | **Passed the developer's tests, little use beyond them** | Nexus downloads and updates, Get the frameworks, REDmod deploys |
+| **New in 0.33.0** | A [security fix for Nexus download links](nexus.html#download-links), and **Keep all** and **Put all back** when [several files changed in the game folder](deploying.html#changes-made-outside-edgedeck) |
 | **New in 0.32.0, tested by its contributor** | [FOMOD installers](adding-mods.html#mods-with-an-installer-fomod): pick a mod's options, keep them across updates, bring them over from Vortex. The developer's own tests are still to run |
 | **Game version** | EDGEdeck places files and isn't tied to one game version. Its recorded tests ran on game 2.31; a test on game 2.5 is not recorded in its repo |
 | **Not switched on yet** | Signing in to Nexus through your browser. Nexus has to approve EDGEdeck first. Until then you copy a personal key from your Nexus account page and paste it in once: see [Signing in](nexus.html#signing-in) |

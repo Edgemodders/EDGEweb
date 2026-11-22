@@ -3,7 +3,7 @@ title: Deploying and undo
 section: EDGEdeck
 order: 5
 description: "What EDGEdeck's Deploy does, why the game must be closed, Run game, deploying one mod, hardlinks and copies, files changed outside EDGEdeck, mods you installed by hand, deploy reports and Undo deploy."
-reviewed: 2026-11-13
+reviewed: 2026-11-21
 ---
 
 # Deploying and <span class="y">undo</span>
@@ -111,7 +111,7 @@ Use it to:
 
 Other things touch the game folder too: Steam's **Verify integrity of game files**, a game update, a framework's own updater, or you editing a file by hand. EDGEdeck notices when a file it deployed has changed, and the mod shows `changed in game folder`.
 
-At the next deploy it asks **one question per file**:
+At the next deploy it asks **one question per file**. When several files changed, each question also has **Keep all** and **Put all back**, which answer that file and every one after it at once:
 
 | Answer | What happens |
 |---|---|
