@@ -952,7 +952,7 @@ window.EDGE_STATUS ={
      {
       "id": "SS",
       "title": "Sector selection: many things at once, a screen box and a volume, the selected list (docs/design/sector-selection.md, agreed and built 2026-11-21)",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "AT",
@@ -974,7 +974,6 @@ window.EDGE_STATUS ={
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
      "Add to Project's question before replacing a project's file: retest R1 to R3",
-     "Sector selection: its hand test",
      "Animation Tools AT2 and Key status: their hand tests"
     ]
    },
@@ -1007,8 +1006,9 @@ window.EDGE_STATUS ={
     {
      "name": "Sector selection",
      "steps": 12,
-     "status": "not run",
-     "note": "Ctrl+click, Shift+drag, Volume and Touching, the selected list (rows' buttons, Frame All, Isolate, Add Meshes to Project, Copy), Ctrl+A and Esc, openSector with a list; checked in Chrome over the real bridge (docs/testing.md, Sector selection)"
+     "status": "passed",
+     "note": "All 12 steps pass, with two fixes: Ctrl+A in VS Code (its Select All ran in the page), and the volume and Isolate with Ctrl+A and Esc (docs/testing.md, Sector selection)",
+     "ranBy": "owner, 2026-11-22"
     },
     {
      "name": "Sector camera",
