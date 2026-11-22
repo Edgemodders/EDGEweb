@@ -3693,7 +3693,7 @@ window.EDGE_STATUS = {
      {
       "id": "R4b",
       "title": "Browse in VS Code",
-      "status": "planned"
+      "status": "built, tests pending"
      },
      {
       "id": "R4c",
@@ -3774,6 +3774,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-22"
+    },
+    {
+     "name": "Browse in VS Code: find the test mod in the side panel and with Find a mod, open its tab, like it, download its file; sign in through the site's Back to VS Code page (R4b)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Waits for the owner to change the VS Code application's Allowed Callback URLs to http://localhost:8800/auth/vscode (docs/auth0-setup.md, step 9)"
     }
    ],
    "ownerSpotTests": [],
@@ -3792,9 +3799,15 @@ window.EDGE_STATUS = {
      "who": "owner",
      "what": "Agree the REDcode request (the Publish button)",
      "ref": "CLAUDE.md"
+    },
+    {
+     "who": "owner",
+     "what": "Change the Auth0 application \"EDGEmods for VS Code\" Allowed Callback URLs to http://localhost:8800/auth/vscode, then hand-test R4b",
+     "ref": "docs/auth0-setup.md"
     }
    ],
    "ownerActions": [
+    "Change the VS Code application's Allowed Callback URLs to http://localhost:8800/auth/vscode (docs/auth0-setup.md, step 9), then hand-test browsing in VS Code (R4b)",
     "Review and agree design draft 0.2 and the edgemods.json format",
     "Decide the subscription price and the free download speed",
     "Get a legal reading on non-commercial mod licences before launch"
