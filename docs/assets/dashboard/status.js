@@ -3674,7 +3674,7 @@ window.EDGE_STATUS = {
      {
       "id": "R4a",
       "title": "Extension foundations and sign-in",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "R4b",
@@ -3757,9 +3757,9 @@ window.EDGE_STATUS = {
     {
      "name": "Sign in from VS Code with GitHub, Google and email; the status bar shows the username (R4a)",
      "steps": null,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Waits for the Auth0 application \"EDGEmods for VS Code\" (docs/auth0-setup.md, step 9)"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-22"
     }
    ],
    "ownerSpotTests": [],
@@ -3778,15 +3778,9 @@ window.EDGE_STATUS = {
      "who": "owner",
      "what": "Agree the REDcode request (the Publish button)",
      "ref": "CLAUDE.md"
-    },
-    {
-     "who": "owner",
-     "what": "Make the Auth0 application \"EDGEmods for VS Code\" and add EDGEMODS_AUTH0_EXTENSION_CLIENT_ID to .env (Auth0 setup, step 9)",
-     "ref": "docs/auth0-setup.md"
     }
    ],
    "ownerActions": [
-    "Make the Auth0 application for VS Code (docs/auth0-setup.md, step 9), then hand-test signing in from VS Code",
     "Review and agree design draft 0.2 and the edgemods.json format",
     "Decide the subscription price and the free download speed",
     "Get a legal reading on non-commercial mod licences before launch"
