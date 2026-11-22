@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEhack
 order: 10
 description: "What to do when EDGEhack's Quickhacks view is empty, a save writes no mod files, Try Live doesn't reach the game, a quickhack doesn't show or shows a text key, icons or scripts are missing, or Claude Code can't see EDGEhack."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Troubleshooting <span class="y">EDGEhack</span>
@@ -69,7 +69,8 @@ The line under the quickhack's title says what the save did.
 | A new quickhack's name shows as `LocKey#...` | While trying it live, that is expected: the game reads names only when it starts. Press **Pack and Play**, then restart the game. If it still shows after that, check that ArchiveXL is installed |
 | A changed name or description doesn't show | Texts need **Pack and Play** and a game restart, and ArchiveXL |
 | Icons of my own don't show | They come with the mod: **Pack and Play**, then restart. Check that ArchiveXL is installed. Uploading and generating icons need an up-to-date REDcode |
-| **Generate** fails | It needs an OpenAI API key with credit on the account. Run **EDGEhack: Set the OpenAI Key...** to enter it again |
+| **Generate** fails | It needs an OpenAI API key with credit on the account. Run **EDGEhack: Set the OpenAI Key...** to enter it again in REDcode's box. The error shows in the Generate box, above Generate |
+| **Generate** says you chose Don't Allow | Run **Forget Tool Permissions for Keys** in REDcode's Keys view, press Generate again and choose **Allow** |
 | A script doesn't run | Open REDnode's launcher (`F10`). In the Mod Manager, check that **`<your mod's name>` quickhacks** is listed and switched on. The **Mod log** shows the mod's own lines and any error in your script. The script file must still contain `export function canUse` or `export async function onLand`. Scripts don't run in Try Live, only from the installed mod |
 | The scan check shows "Checking..." for a moment | Expected the first time V scans a person. If it stays, the check is too slow: answer from `target` alone |
 | A vendor doesn't sell my new quickhack | Open **Get it** on its page for that tier. It says how many vendors sell the original and what they require, such as a street cred level. Check that **Sell it there** is ticked. Some tiers are not sold anywhere in the game, and then yours isn't either. Use the Console line to test |

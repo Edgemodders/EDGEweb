@@ -2409,7 +2409,7 @@ window.EDGE_STATUS ={
    "group": "Specialist toolkits",
    "role": "Quickhack editor: edits and creates quickhacks as TweakXL and ArchiveXL files",
    "stage": "released",
-   "version": "0.1.2",
+   "version": "0.1.3",
    "lastTag": "v0.1.2",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-12",
@@ -2482,7 +2482,6 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": null,
     "needs": [
-     "Released together with REDcode, EDGEwave 0.3.0, EDGEfab and EDGEmat once every K4d tool passes (the owner's rule of 2026-11-19)",
      "Nexus page 37293 published by the owner"
     ]
    },
@@ -2561,10 +2560,10 @@ window.EDGE_STATUS ={
     "Supply the screenshots the wiki guide names"
    ],
    "risks": [
-    "The VS Code Marketplace took 0.1.2 on 2026-11-19 after support's review; whether later versions pass on their own is unverified",
+    "The VS Code Marketplace took 0.1.2 on 2026-11-19 after support's review, and its publish step accepted 0.1.3 on 2026-11-22 (the listing showing it is still to check)",
     "Try Live cannot change names: the game reads its text tables at load"
    ],
-   "checkedBy": "REDnode, EDGEhack & REDagent session, 2026-11-22 (Shared keys passed)"
+   "checkedBy": "REDnode session, 2026-11-22 (0.1.3 released with the K4d tools)"
   },
   {
    "name": "EDGEkit",

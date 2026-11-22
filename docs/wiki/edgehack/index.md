@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEhack
 order: 0
 description: "EDGEhack, a quickhack editor for Cyberpunk 2077 in VS Code: what it is, what it can do, the words you'll meet, what it needs from the other EDGE tools, and where it stands."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # EDGE<span class="y">hack</span>
@@ -105,9 +105,7 @@ EDGEhack ships no game data. It reads the quickhacks from your own game each tim
 
 ## Status
 
-**A preview, released.** The latest is EDGEhack 0.1.2 (2026-11-11), for game 2.5, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/37293), [Open VSX](https://open-vsx.org/extension/edgemodders/edgehack) and [GitHub](https://github.com/Edgemodders/EDGEhack/releases). Windows only.
-
-It is not on the VS Code Marketplace yet. The Marketplace's automatic check rejected it without giving a reason, and its support has been asked why. Until then, install it from the download: see [Install and set up](install.html#install-edgehack).
+**A preview, released.** The latest is EDGEhack 0.1.3 (2026-11-22), for game 2.5, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgehack), [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/37293), [Open VSX](https://open-vsx.org/extension/edgemodders/edgehack) and [GitHub](https://github.com/Edgemodders/EDGEhack/releases). Windows only. 0.1.3 keeps the OpenAI key in REDcode's Keys, the key store every EDGE tool shares, and needs REDcode 0.10.16.
 
 | | |
 |---|---|

@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEhack
 order: 9
 description: "Every EDGEhack setting, command palette command, view button, right-click action and page button, and where EDGEhack keeps your quickhacks, your key and its files."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Settings and <span class="y">commands</span>
@@ -114,7 +114,7 @@ All of these are explained in [The Desk and the Library](desk-library.html).
 | The Desk | `%LOCALAPPDATA%\EDGEhack\desk` |
 | The EDGE Library | The folder you chose, `Documents\EDGE Library` by default. Its place is noted in `%APPDATA%\EDGE\library.json`, which every EDGE tool reads |
 | What a project took from the Library | `source\library.json` in the project |
-| Your OpenAI key | VS Code's secret storage, encrypted, for EDGEhack only. If Windows has an `OPENAI_API_KEY` environment variable, EDGEhack uses that one |
+| Your OpenAI key | REDcode's Keys, encrypted, shared with the other EDGE tools (`%APPDATA%\Edgemodders\keys`). If Windows has an `OPENAI_API_KEY` environment variable, EDGEhack uses that one |
 | The server for assistants | `%LOCALAPPDATA%\EDGEhack\server\edgehack-mcp.cjs`, copied there by the extension |
 | The log | **View › Output**, then **EDGEhack** in the list |
 

@@ -4,7 +4,7 @@ nav_title: The editor
 section: EDGEhack
 order: 4
 description: "Every part of a quickhack's page in EDGEhack: the buttons at the top, texts, feature lines, icons of your own, numbers, cooldown, added and built effects, Get it, and the files a save writes."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # The EDGEhack <span class="y">editor</span>
@@ -114,7 +114,9 @@ When you save, EDGEhack packs your pictures into the image files the game's inte
 | Good to know | |
 |---|---|
 | **Cost** | Each picture is one paid image on your OpenAI account, and **Generate All** is three. The price depends on the model and quality: see OpenAI's pricing page. Nothing goes into your mod until you press Keep and save |
-| **Your key** | The first Generate asks for your OpenAI API key. EDGEhack keeps it encrypted in VS Code's secret storage, for EDGEhack only, and sends it only to OpenAI. **EDGEhack: Set the OpenAI Key...** changes it and **Clear the OpenAI Key...** forgets it |
+| **Your key** | Your OpenAI API key is kept in REDcode's **Keys** view, the key store every EDGE tool shares, encrypted, and sent only to OpenAI. The first Generate has REDcode ask whether EDGEhack may read it, and with no key set, asks for it in REDcode's own password box, saved for every EDGE tool. A key an older EDGEhack kept moves there by itself, once. **EDGEhack: Set the OpenAI Key...** opens REDcode's box. To remove the key, use **Remove Key** in REDcode's Keys |
+| **Don't Allow** | If you chose **Don't Allow** when REDcode asked, Generate says so in its box. Run **Forget Tool Permissions for Keys** in REDcode's Keys view, then press Generate again and choose **Allow** |
+| **Errors** | An error, such as OpenAI refusing the key, shows in the Generate box just above **Generate** |
 | **Generate All** | Draws the Item first, then the Wheel and the Status from it, so all three show the same symbol |
 | **The Item icon** | Only the symbol is generated. EDGEhack places it on the game's own card background for that quickhack, read from your game |
 | **Show the Prompt** | Shows exactly what is sent to OpenAI |
