@@ -948,7 +948,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AT",
-      "title": "Animation Tools: AT1 anim-core done; AT2 Make in REDcode built, hand test pending; AT3 the pack (own Nexus page), AT4 V",
+      "title": "Animation Tools: AT1 anim-core done; AT2 Make in REDcode and AT3 the REDnode pack built, hand tests pending; AT3r the pack release (own Nexus page), AT4 V",
       "status": "in progress"
      }
     ]
@@ -964,6 +964,12 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "Animation Tools pack (AT3)",
+     "steps": 11,
+     "status": "not run",
+     "note": "In the game with REDcode closed, then open: pick a character, Spawn, Generate (up to about $2), the custom animations list, Play and Stop, a woman on her rig (docs/testing.md, Animation Tools pack (AT3)); checked outside the game by packs/animation-tools/check.mjs"
+    },
     {
      "name": "Animation Tools AT2",
      "steps": 9,
@@ -1135,17 +1141,17 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEhack",
-     "what": "K4d: move its keys to REDcodeApi.keys on EDGEwave's model, then the joint release of every key-using tool",
+     "what": "K4d: built on its main (2026-11-22); waits on the owner's hand test, then the joint release",
      "ref": "https://github.com/Edgemodders/EDGEhack/issues/3"
     },
     {
      "who": "EDGEmat",
-     "what": "K4d: move its keys to REDcodeApi.keys on EDGEwave's model, then the joint release of every key-using tool",
+     "what": "K4d: built on its main (2026-11-22); waits on the owner's hand test, then the joint release",
      "ref": "https://github.com/Edgemodders/EDGEmat/issues/18"
     },
     {
      "who": "EDGEfab",
-     "what": "K4d: move its keys to REDcodeApi.keys on EDGEwave's model, then the joint release of every key-using tool",
+     "what": "K4d: built on its main (2026-11-22); waits on the owner's hand test, then the joint release",
      "ref": "https://github.com/Edgemodders/EDGEfab/issues/10"
     },
     {
@@ -1155,7 +1161,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the Animation Tools AT2 hand test (docs/testing.md; about $1 of Uthana credit)",
+    "Run the Animation Tools hand tests: AT2 in REDcode (about $1) and AT3, the pack in the game (about $2) (docs/testing.md); then say when the pack is released and make its Nexus page",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
