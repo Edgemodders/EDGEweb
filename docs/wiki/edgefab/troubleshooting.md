@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEfab
 order: 10
 description: "What you see in EDGEfab and what to do: keys, pictures and models, the 3D view, renaming, Add to Project, the prop in the game, the Library and assistants."
-reviewed: 2026-11-17
+reviewed: 2026-11-22
 ---
 
 # <span class="y">Troubleshooting</span>
@@ -30,7 +30,9 @@ Look in the log first: **EDGEfab: Show Log** in the command palette (`Ctrl+Shift
 | A key is refused as you type it | A Tripo key starts with `tsk_`, an OpenAI key with `sk-`. Paste the whole key, with no spaces |
 | "OpenAI refused the key" or Tripo refuses it | The key is wrong, revoked or switched off. Make a new one and set it again |
 | EDGEfab uses a different key than the one you set | `TRIPO_API_KEY` or `OPENAI_API_KEY` is set in Windows, and that one wins. Remove the variable, or change it |
-| EDGEfab asks for the key again after **Clear** | That is what Clear does. Set it again |
+| EDGEfab says you chose Don't Allow | Run **Forget Tool Permissions for Keys** in REDcode's Keys view, try again and choose **Allow** |
+| "REDcode's question about your Tripo key was closed" | Try again and choose **Allow**. EDGEfab opens no key box over a key that is already set |
+| "EDGEfab can't read a Tripo key" | No key is set in REDcode's Keys, or EDGEfab isn't allowed to read it. **Open REDcode's Keys** on the message shows which |
 
 ## Pictures and models
 
@@ -106,8 +108,8 @@ Look in the log first: **EDGEfab: Show Log** in the command palette (`Ctrl+Shift
 |---|---|
 | Claude doesn't see the `fab_` tools | Start a **new** Claude Code session after connecting. Run `claude mcp list`: `edgefab` should show as connected |
 | "claude command isn't on the PATH" | EDGEfab couldn't run Claude Code. Press **Copy the Command** and run it in the terminal where `claude` works |
-| "No OpenAI API key" or "No Tripo API key" | The server reads Windows' environment variables. Set them, then close **every** VS Code window and open it again: see [Keys for the server](assistants.html#keys-for-the-server) |
-| The key is set, and still "No ... API key" | A VS Code window was left open, so the program never restarted. Close them all. Check in Task Manager that no `Code.exe` is left |
+| "No OpenAI API key" or "No Tripo API key" | The server reads REDcode's Keys. Set the key there, then ask again: see [Keys for the server](assistants.html#keys-for-the-server) |
+| The key is set, and still "No ... API key" | Ask "Is EDGEfab's Tripo key set?": the answer says where the server looked. It needs REDcode installed, with REDbridge 0.18.0 or later (**REDcode: Update REDbridge**) |
 | "OpenAI refused the key" | The variable holds a wrong or revoked key. If the buttons in EDGEfab work, that key is good: use the same one |
 | Every EDGEfab tool shows twice | EDGEfab is connected twice. Run `claude mcp list` and remove one with `claude mcp remove edgefab` |
 | Claude made a prop but the Desk is empty | Press **Refresh** on the Desk. If it is still empty, the server may use another data folder: check the folder it names in its answer |

@@ -4,14 +4,14 @@ nav_title: Overview
 section: EDGEfab
 order: 0
 description: "EDGEfab, the EDGE platform's asset maker for Cyberpunk 2077: turn a 3D model, or your own words, into a prop the game can use, in VS Code or by asking an AI assistant."
-reviewed: 2026-11-17
+reviewed: 2026-11-22
 ---
 
 # EDGE<span class="y">fab</span>
 
 EDGEfab is the EDGE platform's asset maker for Cyberpunk 2077. It runs inside VS Code. Give it a textured 3D model, or describe an object in words, and it makes a **prop**: an object that stands in the world, such as a vending machine, a crate or a lamp. EDGEfab gets it ready for the game and puts it into your mod project. From there you place it in Night City with [EDGEbuilder](../edgebuilder/). An AI assistant such as Claude can do every step for you.
 
-> **EDGEfab 0.1.0 is a preview**, released on 2026-11-18. See [Status](#status).
+> **EDGEfab 0.2.0 is a preview**, released on 2026-11-22. See [Status](#status).
 
 **New here?** Read this page, then [Install and set up](install.html), then follow [Tutorial: your first prop](first-prop.html). It takes about 30 minutes.
 
@@ -90,14 +90,14 @@ EDGEfab comes with no game files, and it never changes your game: it writes into
 
 ## Status
 
-**0.1.0, a preview, released on 2026-11-18** on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgefab), [Open VSX](https://open-vsx.org/extension/edgemodders/edgefab) and [GitHub](https://github.com/Edgemodders/EDGEfab/releases). Its page on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605) opens soon. Windows only, tested with game version 2.5.
+**0.2.0, a preview, released on 2026-11-22** on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgefab), [Open VSX](https://open-vsx.org/extension/edgemodders/edgefab) and [GitHub](https://github.com/Edgemodders/EDGEfab/releases). Its page on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605) opens soon. Windows only, tested with game version 2.5. New in 0.2.0: your Tripo and OpenAI keys live in REDcode's Keys, shared by every EDGE tool ([Your keys](install.html#your-keys)).
 
 | | |
 |---|---|
 | **Works, and seen in the game** | Props made from words and from a GLB, added to a project and placed with EDGEbuilder: solid, facing the right way, levels of detail clean, back after a game restart. Painted lights that glow. Bumps shaded the right way round |
 | **Works, tested in VS Code** | Every command: the Desk, the Pictures tab, Generate 3D Model, Set Size, the glow, Rename, Add to Project, the Library, Connect an Assistant |
 | **Works by asking Claude, seen in the game once** | One of the game's own materials on a prop's part, through EDGEmat's tools. There are no buttons for it yet |
-| **Not there yet** | FBX and Blender files. Clothing, characters and animation. Changing a finished prop's shape by words. Buttons for game materials on a part |
+| **Not there yet** | FBX and Blender files. Clothing and animated props. Changing a finished prop's shape by words. Buttons for game materials on a part |
 | **Coming next** | FBX and `.blend` files through Blender, then props made in named parts with a material planned for each: see the [build plan](https://edgemodders.github.io/EDGEfab/plan.html) |
 
 Each version's changes are in EDGEfab's [changelog](https://edgemodders.github.io/EDGEfab/changelog.html), and every test with its result is on its [Tests page](https://edgemodders.github.io/EDGEfab/testing.html).

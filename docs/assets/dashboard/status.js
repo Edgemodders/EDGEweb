@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS ={
+window.EDGE_STATUS = {
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -2023,7 +2023,7 @@ window.EDGE_STATUS ={
    "group": "Specialist toolkits",
    "role": "Material editor: read, edit, generate and apply game materials, and the Wardrobe Designer app",
    "stage": "released",
-   "version": "0.3.2",
+   "version": "0.3.4",
    "lastTag": "v0.3.2",
    "lastTagDate": "2026-11-13",
    "lastCommit": "2026-11-17",
@@ -2099,7 +2099,7 @@ window.EDGE_STATUS ={
     ]
    },
    "nextRelease": {
-    "version": "0.3.4",
+    "version": "0.3.5",
     "needs": [
      "Separately, Wardrobe Designer 0.1.0, its own release: fixes built, Reshape and keys rerun, install test, three Nexus screenshots"
     ]
@@ -2183,11 +2183,11 @@ window.EDGE_STATUS ={
      "note": "Gate for Wardrobe Designer's first release"
     },
     {
-     "name": "Install of 0.3.3 from the Marketplace, and Connect an assistant",
+     "name": "Install of 0.3.4 from the Marketplace, and Connect an assistant",
      "steps": null,
      "status": "not run",
      "ranBy": null,
-     "note": "Released 2026-11-18; the test build's VSIX was not installed before the run"
+     "note": "Released 2026-11-22 (the joint K4d release, run 45083176318); the test build's VSIX was not installed before the run"
     }
    ],
    "ownerSpotTests": [],
@@ -2195,10 +2195,9 @@ window.EDGE_STATUS ={
     "REDcode #31: light and reflections in the 3D view (an environment, tone mapping, a light control), so shine and dark materials show; filed 2026-11-18"
    ],
    "ownerActions": [
-    "Say go for EDGEmat 0.3.4 in the EDGEmat chat (the joint K4d release; every test since 0.3.3 has passed)",
+    "Install EDGEmat 0.3.4 from the Marketplace in a normal VS Code, then Connect an assistant",
     "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
     "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
-    "Install 0.3.3 from the Marketplace in a normal VS Code, then Connect an assistant",
     "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
     "Three screenshots for Wardrobe Designer's Nexus page"
    ],
@@ -2207,7 +2206,7 @@ window.EDGE_STATUS ={
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-22 (glow and tint passed, so every test for 0.3.4 has passed; 0.3.4 waits for the owner's go in the EDGEmat chat)"
+   "checkedBy": "EDGEmat session, 2026-11-22 (0.3.4 released in the joint K4d release, run 45083176318, every step green; the wiki follows 0.3.4; next: part commands for game meshes on the Desk)"
   },
   {
    "name": "EDGEquest",
@@ -2880,7 +2879,7 @@ window.EDGE_STATUS ={
    "group": "In development",
    "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next), added to a REDcode project or the EDGE Library",
    "stage": "released",
-   "version": "0.1.0",
+   "version": "0.2.0",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -2899,7 +2898,7 @@ window.EDGE_STATUS ={
      },
      {
       "id": "F1",
-      "title": "Props: GLB or words into a project, placed with EDGEbuilder (released as 0.1.0, a preview, 2026-11-18)",
+      "title": "Props: GLB or words into a project, placed with EDGEbuilder (released as 0.1.0, 2026-11-18; 0.2.0, keys in REDcode's Keys, 2026-11-22)",
       "status": "done"
      },
      {
@@ -2940,9 +2939,9 @@ window.EDGE_STATUS ={
     ]
    },
    "nextRelease": {
-    "version": "0.1.1",
+    "version": "0.2.1",
     "needs": [
-     "0.1.0 released 2026-11-18. Since then, under Unreleased: keys in REDcode's Keys. The Lip Sync editor moved to REDcode's branch lipsync (owner, 2026-11-22): EDGEfab covers props and clothing only",
+     "0.2.0 released 2026-11-22 with the K4d tools (keys in REDcode's Keys): Marketplace, Open VSX, npm, GitHub, Nexus. Nothing under Unreleased yet",
      "Next work: F3 Blender sources, then F2; a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
@@ -2990,43 +2989,28 @@ window.EDGE_STATUS ={
      "note": "Steps 1 to 6 by script, 7 to 10 by the owner"
     },
     {
-     "name": "Release tests on the final build: smoke, core package, package check",
-     "steps": 3,
+     "name": "Release tests on the released build: smoke, core package, keys checks, package check",
+     "steps": 4,
      "status": "passed",
      "ranBy": "script",
-     "note": "Passed again 2026-11-18 on main c579bf4, after Open in EDGEmat and Reveal in REDcode. They run once more if anything changes before the release"
+     "note": "Passed 2026-11-22 on the 0.2.0 build (core package run 4, smoke, typecheck, both keys checks, the .vsix with 11 files and no PowerShell)"
     }
    ],
    "ownerSpotTests": [],
    "waitingOn": [
     {
      "who": "owner",
-     "what": "Say when K4d releases: EDGEfab goes out with REDcode, EDGEwave 0.3.0 and the other key tools (EDGEfab's keys test passed 2026-11-22, all 6 steps)",
-     "ref": "REDcode K4d"
-    },
-    {
-     "who": "owner",
-     "what": "Publish Nexus page 38605 after adding the video. Nothing to test",
+     "what": "Publish Nexus page 38605 if it is not live yet (the 0.2.0 file, changelog and the description with your screenshots are on it). Nothing to test",
      "ref": "nexus/README.md"
     },
     {
      "who": "REDbridge",
-     "what": "Later phases, not blocking: .anims import and rig import, for characters and animation",
+     "what": "Later phase (F7a animated props), not blocking: .anims import and rig import",
      "ref": "REDbridge #14"
     },
     {
-     "who": "REDcode",
-     "what": "Later phase (F5a), not blocking: play a game animation in the mesh viewer",
-     "ref": "REDcode #21"
-    },
-    {
-     "who": "REDnode",
-     "what": "Later phase (F7b-1), not blocking: play an animation on a spawned character",
-     "ref": "REDnode #39"
-    },
-    {
      "who": "EDGEchat",
-     "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting; 0.1.0 is published to npm",
+     "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting; 0.2.0 on npm reads keys from REDcode's Keys",
      "ref": "EDGEchat #5"
     },
     {
@@ -3051,9 +3035,8 @@ window.EDGE_STATUS ={
     }
    ],
    "ownerActions": [
-    "Add the video to Nexus page 38605, fill its form fields and tags by hand (nexus/README.md lists them), then publish the page: the 0.1.0 file, changelog and description are on it",
+    "Nexus page 38605: add the video, fill its form fields and tags by hand (nexus/README.md lists them), and publish it if it is not live yet; the 0.2.0 file, changelog and description are on it",
     "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
-    "Update EDGEmat to 0.3.3 in your own VS Code and try Open in EDGEmat once against the released one",
     "Say whether EDGEfab keeps any single-clip animation editing (EDGEfab #7) now that it covers props and clothing only, beyond an animated prop's own clip"
    ],
    "risks": [

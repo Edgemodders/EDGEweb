@@ -4,7 +4,7 @@ nav_title: Connect Claude Code
 section: Start here
 order: 5
 description: "Let Claude Code on your PC use the EDGE tools: the easy way with EDGEchat, which tools it connects, and how to connect the others, or all of them, by hand."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Connect <span class="y">Claude Code</span>
@@ -46,7 +46,7 @@ Use this for EDGEfab, EDGEquest, EDGEhack and EDGEwave, or for any tool if you d
 | REDcode | In a terminal, run `claude mcp add redcode -- npx -y @edgemodders/redcode-mcp` once. If that fails on Windows, the REDcode page has a longer command to use instead |
 | EDGEdeck | In the editor, press **Ctrl+Shift+P** and run **EDGEdeck: Connect an assistant (MCP)...**. Choose **Copy the Claude Code command** and paste it into a terminal once |
 | EDGEmat | In EDGEmat's **Game Materials** view, press **`...`** and choose **Connect an Assistant (MCP)...**, then **Connect Claude Code** |
-| EDGEfab | Press **Ctrl+Shift+P** and run **EDGEfab: Connect an Assistant (MCP)...**, then choose **Connect Claude Code**. For pictures and models from words, its server reads your keys from Windows' environment variables: [Keys for the server](edgefab/assistants.html#keys-for-the-server) |
+| EDGEfab | Press **Ctrl+Shift+P** and run **EDGEfab: Connect an Assistant (MCP)...**, then choose **Connect Claude Code**. For pictures and models from words, its server reads your keys from REDcode's Keys, so none goes in its settings: [Keys for the server](edgefab/assistants.html#keys-for-the-server) |
 | EDGEquest | In a terminal, run `claude mcp add edgequest -- npx -y @edgemodders/edgequest-mcp` once |
 | EDGEhack | In EDGEhack's **Desk** view, press **`...`** and choose **Connect an Assistant (MCP)...**, then **Connect Claude Code** |
 | EDGEwave | Press **Ctrl+Shift+P** and run **EDGEwave: Connect an Assistant (MCP)...**, then choose **Connect Claude Code** |

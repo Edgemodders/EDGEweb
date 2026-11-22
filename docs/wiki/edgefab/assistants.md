@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEfab
 order: 8
 description: "Let Claude make props for you with EDGEfab: what to ask, connecting Claude Code, the keys the server needs, using it beside EDGEchat, every tool with examples, and other assistants."
-reviewed: 2026-11-17
+reviewed: 2026-11-22
 ---
 
 # EDGEfab and <span class="y">assistants</span>
@@ -72,21 +72,21 @@ If EDGEfab can't find Claude Code's `claude` command, it offers to copy this lin
 
 Without any key, the server still prepares models you bring, sizes them, makes them glow, renames them, adds them to projects and runs the Library. **Only making things from words needs keys**: `OPENAI_API_KEY` for pictures and `TRIPO_API_KEY` for 3D models.
 
-Claude Code runs the server outside VS Code, so the server can't read the keys EDGEfab keeps in VS Code's secret storage. EDGEfab doesn't hand them over either. The server reads them from **Windows' environment variables**:
+Since EDGEfab 0.2.0 the server reads them from **REDcode's Keys**, the store every EDGE tool shares, through REDbridge 0.18.0 or later (it comes with REDcode 0.10.16). Nothing goes in Claude Code's settings or your environment:
 
-1. Press the Windows key, type `environment`, and open **Edit environment variables for your account**.
-2. Under **User variables**, press **New...**. Name: `TRIPO_API_KEY`. Value: your key. Press **OK**.
-3. Do the same for `OPENAI_API_KEY`.
-4. **Close every VS Code window** and every terminal, and open them again. Programs read these variables only when they start.
-5. Start a new Claude Code session and ask: "Is EDGEfab's Tripo key set?"
+1. Set the keys once, in EDGEfab or in REDcode's [Keys view](../redcode/settings.html#the-keys-view): see [Your keys](install.html#your-keys).
+2. Start a new Claude Code session and ask: "Is EDGEfab's Tripo key set?"
+
+The server reads each key when a tool needs it, so a key set or changed in REDcode's Keys counts at once. REDcode's Keys view lists **EDGEfab MCP** among the tools that read it.
 
 | What you should see | |
 |---|---|
-| The keys are read | Claude answers that the key is set and gives your credit balance. It never sees or shows the key itself |
-| "No OpenAI API key" or "No Tripo API key" | The server started before the variable was set. Close **every** VS Code window, so the whole program exits, and open it again |
+| The keys are read | Claude answers that the key is set, where it comes from, and your credit balance. It never sees or shows the key itself |
+| "No OpenAI API key" or "No Tripo API key" | No key is set in REDcode's Keys. Set it there, then ask again |
+| "needs REDbridge 0.18.0 or later" | Update REDcode, or run **REDcode: Update REDbridge** |
 | "OpenAI refused the key" | The key is wrong, revoked, or belongs to a project that is switched off. Make a new one |
 
-> **A user environment variable can be read by any program you run.** That is how the server gets it, and it is also the risk. If you don't want that, leave the keys out and make pictures and models with EDGEfab's own buttons: Claude can still do everything else.
+> **An environment variable still wins.** If `TRIPO_API_KEY` or `OPENAI_API_KEY` is set in Windows (the way 0.1.0's server read its keys), the server uses it over REDcode's Keys. Any program you run can read such a variable, so remove it once your keys are in REDcode's Keys.
 
 Tell Claude your Tripo plan once ("my Tripo plan is paid"), so each model is marked as yours: see [Your Tripo plan](install.html#your-tripo-plan). If you already answered in EDGEfab, the server knows.
 

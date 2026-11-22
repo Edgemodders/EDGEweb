@@ -4,7 +4,7 @@ nav_title: Install and set up
 section: EDGEfab
 order: 1
 description: "What EDGEfab needs, how to install it, the first start, and setting up your Tripo and OpenAI keys and your Tripo plan."
-reviewed: 2026-11-17
+reviewed: 2026-11-22
 ---
 
 # Install and <span class="y">set up</span>
@@ -53,7 +53,7 @@ Nothing is asked until you make something. To check the install without a key, r
 
 ## Your keys
 
-Keys are needed only for making things **from words**. EDGEfab asks for a key the first time it needs one, in a password box. You can also set them ahead of time from the command palette (`Ctrl+Shift+P`):
+Keys are needed only for making things **from words**. Since EDGEfab 0.2.0 they live in **REDcode's Keys** (REDcode 0.10.16 or later), the one store every EDGE tool shares, so a key set once there serves EDGEfab, EDGEmat and the rest. EDGEfab asks for a key the first time it needs one, in REDcode's password box. You can also set them ahead of time in REDcode's [Keys view](../redcode/settings.html#the-keys-view), or from the command palette (`Ctrl+Shift+P`):
 
 | Command | Key | Where to get it |
 |---|---|---|
@@ -62,10 +62,13 @@ Keys are needed only for making things **from words**. EDGEfab asks for a key th
 
 | Good to know | |
 |---|---|
-| Where a key is kept | Encrypted in VS Code's own secret storage, for EDGEfab only. It is sent only to the service it belongs to |
-| Removing one | **EDGEfab: Clear Tripo Key** or **Clear OpenAI Key** |
+| Where a key is kept | In REDcode's Keys, encrypted for your Windows user. It is sent only to the service it belongs to |
+| **Allow** or **Don't Allow** | The first time EDGEfab needs a key, REDcode asks whether EDGEfab may read it. After **Don't Allow**, EDGEfab says so and opens no key box: run **Forget Tool Permissions for Keys** in REDcode's Keys view, then try again and choose **Allow** |
+| A key from before | A key you set in EDGEfab 0.1.0 moves to REDcode's Keys by itself, once, and EDGEfab says so. If REDcode's Keys already has one, that one is kept |
+| Removing one | **EDGEfab: Clear Tripo Key** or **Clear OpenAI Key** points you to REDcode's Keys view, where **Remove Key** removes it for every tool |
+| An older REDcode | Without Keys, EDGEfab keeps its keys in VS Code's secret storage, as in 0.1.0 |
 | Environment variables | If `TRIPO_API_KEY` or `OPENAI_API_KEY` is set in Windows, EDGEfab uses that one first |
-| Assistants | Claude Code runs EDGEfab's server outside VS Code, so it can't read these keys. See [Assistants: keys](assistants.html#keys-for-the-server) |
+| Assistants | EDGEfab's MCP server reads the same keys from REDcode's Keys, so Claude Code needs none in its settings. See [Assistants: keys](assistants.html#keys-for-the-server) |
 
 ## Your Tripo plan
 

@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEfab
 order: 9
 description: "Every EDGEfab setting, command, button and menu entry, the environment variables it reads, and where it keeps its files."
-reviewed: 2026-11-17
+reviewed: 2026-11-22
 ---
 
 # Settings and <span class="y">commands</span>
@@ -49,7 +49,7 @@ Three more choices are kept by EDGEfab itself, not in VS Code's settings, becaus
 |---|---|
 | **EDGEfab: Import a GLB...** | A model of your own onto the Desk |
 | **EDGEfab: Generate from Words...** | A picture first, or straight to 3D |
-| **EDGEfab: Set Tripo Key**, **Clear Tripo Key** | Your Tripo key, in VS Code's secret storage |
+| **EDGEfab: Set Tripo Key**, **Clear Tripo Key** | Your Tripo key, in REDcode's Keys (Clear points you to REDcode's Keys view) |
 | **EDGEfab: Set OpenAI Key**, **Clear OpenAI Key** | Your OpenAI key, the same way |
 | **EDGEfab: Set Tripo Plan (Paid or Free)** | Which plan your Tripo key is on |
 | **EDGEfab: Connect an Assistant (MCP)...** | Connects Claude Code, or copies what another assistant needs: see [Assistants](assistants.html) |
@@ -99,10 +99,10 @@ EDGEfab has no keyboard shortcuts of its own, except `Ctrl+Enter` in the Picture
 
 | Variable | Read by | For |
 |---|---|---|
-| `TRIPO_API_KEY` | The extension and the MCP server | Your Tripo key. In the extension it wins over the key set with **Set Tripo Key** |
+| `TRIPO_API_KEY` | The extension and the MCP server | Your Tripo key. It wins over the key in REDcode's Keys |
 | `OPENAI_API_KEY` | The extension and the MCP server | Your OpenAI key, the same way |
 
-The MCP server reads its keys from these only: see [Keys for the server](assistants.html#keys-for-the-server).
+You don't need them: the extension and the MCP server both read REDcode's Keys. See [Keys for the server](assistants.html#keys-for-the-server).
 
 ## Where EDGEfab keeps things
 
@@ -112,7 +112,7 @@ The MCP server reads its keys from these only: see [Keys for the server](assista
 | The MCP server | `%LOCALAPPDATA%\EDGEfab\mcp\edgefab-mcp.cjs` |
 | Your Tripo plan and your game folder name | In `%LOCALAPPDATA%\EDGEfab` |
 | Where the Library is | `%APPDATA%\EDGE\library.json`, shared by every EDGE tool |
-| Your keys | VS Code's secret storage, not in a file you can open |
+| Your keys | REDcode's Keys, shared by every EDGE tool (`%APPDATA%\Edgemodders\keys`, encrypted for your Windows user) |
 | A prop in a project | `<project>\source\archive\<project>\props\<name>\` and the same under `source\raw` |
 
 Inside a prop's folder on the Desk:
