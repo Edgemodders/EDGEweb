@@ -1982,7 +1982,7 @@ window.EDGE_STATUS ={
      "steps": 8,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-21: steps 2 and 3 passed with a Panam clone, then no game audio to ElevenLabs. 2026-11-22: step 1's findings (clicking a designed voice kept it; no way back to change it) fixed the same day; steps 1, 1b, 3 (design), 4, 5, 6 and 7 to run"
+     "note": "2026-11-22: steps 1 and 1b pass (designing a voice, the character's menu), after step 1's findings were fixed the same day; step 2 passed 2026-11-21. Steps 3 (designing), 4, 5, 6 and 7 to run"
     },
     {
      "name": "Shared keys (#12, #14)",
@@ -2008,7 +2008,7 @@ window.EDGE_STATUS ={
    "ownerActions": [
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
-    "Run the rest of the #13 hand test: steps 1 and 1b (designing a voice, the character's menu; retest after the 2026-11-22 fix), 3, 7, 4, 5 and 6 (docs/testing.md, Speaking a line with timings)"
+    "Run the rest of the #13 hand test: steps 3 (a character with no voice), 4, 5, 6 and 7 (docs/testing.md, Speaking a line with timings)"
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)",
