@@ -2483,7 +2483,7 @@ window.EDGE_STATUS = {
      "steps": 5,
      "status": "passed",
      "ranBy": "owner",
-     "note": "Passed by the owner on 2026-11-22, all 5 steps; Generate's errors moved into its box during the test (a813493); #3 closed"
+     "note": "Passed by the owner on 2026-11-22, all 5 steps and step 2b (Don't Allow); Generate's errors moved into its box during the test (a813493); #3 closed"
     },
     {
      "name": "0.1.1 Key in VS Code secret storage",
