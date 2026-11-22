@@ -1929,7 +1929,7 @@ window.EDGE_STATUS ={
     "version": null,
     "needs": [
      "Released together with the other key tools after K4d (the owner's rule for keys, 2026-11-19), unless the owner decides otherwise",
-     "#13 speakLine with timings: built 2026-11-20, the smoke test passed 2026-11-22; the hand test's steps 1 and 3 to 7 to run",
+     "#13 speakLine with timings: smoke test passed; hand test passed but for step 3, which waits for the Lip Sync tab in REDcode",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
     ]
@@ -1982,7 +1982,7 @@ window.EDGE_STATUS ={
      "steps": 8,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-22: steps 1, 1b, 4, 5 and 7 pass (7 before its dialogs were changed to say it up front: retest); step 2 passed 2026-11-21. Step 6 and 7 retest to run; step 3 waits for the Lip Sync tab in REDcode"
+     "note": "2026-11-22: every step but 3 passed (1, 1b, 2, 4, 5, 6, 7); step 3 waits for the Lip Sync tab in REDcode (moving from EDGEfab, after REDcode's next release)"
     },
     {
      "name": "Shared keys (#12, #14)",
@@ -2012,8 +2012,7 @@ window.EDGE_STATUS ={
    ],
    "ownerActions": [
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
-    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
-    "Run the rest of the #13 hand test: step 6 (an assistant) and step 7 again (the dialogs now say it up front); step 3 waits for the Lip Sync tab in REDcode"
+    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat"
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)",
