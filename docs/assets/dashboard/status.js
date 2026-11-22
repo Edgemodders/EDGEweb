@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS = {
+window.EDGE_STATUS ={
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -976,9 +976,9 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "Key status",
-     "steps": 5,
+     "steps": 7,
      "status": "not run",
-     "note": "REDcodeApi.keys.status tells no key from the modder's no; Opens Test's Read a Key says why; also checks that closing the question saves nothing (docs/testing.md, Key status)"
+     "note": "REDcodeApi.keys.status tells no key from the modder's no; Opens Test's Read a Key says why; also checks that closing the question saves nothing; each key's unlock button forgets that key's tool permissions, its tooltip names who was allowed or refused (docs/testing.md, Key status)"
     },
     {
      "name": "Animation Tools pack (AT3)",
