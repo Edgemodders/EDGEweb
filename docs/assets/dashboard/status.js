@@ -1926,8 +1926,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "Released together with the other key tools after K4d (the owner's rule for keys, 2026-11-19), unless the owner decides otherwise",
-     "#13 speakLine with timings: built 2026-11-20, the smoke test and hand test to run",
-     "Desk, Project and Library: built and hand-tested 2026-11-16; the smoke test still to run on it, with the PC left alone",
+     "#13 speakLine with timings: built 2026-11-20, the smoke test passed 2026-11-22; the hand test's steps 1 and 3 to 7 to run",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
     ]
@@ -2004,7 +2003,6 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Leave the PC alone about 5 minutes so the EDGEwave session can run its smoke test (Desk and Library, #13)",
     "Say whether to build Add to Project's Pick a game sound to replace… row next",
     "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
     "Run the rest of the #13 hand test: steps 1, 3 and 7 (designing a voice; game audio refused), 4, 5 and 6 (docs/testing.md, Speaking a line with timings)"
