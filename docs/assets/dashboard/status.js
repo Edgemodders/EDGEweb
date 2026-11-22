@@ -948,7 +948,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AT",
-      "title": "Animation Tools: AT1 anim-core built and checked; AT2 REDcode, AT3 the pack (own Nexus page), AT4 V",
+      "title": "Animation Tools: AT1 anim-core done; AT2 Make in REDcode built, hand test pending; AT3 the pack (own Nexus page), AT4 V",
       "status": "in progress"
      }
     ]
@@ -964,6 +964,12 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "Animation Tools AT2",
+     "steps": 9,
+     "status": "not run",
+     "note": "The Make panel in the animation view (Generate with Uthana, From a GLB, new clip or replace), the commands, Add a Clip from GLB in the Project view, then Probe D's package in the game; two paid Generates, about $1 (docs/testing.md, Animation Tools AT2)"
+    },
     {
      "name": "Animation Probe D (in the game)",
      "steps": 6,
@@ -1141,9 +1147,15 @@ window.EDGE_STATUS = {
      "who": "EDGEfab",
      "what": "K4d: move its keys to REDcodeApi.keys on EDGEwave's model, then the joint release of every key-using tool",
      "ref": "https://github.com/Edgemodders/EDGEfab/issues/10"
+    },
+    {
+     "who": "REDnode",
+     "what": "#47 V as an actor: the V actor spike (REDnode 0.70.0, spike 0.2.0 with REDcode's written-workspot test) waits for the owner's game session; Animation Tools AT4 (V) needs it",
+     "ref": "https://github.com/Edgemodders/REDnode/issues/47"
     }
    ],
    "ownerActions": [
+    "Run the Animation Tools AT2 hand test (docs/testing.md; about $1 of Uthana credit)",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
