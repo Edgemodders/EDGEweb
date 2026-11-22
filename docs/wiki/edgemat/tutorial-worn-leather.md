@@ -4,7 +4,7 @@ nav_title: "Tutorial: worn leather"
 section: EDGEmat
 order: 9
 description: "Step by step: generate a worn brown leather from words with an AI image service, put it on a pair of slim-fit pants for both bodies, and wear them in the game."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # Tutorial: worn <span class="y">leather</span>
@@ -78,7 +78,7 @@ Press **Add to Project**.
 
 | What you should see | |
 |---|---|
-| A message | It saved `worn_leather` and put it on 2 mesh materials, with the buttons **Pack and Play** and **Show Files** |
+| A message | It saved `worn_leather` and put it on 2 mesh materials, with the buttons **Pack and Play** and **Reveal in File Explorer** (Show Files before 0.3.4) |
 | On the page | Both meshes listed, with "repeat in the texture, garment folds kept": the pants keep their own folds and wrinkles at their real size |
 
 {% include shot.html caption="Saved into the project" src="/assets/shots/edgemat/tutorial-worn-leather-saved.png" alt="The New Material page after Add to Project, with Name worn leather and Repeat 6: Saved into my_materials, 9 files in edgemat\materials\worn_leather, both l1_012 meshes with repeat in the texture, garment folds kept, and the message Saved worn_leather into my_materials and put on 2 mesh materials with Pack and Try (since renamed Pack and Play) and Show Files." shows="The message 'Saved worn_leather into ... and put on 2 mesh materials.' with Pack and Play and Show Files, and the page listing both l1_012 meshes with 'repeat in the texture, garment folds kept'." %}

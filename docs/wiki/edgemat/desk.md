@@ -4,7 +4,7 @@ nav_title: The Desk
 section: EDGEmat
 order: 4
 description: "EDGEmat's Desk: a scratch area for the garments you are working on, with your edits and variations, kept across restarts until you add them to a mod project, and the parts of a prop, each given a game surface or a game material."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # The <span class="y">Desk</span>
@@ -24,7 +24,7 @@ Each mesh or setup on the Desk is one **line**. A mesh line unfolds into its **l
 | [Variations](#variations) | Several versions of one garment |
 | [Add to a project](#add-to-a-project) | One line or all of them, and both body types |
 | [A prop's parts](#a-props-parts) | A game surface, a game material or the model's texture on each part of a prop |
-| [Take things off](#take-things-off), [Where it lives](#where-it-lives) | |
+| [Remove things](#remove-things), [Where it lives](#where-it-lives) | |
 
 {% include shot.html caption="The Desk" src="/assets/shots/edgemat/desk.png" alt="The Desk with a line for the jeans mesh l1_012_pwa_pants__jeans_tight reading edited on the Desk, opened to its looks: leather, worn by 2 items, is open and its layered material also reads edited on the Desk; default reads no item. A second line for the same mesh sits below the list." shows="EDGEmat's Desk with two lines for the same jeans mesh, the second named 'blue', both reading 'edited on the Desk', the first unfolded to its looks (leather 'worn by 2 items', default 'no item') and leather's layered material." %}
 
@@ -89,7 +89,7 @@ You need REDcode installed, for the 3D view. No project is needed until the last
 | After step 5 | A second line, **..., variation 2**, with the game's colors. The status bar says it is a fresh copy |
 | After step 7 | Two lines, the second reading **..., blue**. The eye on each line shows its own color |
 
-To wear one of them, go on to [Add to a project](#add-to-a-project). To throw both away, see [Take things off](#take-things-off).
+To wear one of them, go on to [Add to a project](#add-to-a-project). To throw both away, see [Remove things](#remove-things).
 
 ## Variations
 
@@ -113,7 +113,7 @@ Right-click a line › **Rename...** to give it a name, such as `blue`. The line
 
 1. Save your edits first with `Ctrl+S`. EDGEmat warns you if a setup on that line still has unsaved changes.
 2. Press the button. If REDcode has a project open, the line goes there. Otherwise you pick a project folder.
-3. A dialog says what will be written. Choose **Add to Project**, or **Add and Take It Off the Desk** (**Add and Clear the Desk** when you add everything).
+3. A dialog says what will be written. Choose **Add to Project**, or **Add and Remove from the Desk** (**Add and Clear the Desk** when you add everything).
 
 | What you should see | |
 |---|---|
@@ -182,12 +182,12 @@ Then pack and install the project ([Your mod in the game](in-the-game.html)), an
 - **A material that may not fit.** Decals, and layered materials painted for one particular mesh, are left out of the list. A path you type that may not fit gives a warning, such as "blood_b.mi may not suit this part: made for another kind of mesh or effect (decal.remt). Use it anyway?" **Cancel** changes nothing.
 - **Parts follow the model.** How the parts were split is the model's. On the test vending machine, the shelves of drinks belonged to the front, so they took the car paint too.
 
-## Take things off
+## Remove things
 
 | Button | Does |
 |---|---|
-| The **×** on a line (hover it) | Takes that line off. A line with edits asks first, because its edits are deleted |
-| **Clear the Desk...** in the title bar | Takes everything off, edits included, after asking |
+| The **×** on a line (hover it), or right-click › **Remove** | Removes that line from the Desk. A line with edits asks first ("Remove ... from the Desk?"), because its edits are deleted. (Take Off the Desk before 0.3.4) |
+| **Clear the Desk...** in the title bar | Removes everything, edits included, after asking |
 
 Your projects keep what you added to them. If a setup tab or 3D view still has one of the Desk's files open, Windows may hold that file for a moment. The Desk is empty all the same, a note says so, and EDGEmat deletes the file when it next starts.
 

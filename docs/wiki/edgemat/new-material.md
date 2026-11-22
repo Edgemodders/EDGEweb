@@ -4,7 +4,7 @@ nav_title: New Material
 section: EDGEmat
 order: 8
 description: "Make a material from words, through an AI image service with your own key, or from a photo of your own, and put it on a garment: seamless, with bumps and shine, written into your mod project."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # New <span class="y">Material</span>
@@ -53,7 +53,7 @@ If you have neither, either will do.
 1. **Describe the material** in the box: what it is, its color, its wear. "Dark green snakeskin", "brushed steel with fine scratches", "faded red denim".
 2. **Detail**: how big the pattern's features are. Fine for small grain such as leather pores, coarse for big shapes such as scales.
 3. **Pick the service.** Leave the model menu on "Newest" unless Generate fails. **List models** asks the service which image models your key can use.
-4. Press **Generate**. The first time, EDGEmat asks for your key and keeps it in VS Code's secret storage, on your PC.
+4. Press **Generate**. The first time, REDcode asks whether EDGEmat may use your key, and for the key itself if you have not set it yet. It keeps it in its **Keys** view, shared by every EDGE tool, so you set each key once.
 
 | What you should see | |
 |---|---|
@@ -86,7 +86,7 @@ Press **Add to Project**. EDGEmat writes the material into REDcode's open projec
 
 | What you should see | |
 |---|---|
-| A message | "Saved ... and put on 2 mesh materials.", with **Pack and Play** and **Show Files** |
+| A message | "Saved ... and put on 2 mesh materials.", with **Pack and Play** and **Reveal in File Explorer** (called Show Files before 0.3.4) |
 | On the page | Each mesh listed, with "repeat in the texture, garment folds kept" |
 
 **Pack and Play** is REDcode's button. With the game closed it packs and installs the project, and you start the game afterwards. With the game running under REDnode it swaps the mod in. See [Your mod in the game](in-the-game.html).
@@ -111,7 +111,8 @@ So the pants keep their wrinkles, and the new pattern, with its bumps, repeats o
 - **It replaces a whole material.** On a garment, it covers every part that material paints. To change just one layer of a layered material, use the [setup editor](setup-editor.html).
 - **Seams at panel lines are normal.** A garment's texture is cut into pieces, like a sewing pattern. The pattern breaks where two pieces meet, which usually reads as a seam or stitching.
 - **Text comes out mirrored on some parts.** Part of a garment can be mirrored in its texture, so the standard words ask for no text or logos.
-- **Your key** stays in VS Code's secret storage on your PC. **Set Image Service Key...** changes it and **Clear Image Service Key...** removes it (command palette, `Ctrl+Shift+P`).
+- **Your key** is kept in [REDcode](../redcode/)'s **Keys** view on your PC, for every EDGE tool (since EDGEmat 0.3.4, with REDcode 0.10.16 or later; a key EDGEmat kept itself moves there the first time). **Set Image Service Key...** (command palette, `Ctrl+Shift+P`) opens REDcode's box; to remove a key, use **Remove Key** in REDcode's Keys view. With an older REDcode, EDGEmat keeps its key in VS Code's secret storage, as before. A `GEMINI_API_KEY` or `OPENAI_API_KEY` environment variable wins.
+- **If you pressed Don't Allow** when REDcode asked, EDGEmat says so instead of asking for the key. To allow it: REDcode's Keys view › **Forget Tool Permissions for Keys**, then Generate again and press **Allow**.
 - **Colors** come from the picture as it is: a warm photo makes a warm material.
 - **If the service refuses or doesn't answer,** see [Troubleshooting](troubleshooting.html#new-material).
 

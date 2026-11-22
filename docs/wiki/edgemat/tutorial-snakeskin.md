@@ -4,7 +4,7 @@ nav_title: "Tutorial: snakeskin"
 section: EDGEmat
 order: 10
 description: "Step by step: ask Claude Code, through EDGEmat's MCP server, to make a dark green snakeskin material and put it on a pair of slim-fit pants for both bodies, then wear them in the game."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Tutorial: <span class="y">snakeskin</span> by asking Claude
@@ -35,7 +35,7 @@ It costs what Claude Code costs you (a Claude plan or API credit), plus a few ce
 
 ## 1. Connect Claude Code, with your key
 
-1. In VS Code, run **EDGEmat: Set Image Service Key...** from the command palette (`Ctrl+Shift+P`) and paste your Gemini or OpenAI key, if you haven't yet.
+1. In VS Code, run **EDGEmat: Set Image Service Key...** from the command palette (`Ctrl+Shift+P`) and paste your Gemini or OpenAI key, if you haven't yet. With REDcode 0.10.16 or later it goes into REDcode's **Keys** view, shared by every EDGE tool.
 2. In EDGEmat's **Game Materials** view, press **`...`** at its top right and choose **Connect an Assistant (MCP)...** › **Connect Claude Code**.
 3. When it asks whether to give the assistant your key too, choose **Yes**. Claude Code keeps the key in its own settings file, in plain text.
 4. Start a **new** Claude Code session, so it sees EDGEmat.

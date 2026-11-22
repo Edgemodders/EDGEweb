@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEmat
 order: 15
 description: "What to do when EDGEmat can't find the game or REDbridge, Find finds nothing, the color map looks scrambled, a save finds no mesh, a change doesn't show in the game, an image service refuses, the 3D view is flat, or Claude doesn't see the tools."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # Troubleshooting <span class="y">EDGEmat</span>
@@ -82,6 +82,7 @@ Open it with **Show Log** in Game Materials' **`...`** menu, or **View**, **Outp
 | You see | Do this |
 |---|---|
 | "... refused the key" | The key is wrong, revoked, or for the other service. Run **Set Image Service Key...** and enter it again |
+| "You told REDcode that EDGEmat may not use your ... key" | You pressed **Don't Allow** when REDcode asked. REDcode's Keys view › **Forget Tool Permissions for Keys**, then Generate again and press **Allow** |
 | "No answer from ... in ... s" | The service was slow or down. Try again. Nothing was added |
 | The service says the request was blocked | It refused the words. Rephrase them, or edit **The words sent** |
 | OpenAI asks to verify your organization | That is OpenAI's rule for GPT Image. Verify on platform.openai.com, or use Gemini |

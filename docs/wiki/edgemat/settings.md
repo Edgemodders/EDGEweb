@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEmat
 order: 14
 description: "Every EDGEmat setting with its default and when to change it, every EDGEmat command and button, and the keyboard shortcuts."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # Settings and <span class="y">commands</span>
@@ -44,10 +44,10 @@ Open the command palette (`Ctrl+Shift+P`) and type `EDGEmat`. Most commands are 
 | Command | Where | Does |
 |---|---|---|
 | Add the Desk to Project... | Desk title bar (**+**), and the palette | Puts every line into a project. Asks which variation when a mesh is there twice |
-| Clear the Desk... | Desk title bar, when it has lines, and the palette | Takes everything off, edits included, after asking |
+| Clear the Desk... | Desk title bar, when it has lines, and the palette | Removes everything, edits included, after asking |
 | Add to Project... | A line (new-file icon), or right-click | Puts that line into a project. A project REDcode doesn't have open opens afterwards |
 | Rename... | Right-click a line | Names a variation, such as `blue` |
-| Take Off the Desk | A line (**×**), or right-click | Takes that line off. Asks first if it has edits |
+| Remove | A line (**×**), or right-click | Removes that line from the Desk. Asks first if it has edits. (Take Off the Desk before 0.3.4) |
 | View in 3D, Copy Game Path, New Material Here..., Copy REDnode Command | Rows under a line | As in [Find](#find), below, on the Desk's own copy |
 | Use a Game Surface... | A part of a mesh from your project (colors icon), or right-click | A game surface in one of its colors on that part, as a one-layer setup ([A prop's parts](desk.html#a-props-parts)) |
 | Use a Game Material... | Right-click a part of a mesh from your project | A game material that suits any shape on that part, such as glass or a glow, or any `.mi` by its path |
@@ -95,8 +95,8 @@ Up to EDGEmat 0.3.1 the view was called Library, and three of these were **Searc
 | Command | Where | Does |
 |---|---|---|
 | Save to Project... | The setup editor's **Save to Project** button, the save icon in its title bar, and the palette while a setup editor is in front | Saves the setup into a project ([Save to Project](setup-editor.html#save-to-project)) |
-| Set Image Service Key... | Command palette | Stores your Google Gemini or OpenAI key in VS Code's secret storage, after checking it looks right (an OpenAI key starts with `sk-`) |
-| Clear Image Service Key... | Command palette | Removes it after asking. The next Generate asks again |
+| Set Image Service Key... | Command palette | Sets your Google Gemini or OpenAI key in REDcode's **Keys** view, shared by every EDGE tool (REDcode 0.10.16 or later). With an older REDcode, in VS Code's secret storage, after checking it looks right (an OpenAI key starts with `sk-`) |
+| Clear Image Service Key... | Command palette | Points to **Remove Key** in REDcode's Keys view. With an older REDcode, removes EDGEmat's own key after asking |
 
 ## Buttons on the pages
 

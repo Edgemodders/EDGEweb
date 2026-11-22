@@ -4,7 +4,7 @@ nav_title: View in 3D
 section: EDGEmat
 order: 6
 description: "See a garment on its mesh with its colors: EDGEmat's View in 3D opens REDcode's 3D viewer, gives it each layer's surface and color, and follows your edits as you make them."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # View in <span class="y">3D</span>
@@ -42,8 +42,9 @@ Without REDcode installed, the eye says so and offers to show REDcode's extensio
 | Kind of material | In the 3D view |
 |---|---|
 | Layered (`.mlsetup`) | Each layer's own surface, such as felt, leather or plastic, with its grain, under the layer's color, where its mask puts it. As light as the game shows it: a light grey felt hat looks light grey |
-| Textured, such as decals, logos and stitches | Its own color texture, as in the game |
-| Others: glass, hair, skin details, lights | REDcode's own flat color, one plain color per material. That is normal |
+| Textured, such as decals, logos and stitches | Its own color texture, as in the game, with its tint |
+| Glowing, such as lights, screens and the game's glow materials | The glow's color where it glows, such as blue for **z emissive blue** on a prop's part. Not its light yet: it does not shine or light what is near it. (Before 0.3.4 these were plain white) |
+| Others: glass, hair, skin details | REDcode's own flat color, one plain color per material. That is normal |
 
 The viewer marks EDGEmat's picture **approximate**. It shows color and grain, but not yet:
 
@@ -51,6 +52,7 @@ The viewer marks EDGEmat's picture **approximate**. It shows color and grain, bu
 |---|---|
 | Shine and metal | Glossy and metal surfaces look matte. Glossy black leather looks dark grey here, darker in the game. Car paint looks flat |
 | Bumps | The surface looks smooth up close |
+| Glow's light | A glow shows its color, but no light or halo |
 | The game's lighting | Light and shadow are REDcode's viewer's own |
 
 Small differences remain too, such as a few specks or patches on some surfaces. Shine and the rest are planned. Trust the game over the preview.
@@ -61,7 +63,7 @@ Before EDGEmat 0.3.3 the view showed one flat color per layer, and many came out
 
 ## Live while you edit
 
-Keep the 3D view open beside the [setup editor](setup-editor.html). While a setup is open, the 3D view shows it as edited, before you save, and follows each change, undo (`Ctrl+Z`) and redo (`Ctrl+Y`) within about a second. Close the editor without saving and the 3D view goes back to the saved setup. After a save, or a [new material](new-material.html) put on the mesh, it draws the materials again by itself.
+Keep the 3D view open beside the [setup editor](setup-editor.html). While a setup is open, the 3D view shows it as edited, before you save, and follows each change, undo (`Ctrl+Z`) and redo (`Ctrl+Y`) within about a second. Close the editor without saving and the 3D view goes back to the saved setup. After a save, a [new material](new-material.html) put on the mesh, or a change to a [prop's part](desk.html#a-props-parts) (a game surface, a game material, back to the model's texture), it draws the materials again by itself. (Before 0.3.4 a part's change needed the view closed and opened again.)
 
 The live preview only reaches a 3D view opened from the same place as the setup:
 

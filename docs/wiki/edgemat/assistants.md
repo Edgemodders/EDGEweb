@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEmat
 order: 13
 description: "Let an AI assistant such as Claude use EDGEmat for you: what to ask, the easy way to connect it with EDGEchat, connecting Claude Code yourself, the key for new materials, and every tool."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # EDGEmat and <span class="y">assistants</span>
@@ -77,21 +77,19 @@ The server finds your game and REDbridge the same way the extension does, so on 
 
 Only making a material **from words** needs a key: your own Google Gemini or OpenAI key, as on the [New Material](new-material.html#from-words-ai) page. Every other tool works without one, making a material from an image file included.
 
-Claude Code runs the server outside VS Code, so the server can't read the key EDGEmat keeps in VS Code's secret storage. The key has to be handed over:
+With REDcode 0.10.16 or later, the server reads your keys from [REDcode](../redcode/)'s **Keys** view, which every EDGE tool shares, at each call. Set a key there once (or in EDGEmat, which opens REDcode's box) and Claude Code can use it. **Connect Claude Code** puts no key in Claude Code's settings. (Before EDGEmat 0.3.4 it did, in plain text.)
 
 | To | Do |
 |---|---|
-| Hand it over the easy way | Set the key in EDGEmat first (**EDGEmat: Set Image Service Key...** in the command palette). Then run **Connect Claude Code** and answer **Yes** |
-| Change the key later | Set the new key in EDGEmat, and run **Connect Claude Code** again |
-| Do it by hand | **Connect an Assistant (MCP)...** › **Copy the Claude Code command** gives you the line, with `<key>` where yours goes: `-e GEMINI_API_KEY=<key>` or `-e OPENAI_API_KEY=<key>` |
-
-> **Claude Code keeps the key in its own settings file, in plain text.** Anyone who can read that file can spend your credit. Say No if you don't make materials from words.
+| Set or change a key | [REDcode](../redcode/)'s **Keys** view, or **EDGEmat: Set Image Service Key...** in the command palette |
+| Use a key of your own for the server alone | Set `GEMINI_API_KEY` or `OPENAI_API_KEY` in Windows' environment variables. It wins over the shared key |
+| With an older REDcode | The server can't reach the keys. Set the environment variable as above |
 
 ## Other assistants
 
 | Assistant | How |
 |---|---|
-| Agents inside VS Code 1.101 or later | Nothing to do. VS Code lists EDGEmat among its MCP servers, with your image service keys from EDGEmat. In editors without built-in MCP support, nothing happens: use the next row |
+| Agents inside VS Code 1.101 or later | Nothing to do. VS Code lists EDGEmat among its MCP servers; it reads the shared keys as Claude Code's does. In editors without built-in MCP support, nothing happens: use the next row |
 | Another MCP client | **Connect an Assistant (MCP)...** › **Copy a JSON entry**, for the client's settings file |
 | Without VS Code, or on another PC | The same server is on npm: `claude mcp add --scope user edgemat -- cmd /c npx -y @edgemodders/edgemat-mcp` ([the package](https://www.npmjs.com/package/@edgemodders/edgemat-mcp)). It needs Node.js 20 or later |
 | [REDagent](../redagent/), in the game | Nothing to do. REDnode brings EDGEmat's everyday tools and starts them when REDagent needs them: see [REDnode and agents](../rednode/agents.html) |

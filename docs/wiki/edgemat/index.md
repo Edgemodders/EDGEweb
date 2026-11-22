@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEmat
 order: 0
 description: "EDGEmat, the EDGE platform's material editor for Cyberpunk 2077: see what a garment is made of, in plain words and in 3D, recolor it, make new materials from your words, or ask an AI assistant to."
-reviewed: 2026-11-18
+reviewed: 2026-11-22
 ---
 
 # EDGE<span class="y">mat</span>
@@ -102,15 +102,15 @@ EDGEmat builds its list of game materials from your own game the first time it r
 
 ## Status
 
-**A preview, released.** The latest is EDGEmat 0.3.3 (2026-11-18), on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgemat), [Open VSX](https://open-vsx.org/extension/edgemodders/edgemat), [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35422) and [GitHub](https://github.com/Edgemodders/EDGEmat/releases), with its MCP server on [npm](https://www.npmjs.com/package/@edgemodders/edgemat-mcp). Windows only.
+**A preview, released.** The latest is EDGEmat 0.3.4 (2026-11-22), on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgemat), [Open VSX](https://open-vsx.org/extension/edgemodders/edgemat), [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35422) and [GitHub](https://github.com/Edgemodders/EDGEmat/releases), with its MCP server on [npm](https://www.npmjs.com/package/@edgemodders/edgemat-mcp). Windows only.
 
 | | |
 |---|---|
 | **Works, and seen in the game** | Recoloring a garment's layers and saving them into a project, from Find and from the Desk. The command that gives V the item. New materials from words or a photo, on a garment, with their bumps raised over its folds. Game surfaces and game materials on a prop's parts. Recolors and new materials made by asking Claude |
-| **Works, tested in VS Code** | Game Materials, surface pages, Find, the color map and its zoom, View in 3D (each layer's surface and color, marked approximate), opening setups from files and other mods |
+| **Works, tested in VS Code** | Game Materials, surface pages, Find, the color map and its zoom, View in 3D (each layer's surface and color, a glow's color, marked approximate), opening setups from files and other mods |
 | **Newer tools for assistants** | `mat_parts`, `mat_materials`, `mat_restyle`, `mat_reshape` and `mat_from_model`. Some were tested less than the rest: see [Assistants](assistants.html#newer-tools) |
-| **Not there yet** | Shine, bumps and game lighting in the 3D preview. Colors no surface offers. Materials that are not layered. Items added by other mods, in Find |
-| **Coming next** | Shine in the 3D preview, then glass and glow. More materials for brand-new clothes and objects, for [EDGEfab](../edgefab/), the asset maker. Wardrobe Designer, an in-game app that restyles what V wears, is built and was tested in the game, but is not released yet |
+| **Not there yet** | Shine, bumps, a glow's light and game lighting in the 3D preview. Colors no surface offers. Materials that are not layered. Items added by other mods, in Find |
+| **Coming next** | Shine in the 3D preview, then glass and a glow's light. Part commands for a game mesh on the Desk. More materials for brand-new clothes and objects, for [EDGEfab](../edgefab/), the asset maker. Wardrobe Designer, an in-game app that restyles what V wears, is built and was tested in the game, but is not released yet |
 
 Each version's changes are in EDGEmat's [changelog](https://edgemodders.github.io/EDGEmat/changelog.html), and the plan is in its [design](https://edgemodders.github.io/EDGEmat/design.html).
 
