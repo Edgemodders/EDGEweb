@@ -2452,11 +2452,19 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The VS Code Marketplace to accept the extension (it refused 0.1.0, 0.1.1 and 0.1.2; retry after about 2026-11-19)",
+     "The Shared keys hand test (#3, K4d; 5 steps, F5 with REDcode main)",
+     "Released together with REDcode, EDGEwave 0.3.0, EDGEfab and EDGEmat once every K4d tool passes (the owner's rule of 2026-11-19)",
      "Nexus page 37293 published by the owner"
     ]
    },
    "handTests": [
+    {
+     "name": "Shared keys (#3), the OpenAI key from REDcode's Keys",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built on main 2026-11-22 (9ab55de); 187 unit tests and the smoke test passed"
+    },
     {
      "name": "0.1.1 Key in VS Code secret storage",
      "steps": 4,
@@ -2527,7 +2535,7 @@ window.EDGE_STATUS = {
     "The VS Code Marketplace took 0.1.2 on 2026-11-19 after support's review; whether later versions pass on their own is unverified",
     "Try Live cannot change names: the game reads its text tables at load"
    ],
-   "checkedBy": "REDnode session, 2026-11-19"
+   "checkedBy": "REDnode, EDGEhack & REDagent session, 2026-11-22"
   },
   {
    "name": "EDGEkit",
