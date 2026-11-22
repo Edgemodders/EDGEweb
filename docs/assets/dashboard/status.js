@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS = {
+window.EDGE_STATUS ={
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -958,6 +958,11 @@ window.EDGE_STATUS = {
       "id": "AT",
       "title": "Animation Tools: AT1 anim-core done; AT2 Make in REDcode built, hand test pending; AT3 the REDnode pack built, hand test run 1 in progress (fixed: busy Generate, facing V, a grounding rule, Upper body only, a Generating tooltip waiting on REDnode #55 in 0.70.0); AT3r the pack release (own Nexus page), AT4 V",
       "status": "in progress"
+     },
+     {
+      "id": "LS",
+      "title": "Lip Sync editor, moved from EDGEfab 2026-11-22 (branch lipsync, not wired in): design draft 0.1 for the owner (docs/design/lipsync.md); L1 merge and wire after the release in test, then L2 to L4",
+      "status": "planned"
      }
     ]
    },
