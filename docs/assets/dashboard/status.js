@@ -493,7 +493,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
-   "version": "0.68.2",
+   "version": "0.69.0",
    "lastTag": "v0.65.3",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-16",
@@ -659,13 +659,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "HC",
-      "title": "Hide on a click in the game, a launcher switch: passed in game (0.69.0)",
+      "title": "Hide on a click in the game, a launcher switch: passed in game, released in 0.69.0 (2026-11-21)",
       "status": "done"
      },
      {
       "id": "WL",
-      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3); after the dropdown",
-      "status": "planned"
+      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3)",
+      "status": "in progress"
      },
      {
       "id": "SC1",
@@ -690,9 +690,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.69.0",
+    "version": "0.70.0",
     "needs": [
-     "The WL build (#48, #49, #50 part 3), then its in-game test"
+     "The WL build (#48, #49, #50 part 3): in progress, then its in-game test"
     ]
    },
    "handTests": [
