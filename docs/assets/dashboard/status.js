@@ -2910,11 +2910,19 @@ window.EDGE_STATUS = {
     "version": "0.1.1",
     "needs": [
      "0.1.0 released 2026-11-18. Since then, under Unreleased: the Lip Sync tab with a 3D head and Add a Line",
+     "Keys in REDcode's Keys (EDGEfab #10, REDcode's K4d) built 2026-11-22: the owner's VS Code steps (part B) next; released with REDcode, EDGEwave 0.3.0 and the other K4d tools at once, when the owner says",
      "Before any release that carries it: the Lip Sync tab's steps in VS Code (the voice heard, the head seen, a line added with EDGEwave's voice), and EDGEwave's release with speakLine",
      "Next work: the real voice through Add a Line; V's female head and Change Head; finer mouth movement from audio (Audio2Face-3D); writing a made line into a project; spike LS2 in the game"
     ]
    },
    "handTests": [
+    {
+     "name": "Keys in REDcode's Keys (EDGEfab #10): moved, asked, read over MCP, changed, cleared",
+     "steps": 5,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Part A by Claude passed 2026-11-22 (13 offline checks; the real store read by the MCP server). Part B, 5 VS Code steps with REDcode main (F5 > Run EDGEfab with REDcode main), not run. Take OPENAI_API_KEY out of the Windows environment first"
+    },
     {
      "name": "Spike A2F: Audio2Face against the game's clip",
      "steps": 4,
@@ -3003,6 +3011,11 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [
     {
+     "who": "owner",
+     "what": "Run part B of the keys test (5 VS Code steps, REDcode main). Then say when K4d releases: EDGEfab goes out with REDcode and the other key tools",
+     "ref": "EDGEfab #10"
+    },
+    {
      "who": "EDGEwave",
      "what": "speakLine is on EDGEwave's main, not released: Add a Line needs that release to work for a modder. Voices are ElevenLabs' own or designed from a description; cloning game lines was removed",
      "ref": "EDGEwave #13"
@@ -3067,7 +3080,7 @@ window.EDGE_STATUS = {
     "A part's game material lives in the project only: the Desk and Library copies keep the model's textures",
     "Live lip sync replaces the game's face graphs in a mod; a change costs about 50 ms from a Node mod, so whole mouth shapes need few numbers sent seldom (LS2)"
    ],
-   "checkedBy": "EDGEfab lip sync session, 2026-11-21"
+   "checkedBy": "EDGEfab session, 2026-11-22"
   },
   {
    "name": "EDGEdir",
