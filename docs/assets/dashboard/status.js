@@ -668,6 +668,11 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "#47",
+      "title": "V as an actor: the spike (a workspot on the real V, third person, a dressed copy of V) and game.player.body(), in REDnode 0.70.0",
+      "status": "built, tests pending"
+     },
+     {
       "id": "SC1",
       "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL",
       "status": "planned"
@@ -692,10 +697,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.70.0",
     "needs": [
-     "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)"
+     "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)",
+     "#47's spike (0.70.0): its in-game test (12 steps)"
     ]
    },
    "handTests": [
+    {
+     "name": "V as an actor (#47), REDnode 0.70.0",
+     "steps": 12,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-22; stand-in check (17) passed"
+    },
     {
      "name": "The WL build, REDnode 0.70.0",
      "steps": 8,
@@ -818,7 +831,7 @@ window.EDGE_STATUS = {
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-21"
+   "checkedBy": "REDnode session, 2026-11-22"
   },
   {
    "name": "REDcode",
