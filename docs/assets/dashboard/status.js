@@ -936,7 +936,7 @@ window.EDGE_STATUS ={
      },
      {
       "id": "K4",
-      "title": "Keys (#33): REDcode keeps the shared key store; K4b hand-tested 2026-11-21, K4c EDGEwave pilot passed 2026-11-21, K4d built in EDGEhack, EDGEmat and EDGEfab (EDGEfab #10 passed 2026-11-22); keys.status added 2026-11-22 (hand test pending); then the joint release",
+      "title": "Keys (#33): REDcode keeps the shared key store; K4b hand-tested 2026-11-21, K4c EDGEwave pilot passed 2026-11-21, K4d built in EDGEhack, EDGEmat and EDGEfab (EDGEfab #10 and EDGEmat #18 passed 2026-11-22, EDGEhack #3 pending); keys.status added 2026-11-22 (hand test pending); then the joint release",
       "status": "built, tests pending"
      },
      {
@@ -964,7 +964,7 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": null,
     "needs": [
-     "Key rule: K4c passed 2026-11-21; K4d built in EDGEhack, EDGEmat and EDGEfab, EDGEfab's hand test passed 2026-11-22, EDGEhack's and EDGEmat's pending; then all are released at once",
+     "Key rule: K4c passed 2026-11-21; K4d built in EDGEhack, EDGEmat and EDGEfab; EDGEfab's and EDGEmat's hand tests passed 2026-11-22, EDGEhack's pending; then all are released at once",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
      "Add to Project's question before replacing a project's file: retest R1 to R3",
