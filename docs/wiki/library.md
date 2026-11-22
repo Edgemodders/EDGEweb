@@ -3,19 +3,19 @@ title: The EDGE Library
 nav_title: The Library
 section: Start here
 order: 6
-description: "The EDGE Library: one folder of your own where the EDGE tools keep scenes, bakes, quickhacks and game files for good, outside any project, which tools use it today, and the rules every tool follows there."
-reviewed: 2026-11-21
+description: "The EDGE Library: one folder of your own where the EDGE tools keep scenes, bakes, quickhacks, sounds and game files for good, outside any project, which tools use it today, and the rules every tool follows there."
+reviewed: 2026-11-22
 ---
 
 # The EDGE <span class="y">Library</span>
 
-The **EDGE Library** is one folder of your own where the EDGE tools keep your work for good, outside any single mod. Today it holds EDGEbuilder's scenes and bakes, EDGEhack's quickhacks, and game files you set aside from REDcode. Props from [EDGEfab](edgefab/library.html), the asset maker, are built and come with its first release, which is not out yet. Sounds from EDGEwave are planned.
+The **EDGE Library** is one folder of your own where the EDGE tools keep your work for good, outside any single mod. Today it holds EDGEbuilder's scenes and bakes, EDGEhack's quickhacks, EDGEwave's sounds, and game files you set aside from REDcode. Props from [EDGEfab](edgefab/library.html), the asset maker, are built and come with its first release, which is not out yet.
 
 When you make a mod, you copy what it needs out of the Library into the mod's project. Several mods can use the same item.
 
 It's **optional**. If you keep everything in one project, you never have to open the Library, and every tool still works. A newcomer can skip this page.
 
-> **Where it stands:** three tools use the Library in their current releases: EDGEbuilder, EDGEhack and REDcode. The rest is planned. See [Which tools use it](#which-tools-use-it).
+> **Where it stands:** four tools use the Library in their current releases: EDGEbuilder, EDGEhack, EDGEwave and REDcode. The rest is planned. See [Which tools use it](#which-tools-use-it).
 
 ## Why have one
 
@@ -23,8 +23,8 @@ A big piece of work, such as a district you extend over months and release in pa
 
 | | What it is | How long it lasts |
 |---|---|---|
-| **The EDGE Library** | Your long-term store: scenes, bakes, quickhacks and assets, in folders you organise | For good. One folder, so a backup is one copy |
-| **A tool's Desk** | One tool's scratch area for the work in hand. EDGEmat and EDGEhack have one; EDGEwave's is planned | Across restarts, but not organised or kept for good |
+| **The EDGE Library** | Your long-term store: scenes, bakes, quickhacks, sounds and assets, in folders you organise | For good. One folder, so a backup is one copy |
+| **A tool's Desk** | One tool's scratch area for the work in hand. EDGEmat, EDGEhack and EDGEwave have one | Across restarts, but not organised or kept for good |
 | **A project** | One mod: what gets packed, installed and released. REDcode makes it | As long as the mod |
 | **EDGEdeck's mod library** | The mods you have installed, outside the game folder | As long as they're installed |
 
@@ -44,7 +44,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | [EDGEbuilder](edgebuilder/baking.html#bakes-in-the-library) | Bakes in the Library, and **Include in project** | Released. Passed in the game |
 | [EDGEhack](edgehack/desk-library.html) | Quickhacks kept in the Library: **Add to Library**, **Add to Project**, a Library view and **Refresh from Library** | Released. Tested in VS Code |
 | [REDcode](redcode/other-tools.html#the-edge-library) | **Add to Library** on a game file or a project file, with the files it needs; a [Library view](redcode/other-tools.html#the-library-view) with **Add to Project** and **Refresh Project from Library** | Released. Tested by hand |
-| [EDGEwave](edgewave/) | Sounds as Library items | Planned, after its Desk |
+| [EDGEwave](edgewave/finding.html#the-library-view) | Sounds as Library items: **Add to Library** from its Desk, a Library view with **Add to Project** and **Edit on the Desk**, and **Refresh from Library** | In EDGEwave 0.3.0. Tested in VS Code |
 | [EDGEmat](edgemat/) | Materials and looks on Library assets | Planned, later |
 | [EDGEfab](edgefab/library.html) | Props as Library items: **Add to Library**, a Library view, **Add to Project**, **Edit on the Desk** and **Refresh Project from Library** | In EDGEfab 0.1.0 |
 
@@ -55,7 +55,7 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | **Scene** | [EDGEbuilder](edgebuilder/scenes.html) | `market_square.scene.json`: the objects you placed, where they are and their groups | Yes |
 | **Bake** | [EDGEbuilder](edgebuilder/baking.html#bakes-in-the-library) | `market_square.bake`: a folder with the game files that put one or more scenes in the world, and a note of what they were baked from | Yes |
 | **Quickhack** | [EDGEhack](edgehack/desk-library.html) | `overclock_plus.quickhack.asset`: a quickhack you made or changed, with its icons. It has no game files of its own: they are written into a project when you add it to one | Yes |
-| **Asset** | [REDcode](redcode/other-tools.html#the-edge-library) today. EDGEfab, EDGEmat and EDGEwave are planned | `comfy_rocker.mesh.asset`, and later `rusty_oil_drum.prop.asset` or `door_knock.sound.asset`: a folder laid out like a small project, with its game files and what they were made from. It keeps a stable id, so a project finds it even after you rename or move it | Game files from REDcode |
+| **Asset** | [REDcode](redcode/other-tools.html#the-edge-library) and [EDGEwave](edgewave/finding.html#the-library-view) today. EDGEfab and EDGEmat are planned | `comfy_rocker.mesh.asset`, `door_knock.sound.asset` (a sound: its mix and its WAV), and later `rusty_oil_drum.prop.asset`: a folder laid out like a small project, with its game files and what they were made from. It keeps a stable id, so a project finds it even after you rename or move it | Game files from REDcode, sounds from EDGEwave |
 | **Plain file** | You | `model.glb`, `knock.wav`: kept as they are, to use later | Yes |
 
 ## Moving things between the Library and projects
@@ -63,9 +63,9 @@ The first tool that needs the Library asks where to put it and offers **`Documen
 | Step | Where | What happens |
 |---|---|---|
 | **Save** a scene | EDGEbuilder | Into a Library folder you pick, or into the project, or on this PC |
-| **Add to Library** | REDcode, EDGEhack | Copies a game file or a quickhack into a Library folder you pick |
-| **Add to Project**, **Include in project** | REDcode, EDGEhack, EDGEbuilder | Copies a Library item's files into the open project and notes where they came from |
-| **Refresh from Library** | EDGEhack, on a quickhack in a project; REDcode's **Refresh Project from Library**, for the project's items | Shows that the Library has a newer version, and copies it when you ask |
+| **Add to Library** | REDcode, EDGEhack, EDGEwave | Copies a game file, a quickhack or a sound into a Library folder you pick |
+| **Add to Project**, **Include in project** | REDcode, EDGEhack, EDGEwave, EDGEbuilder | Copies a Library item's files into the open project and notes where they came from |
+| **Refresh from Library** | EDGEhack, on a quickhack in a project; EDGEwave's Project view, for the project's sounds; REDcode's **Refresh Project from Library**, for the project's items | Shows that the Library has a newer version, and copies it when you ask |
 
 For a first try, EDGEbuilder's [Named scenes and the Library](edgebuilder/scenes.html#named-scenes-and-the-library) and EDGEhack's [The Desk and the Library](edgehack/desk-library.html) each walk through it.
 

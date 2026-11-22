@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEwave
 order: 0
 description: "EDGEwave, the EDGE platform's sound studio for Cyberpunk 2077: find a game sound, edit and mix it inside VS Code, put it into your mod, and make new sounds and voices with ElevenLabs."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # EDGE<span class="y">wave</span>
@@ -43,12 +43,14 @@ EDGEwave puts those steps in one place, next to your mod project. It reads the s
 | **Mix several sounds** on tracks, each with its own volume, position and speed | [Edit and mix](editing.html#tracks) |
 | **Add effects**, or pick a ready-made one: **Radio**, **Holocall**, **PA speaker**, **Muffled through a wall** | [Edit and mix](editing.html#effects-and-presets) |
 | **Start from nothing**, or from your own sound files | [Find and play sounds](finding.html#a-new-empty-sound) |
+| **Keep sounds in progress** on the Desk, and sounds for good in the EDGE Library, to use in any project | [Your own sounds](finding.html#your-own-sounds-desk-project-and-library) |
 | **Save a WAV file** of the result | [Edit and mix](editing.html#render-a-wav) |
 | **Put it into the game**: replace one game sound, replace or silence everything an event plays, or add a new sound that a quest or a script plays by name | [Into the game](into-the-game.html) |
 | **Make a sound from a description**, speak a line in a voice, or re-voice a line, through ElevenLabs with your own key | [Voice tools](voices.html) |
+| **Give each game character a voice**, one of yours or one designed from a description, for every tool that speaks their lines | [Character voices](voices.html#character-voices) |
 | **Voice a quest's dialogue** written in [EDGEquest](../edgequest/), line by line | [Voices for quests and mods](voice-lines.html#voice-a-quest) |
 | **Let other REDnode mods speak** lines of text in the running game | [Voices for quests and mods](voice-lines.html#edgewave-voice-for-rednode) |
-| **Work through an AI assistant**: Claude can search sound events, make a new sound event and voice lines | [Assistants](assistants.html) |
+| **Work through an AI assistant**: Claude can search sound events, make a new sound event, voice lines and speak a character's line | [Assistants](assistants.html) |
 
 Your edits are never applied to the game's files. EDGEwave saves them as a list of steps in a small **sound document** (a `.edgewave` file) in your project. The document holds no audio, so it holds no game data and is safe to share. EDGEwave fetches the sound again from your own game when you open it.
 
@@ -80,7 +82,9 @@ That gives you two ways to change a sound: replace **one recording**, or replace
 | **REDmod** | CD PROJEKT RED's own mod format. It is the only one that can add new sounds, or replace everything an event plays |
 | **Custom sound** | A WAV file in a REDmod that the game plays for an event name |
 | **Take** | One attempt from a voice tool. You keep the one you like |
-| **Voice clone** | A copy of a voice, made by ElevenLabs from a recording |
+| **Voice clone** | A copy of a voice, made by ElevenLabs from a recording of your own. EDGEwave never sends the game's audio |
+| **Character voice** | The one voice a game character speaks in, for every tool that speaks their lines |
+| **Desk** | EDGEwave's scratch space for sounds in progress |
 
 More terms are in the wiki's [glossary](../glossary.html).
 
@@ -99,26 +103,28 @@ More terms are in the wiki's [glossary](../glossary.html).
 
 | Part | Role for EDGEwave |
 |---|---|
-| [REDcode](../redcode/) | Required, 0.10.3 or later. It owns the mod project, reads game sounds for EDGEwave, and packs and installs the mod. Installing EDGEwave installs it |
+| [REDcode](../redcode/) | Required, 0.10.3 or later. It owns the mod project, reads game sounds for EDGEwave, and packs and installs the mod. Since 0.10.16 its **Keys** keep your ElevenLabs key for every EDGE tool. Installing EDGEwave installs it |
 | [REDbridge](../redbridge/) | The small program that reads the game's files for REDcode, and writes a replaced sound effect in the game's format. REDcode installs it |
 | [REDnode](../rednode/) | Optional, in the game. It plays events in the running game for **Play in the Game**, runs packages that play your sounds, and runs EDGEwave Voice. Its [Sound Tools](../rednode/sound-tools.html) show which event the game plays when you do something |
 | [EDGEquest](../edgequest/) | Optional. Its sound pickers search and play sounds through EDGEwave, and it hands a quest's lines to EDGEwave to voice. See [Music and sound](../edgequest/music-sound.html) |
-| Claude and other assistants | EDGEwave's MCP server lets an AI assistant search sound events, make a sound into a new event and voice lines. See [Assistants](assistants.html) |
+| [The EDGE Library](../library.html) | Your own folder of work kept for good, shared by every EDGE tool. EDGEwave keeps sounds there |
+| Claude and other assistants | EDGEwave's MCP server lets an AI assistant search sound events, make a sound into a new event, voice lines and speak a character's line. See [Assistants](assistants.html) |
 | [EDGEkit](../edgekit/) | The EDGEkit app has EDGEwave built in. In VS Code, the EDGEkit extension pack installs it with the other EDGE tools |
 
-EDGEwave ships no game files. It makes no network calls of its own, except to ElevenLabs when you use a voice tool.
+EDGEwave ships no game files. It makes no network calls of its own, except to ElevenLabs when you use a voice tool, and it never sends the game's audio there.
 
 ## Status
 
-**A preview, released.** The latest is EDGEwave 0.2.0 (2026-11-07), on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgewave), [Open VSX](https://open-vsx.org/extension/edgemodders/edgewave), [GitHub](https://github.com/Edgemodders/EDGEwave/releases) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35493). The first release, 0.1.0, came out on 2026-10-20. Windows only.
+**A preview, released.** The latest is EDGEwave 0.3.0 (2026-11-22), on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgewave), [Open VSX](https://open-vsx.org/extension/edgemodders/edgewave), [GitHub](https://github.com/Edgemodders/EDGEwave/releases) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35493). The first release, 0.1.0, came out on 2026-10-20. 0.3.0 brings the Desk, the Project and Library views, character voices, lines with timings for lip sync, and the ElevenLabs key in REDcode's Keys. Windows only.
 
 | | |
 |---|---|
 | **Works, and heard in the game** | One game sound replaced (an override). Everything an event plays replaced, and silenced, through REDmod. A new named sound played by a quest. A sound played by a REDnode package made in the game folder. An event played in the running game from VS Code. EDGEwave Voice for REDnode speaking lines |
-| **Works, tested in VS Code** | The editor, the mixer, effects and presets, Render WAV. Game Assets and the Sounds view. Generate Sound, Speak Line and Re-Voice, with a real ElevenLabs account. Voice Lines with EDGEquest. The MCP server with Claude Code |
+| **Works, tested in VS Code** | The editor, the mixer, effects and presets, Render WAV. Game Assets, the Desk, the Project and Library views. Generate Sound, Speak Line and Re-Voice, with a real ElevenLabs account. Character voices, designed ones too, and lines spoken with timings. The key in REDcode's Keys. Voice Lines with EDGEquest. The MCP server with Claude Code |
 | **Built, not confirmed in the game** | A REDnode package made inside the project, installed while the game runs. An override packed as a REDmod. Swapping a sound mod into a running game: install and restart instead |
+| **Built, waiting on another tool** | Lines with timings in EDGEfab's Lip Sync tab, which moves into REDcode in a later release |
 | **Not there yet** | Voice lines in the game as real dialogue: you can make and edit them, but the game needs a format (`.wem`) that only Audiokinetic's Wwise tool makes. **Translate**. Pitch without a change of speed |
-| **Coming next** | Dialogue into the game through your own Wwise install (the conversion works on its own; the game has not played one yet). A Desk for sounds in progress, and sounds in the EDGE [Library](../library.html). Later, a search over all of the game's audio, with subtitles and what plays each sound |
+| **Coming next** | Dialogue into the game through your own Wwise install (the conversion works on its own; the game has not played one yet). Later, a search over all of the game's audio, with subtitles and what plays each sound |
 
 The tests were run by hand on the developer's PC, on EDGEwave built from its source. An automated test checks the packaged extension. Each version's changes are in EDGEwave's [changelog](https://github.com/Edgemodders/EDGEwave/blob/main/CHANGELOG.md), and every test with its result is on its [Tests page](https://edgemodders.github.io/EDGEwave/testing.html).
 
@@ -128,12 +134,12 @@ The tests were run by hand on the developer's PC, on EDGEwave built from its sou
 |---|---|
 | [Install and set up](install.html) | What you need, installing the preview, the first start, where files go |
 | [Tutorial: your first sound mod](tutorial.html) | The katana's draw sound through a radio, from finding it to hearing it in the game |
-| [Find and play sounds](finding.html) | Game Assets, the filter, opening a sound, a new empty sound, the Sounds view |
+| [Find and play sounds](finding.html) | Game Assets, the filter, opening a sound, a new empty sound, the Desk, Project and Library views |
 | [Edit and mix](editing.html) | The editor window, the edits, tracks, effects and presets, Render WAV |
 | [Into the game](into-the-game.html) | Add to Project: the routes, which to pick, how to hear the result and how to take it out |
-| [Voice tools](voices.html) | Generate Sound, Speak Line and Re-Voice through ElevenLabs: the key, the cost, voice clones |
+| [Voice tools](voices.html) | Generate Sound, Speak Line and Re-Voice through ElevenLabs: the key, the cost, character voices, voice clones |
 | [Voices for quests and mods](voice-lines.html) | Voice Lines for an EDGEquest quest, and EDGEwave Voice for REDnode |
-| [Assistants](assistants.html) | Let Claude search sound events, make new ones and voice lines |
+| [Assistants](assistants.html) | Let Claude search sound events, make new ones, voice lines and speak a character's line |
 | [Settings and commands](settings.html) | Every setting, command, button and key |
 | [Troubleshooting](troubleshooting.html) | What you see, and what to do |
 

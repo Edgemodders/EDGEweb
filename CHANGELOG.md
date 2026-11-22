@@ -17,6 +17,7 @@ How to keep it:
 
 **New**
 
+- Wiki: EDGEwave follows 0.3.0 (2026-11-22): the Desk, Project and Library views in place of the Sounds view, sounds in the EDGE Library, character voices (designed from a description), lines with timings for other tools, the ElevenLabs key in REDcode's Keys (Connect an Assistant no longer hands it over), and no game audio sent to ElevenLabs: https://edgemodders.ai/wiki/edgewave/
 - EDGEdir, the director's tool, is on the landing page and the platform page, marked not released yet: https://edgemodders.ai/platform.html#edgedir
 - Wiki: a section for EDGEdir, ahead of its first release: install from source, a first scene, the scene editor, actors and animations, the 3D preview, transitions and sequences, sets, playing in the game with EDGE Director, adjusting and pins, weather, settings and troubleshooting: https://edgemodders.ai/wiki/edgedir/
 - Wiki: EDGEdir is in the wiki home's benefits, Getting started, the glossary (EDGE Director, the third meaning of "scene") and the list of repositories: https://edgemodders.ai/wiki/

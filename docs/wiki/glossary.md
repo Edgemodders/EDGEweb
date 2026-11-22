@@ -89,10 +89,10 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | Term | Meaning |
 |---|---|
 | <a id="deploy"></a>Deploy | EDGEdeck putting your switched-on mods into the game folder. On the same drive as the game it links the files (hardlinks), so they take no extra space; if your library is on another drive it copies them. Either way it records every file in its manifest |
-| <a id="desk"></a>The Desk | One tool's own scratch area for work in progress, kept across restarts until the work goes into a project or the EDGE Library. EDGEmat, EDGEhack and EDGEdir have one. EDGEwave's is agreed but not built |
+| <a id="desk"></a>The Desk | One tool's own scratch area for work in progress, kept across restarts until the work goes into a project or the EDGE Library. EDGEmat, EDGEhack, EDGEdir and EDGEwave have one |
 | <a id="edge"></a>EDGE | The platform: the EDGE toolkits working together |
 | <a id="edge-director"></a>EDGE Director | [EDGEdir](edgedir/)'s app in the game, a REDnode window. It plays the scenes made in EDGEdir on real people and lets you adjust them where you stand. Not released yet |
-| <a id="edge-library"></a>EDGE Library | One folder of your own where the EDGE tools keep finished work for good, outside any project: scenes, bakes, quickhacks and game files you set aside. Optional. See [The EDGE Library](library.html) |
+| <a id="edge-library"></a>EDGE Library | One folder of your own where the EDGE tools keep finished work for good, outside any project: scenes, bakes, quickhacks, sounds and game files you set aside. Optional. See [The EDGE Library](library.html) |
 | <a id="hardlink"></a>Hardlink | One file that appears in two folders at once. A deployed mod shows up in the game folder without taking extra space, because it is the very file in your library. It only works within one drive |
 | <a id="kind"></a>Kind | What is inside a mod, shown by EDGEdeck as small labels on each mod, such as framework or REDmod |
 | <a id="library-edgedeck"></a>Library (EDGEdeck's mod library) | The folder where EDGEdeck keeps your mods, outside the game folder. Not the EDGE Library |
@@ -202,12 +202,13 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 
 | Term | Meaning |
 |---|---|
+| <a id="character-voice"></a>Character voice | The one voice a game character, such as `judy`, speaks in for every EDGE tool that speaks their lines. Set in EDGEwave: one of your ElevenLabs voices, or one designed from a description. See [Character voices](edgewave/voices.html#character-voices) |
 | <a id="custom-sound"></a>Custom sound | A WAV file in a REDmod that the game plays for a sound event's name |
 | <a id="override"></a>Override | Replacing one recording of a game sound effect with yours |
 | <a id="sound-event"></a>Sound event | The game's name for something to play, such as `w_melee_katana_equip`. Quests, scenes and scripts ask for events, never for files |
 | <a id="sound-pack"></a>Sound pack (`.opuspak`) | A file that holds many of the game's sound effects packed together. An override adds one to your project |
 | <a id="take"></a>Take | One attempt from a voice tool. You keep the one you like |
 | <a id="variation"></a>Variation | One of the recordings a sound event can play. The game picks one each time, so the same action doesn't always sound the same |
-| <a id="voice-clone"></a>Voice clone | A copy of a voice, made by ElevenLabs from a recording |
+| <a id="voice-clone"></a>Voice clone | A copy of a voice, made by ElevenLabs from a recording. EDGEwave clones only your own recordings: it never sends the game's audio |
 | <a id="voice-line"></a>Voice line | One spoken line of dialogue, a `.wem` file in the game |
 | <a id="wem"></a>`.wem` | The game's format for voice lines. Only Audiokinetic's Wwise tool makes it, which is why new voiced lines are not in the game yet |

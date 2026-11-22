@@ -3,8 +3,8 @@ title: EDGEwave's voice tools
 nav_title: Voice tools
 section: EDGEwave
 order: 6
-description: "Generate Sound, Speak Line and Re-Voice in EDGEwave, through ElevenLabs with your own key: what it costs and to whom, what is sent, where the key is kept, how to use each tool, and what to know about voice clones."
-reviewed: 2026-11-13
+description: "Generate Sound, Speak Line and Re-Voice in EDGEwave, through ElevenLabs with your own key: what it costs and to whom, what is sent, where the key is kept, how to use each tool, character voices, and what to know about voice clones."
+reviewed: 2026-11-22
 ---
 
 # Voice <span class="y">tools</span>
@@ -21,7 +21,8 @@ They are optional. Everything else in EDGEwave works without an account.
 | [Generate Sound](#generate-sound) | A sound effect from words, with a Try it |
 | [Speak Line](#speak-line) | Text, spoken |
 | [Re-Voice](#re-voice) | The same line in another voice |
-| [Voice clones](#voice-clones) | Read this before you use a game line's voice |
+| [Character voices](#character-voices) | One voice per game character, for every tool that speaks their lines |
+| [Voice clones](#voice-clones) | Only from your own recordings: the game's audio is never sent |
 | [Into the game](#into-the-game) | What you can do with the result today |
 
 ## Cost, privacy and your key
@@ -30,11 +31,9 @@ They are optional. Everything else in EDGEwave works without an account.
 |---|---|
 | **Who pays, and whom** | You pay ElevenLabs. EDGEwave is free, and neither it nor EDGEmodders takes or sees any payment. What your ElevenLabs plan includes is between you and ElevenLabs |
 | **What costs** | Making sound: each **Generate**, each **Speak**, each set of Re-Voice previews and each **Re-Voice** spends credits from your ElevenLabs account. A request that fails because the key is wrong spends nothing |
-| **What is sent to ElevenLabs** | **Generate Sound**: your description and its options. **Speak Line**: the line's text and the voice you chose. **In the selected line's voice**, and **Re-Voice**: also the recording of the selected line, as you edited it. For a game line that is a piece of the game's audio, a voice actor's performance. Nothing else leaves your PC: not your project, not other game files |
-| **Where the key is kept** | In VS Code's secret storage, which uses Windows' own store for passwords. It is never written into a settings file, a sound document or your project |
+| **What is sent to ElevenLabs** | **Generate Sound**: your description and its options. **Speak Line**: the line's text and the voice you chose. **In the selected line's voice**, and **Re-Voice**: also the recording of the selected line, as you edited it, and only when it is your own recording. Nothing else leaves your PC: not your project, and never the game's own audio ([why](#voice-clones)) |
+| **Where the key is kept** | In **REDcode's Keys**, the store every EDGE tool shares, encrypted for your Windows user. It is never written into a settings file, a sound document or your project. See [Your key](#your-key) |
 | **Which server** | `api.elevenlabs.io`, unless you change the [setting](settings.html#settings) |
-
-One exception to where the key is kept: if you connect an AI assistant and choose to give it the key, that assistant keeps it in its own settings file, in plain text. See [Assistants](assistants.html#the-elevenlabs-key).
 
 ## Your key
 
@@ -42,12 +41,22 @@ An **API key** is a password that lets a program use your account.
 
 1. Make an account at [elevenlabs.io](https://elevenlabs.io).
 2. On the ElevenLabs site, go to **Developers**, then **API Keys**, and make a key. A new key is restricted by default: switch on **text to speech**, **voices**, **sound effects** and **voice changer** for it.
-3. Copy the key. The first time you use a voice tool, EDGEwave asks for it in a password box: paste it there.
+3. Copy the key. The first time you use a voice tool, REDcode asks for it in a password box: paste it there.
+
+Since EDGEwave 0.3.0 the key lives in **REDcode's Keys** (REDcode 0.10.16 or later), shared by every EDGE tool that uses ElevenLabs. Set it once, in EDGEwave or in REDcode's Keys view, and every tool can use it.
+
+| | |
+|---|---|
+| **Asked once** | The first time EDGEwave reads the key, REDcode asks "EDGEwave wants your ElevenLabs key", with **Allow** and **Don't Allow**, and remembers your answer |
+| **Don't Allow** | EDGEwave stops and says how to change it: run **Forget Tool Permissions for Keys** in REDcode's Keys view, then try again. It doesn't ask you to type the key |
+| **A key from before** | A key you set in EDGEwave 0.2.0 moves to REDcode's Keys by itself, once, and EDGEwave says so. If REDcode's Keys already has an ElevenLabs key, that one is kept |
+| **Changed elsewhere** | A key set, replaced or removed in REDcode's Keys counts at once. A window that failed for want of a key tries again by itself |
+| **An older REDcode** | Without Keys, EDGEwave keeps its own copy of the key in VS Code's secret storage, as in 0.2.0 |
 
 | Command (`Ctrl+Shift+P`) | Does |
 |---|---|
-| **EDGEwave: Set ElevenLabs API Key** | Sets or replaces the key |
-| **EDGEwave: Clear ElevenLabs API Key** | Forgets it |
+| **EDGEwave: Set ElevenLabs API Key** | Sets or replaces the key, in REDcode's password box |
+| **EDGEwave: Clear ElevenLabs API Key** | Points you to REDcode's Keys view, where **Remove Key** removes it for every tool |
 
 If the key is missing, or ElevenLabs refuses it, the tool's window says so and shows two buttons: **Set ElevenLabs API Key...** and **Where to make one**, which opens ElevenLabs' help page.
 
@@ -63,8 +72,6 @@ Open any sound in the [editor](editing.html). The buttons are at the right of th
 | **Translate** | Only on a voice line. It is planned: pressing it says so |
 
 A track counts as a **voice line** when the header's **Voice line** box is ticked. EDGEwave ticks it by itself for a game voice line, by the line's folder or file name. Tick it yourself for a recording of your own.
-
-To get a game voice line onto a track: in **Game Assets**, unfold **Voice lines**, find the line and press **+** (to add it to the open sound) or **Open in EDGEwave**. See [Find and play sounds](finding.html#open-a-sound-in-the-editor).
 
 ## Generate Sound
 
@@ -93,11 +100,11 @@ Each take costs credits. Only the take you add is saved, as a WAV in a `<name>.g
 
 It spends a few seconds' worth of ElevenLabs credits.
 
-1. In the **Sounds** view, press **+** (**Create a Sound...**) and save the new sound.
+1. In the **Desk** view, press **+** (**Create a Sound on the Desk...**) and name the sound.
 2. Press **Generate Sound...**, type `a heavy metal door slams in a concrete corridor`, set the length to 2 and press **Generate**.
 3. Play the take, press **Add**, then press `Space`.
 
-You now have a sound of your own. [A new sound for this project](into-the-game.html#a-new-sound-for-this-project) gives it a name a quest can play.
+You now have a sound of your own. **Move to Project...** on its Desk row puts it in a project, and [A new sound for this project](into-the-game.html#a-new-sound-for-this-project) gives it a name a quest can play.
 
 ## Speak Line
 
@@ -113,7 +120,7 @@ A line of text, spoken.
 | The window | The voices from your ElevenLabs account. With no key, a line saying so, and the buttons to set one |
 | After step 4 | A new track at the mix cursor with the spoken line, marked as a voice line |
 
-The other choice, **In the selected line's voice**, speaks your text in the voice of the voice line you had selected. That makes a [voice clone](#voice-clones).
+The other choice, **In the selected line's voice**, speaks your text in the voice of the voice line you had selected. That makes a [voice clone](#voice-clones), so it works only on a recording of your own. On a game line it is switched off, and says that the game's own audio is not sent to ElevenLabs.
 
 ## Re-Voice
 
@@ -129,18 +136,51 @@ The same line, said the same way, in another voice. Select a voice line's track 
 | The result | A new track at the same place as the original line, with the same words and timing in the new voice |
 | The original | Unticked, so it is out of the mix. Tick its lane to keep it in. The window's **Mute the original** box decides this |
 
+Re-Voice sends the line's recording, so it works on your own recordings and on lines ElevenLabs made for you. On a game voice line or sound effect, the window says at once that the game's own audio is not sent, and its buttons are off.
+
+## Character voices
+
+A **character voice** is the one voice a game character speaks in, for every tool that speaks their lines: EDGEwave's own [Voice Lines](voice-lines.html), and other tools that ask EDGEwave to speak a line, such as EDGEfab's lip sync or an [assistant](assistants.html). Characters go by the game's voice tag, such as `judy`. V has two, female and male.
+
+**EDGEwave: Character Voices...** lists them. The first time a tool needs a character with no voice yet, EDGEwave asks you to pick one:
+
+| Choice | What happens |
+|---|---|
+| One of your ElevenLabs voices | That voice, from your account |
+| **Design a voice for <character> from a description...** | Describe the character in your own words. ElevenLabs makes three voices speaking the same sample sentence. Click each to hear it (the list stays open), then **Keep Voice N** at the top keeps the one you heard last. It is saved in your account as `EDGEwave <character>`. Not right? **Describe again...** |
+
+Voice Lines offers each speaker's voice to the list when you pick it there.
+
+A character's menu, in **EDGEwave: Character Voices...**:
+
+| | |
+|---|---|
+| **Hear It** | Plays the character's sample, free. A voice with no sample speaks the sample sentence once, then keeps it |
+| **Design Again from Its Description...** | The design box, with your earlier words ready to change |
+| **Pick Another Voice...** | Another of your voices, or a new design |
+| **Reveal in File Explorer** | The folder with the lines spoken in that voice |
+| **Forget It** | Takes the character off the list |
+
+A character voice is a voice in your ElevenLabs account, not a sound: it has no editor tab and no Desk item.
+
+**Lines for other tools.** Another EDGE tool can ask EDGEwave to speak one line with **timings**: when each letter is spoken, so a face can move its mouth to it. Before a tool first spends your credits this way, EDGEwave asks you once whether it may, with the line's cost. Each line is kept, so asking for the same line again plays it for free. Lines are kept in `%LOCALAPPDATA%\EDGEwave\lines\<character>\`, each WAV with its timings beside it.
+
 ## Voice clones
 
 A **voice clone** is a copy of a voice that ElevenLabs makes from a recording. **Speak Line** in the selected line's voice, and **Re-Voice** by description, clone the voice in the selected line, in your ElevenLabs account.
 
-> **A game line's voice is a real voice actor's.** ElevenLabs' rules forbid cloning a real person's voice without their consent, and ElevenLabs may block some voices. Only go on with a voice you have the right to clone, such as your own, or one whose owner agreed. EDGEwave asks you to confirm this once, before the first clone, with a link to [ElevenLabs' policy](https://elevenlabs.io/use-policy). Read the policy yourself: these pages don't quote it.
+> **EDGEwave never sends the game's audio to ElevenLabs.** A game line's voice is a real voice actor's, so a track that plays a game voice line or sound effect can't be cloned or re-voiced: the window says so as it opens. Clone only a voice you have the right to, such as your own, or one whose owner agreed. EDGEwave asks you to confirm this once, before the first clone, with a link to [ElevenLabs' policy](https://elevenlabs.io/use-policy). Read the policy yourself: these pages don't quote it.
+
+A sound file you exported from the game yourself isn't told apart from your own recordings. Don't use one.
 
 | | |
 |---|---|
 | **How many** | One clone per line. Using the same line again makes no new clone |
-| **How good** | A longer line makes a better clone. How well a single short game line clones has not been measured |
+| **How good** | A longer recording makes a better clone |
 | **Where they are** | In your ElevenLabs account, where they take up voice slots |
 | **Deleting them** | **EDGEwave: ElevenLabs Voices Made by EDGEwave...** lists the clones and saved versions EDGEwave made. Tick the ones to delete. If you delete one on the ElevenLabs site instead, EDGEwave makes it again the next time it is needed |
+
+For a game character's voice, [design one from a description](#character-voices) instead.
 
 ## Into the game
 

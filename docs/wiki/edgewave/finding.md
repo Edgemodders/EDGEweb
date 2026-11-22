@@ -3,13 +3,13 @@ title: Find and play sounds in EDGEwave
 nav_title: Find and play sounds
 section: EDGEwave
 order: 3
-description: "EDGEwave's Game Assets view lists the game's sound effects, voice lines and music. How to filter and hear them, open one in the editor, start a new empty sound, play an event in the running game, and what the Sounds view shows."
-reviewed: 2026-11-13
+description: "EDGEwave's Game Assets view lists the game's sound effects, voice lines and music. How to filter and hear them, open one in the editor, start a new empty sound, play an event in the running game, and what the Desk, Project and Library views show."
+reviewed: 2026-11-22
 ---
 
 # Find and play <span class="y">sounds</span>
 
-Before you can change a sound you have to find it. EDGEwave's **Game Assets** view lists the game's sounds and nothing else, with a play button on every row. Its **Sounds** view lists your own work.
+Before you can change a sound you have to find it. EDGEwave's **Game Assets** view lists the game's sounds and nothing else, with a play button on every row. Its **Desk**, **Project** and **Library** views list your own work.
 
 | On this page | |
 |---|---|
@@ -21,7 +21,7 @@ Before you can change a sound you have to find it. EDGEwave's **Game Assets** vi
 | [The Hear tab](#the-hear-tab) | Every recording of an event |
 | [Play in the Game](#play-in-the-game) | An event, on V, in the running game |
 | [Which event am I hearing?](#which-event-am-i-hearing) | From a sound in the game to its name |
-| [The Sounds view](#the-sounds-view) | Your sound documents and what you put into the project |
+| [Your own sounds: Desk, Project and Library](#your-own-sounds-desk-project-and-library) | Sounds in progress, the project's mixes and what it puts in the game, and the EDGE Library |
 
 ## The three kinds of sound
 
@@ -87,14 +87,14 @@ A voice line's file name ends in `_f_` or `_m_` and a long number. For V's own l
 
 ## Open a sound in the editor
 
-Opening a sound makes a **sound document** for it, a `.edgewave` file in your project, and opens that in EDGEwave's editor. Opening the same sound again reopens the same document, with your edits.
+Opening a sound makes a **sound document** for it, a `.edgewave` file in your project, and opens that in EDGEwave's editor. With no project open, it goes on the [Desk](#the-desk) instead, with no question about a folder. Opening the same sound again reopens the same document, with your edits.
 
 | You have | Do this |
 |---|---|
 | A game sound effect | In Game Assets, press **Open in EDGEwave** on a variation |
 | A game voice line | In Game Assets, unfold **Voice lines**, find the line (the filter helps) and press **Open in EDGEwave**. The editor marks it as a voice line, which the [voice tools](voices.html) use |
 | A sound playing in REDcode | REDcode's sound list (**REDcode: Browse Game Sounds**) and its audio player both have an **Open in EDGEwave** button. See [The game's sound effects](../redcode/viewers.html#the-games-sound-effects) |
-| A sound file on your PC | In the **Sounds** view's title bar, press the folder icon (**Open Sound in EDGEwave...**) and pick the file. Or right-click a sound file in VS Code's Explorer or REDcode's Project view and choose **Open Sound in EDGEwave...**. It takes `.wav`, `.ogg`, `.mp3`, `.flac`, `.opus` and `.wem` |
+| A sound file on your PC | In the **Desk** view's title bar, press the folder icon (**Open Sound in EDGEwave...**) and pick the file. Or right-click a sound file in VS Code's Explorer or REDcode's Project view and choose **Open Sound in EDGEwave...**. It takes `.wav`, `.ogg`, `.mp3`, `.flac`, `.opus` and `.wem` |
 
 To add a sound to a mix you already have open, use **+** instead: see [Tracks](editing.html#tracks).
 
@@ -104,8 +104,10 @@ To add a sound to a mix you already have open, use **+** instead: see [Tracks](e
 
 A sound doesn't have to start from the game.
 
-1. In the **Sounds** view's title bar, press **+** (**Create a Sound...**).
+1. In the **Project** view's title bar, press **+** (**Create a Sound in the Project...**).
 2. A save box opens in your project's `source\raw\edgewave\sounds` folder, with the name `New sound.edgewave`. Change the name if you like and press **Save**.
+
+With no project open, or for a sound you are not sure about yet, press **+** in the **Desk** view instead (**Create a Sound on the Desk...**) and give it a name.
 
 | What you should see | |
 |---|---|
@@ -147,23 +149,73 @@ Often you know the sound from playing, not its name. Two ways to get from one to
 
 One action can play several events at once. A can dropping from a vending machine is several sounds layered together, so changing one of them changes only part of what you hear.
 
-## The Sounds view
+<a id="the-sounds-view"></a>
 
-The upper view lists your own work, in up to three groups.
+## Your own sounds: Desk, Project and Library
+
+Since EDGEwave 0.3.0, three views above Game Assets list your own work. Up to 0.2.0 they were one view, **Sounds**.
+
+| View | What it holds |
+|---|---|
+| [**Desk**](#the-desk) | Sounds you are working on, kept across restarts until you move them into a project or add them to the Library. Below them, **Recent**: the sound documents you opened lately, from any folder |
+| [**Project**](#the-project-view) | The open project: its **Mixes**, and **Project sounds**, what it puts in the game |
+| [**Library**](#the-library-view) | Your [EDGE Library](../library.html)'s folders, with the sounds in them |
+
+A **▶** on a mix's row plays its render at once, with no tab. A mix you haven't rendered yet shows it greyed: **Render it first**.
+
+### The Desk
+
+The Desk is EDGEwave's own scratch space, for sounds that don't belong to a project yet. It is kept in `%LOCALAPPDATA%\EDGEwave\desk`, and no other tool reads it.
+
+| How a sound gets on the Desk | |
+|---|---|
+| **+** in the Desk's title bar (**Create a Sound on the Desk...**) | Asks a name, then an empty sound |
+| **Create a Sound** or **Open in EDGEwave** on a game sound, with no project open | Lands here, with no question about a folder |
+| **Copy to the Desk**, on a project's mix or a Recent one | A copy with its files. The original stays where it was |
+| **Edit on the Desk**, on a Library sound | A copy to change and add to the Library again |
+| **Open on the Desk**, on a plain sound file in the Library | A new sound with the file as its first track |
+
+| On a Desk sound (hover, or right-click) | Does |
+|---|---|
+| **▶** | Plays its render |
+| **Move to Project...** | Copies it into the open project, `source\raw\edgewave\sounds\<name>\`, and takes it off the Desk. Then its own **Add to Project...** puts it in the game |
+| **Add to Library...** | Asks a Library folder and copies it there. It needs a render first. For a sound made from a game file, the folder list starts with **Use the game path**, which files it under the game's own folders. Adding it again later updates it there, one version up |
+| **Reveal in Library** | Shows its copy in the Library view. The row says both versions |
+| **Rename...** | Renames it and its files |
+| **Take Off the Desk...** | Sends it to the Recycle Bin. A copy in the Library stays |
+
+A copy always stands alone: any sound file it used from another folder is copied with it. The game's own sounds are never copied: a sound made from a game file keeps reading it from your game.
+
+### The Project view
 
 | Group | Shows | Click |
 |---|---|---|
-| **Project** | The sound documents in the open project, with the project's name beside the heading. Each row shows its tracks, its edits and its folder | Opens the document in the editor |
-| **Project sounds** | What you put into the project with **Add to Project**. Named sounds say how they came (a new sound, or one that replaces or silences a game event), with their kind and length. Overrides and REDnode package sounds are listed too | A named sound opens the Hear tab. An override or a REDnode sound opens its mix |
-| **Recent** | The last 20 sound documents you opened, from any folder | Opens the document |
+| **Mixes** | The project's sound documents. One taken from the Library says **from the Library, v*n*** | Opens it in the editor |
+| **Project sounds** | What the project puts in the game, read from the project's own files: named sounds (a new sound, or one that replaces or silences a game event), overrides of a game sound, and REDnode package sounds. It lists them wherever the mix that made them is kept | Opens the Hear tab |
 
 | Button | Where | Does |
 |---|---|---|
-| **+** | Title bar | **Create a Sound...** |
-| Folder icon | Title bar | **Open Sound in EDGEwave...**, for a sound file on your PC |
+| **+** | Title bar | **Create a Sound in the Project...** |
+| **Refresh from Library...** | Title bar | Lists the project's Library sounds that have a newer version there, and copies in the ones you tick. A change you made to the project's copy is lost then, and the list says so |
 | Refresh | Title bar | Reads the lists again |
+| **▶**, **Open the Mix That Made It** | Hover a project sound | Plays it; opens its mix, when EDGEwave knows it |
 | **Copy Name** | A named sound's row, or right-click | The name a quest, scene or script plays it by |
 | **Show the WAV** | Right-click a named sound | Its WAV file in the project |
-| **×**, **Clear Recent** | A Recent row; the Recent heading | Takes one, or all, off the Recent list. The files stay on disk |
 
-**Project** is filled only when the project's own folder is open in VS Code, the folder with the `.cpmodproj` file directly in it. A mix you saved somewhere else shows under **Recent** only. If you put such a mix into the project as an override, the override is in the project and works, but **Project sounds** does not list it yet.
+The view shows the project in the open folder: open the project's own folder in VS Code, the one with the `.cpmodproj` file directly in it.
+
+### The Library view
+
+The [EDGE Library](../library.html) is one folder of your own that every EDGE tool shares, for work you keep for good. The first time, EDGEwave offers `Documents\EDGE Library`, or a folder you pick. The folders under it are yours: EDGEwave never makes one by itself. The view shows every folder, but only the sounds in it: EDGEwave's sounds, and plain `.wav`, `.ogg`, `.mp3` and `.flac` files. Other tools' items are theirs to show.
+
+| On a Library sound | Does |
+|---|---|
+| A click | The Hear tab |
+| **▶** | Plays it at once |
+| **Add to Project** | Copies it into the open project, and notes where it came from in the project's `source\library.json`. Adding it again later replaces that copy |
+| **Edit on the Desk** | A copy on the Desk, to change |
+| **Reveal in File Explorer** | Its folder in Windows' File Explorer. Each folder has the same button on hover, and the title bar has it for the whole Library |
+
+**Set the Library Folder...**, in the title bar, picks another folder.
+
+{% include shot.html caption="The Desk, Project and Library views" shows="EDGEwave's side bar with the Desk (a sound or two, one with its ▶ and Add to Library buttons on hover, and Recent below), the Project view (Mixes and Project sounds), the Library view with a folder unfolded, and Game Assets below." %}

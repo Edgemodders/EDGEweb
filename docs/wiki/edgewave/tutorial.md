@@ -4,7 +4,7 @@ nav_title: "Tutorial: your first sound mod"
 section: EDGEwave
 order: 2
 description: "Step by step, with no coding and no paid account: find the sound of V drawing a katana, make it sound like a radio, put it into a mod project, and hear it in the game."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Tutorial: your first <span class="y">sound mod</span>
@@ -71,7 +71,7 @@ Move the mouse over **Variation 1**. Three small buttons appear at the right of 
 |---|---|
 | A new tab | EDGEwave's sound editor. Near the top is the **Mix** bar, with one row under it, the sound's **lane**, labelled `1 · w_melee_katana_equip · 746693166`. Below that is the sound's waveform |
 | REDcode's Project view | Under **Raw**, a folder `sfx\w_melee_katana_equip` with a file `746693166.edgewave` |
-| EDGEwave's **Sounds** view | The same file, under **Project** |
+| EDGEwave's **Project** view | The same file, under **Mixes** |
 
 That file is the **sound document**. It lists your edits and holds no audio.
 

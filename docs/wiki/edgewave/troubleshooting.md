@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEwave
 order: 10
 description: "What to do when EDGEwave shows no game sounds, a sound won't play, Add to Project lacks a row, you hear no change in the game, ElevenLabs refuses your key, or an assistant can't see EDGEwave."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Troubleshooting <span class="y">EDGEwave</span>
@@ -13,12 +13,12 @@ Find what you see in the left column. If it isn't here, the [last section](#anyt
 
 | Where are you stuck? | |
 |---|---|
-| [Setting up](#setting-up) | The icon, REDcode, empty views |
+| [Setting up](#setting-up) | The icon, REDcode, empty views, the Library |
 | [Finding and hearing sounds](#finding-and-hearing-sounds) | Nothing plays, names missing, Play in the Game |
 | [In the editor](#in-the-editor) | Dropped files, keys, missing buttons |
 | [Add to Project](#add-to-project) | A row is missing, a message stops you |
 | [In the game](#in-the-game) | You hear no change, or something else changed |
-| [Voice tools](#voice-tools) | The key, credits, clones |
+| [Voice tools](#voice-tools) | The key, Don't Allow, credits, clones, game lines |
 | [Voice Lines and EDGEwave Voice](#voice-lines-and-edgewave-voice) | |
 | [Assistants](#assistants) | Claude can't see EDGEwave, or can't search |
 
@@ -33,8 +33,12 @@ EDGEwave updates itself, and many problems are fixed in a newer version. If some
 | "EDGEwave needs REDcode 0.9.0 or later ... Update REDcode." | Update REDcode in the Extensions view. This EDGEwave is made for REDcode 0.10.3 or later |
 | A Game Assets group says "REDcode's REDbridge is not running" | Open a REDcode project. If REDcode itself asks for the game folder or for REDbridge, finish its setup first: [Install and set up REDcode](../redcode/install.html). Then press **Refresh Game Assets** in the view's title bar |
 | "REDcode has no game folder set" | Set the game folder in REDcode: [Finding the game](../redcode/install.html#finding-the-game) |
-| **Project** in the Sounds view is empty, but I have mixes | Open the project's own folder in VS Code, the one with the `.cpmodproj` file directly in it. Mixes saved outside the project show under **Recent** only |
-| **No folder open** under Project | Click the row to open a folder |
+| The **Project** view is empty, but I have mixes | Open the project's own folder in VS Code, the one with the `.cpmodproj` file directly in it. Mixes saved outside the project show in the Desk view, under **Recent** |
+| The Project view says no folder is open | Press **Open Folder...** in it and open your project's folder |
+| I can't find the Sounds view | Since EDGEwave 0.3.0 it is three views: **Desk**, **Project** and **Library**. See [Your own sounds](finding.html#your-own-sounds-desk-project-and-library) |
+| The Library view asks for a folder | Press **Set the Library Folder...**. EDGEwave offers `Documents\EDGE Library`, or pick one of your own outside the game folder. Every EDGE tool shares it: see [The EDGE Library](../library.html) |
+| **Add to Library...** says the sound needs a render | Press **Render WAV** in the editor first: a project takes the WAV |
+| **▶** on a mix is greyed: **Render it first** | The mix has no WAV yet. Open it and press **Render WAV** |
 
 ## Finding and hearing sounds
 
@@ -103,13 +107,18 @@ To take a sound mod out, see [Take it out again](into-the-game.html#take-it-out-
 
 | You see | Do this |
 |---|---|
-| "No ElevenLabs API key is set yet." | Press **Set ElevenLabs API Key...** in the same window and paste your key. **Where to make one** opens ElevenLabs' help |
+| "No ElevenLabs API key is set yet." | Press **Set ElevenLabs API Key...** in the same window and paste your key into REDcode's password box. **Where to make one** opens ElevenLabs' help. Or set it in REDcode's Keys view |
+| "You chose Don't Allow when REDcode asked whether EDGEwave may read your ElevenLabs key ..." | In REDcode's Keys view, run **Forget Tool Permissions for Keys**. Try the voice tool again and choose **Allow** |
+| "REDcode's question about your ElevenLabs key was closed without an answer." | Try again, and choose **Allow** when REDcode asks |
+| VS Code asks for the key again, after it moved to REDcode's Keys | A window with an older EDGEwave or REDcode, without Keys, keeps its own copy. Update both in the Extensions view |
 | "ElevenLabs refused the API key" | The key is wrong, or it lacks permissions. On the ElevenLabs site, give the key **text to speech**, **voices**, **sound effects** and **voice changer**, or make a new one. Then set it again |
 | A message about quota or credits | Your ElevenLabs account has none left. That is between you and ElevenLabs: a new key does not help |
 | The log says ElevenLabs refused 48000 Hz | Nothing to do. Your plan doesn't offer that quality, and EDGEwave uses 24000 from then on |
 | "Pick a voice, or select a voice line to speak in its voice." | Choose a voice in the list. Or close the window, select a voice line's lane and open Speak Line again |
 | "Cancelled: no clone was made." | You said no to the question about cloning. Nothing was sent. See [Voice clones](voices.html#voice-clones) |
+| **In the selected line's voice** is off, or Re-Voice's buttons are off, saying the game's own audio is not sent | Expected: EDGEwave never sends the game's audio to ElevenLabs. Use one of your voices, or [design a character's voice](voices.html#character-voices) |
 | ElevenLabs refuses to clone a voice | ElevenLabs can block voices, and its rules forbid cloning a real person's voice without consent. EDGEwave can't change that |
+| EDGEwave asks whether a tool may spend your credits | Another EDGE tool, such as EDGEfab, asked EDGEwave to speak a line. Answer once: EDGEwave keeps the answer for that tool. See [Character voices](voices.html#character-voices) |
 | "That take is gone: generate it again." | Takes live only while the window is open, and only the last 20. Generate again |
 | My ElevenLabs account is out of voice slots | Delete the ones EDGEwave made: **EDGEwave: ElevenLabs Voices Made by EDGEwave...** |
 
@@ -131,7 +140,10 @@ To take a sound mod out, see [Take it out again](into-the-game.html#take-it-out-
 |---|---|
 | Claude doesn't have EDGEwave's tools | Start a **new** Claude Code session after connecting. Check with `claude mcp list` |
 | "EDGEwave has not read the game's sound events yet" | Open VS Code with a REDcode project, click EDGEwave's icon and unfold **Sound effects** in Game Assets once. Then ask again |
-| "No ElevenLabs API key ..." from the assistant | Connect again and answer **Yes, include my ElevenLabs key**. See [The ElevenLabs key](assistants.html#the-elevenlabs-key) |
+| "No ElevenLabs API key is set" from the assistant | Set the key in REDcode's Keys view (or **EDGEwave: Set ElevenLabs API Key**). With a REDcode older than 0.10.16, connect again and answer **Yes, include my ElevenLabs key**. See [The ElevenLabs key](assistants.html#the-elevenlabs-key) |
+| "... REDbridge.exe is not installed" from the assistant | The server reads the key through REDbridge. In VS Code, run **REDcode: Install REDbridge** |
+| "The key store needs REDbridge 0.18.0 or later" | In VS Code, run **REDcode: Update REDbridge** |
+| "EDGEwave has no voice for ... yet" from `voice_speak_line` | Set the character's voice in VS Code: **EDGEwave: Character Voices...** |
 | "Claude Code's claude command isn't on the PATH" | Press **Copy the Command** and run it in a terminal where `claude` works |
 | "the MCP server file is missing" | Reinstall EDGEwave from the Extensions view, then try again |
 

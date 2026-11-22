@@ -4,7 +4,7 @@ nav_title: Into the game
 section: EDGEwave
 order: 5
 description: "Add to Project in EDGEwave: replace one game sound, replace or silence everything an event plays through REDmod, add a new named sound, or give a REDnode package a sound. Which to pick, what to switch on, how to hear it, and how to take it out."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Into the <span class="y">game</span>
@@ -136,7 +136,7 @@ A sound of your own, under a name of its own. It replaces nothing: a quest, a sc
 | What you should see | |
 |---|---|
 | A message | "`<name>` is a sound in the project now: a quest, scene or script plays it by that name ...", with **Copy Name** and **Pack and Install** |
-| EDGEwave's **Sounds** view | The sound under **Project sounds**, with its kind and length |
+| EDGEwave's **Project** view | The sound under **Project sounds**, with its kind and length |
 
 A new sound is a REDmod custom sound too, so it needs [the REDmod setting](#the-redmod-setting), and the game reads it only when it starts. To play it from a quest, see EDGEquest's [Music and sound](../edgequest/music-sound.html).
 

@@ -4,7 +4,7 @@ nav_title: Voices for quests and mods
 section: EDGEwave
 order: 7
 description: "Voice Lines gives every line of an EDGEquest quest a voice through ElevenLabs. EDGEwave Voice for REDnode lets REDnode mods speak text aloud in the running game. How to set each up, what it costs, and what works in the game today."
-reviewed: 2026-11-13
+reviewed: 2026-11-22
 ---
 
 # Voices for quests and <span class="y">mods</span>
@@ -44,7 +44,7 @@ To come back to a quest you voiced before, run **EDGEwave: Voice Lines...** from
 
 ## The Voice Lines panel
 
-1. **Pick the voices.** At the top, choose a voice for each speaker from your ElevenLabs account, and two for V: female V and male V. **▶** plays a voice's sample.
+1. **Pick the voices.** At the top, choose a voice for each speaker from your ElevenLabs account, and two for V: female V and male V. **▶** plays a voice's sample. EDGEwave then offers that voice to the speaker's [character voice](voices.html#character-voices), so other tools speak them the same way.
 2. **Press Generate All.** It voices every line that has no take yet, or whose words changed since its take. **Stop** ends the run. What was made is kept.
 3. **Listen.** **▶** on a take plays it.
 4. **Fix what you don't like**, line by line.
@@ -62,7 +62,7 @@ To come back to a quest you voiced before, run **EDGEwave: Voice Lines...** from
 | When a line is done | It says **voiced**, with what made it and when, such as `Made with eleven_v3` |
 | In EDGEquest | The Storyboard shows the same lines as voiced. Change a line's text there, and both show it as changed |
 
-Your voice choices are remembered for the quest. The takes are in your project, in `source\raw\edgewave\voice\<quest>`: one WAV per take, named the way the game names voice files, and `voice.json`, the record of what was made from what.
+Your voice choices are remembered for the quest. The takes are in your project, in `source\raw\edgewave\voice\<quest>`: one WAV per take, named the way the game names voice files, and `voice.json`, the record of what was made from what. Since EDGEwave 0.3.0 each take also has `<take>.timings.json` beside it: when each letter is spoken, for lip sync later. It costs nothing extra. Takes made before 0.3.0 have none.
 
 {% include shot.html caption="The Voice Lines panel" src="/assets/shots/edgewave/voice-lines-panel.png" alt="The Voice Lines tab for the quest door_mystery: 3 lines, 3 voiced, 0 to voice, the Model menu on eleven_v3 and Generate All, a voice picked for female V and for male V, and three of V's lines marked voiced, each with F and M takes, play buttons, Use a file, Studio and Regenerate." shows="The Voice Lines tab for a quest: the header with the count of voiced lines, the Model menu and Generate All, the voice pickers for V's two voices and one other speaker, and three lines with their F and M takes, play buttons, and the Use a file, Studio, Regenerate and Previous buttons." %}
 
@@ -112,7 +112,7 @@ Good to know:
 - **To rename a voice** or change the default, edit `voices.json`. Running **Voices for REDnode...** again keeps the names you have.
 - **Without VS Code**, the package is also a download of its own, `edgewave-voice-<version>.zip`, on EDGEwave's [releases page](https://github.com/Edgemodders/EDGEwave/releases) and as an optional file on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35493). Unzip it into the game folder. The zip has no `voices.json`: the command in step 1 makes it.
 - **A voice belongs to one ElevenLabs account.** A mod you share with other players needs their own key and voices.
-- **A cloned game voice is a real voice actor's.** [Voice clones](voices.html#voice-clones) applies here too, and more so if the result is shared.
+- **No game voice is cloned.** EDGEwave never sends the game's audio to ElevenLabs ([Voice clones](voices.html#voice-clones)). For a game character, use one of your voices or [design one from a description](voices.html#character-voices).
 
 The cached lines are in the package's `.cache` folder, up to 200 MB. The oldest go first.
 
