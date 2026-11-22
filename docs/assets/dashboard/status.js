@@ -3583,7 +3583,7 @@ window.EDGE_STATUS = {
      {
       "id": "R3e",
       "title": "Admin: mods, users, reports, blocklist, spot review, log",
-      "status": "done"
+      "status": "built, tests pending"
      },
      {
       "id": "R3f",
