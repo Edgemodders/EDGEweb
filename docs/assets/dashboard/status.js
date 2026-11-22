@@ -664,8 +664,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "WL",
-      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3)",
-      "status": "in progress"
+      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3): REDnode 0.70.0",
+      "status": "built, tests pending"
      },
      {
       "id": "SC1",
@@ -692,10 +692,17 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.70.0",
     "needs": [
-     "The WL build (#48, #49, #50 part 3): in progress, then its in-game test"
+     "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)"
     ]
    },
    "handTests": [
+    {
+     "name": "The WL build, REDnode 0.70.0",
+     "steps": 8,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-21; plain check (32) and mock check (25, dev and packaged host) passed"
+    },
     {
      "name": "Hide on a click in the game, REDnode 0.69.0",
      "steps": 6,
