@@ -964,7 +964,7 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": null,
     "needs": [
-     "Key rule met: K4c passed 2026-11-21 and every K4d tool (EDGEhack, EDGEmat, EDGEfab) passed 2026-11-22; the joint release of all of them with REDcode waits on the owner's go",
+     "Key rule: K4c and every K4d tool passed (2026-11-21, 2026-11-22). Before the joint release, the owner asked that EDGEfab and EDGEwave (EDGEwave #14) use keys.status too, each with a passed hand step; EDGEmat and EDGEhack already do",
      "Edit in Blender's warning for objects the import leaves out: hand-tested, waits with it",
      "Sector camera: its hand test",
      "Add to Project's question before replacing a project's file: retest R1 to R3",
