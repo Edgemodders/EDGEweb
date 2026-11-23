@@ -1609,7 +1609,7 @@ window.EDGE_STATUS ={
    "group": "Specialist toolkits",
    "role": "World builder on REDnode: pick game or mod assets, place them in the running game, bake scenes into the world",
    "stage": "released",
-   "version": "0.12.5",
+   "version": "0.13.2",
    "lastTag": "v0.10.9",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-13",
@@ -1719,7 +1719,7 @@ window.EDGE_STATUS ={
      },
      {
       "id": "ST",
-      "title": "Sector Tools under World (S1 Sectors built in 0.13.0; S2 3D view, S3 previews; EDGEbuilder #9)",
+      "title": "Sector Tools under World (S1 Sectors released in 0.13.2; S2 3D view, S3 previews; EDGEbuilder #9)",
       "status": "in progress"
      },
      {
@@ -1790,9 +1790,9 @@ window.EDGE_STATUS ={
     ]
    },
    "nextRelease": {
-    "version": "0.13.0",
+    "version": "0.14.0",
     "needs": [
-     "The owner's in-game test of 0.13.0: D2 (12 steps), S1 Sectors (11 steps), the project picker (5 steps); docs/testing.md"
+     "G0's look in the game (the owner), then G1: the scene format contract and the command line"
     ]
    },
    "handTests": [
@@ -1943,8 +1943,8 @@ window.EDGE_STATUS ={
    ],
    "ownerActions": [
     "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
-    "EDGEbuilder 0.13.2 is tested and deployed (D2, S1, the project picker): say whether to release it",
-    "G0: look at the baked generated scene in the game, once 0.13.0's tests are done; and say whether to ask the team for their archives, so their own meshes draw too"
+    "EDGEbuilder 0.13.2 is on GitHub, not on Nexus Mods yet: say whether to upload it to the Nexus page (36627)",
+    "G0: look at the baked generated scene in the game (0.13's tests are done); the team was asked for their archives on 2026-11-23, and the look can start without them"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",

@@ -4,7 +4,7 @@ nav_title: Baking
 section: EDGEbuilder
 order: 8
 description: "Bake an EDGEbuilder scene into a mod: what baking is, what you need, the steps from scene to world, solid objects, people in a baked scene, draw distance (Seen from), changing and removing a bake, sharing it, and bakes kept in the EDGE Library."
-reviewed: 2026-11-19
+reviewed: 2026-11-23
 ---
 
 # Baking a scene <span class="y">into the world</span>
@@ -32,7 +32,7 @@ New to baking? [Your first scene](first-scene.html#10-bake-it-into-the-world) wa
 
 | You need | Why | Where |
 |---|---|---|
-| [REDcode](../redcode/), with a project open in VS Code | The bake is written into the project, and REDcode packs it into a mod. Any project will do, even a new empty one | [REDcode projects](../redcode/projects.html) |
+| [REDcode](../redcode/), with a project open in VS Code | The bake is written into the project, and REDcode packs it into a mod. Any project will do, even a new empty one. With projects open in several VS Code windows, a **Project** row on the Bake tab lets you follow the window you used last or keep to one project (0.13.2, REDcode 0.10.15 or later) | [REDcode projects](../redcode/projects.html) |
 | [REDbridge](../redbridge/) 0.12.1 or later; **0.16.0** or later for a scene that removes the game's doors | It writes the baked files | EDGEdeck's **Get REDbridge** or **Update REDbridge** |
 | [EDGEdeck](../edgedeck/) | REDcode's **Pack and Install** puts the mod in the game through it | [Install EDGEdeck](../edgedeck/install.html) |
 | ArchiveXL, deployed in the game | A framework mod. The game reads a baked scene through it, so without it the bake never shows. Everyone who plays your mod needs it too | EDGEdeck's [Get the frameworks](../edgedeck/frameworks.html#getting-the-frameworks), or [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/4198) |
@@ -123,6 +123,8 @@ For now the people stand friendly and idle. Walking, sitting and talking are for
 
 A scene that removes some of the game's own doors bakes them too: the bake writes instructions for ArchiveXL to leave those doors out of the world, with the stand-in copies the game shows of them from afar. A scene can do nothing but remove things; its bake is then one small `.archive.xl` file and no objects. The Bake tab and the list of bakes say both numbers, **0 added, 2 removed**. See [Removing the game's doors](doors.html#baking-the-removals), with a walkthrough.
 
+A door the scene keeps open, closed or locked is **not** baked: the game's files cannot hold a door's state. See [Opening, closing and locking](doors.html#opening-closing-and-locking).
+
 ## The Solid switch
 
 Select one mesh, several or a group on the **Scene** tab and switch **Solid when baked** on or off. New meshes start solid. Previews in the world are never solid, so you can walk through them while you build.
@@ -163,7 +165,7 @@ To change a baked scene:
 
 | To | Do | Good to know |
 |---|---|---|
-| Take a bake out | On the Bake tab, press the trash icon beside it in **Bakes in this project**, then **Yes**. Then Pack and Install, and restart | Removing a bake does not harm your save games. The scene stays. If it is still open, its objects show as previews again: press **Close** on the Scene tab to take those away |
+| Take a bake out | On the Bake tab, press the trash icon beside it in the list titled **Bakes for** and your project's name, then **Yes**. Then Pack and Install, and restart | Removing a bake does not harm your save games. The scene stays. If it is still open, its objects show as previews again: press **Close** on the Scene tab to take those away |
 | Rename a baked scene | Rename it, bake again, and take the old bake out | A bake is named after its scene, so the existing bake keeps the old name. If you leave both, the objects are in the world twice. EDGEbuilder warns you before it renames |
 
 ## Sharing a baked scene
@@ -192,7 +194,7 @@ They don't need EDGEbuilder, REDnode or REDbridge.
 3. Select a group, type `80` in **Seen from, m** and press **Enter**. The message says the objects will be seen from 80 m once baked.
 4. Open the **Bake** tab and read the checks. One says a mesh is set not solid. Press **Bake**.
 5. Quit, **Pack and Install** in REDcode, start the game: V walks through the one mesh and bumps into the rest.
-6. To take the bake out again: on the Bake tab, press the trash icon beside it in **Bakes in this project**, then **Yes**. Quit, **Pack and Install** again, and start. The objects are gone from the world, and the scene is still in the Library.
+6. To take the bake out again: on the Bake tab, press the trash icon beside it in the **Bakes for** list, then **Yes**. Quit, **Pack and Install** again, and start. The objects are gone from the world, and the scene is still in the Library.
 
 ## Bakes in the Library
 

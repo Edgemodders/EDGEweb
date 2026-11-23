@@ -4,7 +4,7 @@ nav_title: Settings and keys
 section: EDGEbuilder
 order: 9
 description: "A reference for EDGEbuilder: what is on each of its six tabs, every setting, and every key and mouse control."
-reviewed: 2026-11-19
+reviewed: 2026-11-23
 ---
 
 # Settings and <span class="y">keys</span>
@@ -83,11 +83,14 @@ EDGEbuilder's panel sits at the right of the screen. From the top:
 | Control | Does | See |
 |---|---|---|
 | **Doors**, **Painted-on doors**, **Meshes** | Which of the game's own objects a click picks and the list shows. EDGEbuilder remembers your choice | [Three kinds of door](doors.html#three-kinds-of-door) |
-| **Look again** | Reads the doors near V again | |
-| The list | The doors within 30 m of V, with their state and distance. Hover outlines one, a click picks it and flies the camera there | [Finding a door](doors.html#finding-a-door) |
+| **Nearby**, **Sectors** | The tab's two parts: the doors near V, and the game's streaming sectors | [Sectors](sectors.html) |
+| **Scan Doors** | On Nearby: reads the doors near V again (Look again before 0.13.2) | |
+| **Near V**, **Near the camera**, the text box, the kind switches and levels | On Sectors: which sectors the list shows. A click opens one in the Sector drawer | [Finding sectors](sectors.html#finding-sectors) |
+| The list | On Nearby: the doors within 30 m of V, with their state and distance. Hover outlines one, a click picks it and flies the camera there | [Finding a door](doors.html#finding-a-door) |
 | The **Picked in the world** panel | What you picked, where it is, and any warnings | |
 | **Remove from world** | Removes the picked door from the world, kept in the open scene. Also **Delete** | [Removing and bringing back](doors.html#removing-and-bringing-back) |
-| **Restore** | Brings back a door the scene removes | |
+| **Open**, **Close**, **Lock** or **Unlock** | Sets a picked working door, and the open scene keeps it that way | [Opening, closing and locking](doors.html#opening-closing-and-locking) |
+| **Restore** | Brings back a door the scene removes, or puts a kept door back as it was | |
 | **Go to** | Flies the camera to the picked door | |
 
 ### Bake tab
@@ -95,11 +98,12 @@ EDGEbuilder's panel sits at the right of the screen. From the top:
 | Control | Does | See |
 |---|---|---|
 | The first two lines | The open scene, and the REDcode project it bakes into | [From scene to world](baking.html#from-scene-to-world) |
+| **Project** | Shown when more than one REDcode window has a project open: **Follow REDcode** (the window you used last) or one project, which stays EDGEbuilder's while it is open. The Import box has the same row. Needs REDcode 0.10.15 or later | |
 | The checks | What was found before the bake. A red one stops it | [The checks](baking.html#the-checks) |
 | **Bake** | Writes the scene into the project | |
 | **Refresh** | Looks at the project's bakes and the game's again, and asks REDcode which project is open | |
 | **The last bake** | The files the last bake wrote | |
-| **Bakes in this project** | Each bake, with a trash icon. A bake from the Library says **from** and its name, with **Update** when the Library's is newer | [After a bake](baking.html#after-a-bake) |
+| **Bakes for** and the project's name | Each bake in that project (the panel was called Bakes in this project before 0.13.2), with a trash icon. A bake from the Library says **from** and its name, with **Update** when the Library's is newer | [After a bake](baking.html#after-a-bake) |
 
 ### Settings and About tabs
 

@@ -2,8 +2,8 @@
 title: Removing the game's doors
 section: EDGEbuilder
 order: 7.5
-description: "Pick the game's own doors with EDGEbuilder, remove them from the world as part of a scene, bring them back, and bake the removals into a mod so the doors stay gone: the World tab, Remove from world, stand-ins, and walkthroughs."
-reviewed: 2026-11-19
+description: "Pick the game's own doors with EDGEbuilder, remove them from the world as part of a scene, bring them back, bake the removals into a mod so the doors stay gone, and open, close or lock a door: the World tab, Remove from world, stand-ins, door states, and walkthroughs."
+reviewed: 2026-11-23
 ---
 
 # Removing the game's <span class="y">doors</span>
@@ -17,8 +17,9 @@ Everything else in EDGEbuilder adds things to the world. This page is about taki
 | [Finding a door](#finding-a-door) | The World tab, or a click in the world |
 | [Removing and bringing back](#removing-and-bringing-back) | Remove from world, Restore, Undo |
 | [Stand-ins](#stand-ins) | The copy the game shows in a door's place |
+| [Opening, closing and locking](#opening-closing-and-locking) | A door kept open, closed or locked while your scene is open |
 | [Baking the removals](#baking-the-removals) | Making it last, without EDGEbuilder |
-| [Try it](#try-it-remove-vs-door) | Four short walkthroughs |
+| [Try it](#try-it-remove-vs-door) | Five short walkthroughs |
 | [Good to know](#good-to-know) | Quests, saves, and what comes later |
 
 ## What you need
@@ -26,6 +27,7 @@ Everything else in EDGEbuilder adds things to the world. This page is about taki
 | To | You need |
 |---|---|
 | **Find and remove doors while you play** | EDGEbuilder 0.12.5 or later, [REDnode](../rednode/) 0.67.3 or later, and a scene open on the [Scene tab](scenes.html). A removal is kept in the open scene |
+| **Open, close and lock doors** | EDGEbuilder 0.13.2 or later |
 | **Bake removals into a mod** | Also [REDbridge](../redbridge/) **0.16.0** or later, a [REDcode](../redcode/) project open in VS Code, and ArchiveXL in the game. Get the newest REDbridge with **Get REDbridge** in EDGEdeck, or **Update REDbridge** in REDnode's Mod Manager |
 
 ## Three kinds of door
@@ -40,7 +42,7 @@ The game has doors that work and doors that are only painted on. EDGEbuilder kno
 
 ## Finding a door
 
-**On the World tab.** EDGEbuilder lists the doors within 30 m of V, nearest first, with their state and distance. **Look again** reads the list once more after you move. Hover over a row and the door gets an outline in the game. Click a row to pick that door, and the camera flies to it. The list is around V, not the camera, so walk V near the doors you want.
+**On the World tab.** The tab has two parts, **Nearby** and **Sectors**. Nearby lists the doors within 30 m of V, nearest first, with their state and distance. **Scan Doors** reads the list once more after you move (before 0.13.2 the button was called Look again). [Sectors](sectors.html) lists everything a part of the world places, doors included. Hover over a row and the door gets an outline in the game. Click a row to pick that door, and the camera flies to it. The list is around V, not the camera, so walk V near the doors you want.
 
 **In the world.** With **Edit** on, click a door. EDGEbuilder picks the first door your click passes, up to the first wall, and the World tab shows it. A click on one of your own scene's objects still picks your object. With **Meshes** on, a click that finds no door picks the mesh it hits.
 
@@ -74,6 +76,23 @@ A removal follows the scene: it comes back after you load a save, when you open 
 Seen from far away, a door is not the real door: the game draws a cheap copy of it, a **stand-in** (the game calls it a proxy mesh), and swaps in the real door as you come near. EDGEbuilder takes care of both. When you remove a door, its stand-in goes too, so the doorway is really open.
 
 One thing to know: after you load a save with a door removed, the real door never comes into the game. If you bring that door back then (Restore, Undo, Close, or EDGEbuilder switched off), you see its **stand-in**: it looks like the door but doesn't open. EDGEbuilder says so in its message. Fast travel away and back, or load a save, and the working door is there again.
+
+## Opening, closing and locking
+
+From 0.13.2, a working door you picked has three more buttons in the **Picked in the world** panel: **Open**, **Close** and **Lock** (which reads **Unlock** once the door is locked). They run the door's own actions, the ones its panel and a quickhack use, so the door moves as it does in the game. A painted-on door has none of them.
+
+The open scene **keeps** the door that way. The row in the list says **kept**, and the Scene tab lists the door under **World edits** with its state, such as "open, locked". The scene's count ends "1 door set".
+
+| What happens | When |
+|---|---|
+| The door is set again | After you load a save, after a fast travel, when you open the scene, and each time the door comes back into the world |
+| A door kept open stays open | It no longer closes by itself while the scene keeps it |
+| An elevator's door is **sealed** | An elevator unlocks its own doors when it arrives, whatever their lock. So for an elevator's door, Lock closes and seals it, and the elevator cannot open it. Unlock takes the seal off. The panel says "an elevator's door" |
+| The door goes back as it was | **Restore** on the Scene tab, **Ctrl+Z**, or closing the scene. It closes by itself again too |
+
+Between those moments the door is still a door: V can open a door the scene keeps closed, unless it is also locked.
+
+**A bake leaves door states out.** The game's files cannot hold a door's state, so it is EDGEbuilder that sets it while your scene is open. The Bake tab says so. The state the door has when you save the game is in your save, as with any door.
 
 ## Baking the removals
 
@@ -117,11 +136,18 @@ You need a REDcode project open in VS Code (the Bake tab names it) and REDbridge
 2. Press the bin next to **doors** in the list of bakes. The bake's files leave the project; the scene stays as it was.
 3. Pack and install the project again, and restart the game: the doors are back.
 
+## Try it: hold the elevator
+
+1. Pick the **elevator door** on the World tab. The panel's state line ends "an elevator's door".
+2. Press **Lock**. Switch Edit off and call the elevator: the door stays shut.
+3. Press **Unlock** and call it again: it opens.
+4. Pick **V's door** and press **Open**. Wait half a minute: it stays open. Press **Restore** on the Scene tab: it closes, and closes by itself again.
+
 ## Good to know
 
 - **Quests.** Removing a door a quest opens, locks or walks you through can break that mission, or let V into places that aren't finished. EDGEbuilder warns you; it doesn't stop you.
 - **Saves.** A removal isn't written into your save. Without EDGEbuilder running and without a bake, the door is back.
-- **Opening, closing and locking** doors as part of a scene comes next. Meanwhile a door's state is the game's.
-- **Picking around the camera** rather than V, and picking everything else the game placed, come later. See [EDGEbuilder's design](https://edgemodders.github.io/EDGEbuilder/world-objects.html).
+- **Door states are not baked.** A door stays open, closed or locked only while the scene is open in EDGEbuilder.
+- **Picking around the camera** rather than V: the [Sectors](sectors.html) part of the World tab finds what is around the camera. Copying and changing the rest of what the game placed come later. See [EDGEbuilder's design](https://edgemodders.github.io/EDGEbuilder/world-objects.html).
 - **Other mods** that load your scene through REDnode see its objects but not yet its removals.
 - **Just want doors gone while you play?** [Remove Doors](remove-doors.html), a small app of its own, does that without scenes, REDbridge or a project.

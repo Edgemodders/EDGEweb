@@ -3,7 +3,7 @@ title: Scenes and the Library
 section: EDGEbuilder
 order: 7
 description: "How EDGEbuilder keeps your work: previews and scenes, the three places a scene can be kept, the Scene tab, the Library tab, the Objects drawer, and giving a scene to someone else."
-reviewed: 2026-11-19
+reviewed: 2026-11-23
 ---
 
 # Scenes and the <span class="y">Library</span>
@@ -68,7 +68,7 @@ The **Scene** tab shows the open scene. From top to bottom:
 | The line under it | Where the scene is, for example **In Library > Alleys. Saved after every change.** |
 | **Save**, **Save as**, **New**, **Open**, **Close** | See the next table |
 | The count | What the scene does to the world, how many groups, and how many are selected: **5 added, 2 removed, 1 group; 3 selected** means five objects of yours and two of the game's own removed |
-| **World edits** | Shown when the scene removes some of the game's own objects: each one, with **Restore** to bring it back. See [Removing the game's doors](doors.html) |
+| **World edits** | Shown when the scene removes some of the game's own objects or keeps a door open, closed or locked: each one, with **Restore** to put it back. See [Removing the game's doors](doors.html) |
 | **This scene needs:** | Shown when the scene uses files from mods or a REDcode project. It names them. Without that mod installed, those objects can't be placed |
 | **Undo**, **Redo**, **Duplicate**, **Group**, **Ungroup** | The same as their keys. See [Arranging a scene](arranging.html) |
 | The list | Every object, with its kind at the right. Groups show as folders. Click an object to select it, Ctrl+click to add more |

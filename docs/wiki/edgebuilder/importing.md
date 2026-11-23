@@ -3,7 +3,7 @@ title: Importing a model
 section: EDGEbuilder
 order: 3.5
 description: "Bring a 3D model of your own into the running game from EDGEbuilder: a textured GLB from Blender, a store or an AI model maker, or a prop on EDGEfab's Desk, imported into your REDcode project and ready to drop."
-reviewed: 2026-11-19
+reviewed: 2026-11-23
 ---
 
 # Importing a <span class="y">model</span>
@@ -23,7 +23,7 @@ The game's own models are a lot, but sometimes you want your own: a sign you mod
 
 | | |
 |---|---|
-| **A REDcode project, open in VS Code** | The prop's files go into it, so the prop becomes part of your mod. Without one, **Import** is greyed out. See [REDcode](../redcode/) |
+| **A REDcode project, open in VS Code** | The prop's files go into it, so the prop becomes part of your mod. Without one, **Import** is greyed out. With projects open in several VS Code windows, the Import box has a **Project** row to choose one (0.13.2). See [REDcode](../redcode/) |
 | **The Archives permission** | In REDnode's Mod Manager, EDGEbuilder, **Permissions**: switch **Allowed** on for the line "swapping archives in the game's mod folder while the game runs". It lets EDGEbuilder put the new prop into the running game. See [Install and set up](install.html#3-open-it-and-allow-its-permissions) |
 | **A model** | A **GLB** file (a 3D model with its textures, in one file), or a prop already on [EDGEfab](../edgefab/)'s Desk |
 | **A loaded save** | The prop goes into the world you are playing |

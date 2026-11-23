@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEbuilder
 order: 10
 description: "What to do when EDGEbuilder's pills are red, REDbridge is missing, a search or a drop fails, keys do nothing, the camera is stuck, previews are missing, or a bake doesn't show, isn't solid or pops in."
-reviewed: 2026-11-19
+reviewed: 2026-11-23
 ---
 
 # Troubleshooting <span class="y">EDGEbuilder</span>
@@ -133,7 +133,7 @@ See [Importing a model](importing.html).
 
 | You see | Do this |
 |---|---|
-| The World tab's list is empty, or a click on a door picks nothing | The list shows doors within 30 m of **V**, not the camera: walk V closer, then **Look again**. **Doors** must be on. With Edit on, click the door itself |
+| The World tab's list is empty, or a click on a door picks nothing | The list shows doors within 30 m of **V**, not the camera: walk V closer, then **Scan Doors** (Look again before 0.13.2). **Doors** must be on. With Edit on, click the door itself |
 | The World tab says the registry "knows no part of the world yet" | EDGEbuilder started after your save loaded, so REDnode didn't see that part of the world load. **Load the save again**, or fast travel, and pick the door again |
 | **Remove from world** is greyed | No scene is open: a removal is kept in the open scene. Open or make one on the Library tab. Or the panel says the door's node was not found: move away and back, or load the save again |
 | A door I brought back looks right but doesn't open | It is the door's **stand-in**: after a save loads with a door removed, the real door never comes in. Fast travel away and back, or load a save. See [Stand-ins](doors.html#stand-ins) |
@@ -151,7 +151,7 @@ See [Importing a model](importing.html).
 | The Bake tab bakes into the wrong project | The tab follows the project REDcode tells it about. With several VS Code windows open, that is the last one you used. Close the other windows. The line under the scene's name says which project: hover it for the folder |
 | Baked objects pop in close, or vanish as I walk away | Each baked object is drawn only within its **Seen from** distance: about 40 m for a crate when the field is empty. Select the objects, type a larger distance in **Seen from, m**, and bake again. See [Seen from](baking.html#seen-from). If the Bake tab warns that REDbridge does not pass Seen from on, update REDbridge first. Hills and buildings hide objects too: check from the editor camera, high above |
 | Objects are there twice, or flicker | The bake and the scene's previews are both in the world. That happens after **Rebuild previews** on a baked scene. Close the scene, or restart the game |
-| A bake I renamed is in the world twice | A bake is named after its scene. After a rename, bake again, then take the old bake out with its trash icon in **Bakes in this project**, and Pack and Install |
+| A bake I renamed is in the world twice | A bake is named after its scene. After a rename, bake again, then take the old bake out with its trash icon in the **Bakes for** list, and Pack and Install |
 
 <a id="my-bake-doesnt-show-in-the-game"></a>
 

@@ -3,7 +3,7 @@ title: Your first scene
 section: EDGEbuilder
 order: 2
 description: "A first walk through EDGEbuilder, start to finish: make a scene, drop a crate, fly the camera, move and stack crates, group and copy them, undo, then bake the scene so the crates are part of Night City."
-reviewed: 2026-11-13
+reviewed: 2026-11-23
 ---
 
 # Your first <span class="y">scene</span>
@@ -199,7 +199,7 @@ A baked crate can't be moved in the game. You move its preview, then bake again.
 
 To take the crates out of your game again:
 
-1. On the **Bake** tab, under **Bakes in this project**, press the trash icon beside **Construction Crates**, then **Yes**.
+1. On the **Bake** tab, under **Bakes for** and your project's name, press the trash icon beside **Construction Crates**, then **Yes**.
 2. Quit the game. In REDcode, press **Pack and Install** again.
 3. Start the game. The baked crates are gone. Your save games are not affected.
 
