@@ -3733,8 +3733,7 @@ window.EDGE_STATUS ={
     "Decide the subscription price and the free download speed",
     "Get a legal reading on non-commercial mod licences before launch",
     "For the deploy: DNS for edgemods.ai and www, the production Auth0 tenant, the S3 bucket and its policy, the two shared secrets (docs/deploy.md, \"Before you start\")",
-    "Privacy and terms pages for edgemods.ai (Google sign-in needs them)",
-    "Choose where the index rebuild runs: GitHub's runner (built as the default) or the owner's runner"
+    "Privacy and terms pages for edgemods.ai (Google sign-in needs them)"
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
