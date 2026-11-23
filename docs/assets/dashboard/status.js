@@ -968,6 +968,11 @@ window.EDGE_STATUS ={
       "status": "done"
      },
      {
+      "id": "SC",
+      "title": "Sector scripts (docs/design/sector-scripts.md, agreed 2026-11-23 with all four recommendations): SC1 to SC4 built 2026-11-23, a Scripts button in the sector view, scripts in their own process, preview and one-undo Apply, Debug, requests for assistants, and sector_*, script_* and request_* in redcode-mcp; checked by script and against the game, not run in VS Code",
+      "status": "built, tests pending"
+     },
+     {
       "id": "AT",
       "title": "Animation Tools: AT1 anim-core and AT2 Make in REDcode done (released in 0.10.16); AT3 the REDnode pack built, hand test run 1 in progress; AT3r the pack release (own Nexus page); takes for made clips agreed; AT4 V",
       "status": "in progress"
@@ -992,10 +997,17 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": null,
     "needs": [
-     "Lip Sync L1 (merge the lipsync branch, design draft 0.1 with four decisions), M2, every copy of a mesh, takes: agreed for the next release"
+     "Lip Sync L1 (merge the lipsync branch, design draft 0.1 with four decisions), M2, every copy of a mesh, takes: agreed for the next release",
+     "Sector scripts: the hand test (docs/testing.md, Sector scripts)"
     ]
    },
    "handTests": [
+    {
+     "name": "Sector scripts",
+     "steps": 14,
+     "status": "not run",
+     "note": "Checked by script (npm test, the examples on a game sector, every new MCP tool against the game, the button in Chrome over the real runner); the menu, the first-run question, Apply and Undo, Debug and the request prompt need VS Code (docs/testing.md, Sector scripts)"
+    },
     {
      "name": "Key status",
      "steps": 7,
