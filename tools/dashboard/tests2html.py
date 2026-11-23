@@ -34,8 +34,18 @@ def section(path, heading):
 
 def render(spec):
     out = []
+    steps = 0
     for t in spec:
         body = section(t["file"], t["heading"])
+        # Only the section's own steps: stop at a sub-heading, and take its first table.
+        for k, l in enumerate(body):
+            if re.match(r"#+ ", l):
+                body = body[:k]
+                break
+        first = next(k for k, l in enumerate(body) if l.startswith("|"))
+        end = next((k for k in range(first, len(body)) if not body[k].startswith("|")), len(body))
+        body = body[:end] + [l for l in body[end:] if not l.startswith("|")]
+        steps += end - first - 2
         rows = [l for l in body if l.startswith("|")]
         prose = [l for l in body if l.strip() and not l.startswith("|")]
         cells = [[c for c in re.split(r"(?<!\\)\|", r.strip().strip("|"))] for r in rows]
@@ -50,7 +60,7 @@ def render(spec):
             out.append("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>")
         out.append("</tbody></table></div>")
         out.append(f'<p class="src">From {html.escape(t["file"])}, "{html.escape(t["heading"])}".</p></div>')
-    n = sum(len([l for l in section(t["file"], t["heading"]) if l.startswith("|")]) - 2 for t in spec)
+    n = steps
     return (f'<details class="tests"><summary>Tests <span class="meta">{len(spec)} tests &middot; {n} steps</span></summary>\n' + "\n".join(out) + "\n</details>")
 
 
