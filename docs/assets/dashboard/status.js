@@ -402,7 +402,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDagent",
    "code": "RA",
-   "ownerSeq": 1,
+   "ownerSeq": 2,
    "group": "Core toolkits",
    "role": "The in-game modding agent: Claude in the game, writing, running and fixing REDnode mods with the player",
    "stage": "released",
@@ -451,7 +451,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C6",
-      "title": "REDagent in REDcode",
+      "title": "REDagent and the editor: plan written 2026-11-23 (design.md, C6 plan), three options; recommended B, a handoff to Claude Code with EDGEchat (C6a to C6c, a few days)",
       "status": "planned"
      }
     ]
@@ -460,7 +460,7 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "Nothing unreleased",
-     "No next phase agreed: C6 has not started"
+     "C6's option chosen by the owner (A, B or C)"
     ]
    },
    "handTests": [
@@ -488,13 +488,18 @@ window.EDGE_STATUS = {
      "since": "2026-11-16",
      "done": "2026-11-23",
      "outcome": "Decided: go ahead with C6"
+    },
+    {
+     "ref": "RA2",
+     "what": "Choose C6's option: A a REDagent chat view in REDcode (2 to 3 weeks), B a handoff from REDagent to Claude Code with EDGEchat (a few days, recommended), or C drop it. REDagent's docs/design.md, \"C6 plan\"",
+     "since": "2026-11-23"
     }
    ],
    "risks": [
     "EDGEmobile's Chooms! will need a choice of model in agent.ask for C3; no issue is filed for it yet",
     "A first question that reads the game cost about $0.45 on Opus"
    ],
-   "checkedBy": "REDnode session, 2026-11-16"
+   "checkedBy": "REDnode session, 2026-11-23 (C6 plan written)"
   },
   {
    "name": "REDnode",
