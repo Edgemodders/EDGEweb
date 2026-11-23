@@ -966,7 +966,7 @@ window.EDGE_STATUS ={
      },
      {
       "id": "GV",
-      "title": "The game in an editor tab: a docked window with a release key (docs/design/game-view.md, draft 0.1 for the owner); Spike 1 window control passed with the owner 2026-11-22; G0 the rest of Spike 2 next",
+      "title": "The game in an editor tab: a docked window with a release key (docs/design/game-view.md, draft 0.2, agreed 2026-11-22: the helper in REDbridge); Spike 1 window control passed with the owner; G0 the webview lookup passed, two checks with the game running left; then G1",
       "status": "planned"
      }
     ]
@@ -1194,7 +1194,7 @@ window.EDGE_STATUS ={
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
-    "Decide the four open points of the game in a tab (docs/design/game-view.md): where the helper lives, the release key, VS Code popups, the saved settings"
+    "Game in a tab, G0: start the game once more for two short checks (the tab rectangle by eye, a tab smaller than the game)"
    ],
    "risks": [
     "REDbridge answers one call at a time"
