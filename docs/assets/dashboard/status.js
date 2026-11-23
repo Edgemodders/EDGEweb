@@ -885,7 +885,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RN2",
      "what": "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)",
-     "since": "2026-11-18"
+     "since": "2026-11-18",
+     "done": "2026-11-23",
+     "outcome": "Removed from the overlay's settings by the EDGEweb session at the owner's request. The installed Admin Tools on the dev PC is older than 0.2.0 (Task Manager 0.1.0, Tools Manager 0.1.1): update it in EDGEdeck"
     },
     {
      "ref": "RN3",
