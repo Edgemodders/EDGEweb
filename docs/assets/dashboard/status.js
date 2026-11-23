@@ -451,15 +451,31 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C6",
-      "title": "REDagent and the editor: option B chosen 2026-11-23 (a handoff to Claude Code with EDGEchat): C6a Continue in VS Code in progress, then C6b one source of knowledge, C6c REDagent's chats in REDcode",
+      "title": "REDagent and the editor, option B (chosen 2026-11-23): a handoff to Claude Code with EDGEchat",
       "status": "in progress"
+     },
+     {
+      "id": "C6a",
+      "title": "Continue in VS Code: the chat's VS Code button writes a handoff for EDGEchat's /edge:continue (REDagent 0.4.5)",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "C6b",
+      "title": "One source for REDagent's briefing and EDGEchat's rednode-mods skill",
+      "status": "planned"
+     },
+     {
+      "id": "C6c",
+      "title": "REDagent's chats listed in REDcode, each opened in Claude Code",
+      "status": "planned"
      }
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.4.5",
     "needs": [
-     "C6a built and its in-game test, with EDGEchat's /edge:continue"
+     "EDGEchat's /edge:continue (EDGEchat #8)",
+     "C6a's in-game test (5 steps)"
     ]
    },
    "handTests": [
@@ -476,10 +492,30 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-11"
+    },
+    {
+     "name": "C6a handoff, stand-in check",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-23: 15 checks (scratchpad c6a/check.mjs)"
+    },
+    {
+     "name": "C6a test: a chat continued in VS Code",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Waits for EDGEchat's /edge:continue (EDGEchat #8)"
     }
    ],
    "ownerSpotTests": [],
-   "waitingOn": [],
+   "waitingOn": [
+    {
+     "who": "EDGEchat",
+     "what": "/edge:continue, which reads REDagent's handoff file",
+     "ref": "EDGEchat #8"
+    }
+   ],
    "ownerActions": [
     {
      "ref": "RA1",
@@ -500,7 +536,7 @@ window.EDGE_STATUS = {
     "EDGEmobile's Chooms! will need a choice of model in agent.ask for C3; no issue is filed for it yet",
     "A first question that reads the game cost about $0.45 on Opus"
    ],
-   "checkedBy": "REDnode session, 2026-11-23 (C6 option B chosen, C6a in progress)"
+   "checkedBy": "REDnode session, 2026-11-23 (C6a built in 0.4.5)"
   },
   {
    "name": "REDnode",
