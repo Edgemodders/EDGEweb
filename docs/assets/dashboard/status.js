@@ -499,7 +499,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDnode",
    "code": "RN",
-   "ownerSeq": 2,
+   "ownerSeq": 3,
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
@@ -613,11 +613,6 @@ window.EDGE_STATUS = {
       "status": "done"
      },
      {
-      "id": "N2",
-      "title": "World nodes, full (#24)",
-      "status": "planned"
-     },
-     {
       "id": "A1-A2",
       "title": "Animations on spawned people (#39)",
       "status": "done"
@@ -631,11 +626,6 @@ window.EDGE_STATUS = {
       "id": "#46b",
       "title": "Weather API, for EDGEdir: passed in game (0.67.2: giving it back blends back to the weather from before)",
       "status": "done"
-     },
-     {
-      "id": "#46c",
-      "title": "Blend at a workspot jump, for EDGEdir's D4 and D5",
-      "status": "planned"
      },
      {
       "id": "L1-L3",
@@ -689,7 +679,37 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SC1",
-      "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL",
+      "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL; the first build after 0.70.0's tests (order agreed with the owner on 2026-11-23)",
+      "status": "planned"
+     },
+     {
+      "id": "#51a",
+      "title": "world.load reads scene format 3 (EDGEbuilder's world edits listed in notes, not applied); a few hours",
+      "status": "planned"
+     },
+     {
+      "id": "#57",
+      "title": "Tests run by an assistant, for REDcode: load a save, a consent per test session, input to the game; several days",
+      "status": "planned"
+     },
+     {
+      "id": "CON",
+      "title": "The Console resizable, and a warning before it closes with TweakDB changes in place; half a day",
+      "status": "planned"
+     },
+     {
+      "id": "#54a",
+      "title": "agent.ask: more context with its limit stated, no tools (for EDGEmobile's Chooms! C3), mostly in REDagent; about a day",
+      "status": "planned"
+     },
+     {
+      "id": "N2",
+      "title": "World nodes, full (#24), with #52 (an entity shown again after a load) and #51 step 2 (a scene's removals applied); several days",
+      "status": "planned"
+     },
+     {
+      "id": "#46c",
+      "title": "Blend at a workspot jump, for EDGEdir's D4 and D5",
       "status": "planned"
      },
      {
@@ -866,13 +886,18 @@ window.EDGE_STATUS = {
      "ref": "RN2",
      "what": "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)",
      "since": "2026-11-18"
+    },
+    {
+     "ref": "RN3",
+     "what": "Run REDnode 0.70.0's four in-game tests in one session (deployed to the dev PC on 2026-11-23): the WL build, #47's spike, tooltips (#55), the windowed cursor (#56); Claude drives the WL test's calls",
+     "since": "2026-11-23"
     }
    ],
    "risks": [
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-22 (#56 built in 0.70.0)"
+   "checkedBy": "REDnode session, 2026-11-23 (0.70.0 deployed; order after WL agreed)"
   },
   {
    "name": "REDcode",
