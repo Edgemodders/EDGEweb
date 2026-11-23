@@ -3,7 +3,7 @@ title: Deploying and undo
 section: EDGEdeck
 order: 5
 description: "What EDGEdeck's Deploy does, why the game must be closed, Run game, deploying one mod, hardlinks and copies, files changed outside EDGEdeck, mods you installed by hand, deploy reports and Undo deploy."
-reviewed: 2026-11-21
+reviewed: 2026-11-23
 ---
 
 # Deploying and <span class="y">undo</span>
@@ -84,7 +84,7 @@ Good to know:
 - Deploying or undeploying one mod also ticks or unticks it in your list, so a later full Deploy doesn't reverse what you did.
 - Like a full Deploy, it waits until the game is closed, and it asks about files changed in the game folder.
 - If another mod wins some of this mod's files, the message says so and offers **Let ... win**. See [Conflicts and who wins](conflicts.html).
-- The mod's detail panel has the same button. In the Mods view, right-click a mod for **Deploy this mod** and **Undeploy**.
+- The mod's detail panel has the same button. In the Mods view, right-click a mod for **Deploy this mod** and **Undeploy**, or hover its row for the **Deploy this mod** button, the first one.
 - While the EDGEdeck page shows a [loadout](loadouts.html) that isn't the active one, the button isn't there: the game always follows the active loadout.
 
 {% include shot.html caption="Deploy one mod" shows="A row on the EDGEdeck page with its yellow Deploy button first in the Actions column, and the message after pressing it saying the mod went in and how many other changes still wait." %}

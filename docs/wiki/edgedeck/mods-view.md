@@ -4,7 +4,7 @@ nav_title: The Mods view and page
 section: EDGEdeck
 order: 9
 description: "Find your way around EDGEdeck: a short tour of the Mods view and the wide EDGEdeck page, then a reference for every status, button, column, filter and section control."
-reviewed: 2026-11-21
+reviewed: 2026-11-23
 ---
 
 # The Mods view and the <span class="y">EDGEdeck page</span>
@@ -68,7 +68,7 @@ What you can do with a row:
 | Tick or untick the box | Turn the mod on or off |
 | Click the name | Open its [detail panel](#the-detail-panel) |
 | Click the arrow before the name | See the folders it goes into in the game, and the files in each. Click a file to open it |
-| Hover the row | Show three buttons: **Move up**, **Move down** and **Switch version...**. Moving a mod up makes it win over the mod above it: see [Who wins](conflicts.html#who-wins) |
+| Hover the row | Show its buttons: **Deploy this mod**, **Move up**, **Move down**, then for a mod from Nexus **Check for updates** and **Update**, and last **Switch version...**. Moving a mod up makes it win over the mod above it: see [Who wins](conflicts.html#who-wins). Deploy puts this mod alone in the game: see [Deploying one mod](deploying.html#deploying-one-mod) |
 | Hover anything a little longer | See a card with its size, dates, where it goes in the game and where it came from |
 | Right-click | Open the menu with everything else. See [the right-click menu](#the-right-click-menu) |
 | Press **F2** | Rename the mod |
@@ -123,6 +123,18 @@ Click a mod's name for its detail panel, which opens in the middle of the window
 | `loses 3 archive files` | Another mod replaces 3 of the things (models, textures and so on) packed inside this mod's archives, so this mod's versions of them won't show in the game | Check [Conflicts](conflicts.html) if that's not what you want |
 | `overrides 2 archive files` | It replaces 2 things packed inside another mod's archives | Usually intended |
 
+The icon before the name has a color too, so you can tell without reading to the end of the row:
+
+| Color | Means |
+|---|---|
+| Yellow, a warning sign or a pencil | Something needs a look: a conflict, or a file changed in the game folder |
+| Cyan | Changes wait for a deploy: not deployed yet, changed, or off but still in the game |
+| Green | On, and Nexus has a newer version |
+| The normal accent | On and deployed |
+| Dim | Off |
+
+A row over several files from one Nexus page takes the color of its files, the first that applies in this list. Themes can change the cyan and the green with the colors `edgedeck.pending` and `edgedeck.update`.
+
 ## The Mods view's buttons and menus
 
 ### The title bar
@@ -161,6 +173,7 @@ Right-click a mod for:
 | Item | Does |
 |---|---|
 | **Deploy this mod**, **Undeploy** | Puts this mod alone in the game, or takes it out. See [Deploying one mod](deploying.html#deploying-one-mod) |
+| **Check for updates**, **Update** | For a mod from Nexus. Check for updates asks Nexus about this mod only. Update asks too and, when there is a newer file, downloads it in the mod's place after one question. See [Updates](nexus.html#updates) |
 | **Details** | Opens the detail panel |
 | **Open on Nexus Mods** | Opens the mod's Nexus page |
 | **Reveal in File Explorer** | Opens the mod's copy in the library |

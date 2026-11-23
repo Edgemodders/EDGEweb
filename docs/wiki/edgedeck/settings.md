@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: EDGEdeck
 order: 14
 description: "Every EDGEdeck setting with its default and when to change it, every EDGEdeck command, and the buttons that exist only on the EDGEdeck page."
-reviewed: 2026-11-21
+reviewed: 2026-11-23
 ---
 
 # Settings and <span class="y">commands</span>
@@ -67,6 +67,8 @@ Commands that act on one mod aren't in the command palette. They are on the mod'
 | Undeploy | Turns the mod off and takes only its files out of the game |
 | Move up (wins conflicts), Move down | Changes its place in the order. See [Who wins](conflicts.html#who-wins) |
 | Switch version... | Makes another version of the mod the one in use. This one is in the command palette too |
+| Check for updates | For a mod from Nexus: asks Nexus whether it has a newer file of this mod |
+| Update | For a mod from Nexus: checks, and when there is a newer file, downloads it in the mod's place |
 | Open on Nexus Mods | Opens its Nexus page |
 | Reveal in File Explorer | Opens its library folder |
 | Reveal in Game Folder | Shows where the mod, folder or file sits in the game folder, in File Explorer |

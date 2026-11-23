@@ -4,7 +4,7 @@ nav_title: Nexus Mods
 section: EDGEdeck
 order: 7
 description: "Sign EDGEdeck in to Nexus Mods with a personal API key, send Mod manager download to EDGEdeck, watch and cancel downloads, check for updates, update everything at once, and keep several files from one page."
-reviewed: 2026-11-21
+reviewed: 2026-11-23
 ---
 
 # Nexus <span class="y">Mods</span>
@@ -95,7 +95,7 @@ Good to know:
 
 - **The old version stays** in the library, switched off, so you can [switch back](#switching-versions). Remove it when you're sure.
 - **To check now**, press **Nexus: check for updates** in the Mods view's title bar (**Check updates** on the EDGEdeck page). Its message names the mods with an update and offers **Update all**.
-- **To check one mod**, use **Check for an update** in its Actions on the EDGEdeck page. **Update** appears beside it while an update waits.
+- **To check one mod**, use **Check for an update** in its Actions on the EDGEdeck page. **Update** appears beside it while an update waits. In the Mods view, right-click the mod, or hover its row, for **Check for updates** and **Update**, which checks first and then updates. A mod with an update waiting has a green icon there.
 - **To see only the mods with updates**, pick the **Update available** chip on the EDGEdeck page.
 - **To turn the daily check off**, untick the setting `edgedeck.nexusCheckUpdatesOnStart`.
 - **A mod you added from a file** may not know its Nexus page, so it gets no update checks. To link it, remove it and add it again with **Mod manager download**.

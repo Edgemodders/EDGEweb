@@ -1570,7 +1570,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "Mod manager: a library of mods outside the game folder, deployed with hardlinks; extension, command line and MCP server",
    "stage": "released",
-   "version": "0.33.0",
+   "version": "0.34.0",
    "lastTag": "v0.32.0",
    "lastTagDate": "2026-11-15",
    "lastCommit": "2026-11-17",
@@ -1623,7 +1623,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "No next version named; unreleased, automated tests pass: installMods and edgemodsMods for the EDGEmods extension (EDGEdeck#16 parts 2 and 3), cyan Mods view icons while changes wait for a deploy",
+     "No next version named; nothing unreleased on main",
      "M6's last part (requirements) waits on Nexus"
     ]
    },
@@ -1697,6 +1697,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Since 0.33.0; without the EDGEmods extension (R4) only the 'needs the extension' message can be seen"
+    },
+    {
+     "name": "39 Mods view row icons: Deploy, Check for updates, Update",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "With the test build before 0.34.0, 2026-11-23"
     }
    ],
    "ownerSpotTests": [
@@ -1723,7 +1730,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEmods",
-     "what": "Its extension (R4c) to call installMods and edgemodsMods end to end; EDGEdeck#16 part 1 shipped in 0.33.0, parts 2 and 3 built on main",
+     "what": "Its extension (R4c) to call installMods and edgemodsMods end to end; EDGEdeck#16 parts 1 to 3 released (0.33.0, 0.34.0)",
      "ref": "EDGEdeck#16"
     }
    ],
