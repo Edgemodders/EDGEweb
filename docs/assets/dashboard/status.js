@@ -963,6 +963,11 @@ window.EDGE_STATUS ={
       "id": "LS",
       "title": "Lip Sync editor, moved from EDGEfab 2026-11-22 (branch lipsync, not wired in): design draft 0.1 for the owner (docs/design/lipsync.md); L1 merge and wire after the release in test, then L2 to L4",
       "status": "planned"
+     },
+     {
+      "id": "GV",
+      "title": "The game in an editor tab: a docked window with a release key (docs/design/game-view.md, draft 0.1 for the owner); Spike 1 window control passed with the owner 2026-11-22; G0 the rest of Spike 2 next",
+      "status": "planned"
      }
     ]
    },
@@ -1177,13 +1182,19 @@ window.EDGE_STATUS ={
      "who": "REDnode",
      "what": "#47 V as an actor: the V actor spike (REDnode 0.70.0, spike 0.2.0 with REDcode's written-workspot test) waits for the owner's game session; Animation Tools AT4 (V) needs it",
      "ref": "https://github.com/Edgemodders/REDnode/issues/47"
+    },
+    {
+     "who": "REDnode",
+     "what": "#56 the overlay cursor in a windowed game follows the real pointer; the game in a tab (G2) needs it",
+     "ref": "https://github.com/Edgemodders/REDnode/issues/56"
     }
    ],
    "ownerActions": [
     "Run the Animation Tools hand tests: AT2 in REDcode (about $1) and AT3, the pack in the game (about $2) (docs/testing.md); then say when the pack is released and make its Nexus page",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
+    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
+    "Decide the four open points of the game in a tab (docs/design/game-view.md): where the helper lives, the release key, VS Code popups, the saved settings"
    ],
    "risks": [
     "REDbridge answers one call at a time"
