@@ -858,7 +858,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RN1",
      "what": "Agree the order after the WL build (Console resizing, N2 and others are asked for, not built)",
-     "since": "2026-11-18"
+     "since": "2026-11-18",
+     "done": "2026-11-23",
+     "outcome": "Agreed: the order REDnode's session proposed on 2026-11-23, 0.70.0's in-game tests first"
     },
     {
      "ref": "RN2",
