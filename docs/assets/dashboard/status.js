@@ -979,8 +979,8 @@ window.EDGE_STATUS ={
      },
      {
       "id": "GV",
-      "title": "The game in an editor tab: a docked window with a release key (docs/design/game-view.md, agreed 2026-11-22); spikes done with the owner (window control, the tab rectangle, a loop that keeps the game on a tab); G1 and G2 wait on REDbridge window.*",
-      "status": "planned"
+      "title": "The game in an editor tab (docs/design/game-view.md, agreed 2026-11-22): spikes done with the owner; G2 Run Game in Tab built on REDcode's side against an interim script, hand test not run; the real helper waits on REDbridge window.*",
+      "status": "built, tests pending"
      }
     ]
    },
@@ -1211,7 +1211,8 @@ window.EDGE_STATUS ={
     "Run the Animation Tools hand tests: AT2 in REDcode (about $1) and AT3, the pack in the game (about $2) (docs/testing.md); then say when the pack is released and make its Nexus page",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
+    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
+    "Run the hand test Run Game in Tab (docs/testing.md), 8 steps, with F5"
    ],
    "risks": [
     "REDbridge answers one call at a time"
