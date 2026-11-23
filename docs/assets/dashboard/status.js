@@ -1714,7 +1714,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "PV",
-      "title": "Explorer (game folders, mods, project, people, with a 3D preview and Drop), Previews drawer, the Library in a drawer, Drop at click crosshair and the object's own outline (0.14.0)",
+      "title": "Explorer and the Preview switch (3D preview, properties, Drop), Previews drawer, the Library in a drawer, Drop at click crosshair and the object own outline (0.14.0)",
       "status": "built, tests pending"
      },
      {
@@ -1797,7 +1797,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.14.0",
     "needs": [
-     "0.14.0 in-game test: Previews, the Explorer, the Library drawer, Drop at click outline (24 steps, P1 to P5)",
+     "0.14.0 in-game test: Previews, the Explorer and the Preview switch, the Library drawer, Drop at click outline (28 steps, P1 to P5)",
      "G0's look in the game (the owner)",
      "The rest of G1 on the cosmic branch, then its merge into main"
     ]
@@ -1805,10 +1805,10 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "Previews, Explorer, Library drawer, Drop at click outline (0.14.0, in game)",
-     "steps": 24,
+     "steps": 28,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Library drawer). The crosshair and the object's outline need the game. In the EDGEdeck library (on), not deployed"
+     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; the Library drawer). The crosshair and the object's outline need the game. In the EDGEdeck library (on), not deployed"
     },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
