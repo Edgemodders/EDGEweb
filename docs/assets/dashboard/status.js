@@ -3588,7 +3588,7 @@ window.EDGE_STATUS ={
      {
       "id": "R3h",
       "title": "Deploy",
-      "status": "planned"
+      "status": "in progress"
      },
      {
       "id": "R4a",
@@ -3625,8 +3625,9 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "R3d: free-speed downloads through nginx, tested on the server",
-     "R3f to R3h: Stripe, webhooks, deploy",
+     "R3h: the first install on the server (docs/deploy.md), with free-speed downloads through nginx tested there",
+     "Release checks for updates (release-check), so a mod's new releases show",
+     "R3f and R3g: Stripe, webhooks",
      "The owner agrees design draft 0.2 and the format"
     ]
    },
@@ -3671,7 +3672,7 @@ window.EDGE_STATUS ={
      "steps": null,
      "status": "not run",
      "ranBy": null,
-     "note": "The registry workflow calls it once the server is live (R3h)"
+     "note": "Connected 2026-11-22: runs once the repository has EDGEMODS_SITE and EDGEMODS_CHECKS_SECRET (docs/deploy.md, step 7)"
     },
     {
      "name": "Sign in from VS Code with GitHub, Google and email; the status bar shows the username (R4a)",
@@ -3693,6 +3694,20 @@ window.EDGE_STATUS ={
      "status": "not run",
      "ranBy": null,
      "note": "mods_search, mods_info, mods_plan; mods_install comes with R4c"
+    },
+    {
+     "name": "An assistant (an agent in VS Code, or Claude Code) finds the test mod, its details and its install plan through the EDGEmods MCP server (R4d, first part)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "mods_search, mods_info, mods_plan; mods_install comes with R4c"
+    },
+    {
+     "name": "First install on the server from docs/deploy.md: setup-edgemods.sh, add-domain.sh, setup-litestream.sh, the index rebuild workflow, the merge checks connected (R3h)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Scripts written 2026-11-22, never run on a server; the server session does it when the owner says"
     }
    ],
    "ownerSpotTests": [],
@@ -3716,7 +3731,10 @@ window.EDGE_STATUS ={
    "ownerActions": [
     "Review and agree design draft 0.2 and the edgemods.json format",
     "Decide the subscription price and the free download speed",
-    "Get a legal reading on non-commercial mod licences before launch"
+    "Get a legal reading on non-commercial mod licences before launch",
+    "For the deploy: DNS for edgemods.ai and www, the production Auth0 tenant, the S3 bucket and its policy, the two shared secrets (docs/deploy.md, \"Before you start\")",
+    "Privacy and terms pages for edgemods.ai (Google sign-in needs them)",
+    "Choose where the index rebuild runs: GitHub's runner (built as the default) or the owner's runner"
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
