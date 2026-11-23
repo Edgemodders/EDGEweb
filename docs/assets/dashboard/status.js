@@ -3855,13 +3855,13 @@ window.EDGE_STATUS = {
     "Decide the subscription price and the free download speed",
     "Get a legal reading on non-commercial mod licences before launch",
     "For the deploy: DNS for edgemods.ai and www, the production Auth0 tenant, the S3 bucket and its policy, the two shared secrets (docs/deploy.md, \"Before you start\")",
-    "Privacy and terms pages for edgemods.ai (Google sign-in needs them)"
+    "Agree the drafted privacy and terms pages (/privacy, /terms) and fill their gaps: who runs EDGEmods, contact, log and backup days, minimum age, the law (Google sign-in needs them)"
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
     "Auth0 marks a GitHub sign-in's email unverified, so admin sign-in works through Google or email for now"
    ],
-   "checkedBy": "EDGEmods session, 2026-11-22"
+   "checkedBy": "EDGEmods session, 2026-11-23"
   },
   {
    "name": "EDGEguide",
