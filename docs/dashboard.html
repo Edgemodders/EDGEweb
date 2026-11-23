@@ -72,6 +72,7 @@ table.d th { font-family: var(--mono); font-size: 11px; font-weight: 400; letter
 table.d td { padding: 8px 12px; border-bottom: 1px solid rgba(38,44,61,.6); vertical-align: top; }
 table.d tr:last-child td { border-bottom: 0; }
 table.d td.m { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+table.d td.ref { color: var(--yellow); font-weight: 600; }
 table.d td.num { font-family: var(--mono); font-size: 13px; text-align: right; }
 .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .chip { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; padding: 4px 10px; border: 1px solid var(--line); background: var(--panel); color: var(--dim); cursor: pointer; }
@@ -119,7 +120,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 <section id="owner">
   <h2><span class="id">01</span> Waiting on the owner</h2>
   <div class="rule"></div>
-  <p class="sub">Things only the owner can do: spot tests, decisions, accounts and release go-aheads. Nothing here moves until the owner acts.</p>
+  <p class="sub">Things only the owner can do: spot tests, decisions, accounts and release go-aheads. Nothing here moves until the owner acts. Each item has an ID, the tool&rsquo;s two letters and a number, to name it by when asking a Claude session about it; Since is the day it was first listed.</p>
   <div class="tw"><table class="d" id="ownerTable"></table></div>
 </section>
 
@@ -189,6 +190,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
       <h3>Keeping it current</h3>
       <p>From the EDGEweb folder, with the sibling checkouts beside it:</p>
       <pre class="how">python tools/dashboard/refresh.py</pre>
+      <p>What waits on the owner: each entry of <code>ownerActions</code> is <code>{ "ref", "what", "since" }</code>, and an open entry of <code>ownerSpotTests</code> has <code>ref</code> and <code>since</code> too. The owner names an item by its ref (RA1). Never change a ref or use one twice. For a new item write <code>what</code> and <code>since</code> and leave <code>ref</code> out: <code>python tools/dashboard/refresh.py --refs</code> gives it the next number. A done item is removed, and its number is not used again.</p>
       <p>That rewrites the facts a script can read (open issues, releases, commit dates). The rest is curated: each tool's own session updates its entry in the same piece of work as a change to its status, as the Dashboard section in its repo's <code>CLAUDE.md</code> says, and sets <code>checkedBy</code>. A managing session checks entries against the repos and sets <code>asOf</code>.</p>
     </div>
   </div>
@@ -203,7 +205,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=270"></script>
+<script src="assets/dashboard/status.js?v=271"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
@@ -229,9 +231,9 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   var tests = [], spots = [], waits = [], owner = [];
   tools.forEach(function (t) {
     (t.handTests || []).forEach(function (x) { tests.push({ tool: t.name, kind: "Hand test", name: x.name, steps: x.steps, status: x.status, ranBy: x.ranBy, note: x.note }); });
-    (t.ownerSpotTests || []).forEach(function (x) { spots.push({ tool: t.name, kind: "Owner spot test", name: (x.id ? x.id + " " : "") + x.feature, steps: null, status: x.status, ranBy: "owner", note: "" }); });
-    (t.waitingOn || []).forEach(function (x) { waits.push({ tool: t.name, who: x.who, what: x.what, ref: x.ref }); });
-    (t.ownerActions || []).forEach(function (x) { owner.push({ tool: t.name, what: x }); });
+    (t.ownerSpotTests || []).forEach(function (x) { spots.push({ tool: t.name, kind: "Owner spot test", name: (x.id ? x.id + " " : "") + x.feature, steps: null, status: x.status, ranBy: "owner", note: "", ref: x.ref, since: x.since }); });
+    (t.waitingOn || []).forEach(function (x) { waits.push(typeof x === "string" ? { tool: t.name, who: "?", what: x } : { tool: t.name, who: x.who || "?", what: x.what, ref: x.ref }); });
+    (t.ownerActions || []).forEach(function (x) { owner.push(typeof x === "string" ? { tool: t.name, what: x } : { tool: t.name, what: x.what, ref: x.ref, since: x.since }); });
   });
   var notRun = tests.filter(function (x) { return kind(x.status) !== "done"; });
   var spotsOpen = spots.filter(function (x) { return kind(x.status) !== "done"; });
@@ -250,9 +252,11 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
     k(tools.filter(function (t) { return t.commitsSinceTag >= 5 && t.lastTag; }).length, "Tools with unreleased work", "5 or more commits since their last release", "#tools", false);
 
   // ---- owner
-  var ownerRows = owner.map(function (o) { return "<tr><td class='m'>" + tlink(o.tool) + "</td><td>Action</td><td>" + esc(o.what) + "</td></tr>"; })
-    .concat(spotsOpen.map(function (s) { return "<tr><td class='m'>" + tlink(s.tool) + "</td><td>Spot test</td><td>" + esc(s.name) + "</td></tr>"; }));
-  table("ownerTable", ["Tool", "Kind", "What"], ownerRows, "Nothing is waiting on the owner.");
+  // A ref (RA1) is the tool's two letters and a number that is never used twice: refresh.py gives one to an item without.
+  var ownerRow = function (o, kindName, what) { return "<tr" + (o.ref ? " id='" + esc(o.ref) + "'" : "") + "><td class='m ref'>" + (o.ref ? esc(o.ref) : "&ndash;") + "</td><td class='m'>" + tlink(o.tool) + "</td><td>" + kindName + "</td><td>" + esc(what) + "</td><td class='m nw'>" + (o.since ? esc(o.since) : "&ndash;") + "</td></tr>"; };
+  var ownerRows = owner.map(function (o) { return ownerRow(o, "Action", o.what); })
+    .concat(spotsOpen.map(function (s) { return ownerRow(s, "Spot test", s.name); }));
+  table("ownerTable", ["ID", "Tool", "Kind", "What", "Since"], ownerRows, "Nothing is waiting on the owner.");
 
   // ---- plans
   $("planRows").innerHTML = tools.map(function (t) {

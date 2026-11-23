@@ -85,6 +85,7 @@ How to keep it:
 
 **Changed**
 
+- Dashboard: each item waiting on the owner has an ID (the tool's two letters and a number, such as RA1) and the date it was first listed.
 - Wiki: REDagent's section is rewritten for newcomers: what it can and can't make, a first-mod walkthrough that covers typing in the game, approving files, testing, and keeping or removing the mod, and every control in one table: https://edgemodders.ai/wiki/redagent/
 - Getting started tells the three ways in apart (the EDGEkit app, REDagent, EDGEchat) and says how each tool installs today: https://edgemodders.ai/wiki/getting-started.html
 - The landing and platform pages are in plainer words, with every status line brought up to the current releases: https://edgemodders.ai/ and https://edgemodders.ai/platform.html

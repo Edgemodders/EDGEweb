@@ -401,6 +401,8 @@ window.EDGE_STATUS = {
  "tools": [
   {
    "name": "REDagent",
+   "code": "RA",
+   "ownerSeq": 1,
    "group": "Core toolkits",
    "role": "The in-game modding agent: Claude in the game, writing, running and fixing REDnode mods with the player",
    "stage": "released",
@@ -480,7 +482,11 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [],
    "ownerActions": [
-    "Decide whether and when to start C6 (REDagent in REDcode)"
+    {
+     "ref": "RA1",
+     "what": "Decide whether and when to start C6 (REDagent in REDcode)",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "EDGEmobile's Chooms! will need a choice of model in agent.ask for C3; no issue is filed for it yet",
@@ -490,6 +496,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "REDnode",
+   "code": "RN",
+   "ownerSeq": 2,
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
@@ -845,8 +853,16 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Agree the order after the WL build (Console resizing, N2 and others are asked for, not built)",
-    "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)"
+    {
+     "ref": "RN1",
+     "what": "Agree the order after the WL build (Console resizing, N2 and others are asked for, not built)",
+     "since": "2026-11-18"
+    },
+    {
+     "ref": "RN2",
+     "what": "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)",
+     "since": "2026-11-18"
+    }
    ],
    "risks": [
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
@@ -856,6 +872,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "REDcode",
+   "code": "RC",
+   "ownerSeq": 6,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1225,12 +1243,36 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the Animation Tools hand tests: AT2 in REDcode (about $1) and AT3, the pack in the game (about $2) (docs/testing.md); then say when the pack is released and make its Nexus page",
-    "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-    "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
-    "Run retests R1 and R2 of Run Game in Tab (docs/testing.md): the release key while the game loads and in the main menu, and the status line below the game",
-    "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md"
+    {
+     "ref": "RC1",
+     "what": "Run the Animation Tools hand tests: AT2 in REDcode (about $1) and AT3, the pack in the game (about $2) (docs/testing.md); then say when the pack is released and make its Nexus page",
+     "since": "2026-11-22"
+    },
+    {
+     "ref": "RC2",
+     "what": "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
+     "since": "2026-11-20"
+    },
+    {
+     "ref": "RC3",
+     "what": "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
+     "since": "2026-11-20"
+    },
+    {
+     "ref": "RC4",
+     "what": "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
+     "since": "2026-11-21"
+    },
+    {
+     "ref": "RC5",
+     "what": "Run retests R1 and R2 of Run Game in Tab (docs/testing.md): the release key while the game loads and in the main menu, and the status line below the game",
+     "since": "2026-11-23"
+    },
+    {
+     "ref": "RC6",
+     "what": "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md",
+     "since": "2026-11-23"
+    }
    ],
    "risks": [
     "REDbridge answers one call at a time"
@@ -1239,6 +1281,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "REDbridge",
+   "code": "RB",
+   "ownerSeq": 3,
    "group": "Core toolkits",
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
@@ -1422,9 +1466,21 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Ask for release runs: it is released at the owner's request from the REDnode session",
-    "Decide when to schedule Linux support",
-    "Close REDbridge #15 and #16: both passed in the game 2026-11-08 (EDGEbuilder 0.8.1)"
+    {
+     "ref": "RB1",
+     "what": "Ask for release runs: it is released at the owner's request from the REDnode session",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "RB2",
+     "what": "Decide when to schedule Linux support",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "RB3",
+     "what": "Close REDbridge #15 and #16: both passed in the game 2026-11-08 (EDGEbuilder 0.8.1)",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "Two of its four open requests (#15, #16) are done and only left open; #11 waits on a later EDGEbuilder phase",
@@ -1435,6 +1491,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEdeck",
+   "code": "ED",
+   "ownerSeq": 7,
    "group": "Core toolkits",
    "role": "Mod manager: a library of mods outside the game folder, deployed with hardlinks; extension, command line and MCP server",
    "stage": "released",
@@ -1571,12 +1629,16 @@ window.EDGE_STATUS = {
     {
      "id": "31 to 33",
      "feature": "FOMOD installs: 0.32.0 shipped on a contributor's tests only",
-     "status": "not run"
+     "status": "not run",
+     "ref": "ED6",
+     "since": "2026-11-16"
     },
     {
      "id": "35",
      "feature": "FOMOD in Update all, which needs a Premium account",
-     "status": "not run"
+     "status": "not run",
+     "ref": "ED7",
+     "since": "2026-11-16"
     }
    ],
    "waitingOn": [
@@ -1592,11 +1654,31 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the FOMOD hand tests 31 to 35",
-    "Meet Nexus, so the OAuth client id can become the default",
-    "Delete the unused RELEASE_TOKEN organization secret and its token",
-    "Deprecate the old REDdeck listings (Marketplace, Open VSX, npm): unverified whether done",
-    "Decide when to drop the stores' preview flag"
+    {
+     "ref": "ED1",
+     "what": "Run the FOMOD hand tests 31 to 35",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "ED2",
+     "what": "Meet Nexus, so the OAuth client id can become the default",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "ED3",
+     "what": "Delete the unused RELEASE_TOKEN organization secret and its token",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "ED4",
+     "what": "Deprecate the old REDdeck listings (Marketplace, Open VSX, npm): unverified whether done",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "ED5",
+     "what": "Decide when to drop the stores' preview flag",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed in 0.33.0 (advisory GHSA-crv2-8m58-wxvv), players on older versions stay exposed until they update",
@@ -1606,6 +1688,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEbuilder",
+   "code": "EB",
+   "ownerSeq": 2,
    "group": "Specialist toolkits",
    "role": "World builder on REDnode: pick game or mod assets, place them in the running game, bake scenes into the world",
    "stage": "released",
@@ -1956,8 +2040,16 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
-    "G0: look at the baked generated scene in the game (0.13's tests are done); the team was asked for their archives on 2026-11-23, and the look can start without them"
+    {
+     "ref": "EB1",
+     "what": "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
+     "since": "2026-11-19"
+    },
+    {
+     "ref": "EB2",
+     "what": "G0: look at the baked generated scene in the game (0.13's tests are done); the team was asked for their archives on 2026-11-23, and the look can start without them",
+     "since": "2026-11-23"
+    }
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
@@ -1969,6 +2061,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEwave",
+   "code": "EW",
+   "ownerSeq": 2,
    "group": "Specialist toolkits",
    "role": "Sound studio: edit, mix and re-voice game sounds into a mod, with voice tools, an API and an MCP server",
    "stage": "released",
@@ -2125,8 +2219,16 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Say whether to build Add to Project's Pick a game sound to replace… row next",
-    "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat"
+    {
+     "ref": "EW1",
+     "what": "Say whether to build Add to Project's Pick a game sound to replace… row next",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EW2",
+     "what": "Say whether to file requests: REDcode's Library view buttons for sounds; Reveal in File Explorer wording for EDGEdeck and EDGEmat",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)"
@@ -2135,6 +2237,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEmat",
+   "code": "EM",
+   "ownerSeq": 5,
    "group": "Specialist toolkits",
    "role": "Material editor: read, edit, generate and apply game materials, and the Wardrobe Designer app",
    "stage": "released",
@@ -2307,14 +2411,38 @@ window.EDGE_STATUS = {
    ],
    "ownerSpotTests": [],
    "waitingOn": [
-    "REDcode #31: light and reflections in the 3D view (an environment, tone mapping, a light control), so shine and dark materials show; filed 2026-11-18"
+    {
+     "who": "REDcode",
+     "what": "Light and reflections in the 3D view (an environment, tone mapping, a light control), so shine and dark materials show; filed 2026-11-18. REDcode #31 is closed now (seen 2026-11-23): for EDGEmat's session to confirm and remove",
+     "ref": "REDcode #31"
+    }
    ],
    "ownerActions": [
-    "Install EDGEmat 0.3.4 from the Marketplace in a normal VS Code, then Connect an assistant",
-    "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
-    "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
-    "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
-    "Three screenshots for Wardrobe Designer's Nexus page"
+    {
+     "ref": "EM1",
+     "what": "Install EDGEmat 0.3.4 from the Marketplace in a normal VS Code, then Connect an assistant",
+     "since": "2026-11-22"
+    },
+    {
+     "ref": "EM2",
+     "what": "Finish steps 9 to 12 of Wardrobe Designer's Reshape and keys; answer its session about the screen resolution and the picture click",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EM3",
+     "what": "Delete EDGEmat_ReshapeGame.archive and EDGEmat_Bumps.archive from the game's archive\\pc\\mod (tests done)",
+     "since": "2026-11-18"
+    },
+    {
+     "ref": "EM4",
+     "what": "Narrow the Azure DevOps token and plan the move to Entra ID publishing before it expires (about February 2027)",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EM5",
+     "what": "Three screenshots for Wardrobe Designer's Nexus page",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "Reshape's game materials passed in the game, but the band bends a little out of shape on the new crown (EDGEmat's fit); Tripo on the new dark background is untested",
@@ -2325,6 +2453,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEquest",
+   "code": "EQ",
+   "ownerSeq": 5,
    "group": "Specialist toolkits",
    "role": "Quest maker: reads the game's quests in plain words and makes new ones from a story file",
    "stage": "released",
@@ -2462,12 +2592,16 @@ window.EDGE_STATUS = {
     {
      "id": "Test 8",
      "feature": "A Corpo-only option is hidden on another lifepath (needs a non-Corpo save)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "EQ4",
+     "since": "2026-11-16"
     },
     {
      "id": "Test 8",
      "feature": "An attribute check V passes",
-     "status": "not run"
+     "status": "not run",
+     "ref": "EQ5",
+     "since": "2026-11-16"
     }
    ],
    "waitingOn": [
@@ -2508,9 +2642,21 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the end-to-end test with a non-Corpo save (test 8 leftovers)",
-    "Release EDGEwave 0.2.0, or approve a 'needs EDGEwave 0.2.0' note on EDGEquest's pages",
-    "Ask for the next release run when phone calls and Copy Scene are ready"
+    {
+     "ref": "EQ1",
+     "what": "Run the end-to-end test with a non-Corpo save (test 8 leftovers)",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EQ2",
+     "what": "Release EDGEwave 0.2.0, or approve a 'needs EDGEwave 0.2.0' note on EDGEquest's pages",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EQ3",
+     "what": "Ask for the next release run when phone calls and Copy Scene are ready",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "Store and Nexus pages describe sound features that need EDGEwave 0.2.0, not yet on the stores",
@@ -2519,6 +2665,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEhack",
+   "code": "EH",
+   "ownerSeq": 4,
    "group": "Specialist toolkits",
    "role": "Quickhack editor: edits and creates quickhacks as TweakXL and ArchiveXL files",
    "stage": "released",
@@ -2653,12 +2801,16 @@ window.EDGE_STATUS = {
     {
      "id": "H4.5 step 8",
      "feature": "Try Live through the MCP server",
-     "status": "not run"
+     "status": "not run",
+     "ref": "EH3",
+     "since": "2026-11-16"
     },
     {
      "id": "H3.1",
      "feature": "A status effect from a script function, and spread",
-     "status": "not run"
+     "status": "not run",
+     "ref": "EH4",
+     "since": "2026-11-16"
     }
    ],
    "waitingOn": [
@@ -2669,8 +2821,16 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Publish Nexus page 37293 (files are uploaded, the page is held back)",
-    "Supply the screenshots the wiki guide names"
+    {
+     "ref": "EH1",
+     "what": "Publish Nexus page 37293 (files are uploaded, the page is held back)",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EH2",
+     "what": "Supply the screenshots the wiki guide names",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "The VS Code Marketplace took 0.1.2 on 2026-11-19 after support's review, and 0.1.3 passed on its own on 2026-11-22 (listed minutes after the run)",
@@ -2680,6 +2840,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEkit",
+   "code": "EK",
+   "ownerSeq": 4,
    "group": "Specialist toolkits",
    "role": "The Edgemodders editor: a branded Code - OSS build with the EDGE extensions built in, and an extension pack",
    "stage": "released",
@@ -2793,10 +2955,26 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Review the onboarding and Welcome page text",
-    "Click Restart to Update on an older install (the laptop's 1.140.6 should offer 1.143.1): the first real click",
-    "Close EDGEkit #7 (EDGEquest), left to the owner",
-    "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up"
+    {
+     "ref": "EK1",
+     "what": "Review the onboarding and Welcome page text",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EK2",
+     "what": "Click Restart to Update on an older install (the laptop's 1.140.6 should offer 1.143.1): the first real click",
+     "since": "2026-11-19"
+    },
+    {
+     "ref": "EK3",
+     "what": "Close EDGEkit #7 (EDGEquest), left to the owner",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "EK4",
+     "what": "Code signing: the owner leans to a commercial certificate in Edgemodders' name, which needs Edgemodders registered as a company (a GitHub organization is not enough); decide when it comes up",
+     "since": "2026-11-18"
+    }
    ],
    "risks": [
     "The installer is not signed, so Windows SmartScreen may warn",
@@ -2807,6 +2985,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEchat",
+   "code": "EC",
+   "ownerSeq": 1,
    "group": "Specialist toolkits",
    "role": "The EDGE plugin for Claude Code: modding skills, commands and the EDGE MCP servers in one install",
    "stage": "released",
@@ -2913,7 +3093,11 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run the next release with Update Nexus Mods: the first since the move to the shared Nexus tool"
+    {
+     "ref": "EC1",
+     "what": "Run the next release with Update Nexus Mods: the first since the move to the shared Nexus tool",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "Two requests to list new servers have been open since 2026-11-04 and 2026-11-11",
@@ -2923,6 +3107,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "REDsave",
+   "code": "RS",
+   "ownerSeq": 2,
    "group": "Specialist toolkits",
    "role": "Save game manager: finds saves, keeps loadouts of saves outside the game, swaps them in and titles them",
    "stage": "released",
@@ -2981,8 +3167,16 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [],
    "ownerActions": [
-    "Upload the GitHub social preview, and set the Nexus tags by hand",
-    "Pick a next phase from the design's Later list, or leave it idle"
+    {
+     "ref": "RS1",
+     "what": "Upload the GitHub social preview, and set the Nexus tags by hand",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "RS2",
+     "what": "Pick a next phase from the design's Later list, or leave it idle",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "Plan complete and idle since 2026-11-08",
@@ -2991,6 +3185,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEfab",
+   "code": "EF",
+   "ownerSeq": 3,
    "group": "In development",
    "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next), added to a REDcode project or the EDGE Library",
    "stage": "released",
@@ -3150,9 +3346,21 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Nexus page 38605: add the video, fill its form fields and tags by hand (nexus/README.md lists them), and publish it if it is not live yet; the 0.2.0 file, changelog and description are on it",
-    "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
-    "Say whether EDGEfab keeps any single-clip animation editing (EDGEfab #7) now that it covers props and clothing only, beyond an animated prop's own clip"
+    {
+     "ref": "EF1",
+     "what": "Nexus page 38605: add the video, fill its form fields and tags by hand (nexus/README.md lists them), and publish it if it is not live yet; the 0.2.0 file, changelog and description are on it",
+     "since": "2026-11-22"
+    },
+    {
+     "ref": "EF2",
+     "what": "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
+     "since": "2026-11-18"
+    },
+    {
+     "ref": "EF3",
+     "what": "Say whether EDGEfab keeps any single-clip animation editing (EDGEfab #7) now that it covers props and clothing only, beyond an animated prop's own clip",
+     "since": "2026-11-22"
+    }
    ],
    "risks": [
     "The Nexus page is not live until the owner publishes it; the wiki says it opens soon",
@@ -3163,6 +3371,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEdir",
+   "code": "DR",
+   "ownerSeq": 12,
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
@@ -3373,42 +3583,58 @@ window.EDGE_STATUS = {
     {
      "id": "A",
      "feature": "The editor: timeline, play, save, the Desk (S1, S2)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "DR5",
+     "since": "2026-11-18"
     },
     {
      "id": "B",
      "feature": "Actors and animations (S3 to S7)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "DR6",
+     "since": "2026-11-18"
     },
     {
      "id": "C",
      "feature": "The 3D preview, transitions, sequences (S8 to S10)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "DR7",
+     "since": "2026-11-18"
     },
     {
      "id": "D",
      "feature": "Sets, what the game will not match, pins in the editor (S11, S12, S15)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "DR8",
+     "since": "2026-11-18"
     },
     {
      "id": "E",
      "feature": "EDGE Director in the game: open and play a scene (E1, E2, E3, E5 pass on 2026-11-20, the first run in the game; the rest not run)",
-     "status": "partly run"
+     "status": "partly run",
+     "ref": "DR9",
+     "since": "2026-11-20"
     },
     {
      "id": "F",
      "feature": "EDGE Director in the game: adjust a scene (10 steps)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "DR10",
+     "since": "2026-11-18"
     },
     {
      "id": "G",
      "feature": "EDGE Director in the game: pins (8 steps)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "DR11",
+     "since": "2026-11-18"
     },
     {
      "id": "H",
      "feature": "Weather: in the editor, then in the game (8 steps)",
-     "status": "not run"
+     "status": "not run",
+     "ref": "DR12",
+     "since": "2026-11-18"
     }
    ],
    "waitingOn": [
@@ -3444,10 +3670,26 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Run Tests E to H in the game with EDGE Director (docs/testing.md, The owner's tests)",
-    "Run Tests A to D in VS Code (docs/testing.md, The owner's tests)",
-    "GitHub: the social preview; create a Nexus page",
-    "Wiki screenshots: nine placeholders in EDGEdir's wiki section wait for shots from VS Code and the game (save them into EDGEweb's docs/assets/shots/inbox/)"
+    {
+     "ref": "DR1",
+     "what": "Run Tests E to H in the game with EDGE Director (docs/testing.md, The owner's tests)",
+     "since": "2026-11-18"
+    },
+    {
+     "ref": "DR2",
+     "what": "Run Tests A to D in VS Code (docs/testing.md, The owner's tests)",
+     "since": "2026-11-18"
+    },
+    {
+     "ref": "DR3",
+     "what": "GitHub: the social preview; create a Nexus page",
+     "since": "2026-11-18"
+    },
+    {
+     "ref": "DR4",
+     "what": "Wiki screenshots: nine placeholders in EDGEdir's wiki section wait for shots from VS Code and the game (save them into EDGEweb's docs/assets/shots/inbox/)",
+     "since": "2026-11-18"
+    }
    ],
    "risks": [
     "EDGE Director has run in the game only as far as playing one scene (2026-11-20). Pause and the last pose held (0.6.0), adjust, pins and the weather are untried there",
@@ -3463,6 +3705,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEmobile",
+   "code": "MB",
+   "ownerSeq": 4,
    "group": "In development",
    "role": "A phone OS for the game as REDnode apps, in game and on the player's real phone; includes the Chooms! social app",
    "stage": "in development",
@@ -3615,12 +3859,16 @@ window.EDGE_STATUS = {
     {
      "id": "iPhone",
      "feature": "Pairing and the installed loader on an iPhone",
-     "status": "not run"
+     "status": "not run",
+     "ref": "MB3",
+     "since": "2026-11-16"
     },
     {
      "id": "Lifepath",
      "feature": "The story read on a non-Corpo save",
-     "status": "not run"
+     "status": "not run",
+     "ref": "MB4",
+     "since": "2026-11-16"
     }
    ],
    "waitingOn": [
@@ -3631,8 +3879,16 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Create the Nexus pages for EDGEmobile and Chooms!",
-    "Drop photo mode pictures into Chooms!'s dossiers (chooms/dossiers/) when you have them (for C4)"
+    {
+     "ref": "MB1",
+     "what": "Create the Nexus pages for EDGEmobile and Chooms!",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "MB2",
+     "what": "Drop photo mode pictures into Chooms!'s dossiers (chooms/dossiers/) when you have them (for C4)",
+     "since": "2026-11-21"
+    }
    ],
    "risks": [
     "Never tested on an iPhone, only Android",
@@ -3644,6 +3900,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEmods",
+   "code": "MD",
+   "ownerSeq": 5,
    "group": "In development",
    "role": "The EDGE mod registry: mods in their authors' own git repos, a website and a planned extension",
    "stage": "early build",
@@ -3851,11 +4109,31 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Review and agree design draft 0.2 and the edgemods.json format",
-    "Decide the subscription price and the free download speed",
-    "Get a legal reading on non-commercial mod licences before launch",
-    "For the deploy: DNS for edgemods.ai and www, the production Auth0 tenant, the S3 bucket and its policy, the two shared secrets (docs/deploy.md, \"Before you start\")",
-    "Agree the drafted privacy and terms pages (/privacy, /terms) and fill their gaps: who runs EDGEmods, contact, log and backup days, minimum age, the law (Google sign-in needs them)"
+    {
+     "ref": "MD1",
+     "what": "Review and agree design draft 0.2 and the edgemods.json format",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "MD2",
+     "what": "Decide the subscription price and the free download speed",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "MD3",
+     "what": "Get a legal reading on non-commercial mod licences before launch",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "MD4",
+     "what": "For the deploy: DNS for edgemods.ai and www, the production Auth0 tenant, the S3 bucket and its policy, the two shared secrets (docs/deploy.md, \"Before you start\")",
+     "since": "2026-11-22"
+    },
+    {
+     "ref": "MD5",
+     "what": "Agree the drafted privacy and terms pages (/privacy, /terms) and fill their gaps: who runs EDGEmods, contact, log and backup days, minimum age, the law (Google sign-in needs them)",
+     "since": "2026-11-23"
+    }
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
@@ -3865,6 +4143,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEguide",
+   "code": "EG",
+   "ownerSeq": 1,
    "group": "In development",
    "role": "Lets Claude Code show a modder the EDGE tools in the editor: open views, select items, point at buttons",
    "stage": "scaffold",
@@ -3927,7 +4207,11 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Decide G0: the port, sign-in, which window answers, the contract's shape"
+    {
+     "ref": "EG1",
+     "what": "Decide G0: the port, sign-in, which window answers, the contract's shape",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "No code yet, and no commits since 2026-11-03: stalled on the owner's decisions"
@@ -3935,6 +4219,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "VATS",
+   "code": "VA",
+   "ownerSeq": 2,
    "group": "In development",
    "role": "A REDnode mod: body-part targeting with quickhacks or the smart gun while scanning, in slow motion",
    "stage": "early build",
@@ -4087,8 +4373,16 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Retest V13 and test PartLine in game",
-    "Decide the open design questions: duration clock, moving between enemies, zoom"
+    {
+     "ref": "VA1",
+     "what": "Retest V13 and test PartLine in game",
+     "since": "2026-11-16"
+    },
+    {
+     "ref": "VA2",
+     "what": "Decide the open design questions: duration clock, moving between enemies, zoom",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "One redscript compile error stops every script in the game; it happened on 2026-11-14",
@@ -4098,6 +4392,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGErepo",
+   "code": "ER",
+   "ownerSeq": 1,
    "group": "Shared",
    "role": "Shared scripts for the Edgemodders tools: today the Nexus Mods release tool, used at the tag v1",
    "stage": "released",
@@ -4144,7 +4440,11 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [],
    "ownerActions": [
-    "Approve any move of the v1 tag: it reaches every tool's next release"
+    {
+     "ref": "ER1",
+     "what": "Approve any move of the v1 tag: it reaches every tool's next release",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "Anyone who can move v1 can run code with the organization's Nexus key",
@@ -4153,6 +4453,8 @@ window.EDGE_STATUS = {
   },
   {
    "name": "EDGEweb",
+   "code": "WB",
+   "ownerSeq": 1,
    "group": "Shared",
    "role": "The website and wiki at edgemodders.ai, and this dashboard",
    "stage": "released",
@@ -4185,7 +4487,11 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
-    "Supply screenshots for the wiki placeholders still waiting"
+    {
+     "ref": "WB1",
+     "what": "Supply screenshots for the wiki placeholders still waiting",
+     "since": "2026-11-16"
+    }
    ],
    "risks": [
     "No wiki section yet for EDGEfab, EDGEdir, EDGEmobile or EDGEmods",
