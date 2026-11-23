@@ -1,5 +1,5 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
-window.EDGE_STATUS ={
+window.EDGE_STATUS = {
  "asOf": "2026-11-17",
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
@@ -1713,6 +1713,11 @@ window.EDGE_STATUS ={
       "status": "done"
      },
      {
+      "id": "PV",
+      "title": "Previews drawer (3D pictures of search results), the Library in a drawer, Drop at click crosshair and outline box (0.14.0)",
+      "status": "built, tests pending"
+     },
+     {
       "id": "B2d-2",
       "title": "Watch: re-import on save",
       "status": "planned"
@@ -1724,8 +1729,8 @@ window.EDGE_STATUS ={
      },
      {
       "id": "PP",
-      "title": "Project picker (REDcode #32)",
-      "status": "built, tests pending"
+      "title": "Project picker (REDcode #32), released in 0.13.2",
+      "status": "done"
      },
      {
       "id": "G0",
@@ -1792,11 +1797,19 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": "0.14.0",
     "needs": [
+     "0.14.0 in-game test: Previews, the Library drawer, Drop at click outline (15 steps, P1 to P4)",
      "G0's look in the game (the owner)",
      "The rest of G1 on the cosmic branch, then its merge into main"
     ]
    },
    "handTests": [
+    {
+     "name": "Previews, Library drawer, Drop at click outline (0.14.0, in game)",
+     "steps": 15,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (pictures for meshes and entities, turning, click to Drop at click, the Library drawer). The crosshair and the outline box need the game. In the EDGEdeck library, not deployed"
+    },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
      "steps": null,
@@ -1952,7 +1965,7 @@ window.EDGE_STATUS ={
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session (cosmic branch), 2026-11-23"
+   "checkedBy": "EDGEbuilder session, 2026-11-23"
   },
   {
    "name": "EDGEwave",
