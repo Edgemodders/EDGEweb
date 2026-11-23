@@ -1804,18 +1804,18 @@ window.EDGE_STATUS ={
      "note": "2026-11-22, offline half only: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene was refused without bounds. 2026-11-23: their second sample has bounds for their own files, and all 4,965 objects baked in 7.5 s. The look in the game is not run"
     },
     {
-     "name": "D2 Open, close, lock (0.13.0, in game)",
+     "name": "D2 Open, close, lock (0.13.0 and 0.13.1, in game)",
      "steps": 12,
-     "status": "not run",
+     "status": "failed",
      "ranBy": "owner",
-     "note": "Built 2026-11-20; smoke test only. In the EDGEdeck library, not deployed"
+     "note": "2026-11-23 on 0.13.0: steps 1 to 11 passed; step 12 failed: the elevator opened its door although Lock was on (an elevator force-unlocks its doors; only a seal holds). 0.13.1 seals an elevator's door on Lock; its retest R1 to R5 is not run"
     },
     {
-     "name": "S1 Sectors (0.13.0, in game)",
+     "name": "S1 Sectors (0.13.0 and 0.13.1, in game)",
      "steps": 11,
-     "status": "not run",
-     "ranBy": "owner",
-     "note": "Built 2026-11-20; checked against REDbridge 0.15.0 outside the game and in REDnode's host"
+     "status": "partly run",
+     "ranBy": "owner + Claude",
+     "note": "2026-11-23 on 0.13.0: the owner ran steps 1 to 10 (finding sectors: believed right; pick and outline mostly worked, sometimes no outline: to understand). Step 11 passed through REDnode's MCP server; the picked row was out of view, fixed in 0.13.1, retest not run"
     },
     {
      "name": "Project picker (0.13.0, with REDcode 0.10.15)",
@@ -1943,7 +1943,7 @@ window.EDGE_STATUS ={
    ],
    "ownerActions": [
     "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
-    "Test EDGEbuilder 0.13.0 in game (D2, S1 Sectors, the project picker): ask the EDGEbuilder session to deploy it",
+    "EDGEbuilder 0.13.1: deploy it (game closed), then retest the elevator door (D2 R1 to R5) and the drawer's scroll; say which Sector drawer entries got no outline; run the project picker test (5 steps)",
     "G0: look at the baked generated scene in the game, once 0.13.0's tests are done; and say whether to ask the team for their archives, so their own meshes draw too"
    ],
    "risks": [
