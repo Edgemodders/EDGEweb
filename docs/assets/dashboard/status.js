@@ -1818,11 +1818,11 @@ window.EDGE_STATUS ={
      "note": "Passed in game 2026-11-23 (the owner: all 11 steps). 0.13.1 scrolls the drawer to a picked row; a picked entry past the 300 rows shown was not shown, fixed in 0.13.2 (built, not deployed): one select call to check"
     },
     {
-     "name": "Project picker (0.13.0, with REDcode 0.10.15)",
+     "name": "Project picker (0.13.1, with REDcode 0.10.15)",
      "steps": 5,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Built 2026-11-20; checked in REDnode's host with REDcode's package and two scratch projects"
+     "note": "Passed in game 2026-11-23 on 0.13.1, all five steps. The owner asked for the bake list to name the project: \"Bakes for <project>\" in 0.13.2"
     },
     {
      "name": "Remove Doors 0.1.0 (in game)",
@@ -1943,7 +1943,7 @@ window.EDGE_STATUS ={
    ],
    "ownerActions": [
     "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
-    "EDGEbuilder 0.13.2: close the game so the session can deploy it, then run the project picker test (5 steps, two VS Code windows with a REDcode project each); the session checks the drawer with one select call. Then 0.13.2 can be released",
+    "EDGEbuilder 0.13.2: close the game so the session can deploy it; then look at the Bake tab's \"Bakes for <project>\" title, and the session checks the Sector drawer with one select call. Then say whether to release 0.13.2",
     "G0: look at the baked generated scene in the game, once 0.13.0's tests are done; and say whether to ask the team for their archives, so their own meshes draw too"
    ],
    "risks": [
