@@ -978,8 +978,13 @@ window.EDGE_STATUS ={
       "status": "planned"
      },
      {
+      "id": "GT",
+      "title": "Game tests by an assistant (docs/design/game-testing.md, agreed 2026-11-23): game_start, game_stop and game_status in redcode-mcp, built, not run against the game; loading a save, a session consent and input asked of REDnode (#57)",
+      "status": "built, tests pending"
+     },
+     {
       "id": "GV",
-      "title": "The game in an editor tab (docs/design/game-view.md, agreed 2026-11-22): spikes done with the owner; G2 Run Game in Tab built on REDcode's side against an interim script, hand test passed by the owner on 2026-11-23 (steps 1 to 8), two fixes wait on retests R1 and R2; next the swap to REDbridge window.* (built on its main, not released)",
+      "title": "The game in an editor tab (docs/design/game-view.md, agreed 2026-11-22): spikes done with the owner; G2 Run Game in Tab built on REDcode's side against an interim script, hand test passed by the owner on 2026-11-23 (steps 1 to 8), two fixes wait on retests R1 and R2; a Size selector through the redcode REDnode package 0.3.0 built the same day, not run (S1 to S5); next the swap to REDbridge window.* (built on its main, not released)",
       "status": "built, tests pending"
      }
     ]
@@ -1213,7 +1218,7 @@ window.EDGE_STATUS ={
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
     "Run retests R1 and R2 of Run Game in Tab (docs/testing.md): the release key while the game loads and in the main menu, and the status line below the game",
-    "Answer the two proposals of 2026-11-23: a resolution selector in the game tab, and what a Claude session needs to test the game"
+    "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md"
    ],
    "risks": [
     "REDbridge answers one call at a time"
