@@ -3707,7 +3707,7 @@ window.EDGE_STATUS ={
      "steps": null,
      "status": "not run",
      "ranBy": null,
-     "note": "Scripts written 2026-11-22, never run on a server; the server session does it when the owner says"
+     "note": "Not run on the server yet. Tried 2026-11-22 in an Amazon Linux 2023 container: install, update, roll-back, nginx -t, the index handover worked; certbot, Litestream and nginx downloads need the server. The server session does it when the owner says"
     }
    ],
    "ownerSpotTests": [],
