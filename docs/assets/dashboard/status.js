@@ -1491,7 +1491,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "No next version named; nothing unreleased",
+     "No next version named; unreleased, automated tests pass: installMods and edgemodsMods for the EDGEmods extension (EDGEdeck#16 parts 2 and 3), cyan Mods view icons while changes wait for a deploy",
      "M6's last part (requirements) waits on Nexus"
     ]
    },
@@ -1587,7 +1587,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEmods",
-     "what": "Its extension (R4), for EDGEdeck#16 parts 2 and 3 (installMods, edgemodsMods); part 1, the links, shipped in 0.33.0",
+     "what": "Its extension (R4c) to call installMods and edgemodsMods end to end; EDGEdeck#16 part 1 shipped in 0.33.0, parts 2 and 3 built on main",
      "ref": "EDGEdeck#16"
     }
    ],
@@ -1602,7 +1602,7 @@ window.EDGE_STATUS = {
     "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed in 0.33.0 (advisory GHSA-crv2-8m58-wxvv), players on older versions stay exposed until they update",
     "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
    ],
-   "checkedBy": "EDGEdeck session, 2026-11-21"
+   "checkedBy": "EDGEdeck session, 2026-11-23"
   },
   {
    "name": "EDGEbuilder",
