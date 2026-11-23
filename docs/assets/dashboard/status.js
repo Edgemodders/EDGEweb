@@ -1943,7 +1943,6 @@ window.EDGE_STATUS ={
    ],
    "ownerActions": [
     "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
-    "EDGEbuilder 0.13.2 is on GitHub, not on Nexus Mods yet: say whether to upload it to the Nexus page (36627)",
     "G0: look at the baked generated scene in the game (0.13's tests are done); the team was asked for their archives on 2026-11-23, and the look can start without them"
    ],
    "risks": [
