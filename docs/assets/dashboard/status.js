@@ -485,7 +485,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RA1",
      "what": "Decide whether and when to start C6 (REDagent in REDcode)",
-     "since": "2026-11-16"
+     "since": "2026-11-16",
+     "done": "2026-11-23",
+     "outcome": "Decided: go ahead with C6"
     }
    ],
    "risks": [
