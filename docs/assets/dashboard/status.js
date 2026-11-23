@@ -966,7 +966,7 @@ window.EDGE_STATUS ={
      },
      {
       "id": "GV",
-      "title": "The game in an editor tab: a docked window with a release key (docs/design/game-view.md, draft 0.2, agreed 2026-11-22: the helper in REDbridge); Spike 1 window control passed with the owner; G0 the webview lookup passed, two checks with the game running left; then G1",
+      "title": "The game in an editor tab: a docked window with a release key (docs/design/game-view.md, agreed 2026-11-22); spikes done with the owner (window control, the tab rectangle, a loop that keeps the game on a tab); G1 and G2 wait on REDbridge window.*",
       "status": "planned"
      }
     ]
@@ -1187,14 +1187,18 @@ window.EDGE_STATUS ={
      "who": "REDnode",
      "what": "#56 the overlay cursor in a windowed game follows the real pointer; the game in a tab (G2) needs it",
      "ref": "https://github.com/Edgemodders/REDnode/issues/56"
+    },
+    {
+     "who": "REDbridge",
+     "what": "#22 window.*: keep the game window docked on a webview tab; the game in a tab (G1, G2) needs it",
+     "ref": "https://github.com/Edgemodders/REDbridge/issues/22"
     }
    ],
    "ownerActions": [
     "Run the Animation Tools hand tests: AT2 in REDcode (about $1) and AT3, the pack in the game (about $2) (docs/testing.md); then say when the pack is released and make its Nexus page",
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
-    "Game in a tab, G0: start the game once more for two short checks (the tab rectangle by eye, a tab smaller than the game)"
+    "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)"
    ],
    "risks": [
     "REDbridge answers one call at a time"
