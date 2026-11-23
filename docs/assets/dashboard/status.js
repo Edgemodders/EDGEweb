@@ -1734,8 +1734,8 @@ window.EDGE_STATUS ={
      },
      {
       "id": "G1",
-      "title": "Generated scenes: the format contract and a command line (check, bake, game closed)",
-      "status": "planned"
+      "title": "Generated scenes: the format contract and a command line (check, bake, game closed); first slice built on the cosmic branch, not released",
+      "status": "in progress"
      },
      {
       "id": "B4-4",
@@ -1792,7 +1792,8 @@ window.EDGE_STATUS ={
    "nextRelease": {
     "version": "0.14.0",
     "needs": [
-     "G0's look in the game (the owner), then G1: the scene format contract and the command line"
+     "G0's look in the game (the owner)",
+     "The rest of G1 on the cosmic branch, then its merge into main"
     ]
    },
    "handTests": [
@@ -1951,7 +1952,7 @@ window.EDGE_STATUS ={
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-23"
+   "checkedBy": "EDGEbuilder session (cosmic branch), 2026-11-23"
   },
   {
    "name": "EDGEwave",
