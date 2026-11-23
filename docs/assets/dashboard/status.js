@@ -1783,7 +1783,7 @@ window.EDGE_STATUS ={
      "steps": null,
      "status": "partly run",
      "ranBy": "script + owner",
-     "note": "2026-11-22, offline half only: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene is refused until their archives or bounds arrive. The look in the game is not run"
+     "note": "2026-11-22, offline half only: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene was refused without bounds. 2026-11-23: their second sample has bounds for their own files, and all 4,965 objects baked in 7.5 s. The look in the game is not run"
     },
     {
      "name": "D2 Open, close, lock (0.13.0, in game)",
@@ -1921,17 +1921,12 @@ window.EDGE_STATUS ={
      "who": "REDcode",
      "what": "A plugin contract in its sector view, so EDGEbuilder for VS Code adds scenes on top of it (not urgent; REDcode's to design)",
      "ref": "REDcode #35"
-    },
-    {
-     "who": "The modding team",
-     "what": "Their mod archives, or bounds for their own meshes and entities, so their whole scene bakes for G0; and how their sectorHash is computed",
-     "ref": "docs/generated-scenes.md"
     }
    ],
    "ownerActions": [
     "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
     "Test EDGEbuilder 0.13.0 in game (D2, S1 Sectors, the project picker): ask the EDGEbuilder session to deploy it",
-    "G0: look at the baked generated scene in the game, once 0.13.0's tests are done and the team's archives or bounds are here"
+    "G0: look at the baked generated scene in the game, once 0.13.0's tests are done; and say whether to ask the team for their archives, so their own meshes draw too"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
@@ -1939,7 +1934,7 @@ window.EDGE_STATUS ={
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-22"
+   "checkedBy": "EDGEbuilder session, 2026-11-23"
   },
   {
    "name": "EDGEwave",
