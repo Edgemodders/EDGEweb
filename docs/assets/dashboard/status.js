@@ -1710,7 +1710,7 @@ window.EDGE_STATUS ={
      {
       "id": "D2",
       "title": "Open, close, lock a door",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "B2d-2",
@@ -1806,16 +1806,16 @@ window.EDGE_STATUS ={
     {
      "name": "D2 Open, close, lock (0.13.0 and 0.13.1, in game)",
      "steps": 12,
-     "status": "failed",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-23 on 0.13.0: steps 1 to 11 passed; step 12 failed: the elevator opened its door although Lock was on (an elevator force-unlocks its doors; only a seal holds). 0.13.1 seals an elevator's door on Lock; its retest R1 to R5 is not run"
+     "note": "Passed in game 2026-11-23: steps 1 to 11 on 0.13.0; step 12 failed there (an elevator force-unlocks its doors) and passed as R1 to R5 on 0.13.1, where Lock seals an elevator's door"
     },
     {
-     "name": "S1 Sectors (0.13.0 and 0.13.1, in game)",
+     "name": "S1 Sectors (0.13.0 to 0.13.2, in game)",
      "steps": 11,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner + Claude",
-     "note": "2026-11-23 on 0.13.0: the owner ran steps 1 to 10 (finding sectors: believed right; pick and outline mostly worked, sometimes no outline: to understand). Step 11 passed through REDnode's MCP server; the picked row was out of view, fixed in 0.13.1, retest not run"
+     "note": "Passed in game 2026-11-23 (the owner: all 11 steps). 0.13.1 scrolls the drawer to a picked row; a picked entry past the 300 rows shown was not shown, fixed in 0.13.2 (built, not deployed): one select call to check"
     },
     {
      "name": "Project picker (0.13.0, with REDcode 0.10.15)",
@@ -1943,7 +1943,7 @@ window.EDGE_STATUS ={
    ],
    "ownerActions": [
     "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
-    "EDGEbuilder 0.13.1: deploy it (game closed), then retest the elevator door (D2 R1 to R5) and the drawer's scroll; say which Sector drawer entries got no outline; run the project picker test (5 steps)",
+    "EDGEbuilder 0.13.2: close the game so the session can deploy it, then run the project picker test (5 steps, two VS Code windows with a REDcode project each); the session checks the drawer with one select call. Then 0.13.2 can be released",
     "G0: look at the baked generated scene in the game, once 0.13.0's tests are done; and say whether to ask the team for their archives, so their own meshes draw too"
    ],
    "risks": [
