@@ -451,16 +451,15 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C6",
-      "title": "REDagent and the editor: plan written 2026-11-23 (design.md, C6 plan), three options; recommended B, a handoff to Claude Code with EDGEchat (C6a to C6c, a few days)",
-      "status": "planned"
+      "title": "REDagent and the editor: option B chosen 2026-11-23 (a handoff to Claude Code with EDGEchat): C6a Continue in VS Code in progress, then C6b one source of knowledge, C6c REDagent's chats in REDcode",
+      "status": "in progress"
      }
     ]
    },
    "nextRelease": {
     "version": null,
     "needs": [
-     "Nothing unreleased",
-     "C6's option chosen by the owner (A, B or C)"
+     "C6a built and its in-game test, with EDGEchat's /edge:continue"
     ]
    },
    "handTests": [
@@ -492,14 +491,16 @@ window.EDGE_STATUS = {
     {
      "ref": "RA2",
      "what": "Choose C6's option: A a REDagent chat view in REDcode (2 to 3 weeks), B a handoff from REDagent to Claude Code with EDGEchat (a few days, recommended), or C drop it. REDagent's docs/design.md, \"C6 plan\"",
-     "since": "2026-11-23"
+     "since": "2026-11-23",
+     "done": "2026-11-23",
+     "outcome": "Chose B, a handoff from REDagent to Claude Code with EDGEchat; C6a under way"
     }
    ],
    "risks": [
     "EDGEmobile's Chooms! will need a choice of model in agent.ask for C3; no issue is filed for it yet",
     "A first question that reads the game cost about $0.45 on Opus"
    ],
-   "checkedBy": "REDnode session, 2026-11-23 (C6 plan written)"
+   "checkedBy": "REDnode session, 2026-11-23 (C6 option B chosen, C6a in progress)"
   },
   {
    "name": "REDnode",
@@ -1514,7 +1515,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RB3",
      "what": "Close REDbridge #15 and #16: both passed in the game 2026-11-08 (EDGEbuilder 0.8.1)",
-     "since": "2026-11-16"
+     "since": "2026-11-16",
+     "done": "2026-11-17",
+     "outcome": "Both closed on GitHub on 2026-11-17"
     }
    ],
    "risks": [
@@ -1522,7 +1525,7 @@ window.EDGE_STATUS = {
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta"
    ],
-   "checkedBy": "REDnode session, 2026-11-22 (#22 built on main)"
+   "checkedBy": "REDnode session, 2026-11-23 (RB3 found done)"
   },
   {
    "name": "EDGEdeck",
