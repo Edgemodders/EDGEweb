@@ -1559,7 +1559,7 @@ window.EDGE_STATUS ={
    ],
    "wiki": "wiki/edgebuilder/",
    "plan": {
-    "name": "Roadmap B0 to B7",
+    "name": "Roadmap B0 to B7, G0 to G3",
     "source": "docs/design.md, docs/index.md",
     "phases": [
      {
@@ -1668,6 +1668,21 @@ window.EDGE_STATUS ={
       "status": "built, tests pending"
      },
      {
+      "id": "G0",
+      "title": "Generated scenes probe: a 5,000-object scene baked and loaded (offline half done)",
+      "status": "in progress"
+     },
+     {
+      "id": "G1",
+      "title": "Generated scenes: the format contract and a command line (check, bake, game closed)",
+      "status": "planned"
+     },
+     {
+      "id": "B4-4",
+      "title": "Detail: a level-of-detail setting on baked meshes, after a probe",
+      "status": "planned"
+     },
+     {
       "id": "B3b",
       "title": "World objects, inspector",
       "status": "planned"
@@ -1684,7 +1699,17 @@ window.EDGE_STATUS ={
      },
      {
       "id": "B5",
-      "title": "Lights and more kinds",
+      "title": "Lights and more kinds, split by kind: B5-1 lights, B5-2 decals, B5-3 particles and fog, B5-4 colliders, B5-5 sounds",
+      "status": "planned"
+     },
+     {
+      "id": "G2",
+      "title": "Generated scenes: big scenes in an editor (in game or REDcode's sector view)",
+      "status": "planned"
+     },
+     {
+      "id": "G3",
+      "title": "Generated scenes: hand edits back as a diff",
       "status": "planned"
      },
      {
@@ -1711,6 +1736,13 @@ window.EDGE_STATUS ={
     ]
    },
    "handTests": [
+    {
+     "name": "G0 Generated scenes probe (offline bake, then in game)",
+     "steps": null,
+     "status": "partly run",
+     "ranBy": "script + owner",
+     "note": "2026-11-22, offline half only: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene is refused until their archives or bounds arrive. The look in the game is not run"
+    },
     {
      "name": "D2 Open, close, lock (0.13.0, in game)",
      "steps": 12,
@@ -1842,11 +1874,22 @@ window.EDGE_STATUS ={
      "who": "REDnode",
      "what": "An entity node shown again after a load brings back the working entity, not its proxy (not urgent)",
      "ref": "REDnode #52"
+    },
+    {
+     "who": "REDcode",
+     "what": "A plugin contract in its sector view, so EDGEbuilder for VS Code adds scenes on top of it (not urgent; REDcode's to design)",
+     "ref": "REDcode #35"
+    },
+    {
+     "who": "The modding team",
+     "what": "Their mod archives, or bounds for their own meshes and entities, so their whole scene bakes for G0; and how their sectorHash is computed",
+     "ref": "docs/generated-scenes.md"
     }
    ],
    "ownerActions": [
     "Add the EDGEmodders header to Remove Doors' nexus.png and upload it as its Nexus page's primary image; fill in the form from packs/remove-doors/nexus/README.md; add screenshots of the window",
-    "Test EDGEbuilder 0.13.0 in game (D2, S1 Sectors, the project picker): ask the EDGEbuilder session to deploy it"
+    "Test EDGEbuilder 0.13.0 in game (D2, S1 Sectors, the project picker): ask the EDGEbuilder session to deploy it",
+    "G0: look at the baked generated scene in the game, once 0.13.0's tests are done and the team's archives or bounds are here"
    ],
    "risks": [
     "Import is slow: about 2 minutes for a 4096 px model",
@@ -1854,7 +1897,7 @@ window.EDGE_STATUS ={
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-20"
+   "checkedBy": "EDGEbuilder session, 2026-11-22"
   },
   {
    "name": "EDGEwave",
