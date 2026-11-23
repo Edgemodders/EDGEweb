@@ -1714,7 +1714,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "PV",
-      "title": "Previews drawer (3D pictures of search results), the Library in a drawer, Drop at click crosshair and outline box (0.14.0)",
+      "title": "Explorer (game folders, mods, project, people, with a 3D preview and Drop), Previews drawer, the Library in a drawer, Drop at click crosshair and the object's own outline (0.14.0)",
       "status": "built, tests pending"
      },
      {
@@ -1797,18 +1797,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.14.0",
     "needs": [
-     "0.14.0 in-game test: Previews, the Library drawer, Drop at click outline (15 steps, P1 to P4)",
+     "0.14.0 in-game test: Previews, the Explorer, the Library drawer, Drop at click outline (24 steps, P1 to P5)",
      "G0's look in the game (the owner)",
      "The rest of G1 on the cosmic branch, then its merge into main"
     ]
    },
    "handTests": [
     {
-     "name": "Previews, Library drawer, Drop at click outline (0.14.0, in game)",
-     "steps": 15,
+     "name": "Previews, Explorer, Library drawer, Drop at click outline (0.14.0, in game)",
+     "steps": 24,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (pictures for meshes and entities, turning, click to Drop at click, the Library drawer). The crosshair and the outline box need the game. In the EDGEdeck library, not deployed"
+     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Library drawer). The crosshair and the object's outline need the game. In the EDGEdeck library (on), not deployed"
     },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
