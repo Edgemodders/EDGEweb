@@ -979,7 +979,7 @@ window.EDGE_STATUS ={
      },
      {
       "id": "GV",
-      "title": "The game in an editor tab (docs/design/game-view.md, agreed 2026-11-22): spikes done with the owner; G2 Run Game in Tab built on REDcode's side against an interim script, hand test not run; the real helper waits on REDbridge window.*",
+      "title": "The game in an editor tab (docs/design/game-view.md, agreed 2026-11-22): spikes done with the owner; G2 Run Game in Tab built on REDcode's side against an interim script, hand test passed by the owner on 2026-11-23 (steps 1 to 8), two fixes wait on retests R1 and R2; next the swap to REDbridge window.* (built on its main, not released)",
       "status": "built, tests pending"
      }
     ]
@@ -1212,12 +1212,13 @@ window.EDGE_STATUS ={
     "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
     "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
     "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
-    "Run the hand test Run Game in Tab (docs/testing.md), 8 steps, with F5"
+    "Run retests R1 and R2 of Run Game in Tab (docs/testing.md): the release key while the game loads and in the main menu, and the status line below the game",
+    "Answer the two proposals of 2026-11-23: a resolution selector in the game tab, and what a Claude session needs to test the game"
    ],
    "risks": [
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-22"
+   "checkedBy": "REDcode session, 2026-11-23"
   },
   {
    "name": "REDbridge",
