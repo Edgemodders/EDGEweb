@@ -664,18 +664,18 @@ window.EDGE_STATUS = {
      },
      {
       "id": "WL",
-      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3): REDnode 0.70.0",
-      "status": "built, tests pending"
+      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3): passed in game with REDnode 0.70.0 (2026-11-23)",
+      "status": "done"
      },
      {
       "id": "#47",
-      "title": "V as an actor: the spike (a workspot on the real V, third person, a dressed copy of V) and game.player.body(), in REDnode 0.70.0",
-      "status": "built, tests pending"
+      "title": "V as an actor, the spike: answered in game 2026-11-23 (REDnode 0.70.0): the real V plays the game's player workspots; NPC clips do not play on V; the photo mode copy spawned as a plain entity crashes the game (a copy is left for the scene spike)",
+      "status": "done"
      },
      {
       "id": "#56",
-      "title": "The overlay cursor follows the Windows pointer in a windowed game, for REDcode's Game view: REDnode 0.70.0",
-      "status": "built, tests pending"
+      "title": "The overlay cursor follows the Windows pointer in a windowed game, for REDcode's Game view: passed in game with REDnode 0.70.0 (2026-11-23)",
+      "status": "done"
      },
      {
       "id": "SC1",
@@ -732,33 +732,30 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.70.0",
     "needs": [
-     "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)",
-     "#47's spike (0.70.0): its in-game test (17 steps)",
-     "Tooltips on ui controls (#55, 0.70.0): its in-game test (6 steps)",
-     "The cursor in a windowed game (#56, 0.70.0): its in-game test (7 steps)"
+     "The owner's call on #47's spike: partly run (its Spawn the copy crashes the game). The spike is not in the player zip, so the release gate turns on whether a spike's own crash counts"
     ]
    },
    "handTests": [
     {
      "name": "Tooltips on ui controls (#55), REDnode 0.70.0",
      "steps": 6,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Built 2026-11-22 for REDcode's Animation Tools pack; mock check (16, dev and packaged host) passed"
+     "note": "Passed in game 2026-11-23 (dev PC), all 6 steps; #55 closed"
     },
     {
      "name": "V as an actor (#47), REDnode 0.70.0",
      "steps": 17,
-     "status": "not run",
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "Built 2026-11-22; stand-in check (26) passed; spike 0.2.0 adds REDcode's written workspots on V"
+     "note": "Run 2026-11-23 with spike 0.2.1: the real V plays the game's player workspots in first person; NPC clips give a T pose; Spawn the copy (the photo mode puppet as a plain entity) crashed the game, so steps 9 to 11 and 16 were not run. The spike is not in the player zip"
     },
     {
      "name": "The WL build, REDnode 0.70.0",
      "steps": 8,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Built 2026-11-21; plain check (32) and mock check (25, dev and packaged host) passed"
+     "note": "Passed in game 2026-11-23 (dev PC), all 8 steps, Claude driving the calls; #49 closed"
     },
     {
      "name": "Hide on a click in the game, REDnode 0.69.0",
@@ -861,9 +858,9 @@ window.EDGE_STATUS = {
     {
      "name": "The cursor in a windowed game (#56), 0.70.0",
      "steps": 7,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Built 2026-11-22; not checkable in the mock game"
+     "note": "Passed in game 2026-11-23 (dev PC), all 7 steps; #56 closed"
     }
    ],
    "ownerSpotTests": [],
@@ -892,14 +889,16 @@ window.EDGE_STATUS = {
     {
      "ref": "RN3",
      "what": "Run REDnode 0.70.0's four in-game tests in one session (deployed to the dev PC on 2026-11-23): the WL build, #47's spike, tooltips (#55), the windowed cursor (#56); Claude drives the WL test's calls",
-     "since": "2026-11-23"
+     "since": "2026-11-23",
+     "done": "2026-11-23",
+     "outcome": "Run: WL, tooltips (#55) and the windowed cursor (#56) passed; #47's spike answered its question, its copy step crashed the game"
     }
    ],
    "risks": [
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
     "Four requests from other tools are open on it: #24, #39, #46, #47"
    ],
-   "checkedBy": "REDnode session, 2026-11-23 (0.70.0 deployed; order after WL agreed)"
+   "checkedBy": "REDnode session, 2026-11-23 (0.70.0's in-game run)"
   },
   {
    "name": "REDcode",
