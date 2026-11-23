@@ -2410,13 +2410,7 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerSpotTests": [],
-   "waitingOn": [
-    {
-     "who": "REDcode",
-     "what": "Light and reflections in the 3D view (an environment, tone mapping, a light control), so shine and dark materials show; filed 2026-11-18. REDcode #31 is closed now (seen 2026-11-23): for EDGEmat's session to confirm and remove",
-     "ref": "REDcode #31"
-    }
-   ],
+   "waitingOn": [],
    "ownerActions": [
     {
      "ref": "EM1",
@@ -2449,7 +2443,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-22 (0.3.4 released in the joint K4d release, run 45083176318, every step green; the wiki follows 0.3.4; next: part commands for game meshes on the Desk)"
+   "checkedBy": "EDGEmat session, 2026-11-23 (0.3.4 released 2026-11-22; REDcode #31 shipped in REDcode 0.10.15, so EDGEmat waits on nothing; next: part commands for game meshes on the Desk, then shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
