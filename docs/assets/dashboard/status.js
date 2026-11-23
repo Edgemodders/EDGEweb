@@ -489,370 +489,370 @@ window.EDGE_STATUS ={
    "checkedBy": "REDnode session, 2026-11-16"
   },
   {
-    "name": "REDnode",
-    "group": "Core toolkits",
-    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
-    "stage": "released",
-    "version": "0.69.0",
-    "lastTag": "v0.65.3",
-    "lastTagDate": "2026-11-15",
-    "lastCommit": "2026-11-16",
-    "commitsSinceTag": 34,
-    "sessions": [
-      "REDnode, EDGEHack & REDagent",
-      "rednode-95"
-    ],
-    "wiki": "wiki/rednode/",
-    "plan": {
-      "name": "Roadmap: overlay, world, sound, TweakDB, ink, services, and requests from other tools",
-      "source": "docs/index.md, docs/testing.md",
-      "phases": [
-        {
-          "id": "P0-P1",
-          "title": "Research and proof",
-          "status": "done"
-        },
-        {
-          "id": "O1-O6",
-          "title": "Overlay windows, UI kit, apps, HUD, performance",
-          "status": "done"
-        },
-        {
-          "id": "O7",
-          "title": "Display",
-          "status": "planned"
-        },
-        {
-          "id": "O8-O12",
-          "title": "Mod Manager, Debugger, Layers, Spaces, Console",
-          "status": "done"
-        },
-        {
-          "id": "W1-W3",
-          "title": "World API, packaging, REDbridge for players",
-          "status": "done"
-        },
-        {
-          "id": "T1-T2",
-          "title": "TweakDB read and write",
-          "status": "done"
-        },
-        {
-          "id": "T3",
-          "title": "TweakDB offline reads through REDbridge",
-          "status": "planned"
-        },
-        {
-          "id": "S1",
-          "title": "Sound: play",
-          "status": "done"
-        },
-        {
-          "id": "S2",
-          "title": "Sound: space",
-          "status": "planned"
-        },
-        {
-          "id": "SP1-SP4",
-          "title": "Sound Tools app pack",
-          "status": "done"
-        },
-        {
-          "id": "H1-H3",
-          "title": "Archive hot swap and REDswap",
-          "status": "done"
-        },
-        {
-          "id": "I1-I2d",
-          "title": "Native game UI (ink) API",
-          "status": "done"
-        },
-        {
-          "id": "I3",
-          "title": "Input: the controller is the first piece",
-          "status": "in progress"
-        },
-        {
-          "id": "UT1-UT3",
-          "title": "UI Tools pack",
-          "status": "done"
-        },
-        {
-          "id": "SV1-SV3",
-          "title": "Mod services",
-          "status": "done"
-        },
-        {
-          "id": "Q-A",
-          "title": "Quest API",
-          "status": "done"
-        },
-        {
-          "id": "G1",
-          "title": "Game 2.5 port",
-          "status": "done"
-        },
-        {
-          "id": "WP1-WP3",
-          "title": "World pins",
-          "status": "done"
-        },
-        {
-          "id": "S24",
-          "title": "World node registry spike (#24)",
-          "status": "done"
-        },
-        {
-          "id": "N2",
-          "title": "World nodes, full (#24)",
-          "status": "planned"
-        },
-        {
-          "id": "A1-A2",
-          "title": "Animations on spawned people (#39)",
-          "status": "done"
-        },
-        {
-          "id": "#46a",
-          "title": "Written workspots, for EDGEdir",
-          "status": "done"
-        },
-        {
-          "id": "#46b",
-          "title": "Weather API, for EDGEdir: passed in game (0.67.2: giving it back blends back to the weather from before)",
-          "status": "done"
-        },
-        {
-          "id": "#46c",
-          "title": "Blend at a workspot jump, for EDGEdir's D4 and D5",
-          "status": "planned"
-        },
-        {
-          "id": "L1-L3",
-          "title": "Localization",
-          "status": "planned"
-        },
-        {
-          "id": "AK",
-          "title": "App keys: passed in game with 0.67.1 (a full-screen app keeps its view, the key hides its panels)",
-          "status": "done"
-        },
-        {
-          "id": "PM",
-          "title": "Hide in the pause menu (on by default, F10 still works there) and the launcher's filter taking the keyboard: passed in game (0.67.3)",
-          "status": "done"
-        },
-        {
-          "id": "DD",
-          "title": "Dropdown: rn-select in the UI kit and ui.select: passed in game (0.68.0)",
-          "status": "done"
-        },
-        {
-          "id": "ML",
-          "title": "The Mod log window resizable (REDnode 0.68.1)",
-          "status": "done"
-        },
-        {
-          "id": "TV",
-          "title": "Each app's version beside its title, with the launcher's Versions in title bars switch (REDnode 0.68.2)",
-          "status": "done"
-        },
-        {
-          "id": "HC",
-          "title": "Hide on a click in the game, a launcher switch: passed in game, released in 0.69.0 (2026-11-21)",
-          "status": "done"
-        },
-        {
-          "id": "WL",
-          "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3): REDnode 0.70.0",
-          "status": "built, tests pending"
-        },
-        {
-          "id": "#47",
-          "title": "V as an actor: the spike (a workspot on the real V, third person, a dressed copy of V) and game.player.body(), in REDnode 0.70.0",
-          "status": "built, tests pending"
-        },
-        {
-          "id": "#56",
-          "title": "The overlay cursor follows the Windows pointer in a windowed game, for REDcode's Game view: REDnode 0.70.0",
-          "status": "built, tests pending"
-        },
-        {
-          "id": "SC1",
-          "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL",
-          "status": "planned"
-        },
-        {
-          "id": "SN0-SN5",
-          "title": "Semi-native overlay apps",
-          "status": "planned"
-        },
-        {
-          "id": "P2",
-          "title": "Tier 2",
-          "status": "in progress"
-        },
-        {
-          "id": "P3-P4",
-          "title": "Rules, and sync interceptors",
-          "status": "planned"
-        }
-      ]
+   "name": "REDnode",
+   "group": "Core toolkits",
+   "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
+   "stage": "released",
+   "version": "0.69.0",
+   "lastTag": "v0.65.3",
+   "lastTagDate": "2026-11-15",
+   "lastCommit": "2026-11-16",
+   "commitsSinceTag": 34,
+   "sessions": [
+    "REDnode, EDGEHack & REDagent",
+    "rednode-95"
+   ],
+   "wiki": "wiki/rednode/",
+   "plan": {
+    "name": "Roadmap: overlay, world, sound, TweakDB, ink, services, and requests from other tools",
+    "source": "docs/index.md, docs/testing.md",
+    "phases": [
+     {
+      "id": "P0-P1",
+      "title": "Research and proof",
+      "status": "done"
+     },
+     {
+      "id": "O1-O6",
+      "title": "Overlay windows, UI kit, apps, HUD, performance",
+      "status": "done"
+     },
+     {
+      "id": "O7",
+      "title": "Display",
+      "status": "planned"
+     },
+     {
+      "id": "O8-O12",
+      "title": "Mod Manager, Debugger, Layers, Spaces, Console",
+      "status": "done"
+     },
+     {
+      "id": "W1-W3",
+      "title": "World API, packaging, REDbridge for players",
+      "status": "done"
+     },
+     {
+      "id": "T1-T2",
+      "title": "TweakDB read and write",
+      "status": "done"
+     },
+     {
+      "id": "T3",
+      "title": "TweakDB offline reads through REDbridge",
+      "status": "planned"
+     },
+     {
+      "id": "S1",
+      "title": "Sound: play",
+      "status": "done"
+     },
+     {
+      "id": "S2",
+      "title": "Sound: space",
+      "status": "planned"
+     },
+     {
+      "id": "SP1-SP4",
+      "title": "Sound Tools app pack",
+      "status": "done"
+     },
+     {
+      "id": "H1-H3",
+      "title": "Archive hot swap and REDswap",
+      "status": "done"
+     },
+     {
+      "id": "I1-I2d",
+      "title": "Native game UI (ink) API",
+      "status": "done"
+     },
+     {
+      "id": "I3",
+      "title": "Input: the controller is the first piece",
+      "status": "in progress"
+     },
+     {
+      "id": "UT1-UT3",
+      "title": "UI Tools pack",
+      "status": "done"
+     },
+     {
+      "id": "SV1-SV3",
+      "title": "Mod services",
+      "status": "done"
+     },
+     {
+      "id": "Q-A",
+      "title": "Quest API",
+      "status": "done"
+     },
+     {
+      "id": "G1",
+      "title": "Game 2.5 port",
+      "status": "done"
+     },
+     {
+      "id": "WP1-WP3",
+      "title": "World pins",
+      "status": "done"
+     },
+     {
+      "id": "S24",
+      "title": "World node registry spike (#24)",
+      "status": "done"
+     },
+     {
+      "id": "N2",
+      "title": "World nodes, full (#24)",
+      "status": "planned"
+     },
+     {
+      "id": "A1-A2",
+      "title": "Animations on spawned people (#39)",
+      "status": "done"
+     },
+     {
+      "id": "#46a",
+      "title": "Written workspots, for EDGEdir",
+      "status": "done"
+     },
+     {
+      "id": "#46b",
+      "title": "Weather API, for EDGEdir: passed in game (0.67.2: giving it back blends back to the weather from before)",
+      "status": "done"
+     },
+     {
+      "id": "#46c",
+      "title": "Blend at a workspot jump, for EDGEdir's D4 and D5",
+      "status": "planned"
+     },
+     {
+      "id": "L1-L3",
+      "title": "Localization",
+      "status": "planned"
+     },
+     {
+      "id": "AK",
+      "title": "App keys: passed in game with 0.67.1 (a full-screen app keeps its view, the key hides its panels)",
+      "status": "done"
+     },
+     {
+      "id": "PM",
+      "title": "Hide in the pause menu (on by default, F10 still works there) and the launcher's filter taking the keyboard: passed in game (0.67.3)",
+      "status": "done"
+     },
+     {
+      "id": "DD",
+      "title": "Dropdown: rn-select in the UI kit and ui.select: passed in game (0.68.0)",
+      "status": "done"
+     },
+     {
+      "id": "ML",
+      "title": "The Mod log window resizable (REDnode 0.68.1)",
+      "status": "done"
+     },
+     {
+      "id": "TV",
+      "title": "Each app's version beside its title, with the launcher's Versions in title bars switch (REDnode 0.68.2)",
+      "status": "done"
+     },
+     {
+      "id": "HC",
+      "title": "Hide on a click in the game, a launcher switch: passed in game, released in 0.69.0 (2026-11-21)",
+      "status": "done"
+     },
+     {
+      "id": "WL",
+      "title": "world.load kinds and skip filters, the editor channel's service call (#48, #49), with a pin's id and facing (#50 part 3): REDnode 0.70.0",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "#47",
+      "title": "V as an actor: the spike (a workspot on the real V, third person, a dressed copy of V) and game.player.body(), in REDnode 0.70.0",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "#56",
+      "title": "The overlay cursor follows the Windows pointer in a windowed game, for REDcode's Game view: REDnode 0.70.0",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "SC1",
+      "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL",
+      "status": "planned"
+     },
+     {
+      "id": "SN0-SN5",
+      "title": "Semi-native overlay apps",
+      "status": "planned"
+     },
+     {
+      "id": "P2",
+      "title": "Tier 2",
+      "status": "in progress"
+     },
+     {
+      "id": "P3-P4",
+      "title": "Rules, and sync interceptors",
+      "status": "planned"
+     }
+    ]
+   },
+   "nextRelease": {
+    "version": "0.70.0",
+    "needs": [
+     "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)",
+     "#47's spike (0.70.0): its in-game test (17 steps)",
+     "Tooltips on ui controls (#55, 0.70.0): its in-game test (6 steps)",
+     "The cursor in a windowed game (#56, 0.70.0): its in-game test (7 steps)"
+    ]
+   },
+   "handTests": [
+    {
+     "name": "Tooltips on ui controls (#55), REDnode 0.70.0",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-22 for REDcode's Animation Tools pack; mock check (16, dev and packaged host) passed"
     },
-    "nextRelease": {
-      "version": "0.70.0",
-      "needs": [
-        "The WL build (0.70.0): its in-game test (8 steps; Claude drives the editor calls and scene loads)",
-        "#47's spike (0.70.0): its in-game test (17 steps)",
-        "Tooltips on ui controls (#55, 0.70.0): its in-game test (6 steps)",
-        "The cursor in a windowed game (#56, 0.70.0): its in-game test (7 steps)"
-      ]
+    {
+     "name": "V as an actor (#47), REDnode 0.70.0",
+     "steps": 17,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-22; stand-in check (26) passed; spike 0.2.0 adds REDcode's written workspots on V"
     },
-    "handTests": [
-      {
-        "name": "Tooltips on ui controls (#55), REDnode 0.70.0",
-        "steps": 6,
-        "status": "not run",
-        "ranBy": "owner",
-        "note": "Built 2026-11-22 for REDcode's Animation Tools pack; mock check (16, dev and packaged host) passed"
-      },
-      {
-        "name": "V as an actor (#47), REDnode 0.70.0",
-        "steps": 17,
-        "status": "not run",
-        "ranBy": "owner",
-        "note": "Built 2026-11-22; stand-in check (26) passed; spike 0.2.0 adds REDcode's written workspots on V"
-      },
-      {
-        "name": "The WL build, REDnode 0.70.0",
-        "steps": 8,
-        "status": "not run",
-        "ranBy": "owner",
-        "note": "Built 2026-11-21; plain check (32) and mock check (25, dev and packaged host) passed"
-      },
-      {
-        "name": "Hide on a click in the game, REDnode 0.69.0",
-        "steps": 6,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-21, dev PC, 0.69.0, all six steps"
-      },
-      {
-        "name": "Versions in title bars, REDnode 0.68.2",
-        "steps": 5,
-        "status": "passed",
-        "ranBy": null,
-        "note": "2026-11-19, laptop, 0.68.2"
-      },
-      {
-        "name": "The Mod log resizable, REDnode 0.68.1",
-        "steps": 4,
-        "status": "passed",
-        "ranBy": null,
-        "note": "2026-11-19, laptop, 0.68.2"
-      },
-      {
-        "name": "The dropdown, REDnode 0.68.0",
-        "steps": 9,
-        "status": "passed",
-        "ranBy": null,
-        "note": "2026-11-18, dev PC, all steps"
-      },
-      {
-        "name": "App keys, REDnode 0.67.0",
-        "steps": 9,
-        "status": "passed",
-        "ranBy": null,
-        "note": "2026-11-18 on 0.67.1 (0.67.0 failed step 4)"
-      },
-      {
-        "name": "Weather (#46), REDnode 0.66.10",
-        "steps": 10,
-        "status": "passed",
-        "ranBy": null,
-        "note": "2026-11-18: 0.67.0 all but step 9; 0.67.2's retest of giving it back passed"
-      },
-      {
-        "name": "Update REDbridge while it runs (W3 retest)",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "Fixed in 0.67.0; passed its retest on 2026-11-18 with REDbridge 0.14.0 running"
-      },
-      {
-        "name": "A written workspot: the call (#46), 0.66.9",
-        "steps": 6,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-16"
-      },
-      {
-        "name": "A2 animations on a spawned person (#39), 0.66.8",
-        "steps": 9,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "Steps 1 to 8 passed 2026-11-16; step 9, the MCP route, passed 2026-11-18"
-      },
-      {
-        "name": "S24 world node registry (#24), 0.66.7",
-        "steps": 11,
-        "status": "partly run",
-        "ranBy": "owner",
-        "note": "Passed except the street lamp (an entity node), moved to N2 by the owner on 2026-11-18"
-      },
-      {
-        "name": "Calls from mods (#22), 0.66.7",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-15"
-      },
-      {
-        "name": "The controller (0.65.1)",
-        "steps": 7,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-15, Xbox pad"
-      },
-      {
-        "name": "The pause menu and the launcher's filter, REDnode 0.67.2",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-18: 0.67.2 failed step 6 (every other open), 0.67.3 passed; the filter passed on 0.67.2"
-      },
-      {
-        "name": "world.jumpWorkspot answering false outside a workspot",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-18"
-      },
-      {
-        "name": "The cursor in a windowed game (#56), 0.70.0",
-        "steps": 7,
-        "status": "not run",
-        "ranBy": "owner",
-        "note": "Built 2026-11-22; not checkable in the mock game"
-      }
-    ],
-    "ownerSpotTests": [],
-    "waitingOn": [
-      {
-        "who": "owner",
-        "what": "Talk through semi-native apps before its first spike starts",
-        "ref": "docs/semi-native.md"
-      }
-    ],
-    "ownerActions": [
-      "Agree the order after the WL build (Console resizing, N2 and others are asked for, not built)",
-      "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)"
-    ],
-    "risks": [
-      "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
-      "Four requests from other tools are open on it: #24, #39, #46, #47"
-    ],
-    "checkedBy": "REDnode session, 2026-11-22 (#56 built in 0.70.0)"
+    {
+     "name": "The WL build, REDnode 0.70.0",
+     "steps": 8,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-21; plain check (32) and mock check (25, dev and packaged host) passed"
+    },
+    {
+     "name": "Hide on a click in the game, REDnode 0.69.0",
+     "steps": 6,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-21, dev PC, 0.69.0, all six steps"
+    },
+    {
+     "name": "Versions in title bars, REDnode 0.68.2",
+     "steps": 5,
+     "status": "passed",
+     "ranBy": null,
+     "note": "2026-11-19, laptop, 0.68.2"
+    },
+    {
+     "name": "The Mod log resizable, REDnode 0.68.1",
+     "steps": 4,
+     "status": "passed",
+     "ranBy": null,
+     "note": "2026-11-19, laptop, 0.68.2"
+    },
+    {
+     "name": "The dropdown, REDnode 0.68.0",
+     "steps": 9,
+     "status": "passed",
+     "ranBy": null,
+     "note": "2026-11-18, dev PC, all steps"
+    },
+    {
+     "name": "App keys, REDnode 0.67.0",
+     "steps": 9,
+     "status": "passed",
+     "ranBy": null,
+     "note": "2026-11-18 on 0.67.1 (0.67.0 failed step 4)"
+    },
+    {
+     "name": "Weather (#46), REDnode 0.66.10",
+     "steps": 10,
+     "status": "passed",
+     "ranBy": null,
+     "note": "2026-11-18: 0.67.0 all but step 9; 0.67.2's retest of giving it back passed"
+    },
+    {
+     "name": "Update REDbridge while it runs (W3 retest)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Fixed in 0.67.0; passed its retest on 2026-11-18 with REDbridge 0.14.0 running"
+    },
+    {
+     "name": "A written workspot: the call (#46), 0.66.9",
+     "steps": 6,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-16"
+    },
+    {
+     "name": "A2 animations on a spawned person (#39), 0.66.8",
+     "steps": 9,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Steps 1 to 8 passed 2026-11-16; step 9, the MCP route, passed 2026-11-18"
+    },
+    {
+     "name": "S24 world node registry (#24), 0.66.7",
+     "steps": 11,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Passed except the street lamp (an entity node), moved to N2 by the owner on 2026-11-18"
+    },
+    {
+     "name": "Calls from mods (#22), 0.66.7",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-15"
+    },
+    {
+     "name": "The controller (0.65.1)",
+     "steps": 7,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-15, Xbox pad"
+    },
+    {
+     "name": "The pause menu and the launcher's filter, REDnode 0.67.2",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-18: 0.67.2 failed step 6 (every other open), 0.67.3 passed; the filter passed on 0.67.2"
+    },
+    {
+     "name": "world.jumpWorkspot answering false outside a workspot",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-18"
+    },
+    {
+     "name": "The cursor in a windowed game (#56), 0.70.0",
+     "steps": 7,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-22; not checkable in the mock game"
+    }
+   ],
+   "ownerSpotTests": [],
+   "waitingOn": [
+    {
+     "who": "owner",
+     "what": "Talk through semi-native apps before its first spike starts",
+     "ref": "docs/semi-native.md"
+    }
+   ],
+   "ownerActions": [
+    "Agree the order after the WL build (Console resizing, N2 and others are asked for, not built)",
+    "Remove packs/admin-tools/apps from the dev PC's development folders when convenient (Admin Tools 0.2.0 is released)"
+   ],
+   "risks": [
+    "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
+    "Four requests from other tools are open on it: #24, #39, #46, #47"
+   ],
+   "checkedBy": "REDnode session, 2026-11-22 (#56 built in 0.70.0)"
   },
   {
    "name": "REDcode",
@@ -1219,200 +1219,200 @@ window.EDGE_STATUS ={
    "checkedBy": "REDcode session, 2026-11-22"
   },
   {
-    "name": "REDbridge",
-    "group": "Core toolkits",
-    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
-    "stage": "released",
-    "version": "0.19.0",
-    "lastTag": "v0.14.0",
-    "lastTagDate": "2026-11-16",
-    "lastCommit": "2026-11-16",
-    "commitsSinceTag": 0,
-    "sessions": [
-      "REDnode, EDGEHack & REDagent"
-    ],
-    "wiki": "wiki/redbridge/",
-    "plan": {
-      "name": "The bridge side of REDcode's roadmap, and requests from other tools",
-      "source": "docs/index.md",
-      "phases": [
-        {
-          "id": "C0",
-          "title": "Decide",
-          "status": "done"
-        },
-        {
-          "id": "C1",
-          "title": "Bridge MVP",
-          "status": "done"
-        },
-        {
-          "id": "C2",
-          "title": "Browse",
-          "status": "done"
-        },
-        {
-          "id": "C3",
-          "title": "Edit: document sessions",
-          "status": "done"
-        },
-        {
-          "id": "C4",
-          "title": "Ship: pack, export, import",
-          "status": "done"
-        },
-        {
-          "id": "C5",
-          "title": "View: sound, tweakdb, loc, mesh items",
-          "status": "done"
-        },
-        {
-          "id": "2.5",
-          "title": "Game 2.5, on WolvenKit 10.0.0-beta.1",
-          "status": "done"
-        },
-        {
-          "id": "#14",
-          "title": "Animations: export with rigs (0.13.0), anims.info (0.14.0), .anims import (0.15.0) done; rig import parked until EDGEfab's F7a",
-          "status": "in progress"
-        },
-        {
-          "id": "#18",
-          "title": "sector.build removals (ArchiveXL node deletions of entries, with an entity's proxy meshes) for EDGEbuilder's doors; passed in game with EDGEbuilder's D1b; released in 0.16.0 on 2026-11-19",
-          "status": "done"
-        },
-        {
-          "id": "Linux",
-          "title": "Linux build (not scheduled)",
-          "status": "planned"
-        },
-        {
-          "id": "#19",
-          "title": "anims.sync and spline root motion in seconds, for REDcode's A3; released in 0.17.0 on 2026-11-20; passed in REDcode's A3 hand test, closed",
-          "status": "done"
-        },
-        {
-          "id": "#20",
-          "title": "SIMD clips with sync joints exported as the game stores them (WolvenKit issue 3306), and their sync tracks read; released in 0.17.0; passed in REDcode's A3 hand test, closed",
-          "status": "done"
-        },
-        {
-          "id": "K4a",
-          "title": "keys.* on the shared key store, decrypted in .NET, off unless started with --keys; released in 0.18.0 on 2026-11-21, for REDcode's Keys (REDcode #33)",
-          "status": "built, tests pending"
-        },
-        {
-          "id": "#22",
-          "title": "window.* for REDcode's Game view: the game's window docked on a VS Code webview, off unless started with --windows; on main, not released",
-          "status": "built, tests pending"
-        }
-      ]
+   "name": "REDbridge",
+   "group": "Core toolkits",
+   "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
+   "stage": "released",
+   "version": "0.19.0",
+   "lastTag": "v0.14.0",
+   "lastTagDate": "2026-11-16",
+   "lastCommit": "2026-11-16",
+   "commitsSinceTag": 0,
+   "sessions": [
+    "REDnode, EDGEHack & REDagent"
+   ],
+   "wiki": "wiki/redbridge/",
+   "plan": {
+    "name": "The bridge side of REDcode's roadmap, and requests from other tools",
+    "source": "docs/index.md",
+    "phases": [
+     {
+      "id": "C0",
+      "title": "Decide",
+      "status": "done"
+     },
+     {
+      "id": "C1",
+      "title": "Bridge MVP",
+      "status": "done"
+     },
+     {
+      "id": "C2",
+      "title": "Browse",
+      "status": "done"
+     },
+     {
+      "id": "C3",
+      "title": "Edit: document sessions",
+      "status": "done"
+     },
+     {
+      "id": "C4",
+      "title": "Ship: pack, export, import",
+      "status": "done"
+     },
+     {
+      "id": "C5",
+      "title": "View: sound, tweakdb, loc, mesh items",
+      "status": "done"
+     },
+     {
+      "id": "2.5",
+      "title": "Game 2.5, on WolvenKit 10.0.0-beta.1",
+      "status": "done"
+     },
+     {
+      "id": "#14",
+      "title": "Animations: export with rigs (0.13.0), anims.info (0.14.0), .anims import (0.15.0) done; rig import parked until EDGEfab's F7a",
+      "status": "in progress"
+     },
+     {
+      "id": "#18",
+      "title": "sector.build removals (ArchiveXL node deletions of entries, with an entity's proxy meshes) for EDGEbuilder's doors; passed in game with EDGEbuilder's D1b; released in 0.16.0 on 2026-11-19",
+      "status": "done"
+     },
+     {
+      "id": "Linux",
+      "title": "Linux build (not scheduled)",
+      "status": "planned"
+     },
+     {
+      "id": "#19",
+      "title": "anims.sync and spline root motion in seconds, for REDcode's A3; released in 0.17.0 on 2026-11-20; passed in REDcode's A3 hand test, closed",
+      "status": "done"
+     },
+     {
+      "id": "#20",
+      "title": "SIMD clips with sync joints exported as the game stores them (WolvenKit issue 3306), and their sync tracks read; released in 0.17.0; passed in REDcode's A3 hand test, closed",
+      "status": "done"
+     },
+     {
+      "id": "K4a",
+      "title": "keys.* on the shared key store, decrypted in .NET, off unless started with --keys; released in 0.18.0 on 2026-11-21, for REDcode's Keys (REDcode #33)",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "#22",
+      "title": "window.* for REDcode's Game view: the game's window docked on a VS Code webview, off unless started with --windows; on main, not released",
+      "status": "built, tests pending"
+     }
+    ]
+   },
+   "nextRelease": {
+    "version": null,
+    "needs": []
+   },
+   "handTests": [
+    {
+     "name": "Probe and REDcode's smoke test on the 0.15.0 build",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-18, game 2.5"
     },
-    "nextRelease": {
-      "version": null,
-      "needs": []
+    {
+     "name": "Probe on #18's build (sector.build removals)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19, game 2.5"
     },
-    "handTests": [
-      {
-        "name": "Probe and REDcode's smoke test on the 0.15.0 build",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "2026-11-18, game 2.5"
-      },
-      {
-        "name": "Probe on #18's build (sector.build removals)",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "2026-11-19, game 2.5"
-      },
-      {
-        "name": "Probe on #18's correction (entries, proxies)",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "2026-11-19, game 2.5: D0's door and its proxy written as D0's working .xl"
-      },
-      {
-        "name": "EDGEbuilder D1b: doors baked through sector.build",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-19, game 2.5, a build of main: four deletions with two stand-ins; both doorways stayed open"
-      },
-      {
-        "name": "Probe on #19 (anims.sync, spline root motion)",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "2026-11-19, game 2.5: the probe set's tracks; the AV's Root ends at 7.3 s; a round trip keeps its keys"
-      },
-      {
-        "name": "Probe on #20 (SIMD clip with sync joints)",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "2026-11-20, game 2.5: injector__fpp exports with the rig's translations and scale 1; its sync rotations match Sandra's"
-      },
-      {
-        "name": "keys-check.mjs (K4a)",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "2026-11-20: 23 checks both ways against REDnode's keys.mjs; the dev PC's own store reads the same"
-      },
-      {
-        "name": "REDcode A3 on REDbridge 0.17.0 (#19, #20)",
-        "steps": 11,
-        "status": "passed",
-        "ranBy": "owner",
-        "note": "2026-11-20: synced sets, the SIMD player whole"
-      },
-      {
-        "name": "window-check.mjs (#22)",
-        "steps": null,
-        "status": "passed",
-        "ranBy": "script",
-        "note": "2026-11-22: 24 checks against two Electron stand-ins; the probe passes on the same build"
-      },
-      {
-        "name": "REDcode's Run in Tab with the game (#22)",
-        "steps": null,
-        "status": "not run",
-        "ranBy": "owner",
-        "note": "REDcode's G1 and G2 are not started"
-      }
-    ],
-    "ownerSpotTests": [],
-    "waitingOn": [
-      {
-        "who": "EDGEbuilder",
-        "what": "#11 is used when B3b or B7 starts (B3b itself waits on REDnode #24)",
-        "ref": "REDbridge #11"
-      },
-      {
-        "who": "EDGEfab",
-        "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
-        "ref": "REDbridge #14"
-      },
-      {
-        "who": "REDcode",
-        "what": "Its Game view (G1, G2) to use window.* and start REDbridge with --windows",
-        "ref": "REDbridge #22"
-      }
-    ],
-    "ownerActions": [
-      "Ask for release runs: it is released at the owner's request from the REDnode session",
-      "Decide when to schedule Linux support",
-      "Close REDbridge #15 and #16: both passed in the game 2026-11-08 (EDGEbuilder 0.8.1)"
-    ],
-    "risks": [
-      "Two of its four open requests (#15, #16) are done and only left open; #11 waits on a later EDGEbuilder phase",
-      "No session of its own: the REDnode session releases it",
-      "Built on a WolvenKit beta"
-    ],
-    "checkedBy": "REDnode session, 2026-11-22 (#22 built on main)"
+    {
+     "name": "Probe on #18's correction (entries, proxies)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19, game 2.5: D0's door and its proxy written as D0's working .xl"
+    },
+    {
+     "name": "EDGEbuilder D1b: doors baked through sector.build",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-19, game 2.5, a build of main: four deletions with two stand-ins; both doorways stayed open"
+    },
+    {
+     "name": "Probe on #19 (anims.sync, spline root motion)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-19, game 2.5: the probe set's tracks; the AV's Root ends at 7.3 s; a round trip keeps its keys"
+    },
+    {
+     "name": "Probe on #20 (SIMD clip with sync joints)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-20, game 2.5: injector__fpp exports with the rig's translations and scale 1; its sync rotations match Sandra's"
+    },
+    {
+     "name": "keys-check.mjs (K4a)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-20: 23 checks both ways against REDnode's keys.mjs; the dev PC's own store reads the same"
+    },
+    {
+     "name": "REDcode A3 on REDbridge 0.17.0 (#19, #20)",
+     "steps": 11,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-20: synced sets, the SIMD player whole"
+    },
+    {
+     "name": "window-check.mjs (#22)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-22: 24 checks against two Electron stand-ins; the probe passes on the same build"
+    },
+    {
+     "name": "REDcode's Run in Tab with the game (#22)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "REDcode's G1 and G2 are not started"
+    }
+   ],
+   "ownerSpotTests": [],
+   "waitingOn": [
+    {
+     "who": "EDGEbuilder",
+     "what": "#11 is used when B3b or B7 starts (B3b itself waits on REDnode #24)",
+     "ref": "REDbridge #11"
+    },
+    {
+     "who": "EDGEfab",
+     "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
+     "ref": "REDbridge #14"
+    },
+    {
+     "who": "REDcode",
+     "what": "Its Game view (G1, G2) to use window.* and start REDbridge with --windows",
+     "ref": "REDbridge #22"
+    }
+   ],
+   "ownerActions": [
+    "Ask for release runs: it is released at the owner's request from the REDnode session",
+    "Decide when to schedule Linux support",
+    "Close REDbridge #15 and #16: both passed in the game 2026-11-08 (EDGEbuilder 0.8.1)"
+   ],
+   "risks": [
+    "Two of its four open requests (#15, #16) are done and only left open; #11 waits on a later EDGEbuilder phase",
+    "No session of its own: the REDnode session releases it",
+    "Built on a WolvenKit beta"
+   ],
+   "checkedBy": "REDnode session, 2026-11-22 (#22 built on main)"
   },
   {
    "name": "EDGEdeck",
