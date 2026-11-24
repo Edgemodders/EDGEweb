@@ -955,7 +955,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDcode",
    "code": "RC",
-   "ownerSeq": 8,
+   "ownerSeq": 9,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1079,8 +1079,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "LS",
-      "title": "Lip Sync editor, moved from EDGEfab 2026-11-22 (branch lipsync, not wired in): design draft 0.1 for the owner (docs/design/lipsync.md); L1 merge and wire after the release in test, then L2 to L4",
-      "status": "planned"
+      "title": "Lip Sync editor, moved from EDGEfab 2026-11-22 (docs/design/lipsync.md, agreed 2026-11-24): L1 built 2026-11-24 (REDcode: Open Lip Sync, the tab, a Lip Sync button in the audio player, Open in Lip Sync in the animation view, openLipSync in the API, lipsync_* in redcode-mcp, the core as packages/lipsync-core), hand test pending; then L2 a made line into a project, L3 Audio2Face, L4 live",
+      "status": "built, tests pending"
      },
      {
       "id": "GT",
@@ -1102,7 +1102,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Lip Sync L1 (merge the lipsync branch, design draft 0.1 with four decisions), M2, every copy of a mesh, takes: agreed for the next release",
+     "Lip Sync L1: built 2026-11-24, the hand test in VS Code (docs/testing.md, Lip Sync L1); M2, every copy of a mesh, takes: agreed for the next release",
      "Sector scripts: the hand test (docs/testing.md, Sector scripts)"
     ]
    },
@@ -1118,6 +1118,12 @@ window.EDGE_STATUS = {
      "steps": 9,
      "status": "not run",
      "note": "Checked by a unit check and in Chrome over the real game (16 sectors in 64 s, then 0.5 s from the cache; a layer loaded in 5.4 s); the look in 3D and everything in VS Code need the hand test (docs/testing.md, Sector layers (L1))"
+    },
+    {
+     "name": "Lip Sync L1",
+     "steps": 10,
+     "status": "partly run",
+     "note": "Steps 1 and 2 pass (2026-11-24): the core's checks against the game and the lipsync_* MCP tools. Steps 3 to 10, the tab in VS Code (the lines, the head, the links, Add a Line with EDGEwave 0.3.0), not run; the tab never ran in VS Code in EDGEfab either (docs/testing.md, Lip Sync L1)"
     },
     {
      "name": "Key status",
@@ -1369,6 +1375,11 @@ window.EDGE_STATUS = {
     {
      "ref": "RC8",
      "what": "Run the Sector layers (L1) hand test, the Overlaps tab (docs/testing.md); your notes on how it feels to use shape L2 to L4",
+     "since": "2026-11-24"
+    },
+    {
+     "ref": "RC9",
+     "what": "Run the Lip Sync L1 hand test, steps 3 to 10 in VS Code (docs/testing.md, Lip Sync L1); step 9, Add a Line, needs EDGEwave 0.3.0 and an ElevenLabs key",
      "since": "2026-11-24"
     }
    ],
