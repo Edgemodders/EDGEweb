@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdeck
 order: 0
 description: "EDGEdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, why you might want it, and where to start."
-reviewed: 2026-11-23
+reviewed: 2026-11-24
 ---
 
 # EDGE<span class="y">deck</span>
@@ -55,12 +55,13 @@ EDGEdeck is the part of EDGE that puts mods into the game. It works on its own, 
 
 ## Status
 
-**Released, as a preview.** The latest is EDGEdeck 0.34.0 (2026-11-23), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
+**Released, as a preview.** The latest is EDGEdeck 0.34.1 (2026-11-24), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
 
 | | |
 |---|---|
 | **In daily use** | The library, deploy, undo, conflicts, loadouts |
 | **Passed the developer's tests, little use beyond them** | Nexus downloads and updates, Get the frameworks, REDmod deploys |
+| **Fixed in 0.34.1** | Packing a [REDcode project](redcode.html) again no longer changes the game folder before you deploy |
 | **New in 0.34.0** | In the [Mods view](mods-view.html), **Deploy**, **Check for updates** and **Update** buttons on each mod's row, and icon colors: cyan while changes wait for a deploy, green with an update on Nexus |
 | **New in 0.33.0** | A [security fix for Nexus download links](nexus.html#download-links), and **Keep all** and **Put all back** when [several files changed in the game folder](deploying.html#changes-made-outside-edgedeck) |
 | **New in 0.32.0, tested by its contributor** | [FOMOD installers](adding-mods.html#mods-with-an-installer-fomod): pick a mod's options, keep them across updates, bring them over from Vortex. The developer's own tests are still to run |

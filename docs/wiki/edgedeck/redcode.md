@@ -3,7 +3,7 @@ title: EDGEdeck and REDcode
 section: EDGEdeck
 order: 12
 description: "For mod makers: test your own REDcode or WolvenKit project as an EDGEdeck mod, and copy files from installed mods into a project."
-reviewed: 2026-11-13
+reviewed: 2026-11-24
 ---
 
 # EDGEdeck and <span class="y">REDcode</span>
@@ -29,7 +29,7 @@ A project is a folder with a `.cpmodproj` file in it. **Packing** a project buil
 
 **What you should see:** the project in your list like any mod, switched on, with the version `dev`.
 
-The mod **follows the project**. Each time you pack again, EDGEdeck refreshes its copy in the library, the mod's status turns to `changed, deploy again`, and the next deploy puts the new files in the game. It sits in the order with your other mods, so conflicts with them show up the same way.
+The mod **follows the project**. Each time you pack again, EDGEdeck refreshes its copy in the library, the mod's status turns to `changed, deploy again`, and the next deploy puts the new files in the game. Until then the game keeps the files you deployed. (EDGEdeck 0.34.0 and older, with the library and the game on one drive, changed the game's copy of a file at once, before any deploy; update to 0.34.1 or later.) It sits in the order with your other mods, so conflicts with them show up the same way.
 
 {% include shot.html caption="A project as a mod" src="/assets/shots/edgedeck/redcode-project-mod.png" alt="A REDcode project, my_first_mod, listed as a mod in EDGEdeck with the version dev and the status changed, deploy again after it was packed again." shows="A REDcode project's packed output listed as a mod in EDGEdeck, with the status showing it was rebuilt and is waiting for a deploy." %}
 
