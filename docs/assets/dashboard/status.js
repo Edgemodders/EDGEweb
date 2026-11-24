@@ -945,7 +945,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDcode",
    "code": "RC",
-   "ownerSeq": 6,
+   "ownerSeq": 7,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1081,6 +1081,11 @@ window.EDGE_STATUS = {
       "id": "GV",
       "title": "The game in an editor tab (docs/design/game-view.md, agreed 2026-11-22): spikes done with the owner; G2 Run Game in Tab built on REDcode's side against an interim script, hand test passed by the owner on 2026-11-23 (steps 1 to 8), two fixes wait on retests R1 and R2; a Size selector through the redcode REDnode package 0.3.0 built the same day, not run (S1 to S5); next the swap to REDbridge window.* (built on its main, not released)",
       "status": "built, tests pending"
+     },
+     {
+      "id": "SL",
+      "title": "Sector layers (docs/design/sector-layers.md, draft 0.1, five owner decisions): sectors reaching into the opened one as layers, links, Open in REDcode both ways; requests REDbridge #23, EDGEbuilder #11",
+      "status": "planned"
      }
     ]
    },
@@ -1317,7 +1322,7 @@ window.EDGE_STATUS = {
    "ownerActions": [
     {
      "ref": "RC1",
-     "what": "Run the Animation Tools hand tests: AT2 in REDcode (about $1) and AT3, the pack in the game (about $2) (docs/testing.md); then say when the pack is released and make its Nexus page",
+     "what": "Run the AT3 hand test, the Animation Tools pack in the game (about $2; AT2 passed 2026-11-22) (docs/testing.md); then say when the pack is released and make its Nexus page",
      "since": "2026-11-22"
     },
     {
@@ -1344,6 +1349,11 @@ window.EDGE_STATUS = {
      "ref": "RC6",
      "what": "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md",
      "since": "2026-11-23"
+    },
+    {
+     "ref": "RC7",
+     "what": "Decide the five recommendations in Sector layers (docs/design/sector-layers.md)",
+     "since": "2026-11-24"
     }
    ],
    "risks": [
@@ -1943,9 +1953,9 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
-       "id": "T0-T3",
-       "title": "Tools: plugins in a drawer, with an API (agreed 2026-11-24; T0 probe built the same day, its game check pending)",
-       "status": "in progress"
+      "id": "T0-T3",
+      "title": "Tools: plugins in a drawer, with an API (agreed 2026-11-24; T0 probe built the same day, its game check pending)",
+      "status": "in progress"
      },
      {
       "id": "B6",
@@ -2086,11 +2096,11 @@ window.EDGE_STATUS = {
      "note": "2026-11-12 on 0.10.9, the owner's laptop"
     },
     {
-      "name": "T0 Tools probe (in game)",
-      "steps": 10,
-      "status": "not run",
-      "ranBy": "owner",
-      "note": "2026-11-24: checked in REDnode's host; needs the newest 0.14.0 build and edgebuilder-tool-probe deployed"
+     "name": "T0 Tools probe (in game)",
+     "steps": 10,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "2026-11-24: checked in REDnode's host; needs the newest 0.14.0 build and edgebuilder-tool-probe deployed"
     }
    ],
    "ownerSpotTests": [
@@ -2101,11 +2111,11 @@ window.EDGE_STATUS = {
     }
    ],
    "waitingOn": [
-     {
-       "who": "REDnode",
-       "what": "service.providers(role): every installed tool with its manifest and whether it is on, for the Tools tab (T1); not urgent, a folder scan works meanwhile",
-       "ref": "REDnode #58"
-     },
+    {
+     "who": "REDnode",
+     "what": "service.providers(role): every installed tool with its manifest and whether it is on, for the Tools tab (T1); not urgent, a folder scan works meanwhile",
+     "ref": "REDnode #58"
+    },
     {
      "who": "EDGEfab",
      "what": "Keep unchanged textures on a second Add to Project, for Watch (B2d-2)",
