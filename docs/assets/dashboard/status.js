@@ -1075,13 +1075,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AT",
-      "title": "Animation Tools: AT1 anim-core and AT2 Make in REDcode done (released in 0.10.16); AT3 the REDnode pack built, hand test run 2 in progress; AT3r the pack release (own Nexus page); takes for made clips agreed; AT4 V",
+      "title": "Animation Tools: AT1 anim-core and AT2 Make in REDcode done (released in 0.10.16); AT3 the REDnode pack built and passed in the game (2026-11-24); AT3r the pack release (own Nexus page); takes for made clips agreed; AT4 V",
       "status": "in progress"
      },
      {
       "id": "AE",
-      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 steps in anim-core to AE4 hand poses and Join; after AT3",
-      "status": "planned"
+      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 the steps in anim-core built (checks pass), its MCP tools next; then AE2 REDcode, AE3 in game, AE4 hand poses and Join",
+      "status": "in progress"
      },
      {
       "id": "LS",
@@ -1141,8 +1141,8 @@ window.EDGE_STATUS = {
     {
      "name": "Animation Tools pack (AT3)",
      "steps": 11,
-     "status": "partly run",
-     "note": "Run 2 (owner, 2026-11-24), in progress: fixed from it the same day, each confirmed in the game: the pack follows the character when a swap respawns them; feet no longer slide (the travel taken out, not Uthana's in_place); the Root held still, so the feet no longer turn with the hips; the rise was a spawn at V's height on a slope, now a ray down to the ground (REDnode #59 asked). Next: step 5 (a new Generate), then steps 7 to 11 (docs/testing.md, Animation Tools pack (AT3))"
+     "status": "passed",
+     "note": "Passed 2026-11-24 (the owner, all 11 steps, run 2), with the fixes it raised: the respawn followed, feet in place without sliding, the Root held still, the character spawned on the ground (REDnode #59 asked). Next: AT3r, the pack release, on the owner's go"
     },
     {
      "name": "Animation Tools AT2",
@@ -1350,7 +1350,7 @@ window.EDGE_STATUS = {
    "ownerActions": [
     {
      "ref": "RC1",
-     "what": "Run the AT3 hand test, the Animation Tools pack in the game (about $2; AT2 passed 2026-11-22) (docs/testing.md); then say when the pack is released and make its Nexus page",
+     "what": "Make the Animation Tools pack's Nexus page and say when to release it (AT3r; the in-game test AT3 passed 2026-11-24)",
      "since": "2026-11-22"
     },
     {
