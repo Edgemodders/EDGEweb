@@ -8,7 +8,8 @@ window.EDGE_STATUS = {
    "RN1",
    "RN2",
    "RN3",
-   "RC1"
+   "RC1",
+   "RC10"
   ]
  },
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
@@ -1353,6 +1354,11 @@ window.EDGE_STATUS = {
      "since": "2026-11-22"
     },
     {
+     "ref": "RC10",
+     "what": "Finish the Sector scripts hand test: run 1 stopped at step 3, which was fixed, so step 3 again, then steps 4 to 15 (docs/testing.md, Sector scripts); step 15 is new, a script an assistant writes with script_write showing in the Scripts menu",
+     "since": "2026-11-24"
+    },
+    {
      "ref": "RC2",
      "what": "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
      "since": "2026-11-20"
@@ -1380,11 +1386,6 @@ window.EDGE_STATUS = {
     {
      "ref": "RC8",
      "what": "Run the Sector layers (L1) hand test, the Overlaps tab (docs/testing.md); your notes on how it feels to use shape L2 to L4",
-     "since": "2026-11-24"
-    },
-    {
-     "ref": "RC10",
-     "what": "Finish the Sector scripts hand test: run 1 stopped at step 3, which was fixed, so step 3 again, then steps 4 to 15 (docs/testing.md, Sector scripts); step 15 is new, a script an assistant writes with script_write showing in the Scripts menu",
      "since": "2026-11-24"
     },
     {
