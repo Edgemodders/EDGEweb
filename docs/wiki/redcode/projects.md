@@ -146,7 +146,7 @@ The new file opens in its editor and is selected in the Project view.
 
 These files were made, opened and packed in REDcode's tests. Whether the game takes each new kind has not been tried yet.
 
-{% include shot.html caption="New File" shows="The New File list over the Project view: Game files (Texture from an Image, Ink Atlas, Material Instance, Entity, Appearance, Multilayer Setup, Start from a Game File) and Text files (TweakXL, ArchiveXL, Redscript), with the folder it will be made in at the top." %}
+{% include shot.html caption="New File" src="/assets/shots/redcode/projects-new-file.png" alt="The New File list over REDcode's Project view, titled New File in my_first_mod: Game files (Texture from an Image, Ink Atlas, Material Instance, Entity, Appearance, Multilayer Setup, Start from a Game File) and Text files (TweakXL, ArchiveXL, Redscript)." shows="The New File list over the Project view: Game files (Texture from an Image, Ink Atlas, Material Instance, Entity, Appearance, Multilayer Setup, Start from a Game File) and Text files (TweakXL, ArchiveXL, Redscript), with the folder it will be made in at the top." %}
 
 ## Getting files into a project
 

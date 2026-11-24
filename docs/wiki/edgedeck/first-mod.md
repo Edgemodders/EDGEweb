@@ -100,7 +100,7 @@ Later you can skip the browser's Downloads folder: once EDGEdeck is [signed in t
 
 EDGEdeck unpacks the file and works out where each of its files belongs in the game. If the download holds several options, EDGEdeck asks which one you want.
 
-{% include shot.html caption="Adding a mod" shows="Add mod's file picker, then the new mod in the list with its kind chips and the status not deployed yet." %}
+{% include shot.html caption="Adding a mod" src="/assets/shots/edgedeck/adding-mods-added.png" alt="The Mods view and the EDGEdeck page after adding a mod: Street Kid Jacket Recolor under Mods with the kind chip ARCHIVE and the status not deployed yet, below the six frameworks." shows="Add mod's file picker, then the new mod in the list with its kind chips and the status not deployed yet." %}
 
 | What you should see | |
 |---|---|
@@ -114,7 +114,7 @@ A new mod arrives switched on. To add a mod without using it yet, untick its box
 1. Press **Deploy**. The message now says "... for 1 mod. 7 mods in the game now."
 2. Press **Run game**, load a save and look for the mod. Where to look depends on the mod, and its Nexus page says: a new item may be in a shop, in your wardrobe, or need a console command.
 
-{% include shot.html caption="Your first mod, deployed" shows="The Mods view with the Frameworks group and one mod under Mods, every row saying deployed, and the status bar reading 7 of 7 mods on, deployed." %}
+{% include shot.html caption="Your first mod, deployed" src="/assets/shots/edgedeck/first-mod-deployed.png" alt="The Mods view with the Frameworks group and one mod under Mods, every row saying deployed, the same on the EDGEdeck page, and the status bar reading 7 of 7 mods on, deployed." shows="The Mods view with the Frameworks group and one mod under Mods, every row saying deployed, and the status bar reading 7 of 7 mods on, deployed." %}
 
 | If | Do this |
 |---|---|

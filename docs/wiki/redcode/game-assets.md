@@ -102,7 +102,7 @@ The first search for clothing after a game update loads the item names in the ba
 
 Filter or search? The filter keeps you in the tree, so you can see where files sit and add whole folders. Search is quicker when you know part of a file's name, or the item's name in the game.
 
-{% include shot.html caption="Search game files" shows="The Search game files box with comfy rocker typed in: clothing items by their in-game names, and under them file results, each row with its Add to project, Copy path and Open as JSON buttons." %}
+{% include shot.html caption="Search game files" src="/assets/shots/redcode/game-assets-search.png" alt="The Search game files box with badge typed in, reading 4 items, 86 files: four clothing items by their in-game names, then file results with their archive and size, one row showing its Add to project, Copy path and Open as JSON buttons." shows="The Search game files box with comfy rocker typed in: clothing items by their in-game names, and under them file results, each row with its Add to project, Copy path and Open as JSON buttons." %}
 
 ## Sounds, TweakDB and texts
 

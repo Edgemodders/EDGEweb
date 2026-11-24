@@ -90,7 +90,7 @@ Only your mod is deployed. If you have other changes waiting in EDGEdeck (mods y
 
 If the game is running, EDGEdeck asks you to quit it first, because the game keeps mod files open. An EDGEdeck older than 0.28.0 can't deploy one mod alone: REDcode asks before the deploy takes your other waiting changes along.
 
-{% include shot.html caption="Your mod in EDGEdeck" shows="EDGEdeck's Mods view after Install from REDcode: the project listed as a mod with version dev, switched on and deployed." %}
+{% include shot.html caption="Your mod in EDGEdeck" src="/assets/shots/redcode/pack-install-edgedeck.png" alt="EDGEdeck's Mods view and page after Install from REDcode: my_first_mod listed last under Mods with the version dev, switched on, its status deployed." shows="EDGEdeck's Mods view after Install from REDcode: the project listed as a mod with version dev, switched on and deployed." %}
 
 ### Without EDGEdeck
 

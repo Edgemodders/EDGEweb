@@ -17,6 +17,7 @@ How to keep it:
 
 **New**
 
+- Wiki: 22 more screenshots of the editor tools, on 16 pages. REDcode: New File, Search game files, the Library view, the animation view, a synced set, the Make panel, a sector in 3D, a Volume, the Keys view, the HUD theme and its Marketplace listing. EDGEdeck: adding a mod, a FOMOD installer, a first deploy, Deploy on one mod, the Conflicts page and a REDcode project as a mod. EDGEmat: a prop's parts on the Desk and its listing. EDGEquest: Check Quest Mod. EDGEkit: the pack's page: https://edgemodders.ai/wiki/
 - Wiki: EDGEbuilder follows 0.13.2 (2026-11-23): opening, closing and locking the game's doors, a new Sectors page, and choosing between open REDcode projects: https://edgemodders.ai/wiki/edgebuilder/sectors.html
 - Wiki: EDGEwave follows 0.3.0 (2026-11-22): the Desk, Project and Library views in place of the Sounds view, sounds in the EDGE Library, character voices (designed from a description), lines with timings for other tools, the ElevenLabs key in REDcode's Keys (Connect an Assistant no longer hands it over), and no game audio sent to ElevenLabs: https://edgemodders.ai/wiki/edgewave/
 - EDGEdir, the director's tool, is on the landing page and the platform page, marked not released yet: https://edgemodders.ai/platform.html#edgedir

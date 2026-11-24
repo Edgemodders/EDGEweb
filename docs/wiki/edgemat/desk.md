@@ -143,7 +143,7 @@ This works on a mesh in your mod project, an EDGEfab prop or any other. Put it o
 | A layers icon and **multilayered · &lt;part&gt;.mlsetup** | A game surface in one of its colors, put on with **Use a Game Surface...** |
 | The name of a material file, such as `z_emissive_blue.mi` | A game material, or one made with [New Material](new-material.html) |
 
-{% include shot.html caption="A prop's parts on the Desk" shows="The Desk with vending_parts.mesh from a project, its look unfolded to nine part rows: most reading 'the model's own texture', one 'multilayered' car paint setup, one z_emissive_blue.mi, and the right-click menu open on a part with Use a Game Surface..., Use a Game Material..., New Material Here... and Back to the Model's Texture." %}
+{% include shot.html caption="A prop's parts on the Desk" src="/assets/shots/edgemat/desk-parts.png" alt="The Desk with vending_parts.mesh from a project, its look unfolded to nine part rows: one multilayered setup, several reading the model's own texture and some wearing a game material, with the right-click menu open on a part: Copy REDnode Command, New Material Here..., Use a Game Surface..., Use a Game Material... and Back to the Model's Texture." shows="The Desk with vending_parts.mesh from a project, its look unfolded to nine part rows: most reading 'the model's own texture', one 'multilayered' car paint setup, one z_emissive_blue.mi, and the right-click menu open on a part with Use a Game Surface..., Use a Game Material..., New Material Here... and Back to the Model's Texture." %}
 
 Right-click a part's row for these commands. Hovering the row also shows two icons at its right: colors for **Use a Game Surface...** and the sparkle for **New Material Here...**.
 

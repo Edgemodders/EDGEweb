@@ -31,7 +31,7 @@ A project is a folder with a `.cpmodproj` file in it. **Packing** a project buil
 
 The mod **follows the project**. Each time you pack again, EDGEdeck refreshes its copy in the library, the mod's status turns to `changed, deploy again`, and the next deploy puts the new files in the game. It sits in the order with your other mods, so conflicts with them show up the same way.
 
-{% include shot.html caption="A project as a mod" shows="A REDcode project's packed output listed as a mod in EDGEdeck, with the status showing it was rebuilt and is waiting for a deploy." %}
+{% include shot.html caption="A project as a mod" src="/assets/shots/edgedeck/redcode-project-mod.png" alt="A REDcode project, my_first_mod, listed as a mod in EDGEdeck with the version dev and the status changed, deploy again after it was packed again." shows="A REDcode project's packed output listed as a mod in EDGEdeck, with the status showing it was rebuilt and is waiting for a deploy." %}
 
 | If | What happens |
 |---|---|

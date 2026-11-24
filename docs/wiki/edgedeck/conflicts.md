@@ -75,7 +75,7 @@ Conflicts inside archives are the ones most mod managers can't see. Two archive 
 
 The message after a deploy says how many conflicts there are. **Show conflicts**, on that message or in the Mods view's **`...`** menu, opens a page with every one.
 
-{% include shot.html caption="The Conflicts page" shows="The Conflicts page with the file-path table above and the inside-archives table below: one row per pair of mods naming the winner and the loser, with its shared files folded inside and the Choose menu open on one row." %}
+{% include shot.html caption="The Conflicts page" src="/assets/shots/edgedeck/conflicts-page.png" alt="The Conflicts page: By file path with one pair of mods, and Inside archives with two pairs, each row naming the winner and the loser; one row unfolded to its four shared files, with its Choose menu open on Let the other mod win and Turn off for each mod." shows="The Conflicts page with the file-path table above and the inside-archives table below: one row per pair of mods naming the winner and the loser, with its shared files folded inside and the Choose menu open on one row." %}
 
 - The **upper table** lists conflicts by file path.
 - The **lower table** lists conflicts inside archives. Its heading names the REDbridge in use.

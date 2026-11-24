@@ -56,7 +56,7 @@ The same `.vsix` file is attached to each release on the [REDcode releases page]
 
 > **Search for "REDcode for Cyberpunk 2077", not just "REDcode".** Another extension called Redcode is for an old programming game, Core War, and has nothing to do with Cyberpunk.
 
-{% include shot.html caption="REDcode in the Extensions view" shows="VS Code's Extensions view with REDcode for Cyberpunk 2077 by Edgemodders found, showing the Preview label and the Install button." %}
+{% include shot.html caption="REDcode in the Extensions view" src="/assets/shots/redcode/install-extensions.png" alt="VS Code's Extensions view after a search for REDcode Cyberpunk: REDcode for Cyberpunk 2077 by Edgemodders selected, with its Preview label and Install button, and the other EDGE extensions listed under it." shows="VS Code's Extensions view with REDcode for Cyberpunk 2077 by Edgemodders found, showing the Preview label and the Install button." %}
 
 ## First start
 
@@ -105,7 +105,7 @@ The EDGE tools are drawn for a dark colour theme called **REDnode HUD**: near-bl
 
 A theme can't set fonts. To match the EDGE docs, install [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) and set it as `editor.fontFamily` in VS Code's settings. EDGEdeck's **Suggest the HUD theme** command offers the same theme.
 
-{% include shot.html caption="The REDnode HUD theme" shows="VS Code in the REDnode HUD theme, with a .tweak file open to show the yellow and cyan syntax colours." %}
+{% include shot.html caption="The REDnode HUD theme" src="/assets/shots/redcode/install-hud-theme.png" alt="The editor in the REDnode HUD theme with a .tweak file open: near-black panels, yellow keywords, cyan record names and green strings, and REDcode's side bar on the left." shows="VS Code in the REDnode HUD theme, with a .tweak file open to show the yellow and cyan syntax colours." %}
 
 ## Updating
 

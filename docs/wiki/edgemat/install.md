@@ -54,7 +54,7 @@ The same listing is on the web: [EDGEmat on the VS Code Marketplace](https://mar
 code --install-extension edgemodders.edgemat
 ```
 
-{% include shot.html caption="EDGEmat in the Extensions view" shows="VS Code's Extensions view after searching EDGEmat: the EDGEmat listing by Edgemodders with its Preview badge and the Install button." %}
+{% include shot.html caption="EDGEmat in the Extensions view" src="/assets/shots/edgemat/install-extensions.png" alt="VS Code's Extensions view after a search for EDGEmat: the EDGEmat listing by Edgemodders with its Preview badge and the Install button, and the EDGEkit pack under it." shows="VS Code's Extensions view after searching EDGEmat: the EDGEmat listing by Edgemodders with its Preview badge and the Install button." %}
 
 ### Other ways to install
 

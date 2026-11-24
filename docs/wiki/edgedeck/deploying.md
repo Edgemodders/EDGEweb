@@ -87,7 +87,7 @@ Good to know:
 - The mod's detail panel has the same button. In the Mods view, right-click a mod for **Deploy this mod** and **Undeploy**, or hover its row for the **Deploy this mod** button, the first one.
 - While the EDGEdeck page shows a [loadout](loadouts.html) that isn't the active one, the button isn't there: the game always follows the active loadout.
 
-{% include shot.html caption="Deploy one mod" shows="A row on the EDGEdeck page with its yellow Deploy button first in the Actions column, and the message after pressing it saying the mod went in and how many other changes still wait." %}
+{% include shot.html caption="Deploy one mod" src="/assets/shots/edgedeck/deploying-one-mod.png" alt="The EDGEdeck page with a yellow Deploy button first in the Actions column of a mod that is not deployed yet, and the message after deploying another mod alone: 1 file for 1 mod, and changes for other mods wait for the next Deploy." shows="A row on the EDGEdeck page with its yellow Deploy button first in the Actions column, and the message after pressing it saying the mod went in and how many other changes still wait." %}
 
 REDcode's **Install** does the same for a project's own mod. See [EDGEdeck and REDcode](redcode.html).
 

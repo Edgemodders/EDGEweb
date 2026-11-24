@@ -57,7 +57,7 @@ code --install-extension edgemodders.edgekit
 
 The listings: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgekit) and [Open VSX](https://open-vsx.org/extension/edgemodders/edgekit).
 
-{% include shot.html caption="The EDGEkit pack in the Extensions view" shows="VS Code's Extensions view with EDGEkit selected, its Extension Pack tab listing the EDGE extensions." %}
+{% include shot.html caption="The EDGEkit pack in the Extensions view" src="/assets/shots/edgekit/install-pack-extensions.png" alt="VS Code's Extensions view with EDGEkit selected: its page with the Install button and, under Details, Extension Pack (10) listing REDscript IDE, REDcode for Cyberpunk 2077, REDnode HUD, EDGEdeck, EDGEwave, EDGEmat and more." shows="VS Code's Extensions view with EDGEkit selected, its Extension Pack tab listing the EDGE extensions." %}
 
 ## After installing
 

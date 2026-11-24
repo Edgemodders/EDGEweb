@@ -115,7 +115,7 @@ Other EDGE tools can open an animation on a character's own meshes, such as [EDG
 
 **Try it.** In Game Assets, filter for `synced__q001_00c__male_average` and open the `.anims`. Pick `synced__q001_00c_trauma_arrives_soldiers__land_v1__soldier_01`: the body crouches and drops, in place. Turn on **Root motion**: it travels about 14 metres, and the view follows it.
 
-{% include shot.html caption="The animation view" shows="An .anims file open on the Animations view: the base male body on the grid, the toolbar with Frame, Body, Bones, Root motion and the rig and body names, and the list of animations with their lengths on the right." %}
+{% include shot.html caption="The animation view" src="/assets/shots/redcode/viewers-animation.png" alt="An .anims file open on the Animations view: the grey base male body mid-landing on the grid, the toolbar with Make, Frame, Body, Bones, Root motion, the light and the rig and body names, the list of 13 animations with their lengths on the right, and the Synced set section under it." shows="An .anims file open on the Animations view: the base male body on the grid, the toolbar with Frame, Body, Bones, Root motion and the rig and body names, and the list of animations with their lengths on the right." %}
 
 ### Synced sets
 
@@ -128,7 +128,7 @@ Some animations are one part of a moment several characters play together: the T
 
 **Try it.** In the landing above, press **Play the Set**. The AV and the second soldier join. At the start both soldiers are inside the AV; at the end they stand on the ground out from it, about 4 metres apart.
 
-{% include shot.html caption="A synced set" shows="The Trauma Team landing playing as a set: the AV's bones and two soldiers' bodies, and the Synced set section under the animation list with three ticked members marked placed." %}
+{% include shot.html caption="A synced set" src="/assets/shots/redcode/viewers-synced-set.png" alt="The Trauma Team landing playing as a set at 6.36 seconds: the AV's bones in orange and two soldiers' bodies standing apart on the ground, with the Synced set section listing soldier_01, av and soldier_02, the last two ticked and marked placed, and Stop the Set." shows="The Trauma Team landing playing as a set: the AV's bones and two soldiers' bodies, and the Synced set section under the animation list with three ticked members marked placed." %}
 
 ### Making a clip
 
@@ -166,7 +166,7 @@ The new clip then opens in its own tab, playing on its body. That tab opens with
 
 Tested by REDcode's developer: making clips both ways, and a replaced clip played in the game. The first time a clip plays on a character in the game, a brief T pose came before it; that looks like the game's side, not the clip's (unverified).
 
-{% include shot.html caption="The Make panel" shows="An animation view with the Make panel open above the clip list: Make a Clip with the picked clip's name in yellow, the words typed in, the model and length, In place, Upper body only and As written, New Clip and Replace Clip, the Name box, and the Generate, $0.50 and From a GLB buttons." %}
+{% include shot.html caption="The Make panel" src="/assets/shots/redcode/viewers-make.png" alt="An animation view with the Make panel open above the clip list: Make a Clip with the picked clip's name in yellow, a sentence typed in, the model and length lists, In place, Upper body only and As written, New Clip and Replace Clip, the Name box, and the Generate, $0.50 and From a GLB buttons." shows="An animation view with the Make panel open above the clip list: Make a Clip with the picked clip's name in yellow, the words typed in, the model and length, In place, Upper body only and As written, New Clip and Replace Clip, the Name box, and the Generate, $0.50 and From a GLB buttons." %}
 
 ## Streaming sectors
 
@@ -238,9 +238,9 @@ The view shows the **saved** file. To move something, add the sector to your pro
 
 **Try it.** Search game files for `exterior_-22_7_0_0.streamingsector` and open it: about 105 meshes drawn nearly 9,000 times, and 202 markers. Click the cardboard and bottles on the street, then turn on **Materials**: the cardboard is drawn with its own texture. Then Shift+drag a box over part of the street, and the list fills.
 
-{% include shot.html caption="A streaming sector in 3D" shows="A streaming sector open on the 3D view: buildings and street seen from above, a few things selected and one outlined in the accent colour, the toolbar with Markers, By material, Materials, Streamed, Coarser levels, Volume and Light, the camera row under it, the selected list on the right, and the line below naming the picked mesh with Show in Tree, Open Mesh, Open in EDGEmat and Add Mesh to Project." %}
+{% include shot.html caption="A streaming sector in 3D" src="/assets/shots/redcode/viewers-sector.png" alt="A streaming sector open on the 3D view: two blocks of buildings and a piece of street seen from above, the toolbar with Frame, Coarser levels, Streamed, Markers, By mesh, Materials, Volume, Touching, Scripts and Light, the camera row under it, four things in the selected list on the right, and the line below naming the picked mesh with Show in Tree, Open Mesh, Open in EDGEmat and Add Mesh to Project." shows="A streaming sector open on the 3D view: buildings and street seen from above, a few things selected and one outlined in the accent colour, the toolbar with Markers, By material, Materials, Streamed, Coarser levels, Volume and Light, the camera row under it, the selected list on the right, and the line below naming the picked mesh with Show in Tree, Open Mesh, Open in EDGEmat and Add Mesh to Project." %}
 
-{% include shot.html caption="A volume in a sector" shows="A see-through Volume box drawn on a street in a sector's 3D view, with a handle on each face and the round one above, the things inside it selected and listed on the right, and Isolate on so everything else is ghostly." %}
+{% include shot.html caption="A volume in a sector" src="/assets/shots/redcode/viewers-volume.png" alt="A see-through Volume box drawn on a street in a sector's 3D view, with a handle on each face and a round one above, 58 things selected and listed on the right, and Isolate on: what is outside the selection is drawn as faint red outlines." shows="A see-through Volume box drawn on a street in a sector's 3D view, with a handle on each face and the round one above, the things inside it selected and listed on the right, and Isolate on so everything else is ghostly." %}
 
 ## Sounds
 

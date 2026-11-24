@@ -33,7 +33,7 @@ First get the file. On a mod's Nexus page, open the **Files** tab and press **Ma
 
 EDGEdeck unpacks the download, works out what kind of mod it is and where each file belongs in the game folder, and adds it to the list. It asks you only when it can't tell: see [When EDGEdeck asks](#when-edgedeck-asks).
 
-{% include shot.html caption="Adding a mod" shows="Add mod's file picker, then the new mod in the list with its kind chips and the status not deployed yet." %}
+{% include shot.html caption="Adding a mod" src="/assets/shots/edgedeck/adding-mods-added.png" alt="The Mods view and the EDGEdeck page after adding a mod: Street Kid Jacket Recolor under Mods with the kind chip ARCHIVE and the status not deployed yet, below the six frameworks." shows="Add mod's file picker, then the new mod in the list with its kind chips and the status not deployed yet." %}
 
 | What you should see | |
 |---|---|
@@ -75,7 +75,7 @@ Some mods come with an installer, called a FOMOD: a few pages of options, such a
 2. The installer opens in the editor. Its steps are on the left, and each step shows its options with their pictures. The mod author's defaults are ticked.
 3. Pick your options, step by step, and press **Install**.
 
-{% include shot.html caption="A FOMOD installer" shows="The installer window: its steps on the left, one ticked as done, and a step's options with their pictures and the defaults ticked." %}
+{% include shot.html caption="A FOMOD installer" src="/assets/shots/edgedeck/adding-mods-fomod.png" alt="The installer window for a mod with options: the steps Color, Laces and Extras on the left, each ticked, the Color step's three options with the author's default picked, the picked option's picture and description on the right, and Cancel and Install below." shows="The installer window: its steps on the left, one ticked as done, and a step's options with their pictures and the defaults ticked." %}
 
 | | |
 |---|---|

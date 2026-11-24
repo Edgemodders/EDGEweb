@@ -86,7 +86,7 @@ Hover a row to see when the key was saved and which tools you allowed or refused
 
 The keys are the same ones REDnode's [Keys panel](../rednode/settings.html#shared-keys) shows in the game, kept encrypted for your Windows account in `%APPDATA%\Edgemodders\keys`. A key set in the game shows here at once, and the other way round.
 
-{% include shot.html caption="The Keys view" shows="REDcode's Keys view in the sidebar: Anthropic, Gemini, OpenAI, ElevenLabs, Tripo and Uthana, one set with its last four characters and used by a tool, with the pencil, unlock and bin buttons on its row, the others not set, and the tooltip naming the tools allowed and refused." %}
+{% include shot.html caption="The Keys view" src="/assets/shots/redcode/settings-keys.png" alt="REDcode's Keys view in the side bar: Anthropic set, showing its last four characters and used by REDagent, with the pencil and bin buttons on its row; Google Gemini, OpenAI, ElevenLabs, Tripo and Uthana not set. The key in the picture is a made-up one." shows="REDcode's Keys view in the sidebar: Anthropic, Gemini, OpenAI, ElevenLabs, Tripo and Uthana, one set with its last four characters and used by a tool, with the pencil, unlock and bin buttons on its row, the others not set, and the tooltip naming the tools allowed and refused." %}
 
 ## Commands
 

@@ -96,7 +96,7 @@ On a published quest mod it found every fault already known from studying the mo
 
 **Someone else's mod:** the findings tell you what is wrong, not how to fix it in their files. Send them to the mod's author.
 
-{% include shot.html caption="Check Quest Mod" shows="The result of Check Quest Mod on a quest mod's archive: a list of errors, warnings and notes in plain words, each naming the file and what is wrong." %}
+{% include shot.html caption="Check Quest Mod" src="/assets/shots/edgequest/checking-result.png" alt="The result page of Check Quest Mod on a test archive: what was read, the count 1 error, 3 warnings, 1 note, and one line per finding, each naming the file and what is wrong in plain words." shows="The result of Check Quest Mod on a quest mod's archive: a list of errors, warnings and notes in plain words, each naming the file and what is wrong." %}
 
 ## Try it
 

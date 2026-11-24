@@ -74,7 +74,7 @@ The **Library** view in REDcode's sidebar shows the Library: your folders, the i
 
 Items from other tools, such as [EDGEfab](../edgefab/)'s props, show too; their own tool adds those to a project. The view doesn't rename or delete: do that in the tool that made the item, or in File Explorer. Each EDGE tool keeps its own Library view of the same Library, so you needn't switch tools to see it.
 
-{% include shot.html caption="The Library view" shows="REDcode's Library view in the sidebar: a few Library folders opened to items named in plain words, one with the Add to Project button on its row, and the Refresh Project from Library button in the title bar." %}
+{% include shot.html caption="The Library view" src="/assets/shots/redcode/other-tools-library.png" alt="REDcode's Library view with the folders Clothing, Props and Weapons opened to their mesh items, the Add to Project button on the Osprey rifle's row with its tooltip (version, game path and Library folder), and the Refresh Project from Library button in the title bar." shows="REDcode's Library view in the sidebar: a few Library folders opened to items named in plain words, one with the Add to Project button on its row, and the Refresh Project from Library button in the title bar." %}
 
 ## REDnode
 
