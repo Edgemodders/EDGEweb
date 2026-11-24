@@ -1943,6 +1943,11 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+       "id": "T0-T3",
+       "title": "Tools: plugins in a drawer, with an API (agreed 2026-11-24, not yet placed in the order)",
+       "status": "planned"
+     },
+     {
       "id": "B6",
       "title": "Comfort",
       "status": "planned"
