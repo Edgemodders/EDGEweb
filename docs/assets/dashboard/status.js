@@ -1879,7 +1879,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "PV",
-      "title": "Explorer and the Preview switch, Pick under the cursor (drawer at the screen left, solid or not), Previews drawer, the Library in a drawer, Drop at click with the object own outline, the Library drawer width buttons, Import file picker, About tab as a Markdown quickstart (0.14.0)",
+      "title": "Explorer and the Preview switch, Pick under the cursor (drawer at the screen left, solid or not), Previews drawer, the Library in a drawer, Drop at click with the object own outline, the Library drawer width buttons, Import file picker, About tab as a Markdown quickstart, a picture details before Drop (0.14.0)",
       "status": "built, tests pending"
      },
      {
@@ -1962,7 +1962,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.14.0",
     "needs": [
-     "0.14.0 in-game test: Previews, the Explorer and the Preview switch, Pick under the cursor, the Library drawer, Drop at click outline, Library drawer widths, Import file picker, About guide (40 steps, P1 to P7; step 1 passed)",
+     "0.14.0 in-game test: Previews, the Explorer and the Preview switch, Pick under the cursor, the Library drawer, Drop at click outline, Library drawer widths, Import file picker, About guide, a picture details before Drop (43 steps, P1 to P7; step 1 passed)",
      "G0's look in the game (the owner)",
      "The rest of G1 on the cosmic branch, then its merge into main"
     ]
@@ -1970,7 +1970,7 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "Previews, Explorer, Pick under the cursor, Library drawer, Drop at click outline, Import file picker, About guide (0.14.0, in game)",
-     "steps": 40,
+     "steps": 43,
      "status": "partly run",
      "ranBy": "owner",
      "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Step 1 passed in game on 2026-11-24; the owner then asked for the Library drawer width buttons, an Import file picker and the About tab as a quickstart (steps 36 to 40, checked in REDnode host). That build is in the EDGEdeck library (on), not deployed"
