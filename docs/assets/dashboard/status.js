@@ -1944,8 +1944,8 @@ window.EDGE_STATUS = {
      },
      {
        "id": "T0-T3",
-       "title": "Tools: plugins in a drawer, with an API (agreed 2026-11-24, not yet placed in the order)",
-       "status": "planned"
+       "title": "Tools: plugins in a drawer, with an API (agreed 2026-11-24; T0 probe built the same day, its game check pending)",
+       "status": "in progress"
      },
      {
       "id": "B6",
@@ -2084,6 +2084,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-12 on 0.10.9, the owner's laptop"
+    },
+    {
+      "name": "T0 Tools probe (in game)",
+      "steps": 10,
+      "status": "not run",
+      "ranBy": "owner",
+      "note": "2026-11-24: checked in REDnode's host; needs the newest 0.14.0 build and edgebuilder-tool-probe deployed"
     }
    ],
    "ownerSpotTests": [
@@ -2094,6 +2101,11 @@ window.EDGE_STATUS = {
     }
    ],
    "waitingOn": [
+     {
+       "who": "REDnode",
+       "what": "service.providers(role): every installed tool with its manifest and whether it is on, for the Tools tab (T1); not urgent, a folder scan works meanwhile",
+       "ref": "REDnode #58"
+     },
     {
      "who": "EDGEfab",
      "what": "Keep unchanged textures on a second Add to Project, for Watch (B2d-2)",
