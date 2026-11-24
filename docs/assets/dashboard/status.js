@@ -955,7 +955,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDcode",
    "code": "RC",
-   "ownerSeq": 9,
+   "ownerSeq": 10,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1114,9 +1114,9 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "Sector scripts",
-     "steps": 14,
+     "steps": 15,
      "status": "partly run",
-     "note": "Run 1 (owner, 2026-11-24) in progress: at step 3 a script run with Enter saw no selection; fixed the same day (ctx.selected() is the view's selection however it runs), step 3 again (docs/testing.md, Sector scripts)"
+     "note": "Run 1 (owner, 2026-11-24) in progress: at step 3 a script run with Enter saw no selection; fixed the same day (ctx.selected() is the view's selection however it runs), step 3 again; step 15 added 2026-11-24 (a script written by an assistant through script_write) (docs/testing.md, Sector scripts)"
     },
     {
      "name": "Sector layers (L1)",
@@ -1380,6 +1380,11 @@ window.EDGE_STATUS = {
     {
      "ref": "RC8",
      "what": "Run the Sector layers (L1) hand test, the Overlaps tab (docs/testing.md); your notes on how it feels to use shape L2 to L4",
+     "since": "2026-11-24"
+    },
+    {
+     "ref": "RC10",
+     "what": "Finish the Sector scripts hand test: run 1 stopped at step 3, which was fixed, so step 3 again, then steps 4 to 15 (docs/testing.md, Sector scripts); step 15 is new, a script an assistant writes with script_write showing in the Scripts menu",
      "since": "2026-11-24"
     },
     {
