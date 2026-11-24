@@ -1084,7 +1084,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SL",
-      "title": "Sector layers (docs/design/sector-layers.md, draft 0.1, five owner decisions): sectors reaching into the opened one as layers, links, Open in REDcode both ways; requests REDbridge #23, EDGEbuilder #11",
+      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): sectors reaching into the opened one as layers, links, Open in REDcode both ways; requests REDbridge #23, EDGEbuilder #11",
       "status": "planned"
      }
     ]
@@ -1349,11 +1349,6 @@ window.EDGE_STATUS = {
      "ref": "RC6",
      "what": "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md",
      "since": "2026-11-23"
-    },
-    {
-     "ref": "RC7",
-     "what": "Decide the five recommendations in Sector layers (docs/design/sector-layers.md)",
-     "since": "2026-11-24"
     }
    ],
    "risks": [
