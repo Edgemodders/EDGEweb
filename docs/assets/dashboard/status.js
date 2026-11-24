@@ -1070,8 +1070,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SC",
-      "title": "Sector scripts (docs/design/sector-scripts.md, agreed 2026-11-23 with all four recommendations): SC1 to SC4 built 2026-11-23, a Scripts button in the sector view, scripts in their own process, preview and one-undo Apply, Debug, requests for assistants, and sector_*, script_* and request_* in redcode-mcp; checked by script and against the game, not run in VS Code",
-      "status": "built, tests pending"
+      "title": "Sector scripts (docs/design/sector-scripts.md): SC1 to SC4 built 2026-11-23, hand test passed 2026-11-24 (the owner, steps 1 to 15): a Scripts button in the sector view, scripts in their own process, preview and one-undo Apply, on the game's sector one answer that adds it to the project and applies there, Debug, requests for assistants, and sector_*, script_* and request_* in redcode-mcp (unreleased)",
+      "status": "done"
      },
      {
       "id": "AT",
@@ -1108,16 +1108,15 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Lip Sync L1: built 2026-11-24, the hand test in VS Code (docs/testing.md, Lip Sync L1); M2, every copy of a mesh, takes: agreed for the next release",
-     "Sector scripts: the hand test (docs/testing.md, Sector scripts)"
+     "Lip Sync L1: built 2026-11-24, the hand test in VS Code (docs/testing.md, Lip Sync L1); M2, every copy of a mesh, takes: agreed for the next release"
     ]
    },
    "handTests": [
     {
      "name": "Sector scripts",
      "steps": 15,
-     "status": "partly run",
-     "note": "Run 1 (owner, 2026-11-24) in progress: at step 3 a script run with Enter saw no selection; fixed the same day (ctx.selected() is the view's selection however it runs), step 3 again; step 15 added 2026-11-24 (a script written by an assistant through script_write) (docs/testing.md, Sector scripts)"
+     "status": "passed",
+     "note": "Passed 2026-11-24 (the owner, steps 1 to 15 with 3b and 3c), with what run 1 raised: ctx.selected() however a script runs, cooked nodes' meshes, Only, Back and Forward, icon buttons, the selection change on the line, and Add to Project and Apply on the game's sector. Not retested: the line under the copy's view (fixed after the run)"
     },
     {
      "name": "Sector layers (L1)",
@@ -1352,11 +1351,6 @@ window.EDGE_STATUS = {
      "ref": "RC1",
      "what": "Make the Animation Tools pack's Nexus page and say when to release it (AT3r; the in-game test AT3 passed 2026-11-24)",
      "since": "2026-11-22"
-    },
-    {
-     "ref": "RC10",
-     "what": "Finish the Sector scripts hand test: run 1 stopped at step 3, which was fixed, so step 3 again, then steps 4 to 15 (docs/testing.md, Sector scripts); step 15 is new, a script an assistant writes with script_write showing in the Scripts menu",
-     "since": "2026-11-24"
     },
     {
      "ref": "RC2",
