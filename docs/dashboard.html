@@ -73,6 +73,8 @@ table.d td { padding: 8px 12px; border-bottom: 1px solid rgba(38,44,61,.6); vert
 table.d tr:last-child td { border-bottom: 0; }
 table.d td.m { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
 table.d td.ref { color: var(--yellow); font-weight: 600; }
+table.d td.ref a { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
+table.d td.ref a:hover { text-decoration-style: solid; }
 table.d tr.done td { color: var(--dim); text-decoration: line-through; }
 table.d tr.done td.ref { color: var(--green); }
 table.d tr.done td .donenote { display: inline-block; text-decoration: none; color: var(--green); font-family: var(--mono); font-size: 12px; margin-left: 8px; }
@@ -209,7 +211,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=294"></script>
+<script src="assets/dashboard/status.js?v=295"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
@@ -260,7 +262,9 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 
   // ---- owner
   // A ref (RA1) is the tool's two letters and a number that is never used twice: refresh.py gives one to an item without.
-  var ownerRow = function (o, kindName, what) { return "<tr" + (o.ref ? " id='" + esc(o.ref) + "'" : "") + (o.done ? " class='done'" : "") + "><td class='m ref'>" + (o.ref ? esc(o.ref) : "&ndash;") + "</td><td class='m'>" + tlink(o.tool) + "</td><td>" + kindName + "</td><td>" + esc(what) + (o.done ? "<span class='donenote'>DONE " + esc(o.done) + "</span>" : "") + "</td><td class='m nw'>" + (o.since ? esc(o.since) : "&ndash;") + "</td></tr>"; };
+  // A ref with a summary links to its entry in the Owner Summary, a private claude.ai page: ownerSummary in status.js lists them.
+  var OS = S.ownerSummary || {}, sumRefs = OS.url ? (OS.refs || []) : [];
+  var ownerRow = function (o, kindName, what) { return "<tr" + (o.ref ? " id='" + esc(o.ref) + "'" : "") + (o.done ? " class='done'" : "") + "><td class='m ref'>" + (o.ref ? (sumRefs.indexOf(o.ref) >= 0 ? "<a href='" + esc(OS.url) + "#" + esc(o.ref) + "' target='_blank' rel='noopener' title='Open " + esc(o.ref) + " in the Owner Summary (private: opens for the owner only)'>" + esc(o.ref) + "</a>" : esc(o.ref)) : "&ndash;") + "</td><td class='m'>" + tlink(o.tool) + "</td><td>" + kindName + "</td><td>" + esc(what) + (o.done ? "<span class='donenote'>DONE " + esc(o.done) + "</span>" : "") + "</td><td class='m nw'>" + (o.since ? esc(o.since) : "&ndash;") + "</td></tr>"; };
   var ownerRows = owner.map(function (o) { return ownerRow(o, "Action", o.what); })
     .concat(spotsOpen.concat(spotsDone).map(function (s) { return ownerRow(s, "Spot test", s.name); }));
   table("ownerTable", ["ID", "Tool", "Kind", "What", "Since"], ownerRows, "Nothing is waiting on the owner.");

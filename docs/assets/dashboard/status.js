@@ -1,6 +1,16 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
 window.EDGE_STATUS = {
  "asOf": "2026-11-17",
+ "ownerSummary": {
+  "url": "https://claude.ai/artifact/2DWnvpnWxwxYkSgvLWDa2w",
+  "refs": [
+   "RA1",
+   "RN1",
+   "RN2",
+   "RN3",
+   "RC1"
+  ]
+ },
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
   {
