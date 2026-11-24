@@ -1962,7 +1962,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.14.0",
     "needs": [
-     "0.14.0 in-game test: Previews, the Explorer and the Preview switch, Pick under the cursor, the Library drawer, Drop at click outline, Library drawer widths, Import file picker, About guide, a picture details before Drop, Objects eye, Explorer widths and reveal, Show tooltip, pick spinner (51 steps, P1 to P7; step 1 passed)",
+     "0.14.0 in-game test: Previews, the Explorer and the Preview switch, Pick under the cursor, the Library drawer, Drop at click outline, Library drawer widths, Import file picker, About guide, a picture details before Drop, Objects eye, Explorer widths and reveal, Show tooltip, pick spinner (51 steps, P1 to P7; steps 1 to 35 passed, 36 to 51 and four rechecks to run)",
      "G0's look in the game (the owner)",
      "The rest of G1 on the cosmic branch, then its merge into main"
     ]
@@ -1973,7 +1973,7 @@ window.EDGE_STATUS = {
      "steps": 51,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Step 1 passed in game on 2026-11-24; the owner then asked for the Library drawer width buttons, an Import file picker and the About tab as a quickstart (steps 36 to 40, checked in REDnode host). That build is in the EDGEdeck library (on), not deployed"
+     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Steps 1 to 35 passed in game on 2026-11-24 on the morning build (dbb20bf). Added the same day at the owner ask, checked in REDnode host: picture details before Drop, right button tap or hold in Drop at click, the Objects drawer eye, Explorer widths and reveal, Preview drawer headers, Show tooltip, pick spinner, and the Drop a copy cursor fix. Steps 36 to 51, and 6, 9, 11 and 33 again, to run on the newest build: in the EDGEdeck library (on), not deployed"
     },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
