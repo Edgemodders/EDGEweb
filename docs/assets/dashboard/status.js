@@ -945,7 +945,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDcode",
    "code": "RC",
-   "ownerSeq": 7,
+   "ownerSeq": 8,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1084,8 +1084,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SL",
-      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): sectors reaching into the opened one as layers, links, Open in REDcode both ways; requests REDbridge #23, EDGEbuilder #11",
-      "status": "planned"
+      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): L1 the Overlaps tab built 2026-11-24; L2 across layers, L3 links, L4 Open in REDcode to come; requests REDbridge #23, EDGEbuilder #11",
+      "status": "in progress"
      }
     ]
    },
@@ -1102,6 +1102,12 @@ window.EDGE_STATUS = {
      "steps": 14,
      "status": "partly run",
      "note": "Run 1 (owner, 2026-11-24) in progress: at step 3 a script run with Enter saw no selection; fixed the same day (ctx.selected() is the view's selection however it runs), step 3 again (docs/testing.md, Sector scripts)"
+    },
+    {
+     "name": "Sector layers (L1)",
+     "steps": 9,
+     "status": "not run",
+     "note": "Checked by a unit check and in Chrome over the real game (16 sectors in 64 s, then 0.5 s from the cache; a layer loaded in 5.4 s); the look in 3D and everything in VS Code need the hand test (docs/testing.md, Sector layers (L1))"
     },
     {
      "name": "Key status",
@@ -1349,6 +1355,11 @@ window.EDGE_STATUS = {
      "ref": "RC6",
      "what": "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md",
      "since": "2026-11-23"
+    },
+    {
+     "ref": "RC8",
+     "what": "Run the Sector layers (L1) hand test, the Overlaps tab (docs/testing.md); your notes on how it feels to use shape L2 to L4",
+     "since": "2026-11-24"
     }
    ],
    "risks": [
