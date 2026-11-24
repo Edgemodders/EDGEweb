@@ -1095,8 +1095,8 @@ window.EDGE_STATUS = {
     {
      "name": "Sector scripts",
      "steps": 14,
-     "status": "not run",
-     "note": "Checked by script (npm test, the examples on a game sector, every new MCP tool against the game, the button in Chrome over the real runner); the menu, the first-run question, Apply and Undo, Debug and the request prompt need VS Code (docs/testing.md, Sector scripts)"
+     "status": "partly run",
+     "note": "Run 1 (owner, 2026-11-24) in progress: at step 3 a script run with Enter saw no selection; fixed the same day (ctx.selected() is the view's selection however it runs), step 3 again (docs/testing.md, Sector scripts)"
     },
     {
      "name": "Key status",
@@ -1349,7 +1349,7 @@ window.EDGE_STATUS = {
    "risks": [
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-23"
+   "checkedBy": "REDcode session, 2026-11-24"
   },
   {
    "name": "REDbridge",
