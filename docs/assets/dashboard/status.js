@@ -1074,8 +1074,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AT",
-      "title": "Animation Tools: AT1 anim-core and AT2 Make in REDcode done (released in 0.10.16); AT3 the REDnode pack built, hand test run 1 in progress; AT3r the pack release (own Nexus page); takes for made clips agreed; AT4 V",
+      "title": "Animation Tools: AT1 anim-core and AT2 Make in REDcode done (released in 0.10.16); AT3 the REDnode pack built, hand test run 2 in progress; AT3r the pack release (own Nexus page); takes for made clips agreed; AT4 V",
       "status": "in progress"
+     },
+     {
+      "id": "AE",
+      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 steps in anim-core to AE4 hand poses and Join; after AT3",
+      "status": "planned"
      },
      {
       "id": "LS",
