@@ -1136,7 +1136,7 @@ window.EDGE_STATUS = {
      "name": "Animation Tools pack (AT3)",
      "steps": 11,
      "status": "partly run",
-     "note": "Run 2 (owner, 2026-11-24) stopped at step 6: after a second Generate the swap spawned the medic again and the pack kept his old id, so nothing played. Fixed the same day (the pack follows world.onRespawn; check.mjs reproduces and passes). The feet still slid at step 4: Uthana's in_place held the hips still; fixed by taking out only the travel across the floor (the step 4 clip's left heel 21 cm to 3 cm), both test clips fitted again. Installed; Play each to see the feet, then go on from step 5 (docs/testing.md, Animation Tools pack (AT3))"
+     "note": "Run 2 (owner, 2026-11-24), in progress: fixed from it the same day, each confirmed in the game: the pack follows the character when a swap respawns them; feet no longer slide (the travel taken out, not Uthana's in_place); the Root held still, so the feet no longer turn with the hips; the rise was a spawn at V's height on a slope, now a ray down to the ground (REDnode #59 asked). Next: step 5 (a new Generate), then steps 7 to 11 (docs/testing.md, Animation Tools pack (AT3))"
     },
     {
      "name": "Animation Tools AT2",
