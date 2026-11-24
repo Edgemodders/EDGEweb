@@ -1130,7 +1130,7 @@ window.EDGE_STATUS = {
      "name": "Animation Tools pack (AT3)",
      "steps": 11,
      "status": "partly run",
-     "note": "Run 1 in progress (owner, 2026-11-22): fixed from it, a busy Generate (spinner, stages, progress), the character facing V, a grounding rule in every prompt, Upper body only, a Generating tooltip once REDnode 0.70.0 is out (REDnode #55); next, Generate again to see the feet (docs/testing.md, Animation Tools pack (AT3))"
+     "note": "Run 2 (owner, 2026-11-24) stopped at step 6: after a second Generate the swap spawned the medic again and the pack kept his old id, so nothing played. Fixed the same day (the pack follows world.onRespawn; check.mjs reproduces and passes) and installed; go on from step 5 (docs/testing.md, Animation Tools pack (AT3))"
     },
     {
      "name": "Animation Tools AT2",
