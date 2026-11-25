@@ -1204,7 +1204,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SL",
-      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): L1 the Overlaps tab released in 0.10.17; L4 built 2026-11-25 (the redcode REDnode package 0.4.0's openSector and place, EDGEworld: Open Sector Here; EDGEbuilder told in #9 for its buttons), hand test pending; L2 across layers and L3 links next; requests REDbridge #23, EDGEbuilder #11",
+      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): L1 the Overlaps tab released in 0.10.17; L2 across layers (scripts over the layers on, changes into several sectors each in its own tab), L3 Links (node, placements, inner record, files; Select Placements in 3D) and L4 Open in REDcode (the redcode REDnode package 0.4.0's openSector and place, EDGEworld: Open Sector Here) built 2026-11-25, hand tests pending; not built: the Properties tab across layers; requests REDbridge #23, EDGEbuilder #11",
       "status": "in progress"
      }
     ]
@@ -1212,10 +1212,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-"Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11). Next, agreed: Sector layers L2 and L3, sector materials M2, Lip Sync L2's design page"
+"Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L2 and L3 (L2-1 to L3-6), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11). Next, agreed: sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
+{
+ "name": "Sector layers L2 and L3",
+ "steps": 10,
+ "status": "not run",
+ "note": "Built 2026-11-25: scripts over layers, changes into several sectors, the Links row, Select Placements in 3D; checked by unit checks (94) and on exterior_-22_7_0_0 through REDbridge (docs/testing.md, Sector layers L2 and L3)"
+},
 {
  "name": "Animation Timeline TL2 to TL4",
  "steps": 11,
