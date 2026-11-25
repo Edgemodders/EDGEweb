@@ -4275,7 +4275,7 @@ window.EDGE_STATUS = {
    "ownerActions": [
     {
      "ref": "MB6",
-     "what": "Run the C3 test in the game: Chooms! posts by themselves (docs/design.md, C3 test; 11 steps, about 20 minutes; it spends from your Anthropic key, up to the $1 cap)",
+     "what": "Run the C3 test in the game: Chooms! posts by themselves (docs/design.md, C3 test; 11 steps, about 20 minutes; it spends from your Anthropic key, up to the $2 cap)",
      "since": "2026-11-25"
     },
     {
