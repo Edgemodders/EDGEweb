@@ -1128,8 +1128,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "ST",
-      "title": "REDcode's half of Sector Tools (the app is EDGEbuilder's, EDGEbuilder #9), agreed 2026-11-25 with the three recommendations: Show in Game, Open in REDcode, live previews, a dismissable replaced-sector warning, EDGEbuilder offered once. EDGEbuilder's S1 shipped in its 0.13.2, so L1 waits on nothing",
-      "status": "planned"
+      "title": "REDcode's half of Sector Tools (the app is EDGEbuilder's, EDGEbuilder #9), agreed 2026-11-25: L1 built 2026-11-25 (Show in Game and each pick through EDGEbuilder's focus and select, Open in REDcode from the game, EDGEbuilder offered once), hand test H1 to H9 pending; L2 live previews and the replaced-sector warning after EDGEbuilder's S3",
+      "status": "built, tests pending"
      },
      {
       "id": "K4",
@@ -1183,7 +1183,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SL",
-      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): L1 the Overlaps tab released in 0.10.17, with the Properties tab and the sector search; L2 across layers, L3 links, L4 Open in REDcode (EDGEbuilder adds its buttons then) to come; requests REDbridge #23, EDGEbuilder #11",
+      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): L1 the Overlaps tab released in 0.10.17; L4 built 2026-11-25 (the redcode REDnode package 0.4.0's openSector and place, EDGEworld: Open Sector Here; EDGEbuilder told in #9 for its buttons), hand test pending; L2 across layers and L3 links next; requests REDbridge #23, EDGEbuilder #11",
       "status": "in progress"
      }
     ]
@@ -1191,10 +1191,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Sector scripts known by their text: built 2026-11-25, the hand test H1 to H4 (docs/testing.md). Next, agreed: the Animation Timeline (TL1), Sector layers L2 to L4 with Open in REDcode for EDGEbuilder, Lip Sync L2 (the editing loop, its own design page first), sector materials M2"
+"Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder). The Animation Timeline's TL1 is built (anim-core, no game). Next, agreed: the timeline in the animation view (TL2 to TL4), Sector layers L2 and L3, sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
+{
+ "name": "Sector layers L4 and Sector Tools L1",
+ "steps": 9,
+ "status": "not run",
+ "note": "Built 2026-11-25: Open Sector Here, openSector from the game, Show in Game with EDGEbuilder, the offer; checked by script, 93 unit checks (docs/testing.md, Sector layers L4 and Sector Tools L1, H1 to H9; needs the game with REDnode and EDGEbuilder)"
+},
     {
      "name": "Sector scripts: a changed script",
      "steps": 4,
