@@ -30,7 +30,7 @@ You know the thing from the game: a jacket, a gun, a name on a menu. The game's 
 | A price, damage, a stat, what a shop sells | TweakDB, the game's database | [The TweakDB view](#from-a-name-to-its-record) |
 | How a piece of clothing looks | Game files: meshes, materials, textures | [Search game files, by its name](#from-a-name-to-its-files-clothing) |
 | How anything else looks: shape, colour, texture | Game files: meshes, materials, textures | [The Game Assets filter](#from-a-guess-to-its-files), then Find Items |
-| Where things stand in the world | Streaming sectors (`.streamingsector`) | Game Assets, then [the sector's 3D view](viewers.html#streaming-sectors) |
+| Where things stand in the world | Streaming sectors (`.streamingsector`) | Game Assets, then [the sector's 3D view](sectors.html) |
 | A sound effect | The game's sound packs | [The game sound list](viewers.html#the-games-sound-effects) |
 | An icon or a piece of the interface | Atlases (`.inkatlas`) and their textures | The Game Assets filter, with `*.inkatlas` |
 

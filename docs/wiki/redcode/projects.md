@@ -80,7 +80,7 @@ Click a file and REDcode opens it in the right place:
 
 | File | Opens in |
 |---|---|
-| Game files: `.ent`, `.app`, `.mesh`, `.inkatlas`, materials, animations, scenes and the other CR2W types | The [CR2W editor](editing.html). A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d), an `.anims` file on its [Animations view](viewers.html#animations), a `.streamingsector` on [its 3D view](viewers.html#streaming-sectors) |
+| Game files: `.ent`, `.app`, `.mesh`, `.inkatlas`, materials, animations, scenes and the other CR2W types | The [CR2W editor](editing.html). A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d), an `.anims` file on its [Animations view](viewers.html#animations), a `.streamingsector` on [its 3D view](sectors.html) |
 | Textures: `.xbm`, `.dds`, `.tga`, and in the Project view PNG, JPG, BMP and TIFF too | The [texture viewer](viewers.html#textures) |
 | Sounds: `.wem`, `.opus` | The [audio player](viewers.html#sounds) |
 | `.glb` and `.gltf` | The [3D mesh viewer](viewers.html#meshes-in-3d) |
@@ -153,7 +153,7 @@ These files were made, opened and packed in REDcode's tests. Whether the game ta
 | From | How |
 |---|---|
 | Nothing | **New File...** on a folder. See [New File](#new-file) |
-| The game | **Add to Project** in [Game Assets](game-assets.html#add-to-project), in Search game files, in the editor's header on a game file you are looking at, or **Add Mesh to Project** in a [sector's 3D view](viewers.html#picking-a-thing-and-its-materials). The file lands under Archive at its game path. If the project has it already, REDcode asks before it replaces it |
+| The game | **Add to Project** in [Game Assets](game-assets.html#add-to-project), in Search game files, in the editor's header on a game file you are looking at, or **Add Mesh to Project** in a [sector's 3D view](sectors.html#picking-a-thing-and-its-materials). The file lands under Archive at its game path. If the project has it already, REDcode asks before it replaces it |
 | Words, or a GLB from Blender | A new animation clip, with the **Make** panel in the animation view. See [Making a clip](viewers.html#making-a-clip) |
 | The EDGE Library | **Add to Project** in the [Library view](other-tools.html#the-edge-library) |
 | The game's texts | **Add to Project Onscreens** in the [LocKeys view](game-assets.html#the-lockeys-view) |

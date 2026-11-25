@@ -4,7 +4,7 @@ nav_title: Settings and commands
 section: REDcode
 order: 13
 description: "Every REDcode setting with its default and when to change it, the Keys view for the AI service keys the EDGE tools share, every REDcode command with its icon, the keyboard shortcuts, and the editors it adds to Open With."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # Settings and <span class="y">commands</span>
@@ -197,7 +197,13 @@ Open the command palette (`Ctrl+Shift+P`) and type `REDcode` to see them. Most a
 | Add a Clip from GLB | | Makes a clip from a `.glb` on the game's rig, in a set of its own. Needs a project. Also on a `.glb` in the Project view |
 | Replace a Game Clip | | Puts a clip from Uthana or a `.glb` in place of one of the game's clips, in a copy of its set. Needs a project |
 
-The **Make** panel in the animation view does all three with buttons.
+The **Make** panel, in the animation view's **Clip** tab, does all three with buttons. Editing a made clip is in its **Edit** tab: see [Editing a made clip](viewers.html#editing-a-made-clip).
+
+### Lip Sync
+
+| Command | Icon | Does |
+|---|---|---|
+| Open Lip Sync | Two speech bubbles | Asks for a character and opens the [Lip Sync editor](lipsync.html) on their lip synced lines. The audio player's **Lip Sync** button and the animation view's **Open in Lip Sync** open it at one line |
 
 ### Editing
 
@@ -237,6 +243,8 @@ REDcode adds no global shortcuts of its own. These work in its views:
 | `F` | A sector's 3D view | Frame the picked thing |
 | `Ctrl+A`, `Esc` | A sector's 3D view, after a click in it | Select everything shown; select nothing, and take away the volume and Isolate |
 | `Space` | The audio player | Play and pause |
+| `Space`, arrow keys, `Home`, `End` | An animation's 3D view, after a click on it | Play or stop; step a frame; jump to the beginning or the end |
+| `Space`, arrow keys, `Home` | The Lip Sync editor | Play or stop; step a frame; back to the start |
 | Arrow keys | The game sound list | Step through the sounds, playing each |
 | `Ctrl+/` | A tweak file | Comment a line in or out |
 | `Ctrl+K` then `Ctrl+T` | Anywhere | VS Code's theme picker, for the REDnode HUD theme |

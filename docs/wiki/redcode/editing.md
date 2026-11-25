@@ -2,8 +2,8 @@
 title: Editing game files
 section: REDcode
 order: 6
-description: "Change game files in REDcode's CR2W editor: reading the tree, the property grid, search, the table and atlas views, the Properties view, undo and save, and editing as JSON."
-reviewed: 2026-11-22
+description: "Change game files in REDcode's CR2W editor: reading the tree, the property grid, search and going to a path, the table and atlas views, a sector's nodeData and instanced meshes, the Properties view, undo and save, and editing as JSON."
+reviewed: 2026-11-25
 ---
 
 # Editing game <span class="y">files</span>
@@ -14,10 +14,11 @@ Most game files are in a binary format called **CR2W**: data only the game and m
 |---|---|
 | [Which files open in it](#which-files-open-in-it) | About forty file types |
 | [Reading the tree](#reading-the-tree) | What you're looking at |
-| [Changing values](#changing-values), [Undo, redo and save](#undo-redo-and-save), [Search in a file](#search-in-a-file) | The everyday work |
+| [Changing values](#changing-values), [Undo, redo and save](#undo-redo-and-save), [Search in a file](#search-in-a-file) | The everyday work, and [going to a path](#go-to-a-path) |
 | [Try it: change one value](#try-it-change-one-value) | A light's radius |
 | [Localization files: the table view](#localization-files-the-table-view) | The game's texts |
 | [Atlases: the atlas view](#atlases-the-atlas-view) | Interface pictures |
+| [Sectors: nodeData and instanced meshes](#sectors-nodedata-and-instanced-meshes) | What a placement points at, and what is inside a mesh buffer |
 | [The Properties view](#the-properties-view) | The same grid, in the sidebar |
 | [Why a value looks different after saving](#why-a-value-looks-different-after-saving) | Three rules of the format |
 | [Editing as JSON](#editing-as-json) | The whole file as text |
@@ -28,7 +29,7 @@ Most game files are in a binary format called **CR2W**: data only the game and m
 
 Clicking a game file in the Project view or Game Assets opens the CR2W editor. That covers about forty file types, including entities (`.ent`, `.app`), meshes, atlases (`.inkatlas`), materials (`.mi`, `.mt`, `.mlsetup`, `.mlmask`), animations, rigs, interface widgets, scenes, quests, journals and the world's streaming sectors. [The file types you'll meet](finding.html#the-file-types-youll-meet) says what the common ones are.
 
-- A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d) first, an `.anims` file on its [Animations view](viewers.html#animations), and a `.streamingsector` on its [3D view of the sector](viewers.html#streaming-sectors). **Tree** switches to the editor, and the 3D view is as you left it when you come back.
+- A `.mesh` opens on its [3D view](viewers.html#meshes-in-3d) first, an `.anims` file on its [Animations view](viewers.html#animations), and a `.streamingsector` on its [3D view of the sector](sectors.html). **Tree** switches to the editor, and the 3D view is as you left it when you come back.
 - A texture (`.xbm`) opens in the texture viewer. **Open in CR2W Editor** in the Project view's right-click menu shows it in the editor instead, with the image above the grid and the texture's settings (format, compression, flags) in the grid.
 - `.json` and `.csv` files that are CR2W inside, such as the game's localization files, offer the editor under **Open With...**.
 
@@ -73,6 +74,14 @@ The CR2W editor works like any VS Code editor:
 ## Search in a file
 
 The search box in the editor's footer finds values and property names anywhere in the file. Press Enter to search, click a hit to jump to it in the tree, and press Esc to clear the results. A hit far down a long list, past its first 200 entries, opens the tree at that entry and scrolls to it, as **Show in Tree** in the 3D views does.
+
+On a sector's 3D view, the same box selects what it finds in the view: see [Search](sectors.html#search) on the sector view's page.
+
+### Go to a path
+
+The same box also goes straight to a place in the file. Paste a path, such as `nodes.179.Data.buffer.Data` or `nodes[179].Data`, and press Enter: the tree opens there and selects it, switching from the 3D view if you were on it. Text that isn't a path searches as before.
+
+Paths are written as in WolvenKit's JSON, dotted from the top, which is how assistants, scripts and error messages name places in a file.
 
 ## Try it: change one value
 
@@ -119,6 +128,25 @@ An atlas (`.inkatlas`) is one texture cut into many small pictures, called parts
 - **Fit**, **1:1**, **Pixels** and **Labels** change how the texture shows. **Tree** is one click away.
 
 {% include shot.html caption="The atlas view" src="/assets/shots/redcode/editing-atlas.png" alt="The game file weapon_manufacturers.inkatlas in the atlas view: the list of 33 parts with their sizes on the left, kangtao selected, and the texture on the right with a labelled rectangle around every logo and the Kang Tao one highlighted." shows="An .inkatlas in the atlas view: the texture with part rectangles drawn over it, one part selected and its pixel rectangle in the side list." %}
+
+## Sectors: nodeData and instanced meshes
+
+A streaming sector keeps what it places in two lists. `nodes` holds each thing's definition: its mesh, its appearance, how it's drawn. `nodeData` holds each placement: where it stands and how it streams, with `nodeIdx` naming its node. Following those numbers by hand meant scrolling between the two lists. Now the editor follows them for you.
+
+Select an entry under `nodeData` > `Data`. Below its own fields:
+
+| Section | Shows |
+|---|---|
+| **nodeIdx 179 → nodes[179]** | The node it names, with its fields. In a project's copy of the sector you can edit them here: the edit lands on that node, and `Ctrl+Z` takes it back |
+| **instanceIndex 541 → InnerNodes[541]** | For an instanced mesh: the instance it names, from the node's buffer, with its mesh and where each of its copies stands (position, turn, scale). Read-only |
+
+**Show in tree** on either section goes to that place in the tree.
+
+**Instanced mesh buffers.** Some nodes draw one mesh many times, such as railings or ceiling panels. Their copies live in buffers, `buffer` and `cookedWorldTransformsBuffer`, which used to show only a type name. Now they open as a tree like any list: the inner nodes, the transform ranges and the transforms, 200 at a time with **Load more**. They are read-only for now.
+
+**Try it.** In Game Assets, open `base\worlds\03_night_city\_compiled\default\exterior_-11_11_0_1.streamingsector`, press **Tree**, open `nodeData` > `Data` and select `1441`. Below the entry's fields you see node 179 and its instance 541: `wat_kab_building_f_ceiling_w300_ab.mesh`, with its five copies.
+
+Tested by REDcode's developer.
 
 ## The Properties view
 

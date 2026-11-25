@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDcode
 order: 0
 description: "REDcode, the EDGE platform's Cyberpunk 2077 modding workspace in VS Code: what it is, what it's for, why you might want it, and where to start."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # RED<span class="y">code</span>
@@ -25,9 +25,11 @@ A Cyberpunk 2077 mod is mostly game files that have been changed. Those files li
 - **keep your work in a project**, the same `.cpmodproj` project WolvenKit uses;
 - **edit game files** in a tree and property grid, or as readable JSON text;
 - **look and listen**: textures, atlases, 3D meshes, animations on a body, pieces of the world in 3D with their materials, voice lines and the game's sound effects;
+- **see lip sync**: a character's spoken lines played on their own head, with the mouth's curves under the voice;
+- **work on the world**: see the sectors that add to one place as layers, change what many things share at once, and run small scripts that find, select or fix nodes;
 - **find clothing by its name in the game**, find the items that wear a mesh, and open a mesh in EDGEmat to change its materials;
 - **make new files**: a texture from an image, an atlas, a material and more;
-- **make animations from words** with Uthana, an AI service, on your own key, or from a GLB made in Blender;
+- **make animations from words** with Uthana, an AI service, on your own key, or from a GLB made in Blender, and **edit them**: pin a sliding foot, turn a bone, lay another clip on a hand, trim, loop, or reshape it in Blender;
 - **keep your AI service keys** in one place, for every EDGE tool, in VS Code and in the game;
 - **look things up** in TweakDB, the game's database of items and stats, and start a tweak from any record;
 - **find the game's texts** (LocKeys) in any of its 19 languages, and change them;
@@ -45,7 +47,9 @@ A Cyberpunk 2077 mod is mostly game files that have been changed. Those files li
 | Change how something looks | [Finding what you want to change](finding.html), then [Export and import](export-import.html), or [EDGEmat](../edgemat/) for colours |
 | Change a price or a stat | [TweakDB and tweaks](tweakdb.html) |
 | Replace a sound | [Replacing a sound](viewers.html#replacing-a-sound) |
-| Make an animation | [Making a clip](viewers.html#making-a-clip) |
+| Make an animation | [Making a clip](viewers.html#making-a-clip), then [Editing a made clip](viewers.html#editing-a-made-clip) |
+| See how a character's lines are lip synced | [The Lip Sync editor](lipsync.html) |
+| Change many things in a piece of the world at once | [The sector view](sectors.html): its Properties tab and sector scripts |
 | Have an assistant do it | [Assistants and MCP](assistants.html) |
 | Carry on from WolvenKit | [Projects](projects.html) and [Working with other tools](other-tools.html#wolvenkit) |
 
@@ -68,11 +72,11 @@ REDcode is the **Create** stage of the [EDGE platform](../index.html). It works 
 |---|---|
 | [REDbridge](../redbridge/) | Needed. It runs WolvenKit's engine. REDcode downloads and updates it for you |
 | [EDGEdeck](../edgedeck/) | Install goes through EDGEdeck, with its record of every file and its undo. EDGEdeck can also copy files from installed mods into your project |
-| Claude Code and other assistants | `redcode-mcp` lets an assistant browse the archives, read and change game files, query TweakDB, export, import and pack. The easy way to connect it is [EDGEchat](../edgechat/) |
-| [EDGEwave](../edgewave/) | **Open in EDGEwave** hands a sound to the EDGE sound studio |
+| Claude Code and other assistants | `redcode-mcp` lets an assistant browse the archives, read and change game files, query TweakDB, export, import and pack, make and edit animations, read lip sync, and find and change a sector's nodes, with your sector scripts. The easy way to connect it is [EDGEchat](../edgechat/) |
+| [EDGEwave](../edgewave/) | **Open in EDGEwave** hands a sound to the EDGE sound studio. In the Lip Sync editor, EDGEwave speaks a new line in the character's voice |
 | [EDGEmat](../edgemat/) | The 3D view shows a mesh's materials as EDGEmat renders them: colours only, approximate. The sector view's **Materials** draws a picked thing with EDGEmat's rendering. **Open in EDGEmat** puts the mesh on EDGEmat's Desk. The two share the list of clothing names |
 | EDGE tools that use an AI service | They ask REDcode for your keys, from the [Keys view](settings.html#the-keys-view), and REDcode asks you the first time each tool wants one |
-| [EDGEdir](../edgedir/) and [EDGEfab](../edgefab/) | They read the record REDcode keeps beside each animation it makes |
+| [EDGEdir](../edgedir/) and [EDGEfab](../edgefab/) | They read the record REDcode keeps beside each animation it makes. The Lip Sync editor and animation editing began in EDGEfab and are REDcode's now |
 | [REDnode](../rednode/) | **Pack and Play** swaps your mod into the running game through REDnode. REDnode mods and assistants can ask which project is open, in every VS Code window. Editing and debugging a REDnode mod from REDcode is planned |
 | [EDGEbuilder](../edgebuilder/) | Its scenes show in the Project view as **Scenes** |
 | [EDGEfab](../edgefab/) and the [EDGE Library](../library.html) | The **Library** view shows the Library, EDGEfab's props included, and adds its items to your project |
@@ -80,7 +84,9 @@ REDcode is the **Create** stage of the [EDGE platform](../index.html). It works 
 
 ## Status
 
-REDcode **0.10.16** is the latest release (22 November 2026). It is on the **VS Code Marketplace**, as a Preview, and on **Open VSX**, under the id `edgemodders.redcode-cyberpunk`, and on [GitHub](https://github.com/Edgemodders/REDcode/releases). [EDGEkit](../edgekit/) has it built in. It runs on Windows and needs REDbridge 0.18.0 or later, which it offers to fetch for you. Its companion for assistants, `redcode-mcp`, is at 0.5.1 on npm.
+REDcode **0.10.17** is the latest release (25 November 2026). It is on the **VS Code Marketplace**, as a Preview, and on **Open VSX**, under the id `edgemodders.redcode-cyberpunk`, and on [GitHub](https://github.com/Edgemodders/REDcode/releases). [EDGEkit](../edgekit/) has it built in. It runs on Windows and needs REDbridge 0.18.0 or later, which it offers to fetch for you. Its companion for assistants, `redcode-mcp`, is at 0.7.0 on npm, released with it.
+
+New in 0.10.17: the [Lip Sync editor](lipsync.html), [editing made animations](viewers.html#editing-a-made-clip) in REDcode and in Blender, the animation view's Clip, Edit and Animations tabs and its media buttons, and in the [sector view](sectors.html) the Overlaps and Properties tabs, search that selects, Back and Forward, and sector scripts. In the CR2W editor, a sector's nodeData entry shows the node and instance it names, and the search box goes to a pasted path.
 
 "Tested" below means tested by hand by REDcode's developer, on game 2.5 with Phantom Liberty.
 
@@ -90,9 +96,13 @@ REDcode **0.10.16** is the latest release (22 November 2026). It is on the **VS 
 | | New File: textures from images, atlases, material instances and the rest, made, opened and packed |
 | | The CR2W editor: tree, property grid, search, the table view for texts, the atlas view, the Properties view, and editing as JSON |
 | | The texture viewer, the 3D mesh viewer, the audio player and the game sound list. Game meshes show a colour per material, not their textures |
-| | Animations: an `.anims` file plays on its rig, on the game's base body or a character's meshes, with root motion, and a synced set plays together |
-| | Making animations: the Make panel and its commands, from words with Uthana or from a GLB, as a new clip or in place of a game clip. A replaced clip played in the game |
-| | Streaming sectors in 3D, with Coarser levels and Show in Tree, Materials on a picked thing, the camera row and controls, and selecting many things (Ctrl+click, a box, a Volume, Isolate, Add Meshes to Project, Copy) |
+| | The CR2W editor on a sector: a nodeData entry's node and instance, instanced mesh buffers as a tree, and going to a pasted path |
+| | Animations: an `.anims` file plays on its rig, on the game's base body or a character's meshes, with root motion, and a synced set plays together; the Clip, Edit and Animations tabs and the media buttons |
+| | Making animations: the Make panel and its commands, from words with Uthana or from a GLB, as a new clip or in place of a game clip. A replaced clip played in the game, and an In place clip kept its feet still there |
+| | Editing made clips: pins, keys, layers, trim and loop, with Undo and Redo, and Edit in Blender. An assistant's edits played in the game |
+| | The Lip Sync editor: a character's lines, played on their head with the curves, and its links from the audio player and the animation view |
+| | Streaming sectors in 3D, with Coarser levels and Show in Tree, Materials on a picked thing, the camera row and controls, and selecting many things (Ctrl+click, a box, a Volume, Isolate, Only, Back and Forward, Add Meshes to Project, Copy) |
+| | The sector view's Overlaps (the sectors that reach in, as layers) and Properties (changing what the selection shares), and sector scripts, Debug included |
 | | The Keys view, with each tool's permission, and the key API other EDGE tools use |
 | | Find Items and Open in EDGEmat in the 3D view |
 | | The TweakDB view, the record page, New Tweak from This Record and the hover |
@@ -109,7 +119,12 @@ REDcode **0.10.16** is the latest release (22 November 2026). It is on the **VS 
 | | A new mesh from a template with a different number of parts than the model |
 | | TweakDB on a game without Phantom Liberty |
 | | A made clip that travels across the floor (**In place** off) |
+| | Adding a line in the Lip Sync editor, spoken through EDGEwave: shipped untested |
+| | The sector view's search box selecting what it finds: built after the sector tests |
 | **Planned** | Importing voice lines |
+| | Lip sync: editing a line's curves, another head, and writing a new line, its voice and its subtitle into a mod |
+| | Animations: a timeline with moves on tracks, hand poses, joining clips, and the editor in the game |
+| | Sectors: selecting and changing across layers, links between a thing's entries, and opening the sector where V stands |
 | | Editing and debugging a REDnode mod from REDcode |
 | | A preview of the game's interface widgets, and a branded REDcode app. Graph views for quests and scenes are in [EDGEquest](../edgequest/) instead |
 
@@ -123,7 +138,9 @@ REDcode **0.10.16** is the latest release (22 November 2026). It is on the **VS 
 | [Game Assets](game-assets.html) | Browsing, filtering and searching the game, taking files out, and the game's texts in the LocKeys view |
 | [Finding what you want to change](finding.html) | From an item you know in the game to the files and records behind it |
 | [Editing game files](editing.html) | The CR2W editor, the Properties view, and editing as JSON |
-| [Textures, meshes and sounds](viewers.html) | The texture viewer, the 3D mesh viewer and Find Items, animations, synced sets and making clips, streaming sectors with their materials and selecting many things, the audio player, the game's sound effects and replacing one |
+| [Textures, meshes and sounds](viewers.html) | The texture viewer, the 3D mesh viewer and Find Items, animations, synced sets, making and editing clips, the audio player, the game's sound effects and replacing one |
+| [The sector view](sectors.html) | A piece of the world in 3D: moving round, materials, selecting many things, search, Overlaps, the Properties tab and sector scripts |
+| [The Lip Sync editor](lipsync.html) | A character's lip synced lines on their head, and new lines through EDGEwave |
 | [TweakDB and tweaks](tweakdb.html) | Looking up records, starting a tweak from one, and `.tweak` files |
 | [Export and import](export-import.html) | Out to PNG, glTF and Ogg, and back into the game's formats; Blender |
 | [Pack, install and run](pack-install.html) | Turning a project into a mod and trying it in the game, with Pack and Play; sharing it |

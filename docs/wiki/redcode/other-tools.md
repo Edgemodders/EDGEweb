@@ -3,7 +3,7 @@ title: Working with other tools
 section: REDcode
 order: 12
 description: "How REDcode works with EDGEdeck, EDGEmat, EDGEwave, EDGEbuilder, the EDGE Library, REDnode, EDGEdir and EDGEfab, the EDGE tools that use your AI keys, Uthana, WolvenKit, Blender and the redscript extension, and the API it offers other VS Code extensions."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # Working with other <span class="y">tools</span>
@@ -39,13 +39,15 @@ Today REDcode and EDGEdeck each download their own copy of REDbridge. Sharing on
 - When EDGEmat adds a mesh to a project, REDcode's Project view selects it, so you see where it went.
 - REDcode's [search for clothing by name](game-assets.html#search) uses the same list of item names as EDGEmat, so whichever tool loads it first spares the other the wait.
 - The 3D views' [light](viewers.html#the-light), with reflections and Fixed light, was made for judging EDGEmat's materials: metals and gloss look like metals and gloss.
-- In a [streaming sector](viewers.html#picking-a-thing-and-its-materials), **Materials** draws the thing you pick as EDGEmat renders it, and **Open in EDGEmat** opens its mesh at the appearance that thing uses. Without EDGEmat, REDcode draws the materials itself with EDGEmat's renderer.
+- In a [streaming sector](sectors.html#picking-a-thing-and-its-materials), **Materials** draws the thing you pick as EDGEmat renders it, and **Open in EDGEmat** opens its mesh at the appearance that thing uses. Without EDGEmat, REDcode draws the materials itself with EDGEmat's renderer.
 
 ## EDGEwave
 
 [EDGEwave](../edgewave/) is the EDGE platform's sound studio, for editing, mixing and re-voicing the game's sounds. REDcode finds sounds; EDGEwave works on them.
 
 **Open in EDGEwave**, in REDcode's audio player and the game sound list, hands the sound that's playing to EDGEwave. Without EDGEwave installed, it offers to install it.
+
+In REDcode's [Lip Sync editor](lipsync.html), **Adding a line** asks EDGEwave 0.3.0 or later to speak your words in the character's voice, with your ElevenLabs key; REDcode then makes the lip sync from EDGEwave's timing. EDGEwave asks once whether REDcode may spend your credits. This shipped untested. See [Adding a line](lipsync.html#adding-a-line).
 
 ## EDGEbuilder
 
@@ -93,7 +95,9 @@ The bigger loop is still **planned, not built**: write a REDnode mod in REDcode,
 
 ## EDGEdir and EDGEfab
 
-Each animation REDcode [makes](viewers.html#making-a-clip) gets a set of its own and a record beside it, `<name>.edgefab.json` under Raw, saying what it was made from. That is the layout [EDGEfab](../edgefab/) uses for made animations, so [EDGEdir](../edgedir/) and EDGEfab read REDcode's clips as their own: see [Animations made in EDGEfab](../edgedir/actors.html#animations-made-in-edgefab). If EDGEfab has edited a clip, REDcode says so before you make it again.
+Each animation REDcode [makes](viewers.html#making-a-clip) gets a set of its own and a record beside it, `<name>.edgefab.json` under Raw, saying what it was made from. That is the layout [EDGEfab](../edgefab/) uses for made animations, so [EDGEdir](../edgedir/) and EDGEfab read REDcode's clips as their own: see [Animations made in EDGEfab](../edgedir/actors.html#animations-made-in-edgefab). If EDGEfab has edited a clip, REDcode says so before you make it again. The steps you add in REDcode's [Edit tab](viewers.html#editing-a-made-clip) are kept in the same record.
+
+EDGEfab now covers props and clothing. Animation editing and the [Lip Sync editor](lipsync.html), which began in EDGEfab, are REDcode's.
 
 ## Your AI keys, for every EDGE tool
 
@@ -117,6 +121,8 @@ REDcode isn't a replacement for [WolvenKit](https://github.com/WolvenKit/WolvenK
 
 An animation made in Blender on the game's rig becomes a clip with **From a GLB…** in the animation view's Make panel, or **Add a Clip from GLB** on the `.glb`. See [Making a clip](viewers.html#making-a-clip).
 
+A clip you made opens in Blender too, on the base body, with **Edit in Blender** in the animation view's Edit tab. Each save there becomes the clip's new start. See [Edit in Blender](viewers.html#edit-in-blender) for animations.
+
 ## Uthana
 
 [Uthana](https://uthana.com) is an AI service that makes body motion from a sentence. REDcode's **Generate** sends your words there and fits the motion it sends back onto the game's own skeleton. It is paid, at $0.10 a second for its main model, with your own Uthana account and key, which you set in the [Keys view](settings.html#the-keys-view). You are charged only when a clip finishes. See [Making a clip](viewers.html#making-a-clip).
@@ -127,4 +133,4 @@ REDcode doesn't handle [redscript](../glossary.html#game-and-modding-terms), the
 
 ## For extension authors: REDcode's API
 
-REDcode hands other VS Code extensions an API, so they can use its REDbridge, its project, its editors, its import and its pack without copying its code. EDGEwave, EDGEmat, EDGEquest and EDGEhack use it. Among its calls: select a file in the Project view (`revealInProject`), open a model in a titled 3D tab and close it again (`openModel`, `closeModel`, made for EDGEfab's props), open an animation on a character's meshes or with its synced set (`openAnimation`), open a streaming sector with one entry or a list of entries selected (`openSector`), read the shared AI keys, with your permission (`keys`: `get`, `ask`, `status`, `onDidChange`), and make an animation with Uthana on your key (`generateAnimation`). See [Extension API](https://edgemodders.github.io/REDcode/api.html) on REDcode's docs site.
+REDcode hands other VS Code extensions an API, so they can use its REDbridge, its project, its editors, its import and its pack without copying its code. EDGEwave, EDGEmat, EDGEquest and EDGEhack use it. Among its calls: select a file in the Project view (`revealInProject`), open a model in a titled 3D tab and close it again (`openModel`, `closeModel`, made for EDGEfab's props), open an animation on a character's meshes or with its synced set (`openAnimation`), open a streaming sector with one entry or a list of entries selected (`openSector`), read the shared AI keys, with your permission (`keys`: `get`, `ask`, `status`, `onDidChange`), make an animation with Uthana on your key (`generateAnimation`), and open the Lip Sync editor on a character, at one of their lines (`openLipSync`, new in 0.10.17). See [Extension API](https://edgemodders.github.io/REDcode/api.html) on REDcode's docs site.

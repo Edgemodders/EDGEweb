@@ -32,7 +32,7 @@ Folders open when you expand them and show how many files they hold. Click a fil
 | A texture (`.xbm`) | The [texture viewer](viewers.html#textures) |
 | A mesh (`.mesh`) | The CR2W editor's [3D view](viewers.html#meshes-in-3d) |
 | Animations (`.anims`) | The [Animations view](viewers.html#animations) |
-| A streaming sector (`.streamingsector`) | The CR2W editor's [3D view of the sector](viewers.html#streaming-sectors) |
+| A streaming sector (`.streamingsector`) | The CR2W editor's [3D view of the sector](sectors.html) |
 | A sound (`.wem`) | The [audio player](viewers.html#sounds) |
 | The sound effect index (`sfx_container.opusinfo`) | The [game sound list](viewers.html#the-games-sound-effects) |
 | Any other game file | The [CR2W editor](editing.html) |

@@ -2,8 +2,8 @@
 title: Textures, meshes and sounds
 section: REDcode
 order: 7
-description: "See and hear what a mod is made of in REDcode: the texture viewer, the 3D mesh viewer and Find Items, animations on a body, synced sets and making clips with Uthana, streaming sectors in 3D with their materials and selecting many things, the audio player, the game's 73,000 sound effects, and replacing one."
-reviewed: 2026-11-22
+description: "See and hear what a mod is made of in REDcode: the texture viewer, the 3D mesh viewer and Find Items, animations on a body, synced sets, making clips with Uthana and editing them, in REDcode or in Blender, the audio player, the game's 73,000 sound effects, and replacing one. Streaming sectors have their own page."
+reviewed: 2026-11-25
 ---
 
 # Textures, meshes and <span class="y">sounds</span>
@@ -14,9 +14,9 @@ REDcode shows game files the way they look and sound, not only as data. Each vie
 |---|---|
 | [Textures](#textures) | The texture viewer |
 | [Meshes in 3D](#meshes-in-3d) | The 3D view, [its light](#the-light), and [which items use a mesh](#which-items-use-a-mesh) |
-| [Animations](#animations) | Play an animation on a body, with root motion, [a synced set](#synced-sets) together, and [make a clip](#making-a-clip) from words or a GLB |
-| [Streaming sectors](#streaming-sectors) | A piece of the game's world in 3D, every mesh where the game puts it: [moving round](#moving-round), [picking and materials](#picking-a-thing-and-its-materials), [selecting many](#selecting-many-things) |
-| [Sounds](#sounds) | The audio player |
+| [Animations](#animations) | Play an animation on a body, with root motion, [a synced set](#synced-sets) together, [make a clip](#making-a-clip) from words or a GLB, and [edit it](#editing-a-made-clip), in REDcode or [in Blender](#edit-in-blender) |
+| [Streaming sectors](#streaming-sectors) | A piece of the game's world in 3D: on its own page, [The sector view](sectors.html) |
+| [Sounds](#sounds) | The audio player, and its link to the [Lip Sync editor](lipsync.html) |
 | [The game's sound effects](#the-games-sound-effects) | Browse and play all 73,000, and [replace one](#replacing-a-sound) |
 
 ## Textures
@@ -103,11 +103,22 @@ It works for clothing and similar items: shoes, jackets, outfit sets, glasses, h
 
 An animation file (`.anims`) opens on an **Animations** view. It lists the file's animations with their length, and plays the one you pick on its **rig**, the skeleton the animation moves.
 
+The column at the side has three tabs, each with the column's whole height:
+
+| Tab | Holds |
+|---|---|
+| **Clip** | The Make panel, to [make a clip](#making-a-clip) |
+| **Edit** | The Edit panel, to [edit a made clip](#editing-a-made-clip). A clip you have edited opens on it |
+| **Animations** | The file's animations, with their lengths, and a [synced set](#synced-sets) when there is one |
+
 - A man's or a woman's animations play on the game's plain grey **base body**. The toolbar says which rig and which body: `Rig man_base.rig`, `On Base male body`. Heads are meshes of their own, so the base body has none.
 - Other rigs, such as a vehicle's or the player's, show **bones** only: lines and dots for the bones and joints.
 - **Body** and **Bones** switch each on and off. **Frame** fits the view to the whole animation.
 - **Root motion** moves the whole rig through the scene as the animation moves it, such as a soldier dropping from an AV and walking off, and the view follows. It is off at first, and REDcode remembers your choice.
-- **Play** and pause, a bar to drag through the animation, single frames, **Loop** and speed. An animation of a frame or two, a still pose, opens paused.
+- Under the view, the usual media buttons: jump to the beginning, step back a frame, play backward, stop, play forward, step forward a frame, jump to the end. Each names itself when you hover it. Beside them are a bar to drag through the animation, **Loop** and the speed.
+- With the 3D view clicked, `Space` plays or stops, the arrow keys step a frame, and `Home` and `End` jump to the beginning and the end.
+- An animation of a frame or two, a still pose, opens paused.
+- On a character's [lip sync](lipsync.html) set, **Open in Lip Sync** in the bar opens the Lip Sync editor at the picked clip's line.
 - **Tree** shows the file's data; **Animations** goes back to where you were.
 - A large file takes about a minute to open the first time, and is quick after that.
 
@@ -119,7 +130,7 @@ Other EDGE tools can open an animation on a character's own meshes, such as [EDG
 
 ### Synced sets
 
-Some animations are one part of a moment several characters play together: the Trauma Team's landing is a clip for the AV and one for each soldier, each in its own `.anims` file. Pick such a clip, and a **Synced set** section under the list names the others in the same folder, each with a colour and a tick.
+Some animations are one part of a moment several characters play together: the Trauma Team's landing is a clip for the AV and one for each soldier, each in its own `.anims` file. Pick such a clip, and a **Synced set** section under the list, in the **Animations** tab, names the others in the same folder, each with a colour and a tick.
 
 - **Play the Set** turns on Root motion and plays them together on one clock, each on its own rig, placed where the game puts them. A row says **placed** once it is; hover it to see how. **Stop the Set** shows the one animation alone again.
 - Play, pause, the time bar, Loop, speed, **Body**, **Bones** and **Frame** act on every member.
@@ -134,14 +145,14 @@ Some animations are one part of a moment several characters play together: the T
 
 You can make a new animation from words, with [Uthana](../glossary.html#uthana), an AI service that turns a sentence into motion. It lands straight on the game's own skeleton, ready to play. Uthana is paid, with your own key: you set it once in the [Keys view](settings.html#the-keys-view).
 
-**Make**, in the animation view's bar, opens the **Make** panel above the clip list. It works on a man's or a woman's animations, the ones that play on the base body, with a project open; otherwise the panel says why. Under the heading **Make a Clip**, the clip picked in the list shows in yellow.
+The **Clip** tab, in the animation view's side column, holds the **Make** panel. It works on a man's or a woman's animations, the ones that play on the base body, with a project open; otherwise the panel says why. Under the heading **Make a Clip**, the clip picked in the list shows in yellow.
 
 | In the panel | Does |
 |---|---|
 | The words | What the animation shows, such as "a man stands relaxed, then crosses his arms and taps his right foot" |
 | Model | Uthana's model and its price: 3.0 and 3.0 Lite at $0.10 a second, 3.0 Mini at $0.075 |
 | Length | 4 to 10 seconds; 5 at first |
-| **In place** | No travel across the floor. On at first, because the game plays such clips where the character stands. Off keeps the travel, which is untried in the game |
+| **In place** | No travel across the floor. On at first, because the game plays such clips where the character stands. The hips and feet still move as Uthana made them, so a dance or a shift of weight doesn't slide the feet. Off keeps the travel, which is untried in the game |
 | **Upper body only** | Holds the legs still, for arm motions such as a wave or a phone call |
 | **As written** | Sends your words as they are. Off, Uthana first rewrites them into a description of the motion |
 | **New Clip**, **Replace Clip** | A new clip in your project, or a clip that takes the place of the one picked in the list |
@@ -151,7 +162,7 @@ You can make a new animation from words, with [Uthana](../glossary.html#uthana),
 
 While a clip is made, the panel's inputs are off and the button shows a spinner, the stage and the time so far. A bar steps through the stages, and a notification follows them. One clip is made at a time. It takes a minute or two.
 
-The new clip then opens in its own tab, playing on its body. That tab opens with the Make panel showing the words and how the clip was made (the model, the length, the cost, when), ready to make it again.
+The new clip then opens in its own tab, playing on its body. That tab opens with the Clip tab's Make panel showing the words and how the clip was made (the model, the length, the cost, when), ready to make it again.
 
 | You chose | You get |
 |---|---|
@@ -159,88 +170,62 @@ The new clip then opens in its own tab, playing on its body. That tab opens with
 | **Replace Clip** | A copy of the game's whole set in your project, with your clip in place of the one you picked. The game plays yours wherever it played that one |
 
 - A name that is taken gets `_2`. If you type the name of a clip you made before, REDcode asks first, before anything is paid: **Make It Again** (it keeps its id) or **Keep Both**. It also says when EDGEfab has edited that clip.
-- Every made clip faces the way the game's own clips do, and Uthana is asked for feet that stay on the ground: a foot that bears weight stays flat and does not slide.
+- Every made clip faces the way the game's own clips do, and Uthana is asked for feet that stay on the ground: a foot that bears weight stays flat. A foot that still slides a little can be pinned in [Edit](#editing-a-made-clip).
 - The same is in the command palette: **Generate an Animation with Uthana** asks the rig, the words and the length; **Add a Clip from GLB** (also in the Project view's right-click menu on a `.glb`) and **Replace a Game Clip**.
 
-**Try it** (about $0.50 of Uthana credit). With a project open, open `generic_male_average__stand__2h_on_sides__01.anims` from Game Assets and press **Make**. Type "a man stands relaxed, then crosses his arms and taps his right foot" and press **Generate**. In a minute or two the new clip opens and plays, and the Project view shows its set under `anims`.
+**Try it** (about $0.50 of Uthana credit). With a project open, open `generic_male_average__stand__2h_on_sides__01.anims` from Game Assets and click the **Clip** tab. Type "a man stands relaxed, then crosses his arms and taps his right foot" and press **Generate**. In a minute or two the new clip opens and plays, and the Project view shows its set under `anims`.
 
-Tested by REDcode's developer: making clips both ways, and a replaced clip played in the game. The first time a clip plays on a character in the game, a brief T pose came before it; that looks like the game's side, not the clip's (unverified).
+Tested by REDcode's developer: making clips both ways, a replaced clip played in the game, and an **In place** clip whose feet stay put in the game. The first time a clip plays on a character in the game, a brief T pose came before it; that looks like the game's side, not the clip's (unverified).
 
 {% include shot.html caption="The Make panel" src="/assets/shots/redcode/viewers-make.png" alt="An animation view with the Make panel open above the clip list: Make a Clip with the picked clip's name in yellow, a sentence typed in, the model and length lists, In place, Upper body only and As written, New Clip and Replace Clip, the Name box, and the Generate, $0.50 and From a GLB buttons." shows="An animation view with the Make panel open above the clip list: Make a Clip with the picked clip's name in yellow, the words typed in, the model and length, In place, Upper body only and As written, New Clip and Replace Clip, the Name box, and the Generate, $0.50 and From a GLB buttons." %}
 
+### Editing a made clip
+
+A made clip is rarely exactly right: a foot slides a few centimetres, the head should turn, a hand should do something else. The **Edit** tab changes a clip you made, in steps. The clip as made is kept, and the steps are applied to it each time, so any step can be changed or taken out later. Nothing is lost.
+
+Open a made clip from your project (its set under `anims` in the Project view) and click **Edit**. It works on a clip made as a **New Clip**, in its own set; game clips can't be edited there yet.
+
+| In the Edit tab | Does |
+|---|---|
+| The steps | The list of steps, in the order they apply. Click one to go to its time and fill the form with it, to change it (**Update Step**). ↑ and ↓ reorder; × takes one out |
+| **Feet** | Each place a foot rests, and how far it slides there. **Pin** holds a foot that slides, lit when it slides more than 1 cm. **Pin All Sliding** adds a pin for each |
+| **Add a Step** | A form for a new step, below. **Now** puts the playhead's time in a time box |
+| **Apply** | Rebuilds the clip from the steps. The view comes back at the same moment, camera and speed. Steps not applied yet are shown in the accent colour |
+| **Revert** | Back to the steps applied last, without rebuilding |
+| **Undo**, **Redo** | The steps before the last Apply, and back again. Kept while VS Code runs |
+| **Clear** | No steps: the clip as made, after **Apply** |
+| **Edit in Blender** | Opens the clip in Blender. See [Edit in Blender](#edit-in-blender) |
+
+The steps:
+
+| Step | Does |
+|---|---|
+| **Pin** | Holds a foot or a hand where it is from one time to another; the leg or arm bends to keep it there |
+| **Key a bone** | Turns a bone at a moment (yaw, pitch and roll, in degrees), or moves a hand or foot (in cm), with an easing and a blend time. Pick the bone from the list, or click near its joint in the view with **Bones** on: a yellow dot marks it |
+| **Layer another clip** | Lays another clip's motion on chosen bones only, such as the right arm or a hand, from a time, with a weight and a blend in and out. The other clip can be one you made or one of the game's on the same rig |
+| **Trim** | Cuts the start or the end |
+| **Loop** | Blends the end back into the start |
+
+**Try it.** Open a clip you made, such as the one from [Making a clip](#making-a-clip), and click **Edit**. **Pin All Sliding**, then **Apply**: the Feet now read near 0 cm, and the feet stay put. Then **Add a Step**, **Key a bone**, pick Head, drag the playhead to about 2.5 s, **Now**, Yaw 30, **Add Step** and **Apply**: he looks to his left around 2.5 s.
+
+Tested by REDcode's developer, in REDcode and, through an assistant's edits, in the game. Planned: a timeline with moves on tracks, set by grabbing a bone in the view; hand poses from the game's clips (a fist, an open hand); joining two clips; and the same editor in the game, through the Animation Tools pack.
+
+{% include shot.html caption="The Edit tab" shows="A made clip in the animation view with the Edit tab open: two steps in the list, the Feet with three rows and their slide in cm, Pin All Sliding, the Add a Step form for Key a bone with Head picked, Apply, Revert, Undo, Redo, Clear and Edit in Blender, and the seven media buttons under the view." %}
+
+#### Edit in Blender
+
+**Edit in Blender**, in the Edit tab, opens the clip as it plays now, steps and all, on the base body in [Blender](other-tools.html#blender), at 30 frames a second with the clip's frames as Blender's range. Pose it there and key what you change.
+
+- Each time you save in Blender (`Ctrl+S`), what you saved becomes the clip's **new start**: REDcode fits it onto the rig, folds the steps into it and empties the list, and the view here rebuilds in place.
+- **Undo** in the Edit tab brings back the clip before Blender, with its steps. **Redo** takes the Blender version again.
+- While Blender is open, a **Blender** item shows in the status bar. Closing Blender ends the watch.
+- The clip has a key on every frame, so a key you add on one frame changes that frame only: a one-frame flick. Delete the bone's keys around the moment first, or key a few frames.
+
+Tested by REDcode's developer, with Blender 5.2.2.
+
 ## Streaming sectors
 
-The game's world is cut into **streaming [sectors](../glossary.html#sector)** (`.streamingsector` files), each a list of what stands in one piece of the map: buildings, props, decals, lights. A sector from the game or your project opens on a **3D view**, read-only, with every mesh drawn where the sector places it.
-
-### Moving round
-
-| To | Do |
-|---|---|
-| Orbit | Drag |
-| Look round and fly | Hold the right button: move the mouse to look round where the camera stands, W, A, S and D to fly, Q and E to go down and up. The wheel changes the fly speed while you hold it. As in [EDGEbuilder](../edgebuilder/) |
-| Pan | Drag with the middle button, or with the left and Ctrl held |
-| Zoom | The wheel. It goes towards the thing under the cursor, not the middle of the view |
-| Fly close to a thing | Double-click it |
-| Frame the picked thing | `F`, or **Frame** |
-
-Shift makes any move faster, and Ctrl slower. Once you have clicked in the view, W, A, S, D, Q and E fly without the right button too.
-
-The **camera row** under the toolbar does the same with buttons, for a touchpad, or when you'd rather click. **Zoom**, **Move** (forward, back, left and right), **Pan**, **Height** and **Orbit** move the camera while a button is held. **Speed** sets the fly speed (shown as ×1.0). **Top** looks down from above, on the picked thing or the sector, and **Reset** goes back to the view the sector opened with. **?** shows a line naming the mouse and keys.
-
-### Picking a thing and its materials
-
-Click a thing to pick it. It is outlined, and the Properties view shows its entry. The line under the view names its id, its mesh's file name, the appearance it uses and its materials; hover that line for the mesh's path and the material of each part. Beside it:
-
-| Button | Does |
-|---|---|
-| **Show in Tree** | Goes to the thing's entry in the file |
-| **Open Mesh** | Opens its mesh in the [3D mesh view](#meshes-in-3d) |
-| **Open in EDGEmat** | Puts the mesh on [EDGEmat](../edgemat/)'s Desk, at the appearance this thing uses |
-| **Add Mesh to Project** | Copies the mesh into your project. It asks first, because a change to the mesh then shows everywhere the game uses it |
-
-**Materials**, in the toolbar, draws the picked thing with its own materials, textures included. With EDGEmat installed, EDGEmat renders them; without it, REDcode does, with EDGEmat's renderer. A note says which. Like the mesh view's colours, it is approximate. The world's **multilayered** materials, on most buildings and the pavement, still come out a flat grey.
-
-On a project's copy of a sector, a thing whose mesh is in the project too is drawn with the project's own materials.
-
-### More in the toolbar
-
-- **Markers** shows the things that aren't meshes, such as entities, decals and lights, as markers.
-- **By material** colours each thing by the materials its appearance names, instead of by mesh. Things that share a material share a colour: the tall buildings of a plaza are often one. The first time, a line counts the meshes as their material names are read.
-- **Streamed** shows only what the game would draw from where the camera is. Fly closer and more appears.
-- **Coarser levels** adds the sectors that hold what is seen from far away over this one. There can be hundreds, so a bar over the view counts them as they are read, then as their meshes export.
-- **Light** and **Fixed light** work as in the [mesh view](#the-light).
-- The first time, each mesh is exported, which takes a few seconds for a busy sector (Coarser levels can take minutes). After that a sector opens at once.
-
-### Selecting many things
-
-The list on the right of the view shows what is selected. Empty, it says how to select.
-
-| To | Do |
-|---|---|
-| Add a thing, or take it out | Ctrl+click it. The last one added is the current one, in the accent colour; the line below and the Properties view follow it |
-| Select what is in a box on the screen | Shift+drag. Everything whose middle is in the box is selected. Hold Ctrl as well to add to what you had |
-| Select what is in a box in the world | **Volume**: drag its base on the ground, move the mouse up for its height, and click. Everything inside is selected |
-| Take long things too | **Touching**: roads, walls and other long things whose box reaches into yours count as well |
-| Select everything shown, or nothing | `Ctrl+A`, or `Esc`, after a click in the view |
-
-A volume keeps a handle on each face, to resize it, and a round one above, to move it along the ground. The selection follows. A click inside the volume still picks the thing there. `Esc` takes away the selection, the volume and Isolate; pressed before you draw, it turns Volume off.
-
-In the list, click a row to fly to it and make it the current one. Hover a row for its buttons: **Fly To**, **Tree** (Show in Tree), **Mesh** (Open Mesh), **EDGEmat** (Open in EDGEmat), **Add** (Add Mesh to Project) and **×**, which takes it out of the selection. These act on the whole selection:
-
-| Button | Does |
-|---|---|
-| **Frame All** | Fits the view to everything selected |
-| **Isolate** | Makes everything else see-through and ghostly. It follows the selection while it is on, and ends when nothing is selected. Press it again to see everything |
-| **Add Meshes to Project** | Copies each selected thing's mesh into your project, each mesh once. One question names how many first |
-| **Copy** | Copies one line per thing, its id and its mesh, to paste anywhere |
-
-The view shows the **saved** file. To move something, add the sector to your project with **Add to Project** in the editor's header, change its entry's position in the tree, and save: the view draws it in its new place.
-
-**Try it.** Search game files for `exterior_-22_7_0_0.streamingsector` and open it: about 105 meshes drawn nearly 9,000 times, and 202 markers. Click the cardboard and bottles on the street, then turn on **Materials**: the cardboard is drawn with its own texture. Then Shift+drag a box over part of the street, and the list fills.
-
-{% include shot.html caption="A streaming sector in 3D" src="/assets/shots/redcode/viewers-sector.png" alt="A streaming sector open on the 3D view: two blocks of buildings and a piece of street seen from above, the toolbar with Frame, Coarser levels, Streamed, Markers, By mesh, Materials, Volume, Touching, Scripts and Light, the camera row under it, four things in the selected list on the right, and the line below naming the picked mesh with Show in Tree, Open Mesh, Open in EDGEmat and Add Mesh to Project." shows="A streaming sector open on the 3D view: buildings and street seen from above, a few things selected and one outlined in the accent colour, the toolbar with Markers, By material, Materials, Streamed, Coarser levels, Volume and Light, the camera row under it, the selected list on the right, and the line below naming the picked mesh with Show in Tree, Open Mesh, Open in EDGEmat and Add Mesh to Project." %}
-
-{% include shot.html caption="A volume in a sector" src="/assets/shots/redcode/viewers-volume.png" alt="A see-through Volume box drawn on a street in a sector's 3D view, with a handle on each face and a round one above, 58 things selected and listed on the right, and Isolate on: what is outside the selection is drawn as faint red outlines." shows="A see-through Volume box drawn on a street in a sector's 3D view, with a handle on each face and the round one above, the things inside it selected and listed on the right, and Isolate on so everything else is ghostly." %}
+A streaming sector (`.streamingsector`), a piece of the game's world, opens on a 3D view with every mesh drawn where the game puts it. It has its own page: [The sector view](sectors.html), with moving round, picking a thing and its materials, selecting many things, the sectors that reach in as layers, changing many things at once, and sector scripts.
 
 ## Sounds
 
@@ -251,6 +236,7 @@ A sound file opens in the **audio player**. Most `.wem` files in the game are vo
 - The toolbar shows the time, codec, channels and sample rate.
 - **Save...** writes the sound to a file.
 - **Open in EDGEwave** hands the sound to EDGEwave, the EDGE sound studio. See [Working with other tools](other-tools.html#edgewave).
+- **Lip Sync** shows on a voice line the game has lip sync for, a moment after the sound loads. It opens the [Lip Sync editor](lipsync.html) at that line.
 
 WAV, Ogg, MP3 and FLAC files keep VS Code's own preview, and offer the player under **Open With...**.
 

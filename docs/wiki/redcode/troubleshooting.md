@@ -3,8 +3,8 @@ title: Troubleshooting REDcode
 nav_title: Troubleshooting
 section: REDcode
 order: 14
-description: "What to do when REDcode can't find REDbridge or the game, a view is empty, an edit vanishes, a clip won't make, a tool gets no key, an import isn't offered, a mod doesn't show in the game, or Pack and Play installs instead of swapping."
-reviewed: 2026-11-22
+description: "What to do when REDcode can't find REDbridge or the game, a view is empty, an edit vanishes, a clip won't make or edit, a sector script asks before it runs, lip sync shows no head, a tool gets no key, an import isn't offered, a mod doesn't show in the game, or Pack and Play installs instead of swapping."
+reviewed: 2026-11-25
 ---
 
 # Troubleshooting <span class="y">REDcode</span>
@@ -14,8 +14,8 @@ Find what you see in the left column of the group where you're stuck. If it isn'
 | Where you're stuck | |
 |---|---|
 | [Setting up](#setting-up) | Installing, REDbridge, .NET, an empty Game Assets view |
-| [Browsing and viewing](#browsing-and-viewing) | TweakDB, the 3D views, Find Items, animations, sectors, sounds |
-| [Making animations](#making-animations) | The Make panel, Uthana |
+| [Browsing and viewing](#browsing-and-viewing) | TweakDB, the 3D views, Find Items, animations, sectors, sector scripts, sounds, lip sync |
+| [Making animations](#making-animations) | The Make panel, Uthana, the Edit tab, Blender |
 | [Keys](#keys) | The Keys view, a tool that gets no key |
 | [Editing, export and import](#editing-export-and-import) | Edits that vanish, a question before Add to Project, imports that aren't offered, Blender |
 | [Pack, install and the game](#pack-install-and-the-game) | A mod that doesn't show, a game that won't start, Pack and Play |
@@ -56,15 +56,29 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 | A sector shows markers but few or no meshes, the first time | Its meshes are still exporting: the line under the view counts them. A busy sector takes a few seconds, **Coarser levels** can take minutes. After that it opens at once. If the count stops, press **Show REDbridge log** |
 | With **Materials** on, a building or the pavement is flat grey | Normal for now. The world's multilayered materials don't render yet; smaller things with plain materials do |
 | Shift+drag in a sector no longer pans | Shift+drag now selects in a box. Pan with the middle button, or with the left and Ctrl held |
+| **Overlaps** takes about a minute | Normal the first time at a place: REDcode reads every sector that might reach in. It keeps what it found, so the next time takes about a second |
+| A change in the **Properties** tab leaves a layer's things alone | Normal for now: the Properties tab and scripts change only the opened sector's own things. Open the layer's sector with the open icon on its row, and change it there |
+| The **Properties** tab shows **mixed** | The selected things have different values there. A value you set goes on all of them |
+| A value I want to change isn't in the **Properties** tab | It shows only when every selected thing has it, as a plain value. Select fewer kinds of thing, or change it in the tree or with a [script](sectors.html#sector-scripts). `nodeIdx` and `instanceIndex` are left out on purpose |
+| A sector script asks "It has not run on this computer before" | Normal for a script REDcode didn't make, such as one you copied or an assistant wrote. Read it in the tab beside, then press **Run**. It asks once per file |
+| Sector scripts don't run, and VS Code says **Restricted Mode** | Scripts run only in a trusted folder. Trust the folder (VS Code asks, or use **Manage Workspace Trust**) |
+| A script seems to change nothing | It shows its changes first and makes them only on **Apply**, and only in a project's copy of the sector. Read the line under the view: it says what the script selected and changed |
 | `Ctrl+A` or `F` does nothing in a sector | Click in the view first (the 3D view, the list or the line below it), so the view has the keys |
 | I replaced a sound, but hear the game's sound some of the time | The event plays one of several sounds at random. Press **Replace…** again and choose **Replace All** |
 | The game sound list shows numbers, not names | About a third of the sound events have no known name: WolvenKit's list doesn't cover them. Filter by a name that is known, or play your way to the sound |
+| A voice line has no **Lip Sync** button | The game has no lip sync for that line, or the sound is no voice line. The button shows a moment after the sound loads |
+| The Lip Sync tab shows a sketch of a mouth, not a head | The head is still loading. It takes a few seconds |
+| A line I opened from elsewhere isn't in the Lip Sync tab's list | The scene filter holds that line's scene. Clear the box to see every scene |
 | No sound plays after a game update, or EDGEwave says "could not read sound" | An old REDcode kept sound files from before the update. Update REDcode: it now empties that cache when the game changes |
 
 ## Making animations
 
 | You see | Do this |
 |---|---|
+| There's no **Make** button in the animation view's bar | Since REDcode 0.10.17 the Make panel is in the side column's **Clip** tab, and editing in its **Edit** tab |
+| The **Edit** tab has nothing to edit | It works on a clip REDcode made as a **New Clip**, opened from its own set in your project. Game clips can't be edited there yet |
+| An edit doesn't show | A step changes nothing until **Apply**. Steps not applied yet show in the accent colour |
+| A key I added in Blender is a one-frame flick | The clip has a key on every frame, so your key changes that frame only. Delete the bone's keys around the moment first, or key a few frames |
 | **Make** says why it can't make a clip | It works on a man's or a woman's animations (the ones that play on the base body), with a project open. Open such a file, or a project |
 | REDcode asks for an Uthana key | Making a clip with words uses [Uthana](other-tools.html#uthana) on your own account. Make an account on uthana.com, then paste its key. It is kept in the [Keys view](settings.html#the-keys-view) for every tool |
 | The Uthana row in the Keys view reads `uthana` in small letters | REDbridge 0.18.0 doesn't know the service's name. It works the same; REDbridge 0.19.0 names it. Run **REDcode: Update REDbridge** |
@@ -137,6 +151,8 @@ Click REDcode's item in the status bar, at the bottom of VS Code, or run **REDco
 |---|---|
 | Install doesn't use EDGEdeck | Install uses EDGEdeck when it's installed and enabled in the same VS Code. The old REDdeck doesn't count: install [EDGEdeck](../edgedeck/) instead, and reload the window |
 | Open in EDGEwave offers to install EDGEwave | EDGEwave isn't installed. See [EDGEwave](../edgewave/) for how to get it |
+| Adding a line in the Lip Sync tab says it needs EDGEwave | Install [EDGEwave](../edgewave/) 0.3.0 or later, and set your ElevenLabs key in the [Keys view](settings.html#the-keys-view) |
+| EDGEwave says there is no voice for the character yet | Pick one with **EDGEwave: Character Voices…**. See [Character voices](../edgewave/voices.html#character-voices) |
 | Open in EDGEmat says it needs EDGEmat | EDGEmat isn't installed. Press **Install EDGEmat**, or see [EDGEmat](../edgemat/) |
 | A package called REDcode is in REDnode's Mod Manager | REDcode put it there. It tells REDnode mods which project is open. See [REDnode](other-tools.html#rednode) |
 | An assistant's `redcode__projects` lists only one window, or the REDcode package in the game goes back to an older version | A window runs a REDcode older than 0.10.15, which puts its own older package back. Update REDcode in every window |
