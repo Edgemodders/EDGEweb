@@ -4147,6 +4147,11 @@ window.EDGE_STATUS = {
      "who": "REDagent",
      "what": "REDnode #54 (filed 2026-11-21): more context and no tools in agent.ask for C3, a choice of model; not started on 2026-11-25, needed for C3's test in the game",
      "ref": "https://github.com/Edgemodders/REDnode/issues/54"
+    },
+    {
+     "who": "REDnode",
+     "what": "REDnode #61 (filed 2026-11-25): game events for fights (V's combat state, NPCs killed or downed with their affiliation), so gangs in Chooms! remember fights with V; not blocking",
+     "ref": "https://github.com/Edgemodders/REDnode/issues/61"
     }
    ],
    "ownerActions": [
