@@ -492,6 +492,12 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Sector Properties tab",
+     "steps": 6,
+     "status": "not run",
+     "note": "Built 2026-11-24 (a modder's request): the shared properties of the selection, set on all of them after a question with the count; checked by a unit check and in Chrome over the real REDbridge (docs/testing.md, Sector Properties tab)"
+    },
+    {
      "name": "Animation Editor (AE5)",
      "steps": 5,
      "status": "not run",
