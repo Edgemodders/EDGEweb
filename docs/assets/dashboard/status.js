@@ -1222,22 +1222,22 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-"Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L2 and L3 (L2-1 to L3-6), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11). Next, agreed: sector materials M2, Lip Sync L2's design page"
+     "Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L2 and L3 (L2-1 to L3-6), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11). Next, agreed: sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
-{
- "name": "Sector layers L2 and L3",
- "steps": 10,
- "status": "not run",
- "note": "Built 2026-11-25: scripts over layers, changes into several sectors, the Links row, Select Placements in 3D; checked by unit checks (94) and on exterior_-22_7_0_0 through REDbridge (docs/testing.md, Sector layers L2 and L3)"
-},
-{
- "name": "Animation Timeline TL2 to TL4",
- "steps": 11,
- "status": "not run",
- "note": "Built 2026-11-25: the timeline under the animation view, live preview, editing blocks, grabbing a joint; checked in Chrome on Probe D's made clip (docs/testing.md, Animation Timeline TL2 to TL4, T1 to T11)"
-},
+    {
+     "name": "Sector layers L2 and L3",
+     "steps": 10,
+     "status": "not run",
+     "note": "Built 2026-11-25: scripts over layers, changes into several sectors, the Links row, Select Placements in 3D; checked by unit checks (94) and on exterior_-22_7_0_0 through REDbridge (docs/testing.md, Sector layers L2 and L3)"
+    },
+    {
+     "name": "Animation Timeline TL2 to TL4",
+     "steps": 11,
+     "status": "not run",
+     "note": "Built 2026-11-25: the timeline under the animation view, live preview, editing blocks, grabbing a joint; checked in Chrome on Probe D's made clip (docs/testing.md, Animation Timeline TL2 to TL4, T1 to T11)"
+    },
     {
      "name": "Sector layers L4 and Sector Tools L1",
      "steps": 9,
@@ -3412,7 +3412,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.2.0",
     "needs": [
-     "Hand tests: 0.2.0 in a session (seven servers, /edge:setup, one call each) and continue in the game (needs REDagent 0.4.5)",
+     "Hand test: 0.2.0 in a session (seven servers, /edge:setup, one call each)",
      "EDGEfab to confirm its wiring on EDGEchat #5"
     ]
    },
@@ -3476,9 +3476,9 @@ window.EDGE_STATUS = {
     {
      "name": "/edge:continue with a REDagent handoff (REDagent C6a test)",
      "steps": 6,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Needs REDagent 0.4.5, on its main"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-25: all six steps (REDagent 0.4.6, REDnode 0.73.1, EDGEchat 0.2.0 from the checkout); EDGEchat #8 closed"
     }
    ],
    "ownerSpotTests": [],
@@ -3492,11 +3492,6 @@ window.EDGE_STATUS = {
      "who": "EDGEfab",
      "what": "Confirm how the plugin wires edgefab-mcp 0.2.0 (EDGEFAB_REDBRIDGE, keys)",
      "ref": "EDGEchat #5"
-    },
-    {
-     "who": "REDagent",
-     "what": "Release 0.4.5 with the VS Code handoff, for /edge:continue's test",
-     "ref": "EDGEchat #8"
     }
    ],
    "ownerActions": [
@@ -3507,7 +3502,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EC2",
-     "what": "Run the 0.2.0 hand tests in docs/testing.md: \"0.2.0 in a session\", then \"continue in the game\" once REDagent 0.4.5 is out",
+     "what": "Run the 0.2.0 hand test \"0.2.0 in a session\" in docs/testing.md",
      "since": "2026-11-25"
     }
    ],
@@ -3516,7 +3511,7 @@ window.EDGE_STATUS = {
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (0.2.0 on main; evals: 15 cases pass, mean delta +0.66)"
+   "checkedBy": "EDGEchat session, 2026-11-25 (continue in the game passed; #8 closed)"
   },
   {
    "name": "REDsave",
