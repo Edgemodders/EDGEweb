@@ -1391,8 +1391,34 @@ window.EDGE_STATUS = {
      "ref": "RC6",
      "what": "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md",
      "since": "2026-11-23"
+    },
+    {
+     "ref": "RC4",
+     "what": "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
+     "since": "2026-11-21",
+     "done": "2026-11-22"
+    },
+    {
+     "ref": "RC8",
+     "what": "Look at the sector view's Overlaps tab yourself: how a ghosted layer looks and how it feels to use (the rest of Sector layers L1 passed by script); your notes shape L2 to L4",
+     "since": "2026-11-24",
+     "done": "2026-11-25",
+     "outcome": "Passed: the ghosted look is fine"
+    },
+    {
+     "ref": "RC9",
+     "what": "Finish Lip Sync L1 (docs/testing.md, Lip Sync L1): steps 3 to 8 and 10 passed by script; left for you are whether the sound plays, the mouth against the voice and the head's look, and step 9 (Add a Line, EDGEwave 0.3.0 and an ElevenLabs key), or ship with step 9 untested",
+     "since": "2026-11-24",
+     "done": "2026-11-25",
+     "outcome": "Sound, mouth and head fine; shipped in 0.10.17 with step 9 untested"
+    },
+    {
+     "ref": "RC10",
+     "what": "Finish the Sector scripts hand test: run 1 stopped at step 3, which was fixed, so step 3 again, then steps 4 to 15 (docs/testing.md, Sector scripts); step 15 is new, a script an assistant writes with script_write showing in the Scripts menu",
+     "since": "2026-11-24",
+     "done": "2026-11-24"
     }
-       ],
+   ],
    "risks": [
     "REDbridge answers one call at a time"
    ],
