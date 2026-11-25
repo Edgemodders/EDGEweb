@@ -4219,7 +4219,7 @@ window.EDGE_STATUS = {
      "steps": 12,
      "status": "not run",
      "ranBy": "owner",
-     "note": "docs/design.md, C3 test; REDnode 0.73.0 and REDagent 0.4.6 in the game on the PC (2026-11-25), and Chooms! requires 0.73.0; Chooms!'s fights code goes into the game at the next deploy (the game was running)"
+     "note": "docs/design.md, C3 test; REDnode 0.73.0 and REDagent 0.4.6 in the game on the PC (2026-11-25), and Chooms! requires 0.73.0; Chooms!'s fights code deployed to the PC 2026-11-25"
     },
     {
      "name": "C2 cards test (the Story tab's knowledge cards)",
@@ -4323,7 +4323,7 @@ window.EDGE_STATUS = {
     "Relies on Cloudflare quick tunnels: a private web address",
     "A game patch that renames quest paths would need Chooms!'s story file updated"
    ],
-   "checkedBy": "EDGEmobile session, 2026-11-25 (#54 passed and closed; Chooms! requires REDnode 0.73.0)"
+   "checkedBy": "EDGEmobile session, 2026-11-25 (Chooms!'s fights deployed)"
   },
   {
    "name": "EDGEmods",
