@@ -4263,8 +4263,13 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDnode",
-     "what": "REDnode #61 (filed 2026-11-25): game events for fights (V's combat state, NPCs killed or downed with their affiliation), so gangs in Chooms! remember fights with V; not blocking",
+     "what": "REDnode #61 (filed 2026-11-25): game events for fights (V's combat state, NPCs killed or downed with their affiliation), so gangs in Chooms! remember fights with V; the owner asked for it to be built next (2026-11-25); not blocking C3's test",
      "ref": "https://github.com/Edgemodders/REDnode/issues/61"
+    },
+    {
+     "who": "REDagent",
+     "what": "REDagent's default daily limit per mod from $0.25 to $2.00 (the owner's ask, 2026-11-25), so Chooms! does not stop after a short while; asked of the REDnode session the same day",
+     "ref": "https://github.com/Edgemodders/REDagent"
     }
    ],
    "ownerActions": [
