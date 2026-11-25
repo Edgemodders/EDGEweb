@@ -797,7 +797,7 @@ window.EDGE_STATUS = {
      {
       "id": "#61",
       "title": "Fight events for EDGEmobile's Chooms! C3: game.on('combat') and game.on('npcDowned') (entity, record, affiliation, killed, byPlayer) from the game's own handlers, never polled; sample Fight test; REDnode 0.73.0, asked for by the owner on 2026-11-25",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "N2",
@@ -829,16 +829,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.73.1",
     "needs": [
-     "Step 9 of the fight events test (#61) on 0.73.1 (RN6)"
+     "Every test has passed: the owner's word to release (README, changelog section and Nexus summary first)"
     ]
    },
    "handTests": [
     {
      "name": "Fight events (#61), REDnode 0.73.0 and 0.73.1",
      "steps": 9,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "First run 2026-11-25 (dev PC, 0.73.0; C3's step 12 did not run, Chooms!'s fights code was not deployed): steps 1 to 8 passed (full names, a System Collapse target credited to V, defeated then killed counted once; the grenade not told apart); step 9 failed: a save load sent 'V left combat' with no fight. Fixed in 0.73.1 (mock check passed, deployed to the dev PC 2026-11-25): retest step 9. Quickhacks after: one Overheat left targets defeated, Contagion then Overheat killed, all credited to V"
+     "note": "Passed in game 2026-11-25 (dev PC): steps 1 to 8 on 0.73.0, step 9 on 0.73.1 (no 'V left combat' after a load). A Northside fight downed four Maelstrom (3 killed, 1 defeated), all credited to V; quickhacks credited to V; killed false is the game's defeated state. Chooms! logged the fight and its C3 step 12 passed. #61 closed"
     },
     {
      "name": "agent.ask options (#54), REDnode 0.73.0 with REDagent 0.4.6",
@@ -1035,7 +1035,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RN6",
      "what": "Retest step 9 of the fight events test (#61) on REDnode 0.73.1, deployed to the dev PC on 2026-11-25, with Chooms! C3's step 12 once EDGEmobile deploys it: load a save, and no 'V left combat' line should come. Steps 1 to 8 passed on 0.73.0 on 2026-11-25; #59, #60, #58 and #54 passed the same day",
-     "since": "2026-11-25"
+     "since": "2026-11-25",
+     "done": "2026-11-25",
+     "outcome": "All passed: #59 and #60 on 0.72.0, #58, #54 and #61 on 0.73.0 and 0.73.1"
     },
     {
      "ref": "RN7",
@@ -1051,7 +1053,11 @@ window.EDGE_STATUS = {
      "what": "Twelve requests from other tools are open on it. #58 (service.providers), #59 (a spawned person put on the ground) and #60 (collision groups for world.pick) came in on 2026-11-24 and 25 and are not in the agreed order yet; each says no hurry",
      "done": "2026-11-25"
     },
-    "Requests from other tools: #61 (fight events for Chooms!) built in 0.73.0, its test left before the release; #60 stays open until EDGEbuilder's Pick uses its groups (passed in game on REDnode's side); #24, #46 to #48, #50 to #52 and #57 in the agreed order",
+    "Requests from other tools: #60 stays open until EDGEbuilder's Pick uses its groups (passed in game on REDnode's side); #24, #46 to #48, #50 to #52 and #57 in the agreed order",
+    {
+     "what": "Request #61 (fight events for Chooms!): built in 0.73.0 and 0.73.1, passed in game and closed",
+     "done": "2026-11-25"
+    },
     {
      "what": "Requests #54, #58 and #59: built in 0.71.0 and 0.72.0, passed in game and closed",
      "done": "2026-11-25"
@@ -1061,7 +1067,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (0.73.1 deployed)"
+   "checkedBy": "REDnode session, 2026-11-25 (#61 passed; 0.73.1 meets the release gate)"
   },
   {
    "name": "REDcode",
