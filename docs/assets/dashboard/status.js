@@ -2377,12 +2377,13 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "REDnode",
-     "what": "service.providers(role): every installed tool with its manifest and whether it is on, for the Tools tab (T1); not urgent, a folder scan works meanwhile",
-     "ref": "REDnode #58"
+     "what": "service.providers(role): every installed tool with its manifest and whether it is on, for the Tools tab (T1); passed in game and closed, ships in REDnode 0.73.0 (EDGEbuilder then requires it)",
+     "ref": "REDnode #58",
+     "done": "2026-11-25"
     },
     {
      "who": "REDnode",
-     "what": "Collision groups for world.pick's physics line: a bake's solid objects are Dynamic, so holdsHit misses them (not urgent; EDGEbuilder casts its own line meanwhile)",
+     "what": "Collision groups for world.pick's physics line: a bake's solid objects are Dynamic, so holdsHit misses them. REDnode side passed in game 2026-11-25, ships in 0.73.0; open until EDGEbuilder Pick drops its own line and requires REDnode 0.73.0",
      "ref": "REDnode #60"
     },
     {
