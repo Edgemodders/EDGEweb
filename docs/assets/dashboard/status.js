@@ -571,14 +571,17 @@ window.EDGE_STATUS = {
     }
    ],
    "risks": [
-    "EDGEmobile's Chooms! needs more context and a choice of model in agent.ask (REDnode #54); its first part, #54a, is on REDnode's list",
+    {
+     "what": "EDGEmobile's Chooms! needs more context and a choice of model in agent.ask (REDnode #54); its first part, #54a, is on REDnode's list: built in REDnode 0.72.0 with REDagent 0.4.5, passed in game with 0.73.0 and 0.4.6 on 2026-11-25, #54 closed",
+     "done": "2026-11-25"
+    },
     "A first question that reads the game cost about $0.45 on Opus",
     {
      "what": "EDGEmobile's Chooms! will need a choice of model in agent.ask for C3; no issue is filed for it yet",
      "done": "2026-11-21"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (#54 passed; #58 passed but step 4)"
+   "checkedBy": "REDnode session, 2026-11-25 (risk rows brought up to date after #54, #58, #59 passed)"
   },
   {
    "name": "REDnode",
@@ -1048,13 +1051,17 @@ window.EDGE_STATUS = {
      "what": "Twelve requests from other tools are open on it. #58 (service.providers), #59 (a spawned person put on the ground) and #60 (collision groups for world.pick) came in on 2026-11-24 and 25 and are not in the agreed order yet; each says no hurry",
      "done": "2026-11-25"
     },
-    "Requests from other tools: #58, #59, #60 and #54 built in 0.72.0, awaiting its test; #61 (fight events for Chooms!, filed 2026-11-25) not placed yet; #24, #46 to #48, #50 to #52 and #57 in the agreed order",
+    "Requests from other tools: #61 (fight events for Chooms!) built in 0.73.0, its test left before the release; #60 stays open until EDGEbuilder's Pick uses its groups (passed in game on REDnode's side); #24, #46 to #48, #50 to #52 and #57 in the agreed order",
+    {
+     "what": "Requests #54, #58 and #59: built in 0.71.0 and 0.72.0, passed in game and closed",
+     "done": "2026-11-25"
+    },
     {
      "what": "Four requests from other tools are open on it: #24, #39, #46, #47",
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (#58 passed; only #61's test left for 0.73.0)"
+   "checkedBy": "REDnode session, 2026-11-25 (risk rows brought up to date after #54, #58, #59 passed)"
   },
   {
    "name": "REDcode",
