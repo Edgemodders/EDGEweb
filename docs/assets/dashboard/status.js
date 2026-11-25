@@ -838,7 +838,7 @@ window.EDGE_STATUS = {
      "steps": 9,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "First run 2026-11-25 (dev PC, 0.73.0, with Chooms! C3's step 12): steps 1 to 8 passed (full names, a System Collapse target credited to V, defeated then killed counted once; the grenade not told apart); step 9 failed: a save load sent 'V left combat' with no fight. Fixed in 0.73.1 (built, mock check passed, not deployed yet): retest step 9"
+     "note": "First run 2026-11-25 (dev PC, 0.73.0; C3's step 12 did not run, Chooms!'s fights code was not deployed): steps 1 to 8 passed (full names, a System Collapse target credited to V, defeated then killed counted once; the grenade not told apart); step 9 failed: a save load sent 'V left combat' with no fight. Fixed in 0.73.1 (built, mock check passed, not deployed yet): retest step 9"
     },
     {
      "name": "agent.ask options (#54), REDnode 0.73.0 with REDagent 0.4.6",
