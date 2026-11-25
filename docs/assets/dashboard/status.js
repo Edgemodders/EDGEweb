@@ -1106,12 +1106,7 @@ window.EDGE_STATUS = {
      }
     ]
    },
-   "nextRelease": {
-    "version": null,
-    "needs": [
-     "Lip Sync L1: built 2026-11-24, the hand test in VS Code (docs/testing.md, Lip Sync L1); M2, every copy of a mesh, takes: agreed for the next release"
-    ]
-   },
+   "nextRelease": {"version": "0.10.17", "needs": ["Prepared 2026-11-25 with redcode-mcp 0.7.0 (every hand test passed but Lip Sync L1's step 9, shipped untested): the owner's Make a release run, What REDcode, then What redcode-mcp, then Update Nexus Mods. redcode-mcp's game_* tools are held back until T1 to T5 run with the game"]},
    "handTests": [
     {
      "name": "Sector Properties tab",
@@ -1153,7 +1148,7 @@ window.EDGE_STATUS = {
      "name": "Lip Sync L1",
      "steps": 10,
      "status": "partly run",
-     "note": "Steps 1 and 2 pass (scripts, MCP); 3 to 8 and 10 passed by script 2026-11-24 (EDGEweb's session); 9 not run (no ElevenLabs key); sound, mouth and head left for the owner (docs/testing.md, Lip Sync L1)"
+     "note": "Steps 1 to 8 and 10 pass (scripts, MCP, EDGEweb's script; the owner 2026-11-25: sound, mouth and head fine); step 9 not run, shipped untested in 0.10.17 at the owner's word (docs/testing.md, Lip Sync L1)"
     },
     {
      "name": "Key status",
@@ -1396,13 +1391,8 @@ window.EDGE_STATUS = {
      "ref": "RC6",
      "what": "Run the hand tests S1 to S5 (the game tab's Size selector) and T1 to T5 (the game tools for assistants) in docs/testing.md",
      "since": "2026-11-23"
-    },
-    {
-     "ref": "RC9",
-     "what": "Finish Lip Sync L1 (docs/testing.md, Lip Sync L1): steps 3 to 8 and 10 passed by script; left for you are whether the sound plays, the mouth against the voice and the head's look, and step 9 (Add a Line, EDGEwave 0.3.0 and an ElevenLabs key), or ship with step 9 untested",
-     "since": "2026-11-24"
     }
-   ],
+       ],
    "risks": [
     "REDbridge answers one call at a time"
    ],
