@@ -577,7 +577,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDnode",
    "code": "RN",
-   "ownerSeq": 6,
+   "ownerSeq": 7,
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
@@ -1015,17 +1015,26 @@ window.EDGE_STATUS = {
      "ref": "RN6",
      "what": "Run REDnode 0.72.0's three tests in one session (deployed to the dev PC with REDagent 0.4.5 on 2026-11-25): a person on the ground and the ray (#59, #60), providers of a role (#58), agent.ask's options (#54); after the EDGEmobile work",
      "since": "2026-11-25"
+    },
+    {
+     "ref": "RN7",
+     "what": "Place REDnode #61 in the order: combat and NPC-downed events for EDGEmobile's Chooms! (a short in-game spike first, to find which game handlers fire). Chooms! uses them only once they exist",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
-    "Twelve requests from other tools are open on it. #58 (service.providers), #59 (a spawned person put on the ground) and #60 (collision groups for world.pick) came in on 2026-11-24 and 25 and are not in the agreed order yet; each says no hurry",
+    {
+     "what": "Twelve requests from other tools are open on it. #58 (service.providers), #59 (a spawned person put on the ground) and #60 (collision groups for world.pick) came in on 2026-11-24 and 25 and are not in the agreed order yet; each says no hurry",
+     "done": "2026-11-25"
+    },
+    "Requests from other tools: #58, #59, #60 and #54 built in 0.72.0, awaiting its test; #61 (fight events for Chooms!, filed 2026-11-25) not placed yet; #24, #46 to #48, #50 to #52 and #57 in the agreed order",
     {
      "what": "Four requests from other tools are open on it: #24, #39, #46, #47",
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (0.70.0 released; 0.72.0 with #54 deployed)"
+   "checkedBy": "REDnode session, 2026-11-25 (#61 filed)"
   },
   {
    "name": "REDcode",
