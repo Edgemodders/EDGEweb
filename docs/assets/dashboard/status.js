@@ -736,6 +736,11 @@ window.EDGE_STATUS = {
       "status": "done"
      },
      {
+      "id": "0.71",
+      "title": "The requests of 2026-11-24 and 25, built ahead of SC1 at the owner's word: a person spawned on the ground (#59), world.ray and world.pick's collision groups (#60), service.providers and onProviders (#58); REDnode 0.71.0",
+      "status": "built, tests pending"
+     },
+     {
       "id": "SC1",
       "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL; the first build after 0.70.0's tests (order agreed with the owner on 2026-11-23)",
       "status": "planned"
@@ -788,12 +793,27 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.70.0",
+    "version": "0.71.0",
     "needs": [
-     "The owner's call on #47's spike: partly run (its Spawn the copy crashes the game). The spike is not in the player zip, so the release gate turns on whether a spike's own crash counts"
+     "The owner's call on #47's spike (RN4): partly run, its Spawn the copy crashes the game; the spike is not in the player zip",
+     "0.71.0's two in-game tests (#59 and #60; #58)"
     ]
    },
    "handTests": [
+    {
+     "name": "Providers of a role (#58), REDnode 0.71.0",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Steps in docs/services.md, \"Providers of a role test\"; the mock check passed 2026-11-25; not deployed yet"
+    },
+    {
+     "name": "A person on the ground, a ray, pick groups (#59, #60), REDnode 0.71.0",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Steps in docs/world.md, \"#59, #60 test\"; the mock check (25) and raygroups_test (12) passed 2026-11-25; not deployed yet"
+    },
     {
      "name": "Tooltips on ui controls (#55), REDnode 0.70.0",
      "steps": 6,
@@ -972,7 +992,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (open requests reviewed)"
+   "checkedBy": "REDnode session, 2026-11-25 (REDnode 0.71.0 built; REDbridge #23, #24 built)"
   },
   {
    "name": "REDcode",
@@ -1540,12 +1560,24 @@ window.EDGE_STATUS = {
       "id": "#22",
       "title": "window.* for REDcode's Game view: the game's window docked on a VS Code webview, off unless started with --windows; on main, not released",
       "status": "built, tests pending"
+     },
+     {
+      "id": "#24",
+      "title": "cr2w.getNode, getNodes, search and patch walk into parsed buffer classes (worldInstancedMeshNodeBuffer, WorldTransformsBuffer and the rest), for REDcode's CR2W editor; on main, not released",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "#23",
+      "title": "sector.find's variants with their ranges, sector.nodes' ranges, and sectors from mods' .xl files and a project, for REDcode's sector layers (item 3 not needed); on main, not released",
+      "status": "built, tests pending"
      }
     ]
    },
    "nextRelease": {
     "version": null,
-    "needs": []
+    "needs": [
+     "#22, #23 and #24 are on main: a release when the owner asks (RB1)"
+    ]
    },
    "handTests": [
     {
@@ -1617,6 +1649,27 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": "owner",
      "note": "REDcode's G1 and G2 are not started"
+    },
+    {
+     "name": "Scratch check and probe on #24's build",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-25, game 2.5: 15 checks on the issue's sector (buffers walked, searched, patched, saved and read back); probe and REDcode's smoke test pass"
+    },
+    {
+     "name": "Scratch check and probe on #23's build",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-25, game 2.5: 20 checks; 5,190 sectors with 21,079 variants, the dev PC's EDGEbuilder bake found in its own archive"
+    },
+    {
+     "name": "REDcode's use of #23 and #24 (sector layers, buffer edits)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Waits for REDcode to use them and for a REDbridge release"
     }
    ],
    "ownerSpotTests": [],
@@ -1674,7 +1727,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-20"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (open requests reviewed)"
+   "checkedBy": "REDnode session, 2026-11-25 (REDnode 0.71.0 built; REDbridge #23, #24 built)"
   },
   {
    "name": "EDGEdeck",
