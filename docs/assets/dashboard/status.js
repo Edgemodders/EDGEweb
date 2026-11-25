@@ -1120,10 +1120,16 @@ window.EDGE_STATUS = {
      "note": "Passed by script 2026-11-24 (EDGEweb's session, P1 to P6); two findings fixed the same day and not retested: a typed value asked twice, the tab after Ctrl+Y (docs/testing.md, Sector Properties tab)"
     },
     {
+     "name": "Animation view: tabs, transport, Redo",
+     "steps": 7,
+     "status": "not run",
+     "note": "Built 2026-11-25 from the owner's AE5 run: the side tabs Clip, Edit and Animations, seven media buttons with Space, the arrows, Home and End, and Redo; the tabs and transport checked in Chrome over the real REDbridge (docs/testing.md, Animation view: tabs, transport, Redo)"
+    },
+    {
      "name": "Animation Editor (AE5)",
      "steps": 5,
-     "status": "not run",
-     "note": "Built 2026-11-24: Edit in Blender on a made clip; checked with Blender in the background (150 frames back, a head key at frame 75, the feet within 0 mm) (docs/testing.md, Animation Editor (AE5))"
+     "status": "passed",
+     "note": "Passed 2026-11-25 (the owner, B1 to B5, Blender 5.2.2). Asked for in the run and built the same day: the side column's tabs Clip, Edit and Animations, the transport as media buttons, Redo (docs/testing.md, Animation Editor (AE5))"
     },
     {
      "name": "Animation Editor (AE2)",
