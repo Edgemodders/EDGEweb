@@ -1163,7 +1163,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AE",
-      "title": "Animation Editor (agreed 2026-11-24): AE1 the steps in anim-core and anim_edit_info, anim_edit; AE2 the Edit tab in the animation view; AE5 Edit in Blender, all passed and released in 0.10.17 with the side tabs, media transport and Redo; next the Animation Timeline (docs/design/animation-timeline.md, TL1 to TL5), then AE3 in the game, AE4 hand poses and Join",
+      "title": "Animation Editor (agreed 2026-11-24): AE1 the steps in anim-core and anim_edit_info, anim_edit; AE2 the Edit tab; AE5 Edit in Blender, all released in 0.10.17. The Animation Timeline (docs/design/animation-timeline.md, draft 0.4 agreed 2026-11-25: animation, move and blend blocks, any rig, not only people): TL1 built 2026-11-25 (anim-core's evaluateTimeline, its check passes 34 of 34, no game); next TL2 to TL4 (the timeline in the animation view), TL6 (a spoken line with the head, for The Speaking Scene), then AE3 in the game, AE4",
       "status": "in progress"
      },
      {
