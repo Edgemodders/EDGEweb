@@ -827,7 +827,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.73.0",
     "needs": [
-     "0.73.0's four in-game tests (RN6): #59 and #60, #58, #54, #61"
+     "0.73.0's in-game tests (RN6): #58, #54, #61 (#59 and #60 passed on 0.72.0)"
     ]
    },
    "handTests": [
@@ -855,9 +855,9 @@ window.EDGE_STATUS = {
     {
      "name": "A person on the ground, a ray, pick groups (#59, #60), REDnode 0.71.0",
      "steps": 6,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Steps in docs/world.md, \"#59, #60 test\"; the mock check (25) and raygroups_test (12) passed 2026-11-25; deployed to the dev PC in 0.72.0 on 2026-11-25"
+     "note": "Passed in game 2026-11-25 (dev PC, 0.72.0), all 6 steps: no T pose at step 4's start; step 6 on a baked floor, Static passed through it and Dynamic stopped at V's feet. #59 closed; #60 waits for EDGEbuilder's Pick"
     },
     {
      "name": "Tooltips on ui controls (#55), REDnode 0.70.0",
@@ -1032,7 +1032,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "RN6",
-     "what": "Run REDnode 0.73.0's four tests in one session, after the EDGEmobile work: a person on the ground and the ray (#59, #60), providers of a role (#58), agent.ask's options (#54, with REDagent 0.4.6), and fight events (#61, Fight test). 0.72.0 is deployed on the dev PC; 0.73.0 is built, not deployed yet",
+     "what": "Run REDnode 0.73.0's tests, after the EDGEmobile work (#59 and #60 passed on 0.72.0 on 2026-11-25): providers of a role (#58), agent.ask's options (#54, with REDagent 0.4.6), and fight events (#61, Fight test). 0.72.0 is deployed on the dev PC; 0.73.0 is built, not deployed yet",
      "since": "2026-11-25"
     },
     {
@@ -1055,7 +1055,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (0.73.0 with #61 built; REDagent 0.4.6)"
+   "checkedBy": "REDnode session, 2026-11-25 (the #59, #60 test passed)"
   },
   {
    "name": "REDcode",
