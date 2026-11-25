@@ -479,6 +479,11 @@ window.EDGE_STATUS = {
       "id": "C6c",
       "title": "REDagent's chats listed in REDcode, each opened in Claude Code",
       "status": "planned"
+     },
+     {
+      "id": "#54",
+      "title": "Mods choose how REDagent answers: tools: false and a model family (sonnet, opus, haiku), the context sent whole up to 64 KB (REDnode #54, with REDnode 0.72.0); REDagent 0.4.5",
+      "status": "built, tests pending"
      }
     ]
    },
@@ -487,10 +492,25 @@ window.EDGE_STATUS = {
     "needs": [
      "redcode-mcp released with it (the owner, 2026-11-24): anim_edit, sector, script and game tools for REDagent and the edge plugin",
      "EDGEchat's /edge:continue (EDGEchat #8)",
-     "C6a's in-game test (5 steps)"
+     "C6a's in-game test (5 steps)",
+     "#54's in-game test, with REDnode 0.72.0 (RN6)"
     ]
    },
    "handTests": [
+    {
+     "name": "agent.ask options in the game (REDnode #54)",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "With REDnode 0.72.0's tests (RN6): Ask mod 0.2.0, 6 steps in REDnode's docs/services.md; deployed to the dev PC 2026-11-25"
+    },
+    {
+     "name": "#54 with a stand-in Agent SDK",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-25: 18 checks (scratchpad r71/a54check/check.mjs)"
+    },
     {
      "name": "0.4.4 Replace the key",
      "steps": null,
@@ -552,12 +572,12 @@ window.EDGE_STATUS = {
      "done": "2026-11-21"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (open requests reviewed)"
+   "checkedBy": "REDnode session, 2026-11-25 (0.70.0 released; 0.72.0 with #54 deployed)"
   },
   {
    "name": "REDnode",
    "code": "RN",
-   "ownerSeq": 5,
+   "ownerSeq": 6,
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
@@ -737,7 +757,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "0.71",
-      "title": "The requests of 2026-11-24 and 25, built ahead of SC1 at the owner's word: a person spawned on the ground (#59), world.ray and world.pick's collision groups (#60), service.providers and onProviders (#58); REDnode 0.71.0",
+      "title": "The requests of 2026-11-24 and 25, built ahead of SC1 at the owner's word: a person spawned on the ground (#59), world.ray and world.pick's collision groups (#60), service.providers and onProviders (#58); REDnode 0.71.0, deployed in 0.72.0",
       "status": "built, tests pending"
      },
      {
@@ -762,8 +782,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#54a",
-      "title": "agent.ask: more context with its limit stated, no tools (for EDGEmobile's Chooms! C3), mostly in REDagent; about a day",
-      "status": "planned"
+      "title": "agent.ask: the whole context with its limit stated, tools: false and a model family (#54, for EDGEmobile's Chooms! C3 and C5), with REDagent 0.4.5; REDnode 0.72.0, asked for by the owner on 2026-11-25",
+      "status": "built, tests pending"
      },
      {
       "id": "N2",
@@ -793,26 +813,32 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.71.0",
+    "version": "0.72.0",
     "needs": [
-     "The owner's call on #47's spike (RN4): partly run, its Spawn the copy crashes the game; the spike is not in the player zip",
-     "0.71.0's two in-game tests (#59 and #60; #58)"
+     "0.72.0's three in-game tests (RN6): #59 and #60, #58, #54"
     ]
    },
    "handTests": [
+    {
+     "name": "agent.ask options (#54), REDnode 0.72.0 with REDagent 0.4.5",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Steps in docs/services.md, \"agent.ask options test\" (Ask mod 0.2.0); the mock check (30 with 0.71.0's) and REDagent's stand-in check (18) passed 2026-11-25; deployed to the dev PC"
+    },
     {
      "name": "Providers of a role (#58), REDnode 0.71.0",
      "steps": 5,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Steps in docs/services.md, \"Providers of a role test\"; the mock check passed 2026-11-25; not deployed yet"
+     "note": "Steps in docs/services.md, \"Providers of a role test\"; the mock check passed 2026-11-25; deployed to the dev PC in 0.72.0 on 2026-11-25"
     },
     {
      "name": "A person on the ground, a ray, pick groups (#59, #60), REDnode 0.71.0",
      "steps": 6,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Steps in docs/world.md, \"#59, #60 test\"; the mock check (25) and raygroups_test (12) passed 2026-11-25; not deployed yet"
+     "note": "Steps in docs/world.md, \"#59, #60 test\"; the mock check (25) and raygroups_test (12) passed 2026-11-25; deployed to the dev PC in 0.72.0 on 2026-11-25"
     },
     {
      "name": "Tooltips on ui controls (#55), REDnode 0.70.0",
@@ -974,7 +1000,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RN4",
      "what": "Decide whether REDnode 0.70.0 can be released: every test of it passed except #47's spike, partly run (its Spawn the copy crashes the game; the spike is not in the player zip). Recommended: release",
-     "since": "2026-11-23"
+     "since": "2026-11-23",
+     "done": "2026-11-25",
+     "outcome": "Released: REDnode 0.70.0 on GitHub and Nexus (run 45621359741, from branch release/0.70.0)"
     },
     {
      "ref": "RN5",
@@ -982,6 +1010,11 @@ window.EDGE_STATUS = {
      "since": "2026-11-25",
      "done": "2026-11-25",
      "outcome": "Build the requests now, ahead of the scene spike"
+    },
+    {
+     "ref": "RN6",
+     "what": "Run REDnode 0.72.0's three tests in one session (deployed to the dev PC with REDagent 0.4.5 on 2026-11-25): a person on the ground and the ray (#59, #60), providers of a role (#58), agent.ask's options (#54); after the EDGEmobile work",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
@@ -992,7 +1025,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (REDnode 0.71.0 built; REDbridge #23, #24 built)"
+   "checkedBy": "REDnode session, 2026-11-25 (0.70.0 released; 0.72.0 with #54 deployed)"
   },
   {
    "name": "REDcode",

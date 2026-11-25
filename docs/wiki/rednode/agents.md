@@ -3,7 +3,7 @@ title: Agents and MCP
 section: REDnode
 order: 10
 description: "Connect Claude Code to the running game through REDnode's MCP server: the easy route with EDGEchat, first things to ask, what each tool does and what asks you first. For mod makers: tools from mods, and asking REDagent from a mod."
-reviewed: 2026-11-18
+reviewed: 2026-11-25
 ---
 
 # Agents and <span class="y">MCP</span>
@@ -103,7 +103,7 @@ The question comes from Claude Code, in its own window, not from the game. For t
 | `archives_reload` | Swaps changed archives into the running game, through [REDswap](redswap.html). It replaces files in your game's mod folder, and a broken archive can crash the game |
 | `game_facts_set`, `game_journal_set` | Change quest facts or journal entries in your save |
 | `game_teleport` | Moves V |
-| `world_spawn`, `world_remove`, `world_load` | Put a prop, an object or a person in the world, remove it, or load an EDGEbuilder scene |
+| `world_spawn`, `world_remove`, `world_load` | Put a prop, an object or a person in the world, remove it, or load an EDGEbuilder scene (since 0.70.0 only some kinds of object, or without some, with `kinds` and `skip`) |
 | `world_animate` | Plays, stops or reads a workspot (an animation) on a person the assistant spawned |
 | `world_weather_set` | Sets and holds the weather, or gives it back to the game |
 | `mod_call`, and a mod's own tools | Run a tool one of your mods offers, unless the mod's author marked it as read-only |

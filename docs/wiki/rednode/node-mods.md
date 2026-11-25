@@ -3,7 +3,7 @@ title: Node mods
 section: REDnode
 order: 6
 description: "Write REDnode mods in JavaScript that run in Node beside the game: a first mod step by step, windows without HTML, game events, logs, crashes, hot reload, saving data and secrets, a page and a mod together, npm packages and TypeScript."
-reviewed: 2026-11-21
+reviewed: 2026-11-25
 ---
 
 # Node <span class="y">mods</span>
@@ -157,6 +157,8 @@ You should see a window with a heading, a switch, a slider, a text field, two bu
 | `ui.window({ title, width, height, anchor, x, y, titleButtons, children, onClose })` | Opens the window. Without `width` and `height` it is 360 by 320 | `onClose` runs when the player closes it |
 
 Every block has `set(...)`, which changes it in the open window at once, as `where.set(...)` does in the first mod.
+
+Buttons, switches, sliders, text fields and dropdowns also take `tip`: a tooltip shown when the cursor rests on the control, a disabled one too, so a button that waits can say why. `set({ tip })` changes it. Since REDnode 0.70.0.
 
 The player can drag the window and close it. If they close it, REDnode remembers that, and keeps it closed on the next start. To get it back they press **Show** beside "Window closed" under your package in the launcher.
 

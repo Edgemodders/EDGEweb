@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDnode
 order: 0
 description: "REDnode, the EDGE platform's runtime for Cyberpunk 2077: what it is, why you might want it, what you need, and where to start."
-reviewed: 2026-11-21
+reviewed: 2026-11-25
 ---
 
 # RED<span class="y">node</span>
@@ -85,7 +85,7 @@ REDnode is the **Run** stage of the EDGE platform.
 
 ## Status
 
-**Released.** The current version is **0.69.0** (2026-11-21), for **game version 2.5**. For a game kept on 2.31, use REDnode 0.37.0, the last release for it.
+**Released.** The current version is **0.70.0** (2026-11-25), for **game version 2.5**. For a game kept on 2.31, use REDnode 0.37.0, the last release for it.
 
 Get it from [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35419) or [REDnode's releases](https://github.com/Edgemodders/REDnode/releases) on GitHub, then follow [Install and set up](install.html).
 
@@ -93,8 +93,8 @@ REDnode is still young. "Passed in game" on these pages means the developer test
 
 | | |
 |---|---|
-| **New in the latest releases** | A switch that hides all of REDnode, HUD widgets too, when you click in the game (0.69.0). A dropdown for the windows Node mods build and for pages, each app's version beside its title, and a Mod log you can resize (0.68.2). A key of your own for any app, and REDnode stepping aside in the pause menu (0.67.3). You choose which mods may call another mod's tools (0.67.3). Mods can set the weather and animate the people they spawn (0.67.3). A **Pins** window, a filter box in the launcher, and the controller in mods (0.65.3). [EDGEhack](../edgehack/assistants.html)'s quickhack tools for REDagent (0.65.3) |
-| **Coming next** (agreed, not built yet) | Loading only some kinds of objects from an EDGEbuilder scene, and calls from editors into mods' services |
+| **New in the latest releases** | Scenes loaded only in part (only their people, or without some objects), tools on your PC that call a mod's functions once you allow them, pins that keep their id and the way V faced, tooltips on the buttons and switches Node mods build, and the overlay's cursor following the pointer in a windowed game (0.70.0). A switch that hides all of REDnode, HUD widgets too, when you click in the game (0.69.0). A dropdown for the windows Node mods build and for pages, each app's version beside its title, and a Mod log you can resize (0.68.2). A key of your own for any app, and REDnode stepping aside in the pause menu (0.67.3). You choose which mods may call another mod's tools (0.67.3). Mods can set the weather and animate the people they spawn (0.67.3). A **Pins** window, a filter box in the launcher, and the controller in mods (0.65.3). [EDGEhack](../edgehack/assistants.html)'s quickhack tools for REDagent (0.65.3) |
+| **Coming next** (built, in testing) | People you spawn put on the ground, so their animations don't float; picks that see the objects EDGEbuilder bakes; a list of every mod that provides a role; and mods choosing REDagent's model, or an answer with no tools |
 | **Planned** | Clicks and typing on panels the game draws itself. HDR, frame generation and ultrawide screens. TweakDB without the game running |
 
 What each release added is in the [changelog](https://edgemodders.github.io/REDnode/changelog.html). Part by part, see [What works today](#what-works-today).

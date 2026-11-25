@@ -4,7 +4,7 @@ nav_title: The world
 section: REDnode
 order: 8.2
 description: "Place things in Cyberpunk 2077's world from a REDnode package: spawn a box in front of V, people and props, moving and removing, objects far from V, EDGEbuilder scenes, what is near V, animations on the people you spawn, the weather, the world's own objects, and labelled pins over places and objects."
-reviewed: 2026-11-18
+reviewed: 2026-11-25
 ---
 
 # The world: objects, scenes and <span class="y">pins</span>
@@ -142,7 +142,7 @@ In REDnode's test it worked at 300 m, 1 km and 4 km, and the objects stayed with
 
 | Call | Does |
 |---|---|
-| `world.load(scene, options)` | Loads an EDGEbuilder scene into the running game: its meshes, entities and people, but not lights yet. Pass a `.scene.json` file's path in your package, or the scene itself. Loading a scene of the same name again replaces it. It gives back what it spawned and what it skipped, with the reason |
+| `world.load(scene, options)` | Loads an EDGEbuilder scene into the running game: its meshes, entities and people, but not lights yet. Pass a `.scene.json` file's path in your package, or the scene itself. Loading a scene of the same name again replaces it. It gives back what it spawned and what it skipped, with the reason. Since 0.70.0, `kinds` loads only some kinds of object, such as `{ kinds: ['npc'] }` for a scene whose props are already baked into the game, and `skip` leaves out objects by their id in the scene |
 | `world.unload(name)` | Removes what `world.load` spawned for that scene |
 | `world.near({ radius, files, uses })` | The entities near V, nearest first (within 15 m unless you give `radius`), with each one's class, distance and appearance. With `files: true`, the files each one uses; with `uses`, only the entities that use one of the files you name |
 | `world.files(entity)` | The files one entity uses: its template and everything its components name, as path [hashes](../glossary.html) |
@@ -336,7 +336,7 @@ A style can also set `color` (`#rrggbb`), `font`, `titleSize`, `textSize` and `p
 |---|---|
 | `world.pin({ at, title, text?, style? })` | Drops a pin and gives back its number |
 | `world.unpin(id)`, `world.clearPins()` | Removes one pin, or all of your package's |
-| `world.pins()` | Lists your package's pins, each with its distance, its set and whether it is hidden |
+| `world.pins()` | Lists your package's pins, each with its distance, its set and whether it is hidden, and since 0.70.0 its `key` (an id that stays when the pin is renamed) and `yaw` (the way V faced when it was dropped) |
 | `world.pinStyle(style)`, `world.pinStyle(id, style)` | Restyles all of your package's pins, or one |
 | `world.goTo(id)` | Moves V beside a pin, about 2.5 m from it, facing it |
 | `world.pinSet.save(file)`, `.load(file)`, `.show(name, on)`, `.remove(name)` | Keeps your pins in a `.pins.json` file, the same kind of file the [Pins window](overlay.html#the-pins-window) opens. A file name without a folder is in your package's data folder |

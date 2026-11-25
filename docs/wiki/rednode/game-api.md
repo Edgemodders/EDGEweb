@@ -4,7 +4,7 @@ nav_title: Game API
 section: REDnode
 order: 8
 description: "How REDnode packages call the game: trying a call in the Console, the game helper, waiting for V to be in the world, calling any game function and finding the one you need, how values look in JavaScript, and the rules worth knowing. With a map of the other API pages."
-reviewed: 2026-11-18
+reviewed: 2026-11-25
 ---
 
 # The game <span class="y">API</span>
@@ -87,6 +87,7 @@ const state = await game.state();                       // what the game is show
 | `game.player.removeItem(id, count?)` | Takes items out. Gives `true` if the game took any | Untested in the game |
 | `game.player.getHealth()`, `game.player.setHealth(value)` | Reads and sets V's health, in health points | `setHealth` is untested in the game |
 | `game.player.teleport({ x, y, z, yaw? })` | Moves V | Passed in game |
+| `game.player.body()` | V's body from character creation, `"wa"` or `"ma"`, to pick the workspot or garment made for it. Since 0.70.0 | Passed in game |
 | `game.audio.play(name)` | Plays one of the game's UI sounds. See [Game sounds](overlay-apps.html#game-sounds) | Passed in game |
 | `game.on(name, fn)` | Runs your function at a game event. See [Listening to the game](node-mods.html#listening-to-the-game) | Passed in game |
 | `game.state()`, `game.onState(fn)` | What the game is showing. See [below](#is-v-in-the-world) | Passed in game |

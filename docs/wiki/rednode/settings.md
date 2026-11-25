@@ -4,7 +4,7 @@ nav_title: Settings and controls
 section: REDnode
 order: 11
 description: "Every REDnode setting: the Settings drawer, per-package settings, shared keys, where REDnode keeps its files, and for mod makers development folders, permissions and manifest fields."
-reviewed: 2026-11-21
+reviewed: 2026-11-25
 ---
 
 # Settings and <span class="y">controls</span>
@@ -201,7 +201,7 @@ A few settings have no switch. They are in the file `settings.json` in `%APPDATA
 | `"edgehackTools": "all"` | in-game assistants only | Also shows EDGEhack's tools to desktop assistants such as Claude Code | Rarely, for the same reason as EDGEmat's |
 | `"edgematBridge": "own"` | shared | Makes EDGEmat's tools start a REDbridge of their own in place of REDnode's | A problem with the shared one |
 
-**The editor channel** lets EDGE tools on your PC, such as VS Code extensions, reach the running game without an MCP server. Through it a tool can play a game sound in the game, so you hear it with the game's own mix. A tool can also try a change in the game while you play, as [EDGEhack's Try Live](../edgehack/try-live.html) does: the first time, REDnode's **Editor request** window names the tool and waits for your **Allow** or **Deny**. The tool's changes are undone when REDnode stops. Only programs running as you, on your own PC, can use the channel.
+**The editor channel** lets EDGE tools on your PC, such as VS Code extensions, reach the running game without an MCP server. Through it a tool can play a game sound in the game, so you hear it with the game's own mix. Since 0.70.0 a tool can also call a mod's functions, as EDGEdir plays its scenes: the first time, the **Editor request** window names the tool and the mod, and your **Allow** holds for that tool and that mod until the game closes. A tool can also try a change in the game while you play, as [EDGEhack's Try Live](../edgehack/try-live.html) does: the first time, REDnode's **Editor request** window names the tool and waits for your **Allow** or **Deny**. The tool's changes are undone when REDnode stops. Only programs running as you, on your own PC, can use the channel.
 
 **One REDbridge while you play.** Since REDnode 0.65.3, EDGEmat's and EDGEhack's tools for in-game assistants use REDnode's own REDbridge, so one runs, not two.
 

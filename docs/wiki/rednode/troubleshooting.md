@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: REDnode
 order: 12
 description: "Fixes for common REDnode problems: no launcher tab, missing windows, crashed mods, the Console, archive swaps, Claude Code not connecting, the logs, and the UI Tools pack's UI Workbench."
-reviewed: 2026-11-18
+reviewed: 2026-11-25
 ---
 
 # Troubleshooting <span class="y">REDnode</span>
@@ -82,6 +82,7 @@ Work down this list:
 | Windows flicker, show garbage or don't update | Switch **GPU sharing** off in the launcher's Settings drawer (the gear). Every window reopens, drawn the other way. If that fixes it, please report it with your graphics card and the overlay host's log |
 | The cursor vanishes, or interactive mode ends by itself | Press **F10** to get back. Both problems were fixed in earlier versions. If you still see either on the current version, please report it and attach the plugin log, which records each time the game window loses and regains focus |
 | The cursor blinks with DLSS on | Update your graphics driver: an older NVIDIA driver caused this on one laptop |
+| In a windowed game, the overlay's cursor and the Windows pointer drift apart in the menus | Update to REDnode 0.70.0 or later: with the game in a window smaller than the screen, the overlay's cursor follows the Windows pointer, and is not drawn outside the game's window |
 | A HUD widget stays up in a cutscene, or hides in a conversation | Which scenes count as cutscenes has not been fully tested. Note what was happening and report it |
 | The game runs slowly, or runs out of memory | The game alone needs 12 to 16 GB of RAM. Each open REDnode window adds roughly 60 to 100 MB and each mod process about 100 MB. Switch off windows you don't need, put mods in a [shared process](mod-manager.html#node-mods-restart-and-shared-process), and close other programs. The **Perf** sample shows what the overlay costs |
 | The game loaded an old save when I pressed a key | You pressed **F9**, the game's Quick Load, right beside F10. It isn't REDnode's. The game keeps its earlier saves and autosaves: load one from its menu |

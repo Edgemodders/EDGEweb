@@ -3,7 +3,7 @@ title: Using the overlay
 section: REDnode
 order: 2
 description: "REDnode's overlay in the game: F10 and the three modes, the pause menu, the launcher, moving and closing windows, app keys, HUD widgets, the Pins window, themes, the Console and keyboard shortcuts."
-reviewed: 2026-11-21
+reviewed: 2026-11-25
 ---
 
 # Using the <span class="y">overlay</span>
@@ -173,7 +173,7 @@ Mods, AI assistants and you can put **pins** in the world: glowing posts with a 
 |---|---|
 | The list | Every pin, nearest first, with its colour, where it comes from (one of your sets, a mod, an assistant) and its distance. A filter box narrows it |
 | **Go there** | Moves V beside the pin, about 2.5 m from it, facing it |
-| The name box and **Drop a pin here** | Puts a pin with that name at V's feet, in the set in use. **Enter** in the box drops one too |
+| The name box and **Drop a pin here** | Puts a pin with that name at V's feet, in the set in use, and saves the way V faces. **Enter** in the box drops one too. Every pin keeps an id when you rename it, so a tool that uses your pins, such as EDGEdir, still finds it (since 0.70.0) |
 | **✕** on one of your pins | Removes it from its set and its file at once. There is no undo |
 | **Click a pin to go there** | Off by default. On, a click on a pin's label or post in the world, in interactive mode, moves V there |
 | **Hide all** | Takes every pin out of the world for now. The list shows them dimmed |
