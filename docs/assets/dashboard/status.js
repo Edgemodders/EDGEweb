@@ -1375,7 +1375,9 @@ window.EDGE_STATUS = {
         {
      "ref": "RC2",
      "what": "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
-     "since": "2026-11-20"
+     "since": "2026-11-20",
+     "done": "2026-11-25",
+     "outcome": "Agreed with the three recommendations: the request file, a dismissable warning for a replaced sector, EDGEbuilder offered once; REDcode's half waits on EDGEbuilder's S1 (#9, nudged)"
     },
     {
      "ref": "RC3",
