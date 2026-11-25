@@ -4,7 +4,7 @@ nav_title: Baking
 section: EDGEbuilder
 order: 8
 description: "Bake an EDGEbuilder scene into a mod: what baking is, what you need, the steps from scene to world, solid objects, people in a baked scene, draw distance (Seen from), changing and removing a bake, sharing it, and bakes kept in the EDGE Library."
-reviewed: 2026-11-23
+reviewed: 2026-11-25
 ---
 
 # Baking a scene <span class="y">into the world</span>
@@ -89,6 +89,8 @@ REDcode's setting `redcode.pack.redmod` is off by default, and most people can s
 | **A mesh, Solid off** | Only drawn: V, bullets and cars pass through |
 | **A mesh from a mod** | Bakes too, and the Bake tab names the mod. If a player doesn't have that mod, the game doesn't crash: that object is missing, and the rest are there |
 | **A person (NPC)** | Left out. The Bake tab says which |
+
+**People walk through solid objects.** Solid stops V, bullets and cars, but the game's people don't look at collision: they follow walking routes and crowd lanes the game made ahead of time. A passing NPC walks straight through a solid crate standing on their route. Keep baked objects off pavements, doorways and the paths people use.
 
 You can bake several scenes into one project. They can be far apart, indoors or in Dogtown.
 
