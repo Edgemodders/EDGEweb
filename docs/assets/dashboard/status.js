@@ -1123,7 +1123,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SV",
-      "title": "Sector view: the @edgemodders/world-view package, a read-only 3D sector mode, openSector, and #31's light in every 3D view (released in 0.10.15)",
+      "title": "Sector view: the @edgemodders/world-view package (0.1.0 on npm since 2026-11-25, released with each REDcode release from now on), a read-only 3D sector mode, openSector, and #31's light in every 3D view (released in 0.10.15)",
       "status": "done"
      },
      {
@@ -1480,7 +1480,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RC3",
      "what": "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
-     "since": "2026-11-20"
+     "since": "2026-11-20",
+     "done": "2026-11-25",
+     "outcome": "Published: @edgemodders/world-view 0.1.0 on npm with provenance (release world-view-v0.1.0); a REDcode release now takes world-view with it"
     },
     {
      "ref": "RC5",
