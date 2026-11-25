@@ -486,16 +486,21 @@ window.EDGE_STATUS = {
       "id": "#54",
       "title": "Mods choose how REDagent answers: tools: false and a model family (sonnet, opus, haiku), the context sent whole up to 64 KB (REDnode #54, with REDnode 0.72.0); REDagent 0.4.5",
       "status": "built, tests pending"
+     },
+     {
+      "id": "limit",
+      "title": "A mod's daily limit $2.00 by default (was $0.25); mods never set by the player move up once (asked for by the owner through EDGEmobile on 2026-11-25, for Chooms!); REDagent 0.4.6",
+      "status": "built, tests pending"
      }
     ]
    },
    "nextRelease": {
-    "version": "0.4.5",
+    "version": "0.4.6",
     "needs": [
      "redcode-mcp released with it (the owner, 2026-11-24): anim_edit, sector, script and game tools for REDagent and the edge plugin",
      "EDGEchat's /edge:continue (EDGEchat #8)",
      "C6a's in-game test (5 steps)",
-     "#54's in-game test, with REDnode 0.72.0 (RN6)"
+     "#54's in-game test and the $2.00 limit, with REDnode 0.73.0 (RN6)"
     ]
    },
    "handTests": [
@@ -574,7 +579,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-21"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (0.70.0 released; 0.72.0 with #54 deployed)"
+   "checkedBy": "REDnode session, 2026-11-25 (0.73.0 with #61 built; REDagent 0.4.6)"
   },
   {
    "name": "REDnode",
@@ -788,6 +793,11 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "#61",
+      "title": "Fight events for EDGEmobile's Chooms! C3: game.on('combat') and game.on('npcDowned') (entity, record, affiliation, killed, byPlayer) from the game's own handlers, never polled; sample Fight test; REDnode 0.73.0, asked for by the owner on 2026-11-25",
+      "status": "built, tests pending"
+     },
+     {
       "id": "N2",
       "title": "World nodes, full (#24), with #52 (an entity shown again after a load) and #51 step 2 (a scene's removals applied); several days",
       "status": "planned"
@@ -815,12 +825,19 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.72.0",
+    "version": "0.73.0",
     "needs": [
-     "0.72.0's three in-game tests (RN6): #59 and #60, #58, #54"
+     "0.73.0's four in-game tests (RN6): #59 and #60, #58, #54, #61"
     ]
    },
    "handTests": [
+    {
+     "name": "Fight events (#61), REDnode 0.73.0",
+     "steps": 9,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Steps in docs/world.md, \"Fight events test\" (Fight test 0.1.0); scripts compile with 0 errors (redscript-cli alone and beside Codeware, the game's scc.exe) and 11 stand-in checks of the package passed 2026-11-25"
+    },
     {
      "name": "agent.ask options (#54), REDnode 0.72.0 with REDagent 0.4.5",
      "steps": 6,
@@ -1015,13 +1032,15 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "RN6",
-     "what": "Run REDnode 0.72.0's three tests in one session (deployed to the dev PC with REDagent 0.4.5 on 2026-11-25): a person on the ground and the ray (#59, #60), providers of a role (#58), agent.ask's options (#54); after the EDGEmobile work",
+     "what": "Run REDnode 0.73.0's four tests in one session, after the EDGEmobile work: a person on the ground and the ray (#59, #60), providers of a role (#58), agent.ask's options (#54, with REDagent 0.4.6), and fight events (#61, Fight test). 0.72.0 is deployed on the dev PC; 0.73.0 is built, not deployed yet",
      "since": "2026-11-25"
     },
     {
      "ref": "RN7",
      "what": "Place REDnode #61 in the order: combat and NPC-downed events for EDGEmobile's Chooms! (a short in-game spike first, to find which game handlers fire). Chooms! uses them only once they exist",
-     "since": "2026-11-25"
+     "since": "2026-11-25",
+     "done": "2026-11-25",
+     "outcome": "Build next (the owner, through EDGEmobile): built in REDnode 0.73.0"
     }
    ],
    "risks": [
@@ -1036,7 +1055,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (#61 filed)"
+   "checkedBy": "REDnode session, 2026-11-25 (0.73.0 with #61 built; REDagent 0.4.6)"
   },
   {
    "name": "REDcode",
