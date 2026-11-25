@@ -1372,6 +1372,12 @@ window.EDGE_STATUS = {
      "since": "2026-11-22"
     },
     {
+     "ref": "RC10",
+     "what": "Finish the Sector scripts hand test: run 1 stopped at step 3, which was fixed, so step 3 again, then steps 4 to 15 (docs/testing.md, Sector scripts); step 15 is new, a script an assistant writes with script_write showing in the Scripts menu",
+     "since": "2026-11-24",
+     "done": "2026-11-24"
+    },
+    {
      "ref": "RC2",
      "what": "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
      "since": "2026-11-20"
@@ -1384,7 +1390,8 @@ window.EDGE_STATUS = {
     {
      "ref": "RC4",
      "what": "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
-     "since": "2026-11-21"
+     "since": "2026-11-21",
+     "done": "2026-11-22"
     },
     {
      "ref": "RC5",
