@@ -470,7 +470,7 @@ window.EDGE_STATUS = {
      {
       "id": "C6a",
       "title": "Continue in VS Code: the chat's VS Code button writes a handoff for EDGEchat's /edge:continue (REDagent 0.4.5)",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "C6b",
@@ -497,9 +497,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.4.6",
     "needs": [
-     "redcode-mcp released with it (the owner, 2026-11-24): anim_edit, sector, script and game tools for REDagent and the edge plugin",
-     "EDGEchat's /edge:continue (EDGEchat #8)",
-     "C6a's in-game test (5 steps)"
+     "redcode-mcp released with it (the owner, 2026-11-24): anim_edit, sector, script and game tools for REDagent and the edge plugin"
     ]
    },
    "handTests": [
@@ -536,14 +534,14 @@ window.EDGE_STATUS = {
      "steps": null,
      "status": "passed",
      "ranBy": "script",
-     "note": "2026-11-23: 15 checks (scratchpad c6a/check.mjs)"
+     "note": "Passed in game 2026-11-25 (dev PC, REDagent 0.4.6, REDnode 0.73.1, EDGEchat 0.2.0 from its repo): all 5 steps and EDGEchat's sixth; no key in the handoff"
     },
     {
      "name": "C6a test: a chat continued in VS Code",
      "steps": 5,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Waits for EDGEchat's /edge:continue (EDGEchat #8)"
+     "note": "Passed in game 2026-11-25 (dev PC, REDagent 0.4.6, REDnode 0.73.1, EDGEchat 0.2.0 from its repo): all 5 steps and EDGEchat's sixth; no key in the handoff"
     }
    ],
    "ownerSpotTests": [],
@@ -581,7 +579,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-21"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (risk rows brought up to date after #54, #58, #59 passed)"
+   "checkedBy": "REDnode session, 2026-11-25 (REDagent C6a passed with EDGEchat's /edge:continue)"
   },
   {
    "name": "REDnode",
