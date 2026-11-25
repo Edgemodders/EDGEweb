@@ -827,18 +827,18 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.73.0",
+    "version": "0.73.1",
     "needs": [
-     "The fight events test (#61) on the deployed 0.73.0 (RN6)"
+     "Step 9 of the fight events test (#61) on 0.73.1 (RN6)"
     ]
    },
    "handTests": [
     {
-     "name": "Fight events (#61), REDnode 0.73.0",
+     "name": "Fight events (#61), REDnode 0.73.0 and 0.73.1",
      "steps": 9,
-     "status": "not run",
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "Steps in docs/world.md, \"Fight events test\" (Fight test 0.1.0); scripts compile with 0 errors (redscript-cli alone and beside Codeware, the game's scc.exe) and 11 stand-in checks of the package passed 2026-11-25; REDnode 0.73.0 deployed to the dev PC 2026-11-25"
+     "note": "First run 2026-11-25 (dev PC, 0.73.0, with Chooms! C3's step 12): steps 1 to 8 passed (full names, a System Collapse target credited to V, defeated then killed counted once; the grenade not told apart); step 9 failed: a save load sent 'V left combat' with no fight. Fixed in 0.73.1 (built, mock check passed, not deployed yet): retest step 9"
     },
     {
      "name": "agent.ask options (#54), REDnode 0.73.0 with REDagent 0.4.6",
@@ -1034,7 +1034,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "RN6",
-     "what": "Run the fight events test (#61, Fight test, 9 steps in docs/world.md) on the deployed 0.73.0, after EDGEmobile deploys Chooms! so C3's step 12 runs in the same fight. #59, #60, #58 and #54 passed on 2026-11-25",
+     "what": "Retest step 9 of the fight events test (#61) on REDnode 0.73.1 once it is deployed (close the game first): load a save, and no 'V left combat' line should come. Steps 1 to 8 passed on 0.73.0 on 2026-11-25; #59, #60, #58 and #54 passed the same day",
      "since": "2026-11-25"
     },
     {
@@ -1061,7 +1061,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (risk rows brought up to date after #54, #58, #59 passed)"
+   "checkedBy": "REDnode session, 2026-11-25 (#61's first run; 0.73.1 built)"
   },
   {
    "name": "REDcode",
