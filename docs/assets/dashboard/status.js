@@ -3371,7 +3371,6 @@ window.EDGE_STATUS = {
     "version": "0.2.0",
     "needs": [
      "Hand tests: 0.2.0 in a session (seven servers, /edge:setup, one call each) and continue in the game (needs REDagent 0.4.5)",
-     "The eval suite at 0.2.0 (running 2026-11-25)",
      "EDGEfab to confirm its wiring on EDGEchat #5"
     ]
    },
@@ -3475,7 +3474,7 @@ window.EDGE_STATUS = {
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (0.2.0 on main: edgefab, edgehack, edgequest, /edge:continue; #6, #7 closed)"
+   "checkedBy": "EDGEchat session, 2026-11-25 (0.2.0 on main; evals: 15 cases pass, mean delta +0.66)"
   },
   {
    "name": "REDsave",
