@@ -4010,7 +4010,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmobile",
    "code": "MB",
-   "ownerSeq": 4,
+   "ownerSeq": 5,
    "group": "In development",
    "role": "A phone OS for the game as REDnode apps, in game and on the player's real phone; includes the Chooms! social app",
    "stage": "in development",
@@ -4177,8 +4177,13 @@ window.EDGE_STATUS = {
    ],
    "waitingOn": [
     {
+     "who": "owner",
+     "what": "A review of C3's content (gangs, their districts, 39 cards, the Choom Request points)",
+     "ref": "docs/design.md, C3: the content"
+    },
+    {
      "who": "REDagent",
-     "what": "REDnode #54 (filed 2026-11-21): more context and no tools in agent.ask for C3, a choice of model; not started on 2026-11-25, needed for C3's test in the game",
+     "what": "REDnode #54: more context, no tools and a choice of model in agent.ask; built 2026-11-25 in REDnode 0.72.0 and REDagent 0.4.5, not yet released or tested in the game; needed for C3's test",
      "ref": "https://github.com/Edgemodders/REDnode/issues/54"
     },
     {
@@ -4188,6 +4193,11 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    {
+     "ref": "MB5",
+     "what": "Review C3's content: the 11 gangs and their districts, 39 cards for gangs and corporations, the Choom Request points (the document Chooms! knowledge cards; docs/design.md, C3: the content)",
+     "since": "2026-11-25"
+    },
     {
      "ref": "MB1",
      "what": "Create the Nexus pages for EDGEmobile and Chooms!",
