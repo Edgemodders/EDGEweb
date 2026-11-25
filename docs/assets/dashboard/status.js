@@ -495,9 +495,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.4.6",
+    "version": "0.4.7",
     "needs": [
-     "Every test has passed and redcode-mcp 0.7.0 is out (2026-11-25, with REDcode 0.10.17): the owner's word to release"
+     "Nothing built for it yet: C6b and C6c are next"
     ]
    },
    "handTests": [
@@ -579,7 +579,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-21"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (REDagent C6a passed with EDGEchat's /edge:continue)"
+   "checkedBy": "REDnode session, 2026-11-25 (REDagent 0.4.6 released; the wiki brought up to it)"
   },
   {
    "name": "REDnode",
@@ -1049,7 +1049,7 @@ window.EDGE_STATUS = {
      "what": "Release REDnode 0.73.1 and REDagent 0.4.6",
      "since": "2026-11-25",
      "done": "2026-11-25",
-     "outcome": "REDnode 0.73.1 released (run 45723704456): GitHub v0.73.1 with five zips, Nexus 35419 (0.70.0 archived); the wiki brought up to 0.73.1. REDagent 0.4.6 run 45724406608 started"
+     "outcome": "REDnode 0.73.1 released (run 45723704456): GitHub v0.73.1 with five zips, Nexus 35419 (0.70.0 archived); the wiki brought up to 0.73.1. REDagent 0.4.6 released (run 45724406608): GitHub v0.4.6, Nexus 35670 (0.4.4 archived); its wiki pages brought up to it"
     }
    ],
    "risks": [
@@ -1072,7 +1072,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (REDnode 0.73.1 released; the wiki brought up to it)"
+   "checkedBy": "REDnode session, 2026-11-25 (REDagent 0.4.6 released; the wiki brought up to it)"
   },
   {
    "name": "REDcode",
