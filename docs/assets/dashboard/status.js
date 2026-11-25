@@ -4035,8 +4035,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C3",
-      "title": "Chooms!: posts by AI through REDagent",
-      "status": "planned"
+      "title": "Chooms!: people, corporations and gangs post by themselves through REDagent (plan agreed 2026-11-25; the content for the owner's review first)",
+      "status": "in progress"
      },
      {
       "id": "C4",
@@ -4145,7 +4145,7 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "REDagent",
-     "what": "REDnode #54 (filed 2026-11-21): more context and no tools in agent.ask for C3, a choice of model for C5; not blocking today",
+     "what": "REDnode #54 (filed 2026-11-21): more context and no tools in agent.ask for C3, a choice of model; not started on 2026-11-25, needed for C3's test in the game",
      "ref": "https://github.com/Edgemodders/REDnode/issues/54"
     }
    ],
@@ -4167,7 +4167,7 @@ window.EDGE_STATUS = {
     "Relies on Cloudflare quick tunnels: a private web address",
     "A game patch that renames quest paths would need Chooms!'s story file updated"
    ],
-   "checkedBy": "EDGEmobile session, 2026-11-22"
+   "checkedBy": "EDGEmobile session, 2026-11-25"
   },
   {
    "name": "EDGEmods",
