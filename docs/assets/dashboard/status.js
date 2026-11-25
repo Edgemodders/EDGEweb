@@ -1087,7 +1087,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AE",
-      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 the steps in anim-core and the MCP tools anim_edit_info and anim_edit done (passed in the game 2026-11-24); AE2 the Edit panel in the animation view built (hand test pending); then AE2 REDcode, AE3 in game, AE4 hand poses and Join",
+      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 the steps in anim-core and the MCP tools anim_edit_info and anim_edit done (passed in the game 2026-11-24); AE2 the Edit panel in the animation view built (hand test pending); agreed next: AE5 Edit in Blender, then the Animation Timeline (moves on tracks posed by grabbing bones, docs/design/animation-timeline.md, TL1 to TL5); then AE2 REDcode, AE3 in game, AE4 hand poses and Join",
       "status": "in progress"
      },
      {
