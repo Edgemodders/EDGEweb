@@ -836,21 +836,21 @@ window.EDGE_STATUS = {
      "steps": 9,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Steps in docs/world.md, \"Fight events test\" (Fight test 0.1.0); scripts compile with 0 errors (redscript-cli alone and beside Codeware, the game's scc.exe) and 11 stand-in checks of the package passed 2026-11-25"
+     "note": "Steps in docs/world.md, \"Fight events test\" (Fight test 0.1.0); scripts compile with 0 errors (redscript-cli alone and beside Codeware, the game's scc.exe) and 11 stand-in checks of the package passed 2026-11-25; REDnode 0.73.0 deployed to the dev PC 2026-11-25"
     },
     {
-     "name": "agent.ask options (#54), REDnode 0.72.0 with REDagent 0.4.5",
+     "name": "agent.ask options (#54), REDnode 0.73.0 with REDagent 0.4.6",
      "steps": 6,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Steps in docs/services.md, \"agent.ask options test\" (Ask mod 0.2.0); the mock check (30 with 0.71.0's) and REDagent's stand-in check (18) passed 2026-11-25; deployed to the dev PC"
+     "note": "Steps in docs/services.md, \"agent.ask options test\" (Ask mod 0.2.0); the mock check (30 with 0.71.0's) and REDagent's stand-in check (18) passed 2026-11-25; deployed to the dev PC; REDnode 0.73.0 deployed to the dev PC 2026-11-25"
     },
     {
      "name": "Providers of a role (#58), REDnode 0.71.0",
      "steps": 5,
      "status": "not run",
      "ranBy": "owner",
-     "note": "Steps in docs/services.md, \"Providers of a role test\"; the mock check passed 2026-11-25; deployed to the dev PC in 0.72.0 on 2026-11-25"
+     "note": "Steps in docs/services.md, \"Providers of a role test\"; the mock check passed 2026-11-25; deployed to the dev PC in 0.72.0 on 2026-11-25; REDnode 0.73.0 deployed to the dev PC 2026-11-25"
     },
     {
      "name": "A person on the ground, a ray, pick groups (#59, #60), REDnode 0.71.0",
@@ -1032,7 +1032,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "RN6",
-     "what": "Run REDnode 0.73.0's tests, after the EDGEmobile work (#59 and #60 passed on 0.72.0 on 2026-11-25): providers of a role (#58), agent.ask's options (#54, with REDagent 0.4.6), and fight events (#61, Fight test). 0.72.0 is deployed on the dev PC; 0.73.0 is built, not deployed yet",
+     "what": "Run REDnode 0.73.0's tests, after the EDGEmobile work (#59 and #60 passed on 0.72.0 on 2026-11-25): providers of a role (#58), agent.ask's options (#54, with REDagent 0.4.6), and fight events (#61, Fight test). REDnode 0.73.0 and REDagent 0.4.6 are deployed on the dev PC (2026-11-25)",
      "since": "2026-11-25"
     },
     {
@@ -1055,7 +1055,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (the #59, #60 test passed)"
+   "checkedBy": "REDnode session, 2026-11-25 (0.73.0 and REDagent 0.4.6 deployed to the dev PC)"
   },
   {
    "name": "REDcode",
