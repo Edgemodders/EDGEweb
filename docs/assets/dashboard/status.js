@@ -4160,7 +4160,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C3",
-      "title": "Chooms!: people, corporations and gangs post by themselves through REDagent (content reviewed by the owner and code built 2026-11-25, Chooms! 0.2.0, 149 offline checks; the owner's test in the game next)",
+      "title": "Chooms!: people, corporations and gangs post by themselves through REDagent, and gangs remember fights with V (content reviewed by the owner and code built 2026-11-25, Chooms! 0.2.0, 157 offline checks; the owner's test in the game next)",
       "status": "built, tests pending"
      },
      {
@@ -4203,10 +4203,10 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "C3 test (Chooms! posts by themselves)",
-     "steps": 11,
+     "steps": 12,
      "status": "not run",
      "ranBy": "owner",
-     "note": "docs/design.md, C3 test; needs REDnode 0.72.0 and REDagent 0.4.5, both in the game on the PC on 2026-11-25"
+     "note": "docs/design.md, C3 test; steps 1 to 11 need REDnode 0.72.0 and REDagent 0.4.5 (in the game on the PC on 2026-11-25), step 12 (fights) REDnode 0.73.0"
     },
     {
      "name": "C2 cards test (the Story tab's knowledge cards)",
@@ -4282,19 +4282,14 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDnode",
-     "what": "REDnode #61 (filed 2026-11-25): game events for fights (V's combat state, NPCs killed or downed with their affiliation), so gangs in Chooms! remember fights with V; the owner asked for it to be built next (2026-11-25); not blocking C3's test",
+     "what": "REDnode 0.73.0 (#61, fight events) and REDagent 0.4.6 ($2.00 daily limit per mod), built 2026-11-25, in the game once deployed; Chooms!'s fights need 0.73.0 (step 12 of the C3 test), the rest runs on 0.72.0",
      "ref": "https://github.com/Edgemodders/REDnode/issues/61"
-    },
-    {
-     "who": "REDagent",
-     "what": "REDagent's default daily limit per mod from $0.25 to $2.00 (the owner's ask, 2026-11-25), so Chooms! does not stop after a short while; asked of the REDnode session the same day",
-     "ref": "https://github.com/Edgemodders/REDagent"
     }
    ],
    "ownerActions": [
     {
      "ref": "MB6",
-     "what": "Run the C3 test in the game: Chooms! posts by themselves (docs/design.md, C3 test; 11 steps, about 20 minutes; it spends from your Anthropic key, up to the $2 cap)",
+     "what": "Run the C3 test in the game: Chooms! posts by themselves (docs/design.md, C3 test; 12 steps; step 12, fights, once REDnode 0.73.0 is in the game, about 20 minutes; it spends from your Anthropic key, up to the $2 cap)",
      "since": "2026-11-25"
     },
     {
