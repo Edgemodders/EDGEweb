@@ -1165,7 +1165,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AE",
-      "title": "Animation Editor (agreed 2026-11-24): AE1 the steps in anim-core and anim_edit_info, anim_edit; AE2 the Edit tab; AE5 Edit in Blender, all released in 0.10.17. The Animation Timeline (docs/design/animation-timeline.md, draft 0.4 agreed 2026-11-25: animation, move and blend blocks, any rig, not only people): TL1 built 2026-11-25 (anim-core's evaluateTimeline, its check passes 34 of 34, no game); next TL2 to TL4 (the timeline in the animation view), TL6 (a spoken line with the head, for The Speaking Scene), then AE3 in the game, AE4",
+      "title": "Animation Editor (agreed 2026-11-24): AE1 the steps in anim-core and anim_edit_info, anim_edit; AE2 the Edit tab; AE5 Edit in Blender, all released in 0.10.17. The Animation Timeline (docs/design/animation-timeline.md, draft 0.4 agreed 2026-11-25, any rig, not only people): TL1 the blocks in anim-core; TL2 to TL4 built 2026-11-25 (the timeline under the animation view, live preview, blocks edited on it, a joint grabbed and posed at the playhead; checked in Chrome), hand test T1 to T11 pending; then TL6 (a spoken line with the head, for The Speaking Scene), AE3 in the game, AE4",
       "status": "in progress"
      },
      {
@@ -1193,10 +1193,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder). The Animation Timeline's TL1 is built (anim-core, no game). Next, agreed: the timeline in the animation view (TL2 to TL4), Sector layers L2 and L3, sector materials M2, Lip Sync L2's design page"
+"Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11). Next, agreed: Sector layers L2 and L3, sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
+{
+ "name": "Animation Timeline TL2 to TL4",
+ "steps": 11,
+ "status": "not run",
+ "note": "Built 2026-11-25: the timeline under the animation view, live preview, editing blocks, grabbing a joint; checked in Chrome on Probe D's made clip (docs/testing.md, Animation Timeline TL2 to TL4, T1 to T11)"
+},
     {
      "name": "Sector layers L4 and Sector Tools L1",
      "steps": 9,
