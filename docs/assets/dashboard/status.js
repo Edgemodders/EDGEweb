@@ -1423,7 +1423,7 @@ window.EDGE_STATUS = {
    "risks": [
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-24"
+   "checkedBy": "REDcode session, 2026-11-25"
   },
   {
    "name": "REDbridge",
