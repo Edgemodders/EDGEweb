@@ -4212,7 +4212,7 @@ window.EDGE_STATUS = {
      "steps": 12,
      "status": "not run",
      "ranBy": "owner",
-     "note": "docs/design.md, C3 test; steps 1 to 11 need REDnode 0.72.0 and REDagent 0.4.5 (in the game on the PC on 2026-11-25), step 12 (fights) REDnode 0.73.0"
+     "note": "docs/design.md, C3 test; REDnode 0.73.0 and REDagent 0.4.6 in the game on the PC (2026-11-25), and Chooms! requires 0.73.0; Chooms!'s fights code goes into the game at the next deploy (the game was running)"
     },
     {
      "name": "C2 cards test (the Story tab's knowledge cards)",
@@ -4283,19 +4283,19 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "REDagent",
-     "what": "REDnode #54: more context, no tools and a choice of model in agent.ask; built 2026-11-25 in REDnode 0.72.0 and REDagent 0.4.5, in the game on the PC, not yet released; first tested in the game with C3's test",
+     "what": "REDnode #54: more context, no tools and a choice of model in agent.ask; built 2026-11-25 in REDnode 0.72.0 and REDagent 0.4.5, in the game on the PC as REDnode 0.73.0 and REDagent 0.4.6, not yet released; first tested in the game with C3's test",
      "ref": "https://github.com/Edgemodders/REDnode/issues/54"
     },
     {
      "who": "REDnode",
-     "what": "REDnode 0.73.0 (#61, fight events) and REDagent 0.4.6 ($2.00 daily limit per mod), built 2026-11-25, in the game once deployed; Chooms!'s fights need 0.73.0 (step 12 of the C3 test), the rest runs on 0.72.0",
+     "what": "REDnode 0.73.0 (#61, fight events) and REDagent 0.4.6 ($2.00 daily limit per mod), built and in the game on the PC 2026-11-25, not yet released or tested; Chooms! requires 0.73.0 (its fights: step 12 of the C3 test)",
      "ref": "https://github.com/Edgemodders/REDnode/issues/61"
     }
    ],
    "ownerActions": [
     {
      "ref": "MB6",
-     "what": "Run the C3 test in the game: Chooms! posts by themselves (docs/design.md, C3 test; 12 steps; step 12, fights, once REDnode 0.73.0 is in the game, about 20 minutes; it spends from your Anthropic key, up to the $2 cap)",
+     "what": "Run the C3 test in the game: Chooms! posts by themselves (docs/design.md, C3 test; 12 steps; step 12, fights, can go with REDnode's fight events test; about 20 minutes; it spends from your Anthropic key, up to the $2 cap)",
      "since": "2026-11-25"
     },
     {
@@ -4315,7 +4315,7 @@ window.EDGE_STATUS = {
     "Relies on Cloudflare quick tunnels: a private web address",
     "A game patch that renames quest paths would need Chooms!'s story file updated"
    ],
-   "checkedBy": "EDGEmobile session, 2026-11-25"
+   "checkedBy": "EDGEmobile session, 2026-11-25 (Chooms! requires REDnode 0.73.0)"
   },
   {
    "name": "EDGEmods",
