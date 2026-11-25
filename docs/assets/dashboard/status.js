@@ -961,7 +961,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
-   "version": "0.10.16",
+   "version": "0.10.17",
    "lastTag": "v0.10.13",
    "lastTagDate": "2026-11-16",
    "lastCommit": "2026-11-16",
@@ -1046,7 +1046,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "ST",
-      "title": "REDcode's half of Sector Tools (the app is EDGEbuilder's, EDGEbuilder #9): Show in Game, Open in REDcode, live previews, the replaced-sector warning; right after the sector view",
+      "title": "REDcode's half of Sector Tools (the app is EDGEbuilder's, EDGEbuilder #9), agreed 2026-11-25 with the three recommendations: Show in Game, Open in REDcode, live previews, a dismissable replaced-sector warning, EDGEbuilder offered once. EDGEbuilder's S1 shipped in its 0.13.2, so L1 waits on nothing",
       "status": "planned"
      },
      {
@@ -1071,7 +1071,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SC",
-      "title": "Sector scripts (docs/design/sector-scripts.md): SC1 to SC4 built 2026-11-23, hand test passed 2026-11-24 (the owner, steps 1 to 15): a Scripts button in the sector view, scripts in their own process, preview and one-undo Apply, on the game's sector one answer that adds it to the project and applies there, Debug, requests for assistants, and sector_*, script_* and request_* in redcode-mcp (unreleased)",
+      "title": "Sector scripts (docs/design/sector-scripts.md): a Scripts button in the sector view, scripts in their own process, preview and one-undo Apply, on the game's sector one answer that adds it to the project and applies there, Debug, requests for assistants; sector_*, script_* and request_* in redcode-mcp 0.7.0 (released in 0.10.17)",
       "status": "done"
      },
      {
@@ -1081,13 +1081,13 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AE",
-      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 the steps in anim-core and the MCP tools anim_edit_info and anim_edit done (passed in the game 2026-11-24); AE2 the Edit panel in the animation view done (passed 2026-11-24); AE5 Edit in Blender built (checked with Blender in the background, hand test pending); next the Animation Timeline (moves on tracks posed by grabbing bones, docs/design/animation-timeline.md, TL1 to TL5); then AE2 REDcode, AE3 in game, AE4 hand poses and Join",
+      "title": "Animation Editor (agreed 2026-11-24): AE1 the steps in anim-core and anim_edit_info, anim_edit; AE2 the Edit tab in the animation view; AE5 Edit in Blender, all passed and released in 0.10.17 with the side tabs, media transport and Redo; next the Animation Timeline (docs/design/animation-timeline.md, TL1 to TL5), then AE3 in the game, AE4 hand poses and Join",
       "status": "in progress"
      },
      {
       "id": "LS",
-      "title": "Lip Sync editor, moved from EDGEfab 2026-11-22 (docs/design/lipsync.md, agreed 2026-11-24): L1 built 2026-11-24 (REDcode: Open Lip Sync, the tab, a Lip Sync button in the audio player, Open in Lip Sync in the animation view, openLipSync in the API, lipsync_* in redcode-mcp, the core as packages/lipsync-core), hand test pending; then L2 a made line into a project, L3 Audio2Face, L4 live",
-      "status": "built, tests pending"
+      "title": "Lip Sync editor (docs/design/lipsync.md): L1 released in 0.10.17 (REDcode: Open Lip Sync, the tab, links from the audio player and the animation view, openLipSync, lipsync_* in redcode-mcp 0.7.0; Add a Line shipped untested). Next L2, the editing loop (the owner, 2026-11-25: swap heads, edit the lip sync, the voice and takes, change the line, start from scratch, each into a project; its own design page), L3 Audio2Face for any line, L4 live",
+      "status": "in progress"
      },
      {
       "id": "GT",
@@ -1101,12 +1101,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SL",
-      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): L1 the Overlaps tab built 2026-11-24; L2 across layers, L3 links, L4 Open in REDcode to come; requests REDbridge #23, EDGEbuilder #11",
+      "title": "Sector layers (docs/design/sector-layers.md, agreed 2026-11-24): L1 the Overlaps tab released in 0.10.17, with the Properties tab and the sector search; L2 across layers, L3 links, L4 Open in REDcode (EDGEbuilder adds its buttons then) to come; requests REDbridge #23, EDGEbuilder #11",
       "status": "in progress"
      }
     ]
    },
-   "nextRelease": {"version": "0.10.17", "needs": ["Prepared 2026-11-25 with redcode-mcp 0.7.0 (every hand test passed but Lip Sync L1's step 9, shipped untested): the owner's Make a release run, What REDcode, then What redcode-mcp, then Update Nexus Mods. redcode-mcp's game_* tools are held back until T1 to T5 run with the game"]},
+   "nextRelease": {"version": null, "needs": ["Nothing yet. Next, agreed: the Animation Timeline (TL1), Sector layers L2 to L4 with Open in REDcode for EDGEbuilder, Lip Sync L2 (the editing loop, its own design page first), sector materials M2"]},
    "handTests": [
     {
      "name": "Sector Properties tab",
