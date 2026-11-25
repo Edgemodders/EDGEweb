@@ -1117,13 +1117,13 @@ window.EDGE_STATUS = {
      "name": "Sector Properties tab",
      "steps": 6,
      "status": "passed",
-     "note": "Passed by script 2026-11-24 (EDGEweb's session, P1 to P6); two findings fixed the same day and not retested: a typed value asked twice, the tab after Ctrl+Y (docs/testing.md, Sector Properties tab)"
+     "note": "Passed: P1 to P6 by script 2026-11-24 (EDGEweb's session), the two fixes retested by the owner 2026-11-25 (docs/testing.md, Sector Properties tab)"
     },
     {
      "name": "Animation view: tabs, transport, Redo",
      "steps": 7,
-     "status": "not run",
-     "note": "Built 2026-11-25 from the owner's AE5 run: the side tabs Clip, Edit and Animations, seven media buttons with Space, the arrows, Home and End, and Redo; the tabs and transport checked in Chrome over the real REDbridge (docs/testing.md, Animation view: tabs, transport, Redo)"
+     "status": "passed",
+     "note": "Passed 2026-11-25 (the owner), with the Blender and sector tests (docs/testing.md, Animation view: tabs, transport, Redo)"
     },
     {
      "name": "Animation Editor (AE5)",
@@ -1147,7 +1147,7 @@ window.EDGE_STATUS = {
      "name": "Sector layers (L1)",
      "steps": 9,
      "status": "passed",
-     "note": "Passed by script 2026-11-24 (EDGEweb's session, L1 to L9): 16 sectors in 66.5 s, then 0.6 s from the cache; how a ghosted layer looks is left for the owner's eye (docs/testing.md, Sector layers (L1))"
+     "note": "Passed: L1 to L9 by script 2026-11-24 (EDGEweb's session), the ghosted look by the owner 2026-11-25 (docs/testing.md, Sector layers (L1))"
     },
     {
      "name": "Lip Sync L1",
@@ -1377,13 +1377,7 @@ window.EDGE_STATUS = {
      "what": "Make the Animation Tools pack's Nexus page and say when to release it (AT3r; the in-game test AT3 passed 2026-11-24)",
      "since": "2026-11-22"
     },
-    {
-     "ref": "RC10",
-     "what": "Finish the Sector scripts hand test: run 1 stopped at step 3, which was fixed, so step 3 again, then steps 4 to 15 (docs/testing.md, Sector scripts); step 15 is new, a script an assistant writes with script_write showing in the Scripts menu",
-     "since": "2026-11-24",
-     "done": "2026-11-24"
-    },
-    {
+        {
      "ref": "RC2",
      "what": "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
      "since": "2026-11-20"
@@ -1393,13 +1387,7 @@ window.EDGE_STATUS = {
      "what": "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
      "since": "2026-11-20"
     },
-    {
-     "ref": "RC4",
-     "what": "Run the hand tests Sector camera, Sector selection and the Add to Project retest R1 to R3 (docs/testing.md)",
-     "since": "2026-11-21",
-     "done": "2026-11-22"
-    },
-    {
+        {
      "ref": "RC5",
      "what": "Run retests R1 and R2 of Run Game in Tab (docs/testing.md): the release key while the game loads and in the main menu, and the status line below the game",
      "since": "2026-11-23"
@@ -1410,13 +1398,8 @@ window.EDGE_STATUS = {
      "since": "2026-11-23"
     },
     {
-     "ref": "RC8",
-     "what": "Look at the sector view's Overlaps tab yourself: how a ghosted layer looks and how it feels to use (the rest of Sector layers L1 passed by script); your notes shape L2 to L4",
-     "since": "2026-11-24"
-    },
-    {
      "ref": "RC9",
-     "what": "Run the Lip Sync L1 hand test, steps 3 to 10 in VS Code (docs/testing.md, Lip Sync L1); step 9, Add a Line, needs EDGEwave 0.3.0 and an ElevenLabs key",
+     "what": "Finish Lip Sync L1 (docs/testing.md, Lip Sync L1): steps 3 to 8 and 10 passed by script; left for you are whether the sound plays, the mouth against the voice and the head's look, and step 9 (Add a Line, EDGEwave 0.3.0 and an ElevenLabs key), or ship with step 9 untested",
      "since": "2026-11-24"
     }
    ],
