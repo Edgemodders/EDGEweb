@@ -485,12 +485,12 @@ window.EDGE_STATUS = {
      {
       "id": "#54",
       "title": "Mods choose how REDagent answers: tools: false and a model family (sonnet, opus, haiku), the context sent whole up to 64 KB (REDnode #54, with REDnode 0.72.0); REDagent 0.4.5",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "limit",
       "title": "A mod's daily limit $2.00 by default (was $0.25); mods never set by the player move up once (asked for by the owner through EDGEmobile on 2026-11-25, for Chooms!); REDagent 0.4.6",
-      "status": "built, tests pending"
+      "status": "done"
      }
     ]
    },
@@ -499,17 +499,16 @@ window.EDGE_STATUS = {
     "needs": [
      "redcode-mcp released with it (the owner, 2026-11-24): anim_edit, sector, script and game tools for REDagent and the edge plugin",
      "EDGEchat's /edge:continue (EDGEchat #8)",
-     "C6a's in-game test (5 steps)",
-     "#54's in-game test and the $2.00 limit, with REDnode 0.73.0 (RN6)"
+     "C6a's in-game test (5 steps)"
     ]
    },
    "handTests": [
     {
      "name": "agent.ask options in the game (REDnode #54)",
      "steps": 6,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "With REDnode 0.72.0's tests (RN6): Ask mod 0.2.0, 6 steps in REDnode's docs/services.md; deployed to the dev PC 2026-11-25"
+     "note": "Passed in game 2026-11-25 with REDnode 0.73.0 and REDagent 0.4.6, all 6 steps; the $2.00 default limit seen on Ask mod and the Wardrobe Designer"
     },
     {
      "name": "#54 with a stand-in Agent SDK",
@@ -579,7 +578,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-21"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (0.73.0 with #61 built; REDagent 0.4.6)"
+   "checkedBy": "REDnode session, 2026-11-25 (#54 passed; #58 passed but step 4)"
   },
   {
    "name": "REDnode",
@@ -790,7 +789,7 @@ window.EDGE_STATUS = {
      {
       "id": "#54a",
       "title": "agent.ask: the whole context with its limit stated, tools: false and a model family (#54, for EDGEmobile's Chooms! C3 and C5), with REDagent 0.4.5; REDnode 0.72.0, asked for by the owner on 2026-11-25",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "#61",
@@ -827,7 +826,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.73.0",
     "needs": [
-     "0.73.0's in-game tests (RN6): #58, #54, #61 (#59 and #60 passed on 0.72.0)"
+     "#58's step 4 and the fight events test (#61), on the deployed 0.73.0 (RN6)"
     ]
    },
    "handTests": [
@@ -841,16 +840,16 @@ window.EDGE_STATUS = {
     {
      "name": "agent.ask options (#54), REDnode 0.73.0 with REDagent 0.4.6",
      "steps": 6,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Steps in docs/services.md, \"agent.ask options test\" (Ask mod 0.2.0); the mock check (30 with 0.71.0's) and REDagent's stand-in check (18) passed 2026-11-25; deployed to the dev PC; REDnode 0.73.0 deployed to the dev PC 2026-11-25"
+     "note": "Passed in game 2026-11-25 (dev PC, REDnode 0.73.0, REDagent 0.4.6), all 6 steps; REDagent's record: Sonnet with tools $0.088, Haiku no tools $0.00014, Opus with tools $0.265; #54 closed"
     },
     {
      "name": "Providers of a role (#58), REDnode 0.71.0",
      "steps": 5,
-     "status": "not run",
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "Steps in docs/services.md, \"Providers of a role test\"; the mock check passed 2026-11-25; deployed to the dev PC in 0.72.0 on 2026-11-25; REDnode 0.73.0 deployed to the dev PC 2026-11-25"
+     "note": "Run in game 2026-11-25 (dev PC, 0.73.0): steps 1, 2, 3 and 5 passed; step 4 (stop(), then no more lines) still to run"
     },
     {
      "name": "A person on the ground, a ray, pick groups (#59, #60), REDnode 0.71.0",
@@ -1032,7 +1031,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "RN6",
-     "what": "Run REDnode 0.73.0's tests, after the EDGEmobile work (#59 and #60 passed on 0.72.0 on 2026-11-25): providers of a role (#58), agent.ask's options (#54, with REDagent 0.4.6), and fight events (#61, Fight test). REDnode 0.73.0 and REDagent 0.4.6 are deployed on the dev PC (2026-11-25)",
+     "what": "Finish REDnode 0.73.0's tests: step 4 of providers of a role (#58: stop(), then switch Counter service off and on, no more lines), and fight events (#61, Fight test, after EDGEmobile deploys Chooms! for C3's step 12). #59, #60 and #54 passed on 2026-11-25; 0.73.0 and REDagent 0.4.6 are deployed on the dev PC",
      "since": "2026-11-25"
     },
     {
@@ -1055,7 +1054,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (0.73.0 and REDagent 0.4.6 deployed to the dev PC)"
+   "checkedBy": "REDnode session, 2026-11-25 (#54 passed; #58 passed but step 4)"
   },
   {
    "name": "REDcode",
