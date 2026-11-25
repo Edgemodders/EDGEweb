@@ -3,7 +3,7 @@ title: Glossary
 section: Start here
 order: 4
 description: "Plain-language definitions of the Cyberpunk 2077 modding terms and EDGE terms this wiki uses, grouped by subject, each with its own link."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # <span class="y">Glossary</span>
@@ -204,6 +204,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 |---|---|
 | <a id="character-voice"></a>Character voice | The one voice a game character, such as `judy`, speaks in for every EDGE tool that speaks their lines. Set in EDGEwave: one of your ElevenLabs voices, or one designed from a description. See [Character voices](edgewave/voices.html#character-voices) |
 | <a id="custom-sound"></a>Custom sound | A WAV file in a REDmod that the game plays for a sound event's name |
+| <a id="lip-sync"></a>Lip sync | The mouth's movement to a spoken line. The game keeps one short clip per voice line, with curves for the jaw, lips, tongue, brows and blinks, in `.anims` sets. REDcode's [Lip Sync editor](redcode/lipsync.html) plays them on the character's head |
 | <a id="override"></a>Override | Replacing one recording of a game sound effect with yours |
 | <a id="sound-event"></a>Sound event | The game's name for something to play, such as `w_melee_katana_equip`. Quests, scenes and scripts ask for events, never for files |
 | <a id="sound-pack"></a>Sound pack (`.opuspak`) | A file that holds many of the game's sound effects packed together. An override adds one to your project |

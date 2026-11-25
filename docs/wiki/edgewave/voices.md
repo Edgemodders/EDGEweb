@@ -140,7 +140,7 @@ Re-Voice sends the line's recording, so it works on your own recordings and on l
 
 ## Character voices
 
-A **character voice** is the one voice a game character speaks in, for every tool that speaks their lines: EDGEwave's own [Voice Lines](voice-lines.html), and other tools that ask EDGEwave to speak a line, such as EDGEfab's lip sync or an [assistant](assistants.html). Characters go by the game's voice tag, such as `judy`. V has two, female and male.
+A **character voice** is the one voice a game character speaks in, for every tool that speaks their lines: EDGEwave's own [Voice Lines](voice-lines.html), and other tools that ask EDGEwave to speak a line, such as REDcode's [Lip Sync editor](../redcode/lipsync.html) or an [assistant](assistants.html). Characters go by the game's voice tag, such as `judy`. V has two, female and male.
 
 **EDGEwave: Character Voices...** lists them. The first time a tool needs a character with no voice yet, EDGEwave asks you to pick one:
 

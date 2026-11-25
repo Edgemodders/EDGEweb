@@ -17,6 +17,7 @@ How to keep it:
 
 **New**
 
+- Wiki: REDcode follows 0.10.17 and redcode-mcp 0.7.0 (2026-11-25): a page for the new Lip Sync editor, a page of its own for the sector view (Overlaps, the Properties tab, search that selects, Back and Forward, sector scripts), editing made animations in REDcode and in Blender, the animation view's Clip, Edit and Animations tabs and its media buttons, a sector's nodeData and instanced mesh buffers in the CR2W editor, and the new tools for assistants: https://edgemodders.ai/wiki/redcode/lipsync.html
 - Dashboard: an ID in "Waiting on the owner" links to that item's entry in the Owner Summary when it has one (a private page, which opens for the owner only).
 - Wiki: 22 more screenshots of the editor tools, on 16 pages. REDcode: New File, Search game files, the Library view, the animation view, a synced set, the Make panel, a sector in 3D, a Volume, the Keys view, the HUD theme and its Marketplace listing. EDGEdeck: adding a mod, a FOMOD installer, a first deploy, Deploy on one mod, the Conflicts page and a REDcode project as a mod. EDGEmat: a prop's parts on the Desk and its listing. EDGEquest: Check Quest Mod. EDGEkit: the pack's page: https://edgemodders.ai/wiki/
 - Wiki: EDGEbuilder follows 0.13.2 (2026-11-23): opening, closing and locking the game's doors, a new Sectors page, and choosing between open REDcode projects: https://edgemodders.ai/wiki/edgebuilder/sectors.html

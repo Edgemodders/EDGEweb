@@ -4,7 +4,7 @@ nav_title: Connect Claude Code
 section: Start here
 order: 5
 description: "Let Claude Code on your PC use the EDGE tools: the easy way with EDGEchat, which tools it connects, and how to connect the others, or all of them, by hand."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # Connect <span class="y">Claude Code</span>
@@ -26,7 +26,7 @@ Eight EDGE tools offer a connection. EDGEchat sets up four of them. The other fo
 | Tool | Gives Claude | With EDGEchat | By hand |
 |---|---|---|---|
 | [REDnode](rednode/) | The running game: mod logs, REDnode's windows, pictures of the game's screen, reading and calling the game, swapping a changed mod in, quest facts, things in the world, and the tools your installed REDnode mods offer | Included | [Agents and MCP](rednode/agents.html#connect-claude-code) |
-| [REDcode](redcode/) | The game's files: browse and search the archives, read and change game files, textures, TweakDB, game sounds, pack, export and import. It works through REDbridge | Included | [Assistants and MCP](redcode/assistants.html#connect-it-by-hand) |
+| [REDcode](redcode/) | The game's files: browse and search the archives, read and change game files, textures, TweakDB, game sounds, pack, export and import; make and edit animations, read lip sync, and find and change a sector's nodes with your sector scripts. It works through REDbridge | Included | [Assistants and MCP](redcode/assistants.html#connect-it-by-hand) |
 | [EDGEdeck](edgedeck/) | Your mods: list, add, turn on or off, reorder, remove, deploy, undo, conflicts, loadouts, Vortex import | Included | [Assistants and the command line](edgedeck/assistants.html#connect-an-assistant) |
 | [EDGEmat](edgemat/) | Materials: a garment's materials from its in-game name, its layers in plain words, recolors saved into your project, new materials from words or an image | Included | [Assistants](edgemat/assistants.html#connect-claude-code) |
 | [EDGEfab](edgefab/) | Props: draw an object from your words, make it 3D, size it, make it glow, and put it into your project or the EDGE Library | Not yet | [Assistants](edgefab/assistants.html#connect-claude-code) |

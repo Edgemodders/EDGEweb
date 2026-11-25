@@ -122,7 +122,7 @@ EDGEwave ships no game files. It makes no network calls of its own, except to El
 | **Works, and heard in the game** | One game sound replaced (an override). Everything an event plays replaced, and silenced, through REDmod. A new named sound played by a quest. A sound played by a REDnode package made in the game folder. An event played in the running game from VS Code. EDGEwave Voice for REDnode speaking lines |
 | **Works, tested in VS Code** | The editor, the mixer, effects and presets, Render WAV. Game Assets, the Desk, the Project and Library views. Generate Sound, Speak Line and Re-Voice, with a real ElevenLabs account. Character voices, designed ones too, and lines spoken with timings. The key in REDcode's Keys. Voice Lines with EDGEquest. The MCP server with Claude Code |
 | **Built, not confirmed in the game** | A REDnode package made inside the project, installed while the game runs. An override packed as a REDmod. Swapping a sound mod into a running game: install and restart instead |
-| **Built, waiting on another tool** | Lines with timings in EDGEfab's Lip Sync tab, which moves into REDcode in a later release |
+| **Built, not tested together** | Lines with timings in REDcode's [Lip Sync editor](../redcode/lipsync.html#adding-a-line): its Add a Line shipped in REDcode 0.10.17, untested |
 | **Not there yet** | Voice lines in the game as real dialogue: you can make and edit them, but the game needs a format (`.wem`) that only Audiokinetic's Wwise tool makes. **Translate**. Pitch without a change of speed |
 | **Coming next** | Dialogue into the game through your own Wwise install (the conversion works on its own; the game has not played one yet). Later, a search over all of the game's audio, with subtitles and what plays each sound |
 
