@@ -3363,15 +3363,16 @@ window.EDGE_STATUS = {
      {
       "id": "P5",
       "title": "Grow: more tools' servers as they ship",
-      "status": "planned"
+      "status": "in progress"
      }
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.2.0",
     "needs": [
-     "List edgequest-mcp and edgehack-mcp (EDGEchat #3, #4)",
-     "Move to newer servers: the plugin runs edgedeck-mcp 0.30.0 and EDGEdeck is at 0.32.0"
+     "Hand tests: 0.2.0 in a session (seven servers, /edge:setup, one call each) and continue in the game (needs REDagent 0.4.5)",
+     "The eval suite at 0.2.0 (running 2026-11-25)",
+     "EDGEfab to confirm its wiring on EDGEchat #5"
     ]
    },
    "handTests": [
@@ -3416,6 +3417,27 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Needs an interactive sign-in"
+    },
+    {
+     "name": "0.2.0 servers, every option empty",
+     "steps": 8,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-25: all six stdio servers answer a read; mesh_items and cr2w_search fixes seen"
+    },
+    {
+     "name": "0.2.0 in a session: seven servers, /edge:setup, edgehack asks before hack_new",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": null,
+     "note": "docs/testing.md, \"0.2.0 in a session\""
+    },
+    {
+     "name": "/edge:continue with a REDagent handoff (REDagent C6a test)",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Needs REDagent 0.4.5, on its main"
     }
    ],
    "ownerSpotTests": [],
@@ -3424,6 +3446,16 @@ window.EDGE_STATUS = {
      "who": "REDcode",
      "what": "redcode-mcp should read EDGEkit's settings folder too (no issue filed)",
      "ref": "CLAUDE.md"
+    },
+    {
+     "who": "EDGEfab",
+     "what": "Confirm how the plugin wires edgefab-mcp 0.2.0 (EDGEFAB_REDBRIDGE, keys)",
+     "ref": "EDGEchat #5"
+    },
+    {
+     "who": "REDagent",
+     "what": "Release 0.4.5 with the VS Code handoff, for /edge:continue's test",
+     "ref": "EDGEchat #8"
     }
    ],
    "ownerActions": [
@@ -3431,13 +3463,19 @@ window.EDGE_STATUS = {
      "ref": "EC1",
      "what": "Run the next release with Update Nexus Mods: the first since the move to the shared Nexus tool",
      "since": "2026-11-16"
+    },
+    {
+     "ref": "EC2",
+     "what": "Run the 0.2.0 hand tests in docs/testing.md: \"0.2.0 in a session\", then \"continue in the game\" once REDagent 0.4.5 is out",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
-    "Two requests to list new servers have been open since 2026-11-04 and 2026-11-11",
+    "main already says 0.2.0: marketplace users with auto-update get the new servers before the hand tests",
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
-   ]
+   ],
+   "checkedBy": "EDGEchat session, 2026-11-25 (0.2.0 on main: edgefab, edgehack, edgequest, /edge:continue; #6, #7 closed)"
   },
   {
    "name": "REDsave",
@@ -4512,7 +4550,7 @@ window.EDGE_STATUS = {
      {
       "id": "G0",
       "title": "Decide",
-      "status": "in progress"
+      "status": "done"
      },
      {
       "id": "G1",
@@ -4539,34 +4577,30 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The G0 decisions with the owner",
-     "G1 to G3 built and tested"
+     "G1 to G3 built and tested",
+     "A session of its own for G1 (G0 was done from the EDGEchat session)"
     ]
    },
    "handTests": [],
    "ownerSpotTests": [],
    "waitingOn": [
     {
-     "who": "owner",
-     "what": "The G0 questions: all have proposed answers since 2026-10-26, none decided",
-     "ref": "docs/design.md"
-    },
-    {
      "who": "EDGEkit",
-     "what": "A command to outline toolbar buttons",
+     "what": "A command to outline toolbar buttons (edgekit.pointAt), for G3",
      "ref": "EDGEkit #6"
     }
    ],
    "ownerActions": [
     {
-     "ref": "EG1",
-     "what": "Decide G0: the port, sign-in, which window answers, the contract's shape",
-     "since": "2026-11-16"
+     "ref": "EG2",
+     "what": "Open a Claude session on the EDGEguide folder for G1, the skeleton",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
-    "No code yet, and no commits since 2026-11-03: stalled on the owner's decisions"
-   ]
+    "No code yet; G1 needs a session of its own"
+   ],
+   "checkedBy": "EDGEchat session, 2026-11-25 (G0 decided by the owner, written into the design: port 41822, OAuth, the focused window, the package.json contract)"
   },
   {
    "name": "VATS",
