@@ -89,7 +89,7 @@ const state = await game.state();                       // what the game is show
 | `game.player.teleport({ x, y, z, yaw? })` | Moves V | Passed in game |
 | `game.player.body()` | V's body from character creation, `"wa"` or `"ma"`, to pick the workspot or garment made for it. Since 0.70.0 | Passed in game |
 | `game.audio.play(name)` | Plays one of the game's UI sounds. See [Game sounds](overlay-apps.html#game-sounds) | Passed in game |
-| `game.on(name, fn)` | Runs your function at a game event. See [Listening to the game](node-mods.html#listening-to-the-game) | Passed in game |
+| `game.on(name, fn)` | Runs your function at a game event, such as a fight (`combat`, `npcDowned`, since 0.73.1). See [Listening to the game](node-mods.html#listening-to-the-game) | Passed in game |
 | `game.state()`, `game.onState(fn)` | What the game is showing. See [below](#is-v-in-the-world) | Passed in game |
 | `game.language()` | The game's language, such as `fr-fr` | Passed in game |
 | `game.instance` | Not a call: a value that stands for the game itself. Many game functions want it as their first argument | |

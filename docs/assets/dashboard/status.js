@@ -584,7 +584,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDnode",
    "code": "RN",
-   "ownerSeq": 7,
+   "ownerSeq": 8,
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
@@ -825,9 +825,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.73.1",
+    "version": "0.74.0",
     "needs": [
-     "Every test has passed: the owner's word to release (README, changelog section and Nexus summary first)"
+     "Nothing built for it yet: SC1, the scene spike, is next in the agreed order"
     ]
    },
    "handTests": [
@@ -1043,6 +1043,13 @@ window.EDGE_STATUS = {
      "since": "2026-11-25",
      "done": "2026-11-25",
      "outcome": "Build next (the owner, through EDGEmobile): built in REDnode 0.73.0"
+    },
+    {
+     "ref": "RN8",
+     "what": "Release REDnode 0.73.1 and REDagent 0.4.6",
+     "since": "2026-11-25",
+     "done": "2026-11-25",
+     "outcome": "REDnode 0.73.1 released (run 45723704456): GitHub v0.73.1 with five zips, Nexus 35419 (0.70.0 archived); the wiki brought up to 0.73.1. REDagent 0.4.6 run 45724406608 started"
     }
    ],
    "risks": [
@@ -1065,7 +1072,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (#61 passed; 0.73.1 meets the release gate)"
+   "checkedBy": "REDnode session, 2026-11-25 (REDnode 0.73.1 released; the wiki brought up to it)"
   },
   {
    "name": "REDcode",

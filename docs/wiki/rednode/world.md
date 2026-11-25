@@ -110,6 +110,7 @@ await world.spawn({
 | `world.move(id, position, orientation?, yaw?)` | Moves it, and optionally turns it: `yaw` in degrees, or a full `orientation` |
 | `world.remove(id)` | Removes it |
 | `world.spawned()` | Lists what your package spawned, each with `attached`: whether it's in the world now |
+| `world.ray(from, to, { groups })` | Where a line first meets the world's collision, with the group that stopped it. `groups` takes the game's own collision group names (default `Static`); objects baked by EDGEbuilder are in `Dynamic`. Since 0.73.1 |
 | `world.entity(id)` | The entity as a game object, to call its methods through `api`. `null` once it's gone |
 | `world.on(name, fn)` | Runs your function when an entity is created (`Entity/Initialize`), enters the world (`Entity/AfterAttach`) or leaves it (`Entity/Detach`) |
 | `world.watch(id)` | Starts those events for an entity your package didn't spawn |
