@@ -492,6 +492,12 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Animation Editor (AE2)",
+     "steps": 7,
+     "status": "not run",
+     "note": "Built 2026-11-24: the Edit panel in REDcode's animation view on a made clip (pins, keys, layers, trim, loop, Undo); checked in Chrome over the real REDbridge (docs/testing.md, Animation Editor (AE2))"
+    },
+    {
      "name": "0.4.4 Replace the key",
      "steps": null,
      "status": "passed",
@@ -1081,7 +1087,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "AE",
-      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 the steps in anim-core and the MCP tools anim_edit_info and anim_edit done (passed in the game 2026-11-24); then AE2 REDcode, AE3 in game, AE4 hand poses and Join",
+      "title": "Animation Editor (agreed 2026-11-24): one editor shared by REDcode and the Animation Tools pack, with MCP tools; AE1 the steps in anim-core and the MCP tools anim_edit_info and anim_edit done (passed in the game 2026-11-24); AE2 the Edit panel in the animation view built (hand test pending); then AE2 REDcode, AE3 in game, AE4 hand poses and Join",
       "status": "in progress"
      },
      {
