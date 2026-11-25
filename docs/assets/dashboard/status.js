@@ -9,7 +9,9 @@ window.EDGE_STATUS = {
    "RN2",
    "RN3",
    "RC1",
-   "RC10", "RN6", "RN7"
+   "RC10",
+   "RN6",
+   "RN7"
   ]
  },
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
@@ -1191,16 +1193,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-"Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder). The Animation Timeline's TL1 is built (anim-core, no game). Next, agreed: the timeline in the animation view (TL2 to TL4), Sector layers L2 and L3, sector materials M2, Lip Sync L2's design page"
+     "Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder). The Animation Timeline's TL1 is built (anim-core, no game). Next, agreed: the timeline in the animation view (TL2 to TL4), Sector layers L2 and L3, sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
-{
- "name": "Sector layers L4 and Sector Tools L1",
- "steps": 9,
- "status": "not run",
- "note": "Built 2026-11-25: Open Sector Here, openSector from the game, Show in Game with EDGEbuilder, the offer; checked by script, 93 unit checks (docs/testing.md, Sector layers L4 and Sector Tools L1, H1 to H9; needs the game with REDnode and EDGEbuilder)"
-},
+    {
+     "name": "Sector layers L4 and Sector Tools L1",
+     "steps": 9,
+     "status": "not run",
+     "note": "Built 2026-11-25: Open Sector Here, openSector from the game, Show in Game with EDGEbuilder, the offer; checked by script, 93 unit checks (docs/testing.md, Sector layers L4 and Sector Tools L1, H1 to H9; needs the game with REDnode and EDGEbuilder)"
+    },
     {
      "name": "Sector scripts: a changed script",
      "steps": 4,
@@ -4038,7 +4040,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmobile",
    "code": "MB",
-   "ownerSeq": 5,
+   "ownerSeq": 6,
    "group": "In development",
    "role": "A phone OS for the game as REDnode apps, in game and on the player's real phone; includes the Chooms! social app",
    "stage": "in development",
@@ -4096,8 +4098,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "C3",
-      "title": "Chooms!: people, corporations and gangs post by themselves through REDagent (plan agreed 2026-11-25; the content for the owner's review first)",
-      "status": "in progress"
+      "title": "Chooms!: people, corporations and gangs post by themselves through REDagent (content reviewed by the owner and code built 2026-11-25, Chooms! 0.2.0, 149 offline checks; the owner's test in the game next)",
+      "status": "built, tests pending"
      },
      {
       "id": "C4",
@@ -4124,7 +4126,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "first release",
     "needs": [
-     "C3: people and corporations post by themselves through REDagent",
+     "C3: the owner's test in the game (people, corporations and gangs posting by themselves, built 2026-11-25)",
      "C4: images (the bundled pictures from the dossiers, generated photos with the player's key)",
      "C5: DMs with Opus",
      "M5: installing on the phone, checked and finished",
@@ -4137,6 +4139,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "C3 test (Chooms! posts by themselves)",
+     "steps": 11,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "docs/design.md, C3 test; needs REDnode 0.72.0 and REDagent 0.4.5, both in the game on the PC on 2026-11-25"
+    },
     {
      "name": "C2 cards test (the Story tab's knowledge cards)",
      "steps": 2,
@@ -4205,13 +4214,8 @@ window.EDGE_STATUS = {
    ],
    "waitingOn": [
     {
-     "who": "owner",
-     "what": "A review of C3's content (gangs, their districts, 39 cards, the Choom Request points)",
-     "ref": "docs/design.md, C3: the content"
-    },
-    {
      "who": "REDagent",
-     "what": "REDnode #54: more context, no tools and a choice of model in agent.ask; built 2026-11-25 in REDnode 0.72.0 and REDagent 0.4.5, not yet released or tested in the game; needed for C3's test",
+     "what": "REDnode #54: more context, no tools and a choice of model in agent.ask; built 2026-11-25 in REDnode 0.72.0 and REDagent 0.4.5, in the game on the PC, not yet released; first tested in the game with C3's test",
      "ref": "https://github.com/Edgemodders/REDnode/issues/54"
     },
     {
@@ -4222,8 +4226,8 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     {
-     "ref": "MB5",
-     "what": "Review C3's content: the 11 gangs and their districts, 39 cards for gangs and corporations, the Choom Request points (the document Chooms! knowledge cards; docs/design.md, C3: the content)",
+     "ref": "MB6",
+     "what": "Run the C3 test in the game: Chooms! posts by themselves (docs/design.md, C3 test; 11 steps, about 20 minutes; it spends from your Anthropic key, up to the $1 cap)",
      "since": "2026-11-25"
     },
     {
