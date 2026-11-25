@@ -497,7 +497,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.4.6",
     "needs": [
-     "redcode-mcp released with it (the owner, 2026-11-24): anim_edit, sector, script and game tools for REDagent and the edge plugin"
+     "Every test has passed and redcode-mcp 0.7.0 is out (2026-11-25, with REDcode 0.10.17): the owner's word to release"
     ]
    },
    "handTests": [
