@@ -4290,12 +4290,13 @@ window.EDGE_STATUS = {
    "waitingOn": [
     {
      "who": "REDagent",
-     "what": "REDnode #54: more context, no tools and a choice of model in agent.ask; built 2026-11-25 in REDnode 0.72.0 and REDagent 0.4.5, in the game on the PC as REDnode 0.73.0 and REDagent 0.4.6, not yet released; first tested in the game with C3's test",
-     "ref": "https://github.com/Edgemodders/REDnode/issues/54"
+     "what": "REDnode #54: more context, no tools and a choice of model in agent.ask; built 2026-11-25 in REDnode 0.72.0 and REDagent 0.4.5; passed REDnode's in-game test on 2026-11-25 (REDnode 0.73.0 with REDagent 0.4.6, all six steps) and closed",
+     "ref": "https://github.com/Edgemodders/REDnode/issues/54",
+     "done": "2026-11-25"
     },
     {
      "who": "REDnode",
-     "what": "REDnode 0.73.0 (#61, fight events) and REDagent 0.4.6 ($2.00 daily limit per mod), built and in the game on the PC 2026-11-25, not yet released or tested; Chooms! requires 0.73.0 (its fights: step 12 of the C3 test)",
+     "what": "REDnode 0.73.0 (#61, fight events) and REDagent 0.4.6 ($2.00 daily limit per mod), in the game on the PC 2026-11-25; REDagent's $2.00 limit verified in the game; #61's fight events test is the last REDnode test before 0.73.0's release, not run yet; Chooms! requires 0.73.0 (its fights: step 12 of the C3 test)",
      "ref": "https://github.com/Edgemodders/REDnode/issues/61"
     }
    ],
@@ -4322,7 +4323,7 @@ window.EDGE_STATUS = {
     "Relies on Cloudflare quick tunnels: a private web address",
     "A game patch that renames quest paths would need Chooms!'s story file updated"
    ],
-   "checkedBy": "EDGEmobile session, 2026-11-25 (Chooms! requires REDnode 0.73.0)"
+   "checkedBy": "EDGEmobile session, 2026-11-25 (#54 passed and closed; Chooms! requires REDnode 0.73.0)"
   },
   {
    "name": "EDGEmods",
