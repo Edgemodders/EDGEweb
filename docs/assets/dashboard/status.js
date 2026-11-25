@@ -1718,8 +1718,16 @@ window.EDGE_STATUS = {
     }
    ],
    "risks": [
-    "Open requests: #14 (EDGEfab, waits on its F7a), #21 (the wiki rule: followed for 0.19.0, not yet written in its CLAUDE.md), #22 (built, waits on REDcode's Game view), #23 (REDcode's sector layers: variants with their ranges and mods' sectors; its item 3 dropped after REDcode's probe), #24 (cr2w walking into parsed buffers such as worldInstancedMeshNodeBuffer, from a modder's report)",
-    "#22's window.* is on main after 0.19.0: the next release carries it",
+    {
+     "what": "Open requests: #14 (EDGEfab, waits on its F7a), #21 (the wiki rule: followed for 0.19.0, not yet written in its CLAUDE.md), #22 (built, waits on REDcode's Game view), #23 (REDcode's sector layers: variants with their ranges and mods' sectors; its item 3 dropped after REDcode's probe), #24 (cr2w walking into parsed buffers such as worldInstancedMeshNodeBuffer, from a modder's report)",
+     "done": "2026-11-25"
+    },
+    "Open requests: #14 (EDGEfab, waits on its F7a), #22 (built, waits on REDcode's Game view), #23 and #24 (built on main 2026-11-25, wait for REDcode to use them and a release)",
+    {
+     "what": "#22's window.* is on main after 0.19.0: the next release carries it",
+     "done": "2026-11-25"
+    },
+    "#22, #23 and #24 are on main after 0.19.0: the next release carries them",
     "No session of its own: the REDnode session releases it",
     "Built on a WolvenKit beta",
     {
@@ -1727,7 +1735,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-20"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (REDnode 0.71.0 built; REDbridge #23, #24 built)"
+   "checkedBy": "REDnode session, 2026-11-25 (#21 closed; #23, #24 built)"
   },
   {
    "name": "EDGEdeck",
