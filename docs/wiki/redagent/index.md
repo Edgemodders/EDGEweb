@@ -4,7 +4,7 @@ nav_title: Overview
 section: REDagent
 order: 0
 description: "REDagent, the modding agent inside Cyberpunk 2077, powered by Claude. What it does, what it can make, what it needs, and where to start."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # RED<span class="y">agent</span>
@@ -62,12 +62,12 @@ One exception to know about: tools that other EDGE software gives it can change 
 
 ## Status
 
-**Released.** The latest is REDagent 0.4.1 (2026-11-01), for game 2.5, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35670) and [GitHub](https://github.com/Edgemodders/REDagent/releases). Everything on these pages passed its test in the game, except pictures on an HDR screen.
+**Released.** The latest is REDagent 0.4.6 (2026-11-25), for game 2.5, on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35670) and [GitHub](https://github.com/Edgemodders/REDagent/releases). Everything on these pages passed its test in the game, except pictures on an HDR screen.
 
 | | |
 |---|---|
-| **Coming next** | Making and changing quickhacks with [EDGEhack](../edgehack/)'s tools. Built, and passed in the game on 2026-11-11; not released yet |
-| **Planned, not started** | REDagent inside REDcode, with changes reviewed in VS Code |
+| **New in the latest releases** | **Continue in VS Code**: hand a chat to Claude Code with EDGEchat; mods can ask for answers with no tools and pick a model; a mod's daily limit of $2.00 (0.4.6). Making and changing quickhacks with [EDGEhack](../edgehack/)'s tools, and **Replace the key** (0.4.4) |
+| **Planned, not started** | REDagent's chats listed in REDcode, and one briefing shared with EDGEchat |
 
 ## In this section
 

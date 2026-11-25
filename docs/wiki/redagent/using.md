@@ -3,7 +3,7 @@ title: Using REDagent
 section: REDagent
 order: 3
 description: "Find your way around REDagent's chat window: what to ask, changes and Undo, saved chats, and every control in one table."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # Using <span class="y">REDagent</span>
@@ -112,6 +112,12 @@ When you start a 31st chat, the oldest is deleted, and its Undo buttons go with 
 
 **New** starts a fresh chat. Start one when you change topic: REDagent sends the whole chat to Claude with each question, so a long chat costs more per answer.
 
+## Continue in VS Code
+
+To carry a chat on at your desk, press **VS Code** at the bottom of the window (from REDagent 0.4.6). REDagent writes the chat as a handoff file and copies `/edge:continue`. In Claude Code with [EDGEchat](../edgechat/) 0.2.0 or later, paste `/edge:continue` and send it: Claude reads the handoff (what you asked, what REDagent did, the files it changed and the mods involved), says which chat it took over, and carries on with the same EDGE tools. Changes it makes to a mod show in the game at once.
+
+Handoffs are kept in `%APPDATA%\@rednode\overlay\packages\redagent\handoffs`, one file per chat, written again each time you press the button. They never hold your key. Without one, `/edge:continue` tells you to press **VS Code** first.
+
 ## Every control
 
 REDagent has few settings, and they live in different places.
@@ -122,7 +128,7 @@ REDagent has few settings, and they live in different places.
 | **Allow all in this chat** | On a change card | Off | Stops the cards for this chat. Never carried into another chat |
 | "REDnode's tools for AI agents" | REDnode's Mod Manager, REDagent's permissions | Off | Lets REDagent see the mod log, the game and windows |
 | The Anthropic key | REDnode's Settings, under [Keys](../rednode/settings.html#shared-keys) | None | Replace or remove your key |
-| A mod's **Daily limit** | **Chats**, then the **Mods** tab | $0.25 | What one mod's questions may cost you each day. See [Mods that ask REDagent](other-mods.html) |
+| A mod's **Daily limit** | **Chats**, then the **Mods** tab | $2.00 ($0.25 before 0.4.6) | What one mod's questions may cost you each day. See [Mods that ask REDagent](other-mods.html) |
 | A mod's **Paused** | The same tab | Off | Refuses all of that mod's questions |
 | A mod's **Pictures** | The same tab | Off | Lets that mod's questions use pictures of windows and of your screen |
 

@@ -4,7 +4,7 @@ nav_title: Costs, key and data
 section: REDagent
 order: 4
 description: "What REDagent costs to use, with figures from its tests, how to keep costs down, where your API key is kept, and what is sent to Anthropic."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # Costs, your key and your <span class="y">data</span>
@@ -48,7 +48,7 @@ Pick the model in the window's footer. You can change it at any time.
 | **Opus 5.5** (the default) | Writing and fixing mods, and harder questions |
 | **Sonnet 5.5** | Quick questions, at a lower price |
 
-Questions from [other mods](other-mods.html) always use Sonnet 5.5, whichever you picked.
+Questions from [other mods](other-mods.html) use Sonnet 5.5, whichever you picked, unless the mod asks for Opus 5.5 or Haiku 5.5 (from REDagent 0.4.6). Each mod has a daily limit, $2.00 unless you change it.
 
 ## Your key
 
