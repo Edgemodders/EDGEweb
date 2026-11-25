@@ -546,7 +546,11 @@ window.EDGE_STATUS = {
    ],
    "risks": [
     "EDGEmobile's Chooms! needs more context and a choice of model in agent.ask (REDnode #54); its first part, #54a, is on REDnode's list",
-    "A first question that reads the game cost about $0.45 on Opus"
+    "A first question that reads the game cost about $0.45 on Opus",
+    {
+     "what": "EDGEmobile's Chooms! will need a choice of model in agent.ask for C3; no issue is filed for it yet",
+     "done": "2026-11-21"
+    }
    ],
    "checkedBy": "REDnode session, 2026-11-25 (open requests reviewed)"
   },
@@ -955,12 +959,18 @@ window.EDGE_STATUS = {
     {
      "ref": "RN5",
      "what": "Place REDnode #58, #59 and #60 in the order. Recommended: #59 (a person put on the ground) inside SC1, the scene spike, which spawns people for workspots; #60 (pick groups) small, beside #51a; #58 (service.providers) after #54a",
-     "since": "2026-11-25"
+     "since": "2026-11-25",
+     "done": "2026-11-25",
+     "outcome": "Build the requests now, ahead of the scene spike"
     }
    ],
    "risks": [
     "Native code reads game memory at offsets found by reading the exe; a wrong one crashes the game (the node registry did on 0.66.0 to 0.66.6). Newer code finds them at run time",
-    "Twelve requests from other tools are open on it. #58 (service.providers), #59 (a spawned person put on the ground) and #60 (collision groups for world.pick) came in on 2026-11-24 and 25 and are not in the agreed order yet; each says no hurry"
+    "Twelve requests from other tools are open on it. #58 (service.providers), #59 (a spawned person put on the ground) and #60 (collision groups for world.pick) came in on 2026-11-24 and 25 and are not in the agreed order yet; each says no hurry",
+    {
+     "what": "Four requests from other tools are open on it: #24, #39, #46, #47",
+     "done": "2026-11-25"
+    }
    ],
    "checkedBy": "REDnode session, 2026-11-25 (open requests reviewed)"
   },
@@ -1649,14 +1659,20 @@ window.EDGE_STATUS = {
     {
      "ref": "RB4",
      "what": "Place REDbridge #23 (items 1 and 2) and #24 in the order; neither is urgent. Recommended: #24 first (it lets REDcode edit inside sector buffers and drop a workaround), then #23",
-     "since": "2026-11-25"
+     "since": "2026-11-25",
+     "done": "2026-11-25",
+     "outcome": "Build the requests now, ahead of the scene spike"
     }
    ],
    "risks": [
     "Open requests: #14 (EDGEfab, waits on its F7a), #21 (the wiki rule: followed for 0.19.0, not yet written in its CLAUDE.md), #22 (built, waits on REDcode's Game view), #23 (REDcode's sector layers: variants with their ranges and mods' sectors; its item 3 dropped after REDcode's probe), #24 (cr2w walking into parsed buffers such as worldInstancedMeshNodeBuffer, from a modder's report)",
     "#22's window.* is on main after 0.19.0: the next release carries it",
     "No session of its own: the REDnode session releases it",
-    "Built on a WolvenKit beta"
+    "Built on a WolvenKit beta",
+    {
+     "what": "Two of its four open requests (#15, #16) are done and only left open; #11 waits on a later EDGEbuilder phase",
+     "done": "2026-11-20"
+    }
    ],
    "checkedBy": "REDnode session, 2026-11-25 (open requests reviewed)"
   },

@@ -79,6 +79,8 @@ table.d tr.done td { color: var(--dim); text-decoration: line-through; }
 table.d tr.done td.ref { color: var(--green); }
 table.d tr.done td .donenote { display: inline-block; text-decoration: none; color: var(--green); font-family: var(--mono); font-size: 12px; margin-left: 8px; }
 table.d tr.done td a { color: inherit; }
+dd .rdone { color: var(--dim); text-decoration: line-through; }
+dd .rdonenote { color: var(--green); font-family: var(--mono); font-size: 12px; margin-left: 8px; }
 table.d td.num { font-family: var(--mono); font-size: 13px; text-align: right; }
 .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .chip { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; padding: 4px 10px; border: 1px solid var(--line); background: var(--panel); color: var(--dim); cursor: pointer; }
@@ -196,7 +198,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
       <h3>Keeping it current</h3>
       <p>From the EDGEweb folder, with the sibling checkouts beside it:</p>
       <pre class="how">python tools/dashboard/refresh.py</pre>
-      <p>What waits on the owner: each entry of <code>ownerActions</code> is <code>{ "ref", "what", "since" }</code>, and an open entry of <code>ownerSpotTests</code> has <code>ref</code> and <code>since</code> too. The owner names an item by its ref (RA1). Never change a ref or use one twice. For a new item write <code>what</code> and <code>since</code> and leave <code>ref</code> out: <code>python tools/dashboard/refresh.py --refs</code> gives it the next number. When the owner finishes an item, leave it in place and add <code>"done": "the date"</code>: its row is then struck through. Its number is not used again. An entry of <code>waitingOn</code> that is met stays too, with <code>"done"</code> and the date.</p>
+      <p>What waits on the owner: each entry of <code>ownerActions</code> is <code>{ "ref", "what", "since" }</code>, and an open entry of <code>ownerSpotTests</code> has <code>ref</code> and <code>since</code> too. The owner names an item by its ref (RA1). Never change a ref or use one twice. For a new item write <code>what</code> and <code>since</code> and leave <code>ref</code> out: <code>python tools/dashboard/refresh.py --refs</code> gives it the next number. When the owner finishes an item, leave it in place and add <code>"done": "the date"</code>: its row is then struck through. Its number is not used again. An entry of <code>waitingOn</code> that is met stays too, with <code>"done"</code> and the date, and so does a line of <code>risks</code> that no longer holds: it becomes <code>{ "what", "done" }</code>.</p>
       <p>That rewrites the facts a script can read (open issues, releases, commit dates). The rest is curated: each tool's own session updates its entry in the same piece of work as a change to its status, as the Dashboard section in its repo's <code>CLAUDE.md</code> says, and sets <code>checkedBy</code>. A managing session checks entries against the repos and sets <code>asOf</code>.</p>
     </div>
   </div>
@@ -211,7 +213,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=321"></script>
+<script src="assets/dashboard/status.js?v=322"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
@@ -325,7 +327,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   $("toolCards").innerHTML = tools.map(function (t) {
     var d = days(t.lastCommit), open = byRepo[t.name] || 0;
     var rel = t.lastTag ? esc(t.lastTag) + (t.lastTagDate ? " &middot; " + esc(t.lastTagDate) : "") + (t.commitsSinceTag ? " &middot; " + t.commitsSinceTag + " commits since" : "") : "none yet";
-    var risks = (t.risks || []).length ? "<dt>Watch</dt><dd>" + t.risks.map(esc).join("<br>") + "</dd>" : "";
+    var risks = (t.risks || []).length ? "<dt>Watch</dt><dd>" + t.risks.map(function (r) { return typeof r === "string" ? esc(r) : r.done ? "<span class='rdone'>" + esc(r.what) + "</span><span class='rdonenote'>DONE " + esc(r.done) + "</span>" : esc(r.what); }).join("<br>") + "</dd>" : "";
     var needs = t.nextRelease && (t.nextRelease.needs || []).length ? "<dt>Next needs</dt><dd>" + t.nextRelease.needs.map(esc).join("<br>") + "</dd>" : "";
     return '<article class="tcard" id="' + anchor(t.name) + '"><h3>' + esc(t.name) + ' <span class="ver">' + esc(t.version || "") + "</span></h3>" +
       '<p class="what">' + esc(t.role || "") + "</p><dl>" +
