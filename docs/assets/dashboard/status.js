@@ -1116,7 +1116,12 @@ window.EDGE_STATUS = {
      }
     ]
    },
-   "nextRelease": {"version": null, "needs": ["Nothing yet. Next, agreed: the Animation Timeline (TL1), Sector layers L2 to L4 with Open in REDcode for EDGEbuilder, Lip Sync L2 (the editing loop, its own design page first), sector materials M2"]},
+   "nextRelease": {
+    "version": null,
+    "needs": [
+     "Nothing yet. Next, agreed: the Animation Timeline (TL1), Sector layers L2 to L4 with Open in REDcode for EDGEbuilder, Lip Sync L2 (the editing loop, its own design page first), sector materials M2"
+    ]
+   },
    "handTests": [
     {
      "name": "Sector Properties tab",
@@ -1382,7 +1387,7 @@ window.EDGE_STATUS = {
      "what": "Make the Animation Tools pack's Nexus page and say when to release it (AT3r; the in-game test AT3 passed 2026-11-24)",
      "since": "2026-11-22"
     },
-        {
+    {
      "ref": "RC2",
      "what": "Agree REDcode's half of Sector Tools (docs/design/sector-tools.md, three decisions)",
      "since": "2026-11-20",
@@ -1394,7 +1399,7 @@ window.EDGE_STATUS = {
      "what": "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
      "since": "2026-11-20"
     },
-        {
+    {
      "ref": "RC5",
      "what": "Run retests R1 and R2 of Run Game in Tab (docs/testing.md): the release key while the game loads and in the main menu, and the status line below the game",
      "since": "2026-11-23"
@@ -3369,9 +3374,9 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEfab",
    "code": "EF",
-   "ownerSeq": 3,
+   "ownerSeq": 4,
    "group": "In development",
-   "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next), added to a REDcode project or the EDGE Library",
+   "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next, proposed), added to a REDcode project or the EDGE Library",
    "stage": "released",
    "version": "0.2.0",
    "lastTag": null,
@@ -3436,7 +3441,7 @@ window.EDGE_STATUS = {
     "version": "0.2.1",
     "needs": [
      "0.2.0 released 2026-11-22 with the K4d tools (keys in REDcode's Keys): Marketplace, Open VSX, npm, GitHub, Nexus. Nothing under Unreleased yet",
-     "Next work: F3 Blender sources, then F2; a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
+     "Next work: F3 Blender sources, then clothing (F4a, F4b; proposed 2026-11-25, waiting on the owner), then F2; a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
    "handTests": [
@@ -3540,9 +3545,9 @@ window.EDGE_STATUS = {
      "since": "2026-11-18"
     },
     {
-     "ref": "EF3",
-     "what": "Say whether EDGEfab keeps any single-clip animation editing (EDGEfab #7) now that it covers props and clothing only, beyond an animated prop's own clip",
-     "since": "2026-11-22"
+     "ref": "EF4",
+     "what": "Agree the plan change (plan.md, \"Clothing: where it falls\"): clothing up to right after F3, split into F4a Reshape a game garment and F4b New clothing; F7a narrowed to a prop's rig; 1.0 as props and clothing whole",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
@@ -3550,7 +3555,7 @@ window.EDGE_STATUS = {
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
     "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
    ],
-   "checkedBy": "EDGEfab session, 2026-11-22"
+   "checkedBy": "EDGEfab session, 2026-11-25"
   },
   {
    "name": "EDGEdir",
