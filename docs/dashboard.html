@@ -196,7 +196,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
       <h3>Keeping it current</h3>
       <p>From the EDGEweb folder, with the sibling checkouts beside it:</p>
       <pre class="how">python tools/dashboard/refresh.py</pre>
-      <p>What waits on the owner: each entry of <code>ownerActions</code> is <code>{ "ref", "what", "since" }</code>, and an open entry of <code>ownerSpotTests</code> has <code>ref</code> and <code>since</code> too. The owner names an item by its ref (RA1). Never change a ref or use one twice. For a new item write <code>what</code> and <code>since</code> and leave <code>ref</code> out: <code>python tools/dashboard/refresh.py --refs</code> gives it the next number. When the owner finishes an item, leave it in place and add <code>"done": "the date"</code>: its row is then struck through. Its number is not used again.</p>
+      <p>What waits on the owner: each entry of <code>ownerActions</code> is <code>{ "ref", "what", "since" }</code>, and an open entry of <code>ownerSpotTests</code> has <code>ref</code> and <code>since</code> too. The owner names an item by its ref (RA1). Never change a ref or use one twice. For a new item write <code>what</code> and <code>since</code> and leave <code>ref</code> out: <code>python tools/dashboard/refresh.py --refs</code> gives it the next number. When the owner finishes an item, leave it in place and add <code>"done": "the date"</code>: its row is then struck through. Its number is not used again. An entry of <code>waitingOn</code> that is met stays too, with <code>"done"</code> and the date.</p>
       <p>That rewrites the facts a script can read (open issues, releases, commit dates). The rest is curated: each tool's own session updates its entry in the same piece of work as a change to its status, as the Dashboard section in its repo's <code>CLAUDE.md</code> says, and sets <code>checkedBy</code>. A managing session checks entries against the repos and sets <code>asOf</code>.</p>
     </div>
   </div>
@@ -211,7 +211,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=320"></script>
+<script src="assets/dashboard/status.js?v=321"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
@@ -238,7 +238,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   tools.forEach(function (t) {
     (t.handTests || []).forEach(function (x) { tests.push({ tool: t.name, kind: "Hand test", name: x.name, steps: x.steps, status: x.status, ranBy: x.ranBy, note: x.note }); });
     (t.ownerSpotTests || []).forEach(function (x) { spots.push({ tool: t.name, kind: "Owner spot test", name: (x.id ? x.id + " " : "") + x.feature, steps: null, status: x.status, ranBy: "owner", note: "", ref: x.ref, since: x.since, done: x.done }); });
-    (t.waitingOn || []).forEach(function (x) { waits.push(typeof x === "string" ? { tool: t.name, who: "?", what: x } : { tool: t.name, who: x.who || "?", what: x.what, ref: x.ref }); });
+    (t.waitingOn || []).forEach(function (x) { waits.push(typeof x === "string" ? { tool: t.name, who: "?", what: x } : { tool: t.name, who: x.who || "?", what: x.what, ref: x.ref, done: x.done }); });
     (t.ownerActions || []).forEach(function (x) { owner.push(typeof x === "string" ? { tool: t.name, what: x } : { tool: t.name, what: x.what, ref: x.ref, since: x.since, done: x.done }); });
   });
   var notRun = tests.filter(function (x) { return kind(x.status) !== "done"; });
@@ -249,7 +249,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   var phases = [].concat.apply([], tools.map(function (t) { return (t.plan && t.plan.phases) || []; }));
   var pend = phases.filter(function (p) { return kind(p.status) === "test"; }).length;
   var oldReq = issues.filter(function (i) { return days(i.updated) > 14; }).length;
-  var crossWaits = waits.filter(function (w) { return w.who !== "owner"; });
+  var crossWaits = waits.filter(function (w) { return w.who !== "owner" && !w.done; });
   var k = function (n, l, s, href, attn) { return '<a class="kpi' + (attn ? " attn" : "") + '" href="' + href + '"><div class="n">' + n + '</div><div class="l">' + l + '</div><div class="s">' + s + "</div></a>"; };
   $("kpis").innerHTML =
     k(ownerOpen.length + spotsOpen.length, "Waiting on the owner", ownerOpen.length + " actions, " + spotsOpen.length + " spot tests", "#owner", ownerOpen.length + spotsOpen.length > 0) +
@@ -315,10 +315,10 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   drawTests();
 
   // ---- waiting
-  waits.sort(function (a, b) { return a.who.localeCompare(b.who) || a.tool.localeCompare(b.tool); });
+  waits.sort(function (a, b) { return (a.done ? 1 : 0) - (b.done ? 1 : 0) || a.who.localeCompare(b.who) || a.tool.localeCompare(b.tool); });
   table("waitTable", ["Has to move", "Waiting tool", "For what", "Reference"], waits.map(function (w) {
     var known = tools.some(function (t) { return t.name === w.who; });
-    return "<tr><td class='m'>" + (known ? tlink(w.who) : esc(w.who)) + "</td><td class='m'>" + tlink(w.tool) + "</td><td>" + esc(w.what) + "</td><td class='m'>" + esc(w.ref || "") + "</td></tr>"; }), "No tool reports waiting on another.");
+    return "<tr" + (w.done ? " class='done'" : "") + "><td class='m'>" + (known ? tlink(w.who) : esc(w.who)) + "</td><td class='m'>" + tlink(w.tool) + "</td><td>" + esc(w.what) + (w.done ? "<span class='donenote'>DONE " + esc(w.done) + "</span>" : "") + "</td><td class='m'>" + esc(w.ref || "") + "</td></tr>"; }), "No tool reports waiting on another.");
 
   // ---- tool cards, sessions
   var sess = function (t) { return (t.sessions && t.sessions.length) ? t.sessions.map(function (s) { return '<span class="sess">' + esc(s) + "</span>"; }).join(", ") : '<span class="nosess">none running</span>'; };

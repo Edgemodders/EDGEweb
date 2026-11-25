@@ -553,7 +553,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDnode",
    "code": "RN",
-   "ownerSeq": 3,
+   "ownerSeq": 5,
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
@@ -1444,7 +1444,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDbridge",
    "code": "RB",
-   "ownerSeq": 3,
+   "ownerSeq": 4,
    "group": "Core toolkits",
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
@@ -1611,6 +1611,12 @@ window.EDGE_STATUS = {
    ],
    "ownerSpotTests": [],
    "waitingOn": [
+    {
+     "who": "EDGEbuilder",
+     "what": "#11 is used when B3b or B7 starts (B3b itself waits on REDnode #24)",
+     "ref": "REDbridge #11",
+     "done": "2026-11-20"
+    },
     {
      "who": "EDGEfab",
      "what": "An in-game check that an imported clip plays; for rig import, F7a's prop and bones (F7a, after its F3 and F2, may need no writer)",
