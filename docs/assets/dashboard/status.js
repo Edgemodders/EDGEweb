@@ -2053,7 +2053,7 @@ window.EDGE_STATUS = {
      "steps": 51,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Steps 1 to 35 passed in game on 2026-11-24 on the morning build (dbb20bf). Added the same day at the owner ask, checked in REDnode host: picture details before Drop, right button tap or hold in Drop at click, the Objects drawer eye, Explorer widths and reveal, Preview drawer headers, Show tooltip, pick spinner, and the Drop a copy cursor fix. Steps 36 to 51, and 6, 9, 11 and 33 again, to run on the newest build: in the EDGEdeck library (on), not deployed"
+     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Steps 1 to 35 passed in game on 2026-11-24 on the morning build (dbb20bf). Added the same day at the owner ask, checked in REDnode host: picture details before Drop, right button tap or hold in Drop at click, the Objects drawer eye, Explorer widths and reveal, Preview drawer headers, Show tooltip, pick spinner, and the Drop a copy cursor fix. Steps 36 to 52, and 6, 9, 11 and 33 again, to run on the newest build. Fixed 2026-11-24 from the G0 look: Solid and Collision data lines, a click picks instanced destructibles (a bake's solid objects), raycasts ask the Dynamic group so Drop at click lands on solid bakes, the drawer closes in place. Deployed 2026-11-25 (test-17)"
     },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
@@ -2165,7 +2165,7 @@ window.EDGE_STATUS = {
      "steps": 10,
      "status": "not run",
      "ranBy": "owner",
-     "note": "2026-11-24: checked in REDnode's host; needs the newest 0.14.0 build and edgebuilder-tool-probe deployed"
+     "note": "2026-11-24: checked in REDnode's host; the newest 0.14.0 build and edgebuilder-tool-probe deployed 2026-11-25, the game steps not run"
     }
    ],
    "ownerSpotTests": [
@@ -2180,6 +2180,11 @@ window.EDGE_STATUS = {
      "who": "REDnode",
      "what": "service.providers(role): every installed tool with its manifest and whether it is on, for the Tools tab (T1); not urgent, a folder scan works meanwhile",
      "ref": "REDnode #58"
+    },
+    {
+     "who": "REDnode",
+     "what": "Collision groups for world.pick's physics line: a bake's solid objects are Dynamic, so holdsHit misses them (not urgent; EDGEbuilder casts its own line meanwhile)",
+     "ref": "REDnode #60"
     },
     {
      "who": "EDGEfab",
@@ -2230,7 +2235,7 @@ window.EDGE_STATUS = {
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-24"
+   "checkedBy": "EDGEbuilder session, 2026-11-25"
   },
   {
    "name": "EDGEwave",
