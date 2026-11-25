@@ -1039,7 +1039,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDcode",
    "code": "RC",
-   "ownerSeq": 10,
+   "ownerSeq": 11,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1191,10 +1191,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Nothing yet. Next, agreed: the Animation Timeline (TL1), Sector layers L2 to L4 with Open in REDcode for EDGEbuilder, Lip Sync L2 (the editing loop, its own design page first), sector materials M2"
+     "Sector scripts known by their text: built 2026-11-25, the hand test H1 to H4 (docs/testing.md). Next, agreed: the Animation Timeline (TL1), Sector layers L2 to L4 with Open in REDcode for EDGEbuilder, Lip Sync L2 (the editing loop, its own design page first), sector materials M2"
     ]
    },
    "handTests": [
+    {
+     "name": "Sector scripts: a changed script",
+     "steps": 4,
+     "status": "not run",
+     "note": "Built 2026-11-25: a script changed outside REDcode is asked about again before it runs; checked by script (docs/testing.md, Sector scripts: a changed script, H1 to H4)"
+    },
     {
      "name": "Sector Properties tab",
      "steps": 6,
@@ -1465,6 +1471,11 @@ window.EDGE_STATUS = {
      "since": "2026-11-20",
      "done": "2026-11-25",
      "outcome": "Agreed with the three recommendations: the request file, a dismissable warning for a replaced sector, EDGEbuilder offered once; REDcode's half waits on EDGEbuilder's S1 (#9, nudged)"
+    },
+    {
+     "ref": "RC11",
+     "what": "Run the hand test Sector scripts: a changed script, H1 to H4 (docs/testing.md): a script changed outside REDcode is asked about again, one you save in the editor is not",
+     "since": "2026-11-25"
     },
     {
      "ref": "RC3",
