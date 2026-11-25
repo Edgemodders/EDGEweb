@@ -764,7 +764,7 @@ window.EDGE_STATUS = {
      {
       "id": "0.71",
       "title": "The requests of 2026-11-24 and 25, built ahead of SC1 at the owner's word: a person spawned on the ground (#59), world.ray and world.pick's collision groups (#60), service.providers and onProviders (#58); REDnode 0.71.0, deployed in 0.72.0",
-      "status": "built, tests pending"
+      "status": "done"
      },
      {
       "id": "SC1",
@@ -826,7 +826,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.73.0",
     "needs": [
-     "#58's step 4 and the fight events test (#61), on the deployed 0.73.0 (RN6)"
+     "The fight events test (#61) on the deployed 0.73.0 (RN6)"
     ]
    },
    "handTests": [
@@ -847,9 +847,9 @@ window.EDGE_STATUS = {
     {
      "name": "Providers of a role (#58), REDnode 0.71.0",
      "steps": 5,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Run in game 2026-11-25 (dev PC, 0.73.0): steps 1, 2, 3 and 5 passed; step 4 (stop(), then no more lines) still to run"
+     "note": "Passed in game 2026-11-25 (dev PC, 0.73.0), all 5 steps (step 4 in a second run); #58 closed"
     },
     {
      "name": "A person on the ground, a ray, pick groups (#59, #60), REDnode 0.71.0",
@@ -1031,7 +1031,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "RN6",
-     "what": "Finish REDnode 0.73.0's tests: step 4 of providers of a role (#58: stop(), then switch Counter service off and on, no more lines), and fight events (#61, Fight test, after EDGEmobile deploys Chooms! for C3's step 12). #59, #60 and #54 passed on 2026-11-25; 0.73.0 and REDagent 0.4.6 are deployed on the dev PC",
+     "what": "Run the fight events test (#61, Fight test, 9 steps in docs/world.md) on the deployed 0.73.0, after EDGEmobile deploys Chooms! so C3's step 12 runs in the same fight. #59, #60, #58 and #54 passed on 2026-11-25",
      "since": "2026-11-25"
     },
     {
@@ -1054,7 +1054,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (#54 passed; #58 passed but step 4)"
+   "checkedBy": "REDnode session, 2026-11-25 (#58 passed; only #61's test left for 0.73.0)"
   },
   {
    "name": "REDcode",
