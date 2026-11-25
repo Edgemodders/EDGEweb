@@ -492,24 +492,6 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
-     "name": "Sector Properties tab",
-     "steps": 6,
-     "status": "not run",
-     "note": "Built 2026-11-24 (a modder's request): the shared properties of the selection, set on all of them after a question with the count; checked by a unit check and in Chrome over the real REDbridge (docs/testing.md, Sector Properties tab)"
-    },
-    {
-     "name": "Animation Editor (AE5)",
-     "steps": 5,
-     "status": "not run",
-     "note": "Built 2026-11-24: Edit in Blender on a made clip; checked with Blender in the background (150 frames back, a head key at frame 75, the feet within 0 mm) (docs/testing.md, Animation Editor (AE5))"
-    },
-    {
-     "name": "Animation Editor (AE2)",
-     "steps": 7,
-     "status": "passed",
-     "note": "Passed 2026-11-24 (the owner, D1 to D7), with what the run asked for: scrolling panels, a marker on the bone, the chosen step in yellow, steps changed in place, Apply rebuilding the view in place"
-    },
-    {
      "name": "0.4.4 Replace the key",
      "steps": null,
      "status": "passed",
@@ -1132,6 +1114,24 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Sector Properties tab",
+     "steps": 6,
+     "status": "passed",
+     "note": "Passed by script 2026-11-24 (EDGEweb's session, P1 to P6); two findings fixed the same day and not retested: a typed value asked twice, the tab after Ctrl+Y (docs/testing.md, Sector Properties tab)"
+    },
+    {
+     "name": "Animation Editor (AE5)",
+     "steps": 5,
+     "status": "not run",
+     "note": "Built 2026-11-24: Edit in Blender on a made clip; checked with Blender in the background (150 frames back, a head key at frame 75, the feet within 0 mm) (docs/testing.md, Animation Editor (AE5))"
+    },
+    {
+     "name": "Animation Editor (AE2)",
+     "steps": 7,
+     "status": "passed",
+     "note": "Passed 2026-11-24 (the owner, D1 to D7), with what the run asked for: scrolling panels, a marker on the bone, the chosen step in yellow, steps changed in place, Apply rebuilding the view in place"
+    },
+    {
      "name": "Sector scripts",
      "steps": 15,
      "status": "passed",
@@ -1140,14 +1140,14 @@ window.EDGE_STATUS = {
     {
      "name": "Sector layers (L1)",
      "steps": 9,
-     "status": "not run",
-     "note": "Checked by a unit check and in Chrome over the real game (16 sectors in 64 s, then 0.5 s from the cache; a layer loaded in 5.4 s); the look in 3D and everything in VS Code need the hand test (docs/testing.md, Sector layers (L1))"
+     "status": "passed",
+     "note": "Passed by script 2026-11-24 (EDGEweb's session, L1 to L9): 16 sectors in 66.5 s, then 0.6 s from the cache; how a ghosted layer looks is left for the owner's eye (docs/testing.md, Sector layers (L1))"
     },
     {
      "name": "Lip Sync L1",
      "steps": 10,
      "status": "partly run",
-     "note": "Steps 1 and 2 pass (2026-11-24): the core's checks against the game and the lipsync_* MCP tools. Steps 3 to 10, the tab in VS Code (the lines, the head, the links, Add a Line with EDGEwave 0.3.0), not run; the tab never ran in VS Code in EDGEfab either (docs/testing.md, Lip Sync L1)"
+     "note": "Steps 1 and 2 pass (scripts, MCP); 3 to 8 and 10 passed by script 2026-11-24 (EDGEweb's session); 9 not run (no ElevenLabs key); sound, mouth and head left for the owner (docs/testing.md, Lip Sync L1)"
     },
     {
      "name": "Key status",
@@ -1398,7 +1398,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "RC8",
-     "what": "Run the Sector layers (L1) hand test, the Overlaps tab (docs/testing.md); your notes on how it feels to use shape L2 to L4",
+     "what": "Look at the sector view's Overlaps tab yourself: how a ghosted layer looks and how it feels to use (the rest of Sector layers L1 passed by script); your notes shape L2 to L4",
      "since": "2026-11-24"
     },
     {
