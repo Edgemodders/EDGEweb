@@ -28,8 +28,7 @@ jobs:
           fetch-depth: 0   # the dashboard's date is the last commit that changed its data
       - name: Stamp the dashboard with the day its data last changed
         run: |
-          printf '{"updated":"%s"}
-' "$(git log -1 --format=%cI -- docs/assets/dashboard/status.js)" > docs/assets/dashboard/updated.json
+          echo "{\"updated\":\"$(git log -1 --format=%cI -- docs/assets/dashboard/status.js)\"}" > docs/assets/dashboard/updated.json
       - uses: actions/configure-pages@v5
       - name: Build site with Jekyll
         uses: actions/jekyll-build-pages@v1
