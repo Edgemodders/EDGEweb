@@ -4,7 +4,7 @@ nav_title: Your first mod, no code
 section: EDGEchat
 order: 2
 description: "Make a first mod by describing it: /edge:new-mod builds a HUD widget showing V's money, tests it in the game with you, and changes it when you ask."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # Your first mod, <span class="y">no code</span>
@@ -26,7 +26,7 @@ Claude words its answers a little differently each time, so what you read won't 
 
 ## Before you start
 
-- [Install and connect](install.html) done: `/edge:setup` shows all four connected.
+- [Install and connect](install.html) done: `/edge:setup` shows all seven connected.
 - The game running at a loaded save, with **Hot reload** on in REDnode's [Settings drawer](../rednode/settings.html) (**F10**, **REDNODE** tab, the gear by **Theme**). Hot reload makes REDnode load a mod again each time its files change.
 - Claude Code open in any folder. In VS Code, a folder for your mods, such as `Documents\Cyberpunk Mods`, is a good place.
 

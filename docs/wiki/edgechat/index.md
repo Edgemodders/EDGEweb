@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEchat
 order: 0
 description: "EDGEchat, the EDGE plugin for Claude Code: a modding assistant at your desk that reaches the running game, the game's files and your mods. What it is, what it's for, and where to start."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # EDGE<span class="y">chat</span>
@@ -15,14 +15,14 @@ EDGEchat makes mods with you by chat. It is the EDGE plugin (an add-on) for [Cla
 
 **What it costs.** EDGEchat is free. Claude Code needs a paid Claude plan that includes it, which you buy from Anthropic.
 
-{% include shot.html caption="EDGEchat in Claude Code" shows="Claude Code's panel in VS Code after /edge:setup, with its table of the four connections, rednode, redcode, edgedeck and edgemat, all connected." %}
+{% include shot.html caption="EDGEchat in Claude Code" shows="Claude Code's panel in VS Code after /edge:setup, with its table of the seven connections, rednode, redcode, edgedeck, edgemat, edgefab, edgehack and edgequest, all connected." %}
 
 | On this page | |
 |---|---|
 | [What it's for](#what-its-for) | What you can ask for |
 | [Why you might want it](#why-you-might-want-it) | Who it suits |
 | [What it adds to Claude Code](#what-it-adds-to-claude-code) | Connections, knowledge, commands |
-| [What it doesn't do yet](#what-it-doesnt-do-yet) | Quests, quickhacks, sounds, scripts |
+| [What it doesn't do yet](#what-it-doesnt-do-yet) | Sounds and game scripts |
 | [How it fits into EDGE](#how-it-fits-into-edge) | EDGEchat and REDagent, and the tools behind them |
 | [Status](#status) | The version, what it works with, what was tested |
 | [In this section](#in-this-section) | The pages, in the order to read them |
@@ -37,6 +37,10 @@ Making a mod usually means learning several programs and file formats first. Wit
 | Change how a jacket looks | "Recolor the NCPD badge coat to bright red" |
 | See a change in seconds, without restarting the game | "Pack it and swap it into the running game" |
 | Find out why a mod doesn't work | `/edge:check-mod` |
+| Make a quickhack | "Make a new quickhack from Overheat called Test Burn". It goes on [EDGEhack](../edgehack/)'s Desk, and Claude Code asks you first |
+| Understand a quest | "Describe the quest The Rescue in plain words", through [EDGEquest](../edgequest/) |
+| Put a prop of your own in a project | "Add the vending machine from my EDGEfab Desk to my project", through [EDGEfab](../edgefab/) |
+| Carry on a chat you started with REDagent in the game | Press **VS Code** in [REDagent](../redagent/using.html#continue-in-vs-code), then `/edge:continue` in Claude Code |
 | Ask how an EDGE tool works | "How does EDGEdeck's Run game button work?" Claude answers from a copy of this wiki that comes with the plugin |
 
 ## Why you might want it
@@ -45,7 +49,7 @@ Making a mod usually means learning several programs and file formats first. Wit
 |---|---|
 | Have never made a mod | A step-by-step path, from installing to your own mod in the game, with no code to write. Start at [Install and connect](install.html) |
 | Want an assistant at your desk, not only in the game | Claude Code beside your editor, with the EDGE tools. [REDagent](../redagent/) is the assistant inside the game |
-| Find setting up four connections fiddly | One install sets up REDnode, REDcode, EDGEdeck and EDGEmat for Claude, with one settings form. `/edge:setup` checks them all |
+| Find setting up seven connections fiddly | One install sets up REDnode, REDcode, EDGEdeck, EDGEmat, EDGEfab, EDGEhack and EDGEquest for Claude, with one settings form. `/edge:setup` checks them all |
 | Worry about an AI breaking your game | The EDGE tools ask you before every action that changes the game, its folder or your save, whichever permission setting Claude Code is in. See [Safety](safety.html) |
 | Make mods already | Modding knowledge Claude loads by itself: REDnode packages, WolvenKit projects, the game's archives and file types, and the EDGE tools |
 
@@ -53,9 +57,9 @@ Making a mod usually means learning several programs and file formats first. Wit
 
 | Part | What it does | You use it by |
 |---|---|---|
-| **Four connections** | Each one lets Claude use one EDGE tool. `rednode` reaches the running game through [REDnode](../rednode/). `redcode` reads the game's files through [REDbridge](../redbridge/). `edgedeck` manages your mods with [EDGEdeck](../edgedeck/). `edgemat` finds and recolors the materials of clothes with [EDGEmat](../edgemat/) | Asking in plain words. Claude picks the tools |
+| **Seven connections** | Each one lets Claude use one EDGE tool. `rednode` reaches the running game through [REDnode](../rednode/). `redcode` reads the game's files through [REDbridge](../redbridge/). `edgedeck` manages your mods with [EDGEdeck](../edgedeck/). `edgemat` finds and recolors the materials of clothes with [EDGEmat](../edgemat/). `edgefab` makes props with [EDGEfab](../edgefab/), `edgehack` quickhacks with [EDGEhack](../edgehack/), and `edgequest` reads and makes quests with [EDGEquest](../edgequest/) | Asking in plain words. Claude picks the tools |
 | **Modding knowledge** | How REDnode packages, WolvenKit projects, the game's archives and the EDGE tools work | Nothing: Claude loads it when a task needs it |
-| **Four commands** | `/edge:setup`, `/edge:new-mod`, `/edge:check-mod`, `/edge:init-project` | Typing them in Claude Code |
+| **Five commands** | `/edge:setup`, `/edge:new-mod`, `/edge:check-mod`, `/edge:init-project`, `/edge:continue` | Typing them in Claude Code |
 
 Two words you will meet in Claude Code itself: it calls a connection an **MCP server** (see the [glossary](../glossary.html)), and a piece of loadable knowledge a **skill**.
 
@@ -63,16 +67,15 @@ EDGEchat is not a separate AI, and it installs nothing into the game. It is Clau
 
 ## What it doesn't do yet
 
-EDGEchat 0.1.1 connects four tools. The other EDGE toolkits are not part of it yet.
+EDGEchat 0.2.1 connects seven tools. Quests, quickhacks and props are in it now, through EDGEquest, EDGEhack and EDGEfab. Some toolkits are not part of it yet.
 
-| Job | With EDGEchat 0.1.1 |
+| Job | With EDGEchat 0.2.1 |
 |---|---|
-| Quests | Not included. [EDGEquest](../edgequest/) is the quest maker; its [assistants page](../edgequest/assistants.html) covers working with Claude |
-| Quickhacks | Not included. [EDGEhack](../edgehack/) connects to Claude Code by itself, beside EDGEchat: see [EDGEhack with assistants](../edgehack/assistants.html) |
 | Sounds and voices | [EDGEwave](../edgewave/), the sound studio, is not included. Claude can still replace a game sound in a WolvenKit project through the `redcode` connection; that is not among EDGEchat's in-game tests |
+| What the game's people do over time, on a timeline | [EDGEdir](../edgedir/), the director's tool, is not included |
 | Scripts that change how the game behaves (redscript, RED4ext plugins) | Not covered. Claude says so when you ask for one |
 
-The copy of the wiki in the plugin dates from the plugin's release. It has no pages for EDGEquest or EDGEhack, so for those two read this site.
+The copy of the wiki in the plugin dates from the plugin's release, 25 November 2026 for 0.2.1. Pages added to this site since then are only here.
 
 ## How it fits into EDGE
 
@@ -84,6 +87,7 @@ EDGE has two assistants. They use the same tools, in different places.
 | What it makes | REDnode mods, while you play | REDnode packages, tweaks, clothing recolors and other WolvenKit projects |
 | What it reaches | The running game | The running game, the game's files, your mod library and materials |
 | What you pay with | Your own Anthropic API key, billed by use | Your Claude plan, if it includes Claude Code |
+| Moving a chat between them | **VS Code** in REDagent's chat window hands it over | `/edge:continue` picks it up, with its mods and files |
 
 The other toolkits do the work EDGEchat asks of them:
 
@@ -93,19 +97,23 @@ The other toolkits do the work EDGEchat asks of them:
 | [REDbridge](../redbridge/) | The game's archives and files, for the `redcode` and `edgemat` connections |
 | [EDGEdeck](../edgedeck/) | Your mod library, and deploys into the game folder that can be undone |
 | [EDGEmat](../edgemat/) | The materials of clothes, recolors, and its list of the game's materials, shared with the EDGEmat extension |
+| [EDGEfab](../edgefab/) | Props from a 3D model or from words, made ready for the game, from its Desk into your project |
+| [EDGEhack](../edgehack/) | The game's quickhacks in plain words, new ones on its Desk, and trying them live in the game |
+| [EDGEquest](../edgequest/) | The game's quests in plain words, and new quests from a story file |
 | [EDGEkit](../edgekit/) | Has Claude Code built in, and offers to install EDGEchat in one click |
 
 You can also connect each tool to Claude Code by hand, without the plugin: see [Connect Claude Code](../connect-claude-code.html). Don't do both, or Claude sees every tool twice.
 
 ## Status
 
-EDGEchat **0.1.1** is the current release (2 November 2026). You install it from inside Claude Code, which downloads it from EDGEchat's GitHub repository. Claude Code calls such a source a marketplace; it is not the VS Code Marketplace. EDGEchat is a plugin for Claude Code, not a game mod, so a mod manager doesn't install it. Its [Nexus Mods page](https://www.nexusmods.com/cyberpunk2077/mods/35680) has news and a zip of the plugin.
+EDGEchat **0.2.1** is the current release (25 November 2026). You install it from inside Claude Code, which downloads it from EDGEchat's GitHub repository. Claude Code calls such a source a marketplace; it is not the VS Code Marketplace. EDGEchat is a plugin for Claude Code, not a game mod, so a mod manager doesn't install it. Its [Nexus Mods page](https://www.nexusmods.com/cyberpunk2077/mods/35680) has news and a zip of the plugin.
 
 | Works with | |
 |---|---|
 | Game | 2.5. On 2.31, see [Troubleshooting](troubleshooting.html#game-231) |
-| [REDnode](../rednode/) | 0.41.0 or later. [Recolor a jacket](recolor.html) uses REDnode's Console, which needs 0.49.5 |
-| [REDbridge](../redbridge/) | 0.11.0 or later for game 2.5. 0.10.0 also works, but can't read some of 2.5's quest area files |
+| [REDnode](../rednode/) | 0.41.0 or later. [Recolor a jacket](recolor.html) uses REDnode's Console, which needs 0.49.5. Trying a quickhack live needs 0.62.0 |
+| [REDbridge](../redbridge/) | 0.12.0 or later for game 2.5: it reads every file in 2.5, and finds the items an outfit's mesh belongs to. EDGEfab reads your keys from REDcode's **Keys** through 0.18.0 or later |
+| [REDagent](../redagent/) | 0.4.6 or later, for `/edge:continue` |
 | Windows | 10 or 11. The connections need Windows |
 
 Tested by its developer, as EDGEchat's [tests](https://edgemodders.github.io/EDGEchat/testing.html) record:
@@ -119,6 +127,10 @@ Tested by its developer, as EDGEchat's [tests](https://edgemodders.github.io/EDG
 | Recolor a jacket, deploy it, swap a new color into the running game, bring EDGEdeck back in step | Passed |
 | `/edge:init-project` on a real project | Passed |
 | `/edge:check-mod` | Found every problem deliberately put into a test mod, in an automated test |
+| All seven connections starting with every setting empty, and answering a first request | Passed (0.2.1) |
+| In a session: reading quickhacks, a quest and EDGEfab's Desk without a prompt; Claude Code asking before EDGEhack writes a quickhack, in auto mode, and nothing written after **Deny** | Passed (0.2.1) |
+| A prop from EDGEfab's Desk added to a project, with REDbridge found through EDGEchat's own setting | Passed (0.2.1) |
+| `/edge:continue`: a REDagent chat picked up, the mod checked and changed in the game | Passed (0.2.1, with REDagent 0.4.6) |
 
 ## In this section
 

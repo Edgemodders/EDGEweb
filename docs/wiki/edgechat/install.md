@@ -4,12 +4,12 @@ nav_title: Install and connect
 section: EDGEchat
 order: 1
 description: "Install EDGEchat in Claude Code (EDGEkit, VS Code or a terminal), fill in its settings, let Claude into the game, and check it all with /edge:setup."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # Install and <span class="y">connect</span>
 
-By the end of this page EDGEchat is installed, Claude can see the running game, and `/edge:setup` shows all four connections working. Allow 20 to 40 minutes. Most of that goes on installing the programs EDGEchat connects to, and you skip any you already have.
+By the end of this page EDGEchat is installed, Claude can see the running game, and `/edge:setup` shows all seven connections working. Allow 20 to 40 minutes. Most of that goes on installing the programs EDGEchat connects to, and you skip any you already have.
 
 | On this page | |
 |---|---|
@@ -30,9 +30,9 @@ By the end of this page EDGEchat is installed, Claude can see the running game, 
 | Windows 10 or 11 | The EDGE tools run on Windows | |
 | Cyberpunk 2077 **2.5** | The game version the EDGE tools support now. On 2.31, see [Troubleshooting](troubleshooting.html#game-231) | The game's main menu shows the version |
 | Claude Code, signed in | The assistant itself. It needs a Claude account whose plan includes Claude Code, paid to Anthropic | You can type a question in Claude Code and get an answer |
-| Node.js 20 or later | A free program that three of the four connections run on | `node --version` in a terminal prints `v20` or higher |
+| Node.js 20 or later | A free program that six of the seven connections run on | `node --version` in a terminal prints `v20` or higher |
 | [REDnode](../rednode/) 0.41.0 or later, in the game | The `rednode` connection, and swapping changes into the running game. Take the latest: [Recolor a jacket](recolor.html) uses REDnode's Console, which needs 0.49.5 | REDnode's launcher (**F10** in the game) shows its version |
-| [REDbridge](../redbridge/) 0.11.0 or later, and the .NET 10 runtime | REDbridge reads the game's files for the `redcode` and `edgemat` connections. It runs on Microsoft's .NET 10 runtime. REDbridge 0.10.0 also works, but can't read some of game 2.5's quest area files | `dotnet --list-runtimes` in a terminal lists a `10.` runtime |
+| [REDbridge](../redbridge/) 0.12.0 or later, and the .NET 10 runtime | REDbridge reads the game's files for the `redcode`, `edgemat`, `edgefab`, `edgehack` and `edgequest` connections. It runs on Microsoft's .NET 10 runtime. 0.11.0 reads every file in game 2.5; 0.12.0 also finds the items an outfit's mesh belongs to. EDGEfab reads your keys from REDcode's **Keys** through 0.18.0 or later | `dotnet --list-runtimes` in a terminal lists a `10.` runtime |
 | [EDGEdeck](../edgedeck/) in VS Code or EDGEkit (recommended) | Its **Run game** button is the easy way to start the game with your mods. The `edgedeck` connection works without it | The EDGEdeck view in the editor |
 
 A **terminal** is a window where you type commands. To open one, press the Windows key, type `PowerShell` and press Enter.
@@ -96,7 +96,7 @@ Inside a running `claude` session it takes two commands instead: `/plugin market
 
 ## Step 3: Fill in the settings
 
-EDGEchat has five settings. All are optional, but most people need the first two.
+EDGEchat has six settings. All are optional, but most people need the first two.
 
 | Where you installed | How the settings are asked |
 |---|---|
@@ -108,7 +108,7 @@ EDGEchat has five settings. All are optional, but most people need the first two
 | **Cyberpunk 2077 folder** | The game's install folder, the one holding `archive`, `bin` and `r6`, such as `E:\SteamLibrary\steamapps\common\Cyberpunk 2077` | You use VS Code, and REDcode there is set up with the same folder |
 | **REDbridge.exe** | The full path of `REDbridge.exe` from step 1, such as `C:\Tools\REDbridge\REDbridge.exe` | You use VS Code, and REDcode there is set up |
 | **EDGEdeck library** | The folder in EDGEdeck's **Library Path** setting | You never moved EDGEdeck's library |
-| **Google Gemini key**, **OpenAI key** | Your own key, only for making materials from words in EDGEmat. Billed to you, and kept in Windows' credential store | You don't make materials from words. The pages here don't need one |
+| **Google Gemini key**, **OpenAI key**, **Tripo key** | Your own keys, only for what costs money: EDGEmat's materials from words and reshapes, and EDGEfab's props from words. Billed to you, and kept in Windows' credential store | You don't use those, or you set the keys once in REDcode's **Keys** view in VS Code, which every EDGE tool shares. The pages here don't need one |
 
 **In EDGEkit, fill in the first two.** The "leave empty" shortcut reads VS Code's own settings, which EDGEkit doesn't share. If REDcode downloaded REDbridge for you, its path is in REDcode's `redcode.bridgePath` setting: open Settings (**Ctrl+,**), search for that name and copy the path.
 
@@ -159,8 +159,11 @@ Type `/edge:setup` and press Enter. Claude checks each connection, changes nothi
 | redcode | Connected: the REDbridge version and how many archives and files it found |
 | edgedeck | Connected: your library, its mods, and whether frameworks need updating |
 | edgemat | Connected: how many material setups its library holds |
+| edgefab | Connected: whether your Tripo and OpenAI keys are set |
+| edgehack | Connected: it reads the game's quickhacks |
+| edgequest | Connected: the quest index, or that it isn't built yet |
 
-{% include shot.html caption="/edge:setup, all connected" shows="Claude Code showing the table /edge:setup ends with: rednode, redcode, edgedeck and edgemat, each connected, with no next steps." %}
+{% include shot.html caption="/edge:setup, all connected" shows="Claude Code showing the table /edge:setup ends with: rednode, redcode, edgedeck, edgemat, edgefab, edgehack and edgequest, each connected, with no next steps." %}
 
 Anything not connected comes with one next step. The usual ones:
 
@@ -171,6 +174,8 @@ Anything not connected comes with one next step. The usual ones:
 | redcode **no game folder** or **no REDbridge** | Fill in the setting it names (step 3), then restart (step 4) |
 | edgedeck shows **no mods**, but you have some | It opened another library. Fill in **EDGEdeck library** (step 3), then restart |
 | edgemat **library not built** | Go on to step 7 |
+| edgequest **index not built** | Nothing to do now: it builds itself the first time you ask about a quest, in about 90 seconds |
+| edgefab **keys not set** | Only needed for props from words: set them in REDcode's **Keys** view, or in the plugin's settings (step 3) |
 | A server **added by hand** | You connected that tool to Claude Code yourself before EDGEchat, so Claude would see its tools twice. Claude explains how to remove that copy, and asks before running anything |
 
 More in [Troubleshooting](troubleshooting.html).
@@ -205,7 +210,7 @@ The last one is answered from the copy of this wiki that EDGEchat carries. You c
 
 ## Check
 
-- `/edge:setup` shows all four connected.
+- `/edge:setup` shows all seven connected. EDGEfab's keys and EDGEquest's index may wait.
 - Claude told you V's money without a permission prompt.
 - REDnode's **Connected assistants** lists Claude Code.
 
