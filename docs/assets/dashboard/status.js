@@ -3426,7 +3426,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.2.1",
     "needs": [
-     "Hand test: 0.2.0 in a session, step 7 (a fab_add with plugin 0.2.1; steps 1 to 6 passed 2026-11-25)"
+     "The owner's go-ahead: every test since 0.1.1 has passed"
     ]
    },
    "handTests": [
@@ -3482,9 +3482,9 @@ window.EDGE_STATUS = {
     {
      "name": "0.2.0 in a session: seven servers, /edge:setup, edgehack asks before hack_new",
      "steps": 7,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-25: steps 1 to 6 pass (hack_new asks; allowed and denied); step 7, a fab_add, to run on plugin 0.2.1"
+     "note": "2026-11-25: all seven steps; hack_new asks (allowed and denied); step 7, fab_add through the plugin's redbridge_exe alone, on plugin 0.2.1"
     },
     {
      "name": "/edge:continue with a REDagent handoff (REDagent C6a test)",
@@ -3509,17 +3509,16 @@ window.EDGE_STATUS = {
      "since": "2026-11-16"
     },
     {
-     "ref": "EC2",
-     "what": "Run the 0.2.0 hand test \"0.2.0 in a session\" in docs/testing.md",
+     "ref": "EC3",
+     "what": "Say go for the 0.2.1 release: every test since 0.1.1 passed",
      "since": "2026-11-25"
     }
    ],
    "risks": [
-    "main already says 0.2.1: marketplace users with auto-update get the new servers before the last hand test step",
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (plugin 0.2.1 on main with edgefab-mcp 0.2.1; session test steps 1 to 6 passed)"
+   "checkedBy": "EDGEchat session, 2026-11-25 (every hand test for 0.2.1 passed; the release waits on the owner)"
   },
   {
    "name": "REDsave",
