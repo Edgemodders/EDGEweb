@@ -3491,7 +3491,7 @@ window.EDGE_STATUS = {
    "group": "Specialist toolkits",
    "role": "The Edgemodders editor: a branded Code - OSS build with the EDGE extensions built in, and an extension pack",
    "stage": "released",
-   "version": "1.143.1",
+   "version": "1.143.2",
    "lastTag": "v1.143.1",
    "lastTagDate": "2026-11-19",
    "lastCommit": "2026-11-20",
@@ -3534,14 +3534,7 @@ window.EDGE_STATUS = {
      }
     ]
    },
-   "nextRelease": {
-    "version": "1.143.2",
-    "needs": [
-     "Security fix: the installer's Nexus links box wrote EDGEdeck's old PowerShell forwarder (1.140.3 to 1.143.1), which a crafted link could break out of; it now writes the direct command and every install replaces the old one. Built by the unticked Release run 45851893012 (passed: the installer compiled, every pin in the build check)",
-     "EDGEdeck 0.34.2 pinned (0.33.0 or later required, EDGEdeck's ask)",
-     "The owner's ticked Release run (the installer test passed 2026-11-26)"
-    ]
-   },
+   "nextRelease": null,
    "handTests": [
     {
      "name": "1.140.2 fresh first start and Claude Code for EDGE setup",
@@ -3597,7 +3590,7 @@ window.EDGE_STATUS = {
      "steps": null,
      "status": "passed",
      "ranBy": "session",
-     "note": "2026-11-26 on the dev PC, run 45851893012's installer silent: the old PowerShell forwarder for this EDGEkit replaced with the direct command; another editor's links left alone"
+     "note": "2026-11-26 on the dev PC, run 45851893012's installer silent: the old PowerShell forwarder for this EDGEkit replaced with the direct command; another editor's links left alone; released 2026-11-26 (run 45892239933)"
     }
    ],
    "ownerSpotTests": [],
@@ -3616,7 +3609,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EK2",
-     "what": "Click Restart to Update on an older install (the laptop's 1.140.6 should offer 1.143.1): the first real click",
+     "what": "Click Restart to Update on an older install (the laptop's 1.140.6 should offer 1.143.2): the first real click",
      "since": "2026-11-19"
     },
     {
@@ -3631,10 +3624,9 @@ window.EDGE_STATUS = {
     }
    ],
    "risks": [
-    "Until 1.143.2 is released, installs whose Nexus links box was ticked keep the old PowerShell forwarder unless their EDGEdeck has updated itself to 0.33.0 or later, which replaces it",
     "The installer is not signed, so Windows SmartScreen may warn",
     "The 1.140.4 to 1.140.6 releases shipped with no installer hand test (1.143.1 had one)",
-    "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit is on 1.143.1 since 2026-11-19"
+    "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit is on Code - OSS 1.143.1 since 2026-11-19 (EDGEkit 1.143.2, 2026-11-26, a security fix on the same base)"
    ],
    "checkedBy": "EDGEkit session, 2026-11-26"
   },
