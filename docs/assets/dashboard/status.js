@@ -1805,7 +1805,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
-   "version": "0.19.0",
+   "version": "0.20.0",
    "lastTag": "v0.19.0",
    "lastTagDate": "2026-11-22",
    "lastCommit": "2026-11-26",
@@ -1885,26 +1885,24 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#22",
-      "title": "window.* for REDcode's Game view: the game's window docked on a VS Code webview, off unless started with --windows; REDcode's asks from its 2026-11-23 test (an inset, the owner cleared while hung, the release key's Alt tap) built 2026-11-25; on main, not released",
+      "title": "window.* for REDcode's Game view: the game's window docked on a VS Code webview, off unless started with --windows; REDcode's asks from its 2026-11-23 test (an inset, the owner cleared while hung, the release key's Alt tap) built 2026-11-25; released in 0.20.0 on 2026-11-26",
       "status": "built, tests pending"
      },
      {
       "id": "#24",
-      "title": "cr2w.getNode, getNodes, search and patch walk into parsed buffer classes (worldInstancedMeshNodeBuffer, WorldTransformsBuffer and the rest), for REDcode's CR2W editor; on main, not released",
+      "title": "cr2w.getNode, getNodes, search and patch walk into parsed buffer classes (worldInstancedMeshNodeBuffer, WorldTransformsBuffer and the rest), for REDcode's CR2W editor; released in 0.20.0 on 2026-11-26",
       "status": "built, tests pending"
      },
      {
       "id": "#23",
-      "title": "sector.find's variants with their ranges, sector.nodes' ranges, and sectors from mods' .xl files and a project, for REDcode's sector layers (item 3 not needed); on main, not released",
+      "title": "sector.find's variants with their ranges, sector.nodes' ranges, and sectors from mods' .xl files and a project, for REDcode's sector layers (item 3 not needed); released in 0.20.0 on 2026-11-26",
       "status": "built, tests pending"
      }
     ]
    },
    "nextRelease": {
     "version": null,
-    "needs": [
-     "#22, #23 and #24 are on main: a release when the owner asks (RB1)"
-    ]
+    "needs": []
    },
    "handTests": [
     {
@@ -2016,6 +2014,11 @@ window.EDGE_STATUS = {
      "who": "REDcode",
      "what": "Its Game view (G1, G2) to use window.* and start REDbridge with --windows",
      "ref": "REDbridge #22"
+    },
+    {
+     "who": "REDcode",
+     "what": "Use 0.20.0 for its sector layers (#23) and edits inside sector buffers (#24), raising its minimum; each issue closes once REDcode's use passes",
+     "ref": "REDbridge #23, #24"
     }
    ],
    "ownerActions": [
@@ -2057,7 +2060,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-20"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (EDGEweb's nudge: #51 step 1 and #57's Saves spike built in 0.74.0; REDbridge #22's asks; EDGErepo #1)"
+   "checkedBy": "REDnode session, 2026-11-26 (REDbridge 0.20.0 released at the owner's word, run 45822452002; RB1 removed and RB2 renumbered RB1 at the owner's word)"
   },
   {
    "name": "EDGEdeck",
