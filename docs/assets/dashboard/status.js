@@ -1236,7 +1236,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-"Hand tests of what is built since 0.10.17: Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11; EDGEweb runs T1 to T10 by script, the look is the owner's). Sector scripts known by their text and Sector layers L2 and L3 passed by script on 2026-11-25. Next, agreed: sector materials M2, Lip Sync L2's design page"
+"Hand tests of what is built since 0.10.17: Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T10 passed by script; the look of T2 to T4 and T11 in the game are the owner's). Sector scripts known by their text and Sector layers L2 and L3 passed by script on 2026-11-25. Next, agreed: sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
@@ -1249,8 +1249,8 @@ window.EDGE_STATUS = {
     {
      "name": "Animation Timeline TL2 to TL4",
      "steps": 11,
-     "status": "not run",
-     "note": "Built 2026-11-25: the timeline under the animation view, live preview, editing blocks, grabbing a joint; checked in Chrome on Probe D's made clip (docs/testing.md, Animation Timeline TL2 to TL4, T1 to T11)"
+     "status": "partly run",
+     "note": "T1 to T10 passed 2026-11-25 by EDGEweb's session by script (what a script can read); four fixes from it (Add an animation on a new track, a block's blend following its end, a hand or foot over helper joints, a quiet Edit form) not run again; the look of T2 to T4 is the owner's, T11 needs the game (docs/testing.md, Animation Timeline TL2 to TL4)"
     },
     {
      "name": "Sector layers L4 and Sector Tools L1",
