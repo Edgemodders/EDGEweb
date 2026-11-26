@@ -965,7 +965,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#57",
-      "title": "Tests run by an assistant, for REDcode: load a save, a consent per test session, input to the game (docs/game-tests.md); step 1's Saves spike and REDnodeSavesListener built in 0.74.0 on 2026-11-25, steps 2 and 3 proposed",
+      "title": "Tests run by an assistant, for REDcode: load a save, a consent per test session, input to the game (docs/game-tests.md); step 1's Saves spike passed in game 2026-11-26 (57b next), steps 2 and 3 proposed",
       "status": "in progress"
      },
      {
@@ -1013,18 +1013,16 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.75.0",
     "needs": [
-     "Scene format 3 (#51 step 1): its in-game test (docs/world.md, 'Scene format 3: test'; Claude drives it)",
-     "The Saves spike (#57 step 1): its in-game test (docs/game-tests.md); the spike is outside the player zip, but REDnodeSavesListener ships in the plugin's scripts",
-     "Load modded saves without the mod check: its in-game test (docs/overlay.md, 'Load modded saves: test')"
+     "Scene format 3 (#51 step 1): its in-game test (docs/world.md, 'Scene format 3: test'; Claude drives it)"
     ]
    },
    "handTests": [
     {
      "name": "Load modded saves without the mod check, REDnode 0.75.0",
      "steps": 6,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "docs/overlay.md, 'Load modded saves: test'. Built and deployed 2026-11-26; compiles with 0 errors beside Codeware and Remove Mods Menu, and with the game's scc.exe"
+     "note": "docs/overlay.md, 'Load modded saves: test'. Built and deployed 2026-11-26; compiles with 0 errors beside Codeware and Remove Mods Menu, and with the game's scc.exe; passed in game 2026-11-26, all six steps"
     },
     {
      "name": "Scene format 3 read (#51 step 1), REDnode 0.74.0",
@@ -1036,9 +1034,9 @@ window.EDGE_STATUS = {
     {
      "name": "Saves spike (#57 step 1), REDnode 0.74.0",
      "steps": 6,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "docs/game-tests.md, 'Saves spike: test'. Run 2026-11-26 (0.74.0, Saves spike 0.1.1): steps 1 to 4 pass (940 saves listed in 11 ms at the main menu, every name matches a folder, LoadSavedGame loads the save picked from the main menu in 3.7 s and from a game in 5.0 s); step 5 found that LoadLastCheckpoint does nothing at the main menu for a modded save (the game's Continue uses LoadModdedSave(0) then); step 6 not run yet"
+     "note": "docs/game-tests.md, 'Saves spike: test'. Run 2026-11-26 (0.74.0, Saves spike 0.1.1): steps 1 to 4 pass (940 saves listed in 11 ms at the main menu, every name matches a folder, LoadSavedGame loads the save picked from the main menu in 3.7 s and from a game in 5.0 s); step 5 found that LoadLastCheckpoint does nothing at the main menu for a modded save (the game's Continue uses LoadModdedSave(0) then); step 6 passed (LoadLastCheckpoint(true) in a game, 3.6 s); all six steps passed 2026-11-26"
     },
     {
      "name": "The scene spike (SC1), Scene spike 0.1.0 on REDnode 0.73.1",
@@ -1298,7 +1296,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (0.74.0 and 0.75.0 deployed; Saves spike steps 1 to 4 passed in game; Load modded saves built; REDcode #36 filed)"
+   "checkedBy": "REDnode session, 2026-11-26 (Saves spike and Load modded saves passed in game; #57 answered)"
   },
   {
    "name": "REDcode",
