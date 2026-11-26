@@ -4654,12 +4654,12 @@ window.EDGE_STATUS = {
      {
       "id": "R4c",
       "title": "Install through EDGEdeck",
-      "status": "planned"
+      "status": "built, tests pending"
      },
      {
       "id": "R4d",
       "title": "MCP server",
-      "status": "in progress"
+      "status": "built, tests pending"
      },
      {
       "id": "R5",
@@ -4744,7 +4744,14 @@ window.EDGE_STATUS = {
      "steps": "docs/design.md, after R4d's first part (\"Scripted run, 2026-11-25\")",
      "status": "partly run",
      "ranBy": "script",
-     "note": "2026-11-25, EDGEweb's session with its own MCP client, at the owner's request: all six checks passed (tools, search, details, no repository shown, plan, errors). Not seen: the entry in VS Code's MCP servers list and a real assistant's run; mods_install comes with R4c"
+     "note": "2026-11-25, EDGEweb's session with its own MCP client, at the owner's request: all six checks passed (tools, search, details, no repository shown, plan, errors). Not seen: the entry in VS Code's MCP servers list and a real assistant's run; mods_install, built 2026-11-26, is in the R4c hand test"
+    },
+    {
+     "name": "Install the test mod through EDGEdeck from the website's Mod manager button, deploy it and see it in the game; install it again (already there); ask Claude Code to install it with mods_install (R4c)",
+     "steps": "docs/design.md, \"R4c hand test\"",
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-26 against EDGEdeck 0.34; tested against a stand-in site and a stand-in EDGEdeck"
     },
     {
      "name": "First install on the server from docs/deploy.md: setup-edgemods.sh, add-domain.sh, setup-litestream.sh, the index rebuild workflow, the merge checks connected (R3h)",
@@ -4794,16 +4801,15 @@ window.EDGE_STATUS = {
      "since": "2026-11-23"
     },
     {
-     "ref": "MD6",
-     "what": "Say go for R4c (install through EDGEdeck, mods_install handing the install to VS Code): EDGEdeck#16 parts 2 and 3 released in 0.34.0",
-     "since": "2026-11-25"
+     "what": "Run the R4c hand test: install the test mod through EDGEdeck 0.34 from the website on this PC (docs/design.md, \"R4c hand test\")",
+     "since": "2026-11-26"
     }
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
     "Auth0 marks a GitHub sign-in's email unverified, so admin sign-in works through Google or email for now"
    ],
-   "checkedBy": "EDGEmods session, 2026-11-25"
+   "checkedBy": "EDGEmods session, 2026-11-26"
   },
   {
    "name": "EDGEguide",
