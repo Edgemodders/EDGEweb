@@ -1489,11 +1489,11 @@ window.EDGE_STATUS = {
      "note": "Passed 2026-11-25 by EDGEweb's session by script (L2-1 to L3-6, no game, nothing judged by eye), and the retest of its three fixes (docs/testing.md, Sector layers L2 and L3)"
     },
     {
-     "name": "Animation Timeline TL2 to TL4",
-     "steps": 11,
-     "status": "partly run",
-     "note": "T1 to T10 passed 2026-11-25 by EDGEweb's session by script (what a script can read), with the retest of its fixes but one: trimming a move's end where its blend meets it, fixed again and not run; the look of T2 to T4 is the owner's, T11 needs the game (docs/testing.md, Animation Timeline TL2 to TL4)"
-    },
+ "name": "Animation Timeline TL2 to TL4",
+ "steps": 11,
+ "status": "partly run",
+ "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Fixed the same day, checked in Chrome, retests R1 to R3 not run: Move, Turn and Let Go in the view's corner, the tracks scroll, Play turns into Pause, Stop goes to the start. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
+},
     {
      "name": "Sector layers L4 and Sector Tools L1",
      "steps": 9,
