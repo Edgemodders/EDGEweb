@@ -961,7 +961,7 @@ window.EDGE_STATUS = {
      {
       "id": "#51a",
       "title": "world.load reads scene format 3 (EDGEbuilder's world edits listed in notes, not applied); a few hours",
-      "status": "planned"
+      "status": "done"
      },
      {
       "id": "#57",
@@ -1013,7 +1013,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.75.0",
     "needs": [
-     "Scene format 3 (#51 step 1): its in-game test (docs/world.md, 'Scene format 3: test'; Claude drives it)"
+     "Every test of 0.74.0 and 0.75.0 has passed except SC1, the Scene spike, which is not in the player zip (as #47's spike was not in 0.70.0): a release needs the owner's word on that"
     ]
    },
    "handTests": [
@@ -1027,9 +1027,9 @@ window.EDGE_STATUS = {
     {
      "name": "Scene format 3 read (#51 step 1), REDnode 0.74.0",
      "steps": 3,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "Claude, with the owner in game",
-     "note": "docs/world.md, 'Scene format 3: test'. Plain Node check 9 passed; the WL mock check still passes (25)"
+     "note": "docs/world.md, 'Scene format 3: test'. Plain Node check 9 passed; the WL mock check still passes (25); passed in game 2026-11-26 (0.75.0, all three steps, Claude driving MCP)"
     },
     {
      "name": "Saves spike (#57 step 1), REDnode 0.74.0",
@@ -1273,7 +1273,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RN9",
      "what": "Deploy REDnode 0.74.0 (built on 2026-11-25) and run its two tests with the SC1 test: the Saves spike (from the main menu) and Scene format 3 (Claude drives it)",
-     "since": "2026-11-25"
+     "since": "2026-11-25",
+     "done": "2026-11-26",
+     "outcome": "Deployed 0.74.0, then 0.75.0; the Saves spike, Scene format 3 and the new Load modded saves switch passed in game. SC1 still to run"
     }
    ],
    "risks": [
@@ -1296,7 +1298,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (Saves spike and Load modded saves passed in game; #57 answered)"
+   "checkedBy": "REDnode session, 2026-11-26 (Scene format 3 passed in game; 0.75.0's tests all passed except SC1's spike; the owner's Save Manager noted)"
   },
   {
    "name": "REDcode",
