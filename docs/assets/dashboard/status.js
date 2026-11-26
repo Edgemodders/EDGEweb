@@ -3537,7 +3537,7 @@ window.EDGE_STATUS = {
     "needs": [
      "Security fix: the installer's Nexus links box wrote EDGEdeck's old PowerShell forwarder (1.140.3 to 1.143.1), which a crafted link could break out of; it now writes the direct command and every install replaces the old one. Built by the unticked Release run 45851893012 (passed: the installer compiled, every pin in the build check)",
      "EDGEdeck 0.34.2 pinned (0.33.0 or later required, EDGEdeck's ask)",
-     "A check of the installer's Nexus links on a PC, then the owner's ticked Release run"
+     "The owner's ticked Release run (the installer test passed 2026-11-26)"
     ]
    },
    "handTests": [
@@ -3589,6 +3589,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "2026-11-19 on the dev PC. The first run (run 44432333208's installer) failed: REDcode's REDbridge toast hid behind the onboarding. The second, on run 44497241722's installer with the fix, passed: everything works"
+    },
+    {
+     "name": "1.143.2 Nexus links security fix (installer)",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "session",
+     "note": "2026-11-26 on the dev PC, run 45851893012's installer silent: the old PowerShell forwarder for this EDGEkit replaced with the direct command; another editor's links left alone"
     }
    ],
    "ownerSpotTests": [],
