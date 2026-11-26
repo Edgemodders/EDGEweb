@@ -4494,17 +4494,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "An assistant (an agent in VS Code, or Claude Code) finds the test mod, its details and its install plan through the EDGEmods MCP server (R4d, first part)",
-     "steps": null,
-     "status": "not run",
-     "ranBy": null,
-     "note": "mods_search, mods_info, mods_plan; mods_install comes with R4c"
-    },
-    {
-     "name": "An assistant (an agent in VS Code, or Claude Code) finds the test mod, its details and its install plan through the EDGEmods MCP server (R4d, first part)",
-     "steps": null,
-     "status": "not run",
-     "ranBy": null,
-     "note": "mods_search, mods_info, mods_plan; mods_install comes with R4c"
+     "steps": "docs/design.md, after R4d's first part (\"Scripted run, 2026-11-25\")",
+     "status": "partly run",
+     "ranBy": "script",
+     "note": "2026-11-25, EDGEweb's session with its own MCP client, at the owner's request: all six checks passed (tools, search, details, no repository shown, plan, errors). Not seen: the entry in VS Code's MCP servers list and a real assistant's run; mods_install comes with R4c"
     },
     {
      "name": "First install on the server from docs/deploy.md: setup-edgemods.sh, add-domain.sh, setup-litestream.sh, the index rebuild workflow, the merge checks connected (R3h)",
@@ -4520,11 +4513,6 @@ window.EDGE_STATUS = {
      "who": "EDGEweb",
      "what": "Where the mod website lives: EDGEweb owns the domain",
      "ref": "CLAUDE.md"
-    },
-    {
-     "who": "EDGEdeck",
-     "what": "installMods all or nothing and edgemodsMods() (parts 2 and 3, for R4c); part 1, edgemods: links, released in 0.33.0",
-     "ref": "EDGEdeck#16"
     },
     {
      "who": "owner",
@@ -4557,13 +4545,17 @@ window.EDGE_STATUS = {
      "ref": "MD5",
      "what": "Agree the drafted privacy and terms pages (/privacy, /terms) and fill their gaps: who runs EDGEmods, contact, log and backup days, minimum age, the law (Google sign-in needs them)",
      "since": "2026-11-23"
+    },
+    {
+     "what": "Say go for R4c (install through EDGEdeck, mods_install handing the install to VS Code): EDGEdeck#16 parts 2 and 3 released in 0.34.0",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
     "Auth0 marks a GitHub sign-in's email unverified, so admin sign-in works through Google or email for now"
    ],
-   "checkedBy": "EDGEmods session, 2026-11-23"
+   "checkedBy": "EDGEmods session, 2026-11-25"
   },
   {
    "name": "EDGEguide",
