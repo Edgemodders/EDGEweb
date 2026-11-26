@@ -2021,11 +2021,6 @@ window.EDGE_STATUS = {
    "ownerActions": [
     {
      "ref": "RB1",
-     "what": "Ask for release runs: it is released at the owner's request from the REDnode session",
-     "since": "2026-11-16"
-    },
-    {
-     "ref": "RB2",
      "what": "Decide when to schedule Linux support",
      "since": "2026-11-16"
     },
