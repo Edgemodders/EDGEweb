@@ -730,7 +730,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDnode",
    "code": "RN",
-   "ownerSeq": 8,
+   "ownerSeq": 9,
    "group": "Core toolkits",
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
@@ -1225,7 +1225,7 @@ window.EDGE_STATUS = {
      "outcome": "REDnode 0.73.1 released (run 45723704456): GitHub v0.73.1 with five zips, Nexus 35419 (0.70.0 archived); the wiki brought up to 0.73.1. REDagent 0.4.6 released (run 45724406608): GitHub v0.4.6, Nexus 35670 (0.4.4 archived); its wiki pages brought up to it"
     },
     {
-     "ref": "RN6",
+     "ref": "RN9",
      "what": "Deploy REDnode 0.74.0 (built on 2026-11-25) and run its two tests with the SC1 test: the Saves spike (from the main menu) and Scene format 3 (Claude drives it)",
      "since": "2026-11-25"
     }
