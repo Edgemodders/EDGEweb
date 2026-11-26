@@ -3426,8 +3426,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.2.0",
     "needs": [
-     "Hand test: 0.2.0 in a session (seven servers, /edge:setup, one call each)",
-     "EDGEfab to confirm its wiring on EDGEchat #5"
+     "Hand test: 0.2.0 in a session, steps 3 to 7 (steps 1 and 2 passed 2026-11-25)",
+     "edgefab-mcp 0.2.1 on npm (EDGEFAB_REDBRIDGE for the game bridge), the pin raised, and the session test's step 7 (a fab_add)"
     ]
    },
    "handTests": [
@@ -3482,10 +3482,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "0.2.0 in a session: seven servers, /edge:setup, edgehack asks before hack_new",
-     "steps": 6,
-     "status": "not run",
-     "ranBy": null,
-     "note": "docs/testing.md, \"0.2.0 in a session\""
+     "steps": 7,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "2026-11-25: steps 1 and 2 pass (seven servers connected); step 7, a fab_add, added at EDGEfab's ask"
     },
     {
      "name": "/edge:continue with a REDagent handoff (REDagent C6a test)",
@@ -3504,7 +3504,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEfab",
-     "what": "Confirm how the plugin wires edgefab-mcp 0.2.0 (EDGEFAB_REDBRIDGE, keys)",
+     "what": "Release edgefab-mcp 0.2.1: EDGEFAB_REDBRIDGE for every REDbridge it starts (fixed on its main, aa645ce)",
      "ref": "EDGEchat #5"
     }
    ],
@@ -3525,7 +3525,7 @@ window.EDGE_STATUS = {
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (continue in the game passed; #8 closed)"
+   "checkedBy": "EDGEchat session, 2026-11-25 (EDGEfab confirmed #5; 0.2.0 waits on edgefab-mcp 0.2.1)"
   },
   {
    "name": "REDsave",
