@@ -18,16 +18,6 @@ window.EDGE_STATUS = {
  "issues": [
   {
    "repo": "EDGEbuilder",
-   "number": 1,
-   "title": "Index the user's mod archives, so custom objects can be placed",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-10-16",
-   "updated": "2026-11-04"
-  },
-  {
-   "repo": "EDGEbuilder",
    "number": 3,
    "title": "Quest places: spots, trigger areas, map markers and NPC spawns with NodeRefs (for EDGEquest Q4)",
    "labels": [
@@ -37,24 +27,64 @@ window.EDGE_STATUS = {
    "updated": "2026-11-04"
   },
   {
-   "repo": "EDGEchat",
-   "number": 3,
-   "title": "List edgequest-mcp 0.1.0 (EDGEquest, the quest maker) in the plugin",
+   "repo": "EDGEbuilder",
+   "number": 6,
+   "title": "A vehicle kind in scenes, and an id in a scene file (for EDGEdir's sets)",
    "labels": [
     "request"
    ],
-   "created": "2026-11-04",
-   "updated": "2026-11-04"
+   "created": "2026-11-17",
+   "updated": "2026-11-17"
   },
   {
-   "repo": "EDGEchat",
-   "number": 4,
-   "title": "List edgehack-mcp (EDGEhack, the quickhack editor) in the plugin, once it is on npm",
+   "repo": "EDGEbuilder",
+   "number": 7,
+   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
    "labels": [
     "request"
    ],
-   "created": "2026-11-11",
-   "updated": "2026-11-11"
+   "created": "2026-11-18",
+   "updated": "2026-11-18"
+  },
+  {
+   "repo": "EDGEbuilder",
+   "number": 8,
+   "title": "Sector view: a shared three.js drawing package from REDcode, for E0, E2 and E3",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-19",
+   "updated": "2026-11-25"
+  },
+  {
+   "repo": "EDGEbuilder",
+   "number": 9,
+   "title": "Sector Tools: an EDGEbuilder app pack with the sector renderer in the game, linked with REDcode's sector view",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-20",
+   "updated": "2026-11-25"
+  },
+  {
+   "repo": "EDGEbuilder",
+   "number": 11,
+   "title": "Open in REDcode from the Sector drawer, and who owns assemblies (from a modder's world editor request)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-24",
+   "updated": "2026-11-24"
+  },
+  {
+   "repo": "EDGEdeck",
+   "number": 16,
+   "title": "EDGEmods: open edgemods: links, and install a list of downloaded mods all or nothing",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-22",
+   "updated": "2026-11-23"
   },
   {
    "repo": "EDGEfab",
@@ -64,37 +94,15 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-10-31",
-   "updated": "2026-11-03"
+   "updated": "2026-11-26"
   },
   {
-   "repo": "EDGEfab",
-   "number": 5,
-   "title": "Publish the core as @edgemodders/edgefab-core, for EDGEbuilder's GLB import (B2d)",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-12",
-   "updated": "2026-11-13"
-  },
-  {
-   "repo": "EDGEfab",
-   "number": 6,
-   "title": "Keep unchanged textures on a second Add to Project, for EDGEbuilder's Watch (B2d-2)",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-13",
-   "updated": "2026-11-13"
-  },
-  {
-   "repo": "EDGEfab",
-   "number": 7,
-   "title": "Animations: the split with EDGEdir, and a single animation as a Library and project item",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-16",
-   "updated": "2026-11-17"
+   "repo": "EDGEguide",
+   "number": 1,
+   "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
+   "labels": [],
+   "created": "2026-11-21",
+   "updated": "2026-11-21"
   },
   {
    "repo": "EDGEkit",
@@ -104,7 +112,7 @@ window.EDGE_STATUS = {
     "watch"
    ],
    "created": "2026-10-15",
-   "updated": "2026-11-16"
+   "updated": "2026-11-25"
   },
   {
    "repo": "EDGEkit",
@@ -135,34 +143,24 @@ window.EDGE_STATUS = {
    "updated": "2026-11-04"
   },
   {
-   "repo": "EDGEmat",
-   "number": 1,
-   "title": "Keep a changelog that feeds the release notes and Nexus (convention for every Edgemodders repo)",
+   "repo": "EDGEkit",
+   "number": 8,
+   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
    "labels": [
     "request"
    ],
-   "created": "2026-10-19",
-   "updated": "2026-10-19"
+   "created": "2026-11-18",
+   "updated": "2026-11-18"
   },
   {
-   "repo": "EDGEmat",
-   "number": 2,
-   "title": "Open Material in EDGEmat on .mlsetup files in REDcode's Project view",
+   "repo": "EDGEkit",
+   "number": 9,
+   "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
    "labels": [
     "request"
    ],
-   "created": "2026-10-21",
-   "updated": "2026-10-21"
-  },
-  {
-   "repo": "EDGEmat",
-   "number": 3,
-   "title": "REDcode's Pack and Try is now Pack and Play",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-10-27",
-   "updated": "2026-10-27"
+   "created": "2026-11-21",
+   "updated": "2026-11-21"
   },
   {
    "repo": "EDGEmat",
@@ -173,6 +171,36 @@ window.EDGE_STATUS = {
    ],
    "created": "2026-11-10",
    "updated": "2026-11-10"
+  },
+  {
+   "repo": "EDGEmat",
+   "number": 13,
+   "title": "materialsFromModel: keep the textures whose source didn't change (a glow strength change rewrites five textures)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-18",
+   "updated": "2026-11-18"
+  },
+  {
+   "repo": "EDGEmat",
+   "number": 15,
+   "title": "Messages name EDGEmat and offer Reveal in REDcode; its Add to Project is easy to mistake for EDGEfab's",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-19",
+   "updated": "2026-11-19"
+  },
+  {
+   "repo": "EDGEmobile",
+   "number": 1,
+   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-18",
+   "updated": "2026-11-18"
   },
   {
    "repo": "EDGEquest",
@@ -233,6 +261,34 @@ window.EDGE_STATUS = {
    "updated": "2026-11-07"
   },
   {
+   "repo": "EDGEquest",
+   "number": 8,
+   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-18",
+   "updated": "2026-11-18"
+  },
+  {
+   "repo": "EDGEquest",
+   "number": 9,
+   "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-21",
+   "updated": "2026-11-21"
+  },
+  {
+   "repo": "EDGErepo",
+   "number": 1,
+   "title": "Nexus tool: check the file description's 255-character limit before a release uploads (Nexus now refuses longer)",
+   "labels": [],
+   "created": "2026-11-26",
+   "updated": "2026-11-26"
+  },
+  {
    "repo": "EDGEwave",
    "number": 5,
    "title": "Voice a list of dialogue lines for another tool, and the .wem route (for EDGEquest Q4)",
@@ -283,6 +339,26 @@ window.EDGE_STATUS = {
    "updated": "2026-10-27"
   },
   {
+   "repo": "EDGEwave",
+   "number": 11,
+   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-18",
+   "updated": "2026-11-18"
+  },
+  {
+   "repo": "EDGEwave",
+   "number": 13,
+   "title": "Speak one line with ElevenLabs' timings, for EDGEfab's Lip Sync tab (speakLine)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-21",
+   "updated": "2026-11-22"
+  },
+  {
    "repo": "EDGEweb",
    "number": 6,
    "title": "A home for the rules EDGE tools follow to work together (packages, extension APIs, MCP, REDbridge), from EDGEfab's proposal",
@@ -293,32 +369,24 @@ window.EDGE_STATUS = {
    "updated": "2026-11-04"
   },
   {
-   "repo": "REDagent",
-   "number": 2,
-   "title": "Keep a changelog that feeds the release notes and Nexus (convention for every Edgemodders repo)",
+   "repo": "EDGEweb",
+   "number": 8,
+   "title": "EDGEfab 0.1.0 is released: name it on the landing and platform pages",
    "labels": [
     "request"
    ],
-   "created": "2026-10-19",
-   "updated": "2026-10-19"
+   "created": "2026-11-19",
+   "updated": "2026-11-19"
   },
   {
-   "repo": "REDagent",
-   "number": 3,
-   "title": "Where knowledge lives: REDagent and EDGEchat share only each tool's own docs (owner's decision, 2026-10-23)",
-   "labels": [],
-   "created": "2026-11-03",
-   "updated": "2026-11-03"
-  },
-  {
-   "repo": "REDbridge",
-   "number": 11,
-   "title": "sector.find and sector.nodes: the game's sectors with their boxes, and a sector's nodes (for EDGEbuilder's world map and inspector)",
+   "repo": "EDGEweb",
+   "number": 9,
+   "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
    "labels": [
     "request"
    ],
-   "created": "2026-10-30",
-   "updated": "2026-11-05"
+   "created": "2026-11-21",
+   "updated": "2026-11-21"
   },
   {
    "repo": "REDbridge",
@@ -328,47 +396,47 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-04",
-   "updated": "2026-11-15"
+   "updated": "2026-11-18"
   },
   {
    "repo": "REDbridge",
-   "number": 15,
-   "title": "sector.build: a solid mesh, and mesh.info: whether a mesh has collision (for EDGEbuilder's B4-2)",
+   "number": 22,
+   "title": "window.*: keep the game's window docked on a VS Code webview tab (from REDcode)",
    "labels": [
     "request"
    ],
-   "created": "2026-11-05",
-   "updated": "2026-11-05"
+   "created": "2026-11-23",
+   "updated": "2026-11-23"
   },
   {
    "repo": "REDbridge",
-   "number": 16,
-   "title": "sector.build: write forceAutoHideDistance from a scene object's streaming distance",
+   "number": 23,
+   "title": "Sector variants with their ranges, and sectors that mods register (for REDcode's sector layers)",
    "labels": [
     "request"
    ],
-   "created": "2026-11-08",
-   "updated": "2026-11-08"
+   "created": "2026-11-24",
+   "updated": "2026-11-25"
   },
   {
-   "repo": "REDcode",
-   "number": 21,
-   "title": "Play a game animation on its rig in the mesh viewer, with an API entry point (from EDGEquest)",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-03",
-   "updated": "2026-11-16"
-  },
-  {
-   "repo": "REDcode",
+   "repo": "REDbridge",
    "number": 24,
-   "title": "Run game (exe route) passes VS Code's ELECTRON_RUN_AS_NODE to the game, which stops REDnode's overlay",
+   "title": "cr2w.getNode and patch: walk into parsed buffer classes (worldInstancedMeshNodeBuffer, WorldTransformsBuffer) instead of one opaque value (from REDcode)",
    "labels": [
     "request"
    ],
-   "created": "2026-11-10",
-   "updated": "2026-11-10"
+   "created": "2026-11-24",
+   "updated": "2026-11-25"
+  },
+  {
+   "repo": "REDcode",
+   "number": 35,
+   "title": "Sector view: a plugin contract, so EDGEbuilder (and other tools) can add features to it",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-23",
+   "updated": "2026-11-26"
   },
   {
    "repo": "REDnode",
@@ -382,23 +450,13 @@ window.EDGE_STATUS = {
   },
   {
    "repo": "REDnode",
-   "number": 39,
-   "title": "Play an animation or a workspot on a spawned character beside V (from EDGEquest)",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-03",
-   "updated": "2026-11-16"
-  },
-  {
-   "repo": "REDnode",
    "number": 46,
    "title": "A written .workspot for an actor's clips, timed jumps, and setting the weather (a spike for EDGEdir's D0)",
    "labels": [
     "request"
    ],
    "created": "2026-11-16",
-   "updated": "2026-11-17"
+   "updated": "2026-11-18"
   },
   {
    "repo": "REDnode",
@@ -408,7 +466,95 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-16",
-   "updated": "2026-11-16"
+   "updated": "2026-11-23"
+  },
+  {
+   "repo": "REDnode",
+   "number": 48,
+   "title": "For EDGEdir's D5: an editor channel call to a package's service; directing a person not spawned with the workspot",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-17",
+   "updated": "2026-11-23"
+  },
+  {
+   "repo": "REDnode",
+   "number": 50,
+   "title": "For EDGEdir's pins: reading the player's pin sets, a walk for a spawned person, an id and facing on a pin",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-18",
+   "updated": "2026-11-23"
+  },
+  {
+   "repo": "REDnode",
+   "number": 51,
+   "title": "world.load: read scene format 3 (world edits), for EDGEbuilder's D1",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-20",
+   "updated": "2026-11-20"
+  },
+  {
+   "repo": "REDnode",
+   "number": 52,
+   "title": "setVisible: an entity node shown again after a load brings back its proxy, not the entity (from EDGEbuilder's D1a)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-20",
+   "updated": "2026-11-20"
+  },
+  {
+   "repo": "REDnode",
+   "number": 57,
+   "title": "For tests run by an assistant: load a save, a consent for a test session, input to the game (from REDcode)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-23",
+   "updated": "2026-11-23"
+  },
+  {
+   "repo": "REDnode",
+   "number": 60,
+   "title": "world.pick: collision groups for the physics line (a bake's solid objects are Dynamic, from EDGEbuilder)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-25",
+   "updated": "2026-11-25"
+  },
+  {
+   "repo": "REDsave",
+   "number": 1,
+   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-18",
+   "updated": "2026-11-18"
+  },
+  {
+   "repo": "REDsave",
+   "number": 2,
+   "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-21",
+   "updated": "2026-11-21"
+  },
+  {
+   "repo": "VATS",
+   "number": 1,
+   "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
+   "labels": [],
+   "created": "2026-11-21",
+   "updated": "2026-11-21"
   }
  ],
  "tools": [
@@ -420,9 +566,9 @@ window.EDGE_STATUS = {
    "role": "The in-game modding agent: Claude in the game, writing, running and fixing REDnode mods with the player",
    "stage": "released",
    "version": "0.4.4",
-   "lastTag": "v0.4.4",
-   "lastTagDate": "2026-11-15",
-   "lastCommit": "2026-11-15",
+   "lastTag": "v0.4.6",
+   "lastTagDate": "2026-11-25",
+   "lastCommit": "2026-11-25",
    "commitsSinceTag": 1,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
@@ -589,10 +735,10 @@ window.EDGE_STATUS = {
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
    "version": "0.69.0",
-   "lastTag": "v0.65.3",
-   "lastTagDate": "2026-11-15",
-   "lastCommit": "2026-11-16",
-   "commitsSinceTag": 34,
+   "lastTag": "v0.73.1",
+   "lastTagDate": "2026-11-25",
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 2,
    "sessions": [
     "REDnode, EDGEHack & REDagent",
     "rednode-95"
@@ -1089,10 +1235,10 @@ window.EDGE_STATUS = {
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
    "version": "0.10.17",
-   "lastTag": "v0.10.13",
-   "lastTagDate": "2026-11-16",
-   "lastCommit": "2026-11-16",
-   "commitsSinceTag": 1,
+   "lastTag": "v0.10.17",
+   "lastTagDate": "2026-11-25",
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 20,
    "sessions": [
     "REDcode"
    ],
@@ -1476,33 +1622,33 @@ window.EDGE_STATUS = {
    ],
    "ownerSpotTests": [],
    "waitingOn": [
- {
-  "who": "EDGEbuilder",
-  "what": "Sector Tools: Open in REDcode buttons in its Sector drawer, now that the redcode REDnode package 0.4.0 has openSector (built on REDcode's main, not released; REDcode's L1 hand test H1 to H9 with the game first)",
-  "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
- },
- {
-  "who": "EDGEbuilder",
-  "what": "#11 Open in REDcode from the Sector drawer, and who owns assemblies (the comparison and assemblies of the world editor request)",
-  "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/11"
- },
- {
-  "who": "REDbridge",
-  "what": "#23 sector variants with their ranges, and sectors that mods register (for sector layers)",
-  "ref": "https://github.com/Edgemodders/REDbridge/issues/23"
- },
- {
-  "who": "REDnode",
-  "what": "#47 V as an actor: the V actor spike (REDnode 0.70.0, spike 0.2.0 with REDcode's written-workspot test) waits for the owner's game session; Animation Tools AT4 (V) needs it",
-  "ref": "https://github.com/Edgemodders/REDnode/issues/47"
- },
- {
-  "who": "REDbridge",
-  "what": "#22 window.*: built on REDbridge's main, awaiting its test; REDcode's game tab then moves from the interim helper script to it (G1, G2)",
-  "ref": "https://github.com/Edgemodders/REDbridge/issues/22"
- }
-],
-"ownerActions": [
+    {
+     "who": "EDGEbuilder",
+     "what": "Sector Tools: Open in REDcode buttons in its Sector drawer, now that the redcode REDnode package 0.4.0 has openSector (built on REDcode's main, not released; REDcode's L1 hand test H1 to H9 with the game first)",
+     "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
+    },
+    {
+     "who": "EDGEbuilder",
+     "what": "#11 Open in REDcode from the Sector drawer, and who owns assemblies (the comparison and assemblies of the world editor request)",
+     "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/11"
+    },
+    {
+     "who": "REDbridge",
+     "what": "#23 sector variants with their ranges, and sectors that mods register (for sector layers)",
+     "ref": "https://github.com/Edgemodders/REDbridge/issues/23"
+    },
+    {
+     "who": "REDnode",
+     "what": "#47 V as an actor: the V actor spike (REDnode 0.70.0, spike 0.2.0 with REDcode's written-workspot test) waits for the owner's game session; Animation Tools AT4 (V) needs it",
+     "ref": "https://github.com/Edgemodders/REDnode/issues/47"
+    },
+    {
+     "who": "REDbridge",
+     "what": "#22 window.*: built on REDbridge's main, awaiting its test; REDcode's game tab then moves from the interim helper script to it (G1, G2)",
+     "ref": "https://github.com/Edgemodders/REDbridge/issues/22"
+    }
+   ],
+   "ownerActions": [
     {
      "ref": "RC1",
      "what": "Make the Animation Tools pack's Nexus page and say when to release it (AT3r; the in-game test AT3 passed 2026-11-24)",
@@ -1519,9 +1665,9 @@ window.EDGE_STATUS = {
      "ref": "RC11",
      "what": "Run the hand test Sector scripts: a changed script, H1 to H4 (docs/testing.md): a script changed outside REDcode is asked about again, one you save in the editor is not",
      "since": "2026-11-25",
-"done": "2026-11-25",
-"outcome": "Passed by EDGEweb's session by script (H1 to H4), with the retest of its one fix; nothing in it needed your eye"
-},
+     "done": "2026-11-25",
+     "outcome": "Passed by EDGEweb's session by script (H1 to H4), with the retest of its one fix; nothing in it needed your eye"
+    },
     {
      "ref": "RC3",
      "what": "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
@@ -1579,10 +1725,10 @@ window.EDGE_STATUS = {
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
    "version": "0.19.0",
-   "lastTag": "v0.14.0",
-   "lastTagDate": "2026-11-16",
-   "lastCommit": "2026-11-16",
-   "commitsSinceTag": 0,
+   "lastTag": "v0.19.0",
+   "lastTagDate": "2026-11-22",
+   "lastCommit": "2026-11-25",
+   "commitsSinceTag": 4,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
    ],
@@ -1845,9 +1991,9 @@ window.EDGE_STATUS = {
    "role": "Mod manager: a library of mods outside the game folder, deployed with hardlinks; extension, command line and MCP server",
    "stage": "released",
    "version": "0.34.2",
-   "lastTag": "v0.32.0",
-   "lastTagDate": "2026-11-15",
-   "lastCommit": "2026-11-17",
+   "lastTag": "v0.34.2",
+   "lastTagDate": "2026-11-26",
+   "lastCommit": "2026-11-26",
    "commitsSinceTag": 2,
    "sessions": [
     "EDGEdeck"
@@ -2048,11 +2194,11 @@ window.EDGE_STATUS = {
    "group": "Specialist toolkits",
    "role": "World builder on REDnode: pick game or mod assets, place them in the running game, bake scenes into the world",
    "stage": "released",
-   "version": "0.13.2",
-   "lastTag": "v0.10.9",
-   "lastTagDate": "2026-11-12",
-   "lastCommit": "2026-11-13",
-   "commitsSinceTag": 5,
+   "version": "0.14.0",
+   "lastTag": "v0.13.2",
+   "lastTagDate": "2026-11-23",
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 41,
    "sessions": [
     "EDGEbuilder"
    ],
@@ -2445,10 +2591,10 @@ window.EDGE_STATUS = {
    "role": "Sound studio: edit, mix and re-voice game sounds into a mod, with voice tools, an API and an MCP server",
    "stage": "released",
    "version": "0.3.0",
-   "lastTag": "v0.2.0",
-   "lastTagDate": "2026-11-07",
-   "lastCommit": "2026-11-17",
-   "commitsSinceTag": 6,
+   "lastTag": "v0.3.0",
+   "lastTagDate": "2026-11-22",
+   "lastCommit": "2026-11-22",
+   "commitsSinceTag": 4,
    "sessions": [],
    "wiki": "wiki/edgewave/",
    "plan": {
@@ -2621,10 +2767,10 @@ window.EDGE_STATUS = {
    "role": "Material editor: read, edit, generate and apply game materials, and the Wardrobe Designer app",
    "stage": "released",
    "version": "0.3.4",
-   "lastTag": "v0.3.2",
-   "lastTagDate": "2026-11-13",
-   "lastCommit": "2026-11-17",
-   "commitsSinceTag": 14,
+   "lastTag": "v0.3.4",
+   "lastTagDate": "2026-11-22",
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 5,
    "sessions": [
     "EDGEmat"
    ],
@@ -2845,8 +2991,8 @@ window.EDGE_STATUS = {
    "version": "0.1.1",
    "lastTag": "v0.1.1",
    "lastTagDate": "2026-11-06",
-   "lastCommit": "2026-11-08",
-   "commitsSinceTag": 3,
+   "lastCommit": "2026-11-17",
+   "commitsSinceTag": 4,
    "sessions": [],
    "wiki": "wiki/edgequest/",
    "plan": {
@@ -3055,10 +3201,10 @@ window.EDGE_STATUS = {
    "role": "Quickhack editor: edits and creates quickhacks as TweakXL and ArchiveXL files",
    "stage": "released",
    "version": "0.1.3",
-   "lastTag": "v0.1.2",
-   "lastTagDate": "2026-11-12",
-   "lastCommit": "2026-11-12",
-   "commitsSinceTag": 1,
+   "lastTag": "v0.1.3",
+   "lastTagDate": "2026-11-22",
+   "lastCommit": "2026-11-22",
+   "commitsSinceTag": 0,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
    ],
@@ -3230,10 +3376,10 @@ window.EDGE_STATUS = {
    "role": "The Edgemodders editor: a branded Code - OSS build with the EDGE extensions built in, and an extension pack",
    "stage": "released",
    "version": "1.143.1",
-   "lastTag": "v1.140.6",
-   "lastTagDate": "2026-11-12",
-   "lastCommit": "2026-11-12",
-   "commitsSinceTag": 4,
+   "lastTag": "v1.143.1",
+   "lastTagDate": "2026-11-19",
+   "lastCommit": "2026-11-20",
+   "commitsSinceTag": 5,
    "sessions": [],
    "wiki": "wiki/edgekit/",
    "plan": {
@@ -3375,10 +3521,10 @@ window.EDGE_STATUS = {
    "role": "The EDGE plugin for Claude Code: modding skills, commands and the EDGE MCP servers in one install",
    "stage": "released",
    "version": "0.2.1",
-   "lastTag": "v0.1.1",
-   "lastTagDate": "2026-11-02",
-   "lastCommit": "2026-11-08",
-   "commitsSinceTag": 7,
+   "lastTag": "v0.2.1",
+   "lastTagDate": "2026-11-26",
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 4,
    "sessions": [],
    "wiki": "wiki/edgechat/",
    "plan": {
@@ -3514,8 +3660,8 @@ window.EDGE_STATUS = {
    "version": "0.1.1",
    "lastTag": "v0.1.1",
    "lastTagDate": "2026-11-08",
-   "lastCommit": "2026-11-08",
-   "commitsSinceTag": 1,
+   "lastCommit": "2026-11-17",
+   "commitsSinceTag": 2,
    "sessions": [],
    "plan": {
     "name": "Phases S0 to S4",
@@ -3590,10 +3736,10 @@ window.EDGE_STATUS = {
    "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next, proposed), added to a REDcode project or the EDGE Library",
    "stage": "released",
    "version": "0.2.1",
-   "lastTag": null,
-   "lastTagDate": null,
-   "lastCommit": "2026-11-17",
-   "commitsSinceTag": 0,
+   "lastTag": "v0.2.1",
+   "lastTagDate": "2026-11-26",
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 4,
    "sessions": [
     "EDGEfab"
    ],
@@ -3778,7 +3924,7 @@ window.EDGE_STATUS = {
    "version": "0.0.32",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-17",
+   "lastCommit": "2026-11-26",
    "commitsSinceTag": 0,
    "sessions": [
     "edgedir-49"
@@ -4111,7 +4257,7 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-17",
+   "lastCommit": "2026-11-25",
    "commitsSinceTag": 0,
    "sessions": [
     "EDGEmobile"
@@ -4325,7 +4471,7 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-03",
+   "lastCommit": "2026-11-26",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -4561,7 +4707,7 @@ window.EDGE_STATUS = {
    "version": null,
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-03",
+   "lastCommit": "2026-11-25",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -4633,7 +4779,7 @@ window.EDGE_STATUS = {
    "version": null,
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-15",
+   "lastCommit": "2026-11-17",
    "commitsSinceTag": 0,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
@@ -4806,7 +4952,7 @@ window.EDGE_STATUS = {
    "version": "v1",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-06",
+   "lastCommit": "2026-11-18",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -4867,8 +5013,8 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
-   "lastCommit": "2026-11-17",
-   "commitsSinceTag": 32,
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 471,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"
