@@ -1464,6 +1464,12 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+{
+ "name": "The tree in its own tab (To Tab, the REDcode Tree view)",
+ "steps": 9,
+ "status": "not run",
+ "note": "Built 2026-11-26 at the owner's ask, from a modder's idea: the tree page checked in Chrome over the real REDbridge; goes into sector-view.md if the owner likes how it feels (docs/testing.md)"
+},
     {
      "name": "The mesh viewer's EDGEmat materials (#6)",
      "steps": 5,
