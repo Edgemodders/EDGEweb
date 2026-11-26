@@ -769,8 +769,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "SC1",
-      "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), world.move during a workspot, a workspot on V (#47); after WL; the first build after 0.70.0's tests (order agreed with the owner on 2026-11-23)",
-      "status": "planned"
+      "title": "Scene spike for EDGEdir: a walk for a spawned person (#50), the gaps around a workspot, world.move during a written workspot, directing a person through a device (#48), the game's cutscene copy of V (#47); the Scene spike app 0.1.0 on REDnode 0.73.1, built 2026-11-25",
+      "status": "built, tests pending"
      },
      {
       "id": "#51a",
@@ -827,10 +827,17 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.74.0",
     "needs": [
-     "Nothing built for it yet: SC1, the scene spike, is next in the agreed order"
+     "Nothing built for it yet: SC1 is a spike app outside the player zip; the calls it leads to come after its test"
     ]
    },
    "handTests": [
+    {
+     "name": "The scene spike (SC1), Scene spike 0.1.0 on REDnode 0.73.1",
+     "steps": 17,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "docs/world.md, 'SC1 test'. Built 2026-11-25; stand-in check 41 passed. Save before step 12 (the copy of V)"
+    },
     {
      "name": "Fight events (#61), REDnode 0.73.0 and 0.73.1",
      "steps": 9,
@@ -1072,7 +1079,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (REDagent 0.4.6 released; the wiki brought up to it)"
+   "checkedBy": "REDnode session, 2026-11-25 (SC1, the scene spike, built; its in-game test waits)"
   },
   {
    "name": "REDcode",
