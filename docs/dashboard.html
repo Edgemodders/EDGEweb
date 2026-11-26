@@ -222,7 +222,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=394"></script>
+<script src="assets/dashboard/status.js?v=395"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
@@ -231,7 +231,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   if (!S) { $("asof").textContent = "The status file did not load (assets/dashboard/status.js)."; return; }
   var tools = S.tools, issues = S.issues || [];
   var GH = "https://github.com/Edgemodders/";
-  var days = function (d) { return d ? Math.round((new Date(S.asOf) - new Date(d)) / 864e5) : null; };
+  var days = function (d) { return d ? Math.round((Date.now() - new Date(d)) / 864e5) : null; };
   var cls = function (st) { return "k-" + kind(st); };
   var kind = function (st) { st = (st || "").toLowerCase(); return st.indexOf("done") === 0 || st === "passed" ? "done" : st.indexOf("test") >= 0 ? "test" : st.indexOf("progress") >= 0 || st === "partly run" ? "prog" : st === "failed" ? "bad" : "plan"; };
   var word = function (st) { return '<span class="stw ' + cls(st) + '">' + esc(st) + "</span>"; };
@@ -243,8 +243,17 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   };
 
   // ---- as of, and the headline numbers
-  var age = Math.round((Date.now() - new Date(S.asOf)) / 864e5);
-  $("asof").innerHTML = "As of <b>" + esc(S.asOf) + "</b> &middot; " + (age > 3 ? '<span class="stale">' + age + " days old: refresh before trusting it</span>" : "current") + " &middot; " + tools.length + " tools &middot; source <b>docs/assets/dashboard/status.js</b>";
+  // The date shown is the last commit that changed status.js: the deploy writes it to updated.json. asOf is the fallback (a local copy has no stamp).
+  var asof = function (when, exact) {
+    var age = Math.floor((Date.now() - new Date(when)) / 864e5);
+    $("asof").innerHTML = "Last updated <b>" + esc(exact || when) + "</b> &middot; " + (age > 3 ? '<span class="stale">' + age + " days old: refresh before trusting it</span>" : "current") + " &middot; " + tools.length + " tools &middot; source <b>docs/assets/dashboard/status.js</b>";
+  };
+  asof(S.asOf);
+  if (window.fetch) fetch("assets/dashboard/updated.json?t=" + Date.now()).then(function (r) { return r.ok ? r.json() : null; }).then(function (u) {
+    if (!u || !u.updated) return;
+    var d = new Date(u.updated), p = function (n) { return (n < 10 ? "0" : "") + n; };
+    asof(u.updated, d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) + " " + p(d.getHours()) + ":" + p(d.getMinutes()));
+  }).catch(function () {});
   var tests = [], spots = [], waits = [], owner = [];
   tools.forEach(function (t) {
     (t.handTests || []).forEach(function (x) { tests.push({ tool: t.name, kind: "Hand test", name: x.name, steps: x.steps, status: x.status, ranBy: x.ranBy, note: x.note }); });
