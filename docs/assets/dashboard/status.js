@@ -3424,10 +3424,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.2.0",
+    "version": "0.2.1",
     "needs": [
-     "Hand test: 0.2.0 in a session, steps 3 to 7 (steps 1 and 2 passed 2026-11-25)",
-     "edgefab-mcp 0.2.1 on npm (EDGEFAB_REDBRIDGE for the game bridge), the pin raised, and the session test's step 7 (a fab_add)"
+     "Hand test: 0.2.0 in a session, step 7 (a fab_add with plugin 0.2.1; steps 1 to 6 passed 2026-11-25)"
     ]
    },
    "handTests": [
@@ -3485,7 +3484,7 @@ window.EDGE_STATUS = {
      "steps": 7,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-25: steps 1 and 2 pass (seven servers connected); step 7, a fab_add, added at EDGEfab's ask"
+     "note": "2026-11-25: steps 1 to 6 pass (hack_new asks; allowed and denied); step 7, a fab_add, to run on plugin 0.2.1"
     },
     {
      "name": "/edge:continue with a REDagent handoff (REDagent C6a test)",
@@ -3501,11 +3500,6 @@ window.EDGE_STATUS = {
      "who": "REDcode",
      "what": "redcode-mcp should read EDGEkit's settings folder too (no issue filed)",
      "ref": "CLAUDE.md"
-    },
-    {
-     "who": "EDGEfab",
-     "what": "Release edgefab-mcp 0.2.1: EDGEFAB_REDBRIDGE for every REDbridge it starts (fixed on its main, aa645ce)",
-     "ref": "EDGEchat #5"
     }
    ],
    "ownerActions": [
@@ -3521,11 +3515,11 @@ window.EDGE_STATUS = {
     }
    ],
    "risks": [
-    "main already says 0.2.0: marketplace users with auto-update get the new servers before the hand tests",
+    "main already says 0.2.1: marketplace users with auto-update get the new servers before the last hand test step",
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (EDGEfab confirmed #5; 0.2.0 waits on edgefab-mcp 0.2.1)"
+   "checkedBy": "EDGEchat session, 2026-11-25 (plugin 0.2.1 on main with edgefab-mcp 0.2.1; session test steps 1 to 6 passed)"
   },
   {
    "name": "REDsave",
