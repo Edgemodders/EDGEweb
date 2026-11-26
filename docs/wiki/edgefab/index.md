@@ -4,14 +4,14 @@ nav_title: Overview
 section: EDGEfab
 order: 0
 description: "EDGEfab, the EDGE platform's asset maker for Cyberpunk 2077: turn a 3D model, or your own words, into a prop the game can use, in VS Code or by asking an AI assistant."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # EDGE<span class="y">fab</span>
 
 EDGEfab is the EDGE platform's asset maker for Cyberpunk 2077. It runs inside VS Code. Give it a textured 3D model, or describe an object in words, and it makes a **prop**: an object that stands in the world, such as a vending machine, a crate or a lamp. EDGEfab gets it ready for the game and puts it into your mod project. From there you place it in Night City with [EDGEbuilder](../edgebuilder/). An AI assistant such as Claude can do every step for you.
 
-> **EDGEfab 0.2.0 is a preview**, released on 2026-11-22. See [Status](#status).
+> **EDGEfab 0.2.1 is a preview**, released on 2026-11-25. See [Status](#status).
 
 **New here?** Read this page, then [Install and set up](install.html), then follow [Tutorial: your first prop](first-prop.html). It takes about 30 minutes.
 
@@ -90,7 +90,7 @@ EDGEfab comes with no game files, and it never changes your game: it writes into
 
 ## Status
 
-**0.2.0, a preview, released on 2026-11-22** on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgefab), [Open VSX](https://open-vsx.org/extension/edgemodders/edgefab) and [GitHub](https://github.com/Edgemodders/EDGEfab/releases). Its page on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605) opens soon. Windows only, tested with game version 2.5. New in 0.2.0: your Tripo and OpenAI keys live in REDcode's Keys, shared by every EDGE tool ([Your keys](install.html#your-keys)).
+**0.2.1, a preview, released on 2026-11-25** on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgefab), [Open VSX](https://open-vsx.org/extension/edgemodders/edgefab) and [GitHub](https://github.com/Edgemodders/EDGEfab/releases). Its page on [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/38605) opens soon. Windows only, tested with game version 2.5. New in 0.2.1: a fix for assistants connected through EDGEchat, whose REDbridge EDGEfab's server now uses for Add to Project and the Library too ([Settings](settings.html)). Since 0.2.0, your Tripo and OpenAI keys live in REDcode's Keys, shared by every EDGE tool ([Your keys](install.html#your-keys)).
 
 | | |
 |---|---|

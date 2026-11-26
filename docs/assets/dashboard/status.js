@@ -3612,7 +3612,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next, proposed), added to a REDcode project or the EDGE Library",
    "stage": "released",
-   "version": "0.2.0",
+   "version": "0.2.1",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-17",
@@ -3631,7 +3631,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F1",
-      "title": "Props: GLB or words into a project, placed with EDGEbuilder (released as 0.1.0, 2026-11-18; 0.2.0, keys in REDcode's Keys, 2026-11-22)",
+      "title": "Props: GLB or words into a project, placed with EDGEbuilder (released as 0.1.0, 2026-11-18; 0.2.0, keys in REDcode's Keys, 2026-11-22; 0.2.1, EDGEchat's REDbridge for game files, 2026-11-25)",
       "status": "done"
      },
      {
@@ -3672,9 +3672,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.2.1",
+    "version": "0.2.2",
     "needs": [
-     "0.2.0 released 2026-11-22 with the K4d tools (keys in REDcode's Keys): Marketplace, Open VSX, npm, GitHub, Nexus. Unreleased: the MCP server takes EDGEFAB_REDBRIDGE for game files too (EDGEchat #5; its check passed 2026-11-25). EDGEchat 0.2.0 pins edgefab-mcp, so it wants 0.2.1 out first",
+     "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus): the MCP server takes EDGEFAB_REDBRIDGE for game files too (EDGEchat #5). Nothing under Unreleased yet",
      "Next work: F3 Blender sources, then clothing (F4a, F4b; proposed 2026-11-25, waiting on the owner), then F2; a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
@@ -3722,11 +3722,11 @@ window.EDGE_STATUS = {
      "note": "Steps 1 to 6 by script, 7 to 10 by the owner"
     },
     {
-     "name": "Release tests on the released build: smoke, core package, keys checks, package check",
+     "name": "Release tests on the released build: smoke, core package, keys checks, bridge check, package check",
      "steps": 4,
      "status": "passed",
      "ranBy": "script",
-     "note": "Passed 2026-11-22 on the 0.2.0 build (core package run 4, smoke, typecheck, both keys checks, the .vsix with 11 files and no PowerShell)"
+     "note": "Passed 2026-11-25 on the 0.2.1 build (core package run 5, smoke, typecheck, both keys checks, the EDGEFAB_REDBRIDGE check, the .vsix with 11 files and no PowerShell)"
     }
    ],
    "ownerSpotTests": [],
@@ -3743,7 +3743,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEchat",
-     "what": "Not blocking: EDGEfab's MCP server in the plugin, with a Tripo key setting; 0.2.0 on npm reads keys from REDcode's Keys",
+     "what": "Not blocking: EDGEfab's MCP server in EDGEchat's plugin 0.2.0 (wired, its test has a fab_add step); it raises its pin to edgefab-mcp 0.2.1, now on npm",
      "ref": "EDGEchat #5"
     },
     {
