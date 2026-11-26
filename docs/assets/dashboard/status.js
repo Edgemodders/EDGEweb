@@ -1236,7 +1236,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-"Hand tests of what is built since 0.10.17: Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T10 passed by script; the look of T2 to T4 and T11 in the game are the owner's). Sector scripts known by their text and Sector layers L2 and L3 passed by script on 2026-11-25. Next, agreed: sector materials M2, Lip Sync L2's design page"
+     "Hand tests of what is built since 0.10.17: Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T10 passed by script; the look of T2 to T4 and T11 in the game are the owner's). Sector scripts known by their text and Sector layers L2 and L3 passed by script on 2026-11-25. Next, agreed: sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
@@ -2634,7 +2634,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmat",
    "code": "EM",
-   "ownerSeq": 5,
+   "ownerSeq": 6,
    "group": "Specialist toolkits",
    "role": "Material editor: read, edit, generate and apply game materials, and the Wardrobe Designer app",
    "stage": "released",
@@ -2720,6 +2720,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "Game materials on a Desk mesh",
+     "steps": 12,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-25 (owner's next step from 2026-11-22): Use a Game Surface, Use a Game Material and Back to the Game's Material on a game mesh on the Desk; Add to Project carries the changed mesh and its files. npm run desk-parts-check passed (Claude, on the s1_055 sneakers). For 0.3.5"
+    },
     {
      "name": "Glow and tint in the 3D view",
      "steps": 4,
@@ -2829,6 +2836,11 @@ window.EDGE_STATUS = {
      "since": "2026-11-16"
     },
     {
+     "ref": "EM6",
+     "what": "Run the hand test \"Game materials on a Desk mesh\" (docs/testing.md; the sneakers on the Desk, then in the game)",
+     "since": "2026-11-25"
+    },
+    {
      "ref": "EM5",
      "what": "Three screenshots for Wardrobe Designer's Nexus page",
      "since": "2026-11-16"
@@ -2839,7 +2851,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-25 (0.3.4's install and Connect run by script: partly; Connect's claude-outside-PATH fix built; next: part commands for game meshes on the Desk, then shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-25 (part commands for game meshes on the Desk built, desk-parts-check passed, hand test open; Connect's claude-outside-PATH fix built; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
@@ -4324,7 +4336,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmods",
    "code": "MD",
-   "ownerSeq": 5,
+   "ownerSeq": 6,
    "group": "In development",
    "role": "The EDGE mod registry: mods in their authors' own git repos, a website and a planned extension",
    "stage": "early build",
@@ -4546,6 +4558,7 @@ window.EDGE_STATUS = {
      "since": "2026-11-23"
     },
     {
+     "ref": "MD6",
      "what": "Say go for R4c (install through EDGEdeck, mods_install handing the install to VS Code): EDGEdeck#16 parts 2 and 3 released in 0.34.0",
      "since": "2026-11-25"
     }
