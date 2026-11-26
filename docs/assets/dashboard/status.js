@@ -1386,6 +1386,12 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+{
+ "name": "The mesh viewer's EDGEmat materials (#6)",
+ "steps": 5,
+ "status": "passed",
+ "note": "Passed 2026-11-25 by EDGEweb's session by script with EDGEmat 0.3.4 (E1 to E5, the pictures looked at by the REDcode session): EDGEmat's look, a recolour in EDGEmat redrawn in REDcode's open tab; one note fixed (EDGEmat's note under Flat colours), not run again (docs/testing.md)"
+},
     {
      "name": "Sector layers L2 and L3",
      "steps": 10,
