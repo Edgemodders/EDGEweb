@@ -3674,7 +3674,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.2.1",
     "needs": [
-     "0.2.0 released 2026-11-22 with the K4d tools (keys in REDcode's Keys): Marketplace, Open VSX, npm, GitHub, Nexus. Nothing under Unreleased yet",
+     "0.2.0 released 2026-11-22 with the K4d tools (keys in REDcode's Keys): Marketplace, Open VSX, npm, GitHub, Nexus. Unreleased: the MCP server takes EDGEFAB_REDBRIDGE for game files too (EDGEchat #5; its check passed 2026-11-25). EDGEchat 0.2.0 pins edgefab-mcp, so it wants 0.2.1 out first",
      "Next work: F3 Blender sources, then clothing (F4a, F4b; proposed 2026-11-25, waiting on the owner), then F2; a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
