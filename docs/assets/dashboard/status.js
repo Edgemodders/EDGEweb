@@ -1476,53 +1476,33 @@ window.EDGE_STATUS = {
    ],
    "ownerSpotTests": [],
    "waitingOn": [
-    {
-     "who": "EDGEmat",
-     "what": "Ship renderMaterials, so the mesh viewer's material hook can be tested (unverified whether it has since)",
-     "ref": "docs/testing.md"
-    },
-    {
-     "who": "EDGEbuilder",
-     "what": "Sector Tools S1, before REDcode's half (docs/design/sector-tools.md, three owner decisions)",
-     "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
-    },
-    {
-     "who": "EDGEmat",
-     "what": "Sector materials M2: say which game mesh a Desk change is for, and render the world's multilayered materials (flat grey now)",
-     "ref": "https://github.com/Edgemodders/EDGEmat/issues/17"
-    },
-    {
-     "who": "EDGEhack",
-     "what": "K4d: built on its main (2026-11-22); waits on the owner's hand test, then the joint release",
-     "ref": "https://github.com/Edgemodders/EDGEhack/issues/3"
-    },
-    {
-     "who": "EDGEmat",
-     "what": "K4d: built on its main (2026-11-22); waits on the owner's hand test, then the joint release",
-     "ref": "https://github.com/Edgemodders/EDGEmat/issues/18"
-    },
-    {
-     "who": "EDGEfab",
-     "what": "K4d: built on its main (2026-11-22); waits on the owner's hand test, then the joint release",
-     "ref": "https://github.com/Edgemodders/EDGEfab/issues/10"
-    },
-    {
-     "who": "REDnode",
-     "what": "#47 V as an actor: the V actor spike (REDnode 0.70.0, spike 0.2.0 with REDcode's written-workspot test) waits for the owner's game session; Animation Tools AT4 (V) needs it",
-     "ref": "https://github.com/Edgemodders/REDnode/issues/47"
-    },
-    {
-     "who": "REDnode",
-     "what": "#56 the overlay cursor in a windowed game follows the real pointer; the game in a tab (G2) needs it",
-     "ref": "https://github.com/Edgemodders/REDnode/issues/56"
-    },
-    {
-     "who": "REDbridge",
-     "what": "#22 window.*: keep the game window docked on a webview tab; the game in a tab (G1, G2) needs it",
-     "ref": "https://github.com/Edgemodders/REDbridge/issues/22"
-    }
-   ],
-   "ownerActions": [
+ {
+  "who": "EDGEbuilder",
+  "what": "Sector Tools: Open in REDcode buttons in its Sector drawer, now that the redcode REDnode package 0.4.0 has openSector (built on REDcode's main, not released; REDcode's L1 hand test H1 to H9 with the game first)",
+  "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
+ },
+ {
+  "who": "EDGEbuilder",
+  "what": "#11 Open in REDcode from the Sector drawer, and who owns assemblies (the comparison and assemblies of the world editor request)",
+  "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/11"
+ },
+ {
+  "who": "REDbridge",
+  "what": "#23 sector variants with their ranges, and sectors that mods register (for sector layers)",
+  "ref": "https://github.com/Edgemodders/REDbridge/issues/23"
+ },
+ {
+  "who": "REDnode",
+  "what": "#47 V as an actor: the V actor spike (REDnode 0.70.0, spike 0.2.0 with REDcode's written-workspot test) waits for the owner's game session; Animation Tools AT4 (V) needs it",
+  "ref": "https://github.com/Edgemodders/REDnode/issues/47"
+ },
+ {
+  "who": "REDbridge",
+  "what": "#22 window.*: built on REDbridge's main, awaiting its test; REDcode's game tab then moves from the interim helper script to it (G1, G2)",
+  "ref": "https://github.com/Edgemodders/REDbridge/issues/22"
+ }
+],
+"ownerActions": [
     {
      "ref": "RC1",
      "what": "Make the Animation Tools pack's Nexus page and say when to release it (AT3r; the in-game test AT3 passed 2026-11-24)",
@@ -1538,8 +1518,10 @@ window.EDGE_STATUS = {
     {
      "ref": "RC11",
      "what": "Run the hand test Sector scripts: a changed script, H1 to H4 (docs/testing.md): a script changed outside REDcode is asked about again, one you save in the editor is not",
-     "since": "2026-11-25"
-    },
+     "since": "2026-11-25",
+"done": "2026-11-25",
+"outcome": "Passed by EDGEweb's session by script (H1 to H4), with the retest of its one fix; nothing in it needed your eye"
+},
     {
      "ref": "RC3",
      "what": "Decide when to publish @edgemodders/world-view to npm (EDGEbuilder will build on it)",
