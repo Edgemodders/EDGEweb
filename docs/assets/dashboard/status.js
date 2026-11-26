@@ -14,6 +14,86 @@ window.EDGE_STATUS = {
    "RN7"
   ]
  },
+ "shots": {
+  "asOf": "2026-11-26",
+  "dossier": "https://claude.ai/artifact/4vDocr9pddxgabrHEfL6Ru",
+  "taken": 211,
+  "missing": 115,
+  "game": 62,
+  "editor": 53,
+  "byTool": [
+   {
+    "tool": "REDnode",
+    "game": 26,
+    "editor": 1
+   },
+   {
+    "tool": "EDGEchat",
+    "game": 6,
+    "editor": 10
+   },
+   {
+    "tool": "REDcode",
+    "game": 2,
+    "editor": 9
+   },
+   {
+    "tool": "EDGEdir",
+    "game": 6,
+    "editor": 4
+   },
+   {
+    "tool": "EDGEbuilder",
+    "game": 8,
+    "editor": 0
+   },
+   {
+    "tool": "EDGEdeck",
+    "game": 0,
+    "editor": 8
+   },
+   {
+    "tool": "REDagent",
+    "game": 7,
+    "editor": 0
+   },
+   {
+    "tool": "EDGEmat",
+    "game": 1,
+    "editor": 5
+   },
+   {
+    "tool": "EDGEquest",
+    "game": 4,
+    "editor": 2
+   },
+   {
+    "tool": "EDGEkit",
+    "game": 0,
+    "editor": 5
+   },
+   {
+    "tool": "REDbridge",
+    "game": 0,
+    "editor": 3
+   },
+   {
+    "tool": "EDGEwave",
+    "game": 0,
+    "editor": 3
+   },
+   {
+    "tool": "EDGEhack",
+    "game": 1,
+    "editor": 2
+   },
+   {
+    "tool": "EDGEfab",
+    "game": 1,
+    "editor": 1
+   }
+  ]
+ },
  "note": "Snapshot for the EDGE dashboard. issues and each tool's lastTag, lastTagDate, lastCommit, commitsSinceTag are written by tools/dashboard/refresh.py; the rest is curated by hand from each tool's CLAUDE.md, docs/testing.md and changelog. sessions are local Claude session names seen in ListAgents on asOf: a hint to match on, since names change when a session restarts. checkedBy names the tool's own session that confirmed the entry, and when; an entry without it is a first pass by a reader.",
  "issues": [
   {

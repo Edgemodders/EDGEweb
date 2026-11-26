@@ -111,7 +111,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 <div class="bar"><div class="wrap">
   <span><a href="./" style="color:inherit;text-decoration:none"><span class="dot"></span><b>EDGEMODDERS</b></a> / DASHBOARD</span>
   <nav>
-    <a href="#owner">Owner</a><a href="#plans">Plans</a><a href="#requests">Requests</a><a href="#tests">Tests</a><a href="#waiting">Waiting</a><a href="#tools">Tools</a><a href="#agents">For agents</a><a href="platform.html">Platform</a>
+    <a href="#owner">Owner</a><a href="#plans">Plans</a><a href="#requests">Requests</a><a href="#tests">Tests</a><a href="#waiting">Waiting</a><a href="#tools">Tools</a><a href="#shots">Shots</a><a href="#agents">For agents</a><a href="platform.html">Platform</a>
   </nav>
 </div></div>
 
@@ -175,8 +175,16 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
   <div class="tgrid" id="toolCards"></div>
 </section>
 
+<section id="shots">
+  <h2><span class="id">07</span> Missing screenshots</h2>
+  <div class="rule"></div>
+  <p class="sub">Places on the wiki and the platform page that still show a placeholder. Shots of the running game are the owner&rsquo;s to take; shots of the editor and the desktop are taken by a Claude session, by script. The image dossier lists each one: what it must show, the file name to save and where it goes.</p>
+  <div class="asof" id="shotsNote" style="margin:0 0 14px"></div>
+  <div class="tw"><table class="d" id="shotsTable"></table></div>
+</section>
+
 <section id="agents">
-  <h2><span class="id">07</span> For a managing agent</h2>
+  <h2><span class="id">08</span> For a managing agent</h2>
   <div class="rule"></div>
   <div class="cols">
     <div class="panel">
@@ -199,6 +207,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
       <p>From the EDGEweb folder, with the sibling checkouts beside it:</p>
       <pre class="how">python tools/dashboard/refresh.py</pre>
       <p>What waits on the owner: each entry of <code>ownerActions</code> is <code>{ "ref", "what", "since" }</code>, and an open entry of <code>ownerSpotTests</code> has <code>ref</code> and <code>since</code> too. The owner names an item by its ref (RA1). Never change a ref or use one twice. For a new item write <code>what</code> and <code>since</code> and leave <code>ref</code> out: <code>python tools/dashboard/refresh.py --refs</code> gives it the next number. When the owner finishes an item, leave it in place and add <code>"done": "the date"</code>: its row is then struck through. Its number is not used again. An entry of <code>waitingOn</code> that is met stays too, with <code>"done"</code> and the date, and so does a line of <code>risks</code> that no longer holds: it becomes <code>{ "what", "done" }</code>.</p>
+      <p>Missing screenshots: <code>python tools/dashboard/shots.py</code> counts the placeholders left on the wiki and the platform page and writes <code>shots</code>; with <code>--html &lt;file&gt;</code> it also writes the image dossier&rsquo;s page, which is then published to the artifact at <code>shots.dossier</code>.</p>
       <p>That rewrites the facts a script can read (open issues, releases, commit dates). The rest is curated: each tool's own session updates its entry in the same piece of work as a change to its status, as the Dashboard section in its repo's <code>CLAUDE.md</code> says, and sets <code>checkedBy</code>. A managing session checks entries against the repos and sets <code>asOf</code>.</p>
     </div>
   </div>
@@ -213,7 +222,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
 </div>
 <div id="tip" role="tooltip"></div>
 
-<script src="assets/dashboard/status.js?v=391"></script>
+<script src="assets/dashboard/status.js?v=392"></script>
 <script>
 (function () {
   var S = window.EDGE_STATUS;
@@ -259,6 +268,7 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
     k(notRun.length, "Hand tests not passed", "of " + tests.length + " listed", "#tests", notRun.length > 0) +
     k(pend, "Phases built, untested", "of " + phases.length + " phases in all plans", "#plans", false) +
     k(crossWaits.length, "Waits on another tool", new Set(crossWaits.map(function (w) { return w.tool; })).size + " tools are waiting", "#waiting", false) +
+    (S.shots ? k(S.shots.game, "Screenshots for the owner", S.shots.editor + " more for a Claude session", "#shots", S.shots.game > 0) : "") +
     k(tools.filter(function (t) { return t.checkedBy; }).length + "/" + tools.length, "Entries checked", "by the tool's own session", "#tools", false) +
     k(tools.filter(function (t) { return t.commitsSinceTag >= 5 && t.lastTag; }).length, "Tools with unreleased work", "5 or more commits since their last release", "#tools", false);
 
@@ -340,6 +350,17 @@ pre.how { background: #05060a; border: 1px solid var(--line); padding: 12px 14px
       '<div class="links"><a href="' + GH + t.name + '">Repo</a><a href="' + GH + t.name + '/issues">Issues</a>' + (t.wiki ? '<a href="' + esc(t.wiki) + '">Wiki</a>' : "") + "</div></article>"; }).join("");
   table("sessTable", ["Tool", "Local session names seen", "Checkout folder", "Tests and plan live in"], tools.map(function (t) {
     return "<tr><td class='m'>" + tlink(t.name) + "</td><td>" + sess(t) + "</td><td class='m'>" + esc(t.name) + "</td><td class='m'>" + esc((t.plan && t.plan.source) || "CLAUDE.md") + "</td></tr>"; }), "");
+
+  // ---- missing screenshots: written by tools/dashboard/shots.py; the dossier is a private claude.ai page
+  var SH = S.shots;
+  if (SH) {
+    var dl = SH.dossier ? "<a href='" + esc(SH.dossier) + "' target='_blank' rel='noopener' title='Private: opens for the owner only'>Open the image dossier</a>" : "The image dossier has no link yet";
+    $("shotsNote").innerHTML = "<b>" + SH.missing + "</b> missing &middot; <b>" + SH.game + "</b> for the owner, in the game &middot; <b>" + SH.editor + "</b> for a Claude session &middot; " + SH.taken + " already on the site &middot; counted " + esc(SH.asOf) + " &middot; " + dl;
+    table("shotsTable", ["Tool", "In the game (owner)", "Editor and desktop (Claude)", "Missing"], (SH.byTool || []).map(function (r) {
+      var known = tools.some(function (t) { return t.name === r.tool; });
+      var a = SH.dossier ? "<a href='" + esc(SH.dossier) + "#" + esc(r.tool.toLowerCase()) + "' target='_blank' rel='noopener'>" + (r.game + r.editor) + "</a>" : (r.game + r.editor);
+      return "<tr><td class='m'>" + (known ? tlink(r.tool) : esc(r.tool)) + "</td><td class='num'" + (r.game ? " style='color:var(--yellow)'" : "") + ">" + r.game + "</td><td class='num'>" + r.editor + "</td><td class='num'>" + a + "</td></tr>"; }), "No screenshot is missing.");
+  } else { $("shotsNote").textContent = "Not counted yet: run tools/dashboard/shots.py."; }
 
   // ---- one tooltip for every mark
   var tip = $("tip");

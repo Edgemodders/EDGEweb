@@ -1,0 +1,123 @@
+<title>EDGE Image Dossier</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the dashboard's HUD look, one dark world. A status bar, headline numbers, then one panel per tool with a row per missing shot: who takes it, the file name to save, what it must show. */
+:root {
+  color-scheme: dark;
+  --bg: #08090d; --panel: #0e1017; --panel-2: #141722; --line: #262c3d; --fg: #e8ebf3; --dim: #8b93a8;
+  --yellow: #fcee0a; --cyan: #19f3ff; --red: #ff2a52; --green: #5dffa1;
+  --display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --body: "Rajdhani", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", Consolas, ui-monospace, monospace;
+  --cut: 14px;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 18px; line-height: 1.45; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1100px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: rgba(8,9,13,.94); border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--dim); }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; padding-block: 9px; }
+.bar b { color: var(--fg); font-weight: 500; }
+.dot { display: inline-block; width: 8px; height: 8px; background: var(--green); margin-right: 8px; }
+header { padding-block: 40px 8px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 7vw, 60px); line-height: 1; margin: 10px 0 12px; text-transform: uppercase; text-wrap: balance; }
+h1 span { color: var(--yellow); }
+.lede { color: var(--dim); max-width: 68ch; margin: 0; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 24px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px 12px; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%); }
+.kpi .n { font-family: var(--display); font-weight: 700; font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; }
+.kpi .l { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); margin-top: 8px; }
+.kpi .s { font-size: 15px; color: var(--dim); }
+.kpi.attn { border-color: rgba(252,238,10,.55); } .kpi.attn .n { color: var(--yellow); }
+.how { margin-top: 22px; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--yellow); padding: 14px 16px; display: grid; gap: 8px; }
+.how p { margin: 0; max-width: 78ch; }
+.path { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-width: 0; }
+code { font-family: var(--mono); font-size: 13px; background: #05060a; border: 1px solid var(--line); padding: 3px 7px; overflow-wrap: anywhere; min-width: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 26px 0 4px; }
+button { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; padding: 4px 10px; border: 1px solid var(--line); background: var(--panel); color: var(--dim); cursor: pointer; }
+button:hover { color: var(--cyan); border-color: var(--cyan); }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+button[aria-pressed="true"] { color: #08090d; background: var(--yellow); border-color: var(--yellow); }
+section { margin-top: 30px; scroll-margin-top: 60px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 24px; letter-spacing: .04em; text-transform: uppercase; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+h2 small { font-family: var(--mono); font-weight: 400; font-size: 12px; letter-spacing: .06em; color: var(--dim); text-transform: none; }
+.rule { height: 1px; background: linear-gradient(90deg, var(--yellow) 0 60px, var(--line) 60px); margin: 8px 0 12px; }
+.rows { display: grid; gap: 2px; }
+.row { background: var(--panel); border: 1px solid var(--line); padding: 12px 14px; display: grid; gap: 6px; min-width: 0; }
+.row.game { border-left: 3px solid var(--yellow); } .row.editor { border-left: 3px solid var(--cyan); }
+.top { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; min-width: 0; }
+.cap { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: .02em; }
+.tag { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.tag::before { content: ""; display: inline-block; width: 9px; height: 9px; margin-right: 6px; vertical-align: -1px; background: var(--sw); }
+.tag.game { --sw: var(--yellow); color: var(--yellow); } .tag.editor { --sw: var(--cyan); color: var(--cyan); }
+.pg { font-family: var(--mono); font-size: 12px; color: var(--dim); margin-left: auto; }
+.pg a { color: var(--dim); } .pg a:hover { color: var(--cyan); }
+.shows { margin: 0; max-width: 85ch; }
+.file { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-family: var(--mono); font-size: 12px; color: var(--dim); min-width: 0; }
+.file code { color: var(--fg); font-size: 13px; }
+.file .to { overflow-wrap: anywhere; min-width: 0; }
+.none { color: var(--dim); padding: 14px; background: var(--panel); border: 1px solid var(--line); }
+footer { color: var(--dim); font-size: 16px; padding-block: 36px 48px; max-width: 75ch; }
+@media (max-width: 600px) { .pg { margin-left: 0; width: 100%; } }
+</style>
+
+<div class="bar"><div class="wrap"><span><span class="dot"></span><b>EDGEMODDERS</b> / IMAGE DOSSIER</span><span id="asof"></span></div></div>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">// The EDGE platform &middot; screenshots the site waits for</div>
+    <h1>Image <span>dossier.</span></h1>
+    <p class="lede">Every screenshot a wiki page or the platform page still shows as a placeholder. The yellow rows are of the running game, so only you can take them. The cyan rows are of the editor or the desktop: a Claude session takes those by script and they leave this list by themselves.</p>
+    <div class="kpis" id="kpis"></div>
+    <div class="how">
+      <p><b>How to hand one in.</b> Take the shot at any size, save it as a PNG under the file name on its row, into the inbox:</p>
+      <div class="path"><code id="inbox"></code><button type="button" data-copy="inbox">Copy</button></div>
+      <p>Then say in the chat that the inbox has pictures. The session checks each for personal details (user names in paths, account names, keys, email addresses), resizes it, moves it to the folder on its row and fills the placeholder. A name that differs is fine: it asks which shot it is.</p>
+    </div>
+  </header>
+  <div class="filters" id="filters"></div>
+  <div id="list"></div>
+  <footer>Written from the site's files by <code>tools/dashboard/shots.py</code> in the EDGEweb repo; the nightly run rewrites it. Not affiliated with CD PROJEKT RED.</footer>
+</div>
+
+<script>
+const D = /*DATA*/null;
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const shots = D.shots, game = shots.filter((s) => s.where === "game"), editor = shots.filter((s) => s.where === "editor");
+$("asof").innerHTML = "AS OF <b>" + esc(D.asOf) + "</b>";
+$("inbox").textContent = D.inbox;
+const k = (n, l, s, attn) => `<div class="kpi${attn ? " attn" : ""}"><div class="n">${n}</div><div class="l">${l}</div><div class="s">${s}</div></div>`;
+$("kpis").innerHTML = k(game.length, "For you, in the game", "only the owner can take these", game.length > 0)
+  + k(editor.length, "For a Claude session", "the editor and the desktop, by script", false)
+  + k(D.taken, "Already on the site", "of " + (D.taken + shots.length) + " places for a picture", false);
+
+let filter = "game";
+try { filter = localStorage.getItem("dossier:filter") || "game"; } catch (e) {}
+function draw() {
+  const opts = [["game", "In the game " + game.length], ["editor", "Editor and desktop " + editor.length], ["all", "All " + shots.length]];
+  $("filters").innerHTML = opts.map(([v, t]) => `<button type="button" aria-pressed="${v === filter}" data-f="${v}">${t}</button>`).join("");
+  const rows = shots.filter((s) => filter === "all" || s.where === filter);
+  const tools = [...new Set(rows.map((s) => s.tool))];
+  $("list").innerHTML = rows.length ? tools.map((t) => {
+    const mine = rows.filter((s) => s.tool === t);
+    return `<section id="${esc(t.toLowerCase())}"><h2>${esc(t)} <small>${mine.length} missing</small></h2><div class="rule"></div><div class="rows">` + mine.map((s, i) => {
+      const id = "f-" + esc(t) + "-" + i;
+      return `<div class="row ${s.where}"><div class="top"><span class="cap">${esc(s.caption)}</span><span class="tag ${s.where}">${s.where === "game" ? "In the game: you" : "Editor: Claude"}</span><span class="pg"><a href="${esc(s.url)}">${esc(s.pageTitle)}</a> &middot; ${esc(s.page)}</span></div>
+        <p class="shows">${esc(s.shows)}</p>
+        <div class="file"><span>Save as</span><code id="${id}">${esc(s.file)}</code><button type="button" data-copy="${id}">Copy name</button><span class="to">ends up in ${esc(s.folder)}</span></div></div>`;
+    }).join("") + "</div></section>";
+  }).join("") : '<p class="none">Nothing is missing here.</p>';
+}
+draw();
+document.addEventListener("click", async (e) => {
+  const f = e.target.closest("[data-f]");
+  if (f) { filter = f.dataset.f; try { localStorage.setItem("dossier:filter", filter); } catch (err) {} draw(); return; }
+  const b = e.target.closest("[data-copy]");
+  if (!b) return;
+  const el = $(b.dataset.copy), was = b.textContent;
+  try { await navigator.clipboard.writeText(el.textContent.trim()); b.textContent = "Copied"; }
+  catch (err) { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; }
+  setTimeout(() => { b.textContent = was; }, 1500);
+});
+</script>
