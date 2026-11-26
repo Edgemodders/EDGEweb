@@ -3880,18 +3880,33 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+      "id": "F4a",
+      "title": "Reshape a game garment (proposed 2026-11-25, EDGEfab #3)",
+      "status": "planned"
+     },
+     {
+      "id": "F4b",
+      "title": "New clothing, fitted to both bodies (proposed 2026-11-25)",
+      "status": "planned"
+     },
+     {
       "id": "F2",
       "title": "Workspace and prompts",
       "status": "planned"
      },
      {
-      "id": "F7a",
-      "title": "Animated props",
+      "id": "FN",
+      "title": "NPC looks: an NPC assembled, its parts swapped, a new look that spawns (proposed 2026-11-26)",
       "status": "planned"
      },
      {
-      "id": "F4",
-      "title": "Clothing",
+      "id": "FB",
+      "title": "Bodies: a body for V or an NPC, with its own refitter for clothing (proposed 2026-11-26)",
+      "status": "planned"
+     },
+     {
+      "id": "F7a",
+      "title": "Animated props (narrowed 2026-11-25, to agree)",
       "status": "planned"
      },
      {
@@ -3915,7 +3930,7 @@ window.EDGE_STATUS = {
     "version": "0.2.2",
     "needs": [
      "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus): the MCP server takes EDGEFAB_REDBRIDGE for game files too (EDGEchat #5). Nothing under Unreleased yet",
-     "Next work: F3 Blender sources, then clothing (F4a, F4b; proposed 2026-11-25, waiting on the owner), then F2; a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
+     "Next work: F3 Blender sources, then clothing (F4a, F4b), F2, NPC looks (FN) and bodies (FB) (proposed 2026-11-25 and 26, waiting on the owner); a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
    "handTests": [
@@ -4020,7 +4035,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EF4",
-     "what": "Agree the plan change (plan.md, \"Clothing: where it falls\"): clothing up to right after F3, split into F4a Reshape a game garment and F4b New clothing; F7a narrowed to a prop's rig; 1.0 as props and clothing whole",
+     "what": "Agree the plan changes (plan.md, \"Clothing: where it falls\" and \"Bodies and NPC looks\"): clothing right after F3 as F4a and F4b; FN NPC looks and FB Bodies after F2 (or FB first); F7a narrowed to a prop's rig; V's face stays the character creator's; 1.0 as props, clothing and NPC looks",
      "since": "2026-11-25"
     }
    ],
@@ -4029,7 +4044,7 @@ window.EDGE_STATUS = {
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
     "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
    ],
-   "checkedBy": "EDGEfab session, 2026-11-25"
+   "checkedBy": "EDGEfab session, 2026-11-26"
   },
   {
    "name": "EDGEdir",
