@@ -31,7 +31,7 @@ More toolkits build on those five for particular jobs:
 
 | Job | Toolkit | What it does | Latest release |
 |---|---|---|---|
-| Ask at your desk | [EDGEchat](edgechat/) | The EDGE plugin for Claude Code, Anthropic's AI assistant. One install connects Claude to the running game, the game's files, your mods and their materials | 0.1.1 |
+| Ask at your desk | [EDGEchat](edgechat/) | The EDGE plugin for Claude Code, Anthropic's AI assistant. One install connects Claude to the running game, the game's files, your mods and their materials, props, quickhacks and quests | 0.2.1 |
 | One install | [EDGEkit](edgekit/) | The EDGEmodders editor: an app for Windows with the EDGE editor tools built in. Or an extension pack that installs them in VS Code | App 1.140.6 and pack 0.6.0, both previews |
 | Materials | [EDGEmat](edgemat/) | A material editor. Recolor clothes layer by layer, or make a new material by describing it | 0.3.4, a preview |
 | Props | [EDGEfab](edgefab/) | An asset maker. Turn a 3D model, or your own words, into a prop the game can use, and place it with EDGEbuilder | 0.2.1, a preview |
@@ -53,7 +53,7 @@ Together, the toolkits add up to these. Each toolkit's Overview says why you mig
 |---|---|---|
 | **Anyone can mod** | Describe a mod in plain words. An assistant writes it, runs it and fixes it: in the game, or at your desk | [REDagent](redagent/), [EDGEchat](edgechat/) |
 | **You stay in control** | REDagent shows every file change before it happens, and its changes and EDGEdeck's deploys can be undone. With Claude Code, the EDGE tools ask before anything changes the running game, your save or the game folder | [REDagent](redagent/), [EDGEchat](edgechat/safety.html), [EDGEdeck](edgedeck/) |
-| **Assistants can use every tool** | Seven toolkits offer their tools to AI assistants through [MCP](glossary.html#mcp-server): REDnode, REDcode, EDGEdeck, EDGEmat, EDGEquest, EDGEhack and EDGEwave. EDGEchat connects the first four in one install; the others [connect by hand](connect-claude-code.html) | [EDGEchat](edgechat/), [Connect Claude Code](connect-claude-code.html) |
+| **Assistants can use every tool** | Eight toolkits offer their tools to AI assistants through [MCP](glossary.html#mcp-server): REDnode, REDcode, EDGEdeck, EDGEmat, EDGEfab, EDGEquest, EDGEhack and EDGEwave. EDGEchat connects all but EDGEwave in one install; EDGEwave [connects by hand](connect-claude-code.html) | [EDGEchat](edgechat/), [Connect Claude Code](connect-claude-code.html) |
 | **Live in the game** | Change a mod and see it in the running game, with no restart. Mods can draw their own windows over the game or add panels to the game's HUD | [REDnode](rednode/) |
 | **A crash stays small** | Mods and their windows run outside the game, so a crash in one doesn't take the game down | [REDnode](rednode/) |
 | **Everything is text** | Game files, game values and scripts open as plain text, so you and an assistant can read any of it | [REDcode](redcode/), [REDnode](rednode/) |

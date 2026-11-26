@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEfab
 order: 8
 description: "Let Claude make props for you with EDGEfab: what to ask, connecting Claude Code, the keys the server needs, using it beside EDGEchat, every tool with examples, and other assistants."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # EDGEfab and <span class="y">assistants</span>
@@ -92,14 +92,14 @@ Tell Claude your Tripo plan once ("my Tripo plan is paid"), so each model is mar
 
 ## EDGEfab with EDGEchat
 
-[EDGEchat](../edgechat/) is the EDGE plugin for Claude Code. One install connects four tools: REDnode, REDcode, EDGEdeck and EDGEmat. **EDGEfab is not in it yet**, so connect EDGEfab as above. The two work side by side, and nothing shows twice.
+[EDGEchat](../edgechat/) is the EDGE plugin for Claude Code. From EDGEchat 0.2.1 one install connects seven tools, **EDGEfab included**, with EDGEfab 0.2.1. With EDGEchat you don't connect EDGEfab as above: if you did before, remove that copy, or Claude sees every `fab_` tool twice (`/edge:setup` explains how). EDGEchat's **REDbridge.exe** setting is the REDbridge EDGEfab uses, and the keys come from REDcode's Keys or EDGEchat's own key settings.
 
 Together they cover the whole trip from a sentence to the prop standing in the game:
 
 | Step | Tool | Connected by |
 |---|---|---|
-| Draw it, make it 3D, size it, glow, rename | **EDGEfab** (`fab_` tools) | Connect an Assistant |
-| Add it to the project | **EDGEfab** | Connect an Assistant |
+| Draw it, make it 3D, size it, glow, rename | **EDGEfab** (`fab_` tools) | EDGEchat, or Connect an Assistant |
+| Add it to the project | **EDGEfab** | EDGEchat, or Connect an Assistant |
 | Give one part a game material | [EDGEmat](../edgemat/assistants.html) (`mat_` tools) | EDGEchat |
 | Pack the project into a mod | [REDcode](../redcode/assistants.html) | EDGEchat |
 | Install the mod, or turn it off | [EDGEdeck](../edgedeck/assistants.html) | EDGEchat |
@@ -113,7 +113,7 @@ REDnode asks for your OK inside the game before the first swap. To be asked befo
 
 | Good to know | |
 |---|---|
-| Install EDGEchat | [Install and connect](../edgechat/install.html). `/edge:setup` checks its four connections |
+| Install EDGEchat | [Install and connect](../edgechat/install.html). `/edge:setup` checks its seven connections |
 | Game materials on a part | Asked through EDGEmat's tools. Seen in the game once: [Add to Project](add-to-project.html#game-materials-on-a-part) |
 | All EDGE connections, side by side | [Connect Claude Code](../connect-claude-code.html) |
 

@@ -45,7 +45,7 @@
   <div class="tw"><table>
     <thead><tr><th>Benefit</th><th>What it means for you</th><th>Status</th></tr></thead>
     <tbody>
-      <tr><td>AI assistants, in the game and at your desk<span class="from">REDagent &middot; EDGEchat &middot; REDnode &middot; REDcode &middot; EDGEdeck &middot; EDGEmat</span></td><td>REDagent, powered by Claude, writes, runs and fixes mods with you in a chat inside the game. At your desk, the EDGEchat plugin connects Claude Code to the running game, the game&rsquo;s files, your mods and their materials in one install. Seven toolkits offer their tools to AI assistants through MCP, the standard way an assistant uses a program: REDnode, REDcode, EDGEdeck, EDGEmat, EDGEquest, EDGEhack and EDGEwave. Installed REDnode mods can offer tools of their own too.</td><td><span class="st on">Working</span></td></tr>
+      <tr><td>AI assistants, in the game and at your desk<span class="from">REDagent &middot; EDGEchat &middot; REDnode &middot; REDcode &middot; EDGEdeck &middot; EDGEmat</span></td><td>REDagent, powered by Claude, writes, runs and fixes mods with you in a chat inside the game. At your desk, the EDGEchat plugin connects Claude Code to the running game, the game&rsquo;s files, your mods and their materials, props, quickhacks and quests in one install. Eight toolkits offer their tools to AI assistants through MCP, the standard way an assistant uses a program: REDnode, REDcode, EDGEdeck, EDGEmat, EDGEfab, EDGEquest, EDGEhack and EDGEwave. Installed REDnode mods can offer tools of their own too.</td><td><span class="st on">Working</span></td></tr>
       <tr><td>You approve every change<span class="from">REDagent &middot; EDGEchat &middot; EDGEdeck</span></td><td>REDagent shows each file change first and waits for Allow. Every change it makes, and every deploy EDGEdeck makes, has an Undo. With Claude Code, the EDGE tools ask before anything changes the running game, your save or the game folder.</td><td><span class="st on">Working</span></td></tr>
       <tr><td>See changes in the running game<span class="from">REDnode</span></td><td>Change a mod and see it in the running game without a restart. Swap a changed archive, such as a new texture, into the running game. Find faults in a mod while the game runs, with breakpoints and a console in the game. Untested: attaching VS Code as the debugger, and swapping archives that change sound on game 2.5.</td><td><span class="st on">Working</span></td></tr>
       <tr><td>Mod isolation and crash protection<span class="from">REDnode</span></td><td>Mods and overlay apps run in their own processes, outside the game. If one crashes, your game keeps running. Planned: mod code that runs inside the game itself, sandboxed and time-limited.</td><td><span class="st on">Working</span></td></tr>
@@ -113,12 +113,12 @@
       <div class="head"><div><div class="name">EDGE<span>chat</span></div><div class="role">The assistant at your desk &middot; for Claude Code</div></div></div>
       <p>The EDGE plugin (an add-on) for Claude Code, Anthropic&rsquo;s AI assistant. Claude Code is a chat panel in VS Code or EDGEkit that can read files and do work for you. EDGEchat gives it the modding knowledge, and connects it to the running game, the game&rsquo;s files and your mods.</p>
       <ul>
-        <li>One install connects Claude Code to four EDGE tools: the running game (REDnode), the game&rsquo;s files (REDcode, through REDbridge), your mods (EDGEdeck) and materials (EDGEmat)</li>
-        <li>Commands for the common jobs: <code>/edge:new-mod</code>, <code>/edge:check-mod</code>, <code>/edge:init-project</code> and <code>/edge:setup</code></li>
+        <li>One install connects Claude Code to seven EDGE tools: the running game (REDnode), the game&rsquo;s files (REDcode, through REDbridge), your mods (EDGEdeck), materials (EDGEmat), props (EDGEfab), quickhacks (EDGEhack) and quests (EDGEquest)</li>
+        <li>Commands for the common jobs: <code>/edge:new-mod</code>, <code>/edge:check-mod</code>, <code>/edge:init-project</code> and <code>/edge:setup</code>, and <code>/edge:continue</code> to carry on a chat you started with REDagent in the game</li>
         <li>Modding knowledge that Claude loads by itself when a task needs it</li>
         <li>The EDGE tools ask you before every action that changes the running game, your save or the game folder, whichever permission setting Claude Code is in</li>
-        <li>Not connected yet: quests, quickhacks and sounds. EDGEquest, EDGEhack and EDGEwave each connect to Claude Code by themselves</li>
-        <li>0.1.1 released for game 2.5, for Windows. EDGEchat is free; Claude Code needs a Claude plan that includes it</li>
+        <li>Not connected yet: sounds. EDGEwave connects to Claude Code by itself</li>
+        <li>0.2.1 released for game 2.5, for Windows. EDGEchat is free; Claude Code needs a Claude plan that includes it</li>
       </ul>
       <div class="links"><a href="wiki/edgechat/">Wiki</a><a href="https://edgemodders.github.io/EDGEchat/">Docs</a><a href="https://github.com/Edgemodders/EDGEchat">GitHub</a></div>
     </div>

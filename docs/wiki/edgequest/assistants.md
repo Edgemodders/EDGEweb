@@ -4,7 +4,7 @@ nav_title: For assistants
 section: EDGEquest
 order: 8
 description: "What an AI assistant such as Claude Code can do for a quest writer with EDGEquest's MCP server: read and find the game's quests, start a quest, change its story, make it and work through its checklist. How to connect it, and what each tool changes."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # EDGEquest for <span class="y">assistants</span>
@@ -40,7 +40,7 @@ What it can't do: play the quest for you, or get it into the game. Packing and i
 | Assistant | How it gets EDGEquest |
 |---|---|
 | [Claude Code](../connect-claude-code.html), Anthropic's assistant for the terminal and VS Code. It needs a paid Claude plan | Add the server yourself, with the command [below](#connect-it) |
-| [EDGEchat](../edgechat/), the EDGE plugin for Claude Code | EDGEchat doesn't include EDGEquest's server yet. Add it yourself, the same way; it works beside the plugin |
+| [EDGEchat](../edgechat/), the EDGE plugin for Claude Code | Included from EDGEchat 0.2.1 (EDGEquest 0.1.1). With EDGEchat, don't add the server yourself, or every tool shows twice |
 | Other assistants that speak MCP | The same command |
 
 The server has been run through a scripted test of an assistant's whole flow: start a quest, edit it, prepare its voice lines and make it. A session with a real assistant is not on record yet, so treat it as new, and please tell us how it goes on [Discord]({{ site.discord }}).

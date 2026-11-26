@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEquest
 order: 10
 description: "What to do when EDGEquest's views stay empty, a story file shows problems, a quest doesn't show or start in the game, two test quests play at one place, a check shows 15 / 20, music plays on, or a sound is silent."
-reviewed: 2026-11-13
+reviewed: 2026-11-25
 ---
 
 # Troubleshooting <span class="y">EDGEquest</span>
@@ -110,7 +110,7 @@ Other things you may see:
 
 | You see | Do this |
 |---|---|
-| Claude doesn't have the `quest_` tools | Connect the server, then start a new Claude Code session. [EDGEchat](../edgechat/) doesn't include it yet. See [Connect it](assistants.html#connect-it) |
+| Claude doesn't have the `quest_` tools | Install or update [EDGEchat](../edgechat/) to 0.2.1, which includes it, or connect the server yourself. Then start a new Claude Code session. See [Connect it](assistants.html#connect-it) |
 | The server can't find the game or REDbridge | Give them on the command line. See the table under [Connect it](assistants.html#connect-it) |
 | The assistant's first question takes a long time | It is building the quest index, about a minute and a half, once |
 

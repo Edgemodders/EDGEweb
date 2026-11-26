@@ -84,7 +84,7 @@ More terms are in the wiki's [glossary](../glossary.html).
 | [EDGEmat](../edgemat/) | Materials. EDGEfab makes each part's material from the model's own textures with EDGEmat's code. EDGEmat's tools can then give a part one of the game's own materials: [Add to Project](add-to-project.html#game-materials-on-a-part) |
 | [EDGEbuilder](../edgebuilder/) | In the game: finds your prop in the mod and places it |
 | [REDnode](../rednode/) | In the game: lets REDcode swap your mod in while the game runs, so you see the prop without a restart |
-| [EDGEchat](../edgechat/) and Claude | EDGEfab's MCP server lets an assistant use every feature. EDGEchat connects the other tools around it: [Assistants](assistants.html) |
+| [EDGEchat](../edgechat/) and Claude | EDGEfab's MCP server lets an assistant use every feature. EDGEchat 0.2.1 connects it, with the other tools around it: [Assistants](assistants.html) |
 
 EDGEfab comes with no game files, and it never changes your game: it writes into your project and onto the Desk. It makes no network calls of its own, except to Tripo and OpenAI when you ask for something that needs them.
 

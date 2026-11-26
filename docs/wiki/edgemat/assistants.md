@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEmat
 order: 13
 description: "Let an AI assistant such as Claude use EDGEmat for you: what to ask, the easy way to connect it with EDGEchat, connecting Claude Code yourself, the key for new materials, and every tool."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # EDGEmat and <span class="y">assistants</span>
@@ -113,7 +113,7 @@ You never have to name a tool: ask in plain words and the assistant picks. The n
 
 ### Newer tools
 
-These tools came with the last few releases. They are in the server you connect from EDGEmat, and in the npm package. The copies of the server inside EDGEchat and REDnode are an earlier version and don't have them yet.
+These tools came with the last few releases. They are in the server you connect from EDGEmat, and in the npm package. EDGEchat has them from EDGEchat 0.2.1, which runs edgemat-mcp 0.3.4. The copy of the server inside REDnode is an earlier version and doesn't have them yet.
 
 | Tool | Does | Needs | Tested |
 |---|---|---|---|

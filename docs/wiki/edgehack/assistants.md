@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEhack
 order: 8
 description: "Ask Claude Code to find, make and change quickhacks with EDGEhack: what an assistant can do, which assistants work today, how to connect one, and what it asks before changing anything."
-reviewed: 2026-11-18
+reviewed: 2026-11-25
 ---
 
 # EDGEhack with <span class="y">assistants</span>
@@ -27,7 +27,7 @@ It works through EDGEhack's **MCP server**. MCP is the standard that lets an AI 
 | Assistant | Today |
 |---|---|
 | **Claude Code**, Anthropic's assistant for your desktop | Works. You connect EDGEhack yourself, below |
-| **[EDGEchat](../edgechat/)**, the EDGE plugin for Claude Code | Does not include EDGEhack yet. Connect EDGEhack as below, and the two work side by side |
+| **[EDGEchat](../edgechat/)**, the EDGE plugin for Claude Code | Includes EDGEhack from EDGEchat 0.2.1 (EDGEhack 0.1.3). With EDGEchat, don't connect EDGEhack as below, or every tool shows twice. Its writing tools ask you first, in every permission mode |
 | **Agents inside VS Code** (VS Code 1.101 or later) | See EDGEhack's tools with no connecting. Not tested by EDGEhack's developer |
 | **Another MCP client** | Can run the server: see [Without VS Code](#without-vs-code) |
 | **[REDagent](../redagent/)**, the assistant inside the game | Works with REDnode 0.65.3 and REDagent 0.4.4 or later: see [below](#redagent-in-the-game) |

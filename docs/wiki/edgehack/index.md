@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEhack
 order: 0
 description: "EDGEhack, a quickhack editor for Cyberpunk 2077 in VS Code: what it is, what it can do, the words you'll meet, what it needs from the other EDGE tools, and where it stands."
-reviewed: 2026-11-22
+reviewed: 2026-11-25
 ---
 
 # EDGE<span class="y">hack</span>
@@ -98,7 +98,7 @@ Your numbers survive game patches. EDGEhack remembers the number you asked for, 
 | [REDbridge](../redbridge/) | Reads the game's files for REDcode. REDcode installs it for you |
 | [EDGEdeck](../edgedeck/) | Recommended. The mod manager: it installs the frameworks in one go, and your mod is installed through it |
 | [REDnode](../rednode/) | Optional, in the game. Needed for Try Live, for scripts, and for the Console line that gives V a quickhack while testing |
-| Claude and other assistants | EDGEhack's MCP server lets an AI assistant work with quickhacks. You connect it yourself: [EDGEchat](../edgechat/) does not include it yet |
+| Claude and other assistants | EDGEhack's MCP server lets an AI assistant work with quickhacks. [EDGEchat](../edgechat/) 0.2.1 connects it, or you connect it yourself |
 | [EDGEkit](../edgekit/) | The EDGEkit app has EDGEhack built in |
 
 EDGEhack ships no game data. It reads the quickhacks from your own game each time VS Code starts.
