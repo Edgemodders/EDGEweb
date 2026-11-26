@@ -4,7 +4,7 @@ nav_title: Settings and controls
 section: REDnode
 order: 11
 description: "Every REDnode setting: the Settings drawer, per-package settings, shared keys, where REDnode keeps its files, and for mod makers development folders, permissions and manifest fields."
-reviewed: 2026-11-25
+reviewed: 2026-11-26
 ---
 
 # Settings and <span class="y">controls</span>
@@ -46,6 +46,7 @@ REDnode's settings are in the **Settings** drawer: press F10, open the launcher 
 | **Tooltips** | on | Hints when you hover a control, in every window | You know REDnode well and they get in the way |
 | **Versions in title bars** | on | Each app's version, dimmed, beside its window's title (since 0.68.2) | You report a bug and want the version at a glance, or you'd rather not see it |
 | **Hide on a click in the game** | off | A click outside REDnode's windows hides all of REDnode, HUD widgets and windows pinned to the HUD too, instead of going back to passive mode. Press F10 to bring it back (since 0.69.0) | You're testing and need the whole screen. Switch it off again for your usual setup |
+| **Load modded saves without the mod check** | off | Game 2.5 marks a save made with mods as modded, and loading one shows its Mod Verification popup. On: the title screen's Continue and the Load menu (on the title screen and in the pause menu) load such a save as any other, with no popup (since 0.75.0). It works beside Remove Mods Menu, which does the same | You play with mods and are tired of the popup |
 | **Hide in the pause menu** | on | Hides REDnode's windows, HUD widgets and tab while the game's pause menu is open. They come back as they were when it closes, and F10 still brings REDnode up there. See [In the pause menu](overlay.html#in-the-pause-menu) | You want your windows on screen in the pause menu |
 
 The bottom of the launcher itself has:

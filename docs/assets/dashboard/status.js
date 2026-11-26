@@ -1011,9 +1011,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.75.0",
+    "version": null,
     "needs": [
-     "Every test of 0.74.0 and 0.75.0 has passed except SC1, the Scene spike, which is not in the player zip (as #47's spike was not in 0.70.0): a release needs the owner's word on that"
+     "SC1, the Scene spike: its in-game test (docs/world.md, 'SC1 test', 17 steps), moved after 0.75.0 at the owner's word"
     ]
    },
    "handTests": [
@@ -1043,7 +1043,7 @@ window.EDGE_STATUS = {
      "steps": 17,
      "status": "not run",
      "ranBy": "owner",
-     "note": "docs/world.md, 'SC1 test'. Built 2026-11-25; stand-in check 41 passed. Save before step 12 (the copy of V)"
+     "note": "docs/world.md, 'SC1 test'. Built 2026-11-25; stand-in check 41 passed. Save before step 12 (the copy of V); moved after the 0.75.0 release at the owner's word (2026-11-26)"
     },
     {
      "name": "Fight events (#61), REDnode 0.73.0 and 0.73.1",
@@ -1298,7 +1298,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (Scene format 3 passed in game; 0.75.0's tests all passed except SC1's spike; the owner's Save Manager noted)"
+   "checkedBy": "REDnode session, 2026-11-26 (REDnode 0.75.0 released at the owner's word, run 45860641246; Nexus 0.75.0 primary, 0.73.1 archived; wiki brought to 0.75.0)"
   },
   {
    "name": "REDcode",
