@@ -4814,10 +4814,10 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEguide",
    "code": "EG",
-   "ownerSeq": 1,
+   "ownerSeq": 3,
    "group": "In development",
    "role": "Lets Claude Code show a modder the EDGE tools in the editor: open views, select items, point at buttons",
-   "stage": "scaffold",
+   "stage": "early build",
    "version": null,
    "lastTag": null,
    "lastTagDate": null,
@@ -4835,8 +4835,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G1",
-      "title": "Skeleton",
-      "status": "planned"
+      "title": "Skeleton (built 2026-11-26: server on 41822, sign-in, ui_state, ui_open, ui_run; 11 unit tests pass)",
+      "status": "built, tests pending"
      },
      {
       "id": "G2",
@@ -4858,11 +4858,20 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "G1 to G3 built and tested",
-     "A session of its own for G1 (G0 was done from the EDGEchat session)"
+     "The G1 hand test in the editor (owner)",
+     "Calls going to the focused window (still the listening window)",
+     "G2 and G3 built and tested; G2 needs the edgeguide key and a reveal command in REDcode, EDGEdeck, EDGEmat and EDGEwave (through their sessions)"
     ]
    },
-   "handTests": [],
+   "handTests": [
+    {
+     "name": "G1: Claude Code signs in, shows EDGEdeck's mods and runs Deploy after asking",
+     "steps": "EDGEguide design, \"G1 as built\", last paragraph",
+     "status": "not run",
+     "ranBy": null,
+     "note": "edgeguide-0.0.1.vsix from npm run package; not published"
+    }
+   ],
    "ownerSpotTests": [],
    "waitingOn": [
     {
@@ -4875,13 +4884,20 @@ window.EDGE_STATUS = {
     {
      "ref": "EG2",
      "what": "Open a Claude session on the EDGEguide folder for G1, the skeleton",
-     "since": "2026-11-25"
+     "since": "2026-11-25",
+     "done": "2026-11-26"
+    },
+    {
+     "ref": "EG3",
+     "what": "Run the G1 hand test: install edgeguide-0.0.1.vsix, add the server to Claude Code, sign in, ask Claude to show EDGEdeck's mods and deploy (EDGEguide design, \"G1 as built\")",
+     "since": "2026-11-26"
     }
    ],
    "risks": [
-    "No code yet; G1 needs a session of its own"
+    "Built from the EDGEkit session (no session of its own); only unit-tested so far",
+    "The other windows do not pass calls yet: the first window opened answers, focused or not"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (G0 decided by the owner, written into the design: port 41822, OAuth, the focused window, the package.json contract)"
+   "checkedBy": "EDGEkit session, 2026-11-26 (G1 built at the owner's request)"
   },
   {
    "name": "VATS",
