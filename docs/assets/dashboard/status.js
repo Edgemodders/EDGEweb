@@ -925,8 +925,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#57",
-      "title": "Tests run by an assistant, for REDcode: load a save, a consent per test session, input to the game; several days",
-      "status": "planned"
+      "title": "Tests run by an assistant, for REDcode: load a save, a consent per test session, input to the game (docs/game-tests.md); step 1's Saves spike and REDnodeSavesListener built in 0.74.0 on 2026-11-25, steps 2 and 3 proposed",
+      "status": "in progress"
      },
      {
       "id": "CON",
@@ -973,10 +973,25 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.74.0",
     "needs": [
-     "Nothing built for it yet: SC1 is a spike app outside the player zip; the calls it leads to come after its test"
+     "Scene format 3 (#51 step 1): its in-game test (docs/world.md, 'Scene format 3: test'; Claude drives it)",
+     "The Saves spike (#57 step 1): its in-game test (docs/game-tests.md); the spike is outside the player zip, but REDnodeSavesListener ships in the plugin's scripts"
     ]
    },
    "handTests": [
+    {
+     "name": "Scene format 3 read (#51 step 1), REDnode 0.74.0",
+     "steps": 3,
+     "status": "not run",
+     "ranBy": "Claude, with the owner in game",
+     "note": "docs/world.md, 'Scene format 3: test'. Plain Node check 9 passed; the WL mock check still passes (25)"
+    },
+    {
+     "name": "Saves spike (#57 step 1), REDnode 0.74.0",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "docs/game-tests.md, 'Saves spike: test'. Built 2026-11-25; stand-in check 11 passed, the script compiles (redscript-cli and scc.exe). Start at the main menu"
+    },
     {
      "name": "The scene spike (SC1), Scene spike 0.1.0 on REDnode 0.73.1",
      "steps": 17,
@@ -1145,6 +1160,11 @@ window.EDGE_STATUS = {
      "who": "owner",
      "what": "Talk through semi-native apps before its first spike starts",
      "ref": "docs/semi-native.md"
+    },
+    {
+     "who": "owner",
+     "what": "Agree #57 step 2's shape (a test session the player starts in the game, for one assistant, at most 60 minutes) and step 3's route (input through the plugin)",
+     "ref": "REDnode #57, docs/game-tests.md"
     }
    ],
    "ownerActions": [
@@ -1203,6 +1223,11 @@ window.EDGE_STATUS = {
      "since": "2026-11-25",
      "done": "2026-11-25",
      "outcome": "REDnode 0.73.1 released (run 45723704456): GitHub v0.73.1 with five zips, Nexus 35419 (0.70.0 archived); the wiki brought up to 0.73.1. REDagent 0.4.6 released (run 45724406608): GitHub v0.4.6, Nexus 35670 (0.4.4 archived); its wiki pages brought up to it"
+    },
+    {
+     "ref": "RN6",
+     "what": "Deploy REDnode 0.74.0 (built on 2026-11-25) and run its two tests with the SC1 test: the Saves spike (from the main menu) and Scene format 3 (Claude drives it)",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
@@ -1225,7 +1250,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (SC1, the scene spike, built; its in-game test waits)"
+   "checkedBy": "REDnode session, 2026-11-25 (EDGEweb's nudge: #51 step 1 and #57's Saves spike built in 0.74.0; REDbridge #22's asks; EDGErepo #1)"
   },
   {
    "name": "REDcode",
@@ -1810,7 +1835,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "#22",
-      "title": "window.* for REDcode's Game view: the game's window docked on a VS Code webview, off unless started with --windows; on main, not released",
+      "title": "window.* for REDcode's Game view: the game's window docked on a VS Code webview, off unless started with --windows; REDcode's asks from its 2026-11-23 test (an inset, the owner cleared while hung, the release key's Alt tap) built 2026-11-25; on main, not released",
       "status": "built, tests pending"
      },
      {
@@ -1987,7 +2012,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-20"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-25 (#21 closed; #23, #24 built)"
+   "checkedBy": "REDnode session, 2026-11-25 (EDGEweb's nudge: #51 step 1 and #57's Saves spike built in 0.74.0; REDbridge #22's asks; EDGErepo #1)"
   },
   {
    "name": "EDGEdeck",
@@ -5025,7 +5050,13 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerSpotTests": [],
-   "waitingOn": [],
+   "waitingOn": [
+    {
+     "who": "owner",
+     "what": "Approve moving v1 to EDGErepo #1's field-limit check (on main: a description over 255 characters stops at check, before any upload)",
+     "ref": "EDGErepo #1"
+    }
+   ],
    "ownerActions": [
     {
      "ref": "ER1",
@@ -5036,7 +5067,8 @@ window.EDGE_STATUS = {
    "risks": [
     "Anyone who can move v1 can run code with the organization's Nexus key",
     "A bad tag move breaks every tool's next release"
-   ]
+   ],
+   "checkedBy": "REDnode session, 2026-11-25 (EDGEweb's nudge: #51 step 1 and #57's Saves spike built in 0.74.0; REDbridge #22's asks; EDGErepo #1)"
   },
   {
    "name": "EDGEweb",
