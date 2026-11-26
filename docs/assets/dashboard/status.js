@@ -2228,8 +2228,8 @@ window.EDGE_STATUS = {
      "ref": "CLAUDE.md, Nexus OAuth"
     },
     {
-     "who": "EDGEmods",
-     "what": "Its extension (R4c) to call installMods and edgemodsMods end to end; EDGEdeck#16 parts 1 to 3 released (0.33.0, 0.34.0)",
+     "who": "owner",
+     "what": "The end-to-end hand test of EDGEmods' Install (R4c, built on installMods and edgemodsMods: EDGEmods 1d9fa7a) with a real EDGEdeck; EDGEdeck#16 closed 2026-11-26, parts 1 to 3 released (0.33.0, 0.34.0)",
      "ref": "EDGEdeck#16"
     }
    ],
@@ -2264,7 +2264,7 @@ window.EDGE_STATUS = {
     "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed in 0.33.0 (advisory GHSA-crv2-8m58-wxvv), players on older versions stay exposed until they update",
     "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
    ],
-   "checkedBy": "EDGEdeck session, 2026-11-25"
+   "checkedBy": "EDGEdeck session, 2026-11-26"
   },
   {
    "name": "EDGEbuilder",
