@@ -3737,7 +3737,7 @@ window.EDGE_STATUS = {
     },
     {
      "who": "EDGEchat",
-     "what": "Not blocking: EDGEfab's MCP server in EDGEchat's plugin 0.2.0 (wired, its test has a fab_add step); it raises its pin to edgefab-mcp 0.2.1, now on npm",
+     "what": "Not blocking: EDGEfab's MCP server in EDGEchat's plugin 0.2.0 (wired, its test has a fab_add step); pinned to edgefab-mcp 0.2.1 on its main (92dfac2); the owner runs its step 7, a fab_add through the plugin",
      "ref": "EDGEchat #5"
     },
     {
