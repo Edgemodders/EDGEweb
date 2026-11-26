@@ -1244,13 +1244,13 @@ window.EDGE_STATUS = {
      "name": "Sector layers L2 and L3",
      "steps": 10,
      "status": "passed",
-     "note": "Passed 2026-11-25 by EDGEweb's session by script (L2-1 to L3-6, no game, nothing judged by eye); three fixes from it (the line after undo, the same copy picked by Open Its Sector, a script's tab not opened twice) not run again (docs/testing.md, Sector layers L2 and L3)"
+     "note": "Passed 2026-11-25 by EDGEweb's session by script (L2-1 to L3-6, no game, nothing judged by eye), and the retest of its three fixes (docs/testing.md, Sector layers L2 and L3)"
     },
     {
      "name": "Animation Timeline TL2 to TL4",
      "steps": 11,
      "status": "partly run",
-     "note": "T1 to T10 passed 2026-11-25 by EDGEweb's session by script (what a script can read); four fixes from it (Add an animation on a new track, a block's blend following its end, a hand or foot over helper joints, a quiet Edit form) not run again; the look of T2 to T4 is the owner's, T11 needs the game (docs/testing.md, Animation Timeline TL2 to TL4)"
+     "note": "T1 to T10 passed 2026-11-25 by EDGEweb's session by script (what a script can read), with the retest of its fixes but one: trimming a move's end where its blend meets it, fixed again and not run; the look of T2 to T4 is the owner's, T11 needs the game (docs/testing.md, Animation Timeline TL2 to TL4)"
     },
     {
      "name": "Sector layers L4 and Sector Tools L1",
@@ -1262,7 +1262,7 @@ window.EDGE_STATUS = {
      "name": "Sector scripts: a changed script",
      "steps": 4,
      "status": "passed",
-     "note": "Passed 2026-11-25 by EDGEweb's session by script (H1 to H4); the fix it raised, a script already open shown in its tab, not run again (docs/testing.md, Sector scripts: a changed script)"
+     "note": "Passed 2026-11-25 by EDGEweb's session by script (H1 to H4), and the retest of its fix (docs/testing.md, Sector scripts: a changed script)"
     },
     {
      "name": "Sector Properties tab",
