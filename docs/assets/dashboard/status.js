@@ -1335,7 +1335,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDcode",
    "code": "RC",
-   "ownerSeq": 11,
+   "ownerSeq": 12,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1352,6 +1352,11 @@ window.EDGE_STATUS = {
     "name": "Roadmap C0 to C7, and animation steps A1 to A3",
     "source": "docs/index.md, docs/testing.md",
     "phases": [
+     {
+      "id": "SO",
+      "title": "Sector overlaps and the world index (a modder's report, 2026-11-26; docs/design/sector-overlaps.md draft 0.1): O1 thing-to-thing matching, O2 draw only matches, O3 proxies, W0 to W3 a local world index (built after asking, with progress); probe O0 found the example's cause",
+      "status": "planned"
+     },
      {
       "id": "C0",
       "title": "Decide",
@@ -1761,6 +1766,11 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     {
+     "ref": "RC12",
+     "what": "Agree the Sector overlaps and the world index page (docs/design/sector-overlaps.md, five decisions: helpers out, proxies by default, layers draw only matches, a shared index folder, when to ask); the modder reads it too",
+     "since": "2026-11-26"
+    },
+    {
      "ref": "RC1",
      "what": "Make the Animation Tools pack's Nexus page and say when to release it (AT3r; the in-game test AT3 passed 2026-11-24)",
      "since": "2026-11-22"
@@ -1826,7 +1836,7 @@ window.EDGE_STATUS = {
    "risks": [
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-25"
+   "checkedBy": "REDcode session, 2026-11-26"
   },
   {
    "name": "REDbridge",
