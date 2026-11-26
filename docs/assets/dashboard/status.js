@@ -4123,7 +4123,6 @@ window.EDGE_STATUS = {
     "needs": [
      "The owner's Tests A to D (in VS Code, about 45 minutes): none run",
      "The owner's Tests E to I (in the game, with EDGE Director; about 85 minutes): E partly run (E1, E2, E3, E5 pass), the rest not run",
-     "A rerun by script of 0.0.34's four small fixes from D6b Audio's round (a start edge dragged in and out, rounded numbers to the Director, a missing file's notes, the stand-in page's icon)",
      "GitHub setup: the social preview; whether the publish secrets reach the repo is unchecked (Pages is on since 2026-11-18)",
      "A Nexus page",
      "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
@@ -4246,7 +4245,7 @@ window.EDGE_STATUS = {
      "steps": 14,
      "status": "passed",
      "ranBy": "script",
-     "note": "14 of 14 on 0.0.33 with EDGE Director 0.7.0 (2026-11-26), in VS Code with a stand-in. Nobody listened: that sound is heard is the owner's to say (Test I). MP3 and FLAC not tried. Four small fixes from its notes in 0.0.34 with EDGE Director 0.7.1, not run"
+     "note": "14 of 14 on 0.0.33 with EDGE Director 0.7.0 (2026-11-26), in VS Code with a stand-in. Nobody listened: that sound is heard is the owner's to say (Test I). MP3 and FLAC not tried. Its four small fixes in 0.0.34 with EDGE Director 0.7.1 passed their rerun the same day"
     }
    ],
    "ownerSpotTests": [
