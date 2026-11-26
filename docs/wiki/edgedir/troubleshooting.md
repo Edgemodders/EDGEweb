@@ -2,9 +2,9 @@
 title: Troubleshooting EDGEdir
 nav_title: Troubleshooting
 section: EDGEdir
-order: 12
+order: 13
 description: "What to do when EDGEdir or EDGE Director does not do what you expect: the game is not read, the preview is empty, an animation will not play, Play in Game says the Director is missing, nobody appears in the game."
-reviewed: 2026-11-21
+reviewed: 2026-11-26
 ---
 
 # <span class="y">Troubleshooting</span>
@@ -42,7 +42,7 @@ EDGEdir is not released, and most of its in-game half is untested. Some of what 
 | It says EDGE Director is in the game's folder and is not running | Start the game and load a save. In REDnode's Mod Manager (F10) switch **EDGE Director** on and allow **bridge** and **archives** |
 | It says the EDGE Director in the game is older than EDGEdir needs | Build its zip again and install it over the old one |
 | EDGE Director is not in REDnode's Mod Manager | Check the folder `red4ext\plugins\REDnode\apps\edge-director` exists in the game's folder. It needs REDnode 0.67.2 or later: on an older REDnode the Mod Manager says so |
-| "Nothing to play in the game" | No actor track has both an actor and a clip the game can play, and there is no weather. The message names the first reason: for instance a track with clips and no actor |
+| "Nothing to play in the game" | No actor track has both an actor and a clip the game can play, and there is no weather and no sound. The message names the first reason: for instance a track with clips and no actor |
 | The line turns red: "Not played", with a reason | EDGE Director could not do a step, and says which: an animation could not be written, a person could not be spawned. Nobody is left behind |
 | "The player stopped: its people are gone from the game" | EDGE Director was switched off or ended while a scene played. Switch it on again and play |
 | "V was not found: load a save first" | The game is at a menu. Load a save |

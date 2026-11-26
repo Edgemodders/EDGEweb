@@ -2,16 +2,16 @@
 title: Settings, commands and keys
 nav_title: Settings, commands and keys
 section: EDGEdir
-order: 11
+order: 12
 description: "Every setting, view, command and key of EDGEdir in VS Code, the buttons of EDGE Director's window, and where EDGEdir keeps its files on your PC."
-reviewed: 2026-11-25
+reviewed: 2026-11-26
 ---
 
 # Settings, commands and <span class="y">keys</span>
 
 **EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
-A reference for EDGEdir 0.0.30 and EDGE Director 0.6.1.
+A reference for EDGEdir 0.0.33 and EDGE Director 0.7.0.
 
 | On this page | |
 |---|---|
@@ -63,7 +63,7 @@ From the command palette (`Ctrl+Shift+P`, type `EDGEdir`), or from the views' bu
 | **Show Log** | EDGEdir's log, for when something fails |
 | **Copy the Development Director into the Game** | For people working on EDGEdir itself: copies a built EDGE Director into the game folder. Players install its zip instead |
 
-In the scene editor's toolbar: the transport, **Play in Game**, **Add Track**, **Add Clip**, **Add Transition**, **Split**, **Save as Sequence**, **Delete**, zoom out and in, **Fit**, **Snap**.
+In the scene editor's toolbar: the transport, **Play in Game**, **Add Track**, **Add Clip** (on an audio track **Add Sound File** and **Add Game Sound** instead), **Add Transition**, **Split**, **Save as Sequence**, **Delete**, zoom out and in, **Fit**, **Snap**.
 
 ## Keys in the scene editor
 
@@ -106,6 +106,7 @@ It asks for two of REDnode's permissions, **bridge** and **archives**, to write 
 |---|---|
 | Your scenes and sequences (the Desk) | `%LOCALAPPDATA%\EDGEdir\desk` |
 | A scene's own pins | `<scene>.pins.json`, beside the scene's file on the Desk |
+| A scene's sound files | A folder named `audio`, beside the scene's file. On the Desk it is inside the scene's own folder |
 | What was read from the game, and bodies and animations for the preview | `%LOCALAPPDATA%\EDGEdir\cache`. Safe to delete: EDGEdir reads it again |
 | The folder EDGEdir and EDGE Director talk through | `%LOCALAPPDATA%\EDGEdir\play` |
 | EDGE Director, in the game | `red4ext\plugins\REDnode\apps\edge-director` |

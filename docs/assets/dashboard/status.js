@@ -4031,7 +4031,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.32",
+   "version": "0.0.33",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-26",
@@ -4090,7 +4090,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "D6",
-      "title": "Audio, camera, weather (agreed 2026-11-18). D6a Weather built as 0.0.28 with EDGE Director 0.5.0, not run; D6b Audio and D6c Camera not built",
+      "title": "Audio, camera, weather (agreed 2026-11-18). D6a Weather built as 0.0.28 with EDGE Director 0.5.0: passed by script in VS Code, not run in the game. D6b Audio built as 0.0.33 with EDGE Director 0.7.0 (2026-11-26): not run in VS Code or in the game. D6c Camera not built",
       "status": "in progress"
      },
      {
@@ -4114,7 +4114,8 @@ window.EDGE_STATUS = {
     "version": "first release",
     "needs": [
      "The owner's Tests A to D (in VS Code, about 45 minutes): none run",
-     "The owner's Tests E to H (in the game, with EDGE Director; about 70 minutes): E partly run (E1, E2, E3, E5 pass), the rest not run",
+     "The owner's Tests E to I (in the game, with EDGE Director; about 85 minutes): E partly run (E1, E2, E3, E5 pass), the rest not run",
+     "D6b Audio's round by script (14 steps, in VS Code with a stand-in): not run",
      "GitHub setup: the social preview; whether the publish secrets reach the repo is unchecked (Pages is on since 2026-11-18)",
      "A Nexus page",
      "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
@@ -4231,6 +4232,12 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "script",
      "note": "8 of 11 on 0.0.29 (2026-11-21); the three misses were fixed in 0.0.30 and passed their rerun. 0.0.31's small changes and 0.0.32's fixes passed by script on 2026-11-25, but for the game path warning's text, which was read in the log only"
+    },
+    {
+     "name": "D6b Audio",
+     "steps": 14,
+     "status": "not run",
+     "note": "In VS Code, and a stand-in for the game; on 0.0.33 with EDGE Director 0.7.0. The page was looked at in a plain browser and the player ran against the stand-in"
     }
    ],
    "ownerSpotTests": [
@@ -4289,6 +4296,12 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ref": "DR12",
      "since": "2026-11-18"
+    },
+    {
+     "id": "I",
+     "feature": "Sound: in the editor, then in the game (9 steps)",
+     "status": "not run",
+     "since": "2026-11-26"
     }
    ],
    "waitingOn": [
@@ -4355,7 +4368,7 @@ window.EDGE_STATUS = {
     "How the game's own join at a jump compares with the preview's transitions is not measured yet",
     "Unverified: that a person in a workspot can be moved while they play (Adjust in the game)"
    ],
-   "checkedBy": "EDGEdir session, 2026-11-25"
+   "checkedBy": "EDGEdir session, 2026-11-26"
   },
   {
    "name": "EDGEmobile",

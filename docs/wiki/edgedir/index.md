@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdir
 order: 0
 description: "EDGEdir, a director's tool for Cyberpunk 2077: lay out what the game's people do over time on a timeline in VS Code, watch it in 3D, and play and adjust it in the running game with EDGE Director. What it is, what it can do, and where it stands."
-reviewed: 2026-11-25
+reviewed: 2026-11-26
 ---
 
 # EDGE<span class="y">dir</span>
@@ -55,8 +55,9 @@ EDGEdir reads the characters and animations from your own game and lets you lay 
 | **Adjust it in the game**: move an actor to where V stands, nudge and turn them, fix the scene to a spot | [Adjusting and pins](adjust.html) |
 | **Name places** with pins, and have actors and the scene follow them | [Adjusting and pins](adjust.html#pins) |
 | **Change the weather** for part of a scene | [Weather](weather.html) |
+| **Add sound**: your own sound files, and the game's own sounds | [Sound](sound.html) |
 
-Not built yet: sound and camera tracks, packing a scene into a mod other players install, and V acting in a scene in the game. The timeline already has tracks for them, which hold named blocks for now.
+Not built yet: camera tracks, packing a scene into a mod other players install, and V acting in a scene in the game. The timeline already has tracks for them, which hold named blocks for now.
 
 ## Words you'll meet
 
@@ -87,7 +88,7 @@ Not built yet: sound and camera tracks, packing a scene into a mod other players
 
 ## Status
 
-**Version 0.0.32 with EDGE Director 0.6.1, not released (2026-11-25).**
+**Version 0.0.33 with EDGE Director 0.7.0, not released (2026-11-26).**
 
 | Part | Built | Tested |
 |---|---|---|
@@ -100,7 +101,8 @@ Not built yet: sound and camera tracks, packing a scene into a mod other players
 | EDGE Director's window: opening and playing a scene | Yes | By script against a stand-in for the game: 12 of 13 steps passed, and the one miss (a scene played from VS Code was not marked In the game) was fixed in 0.6.1 and passed when run again. **In the game, 2026-11-20:** it started, listed the Desk, and played two people through, on time and on the right sides. Pause, the playhead, Loop and the rest are not run there yet |
 | EDGE Director: adjust, pins | Yes | By script against a stand-in for the game, with VS Code open beside it: every step passed. Pins in the scene editor: every step passed. **Not in the game** |
 | Weather | Yes | In VS Code and against a stand-in, by script: 8 of 11 steps passed, and the three misses (a weather clip's inspector had no In the game lines) were fixed in 0.0.30 and passed when run again. **Not in the game** |
-| Sound, camera | No | |
+| Sound | Yes, on 2026-11-26 | **Not tested yet**, in VS Code or in the game. Its page was looked at in a plain browser, and EDGE Director's part ran against a stand-in |
+| Camera | No | |
 | Packing a scene into a mod | No | |
 
 "By script" means a Claude session ran the test's steps with real mouse and key presses, in a VS Code window or in EDGE Director's page in a browser; nobody watched. A "stand-in" runs EDGE Director's own code with no game and prints each thing it would ask the game to do. The owner's own tests by hand, and everything in the game, are still to come. The full record is on [EDGEdir's Tests page](https://edgemodders.github.io/EDGEdir/testing.html).
@@ -121,5 +123,6 @@ What is known not to match yet between the preview and the game is listed on [Pl
 | [Playing in the game](director.html) | EDGE Director's window, Play in Game, what the game will not match |
 | [Adjusting and pins](adjust.html) | Moving actors and the scene in the game, and named places |
 | [Weather](weather.html) | The weather track |
+| [Sound](sound.html) | Audio tracks: sound files and the game's own sounds |
 | [Settings, commands and keys](settings.html) | Every setting, command, view and key |
 | [Troubleshooting](troubleshooting.html) | When something does not work |
