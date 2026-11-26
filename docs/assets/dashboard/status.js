@@ -1,6 +1,6 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
 window.EDGE_STATUS = {
- "asOf": "2026-11-17",
+ "asOf": "2026-11-26",
  "ownerSummary": {
   "url": "https://claude.ai/artifact/2DWnvpnWxwxYkSgvLWDa2w",
   "refs": [
@@ -115,16 +115,6 @@ window.EDGE_STATUS = {
    ],
    "created": "2026-11-17",
    "updated": "2026-11-17"
-  },
-  {
-   "repo": "EDGEbuilder",
-   "number": 7,
-   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-18",
-   "updated": "2026-11-18"
   },
   {
    "repo": "EDGEbuilder",
@@ -244,43 +234,13 @@ window.EDGE_STATUS = {
   },
   {
    "repo": "EDGEmat",
-   "number": 9,
-   "title": "generateImage takes a size (2048² for EDGEfab's four-view pictures), and says its usage",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-10",
-   "updated": "2026-11-10"
-  },
-  {
-   "repo": "EDGEmat",
-   "number": 13,
-   "title": "materialsFromModel: keep the textures whose source didn't change (a glow strength change rewrites five textures)",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-18",
-   "updated": "2026-11-18"
-  },
-  {
-   "repo": "EDGEmat",
    "number": 15,
    "title": "Messages name EDGEmat and offer Reveal in REDcode; its Add to Project is easy to mistake for EDGEfab's",
    "labels": [
     "request"
    ],
    "created": "2026-11-19",
-   "updated": "2026-11-19"
-  },
-  {
-   "repo": "EDGEmobile",
-   "number": 1,
-   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-18",
-   "updated": "2026-11-18"
+   "updated": "2026-11-26"
   },
   {
    "repo": "EDGEquest",
@@ -486,7 +446,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-23",
-   "updated": "2026-11-23"
+   "updated": "2026-11-26"
   },
   {
    "repo": "REDbridge",
@@ -576,7 +536,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-20",
-   "updated": "2026-11-20"
+   "updated": "2026-11-26"
   },
   {
    "repo": "REDnode",
@@ -596,7 +556,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-23",
-   "updated": "2026-11-23"
+   "updated": "2026-11-26"
   },
   {
    "repo": "REDnode",
@@ -818,7 +778,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.73.1",
    "lastTagDate": "2026-11-25",
    "lastCommit": "2026-11-26",
-   "commitsSinceTag": 2,
+   "commitsSinceTag": 4,
    "sessions": [
     "REDnode, EDGEHack & REDagent",
     "rednode-95"
@@ -1343,7 +1303,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.10.17",
    "lastTagDate": "2026-11-25",
    "lastCommit": "2026-11-26",
-   "commitsSinceTag": 20,
+   "commitsSinceTag": 23,
    "sessions": [
     "REDcode"
    ],
@@ -1848,8 +1808,8 @@ window.EDGE_STATUS = {
    "version": "0.19.0",
    "lastTag": "v0.19.0",
    "lastTagDate": "2026-11-22",
-   "lastCommit": "2026-11-25",
-   "commitsSinceTag": 4,
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 5,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
    ],
@@ -2319,7 +2279,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.13.2",
    "lastTagDate": "2026-11-23",
    "lastCommit": "2026-11-26",
-   "commitsSinceTag": 41,
+   "commitsSinceTag": 42,
    "sessions": [
     "EDGEbuilder"
    ],
@@ -2908,7 +2868,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.3.4",
    "lastTagDate": "2026-11-22",
    "lastCommit": "2026-11-26",
-   "commitsSinceTag": 5,
+   "commitsSinceTag": 6,
    "sessions": [
     "EDGEmat"
    ],
@@ -4407,7 +4367,7 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-25",
+   "lastCommit": "2026-11-26",
    "commitsSinceTag": 0,
    "sessions": [
     "EDGEmobile"
@@ -5102,7 +5062,7 @@ window.EDGE_STATUS = {
    "version": "v1",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-18",
+   "lastCommit": "2026-11-26",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -5171,7 +5131,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-26",
-   "commitsSinceTag": 471,
+   "commitsSinceTag": 480,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"
