@@ -1322,8 +1322,8 @@ window.EDGE_STATUS = {
     "phases": [
      {
       "id": "SO",
-      "title": "Sector overlaps and the world index (a modder's report, 2026-11-26; docs/design/sector-overlaps.md draft 0.1): O1 thing-to-thing matching, O2 draw only matches, O3 proxies, W0 to W3 a local world index (built after asking, with progress); probe O0 found the example's cause",
-      "status": "planned"
+      "title": "Sector overlaps and the world index (a modder's report; docs/design/sector-overlaps.md, agreed 2026-11-26): O1 thing-to-thing matching (built 2026-11-26), then O2 draw only matches, O3 proxies, W0 to W3 a local world index (built after asking, with progress)",
+      "status": "in progress"
      },
      {
       "id": "C0",
@@ -1464,6 +1464,12 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+{
+ "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
+ "steps": 12,
+ "status": "not run",
+ "note": "Built 2026-11-26: checked by unit checks, against the game (o1-check.mjs: the modder's example no longer listed) and in Chrome over the real REDbridge (docs/testing.md)"
+},
 {
  "name": "The tree in its own tab (To Tab, the Sector view)",
  "steps": 9,
@@ -1742,7 +1748,9 @@ window.EDGE_STATUS = {
     {
      "ref": "RC12",
      "what": "Agree the Sector overlaps and the world index page (docs/design/sector-overlaps.md, five decisions: helpers out, proxies by default, layers draw only matches, a shared index folder, when to ask); the modder reads it too",
-     "since": "2026-11-26"
+     "since": "2026-11-26",
+     "done": "2026-11-26",
+     "outcome": "Agreed with all five recommendations; O1 built the same day, REDbridge #25 filed"
     },
     {
      "ref": "RC1",
