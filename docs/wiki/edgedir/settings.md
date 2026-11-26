@@ -4,7 +4,7 @@ nav_title: Settings, commands and keys
 section: EDGEdir
 order: 11
 description: "Every setting, view, command and key of EDGEdir in VS Code, the buttons of EDGE Director's window, and where EDGEdir keeps its files on your PC."
-reviewed: 2026-11-21
+reviewed: 2026-11-25
 ---
 
 # Settings, commands and <span class="y">keys</span>
@@ -28,7 +28,7 @@ In VS Code's settings, search for `edgedir`. All three can stay empty when REDco
 
 | Setting | Means |
 |---|---|
-| `edgedir.gamePath` | The Cyberpunk 2077 folder. Empty: EDGEdir uses REDcode's or EDGEdeck's, or looks for the game itself |
+| `edgedir.gamePath` | The Cyberpunk 2077 folder. Empty: EDGEdir uses REDcode's or EDGEdeck's, or looks for the game itself. A folder that is not the game's (no `bind\Cyberpunk2077.exe` in it) is not used, and a warning says so |
 | `edgedir.bridgePath` | `REDbridge.exe`, or its folder. Empty: REDcode's copy |
 | `edgedir.dotnetRoot` | The folder of a .NET runtime installed for one user, for REDbridge. Empty: REDcode's setting, or the system's .NET |
 

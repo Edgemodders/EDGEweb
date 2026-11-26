@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdir
 order: 0
 description: "EDGEdir, a director's tool for Cyberpunk 2077: lay out what the game's people do over time on a timeline in VS Code, watch it in 3D, and play and adjust it in the running game with EDGE Director. What it is, what it can do, and where it stands."
-reviewed: 2026-11-21
+reviewed: 2026-11-25
 ---
 
 # EDGE<span class="y">dir</span>
@@ -87,7 +87,7 @@ Not built yet: sound and camera tracks, packing a scene into a mod other players
 
 ## Status
 
-**Version 0.0.30 with EDGE Director 0.6.1, not released (2026-11-21).**
+**Version 0.0.32 with EDGE Director 0.6.1, not released (2026-11-25).**
 
 | Part | Built | Tested |
 |---|---|---|
@@ -97,9 +97,9 @@ Not built yet: sound and camera tracks, packing a scene into a mod other players
 | Transitions and sequences | Yes | In VS Code, by script: every step passed |
 | Sets | Yes | In VS Code, by script: every step passed, with a hand-written set file. Not yet with a scene EDGEbuilder itself saved |
 | Play in Game from VS Code | Yes | In VS Code against a stand-in for the game: passed. **Not in the game** |
-| EDGE Director's window: opening and playing a scene | Yes | By script against a stand-in for the game: 12 of 13 steps passed; the one miss (a scene played from VS Code was not marked In the game) is fixed in 0.6.1 and not run again yet. **In the game, 2026-11-20:** it started, listed the Desk, and played two people through, on time and on the right sides. Pause, the playhead, Loop and the rest are not run there yet |
+| EDGE Director's window: opening and playing a scene | Yes | By script against a stand-in for the game: 12 of 13 steps passed, and the one miss (a scene played from VS Code was not marked In the game) was fixed in 0.6.1 and passed when run again. **In the game, 2026-11-20:** it started, listed the Desk, and played two people through, on time and on the right sides. Pause, the playhead, Loop and the rest are not run there yet |
 | EDGE Director: adjust, pins | Yes | By script against a stand-in for the game, with VS Code open beside it: every step passed. Pins in the scene editor: every step passed. **Not in the game** |
-| Weather | Yes | In VS Code and against a stand-in, by script: 8 of 11 steps passed. The three misses (a weather clip's inspector had no In the game lines) are fixed in 0.0.30 and not run again yet. **Not in the game** |
+| Weather | Yes | In VS Code and against a stand-in, by script: 8 of 11 steps passed, and the three misses (a weather clip's inspector had no In the game lines) were fixed in 0.0.30 and passed when run again. **Not in the game** |
 | Sound, camera | No | |
 | Packing a scene into a mod | No | |
 

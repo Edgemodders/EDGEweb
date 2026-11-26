@@ -4,7 +4,7 @@ nav_title: Playing in the game
 section: EDGEdir
 order: 8
 description: "Playing an EDGEdir scene in the running game with EDGE Director: its window, opening a scene, Play, Stop, Start Again, the playhead and Loop, the cast and Go There, Play in Game from VS Code, and what the game will not play as the preview shows."
-reviewed: 2026-11-21
+reviewed: 2026-11-25
 ---
 
 # Playing in the <span class="y">game</span>
@@ -69,7 +69,7 @@ When you save a scene in VS Code, the window shows the change within a few secon
 
 The first play of a scene takes a few seconds longer: each actor's animations are written into a form the game plays, once. After that only actors whose clips changed are written again.
 
-An actor holds the last pose of their last clip until **Stop**. This is new and untested in the game; before it, the last clip played again and again.
+An actor holds still where their lane has no clip: before their first clip they wait in its first pose, in a gap they keep the last pose of the clip before it, and after their last clip they hold its last pose until **Stop**. In the game so far (2026-11-20) the cast held its last pose at the end; the holds in a gap and at **Pause** did not yet work as meant there, and a changed build is not tested. The preview in VS Code still plays a clip again through a gap.
 
 The bar under the strip makes the strip taller or shorter, and the lanes scroll inside it.
 
