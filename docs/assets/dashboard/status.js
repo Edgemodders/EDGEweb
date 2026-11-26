@@ -2309,7 +2309,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "ST",
-      "title": "Sector Tools under World (S1 Sectors released in 0.13.2; S2 3D view, S3 previews; EDGEbuilder #9)",
+      "title": "Sector Tools under World (S1 Sectors released in 0.13.2; Open in REDcode built for 0.14.0, EDGEbuilder #11; S2 3D view, S3 previews; EDGEbuilder #9)",
       "status": "in progress"
      },
      {
@@ -2506,6 +2506,13 @@ window.EDGE_STATUS = {
      "note": "2026-11-12 on 0.10.9, the owner's laptop"
     },
     {
+     "name": "Open in REDcode (0.14.0, in game with REDcode 0.10.18)",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-25 (EDGEbuilder #11, part 1): an arrow in the Sector drawer and a button in Selected Node call REDcode openSector; the manifest lists redcode.openSector in calls, so REDnode asks once. Checked in REDnode host with REDcode package 0.4.0 from its checkout: the Mod Manager hint until allowed, the request carries the sector and entry 288, no-window and opened answers. Not deployed; the game steps need REDcode 0.10.18 released"
+    },
+    {
      "name": "T0 Tools probe (in game)",
      "steps": 10,
      "status": "not run",
@@ -2561,6 +2568,11 @@ window.EDGE_STATUS = {
      "who": "REDcode",
      "what": "A plugin contract in its sector view, so EDGEbuilder for VS Code adds scenes on top of it (not urgent; REDcode's to design)",
      "ref": "REDcode #35"
+    },
+    {
+     "who": "REDcode",
+     "what": "Release 0.10.18 with openSector (its redcode package 0.4.0), for Open in REDcode in game",
+     "ref": "EDGEbuilder #11"
     }
    ],
    "ownerActions": [
@@ -2573,6 +2585,11 @@ window.EDGE_STATUS = {
      "ref": "EB2",
      "what": "G0: look at the baked generated scene in the game (0.13's tests are done); the team was asked for their archives on 2026-11-23, and the look can start without them",
      "since": "2026-11-23"
+    },
+    {
+     "ref": "EB3",
+     "what": "Decide two requests: EDGEbuilder #6 (a vehicle kind and a scene id, for EDGEdir) and #11 part 2 (whether EDGEbuilder owns assemblies); neither is planned yet",
+     "since": "2026-11-25"
     }
    ],
    "risks": [
