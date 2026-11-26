@@ -3865,7 +3865,6 @@ window.EDGE_STATUS = {
     "needs": [
      "The owner's Tests A to D (in VS Code, about 45 minutes): none run",
      "The owner's Tests E to H (in the game, with EDGE Director; about 70 minutes): E partly run (E1, E2, E3, E5 pass), the rest not run",
-     "Two fixes in 0.0.32, not run: the inspector draws again when the weather list comes, and the game path warning prints its path whole (0.0.31's three ran by script on 2026-11-25: one passed, these two did not)",
      "GitHub setup: the social preview; whether the publish secrets reach the repo is unchecked (Pages is on since 2026-11-18)",
      "A Nexus page",
      "A Nexus summary block for the release's version in CHANGELOG.md (EDGEdir #1 is done: the notes script checks it)"
@@ -3981,7 +3980,7 @@ window.EDGE_STATUS = {
      "steps": 11,
      "status": "passed",
      "ranBy": "script",
-     "note": "8 of 11 on 0.0.29 (2026-11-21); the three misses were fixed in 0.0.30 and passed their rerun. Of 0.0.31's three small changes one passed by script on 2026-11-25; two are fixed again in 0.0.32, not run"
+     "note": "8 of 11 on 0.0.29 (2026-11-21); the three misses were fixed in 0.0.30 and passed their rerun. 0.0.31's small changes and 0.0.32's fixes passed by script on 2026-11-25, but for the game path warning's text, which was read in the log only"
     }
    ],
    "ownerSpotTests": [
