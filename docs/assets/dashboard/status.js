@@ -1386,12 +1386,12 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
-{
- "name": "The mesh viewer's EDGEmat materials (#6)",
- "steps": 5,
- "status": "passed",
- "note": "Passed 2026-11-25 by EDGEweb's session by script with EDGEmat 0.3.4 (E1 to E5, the pictures looked at by the REDcode session): EDGEmat's look, a recolour in EDGEmat redrawn in REDcode's open tab; one note fixed (EDGEmat's note under Flat colours), not run again (docs/testing.md)"
-},
+    {
+     "name": "The mesh viewer's EDGEmat materials (#6)",
+     "steps": 5,
+     "status": "passed",
+     "note": "Passed 2026-11-25 by EDGEweb's session by script with EDGEmat 0.3.4 (E1 to E5, the pictures looked at by the REDcode session): EDGEmat's look, a recolour in EDGEmat redrawn in REDcode's open tab; one note fixed (EDGEmat's note under Flat colours), not run again (docs/testing.md)"
+    },
     {
      "name": "Sector layers L2 and L3",
      "steps": 10,
@@ -2785,7 +2785,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmat",
    "code": "EM",
-   "ownerSeq": 6,
+   "ownerSeq": 7,
    "group": "Specialist toolkits",
    "role": "Material editor: read, edit, generate and apply game materials, and the Wardrobe Designer app",
    "stage": "released",
@@ -2871,6 +2871,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "Messages name EDGEmat (#15)",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-25: every message starts with EDGEmat:, and Add to Project and the part commands on a project mesh offer Reveal in REDcode. #15 stays open until it passes. For 0.3.5"
+    },
     {
      "name": "Game materials on a Desk mesh",
      "steps": 12,
@@ -2992,6 +2999,11 @@ window.EDGE_STATUS = {
      "since": "2026-11-25"
     },
     {
+     "ref": "EM7",
+     "what": "Run the hand test \"Messages name EDGEmat\" (docs/testing.md; EDGEmat #15, on EDGEmat_PropParts)",
+     "since": "2026-11-25"
+    },
+    {
      "ref": "EM5",
      "what": "Three screenshots for Wardrobe Designer's Nexus page",
      "since": "2026-11-16"
@@ -3002,7 +3014,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-25 (part commands for game meshes on the Desk built, desk-parts-check passed, hand test open; Connect's claude-outside-PATH fix built; next: shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-25 (#9 and #13 built, checked and closed, for EDGEfab through edgemat-core at 0.3.5; #15 built, its hand test open; part commands for game meshes on the Desk built, hand test open; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
