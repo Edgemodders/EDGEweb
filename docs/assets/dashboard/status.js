@@ -4057,9 +4057,9 @@ window.EDGE_STATUS = {
      "ref": "EDGEbuilder #6"
     },
     {
-     "who": "EDGEfab",
-     "what": "Its first stored animation, to try EDGEdir's reader on",
-     "ref": "EDGEfab #7"
+     "who": "REDcode",
+     "what": "A first stored animation (Add Clip from GLB or Uthana), to try EDGEdir's reader of made animations on; EDGEfab #7 is closed and EDGEfab stores none",
+     "ref": "EDGEfab #7 (closed 2026-11-25)"
     },
     {
      "who": "REDnode",
