@@ -5,7 +5,6 @@ What changed on https://edgemodders.ai and its wiki, for players and modders. Ev
 How to keep it:
 
 - With each change a reader would notice, add a line under **Unreleased**, in its group: **New**, **Changed**, **Fixed** or **Other**. One change per line, in the commit that makes the change. Leave out typo fixes and changes only the build sees.
-- Dashboard: a Missing screenshots section (07) counts the placeholders left on the wiki and the platform page, by tool and by who takes them, and links the owner's image dossier. `tools/dashboard/shots.py` writes the count and the dossier's page.
 - Wiki: EDGEwave and EDGEquest have their first screenshots: the sound editor, the Radio preset, Add to Project, the Storyboard, a beat page, the sound picker and game quest pages: https://edgemodders.ai/wiki/edgequest/first-quest.html
 - Wiki: EDGEmat has screenshots of Find, the setup editor, editing a layer, Save to Project, Game Materials, surface and microblend pages, the Desk and the 3D view: https://edgemodders.ai/wiki/edgemat/setup-editor.html
 - Wiki: REDcode has screenshots on twelve of its pages: the Project view, Game Assets, LocKeys, TweakDB, the CR2W editor, the table view, the texture, 3D, audio and sound viewers, Find Items and the settings: https://edgemodders.ai/wiki/redcode/viewers.html
@@ -18,6 +17,7 @@ How to keep it:
 
 **New**
 
+- Dashboard: a Missing screenshots section (07) counts the placeholders left on the wiki and the platform page, by tool and by who takes them, and links the owner's image dossier. `tools/dashboard/shots.py` writes the count and the dossier's page.
 - Wiki: REDcode follows 0.10.17 and redcode-mcp 0.7.0 (2026-11-25): a page for the new Lip Sync editor, a page of its own for the sector view (Overlaps, the Properties tab, search that selects, Back and Forward, sector scripts), editing made animations in REDcode and in Blender, the animation view's Clip, Edit and Animations tabs and its media buttons, a sector's nodeData and instanced mesh buffers in the CR2W editor, and the new tools for assistants: https://edgemodders.ai/wiki/redcode/lipsync.html
 - Dashboard: an ID in "Waiting on the owner" links to that item's entry in the Owner Summary when it has one (a private page, which opens for the owner only).
 - Wiki: 22 more screenshots of the editor tools, on 16 pages. REDcode: New File, Search game files, the Library view, the animation view, a synced set, the Make panel, a sector in 3D, a Volume, the Keys view, the HUD theme and its Marketplace listing. EDGEdeck: adding a mod, a FOMOD installer, a first deploy, Deploy on one mod, the Conflicts page and a REDcode project as a mod. EDGEmat: a prop's parts on the Desk and its listing. EDGEquest: Check Quest Mod. EDGEkit: the pack's page: https://edgemodders.ai/wiki/
