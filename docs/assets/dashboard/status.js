@@ -3380,7 +3380,7 @@ window.EDGE_STATUS = {
    "group": "Specialist toolkits",
    "role": "The EDGE plugin for Claude Code: modding skills, commands and the EDGE MCP servers in one install",
    "stage": "released",
-   "version": "0.1.1",
+   "version": "0.2.1",
    "lastTag": "v0.1.1",
    "lastTagDate": "2026-11-02",
    "lastCommit": "2026-11-08",
@@ -3424,9 +3424,10 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.2.1",
+    "version": null,
     "needs": [
-     "The owner's go-ahead: every test since 0.1.1 has passed"
+     "edgedeck-mcp 0.34.2 (out after the 0.2.1 tests) raised and checked",
+     "The next feature: EDGEguide's G4 once EDGEguide G1 to G3 exist"
     ]
    },
    "handTests": [
@@ -3502,23 +3503,12 @@ window.EDGE_STATUS = {
      "ref": "CLAUDE.md"
     }
    ],
-   "ownerActions": [
-    {
-     "ref": "EC1",
-     "what": "Run the next release with Update Nexus Mods: the first since the move to the shared Nexus tool",
-     "since": "2026-11-16"
-    },
-    {
-     "ref": "EC3",
-     "what": "Say go for the 0.2.1 release: every test since 0.1.1 passed",
-     "since": "2026-11-25"
-    }
-   ],
+   "ownerActions": [],
    "risks": [
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (every hand test for 0.2.1 passed; the release waits on the owner)"
+   "checkedBy": "EDGEchat session, 2026-11-25 (0.2.1 released: GitHub v0.2.1 and Nexus; the wiki brought up to it, EDGEweb fed1c18 and b4b8f65; #3, #4, #5 closed)"
   },
   {
    "name": "REDsave",
