@@ -3674,7 +3674,7 @@ window.EDGE_STATUS = {
      "steps": 11,
      "status": "passed",
      "ranBy": "owner",
-     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 11 VS Code steps, passed 2026-11-17 (owner)"
+     "note": "Part A offline by Claude passed 2026-11-17 (23 checks); part B, 11 VS Code steps, passed 2026-11-17 (owner); the failed rename with a second window, scripted by the EDGEweb session on 0.2.1, passed 2026-11-25"
     },
     {
      "name": "F1 Add to Project again, Open in EDGEmat and Reveal in REDcode",
