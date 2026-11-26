@@ -2069,7 +2069,7 @@ window.EDGE_STATUS = {
    "group": "Core toolkits",
    "role": "Mod manager: a library of mods outside the game folder, deployed with hardlinks; extension, command line and MCP server",
    "stage": "released",
-   "version": "0.34.2",
+   "version": "0.34.3",
    "lastTag": "v0.34.2",
    "lastTagDate": "2026-11-26",
    "lastCommit": "2026-11-26",

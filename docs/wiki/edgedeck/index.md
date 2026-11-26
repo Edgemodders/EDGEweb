@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdeck
 order: 0
 description: "EDGEdeck, the EDGE platform's mod manager for Cyberpunk 2077: what it is, what it's for, why you might want it, and where to start."
-reviewed: 2026-11-25
+reviewed: 2026-11-26
 ---
 
 # EDGE<span class="y">deck</span>
@@ -55,7 +55,7 @@ EDGEdeck is the part of EDGE that puts mods into the game. It works on its own, 
 
 ## Status
 
-**Released, as a preview.** The latest is EDGEdeck 0.34.2 (2026-11-25), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
+**Released, as a preview.** The latest is EDGEdeck 0.34.3 (2026-11-26), for Windows only, on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=edgemodders.edgedeck), [Open VSX](https://open-vsx.org/extension/edgemodders/edgedeck) and [Nexus Mods](https://www.nexusmods.com/cyberpunk2077/mods/35420). It updates itself. It is young: its developer uses it daily on two PCs, so expect rough edges and [report them](https://github.com/Edgemodders/EDGEdeck/issues).
 
 | | |
 |---|---|
