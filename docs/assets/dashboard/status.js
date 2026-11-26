@@ -1236,15 +1236,15 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "Hand tests of what is built since 0.10.17: Sector scripts known by their text (H1 to H4), Sector layers L2 and L3 (L2-1 to L3-6), Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11). Next, agreed: sector materials M2, Lip Sync L2's design page"
+"Hand tests of what is built since 0.10.17: Sector layers L4 and Sector Tools L1 (H1 to H9, with the game and EDGEbuilder), the Animation Timeline TL2 to TL4 (T1 to T11; EDGEweb runs T1 to T10 by script, the look is the owner's). Sector scripts known by their text and Sector layers L2 and L3 passed by script on 2026-11-25. Next, agreed: sector materials M2, Lip Sync L2's design page"
     ]
    },
    "handTests": [
     {
      "name": "Sector layers L2 and L3",
      "steps": 10,
-     "status": "not run",
-     "note": "Built 2026-11-25: scripts over layers, changes into several sectors, the Links row, Select Placements in 3D; checked by unit checks (94) and on exterior_-22_7_0_0 through REDbridge (docs/testing.md, Sector layers L2 and L3)"
+     "status": "passed",
+     "note": "Passed 2026-11-25 by EDGEweb's session by script (L2-1 to L3-6, no game, nothing judged by eye); three fixes from it (the line after undo, the same copy picked by Open Its Sector, a script's tab not opened twice) not run again (docs/testing.md, Sector layers L2 and L3)"
     },
     {
      "name": "Animation Timeline TL2 to TL4",
@@ -1261,8 +1261,8 @@ window.EDGE_STATUS = {
     {
      "name": "Sector scripts: a changed script",
      "steps": 4,
-     "status": "not run",
-     "note": "Built 2026-11-25: a script changed outside REDcode is asked about again before it runs; checked by script (docs/testing.md, Sector scripts: a changed script, H1 to H4)"
+     "status": "passed",
+     "note": "Passed 2026-11-25 by EDGEweb's session by script (H1 to H4); the fix it raised, a script already open shown in its tab, not run again (docs/testing.md, Sector scripts: a changed script)"
     },
     {
      "name": "Sector Properties tab",
