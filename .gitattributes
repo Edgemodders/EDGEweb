@@ -1,0 +1,5 @@
+# One kind of line ending in every checkout, so a scripted edit always meets the same thing.
+# See REDnode's CLAUDE.md, "Writing files on this PC".
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
