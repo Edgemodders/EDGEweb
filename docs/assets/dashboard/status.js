@@ -3680,13 +3680,6 @@ window.EDGE_STATUS = {
      "note": ""
     },
     {
-     "name": "1.140.4 to 1.140.6 installers",
-     "steps": null,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Each released straight away at the owner's request"
-    },
-    {
      "name": "1.143.1 smoke test (K5)",
      "steps": null,
      "status": "passed",
@@ -3733,10 +3726,10 @@ window.EDGE_STATUS = {
    ],
    "risks": [
     "The installer is not signed, so Windows SmartScreen may warn",
-    "The 1.140.4 to 1.140.6 releases shipped with no installer hand test (1.143.1 had one)",
+    "The 1.140.4 to 1.140.6 releases shipped with no installer hand test; no longer offered, and 1.143.1's smoke test ran a full install (the test retired 2026-11-27, the owner)",
     "Upstream moves about weekly (1.147.0 on 2026-11-18); EDGEkit is on Code - OSS 1.143.1 since 2026-11-19 (EDGEkit 1.143.2, 2026-11-26, a security fix on the same base)"
    ],
-   "checkedBy": "EDGEkit session, 2026-11-26"
+   "checkedBy": "EDGEkit session, 2026-11-27"
   },
   {
    "name": "EDGEchat",
