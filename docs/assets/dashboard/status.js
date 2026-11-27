@@ -1479,6 +1479,18 @@ window.EDGE_STATUS = {
  "note": "Passed 2026-11-26 by the owner, steps 1 to 5 (\"It looks a lot better\"); matched to the game by script within a median 1.6 mm, the bulges' rule open (docs/testing.md)"
 },
     {
+    "name": "Use in Timeline (a game clip onto the made clip's timeline)",
+    "steps": 5,
+    "status": "not run",
+    "note": "Built 2026-11-26: type and unit checks; not run in VS Code, as it crosses two tabs (docs/testing.md, U1 to U5)"
+   },
+   {
+    "name": "Clip search (find game clips by words)",
+    "steps": 8,
+    "status": "not run",
+    "note": "Built 2026-11-26: the clip index (14,016 files, 146,814 clips, about two minutes to read once), its unit check, the search over the real index (10 to 30 ms), and the form in Chrome on the timeline harness; not run in VS Code (docs/testing.md, S1 to S8)"
+   },
+   {
      "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
      "steps": 12,
      "status": "not run",
