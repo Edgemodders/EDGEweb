@@ -3035,6 +3035,13 @@ window.EDGE_STATUS = {
    },
    "handTests": [
     {
+     "name": "Wardrobe Designer: window fixes (in game)",
+     "steps": 8,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-27 (owner's ask): the Reshape test's other faults (window size, following V's clothes every 4 s, the larger picture in the window, the see-through lower part). Built into the app after the dropdown test"
+    },
+    {
      "name": "Wardrobe Designer: the Clothing dropdown (in game)",
      "steps": 9,
      "status": "not run",
@@ -3109,7 +3116,7 @@ window.EDGE_STATUS = {
      "steps": 12,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Steps 1 to 8 run 2026-11-16; 9 to 12 open; faults found, fixes not built yet; reruns after them"
+     "note": "Steps 1 to 8 run 2026-11-16; 9 to 12 open; its faults fixed 2026-11-27 (test Wardrobe Designer: window fixes); reruns after it"
     },
     {
      "name": "Reshape with the game's materials (in game)",
@@ -3189,7 +3196,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-27 (Wardrobe Designer: Clothing dropdown built, its in-game test open; Messages name EDGEmat partly run by script, two differences fixed in e5ab604; next: shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-27 (Wardrobe Designer: Clothing dropdown and the Reshape test's window fixes built, their in-game tests open; Messages name EDGEmat partly run by script, two differences fixed; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
