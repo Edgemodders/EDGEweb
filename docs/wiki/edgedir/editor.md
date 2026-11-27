@@ -4,7 +4,7 @@ nav_title: The scene editor
 section: EDGEdir
 order: 3
 description: "EDGEdir's scene editor in VS Code: the timeline with its tracks and clips, moving, trimming and splitting, the transport, the inspector, the Desk where scenes are kept, and the scene's file."
-reviewed: 2026-11-21
+reviewed: 2026-11-26
 ---
 
 # The scene <span class="y">editor</span>
@@ -107,7 +107,7 @@ The Desk is where EDGEdir keeps scenes you are working on. It is a folder on you
 | **Sequences** | The [sequences](transitions.html#sequences) you saved, under their own heading |
 | **Recent** | Scenes you opened from somewhere else on the PC |
 
-{% include shot.html src="/assets/shots/edgedir/desk-view.png" caption="The Desk view" shows="EDGEdir's Desk view in VS Code: New Scene at the top, a few scenes, the Sequences heading with one sequence, and Recent." %}
+{% include shot.html src="/assets/shots/edgedir/desk-view.png" caption="The Desk view" shows="EDGEdir's Desk view in VS Code: two scenes, and the Sequences heading with one sequence under it. New Scene is a button in the view's title bar, which shows when the mouse is over the view." %}
 
 EDGE Director in the game lists the same Desk, so a scene made here can be opened there.
 

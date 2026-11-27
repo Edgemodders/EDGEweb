@@ -31,7 +31,7 @@ Select an actor track and click **Choose Actor...** in the inspector.
 | **V (the player)** | On top, once for each body. A scene has V once at most |
 | An appearance | Most characters have several looks. A second list offers them; "Any" lets the game pick |
 
-{% include shot.html src="/assets/shots/edgedir/actors-picker.png" caption="Choosing an actor" shows="The Choose Actor list in VS Code with a few letters typed: V on top in two bodies, then matching characters of the game, each with its record name." %}
+{% include shot.html src="/assets/shots/edgedir/actors-picker.png" caption="Choosing an actor" shows="The Choose Actor list in VS Code before anything is typed: V on top in two bodies, then characters of the game, each with its record name." %}
 
 The inspector then shows the actor, their **record** (the game's name for the character), appearance and **rig** (their skeleton). **Change Actor...** swaps in someone else and keeps the track's clips.
 
@@ -52,7 +52,7 @@ The **Animations** view lists what EDGEdir read from your game.
 | **Project** | Animations made in REDcode in the open REDcode project |
 | **Library** | Made animations kept in your EDGE Library |
 
-{% include shot.html src="/assets/shots/edgedir/animations-view.png" caption="The Animations view" shows="The Animations view with a search typed: a list of the game's animations that match, each with its length and its file, and a + at the right of the row under the mouse." %}
+{% include shot.html src="/assets/shots/edgedir/animations-view.png" caption="The Animations view" shows="The Animations view with a search typed: a list of the game's animations that match, each with its length and its file. A + shows at the right of a row when the mouse is over it." %}
 
 | In the view's title bar | Does |
 |---|---|

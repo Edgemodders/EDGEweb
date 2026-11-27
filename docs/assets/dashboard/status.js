@@ -4460,7 +4460,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "DR4",
-     "what": "Wiki screenshots: nine placeholders in EDGEdir's wiki section wait for shots from VS Code and the game (save them into EDGEweb's docs/assets/shots/inbox/)",
+     "what": "Wiki screenshots: five placeholders in EDGEdir's wiki section wait for shots, four from the game and one of a mod manager (save them into EDGEweb's docs/assets/shots/inbox/); the four from VS Code were taken by EDGEweb on 2026-11-26",
      "since": "2026-11-18"
     }
    ],

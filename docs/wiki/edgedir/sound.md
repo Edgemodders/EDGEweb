@@ -13,7 +13,7 @@ reviewed: 2026-11-26
 
 A scene can have sound. A clip on an **audio track** is one of two things: a **sound file** of your own, such as a spoken line or a piece of music, or one of **the game's own sounds**, named by its sound event.
 
-**Not tested in the game yet, and nobody has listened to it yet.** Sound was built on 2026-11-26. In VS Code and against a stand-in for the game, a test by script passed all 14 of its steps the same day: sound files were read and drawn, trimmed, split and sent to the game's side on time. A script cannot hear, so whether the sound comes out of the speakers is still to be checked by hand. WAV and OGG files were tried; MP3 and FLAC were not.
+**Not tested in the game yet, and nobody has listened to it yet.** Sound was built on 2026-11-26. In VS Code and against a stand-in for the game, a test by script passed all 14 of its steps the same day: sound files were read and drawn, trimmed, split and sent to the game's side on time. A script cannot hear, so whether the sound comes out of the speakers is still to be checked by hand. WAV, OGG, MP3 and FLAC files were each read and drawn.
 
 | On this page | |
 |---|---|
