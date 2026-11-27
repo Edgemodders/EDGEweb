@@ -5059,9 +5059,9 @@ window.EDGE_STATUS = {
     {
      "name": "G1: Claude Code signs in, shows EDGEdeck's mods and runs Deploy after asking",
      "steps": "EDGEguide design, \"G1 as built\", last paragraph",
-     "status": "not run",
-     "ranBy": null,
-     "note": "edgeguide-0.0.1.vsix from npm run package; not published"
+     "status": "partly run",
+     "ranBy": "script",
+     "note": "2026-11-27, by EDGEweb's session at the owner's go, in EDGEkit 1.143.2: sign-in, the Mods view and the ask before ui_run worked (No ran nothing, Yes started Deploy); the Deploy stopped at EDGEdeck's own \"Quit the game first\" with the game running, so a Deploy that completes is left"
     }
    ],
    "ownerSpotTests": [],
@@ -5081,15 +5081,17 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EG3",
-     "what": "Run the G1 hand test: install edgeguide-0.0.1.vsix, add the server to Claude Code, sign in, ask Claude to show EDGEdeck's mods and deploy (EDGEguide design, \"G1 as built\")",
-     "since": "2026-11-26"
+     "what": "Run the G1 hand test: install edgeguide-0.0.1.vsix, add the server to Claude Code, sign in, ask Claude to show EDGEdeck's mods and deploy (EDGEguide design, \"G1 as built\") (run by EDGEweb's session at the owner's go; a completed Deploy is left)",
+     "since": "2026-11-26",
+     "done": "2026-11-27"
     }
    ],
    "risks": [
     "Built from the EDGEkit session (no session of its own); only unit-tested so far",
-    "The other windows do not pass calls yet: the first window opened answers, focused or not"
+    "The other windows do not pass calls yet: the first window opened answers, focused or not",
+    "With EDGEchat, Claude Code also has edgedeck_deploy, so a plain \"deploy\" may skip EDGEguide; which path Claude takes is for G2, with EDGEchat"
    ],
-   "checkedBy": "EDGEkit session, 2026-11-26 (G1 built at the owner's request)"
+   "checkedBy": "EDGEkit session (EDGEguide), 2026-11-27"
   },
   {
    "name": "VATS",
