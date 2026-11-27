@@ -4396,12 +4396,12 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDnode",
-     "what": "V as an actor in the game: the workspot on the real player (the owner's choice), a stand-in copy as the fallback; in the same spike",
+     "what": "V as an actor in the game. REDnode's spike ran on 2026-11-23: the real V plays the game's own player workspots, NPC clips do not play on V (V's skeleton is another one), the photo mode copy crashes when spawned. EDGEdir's V needs a rethink with the owner; a third person view and a copy of V are still open in REDnode's scene spike",
      "ref": "REDnode #47"
     },
     {
      "who": "REDnode",
-     "what": "The editor channel call that reaches a package (agreed in principle, not built; Play in game uses a folder until then); a spike on directing a person not spawned with the workspot",
+     "what": "Directing a person not spawned with the workspot, in REDnode's scene spike. The editor channel call that reaches a package passed in the game in REDnode 0.70.0: EDGEdir can now build Play in game on it (not built; it uses a folder until then)",
      "ref": "REDnode #48"
     },
     {
@@ -4411,12 +4411,12 @@ window.EDGE_STATUS = {
     },
     {
      "who": "REDcode",
-     "what": "A first stored animation (Add Clip from GLB or Uthana), to try EDGEdir's reader of made animations on; EDGEfab #7 is closed and EDGEfab stores none",
+     "what": "A clip REDcode made (Add Clip from GLB or Uthana) in a project or the Library, to try EDGEdir's reader of made animations on: asked of EDGEweb's nightly round by script on 2026-11-26; EDGEfab #7 is closed and EDGEfab stores none",
      "ref": "EDGEfab #7 (closed 2026-11-25)"
     },
     {
      "who": "REDnode",
-     "what": "An optional id and facing on a pin (in REDnode's next build), and one in-game spike: a spawned person walking to a place, and whether a person can be moved while they play",
+     "what": "One in-game spike: a spawned person walking to a place, and whether a person can be moved while they play. The id and facing on a pin passed in the game in REDnode 0.70.0 (EDGEdir does not read them yet)",
      "ref": "REDnode #50"
     }
    ],
