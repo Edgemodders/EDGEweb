@@ -4,7 +4,7 @@ nav_title: Install and update
 section: REDbridge
 order: 1
 description: "How EDGEdeck, REDcode and REDnode get REDbridge for you, which copy each tool uses, which version you need, updating, the .NET 10 runtime, installing it by hand and removing it."
-reviewed: 2026-11-22
+reviewed: 2026-11-26
 ---
 
 # Install and update <span class="y">REDbridge</span>
@@ -83,7 +83,7 @@ One REDbridge then serves every mod in the game. It starts when a mod first asks
 
 ## Which version do I need?
 
-**The newest release, 0.12.1, covers everything on game 2.5.** If a tool fetched REDbridge for you recently, you have it.
+**The newest release, 0.20.0 (2026-11-26), covers everything on game 2.5.** If a tool fetched REDbridge for you recently, you have it, or the tool offers **Update REDbridge**.
 
 A copy that a tool fetched some time ago can be too old for another tool that shares it. These are the minimums:
 

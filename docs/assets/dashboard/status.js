@@ -1959,12 +1959,19 @@ window.EDGE_STATUS = {
       "id": "#23",
       "title": "sector.find's variants with their ranges, sector.nodes' ranges, and sectors from mods' .xl files and a project, for REDcode's sector layers (item 3 not needed); released in 0.20.0 on 2026-11-26",
       "status": "built, tests pending"
+     },
+     {
+      "id": "#25",
+      "title": "sector.nodes: occluder copies from their buffer, a box per copy (instanceBounds) and where each box came from (boundsFrom), for REDcode's sector overlaps; built on main 2026-11-26 (6dc5dce), not released",
+      "status": "built, tests pending"
      }
     ]
    },
    "nextRelease": {
     "version": null,
-    "needs": []
+    "needs": [
+     "The owner's word to release #25 (built on main, probe passed)"
+    ]
    },
    "handTests": [
     {
@@ -2057,6 +2064,20 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": "owner",
      "note": "Waits for REDcode to use them and for a REDbridge release"
+    },
+    {
+     "name": "Scratch check and probe on #25's build",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-26, game 2.5: 11 checks; exterior_-11_11_0_1 entry 899's two copies boxed to 0.2 mm of its matrices; exterior_-3_2_0_3's 117 occluders with 300 copies, none boxed at the origin; the probe passes"
+    },
+    {
+     "name": "REDcode's use of #25 (sector overlaps)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Waits for a REDbridge release with #25 and REDcode raising its minimum"
     }
    ],
    "ownerSpotTests": [],
@@ -2081,6 +2102,11 @@ window.EDGE_STATUS = {
      "who": "REDcode",
      "what": "Use 0.20.0 for its sector layers (#23) and edits inside sector buffers (#24), raising its minimum; each issue closes once REDcode's use passes",
      "ref": "REDbridge #23, #24"
+    },
+    {
+     "who": "REDcode",
+     "what": "Use #25's occluder copies, instanceBounds and boundsFrom in its sector overlaps once a release carries them, raising its minimum; the issue closes once that passes",
+     "ref": "REDbridge #25"
     }
    ],
    "ownerActions": [
@@ -2122,7 +2148,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-20"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (REDbridge 0.20.0 released at the owner's word, run 45822452002; RB1 removed and RB2 renumbered RB1 at the owner's word)"
+   "checkedBy": "REDnode session, 2026-11-26 (REDbridge #25 built on main, probe passed; not released)"
   },
   {
    "name": "EDGEdeck",
