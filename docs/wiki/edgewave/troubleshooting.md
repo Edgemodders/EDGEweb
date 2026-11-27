@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEwave
 order: 10
 description: "What to do when EDGEwave shows no game sounds, a sound won't play, Add to Project lacks a row, you hear no change in the game, ElevenLabs refuses your key, or an assistant can't see EDGEwave."
-reviewed: 2026-11-22
+reviewed: 2026-11-26
 ---
 
 # Troubleshooting <span class="y">EDGEwave</span>
@@ -118,7 +118,7 @@ To take a sound mod out, see [Take it out again](into-the-game.html#take-it-out-
 | "Cancelled: no clone was made." | You said no to the question about cloning. Nothing was sent. See [Voice clones](voices.html#voice-clones) |
 | **In the selected line's voice** is off, or Re-Voice's buttons are off, saying the game's own audio is not sent | Expected: EDGEwave never sends the game's audio to ElevenLabs. Use one of your voices, or [design a character's voice](voices.html#character-voices) |
 | ElevenLabs refuses to clone a voice | ElevenLabs can block voices, and its rules forbid cloning a real person's voice without consent. EDGEwave can't change that |
-| EDGEwave asks whether a tool may spend your credits | Another EDGE tool, such as EDGEfab, asked EDGEwave to speak a line. Answer once: EDGEwave keeps the answer for that tool. See [Character voices](voices.html#character-voices) |
+| EDGEwave asks whether a tool may spend your credits | Another EDGE tool, such as REDcode's [Lip Sync editor](../redcode/lipsync.html#adding-a-line), asked EDGEwave to speak a line. Answer once: EDGEwave keeps the answer for that tool. See [Character voices](voices.html#character-voices) |
 | "That take is gone: generate it again." | Takes live only while the window is open, and only the last 20. Generate again |
 | My ElevenLabs account is out of voice slots | Delete the ones EDGEwave made: **EDGEwave: ElevenLabs Voices Made by EDGEwave...** |
 
