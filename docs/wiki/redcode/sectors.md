@@ -3,7 +3,7 @@ title: The sector view
 section: REDcode
 order: 7.3
 description: "A piece of the game's world in 3D in REDcode: moving round, picking a thing and its materials, selecting many things, the sectors that reach into this one as layers, changing what the selection shares at once, searching, and sector scripts that find, select or change nodes."
-reviewed: 2026-11-25
+reviewed: 2026-11-27
 ---
 
 # The sector <span class="y">view</span>
@@ -108,7 +108,9 @@ The buttons above the list act on the whole selection. They are icons too:
 
 ## Search
 
-The search box at the bottom of a sector's 3D view selects what it finds: every thing whose node data or node holds the words, such as a mesh's name or a class. `soda` selects the soda cans. The count shows beside the box. Clearing the box clears the count; **Back** returns to the selection before.
+The search box at the bottom of a sector's 3D view selects what it finds when you press Enter: every thing whose node data or node holds the words in its values, such as a mesh's path or a debug name. `soda` selects the soda cans. The status line says how many matched and how many things were selected. Clearing the box (its × or Esc) clears that line and keeps the selection; the selection list's **Back** returns to the one before.
+
+In 0.10.17 the search reads the file's values only. It does not find a class name (`worldEntityNode`), or the mesh of a cooked or instanced node, such as the catwalks: those say "none is a thing in the view". [Sector scripts](#sector-scripts) find those for now. The next release finds both.
 
 On a mesh's or an animation's 3D view, the same box finds values in the file, and shows the matches in **Tree**.
 
