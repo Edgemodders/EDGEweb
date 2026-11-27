@@ -4815,6 +4815,31 @@ window.EDGE_STATUS = {
       "status": "built, tests pending"
      },
      {
+      "id": "RN1",
+      "title": "REDnode as a mod type",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "RN2",
+      "title": "REDnode packages found by the merge checks; mods that install from the game",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "RN3",
+      "title": "Signing in from the game (device code)",
+      "status": "in progress"
+     },
+     {
+      "id": "RN4",
+      "title": "EDGEmods for REDnode, the in-game browser",
+      "status": "built, tests pending"
+     },
+     {
+      "id": "RN5",
+      "title": "The in-game browser's release and Nexus page",
+      "status": "planned"
+     },
+     {
       "id": "R5",
       "title": "Publish from REDcode",
       "status": "planned"
@@ -4912,6 +4937,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Not run on the server yet. Tried 2026-11-22 in an Amazon Linux 2023 container: install, update, roll-back, nginx -t, the index handover worked; certbot, Litestream and nginx downloads need the server. The server session does it when the owner says"
+    },
+    {
+     "name": "In the game: the EDGEmods app lists the REDnode test mod, signs in with a code, installs it and it runs without a restart, then removes it (RN4)",
+     "steps": "docs/design.md, \"RN4 hand test\"",
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-27; tested against a stand-in site and Auth0. Needs Auth0 step 10 and a REDnode test mod on the registry"
     }
    ],
    "ownerSpotTests": [],
@@ -4957,13 +4989,21 @@ window.EDGE_STATUS = {
      "ref": "MD7",
      "what": "Run the R4c hand test: install the test mod through EDGEdeck 0.34 from the website on this PC (docs/design.md, \"R4c hand test\")",
      "since": "2026-11-26"
+    },
+    {
+     "what": "Auth0 step 10: the in-game application with the Device Code grant, and EDGEMODS_AUTH0_REDNODE_CLIENT_ID in .env (docs/auth0-setup.md)",
+     "since": "2026-11-27"
+    },
+    {
+     "what": "Say yes to a public REDnode test mod repository, then run the RN4 hand test in the game (docs/design.md, \"RN4 hand test\")",
+     "since": "2026-11-27"
     }
    ],
    "risks": [
     "No release and no live site yet; the design is still a proposal",
     "Auth0 marks a GitHub sign-in's email unverified, so admin sign-in works through Google or email for now"
    ],
-   "checkedBy": "EDGEmods session, 2026-11-26"
+   "checkedBy": "EDGEmods session, 2026-11-27"
   },
   {
    "name": "EDGEguide",
