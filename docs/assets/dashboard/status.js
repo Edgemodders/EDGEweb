@@ -1013,10 +1013,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "SC1, the Scene spike: its in-game test (docs/world.md, 'SC1 test', 17 steps), moved after 0.75.0 at the owner's word"
+     "SC1, the Scene spike: its in-game test (docs/world.md, 'SC1 test', 17 steps), moved after 0.75.0 at the owner's word",
+     "#62 Bones: its in-game test (docs/world.md, 'Bones test', 7 steps), REDnode 0.76.0"
     ]
    },
    "handTests": [
+    {
+     "name": "Bones (#62), REDnode 0.76.0",
+     "steps": 7,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "docs/world.md, 'Bones test'. world.bones and MCP world_bones for REDcode, from a static reading of 2.5's exe; built 2026-11-26, unit test passed (made-up code and the real exe), not deployed yet"
+    },
     {
      "name": "Load modded saves without the mod check, REDnode 0.75.0",
      "steps": 6,
@@ -1298,7 +1306,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (REDnode 0.75.0 released at the owner's word, run 45860641246; Nexus 0.75.0 primary, 0.73.1 archived; wiki brought to 0.75.0)"
+   "checkedBy": "REDnode session, 2026-11-26 (#62 world.bones built in REDnode 0.76.0, awaiting its in-game test)"
   },
   {
    "name": "REDcode",
