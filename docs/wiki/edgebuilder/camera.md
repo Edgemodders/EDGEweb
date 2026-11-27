@@ -4,7 +4,7 @@ nav_title: Camera and builder mode
 section: EDGEbuilder
 order: 5
 description: "EDGEbuilder's own camera: look, fly, orbit, pan and frame while V stays put, and builder mode, which hides the game's HUD and other windows while Edit is on."
-reviewed: 2026-11-19
+reviewed: 2026-11-27
 ---
 
 # The camera and <span class="y">builder mode</span>
@@ -32,7 +32,9 @@ Placing things from V's eyes is awkward: you can't see behind a crate, or look d
 
 Switch **Edit** off and the view snaps back to V's eyes and the HUD returns. Switch it on again and the camera starts from V's view again. If you load a save with Edit on, Edit stays on, and the camera starts again from V's view.
 
-**F10 pauses builder mode.** Press F10 with Edit on, to leave REDnode's interactive mode, and V gets the view and the HUD back: you can walk and play. Press F10 again and you are back in EDGEbuilder's camera where you left it, with Edit still on and your selection kept.
+**F10 pauses builder mode.** Press F10 with Edit on, to leave REDnode's interactive mode, and V gets the view and the HUD back: you can walk and play. Press F10 again and you are back in EDGEbuilder's camera where you left it, with Edit still on and your selection kept. From 0.14.0, the green outline on your selected objects, and on a picked object of the game's, goes while you play, and comes back with the second F10.
+
+**Bring V to the camera.** To try what you placed as V, fly the camera there and press **Bring V** on the Scene tab (0.14.0). V stands on the floor under the camera, facing the way it looks. Switch Edit off to play V there. See [The Scene tab](scenes.html#the-scene-tab).
 
 Builder mode has two parts, the editor camera and the hidden HUD. Each has its own switch on the Settings tab, in case one misbehaves. They apply as soon as you flip them. See [Settings](settings.html#settings).
 
@@ -53,6 +55,8 @@ Builder mode has two parts, the editor camera and the hidden HUD. Each has its o
 | **F** | Frame the selection: bring the camera to a good distance from it |
 
 While you hold the right or middle button, the cursor disappears and stays put, so the view keeps turning however far you move the mouse. Let go and the cursor is back where it was.
+
+A quick tap of the right button (under a quarter of a second, with the mouse still) is not a look. From 0.14.0, during [Drop at click](browsing.html#drop-it) it cancels the drop, and with one of the game's objects picked on the World tab it unpicks it. Holding the button looks around as usual in both cases.
 
 Selecting and the gizmo keep working from wherever the camera is. **Drop where I look** then drops onto the surface the camera looks at: fly to a spot, look at it, and drop. See [Drop it](browsing.html#drop-it).
 

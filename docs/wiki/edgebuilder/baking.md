@@ -3,8 +3,8 @@ title: Baking a scene into the world
 nav_title: Baking
 section: EDGEbuilder
 order: 8
-description: "Bake an EDGEbuilder scene into a mod: what baking is, what you need, the steps from scene to world, solid objects, people in a baked scene, draw distance (Seen from), changing and removing a bake, sharing it, and bakes kept in the EDGE Library."
-reviewed: 2026-11-25
+description: "Bake an EDGEbuilder scene into a mod: what baking is, what you need, the steps from scene to world, solid objects, people in a baked scene, draw distance (Seen from), changing and removing a bake, sharing it, bakes kept in the EDGE Library, and baking from the command line."
+reviewed: 2026-11-27
 ---
 
 # Baking a scene <span class="y">into the world</span>
@@ -25,6 +25,7 @@ How it works, in one line: the **Bake** tab writes your scene into a [REDcode](.
 | [Sharing a baked scene](#sharing-a-baked-scene) | Giving your mod to others |
 | [Try it](#try-it-solid-seen-from-and-taking-a-bake-out) | Solid, Seen from and taking a bake out |
 | [Bakes in the Library](#bakes-in-the-library) | One bake for several projects |
+| [Baking from the command line](#baking-from-the-command-line) | For scenes a program writes, with the game closed |
 
 New to baking? [Your first scene](first-scene.html#10-bake-it-into-the-world) walks through one bake, step by step.
 
@@ -44,7 +45,7 @@ EDGEbuilder does not check for ArchiveXL. If a bake doesn't show in the game, lo
 ## From scene to world
 
 1. Open the project in REDcode, and the scene in EDGEbuilder.
-2. On the **Bake** tab, read the checks, then press **Bake**. The **The last bake** panel lists the files it wrote.
+2. On the **Bake** tab, check the top line: **Scene:** and the scene's name, with what it adds and removes at the right, such as **5 added, 2 removed** (from 0.14.0; hover the name for its file). The line under it names the project. Read the checks, then press **Bake**. The **The last bake** panel lists the files it wrote.
 3. Quit the game. In REDcode, press **Pack and Install** (the rocket button). It packs the project and installs it through EDGEdeck.
 4. Start the game and load a save.
 
@@ -135,7 +136,7 @@ About 4 in 10 crate-sized meshes have no collision data, and those can't be made
 
 With several meshes selected, the line under the switch counts them, for example **3 of 4 solid.** The switch acts on all of them.
 
-{% include shot.html src="/assets/shots/edgebuilder/scenes-solid.webp" caption="The Solid switch" shows="The Selected panel for one mesh with Solid when baked switched off and the line under it saying No collision data, so this mesh can't be solid., with the switch's tooltip open." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-solid.webp" caption="The Solid switch" shows="The Selected Object panel for one mesh with Solid when baked switched off and the line under it saying No collision data, so this mesh can't be solid., with the switch's tooltip open." %}
 
 ## Seen from
 
@@ -153,7 +154,7 @@ A larger distance makes the game draw more at once, which can lower the frame ra
 
 On frame rate: in the tests, 200 baked crates in one place made no measurable difference to the frame rate. As previews, the same 200 cost about 6 frames per second.
 
-{% include shot.html src="/assets/shots/edgebuilder/scenes-seen-from.webp" caption="Seen from" shows="The Selected panel with a group of crates selected and Seen from, m reading 120, the message line saying 4 objects: seen from 120 m once baked." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-seen-from.webp" caption="Seen from" shows="The Selected Object panel with a group of crates selected and Seen from, m reading 120, the message line saying 4 objects: seen from 120 m once baked." %}
 
 ## After a bake
 
@@ -208,7 +209,7 @@ A **Library bake** lives in the Library beside your scenes, instead of in one pr
 - It can hold several scenes. Each scene is baked as its own piece of the world, so the game loads it only when V is near it.
 - It has a **version**. Each time the bake changes, its version goes up by one, so a project can tell that its copy is out of date.
 
-On disk, a Library bake is a folder named `<name>.bake`. The Library tab's tree shows it with a **bake** tag, how many scenes it holds and its version, for example `2 scenes · v2`. Pick it, and the **Picked** panel says where it is and whether the open project has it, and lists its scenes.
+On disk, a Library bake is a folder named `<name>.bake`. The Library tab's tree shows it with a **bake** tag, how many scenes it holds and its version, for example `2 scenes · v2`. Pick it, and the **Selected Scene** panel says where it is and whether the open project has it, and lists its scenes.
 
 | Button | Does |
 |---|---|
@@ -229,17 +230,17 @@ In a project that includes a Library bake, the Bake tab shows where each scene c
 
 The project notes where the files came from in `source\library.json`, a file every EDGE tool shares.
 
-Tags in the tree and the Picked panel tell you about a Library bake:
+Tags in the tree and the Selected Scene panel tell you about a Library bake:
 
 | Tag | Means | Do this |
 |---|---|---|
 | **stale** | A scene changed since the bake | Press **Bake again** |
 | **scene missing** | A scene in the bake was moved or deleted. The bake still works, and **Bake again** keeps that scene as it was baked | Put the scene back, or take it out with its trash icon |
-| **collides** | Another Library bake holds the same scene. With both in one game, its objects would be there twice. The Picked panel says which bake | Take the scene out of one of the two bakes |
+| **collides** | Another Library bake holds the same scene. With both in one game, its objects would be there twice. The Selected Scene panel says which bake | Take the scene out of one of the two bakes |
 | **in project** | The open REDcode project includes it | |
 | **in game** | The game loaded it at its last start | |
 
-{% include shot.html src="/assets/shots/edgebuilder/scenes-library-bake.webp" caption="A bake in the Library" shows="The Library tab: the tree with Kabuki Bakes tagged bake and in project, 2 scenes · v2, beside its scenes, and the Picked panel with its place, version and two scenes, each with a trash icon, and Include in project, Add open scene, Bake again and Delete." %}
+{% include shot.html src="/assets/shots/edgebuilder/scenes-library-bake.webp" caption="A bake in the Library" shows="The Library tab: the tree with Kabuki Bakes tagged bake and in project, 2 scenes · v2, beside its scenes, and the Selected Scene panel with its place, version and two scenes, each with a trash icon, and Include in project, Add open scene, Bake again and Delete." %}
 
 ### Try it: a bake in the Library
 
@@ -248,3 +249,27 @@ Tags in the tree and the Picked panel tell you about a Library bake:
 3. Open the REDcode project, pick **My Bakes** and press **Include in project**. On the Bake tab, both scenes show **from My Bakes v2**.
 4. Quit, **Pack and Install** in REDcode, and start: both scenes are in the world.
 5. Move one object in one of the scenes. **My Bakes** is tagged **stale**. Press **Bake again**: version 3. On the Bake tab, press **Update to v3**, then Pack and Install again.
+
+## Baking from the command line
+
+This part is for scenes a program writes, such as a map generator, and for anyone who wants to check or bake a scene file with the game closed. From 0.14.0, EDGEbuilder has a command line, `cli.mjs`, in its package folder: `red4ext\plugins\REDnode\apps\edgebuilder\` in your game folder, or in the release zip. It runs with [Node.js](https://nodejs.org/), and needs REDbridge and the game's files on disk, which it finds as EDGEbuilder does.
+
+In a terminal, in your game folder's `red4ext\plugins\REDnode\apps` folder:
+
+```
+node edgebuilder/cli.mjs check my_scene.scene.json
+node edgebuilder/cli.mjs bake my_scene.scene.json --out build/my_scene --pack
+```
+
+| Command or option | Does |
+|---|---|
+| `check <scene>` | Checks the scene file as the Bake tab does, and more: its format, missing files, appearances a mesh doesn't have, objects placed twice in the same spot. Writes nothing |
+| `bake <scene> --out <folder>` | Checks, then bakes into a plain folder laid out like a project |
+| `bake <scene> --project <path>` | Bakes into a REDcode or WolvenKit project, exactly as the Bake tab does |
+| `--pack` | With `--out`: also packs the bake, so the folder's `packed` part is a mod, ready for a mod manager such as EDGEdeck |
+| `--dry-run` | Does everything but write, and lists what a bake would write |
+| `--json` | Prints one report as JSON, for a program to read: what was left out and why, what is wrong, what was written |
+
+A scene a program writes can say which program wrote it (`generator`), and carry the program's own data on each object (`meta`). EDGEbuilder keeps both when you open and save the scene in the game, copies `meta` to a duplicate, and never bakes them.
+
+Every option, the report and each error and warning: [Generated scenes](https://edgemodders.github.io/EDGEbuilder/generated-scenes.html), in EDGEbuilder's docs. The scene format, with a JSON Schema for each version and the rules for how the format may change: [Scene format](https://edgemodders.github.io/EDGEbuilder/scene.html).

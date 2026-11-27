@@ -3,7 +3,7 @@ title: Your first scene
 section: EDGEbuilder
 order: 2
 description: "A first walk through EDGEbuilder, start to finish: make a scene, drop a crate, fly the camera, move and stack crates, group and copy them, undo, then bake the scene so the crates are part of Night City."
-reviewed: 2026-11-23
+reviewed: 2026-11-27
 ---
 
 # Your first <span class="y">scene</span>
@@ -60,18 +60,18 @@ A **scene** is the list of everything you place. EDGEbuilder saves it after ever
 1. Open the **Library** tab. It shows a tree of the places a scene can be kept.
 2. If it says **No Library folder yet**, press **Make the Library**. That makes `Documents\EDGE Library`, a folder the EDGE tools share for your work. (You can skip it: click **This PC** in the tree instead, and the scene is kept in EDGEbuilder's own folder.)
 3. Click **Library** at the top of the tree, so new things go there.
-4. In the **Picked** panel, type `Construction Crates` in **Name**.
+4. In the **Selected Scene** panel, type `Construction Crates` in **Name**.
 5. Press **New scene here**.
 
 **What you should see:** the message line says **New scene Construction Crates in Library**, and the scene shows in the tree with an **open** tag. On the **Scene** tab, the field labelled **Open scene's name** now reads Construction Crates.
 
-{% include shot.html src="/assets/shots/edgebuilder/first-new-scene.webp" caption="A new scene in the Library" shows="The Library tab: the tree with Library at the top and Construction Crates under it tagged open, the Picked panel with Construction Crates typed in Name, and the New scene here button." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-new-scene.webp" caption="A new scene in the Library" shows="The Library tab: the tree with Library at the top and Construction Crates under it tagged open, the Selected Scene panel with Construction Crates typed in Name, and the New scene here button." %}
 
 ## 3. Find a crate and drop it
 
 1. Open the **Assets** tab and type `cargo crate`. Typing anywhere on the tab goes into the search box.
 2. Click the **Meshes** tab above the results, so only meshes are listed. A **mesh** is a plain 3D model: it has a look, but no behaviour of its own.
-3. Click `cargo_crate_a.mesh` in the list. The **Picked** panel shows its size in metres, as three numbers. The third is its height: remember it for step 6. Below the size are its **appearances**, the colours and labels the same crate comes in.
+3. Click `cargo_crate_a.mesh` in the list. The **Selected Asset** panel shows its size in metres, as three numbers. The third is its height: remember it for step 6. Below the size are its **appearances**, the colours and labels the same crate comes in.
 4. Click an appearance you like.
 5. Press **Drop where I look**.
 
@@ -79,7 +79,7 @@ A **scene** is the list of everything you place. EDGEbuilder saves it after ever
 
 The crate is a **preview**: an object EDGEbuilder places in the running game while you build. Only you see it. You'll make the crates permanent in step 10.
 
-{% include shot.html src="/assets/shots/edgebuilder/first-dropped.webp" caption="The crate dropped" shows="A cargo crate standing on the ground in front of V, outlined by the game, and the Scene tab with cargo_crate_a in the list and the Selected panel showing its position." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-dropped.webp" caption="The crate dropped" shows="A cargo crate standing on the ground in front of V, outlined by the game, and the Scene tab with cargo_crate_a in the list and the Selected Object panel showing its position." %}
 
 ## 4. Switch Edit on and fly
 
@@ -125,12 +125,12 @@ A **group** keeps objects together, so one click picks them all.
 
 1. Hold **Shift** and drag a box around the four crates. All four are selected, and the Scene tab says **4 selected**.
 2. Press **Ctrl+G**. The message says **Grouped 4 objects as Group 1**.
-3. In the **Selected** panel, the **Group name** field holds **Group 1**. Type `Crate stack` and press **Enter**.
+3. In the **Selected Object** panel, the **Group name** field holds **Group 1**. Type `Crate stack` and press **Enter**.
 4. Click any one crate: the whole stack is selected. **Alt+click** picks one crate on its own.
 
 **What you should see:** in the Scene tab's list, **Crate stack** shows as a folder with its four crates under it. The arrow beside it folds them away.
 
-{% include shot.html src="/assets/shots/edgebuilder/first-group.webp" caption="The group in the Scene tab" shows="The Scene tab's list with Crate stack as a group, group of 4 at its right, its four crates under it, and Group name in the Selected panel reading Crate stack." %}
+{% include shot.html src="/assets/shots/edgebuilder/first-group.webp" caption="The group in the Scene tab" shows="The Scene tab's list with Crate stack as a group, group of 4 at its right, its four crates under it, and Group name in the Selected Object panel reading Crate stack." %}
 
 ## 8. Copy the stack somewhere else
 
@@ -159,7 +159,7 @@ You can stop here. The scene opens again by itself the next time you start EDGEb
 So far the crates are previews: only you see them, while EDGEbuilder runs, and V walks through them. **Baking** writes the crates into your REDcode project as a piece of the game world. When the project is packed into a mod, anyone who installs that mod gets the crates.
 
 1. Make sure your REDcode project is open in VS Code.
-2. Open the **Bake** tab. At the top it names the scene, **Construction Crates: 8 objects**, and the project it bakes into.
+2. Open the **Bake** tab. The top line reads **Scene: Construction Crates**, with **8 added, 0 removed** at its right, and the line under it names the project it bakes into.
 3. Read the checks under it. One says **8 meshes will stop V, bullets and cars. Entities keep their own collision.** New meshes start **Solid when baked**, so your crates will be solid. A red check stops the bake and says what to fix.
 4. Press **Bake**.
 
@@ -209,7 +209,7 @@ The scene itself is still in the Library. While it is open, its crates show as p
 
 | To learn | Read |
 |---|---|
-| Every way to search, and your mods' models | [Browsing and dropping](browsing.html) |
+| Every way to search, 3D previews, the Explorer, and your mods' models | [Browsing and dropping](browsing.html) |
 | Placing people (NPCs) | [People](browsing.html#people-npcs) |
 | Exact moves, turns and scales | [Positioning objects](positioning.html) |
 | Orbit, pan and frame with the camera | [The camera and builder mode](camera.html) |

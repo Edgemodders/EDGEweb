@@ -2,8 +2,8 @@
 title: Scenes and the Library
 section: EDGEbuilder
 order: 7
-description: "How EDGEbuilder keeps your work: previews and scenes, the three places a scene can be kept, the Scene tab, the Library tab, the Objects drawer, and giving a scene to someone else."
-reviewed: 2026-11-23
+description: "How EDGEbuilder keeps your work: previews and scenes, the three places a scene can be kept, the Scene tab, Bring V, the Library tab and its drawer, the Objects drawer, and giving a scene to someone else."
+reviewed: 2026-11-27
 ---
 
 # Scenes and the <span class="y">Library</span>
@@ -14,10 +14,10 @@ EDGEbuilder keeps everything you place in a **scene**, saves it after every chan
 |---|---|
 | [Previews and scenes](#previews-and-scenes) | What is saved, and what you see |
 | [Where a scene is kept](#where-a-scene-is-kept) | Library, Project or This PC |
-| [The Scene tab](#the-scene-tab) | The open scene: its name, its objects, the Selected panel |
-| [The Library tab](#the-library-tab) | Every scene you have, as one tree |
-| [The Objects drawer](#the-objects-drawer) | A scene's objects as a list |
-| [Try it](#try-it-the-library) | Folders, copies, open and close |
+| [The Scene tab](#the-scene-tab) | The open scene: its name, its objects, the Selected Object panel, Bring V |
+| [The Library tab](#the-library-tab) | Every scene you have, as one tree, in the window or in a drawer |
+| [The Objects drawer](#the-objects-drawer) | A scene's objects as a list, each with a 3D card |
+| [Try it](#try-it-the-library) | Folders, copies, open and close, a card, Bring V |
 | [Giving a scene to someone else](#giving-a-scene-to-someone-else) | |
 | [Scenes with people](#scenes-with-people) | And a note for mod makers |
 
@@ -66,13 +66,13 @@ The **Scene** tab shows the open scene. From top to bottom:
 |---|---|
 | **Open scene's name** | A field holding the open scene's name. To rename the scene and its file, change the name and press **Enter**. It asks first: **Rename** or **Keep the name** |
 | The line under it | Where the scene is, for example **In Library > Alleys. Saved after every change.** |
-| **Save**, **Save as**, **New**, **Open**, **Close** | See the next table |
+| **Save**, **Save as**, **New**, **Open**, **Close**, and **Bring V** at the right | See the next table |
 | The count | What the scene does to the world, how many groups, and how many are selected: **5 added, 2 removed, 1 group; 3 selected** means five objects of yours and two of the game's own removed |
 | **World edits** | Shown when the scene removes some of the game's own objects or keeps a door open, closed or locked: each one, with **Restore** to put it back. See [Removing the game's doors](doors.html) |
 | **This scene needs:** | Shown when the scene uses files from mods or a REDcode project. It names them. Without that mod installed, those objects can't be placed |
 | **Undo**, **Redo**, **Duplicate**, **Group**, **Ungroup** | The same as their keys. See [Arranging a scene](arranging.html) |
-| The list | Every object, with its kind at the right. Groups show as folders. Click an object to select it, Ctrl+click to add more |
-| The **Selected** panel | The selected object's name, asset and numbers, and the buttons that act on it |
+| **Objects** and the list | Every object, with its kind, and at the far right an eye and a bin. Groups show as folders. See [The object list](#the-object-list) |
+| The **Selected Object** panel | The selected object's name, asset and numbers, and the buttons that act on it. Before 0.14.0 it was called **Selected** |
 
 The scene buttons:
 
@@ -83,8 +83,27 @@ The scene buttons:
 | **New** | Starts an empty scene. The Library tab opens: type a name, pick a folder, press **New scene here** |
 | **Open** | Goes to the Library tab, to pick a scene |
 | **Close** | Takes the scene's objects out of the world and leaves no scene open. Nothing is deleted: the scene is still saved. EDGEbuilder will not reopen it at the next start |
+| **Bring V** | With EDGEbuilder's own camera, V stands on the floor under the camera, facing the way it looks, so you can try what you placed as V (0.14.0). Edit stays on: switch it off to play V there. With V's own camera, or no floor within 300 m below, the message says why and V stays |
 
-The Selected panel's buttons:
+### The object list
+
+Above the list is the **Objects** title.
+
+| Do | What happens |
+|---|---|
+| One click on an object's row | Selects it. **Ctrl+click** adds more |
+| Two quick clicks | Edit goes on, the camera flies to the object, and it is selected (0.14.0) |
+| The **eye** at the far right of a row | Shows the object's card to the left of the window: the object in 3D as it is in the scene, its size at its scale, look, Solid, Seen from and place, and **Drop a copy**. The eye again hides it. A group's row has no eye |
+| The **bin** at the far right of a row | The row asks **Delete?** with **Yes** and **No**. Yes deletes the object; **Ctrl+Z** brings it back |
+| The icon at the right of the **Objects** title | Moves the list out of the window into the [Objects drawer](#the-objects-drawer), on the open scene. An **Objects** button takes its place and opens the drawer again. The drawer's own icon, beside its ✕, or the tab's brings the list back. EDGEbuilder remembers your choice |
+
+**Drop a copy**, on a card, starts [Drop at click](browsing.html#drop-it) with a copy that keeps the original's look, scale, Solid and Seen from (and a person's settings). Its outline is drawn at the copy's size.
+
+To get a card by clicking an object in the world, switch on **A picked object's card** on the [Settings tab](settings.html#settings). With Edit on, a click on one of the scene's objects then opens its card at the screen's left edge, so the object in the middle stays clear.
+
+### The Selected Object panel
+
+Its buttons:
 
 | Button | Does |
 |---|---|
@@ -96,7 +115,9 @@ The Selected panel's buttons:
 
 **Not in world.** An object whose preview isn't in the game right now shows **not in world** in the list, in place of its kind. That happens before a save is loaded, after you pressed **Stop** on the busy bar, or when the game couldn't place it. Press **Rebuild previews**. If it stays that way, the object most likely comes from a mod that isn't installed: check the **This scene needs:** line.
 
-**The pin.** The Selected panel has a pin in its top right corner. Pinned, the panel stays at the bottom of the tab while the list scrolls, so the numbers and buttons are always in view. It starts pinned. Click the pin to let the panel scroll with the tab. EDGEbuilder remembers your choice.
+**The pin.** The Selected Object panel has a pin in its top right corner. Pinned, the panel stays at the bottom of the tab while the list scrolls, so the numbers and buttons are always in view. It starts pinned. Click the pin to let the panel scroll with the tab. EDGEbuilder remembers your choice.
+
+**Minimize.** Left of the pin, the minimize button (0.14.0) shrinks the panel to its title row at the bottom of the tab, and the object list grows into the room. The square in its place shows the panel again. Every Selected panel has one: Selected Asset, Selected Object, Selected Scene and Selected Node. EDGEbuilder remembers each.
 
 ## The Library tab
 
@@ -104,7 +125,7 @@ The **Library** tab shows all three places as one tree: **Library** with your fo
 
 Without a Library yet, the tab says **No Library folder yet** and offers **Make the Library**, which makes `Documents\EDGE Library`. To use another folder, see [Library folder](settings.html#settings) on the Settings tab.
 
-Click a scene or a folder to pick it. The **Picked** panel under the tree then acts on it. It has a pin, like the [Selected panel](#the-scene-tab).
+Click a scene or a folder to pick it. The **Selected Scene** panel under the tree then acts on it (before 0.14.0 it was called **Picked**). It has a pin and a minimize button, like the [Selected Object panel](#the-selected-object-panel).
 
 | Button | Does |
 |---|---|
@@ -119,15 +140,26 @@ Click a scene or a folder to pick it. The **Picked** panel under the tree then a
 | **New folder** | Makes a folder inside the picked one. You can only make folders inside **Library**, not under Project or This PC |
 | **Bake into Library** | Bakes the picked scene into the Library. See [Bakes in the Library](baking.html#bakes-in-the-library) |
 
-{% include shot.html src="/assets/shots/edgebuilder/scenes-library.webp" caption="The Library tab" shows="The Library tab: the tree with Library and two folders (Alleys, with Kabuki inside), scenes with their object counts and dates, one tagged open and one shown, Project: EDGEbuilder_Testing and This PC below, and the Picked panel with Open, Close, Show in world, Objects, Refresh, the Name field and New scene here, Save open scene here and New folder." %}
+Two buttons sit at the right of the **Library** title, above the tree (0.14.0):
+
+| Button | Does |
+|---|---|
+| **Collapse all** | Closes every folder of the tree, leaving the places at the top. Once all are closed it turns into **Expand all**, which opens every folder |
+| The out-of-the-window icon | Moves the tree into a drawer to the left of the window, with more room. A **Library** button takes its place and opens the drawer again. The same icon, in the tab or in the drawer's title, brings the tree back. EDGEbuilder remembers your choice |
+
+In the drawer the Library works as in the window: a pick there shows the Library tab with its Selected Scene panel. The drawer's two arrows make it wider, in steps up to 840 px, or narrower again, and EDGEbuilder remembers the width.
+
+{% include shot.html src="/assets/shots/edgebuilder/scenes-library.webp" caption="The Library tab" shows="The Library tab: the tree with Library and two folders (Alleys, with Kabuki inside), scenes with their object counts and dates, one tagged open and one shown, Project: EDGEbuilder_Testing and This PC below, and the Selected Scene panel with Open, Close, Show in world, Objects, Refresh, the Name field and New scene here, Save open scene here and New folder." %}
 
 ## The Objects drawer
 
-**Objects** on the Library tab slides a drawer out beside the panel. It lists every object of the picked scene, or of the open one. Its title names the scene.
+**Objects** on the Library tab slides a drawer out beside the panel. It lists every object of the picked scene, or of the open one. Its title names the scene. When the Scene tab's list is [out of the window](#the-object-list), the drawer holds the open scene's list.
 
 | Do | What happens |
 |---|---|
 | **Two quick clicks** on an object | The camera flies to it and selects it. For a scene that isn't open, the scene is opened first |
+| Press the **eye** on a row | Shows the object's card beside the drawer: the object in 3D as it is in the scene, its size at its scale, look, Solid, Seen from and place, and **Drop a copy** (0.14.0). The eye is lit; another row's eye shows that object, and the same eye again closes the card |
+| **Drop a copy** | Starts [Drop at click](browsing.html#drop-it) with a copy that keeps the original's look, scale, Solid and Seen from (and a person's settings) |
 | Click the **trash icon** on a row | Deletes that object, after asking, wherever it and the camera are. In a scene that isn't open, that delete can't be undone |
 
 Use the drawer to find one object in a big scene, or to see what is where.
@@ -145,6 +177,8 @@ Use the drawer to find one object in a big scene, or to see what is where.
 7. On the Library tab, click **Back lot** twice quickly. It opens, and its crates come back.
 8. Click **Back lot copy** and press **Show in world**. Its crates appear too, but a click on them selects nothing. Press **Hide from world**.
 9. Press **Objects**. Click a crate in the drawer twice quickly: the camera flies to it and selects it.
+10. Press the eye on another crate's row: its card shows beside the drawer. Press **Drop a copy** and click in the world: a copy, with the same look and size, joins the scene.
+11. With Edit on, fly up onto a roof and press **Bring V** on the Scene tab. Switch Edit off: V stands on the roof.
 
 ## Giving a scene to someone else
 

@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEbuilder
 order: 10
 description: "What to do when EDGEbuilder's pills are red, REDbridge is missing, a search or a drop fails, keys do nothing, the camera is stuck, previews are missing, or a bake doesn't show, isn't solid or pops in."
-reviewed: 2026-11-23
+reviewed: 2026-11-27
 ---
 
 # Troubleshooting <span class="y">EDGEbuilder</span>
@@ -44,6 +44,7 @@ Find the part where you are stuck, then what you see in the left column. If it i
 
 | You see | Do this |
 |---|---|
+| The list is empty before I type | That is on purpose from 0.14.0: type a name. **Mods** and **Project** still list everything they hold, and the [Explorer](browsing.html#the-explorer) shows the game's folders without a search |
 | Search finds nothing | Check the third pill (see above). Then check the two rows of tabs: **Game** hides your mods' files, **Mods** hides the game's, and **Meshes**, **Entities** or **NPCs** hide the other kinds. Click **All** and **Everywhere** |
 | A light, a decal or a sound isn't listed | Only meshes, entities and people can be placed today. The other kinds are planned |
 | The **Mods** tab doesn't list my mod | EDGEbuilder reads the archives in the game's `archive\pc\mod` folder and REDmod's `mods\<name>\archives`. A mod in EDGEdeck counts once it's deployed. Only meshes and entities are listed, so a mod that changes only textures or items has nothing to show |
@@ -67,6 +68,8 @@ The message line under the pills says why a drop failed:
 | You see | Do this |
 |---|---|
 | **Drop at click** or **Drop to floor** finds nothing | The game makes its ground solid only near the camera, even where you can see it from afar. Fly closer and try again |
+| Drop at click or Drop to floor goes through a baked floor, to the ground below | Update EDGEbuilder: from 0.14.0, both land on a bake's solid objects |
+| Drop at click cancels when I try to look around | Hold the right button to look: a quick tap cancels. With **Use EDGEbuilder's own camera** off, any right-click cancels |
 | An object dropped to the floor falls through another object of mine | Previews aren't solid. Drop to floor lands only on the game's own ground and objects. Lift the object with **G**, **Z** and a number instead |
 
 ## Keys and mouse
@@ -90,6 +93,7 @@ The message line under the pills says why a drop failed:
 | The right mouse button doesn't look around | **Use EDGEbuilder's own camera** is off on the Settings tab. Switch it on |
 | The HUD stays on screen with Edit on | **Hide the game's HUD** is off on the Settings tab. Switch it on |
 | After F10, V moves but the view doesn't | Update EDGEbuilder: from 0.12.5, F10 with Edit on gives V the view back, and F10 again returns to the editor camera |
+| After F10, the green outline of my selected objects shows through walls while I play | Update EDGEbuilder: from 0.14.0, F10 takes it off, and F10 again puts it back |
 | I can't click another REDnode window while Edit is on | EDGEbuilder's layer covers it. Switch **Edit** off, use the other window, and switch Edit back on |
 | Other REDnode windows stay on screen while Edit is on | EDGEbuilder isn't allowed solo mode. See [Builder mode and other windows](camera.html#builder-mode-and-other-windows) |
 | <a id="edgebuilder-disappears-when-i-open-a-menu"></a>EDGEbuilder disappears when I open a menu | That is on purpose. The whole window, with the gizmo, hides while the game shows a menu: pause, Settings, inventory or map. It comes back when the menu closes, with Edit and the camera as they were. A move under way when the menu opened is cancelled |
@@ -121,7 +125,7 @@ The message line under the pills says why a drop failed:
 | You see | Do this |
 |---|---|
 | **Import** is greyed out | Import needs a REDcode project open in VS Code. Open one, then press **Refresh** on the Bake tab. It is also off while something else is busy |
-| My GLB isn't on the Library tab | The tree lists GLBs in your Library's folders, in the open project's `source\raw` and props on EDGEfab's Desk. Anywhere else, type the file's full path in **Import a GLB from anywhere** and press **Pick** |
+| My GLB isn't on the Library tab | The tree lists GLBs in your Library's folders, in the open project's `source\raw` and props on EDGEfab's Desk. Anywhere else, press the folder button beside the path box above the tree and find the file, or type its full path in the box and press **Pick** |
 | "It is not in the game yet", and Drop says so too | EDGEbuilder may not put the prop into the game. In REDnode's Mod Manager, EDGEbuilder, **Permissions**, allow **Archives**, then press **Drop**: it puts the prop in, with no second Import |
 | An Import takes minutes | Making textures is slow: about 10 s for each large (4096 px) texture. A model with small textures takes seconds. **Stop** ends it within one texture |
 | The prop is huge or tiny | Its file has no real size. Import it again with the same name and a **Height** |
@@ -139,6 +143,8 @@ See [Importing a model](importing.html).
 | A door I brought back looks right but doesn't open | It is the door's **stand-in**: after a save loads with a door removed, the real door never comes in. Fast travel away and back, or load a save. See [Stand-ins](doors.html#stand-ins) |
 | A removed door is back | Removals last while their scene is open in EDGEbuilder, or once baked. Open the scene, or bake it. Switching EDGEbuilder off brings every unbaked door back |
 | The Bake tab says REDbridge "cannot bake removals" | Update REDbridge to 0.16.0 or later: **Get REDbridge** in EDGEdeck, or **Update REDbridge** in REDnode's Mod Manager. Then **Refresh** |
+| A picked floor or wall's drawer says "Its file is not known", with no 3D picture | Update EDGEbuilder: from 0.14.0, a merged mesh (`worldCookedStaticMeshNode`) gets its file from its sector, so it shows in 3D, with its collision data, and **Drop a copy** works |
+| A click on a bake's solid object picks what is behind it | Update EDGEbuilder: from 0.14.0, [Pick under the cursor](doors.html#pick-under-the-cursor) picks it |
 | A baked door is still there in the game | ArchiveXL must be in the game, and the project packed and installed after the bake. ArchiveXL's log (`red4ext\plugins\ArchiveXL`) says "All patches have been applied" for each part of the world it changed |
 
 ## Baking

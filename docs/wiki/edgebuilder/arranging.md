@@ -4,7 +4,7 @@ nav_title: Arranging a scene
 section: EDGEbuilder
 order: 6
 description: "Work on several objects at once in EDGEbuilder: select with Ctrl+click or a box, group, duplicate, copy, cut and paste, undo and redo, and the busy bar."
-reviewed: 2026-11-13
+reviewed: 2026-11-27
 ---
 
 # Arranging a <span class="y">scene</span>
@@ -55,7 +55,7 @@ Everything on [Positioning objects](positioning.html) works on the whole selecti
 | **S** | They scale from their middle: they spread out and grow |
 | **Delete**, **Drop to floor** | Each object is deleted, or lowered to the floor below it |
 
-With several objects selected, the **Selected** panel changes too:
+With several objects selected, the **Selected Object** panel changes too:
 
 | Field | With several objects selected |
 |---|---|
@@ -78,9 +78,9 @@ A **group** keeps objects together, so one click picks them all. Group a table w
 
 The **Scene** tab's list is a tree: each group shows **group of N** at its right, and its objects under it. The arrow beside a group folds them away and back. Groups can hold other groups.
 
-With a group selected, the **Selected** panel has a **Group name** field. Type a name and press **Enter**.
+With a group selected, the **Selected Object** panel has a **Group name** field. Type a name and press **Enter**.
 
-{% include shot.html src="/assets/shots/edgebuilder/arranging-groups.webp" caption="Groups in the Scene tab" shows="The Scene tab's list as a tree: a group with its name and arrow, three crates under it, a second group folded, and the Group name field in the Selected panel." %}
+{% include shot.html src="/assets/shots/edgebuilder/arranging-groups.webp" caption="Groups in the Scene tab" shows="The Scene tab's list as a tree: a group with its name and arrow, three crates under it, a second group folded, and the Group name field in the Selected Object panel." %}
 
 ## Duplicate
 

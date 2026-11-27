@@ -3,7 +3,7 @@ title: Importing a model
 section: EDGEbuilder
 order: 3.5
 description: "Bring a 3D model of your own into the running game from EDGEbuilder: a textured GLB from Blender, a store or an AI model maker, or a prop on EDGEfab's Desk, imported into your REDcode project and ready to drop."
-reviewed: 2026-11-23
+reviewed: 2026-11-27
 ---
 
 # Importing a <span class="y">model</span>
@@ -13,7 +13,7 @@ The game's own models are a lot, but sometimes you want your own: a sign you mod
 | On this page | |
 |---|---|
 | [What you need](#what-you-need) | A project, a permission and a model |
-| [Find your model](#find-your-model) | On the Library tab, or by its path |
+| [Find your model](#find-your-model) | On the Library tab, by its path, or with the file picker |
 | [Import it](#import-it) | Name, height, solid, and the wait |
 | [After the import](#after-the-import) | Drop it, and where its files are |
 | [Import it again](#import-it-again) | Change the model, and every copy changes |
@@ -40,13 +40,24 @@ Open the **Library** tab. Below your scenes and bakes, the tree lists the models
 | **<project>: source\raw** | GLB files in the open REDcode project's `source\raw` folder, where a project keeps models it hasn't turned into game files yet | `glb` |
 | **EDGEfab's Desk** | Props you made or brought in with EDGEfab, already prepared | `prop`, "prepared" |
 
-Click one to pick it. The Picked panel says what it is and where Import will put it.
+Click one to pick it. The Selected Scene panel says what it is and where Import will put it.
 
-A model somewhere else on your PC: type its full path in the box **Import a GLB from anywhere**, above the tree, and press **Pick**. A prop's `.prop.asset` folder works there too.
+A model somewhere else on your PC: type its full path in the path box above the tree, and press **Pick**. A prop's `.prop.asset` folder works there too.
+
+**Or find it with the file picker** (0.14.0). Press the folder button at the right end of the path box. A wide drawer opens to the left of the window:
+
+| In the file picker | Does |
+|---|---|
+| The places on the left | The Library, the project's `source\raw`, EDGEfab's Desk, Desktop, Documents, Downloads and every drive |
+| The list on the right | The folder's folders, its GLB files with their size and date, and Desk props. Click a folder to open it |
+| **Up**, the path box, the filter | Go to the folder above, type a folder and press **Enter** to open it, or narrow the list |
+| **Use this file**, or a double-click on a file | Puts the file in the path box and picks it for Import. The drawer closes |
+
+The picker opens again at the last folder you used.
 
 ## Import it
 
-The Picked panel shows the Import box:
+The Selected Scene panel shows the Import box:
 
 | Field | What to put |
 |---|---|
@@ -99,6 +110,6 @@ More in [Troubleshooting](troubleshooting.html).
 
 1. Open a REDcode project in VS Code, and load a save.
 2. Put a GLB in the project's `source\raw` folder (or make a prop in EDGEfab).
-3. On the Library tab, pick it under **<project>: source\raw**.
+3. On the Library tab, pick it under **<project>: source\raw**. (A GLB in Downloads? Press the folder button beside the path box, click **Downloads**, and double-click the file.)
 4. Name it `my_first_prop`, leave the rest, and press **Import**.
 5. When the Assets tab opens, press **Drop where I look**. Walk V into it: it stops V.

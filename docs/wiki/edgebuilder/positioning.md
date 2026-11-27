@@ -3,7 +3,7 @@ title: Positioning objects
 section: EDGEbuilder
 order: 4
 description: "Move, turn and scale objects in EDGEbuilder: the Edit switch, selecting in the world, the gizmo, G R S with axis locks and typed numbers, snapping, drop to floor and the number fields."
-reviewed: 2026-11-13
+reviewed: 2026-11-27
 ---
 
 # Positioning <span class="y">objects</span>
@@ -17,7 +17,7 @@ Positioning is where an object goes from roughly there to exactly right. You can
 | [The gizmo](#the-gizmo) | Dragging arrows and a ring |
 | [G, R and S](#g-r-and-s) | Move, turn and scale with keys |
 | [Drop to floor](#drop-to-floor) | Ctrl+E |
-| [Typing numbers](#typing-numbers) | The fields of the Selected panel |
+| [Typing numbers](#typing-numbers) | The fields of the Selected Object panel |
 | [Delete](#delete) | |
 | [Good to know](#good-to-know) | Tilting, stretching, other windows |
 | [Try it](#try-it-put-a-crate-on-top-of-something) | Put a crate on top of something |
@@ -113,7 +113,7 @@ Scaling rebuilds the mesh's preview at the new size, so it blinks once.
 
 ## Typing numbers
 
-The **Selected** panel on the **Scene** tab has these fields:
+The **Selected Object** panel on the **Scene** tab (called **Selected** before 0.14.0) has these fields:
 
 | Field | Meaning |
 |---|---|
@@ -130,7 +130,7 @@ Pressing Enter applies the number and moves the cursor out of the field. That ma
 
 With several objects selected, the fields work on the whole selection. See [Moving several at once](arranging.html#moving-several-at-once).
 
-{% include shot.html src="/assets/shots/edgebuilder/positioning-selected.webp" caption="The Selected panel" shows="The Scene tab with a crate selected: its name, path and position at the top of the Selected panel, the X, Y and Z fields, Heading, Scale and Seen from, m, the Solid when baked switch with its note, and the Apply, Drop to floor and Delete buttons." %}
+{% include shot.html src="/assets/shots/edgebuilder/positioning-selected.webp" caption="The Selected Object panel" shows="The Scene tab with a crate selected: its name, path and position at the top of the Selected Object panel, the X, Y and Z fields, Heading, Scale and Seen from, m, the Solid when baked switch with its note, and the Apply, Drop to floor and Delete buttons." %}
 
 ## Delete
 
@@ -138,7 +138,7 @@ Press **Delete** with an object selected and Edit on, or the **Delete** button o
 
 ## Good to know
 
-- **Tilting.** **R** then **X** or **Y** turns an object around a level axis, which tilts it. The tilt is kept in the scene. The Selected panel shows only the heading, so use **Ctrl+Z** to take a tilt back. Tilting was tested less than turning: the tests in the game turned objects around the upright axis only.
+- **Tilting.** **R** then **X** or **Y** turns an object around a level axis, which tilts it. The tilt is kept in the scene. The Selected Object panel shows only the heading, so use **Ctrl+Z** to take a tilt back. Tilting was tested less than turning: the tests in the game turned objects around the upright axis only.
 - **Stretching.** **S** then **X**, **Y** or **Z** scales a mesh along one axis only. The **Scale** field is one number for all three, and applying it makes the mesh evenly scaled again. Stretching was not part of the tests in the game.
 - **Smooth drags.** Drags follow the mouse at the game's frame rate, and don't lower it.
 - **Other windows.** While Edit is on, other REDnode windows hide, or can't be clicked. See [Builder mode and other windows](camera.html#builder-mode-and-other-windows).
@@ -150,6 +150,6 @@ Press **Delete** with an object selected and Edit on, or the **Delete** button o
 3. Drag the **blue** arrow up until the crate is higher than the object, then the **red** and **green** arrows until it's above it.
 4. Press **Ctrl+E**. The crate drops onto the first solid surface below it: the object's top.
 5. Press **R**, type `45` and press **Enter**. The crate turns an eighth of a turn.
-6. In the **Selected** panel, type `0` in **Heading** and press **Enter**. It turns again, to heading 0.
+6. In the **Selected Object** panel, type `0` in **Heading** and press **Enter**. It turns again, to heading 0.
 7. Press **G**, **Z**, type `-0.5`, then press **Esc** instead of Enter. Nothing moved.
 8. Press **Ctrl+Z** twice: the heading and the turn come undone. Once more and the drop comes undone: the crate is back in the air above the object.

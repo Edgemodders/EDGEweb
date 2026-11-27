@@ -2,8 +2,8 @@
 title: Removing the game's doors
 section: EDGEbuilder
 order: 7.5
-description: "Pick the game's own doors with EDGEbuilder, remove them from the world as part of a scene, bring them back, bake the removals into a mod so the doors stay gone, and open, close or lock a door: the World tab, Remove from world, stand-ins, door states, and walkthroughs."
-reviewed: 2026-11-23
+description: "Pick the game's own doors and meshes with EDGEbuilder, remove them from the world as part of a scene, bring them back, bake the removals into a mod so the doors stay gone, and open, close or lock a door: the World tab, Pick under the cursor, Show tooltip, Remove from world, stand-ins, door states, and walkthroughs."
+reviewed: 2026-11-27
 ---
 
 # Removing the game's <span class="y">doors</span>
@@ -15,11 +15,12 @@ Everything else in EDGEbuilder adds things to the world. This page is about taki
 | [What you need](#what-you-need) | For removing live, and for baking |
 | [Three kinds of door](#three-kinds-of-door) | Doors, painted-on doors, and other meshes |
 | [Finding a door](#finding-a-door) | The World tab, or a click in the world |
+| [Pick under the cursor](#pick-under-the-cursor) | Any mesh the game placed, its details, Drop a copy, and Show tooltip |
 | [Removing and bringing back](#removing-and-bringing-back) | Remove from world, Restore, Undo |
 | [Stand-ins](#stand-ins) | The copy the game shows in a door's place |
 | [Opening, closing and locking](#opening-closing-and-locking) | A door kept open, closed or locked while your scene is open |
 | [Baking the removals](#baking-the-removals) | Making it last, without EDGEbuilder |
-| [Try it](#try-it-remove-vs-door) | Five short walkthroughs |
+| [Try it](#try-it-remove-vs-door) | Six short walkthroughs |
 | [Good to know](#good-to-know) | Quests, saves, and what comes later |
 
 ## What you need
@@ -28,6 +29,7 @@ Everything else in EDGEbuilder adds things to the world. This page is about taki
 |---|---|
 | **Find and remove doors while you play** | EDGEbuilder 0.12.5 or later, [REDnode](../rednode/) 0.67.3 or later, and a scene open on the [Scene tab](scenes.html). A removal is kept in the open scene |
 | **Open, close and lock doors** | EDGEbuilder 0.13.2 or later |
+| **Pick under the cursor and Show tooltip** | EDGEbuilder 0.14.0 or later |
 | **Bake removals into a mod** | Also [REDbridge](../redbridge/) **0.16.0** or later, a [REDcode](../redcode/) project open in VS Code, and ArchiveXL in the game. Get the newest REDbridge with **Get REDbridge** in EDGEdeck, or **Update REDbridge** in REDnode's Mod Manager |
 
 ## Three kinds of door
@@ -44,16 +46,42 @@ The game has doors that work and doors that are only painted on. EDGEbuilder kno
 
 **On the World tab.** The tab has two parts, **Nearby** and **Sectors**. Nearby lists the doors within 30 m of V, nearest first, with their state and distance. **Scan Doors** reads the list once more after you move (before 0.13.2 the button was called Look again). [Sectors](sectors.html) lists everything a part of the world places, doors included. Hover over a row and the door gets an outline in the game. Click a row to pick that door, and the camera flies to it. The list is around V, not the camera, so walk V near the doors you want.
 
-**In the world.** With **Edit** on, click a door. EDGEbuilder picks the first door your click passes, up to the first wall, and the World tab shows it. A click on one of your own scene's objects still picks your object. With **Meshes** on, a click that finds no door picks the mesh it hits.
+**In the world.** With **Edit** on, click a door. EDGEbuilder picks the first door your click passes, up to the first wall, and the World tab shows it. A click on one of your own scene's objects still picks your object. With **Meshes** on, a click that finds no door picks the mesh it hits. To see what a click would pick before you click, switch on [Pick under the cursor](#pick-under-the-cursor).
 
-The **Picked in the world** panel on the World tab says what you picked:
+**Unpicking.** With Edit on and EDGEbuilder's own camera, a quick tap of the right button unpicks the door or object you picked and closes its drawer (0.14.0). Holding the right button still looks around, and keeps the pick. With V's own camera, a right-click unpicks at once.
+
+The **Selected Node** panel on the World tab says what you picked (before 0.14.0 it was called **Picked in the world**):
 
 - its file and appearance, such as `single_door.ent` and `doors_single_kitsch_g_frameless`;
 - for a working door, its state: open or closed, locked, how it starts, and whether it closes by itself;
 - where it is, and which part of the world's files placed it;
+- **Solid: Yes** or **No**, and for a mesh **Collision data: Yes** or **No** (0.14.0; see [Pick under the cursor](#pick-under-the-cursor));
 - **warnings**: a door a quest uses (V's own apartment door is one), a door in one of the game's quest areas, or a mesh that holds several models as one, so removing it removes them all.
 
-{% include shot.html caption="The World tab" shows="EDGEbuilder's World tab at V's apartment: the Doors, Painted-on doors and Meshes switches, the list of doors near V with their state and distance, and the Picked in the world panel for V's door with its quest warning and the Remove from world button." %}
+{% include shot.html caption="The World tab" shows="EDGEbuilder's World tab at V's apartment: the Doors, Painted-on doors and Meshes switches, the list of doors near V with their state and distance, and the Selected Node panel for V's door with its quest warning and the Remove from world button." %}
+
+## Pick under the cursor
+
+From 0.14.0, the **Selected Node** panel has two switches for picking with the mouse. EDGEbuilder remembers both.
+
+**Pick under the cursor.** With Edit on, whatever a click would pick gets an outline as the mouse moves: a door, or any mesh the game placed, such as a wall, a floor, a bench or a crate. Your own scene's objects are left out. A click picks it, whatever the **Meshes** switch says. This also picks meshes the game places as solid props, and the solid objects of a bake.
+
+The picked object's details open in a drawer at the left edge of the screen, so the middle stays clear:
+
+| In the drawer | Means |
+|---|---|
+| The picture | The model in 3D. Drag to turn it, the wheel to come nearer |
+| **Name**, **Kind**, **Path**, look | What it is, the kind of node that placed it, and its file |
+| **Solid** | **Yes** when the game's physics stopped your click on it, **No** when the click went through. A door says Yes while closed and No when open |
+| **Collision data** | For a mesh: whether its file carries collision data. A mesh with **Solid: No** but **Collision data: Yes** can be made solid in a copy of your own; one with **No** needs a collision box |
+| **Size**, **At**, **Node**, **Sector** | How big it is, where it is, and which entry of which [sector](sectors.html) placed it |
+| **Drop a copy** | Closes the drawer and starts [Drop at click](browsing.html#drop-it) with a copy. Move the mouse into the world and click: the copy goes into the open scene |
+
+The drawer's **✕** closes it, and so does a click on nothing in the world. A door picked from the Nearby list doesn't open the drawer. While a click is being looked up, a yellow disc turns at the top centre of the screen with **Picking...**. A quick pick shows nothing.
+
+**Show tooltip.** With Edit on, whatever is under the mouse gets a small tooltip that follows the cursor, hanging just off its tip, up and to the left. Near the left or top of the screen, or an open drawer, it moves to the right of the cursor or below it. It says the thing's name and kind, about how big it is, **Solid** and **Collision data**, a door's state, and how many metres it is from the camera. There is none over the sky or over your own scene's objects, and it goes while you hold the right button to look around. It works with Pick under the cursor on or off: off, the **Doors**, **Painted-on doors** and **Meshes** switches decide what it describes.
+
+Before 0.14.0, a click on a bake's solid object picked whatever was behind it, and a merged mesh (the game's `worldCookedStaticMeshNode`) had no 3D picture and no Drop a copy.
 
 ## Removing and bringing back
 
@@ -79,7 +107,7 @@ One thing to know: after you load a save with a door removed, the real door neve
 
 ## Opening, closing and locking
 
-From 0.13.2, a working door you picked has three more buttons in the **Picked in the world** panel: **Open**, **Close** and **Lock** (which reads **Unlock** once the door is locked). They run the door's own actions, the ones its panel and a quickhack use, so the door moves as it does in the game. A painted-on door has none of them.
+From 0.13.2, a working door you picked has three more buttons in the **Selected Node** panel: **Open**, **Close** and **Lock** (which reads **Unlock** once the door is locked). They run the door's own actions, the ones its panel and a quickhack use, so the door moves as it does in the game. A painted-on door has none of them.
 
 The open scene **keeps** the door that way. The row in the list says **kept**, and the Scene tab lists the door under **World edits** with its state, such as "open, locked". The scene's count ends "1 door set".
 
@@ -143,11 +171,19 @@ You need a REDcode project open in VS Code (the Bake tab names it) and REDbridge
 3. Press **Unlock** and call it again: it opens.
 4. Pick **V's door** and press **Open**. Wait half a minute: it stays open. Press **Restore** on the Scene tab: it closes, and closes by itself again.
 
+## Try it: copy something the game placed
+
+1. On the **World** tab, switch on **Pick under the cursor** and **Show tooltip** in the Selected Node panel. Switch **Edit** on.
+2. Move the mouse over a bench, a wall and a door, without clicking. Each gets an outline, and the tooltip beside the cursor says what it is, whether it is solid there and how far away it is.
+3. Click the bench. Its drawer opens at the left of the screen, with the bench in 3D and **Solid** and **Collision data**.
+4. Press **Drop a copy**, move the mouse to an empty spot and click. A copy of the bench is in your scene.
+5. Click the wall, then give the right button a quick tap: the wall is unpicked and its drawer closes.
+
 ## Good to know
 
 - **Quests.** Removing a door a quest opens, locks or walks you through can break that mission, or let V into places that aren't finished. EDGEbuilder warns you; it doesn't stop you.
 - **Saves.** A removal isn't written into your save. Without EDGEbuilder running and without a bake, the door is back.
 - **Door states are not baked.** A door stays open, closed or locked only while the scene is open in EDGEbuilder.
-- **Picking around the camera** rather than V: the [Sectors](sectors.html) part of the World tab finds what is around the camera. Copying and changing the rest of what the game placed come later. See [EDGEbuilder's design](https://edgemodders.github.io/EDGEbuilder/world-objects.html).
+- **Picking around the camera** rather than V: the [Sectors](sectors.html) part of the World tab finds what is around the camera. [Pick under the cursor](#pick-under-the-cursor) picks any mesh where you click, and **Drop a copy** copies it into your scene. Changing the rest of what the game placed comes later. See [EDGEbuilder's design](https://edgemodders.github.io/EDGEbuilder/world-objects.html).
 - **Other mods** that load your scene through REDnode see its objects but not yet its removals.
 - **Just want doors gone while you play?** [Remove Doors](remove-doors.html), a small app of its own, does that without scenes, REDbridge or a project.

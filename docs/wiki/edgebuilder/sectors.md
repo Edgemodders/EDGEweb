@@ -4,7 +4,7 @@ nav_title: Sectors
 section: EDGEbuilder
 order: 7.6
 description: "World > Sectors in EDGEbuilder: find the pieces the game's world is cut into, see everything one piece places, and pick, fly to, hide or remove an entry."
-reviewed: 2026-11-23
+reviewed: 2026-11-27
 ---
 
 # <span class="y">Sectors</span>: what the game placed, piece by piece
@@ -60,12 +60,14 @@ Click a sector. A drawer opens to the left of the window with everything that se
 
 | Do | Result |
 |---|---|
-| Click a row | The entry is picked: the **Picked in the world** panel on the World tab describes it, and it gets an outline in the game when it is loaded and draws something |
+| Click a row | The entry is picked: the **Selected Node** panel on the World tab describes it, and it gets an outline in the game when it is loaded and draws something. A quick tap of the right button in the world unpicks it (0.14.0) |
 | Click it twice | Edit goes on and the camera flies to it |
 | Press its eye | It disappears from the game until you press the eye again or EDGEbuilder stops |
 | **Remove from world** in the panel | The entry is removed as part of the open scene, and the bake keeps it removed, exactly as with a [door](doors.html#removing-and-bringing-back). **Restore** on the Scene tab brings it back |
 
 An entry that places a working door is picked as that door, so it also has **Open**, **Close** and **Lock**.
+
+**The other way round.** To find which sector and entry placed something you can see, switch on [Pick under the cursor](doors.html#pick-under-the-cursor) and click it: its drawer names the **Node** and the **Sector** (0.14.0).
 
 ## Try it
 
