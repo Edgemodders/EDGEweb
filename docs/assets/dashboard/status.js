@@ -2487,12 +2487,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G0",
-      "title": "Generated scenes probe: a 5,000-object scene baked and loaded (offline half done)",
+      "title": "Generated scenes probe: a 5,000-object scene baked and loaded (offline half done; the look in game partly run: a command-line bake loads and draws)",
       "status": "in progress"
      },
      {
       "id": "G1",
-      "title": "Generated scenes: the format contract and a command line (check, bake, game closed); first slice built on the cosmic branch, not released",
+      "title": "Generated scenes: the format contract and a command line (check, bake, game closed); first slice built, merged into main on 2026-11-27, ships in 0.14.0",
       "status": "in progress"
      },
      {
@@ -2517,7 +2517,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "B5",
-      "title": "Lights and more kinds, split by kind: B5-1 lights, B5-2 decals, B5-3 particles and fog, B5-4 colliders, B5-5 sounds",
+      "title": "Lights and more kinds, split by kind: B5-1 lights, B5-2 decals, B5-3 particles and fog, B5-4 colliders, B5-5 sounds; B5-4 moved up on 2026-11-27 to right after B4-4",
       "status": "planned"
      },
      {
@@ -2557,7 +2557,7 @@ window.EDGE_STATUS = {
     "needs": [
      "0.14.0 in-game test: Previews, the Explorer and the Preview switch, Pick under the cursor, the Library drawer, Drop at click outline, Library drawer widths, Import file picker, About guide, a picture details before Drop, Objects eye, Explorer widths and reveal, Show tooltip, pick spinner, the Scene tab's list, minimize and Bring V (59 steps, P1 to P7; steps 1 to 35 passed, 36 to 59 and four rechecks to run)",
      "G0's look in the game (the owner)",
-     "The rest of G1 on the cosmic branch, then its merge into main"
+     "G1's first slice, merged into main on 2026-11-27 (done; ships in 0.14.0)"
     ]
    },
    "handTests": [
@@ -2570,10 +2570,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
-     "steps": null,
+     "steps": 8,
      "status": "partly run",
      "ranBy": "script + owner",
-     "note": "2026-11-22, offline half only: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene was refused without bounds. 2026-11-23: their second sample has bounds for their own files, and all 4,965 objects baked in 7.5 s. The look in the game is not run"
+     "note": "2026-11-22, offline half: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene was refused without bounds. 2026-11-23: their second sample has bounds for their own files, and all 4,965 objects baked in 7.5 s. In game, 2026-11-23: steps 1 and 2 passed (the club map baked by the command line loads and draws), step 7 in part (an archive swap in 89 ms, no crash); steps 3, 4, 6 and 8 to run. Not walkable without the team's collision boxes (B5-4). Status for the team: https://edgemodders.github.io/EDGEbuilder/arena.html"
     },
     {
      "name": "D2 Open, close, lock (0.13.0 and 0.13.1, in game)",
@@ -2751,7 +2751,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EB2",
-     "what": "G0: look at the baked generated scene in the game (0.13's tests are done); the team was asked for their archives on 2026-11-23, and the look can start without them",
+     "what": "G0: finish the look at the baked generated scene in the game (steps 3, 4, 6, 8, and whether a swapped-in bake is used, with 0.14.0's Solid line); the owner asked the team for their archives again on 2026-11-27, and the look goes on without them",
      "since": "2026-11-23"
     },
     {
@@ -2766,7 +2766,7 @@ window.EDGE_STATUS = {
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-25"
+   "checkedBy": "EDGEbuilder session, 2026-11-27"
   },
   {
    "name": "EDGEwave",
