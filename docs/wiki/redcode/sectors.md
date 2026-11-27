@@ -138,7 +138,7 @@ One sector alone doesn't show everything the player sees in a place. The cells n
 
 Tested by REDcode's developer and by script. Selecting and changing across layers, links between a thing's entries in the picked panel, and opening the sector where V stands in the game are planned.
 
-{% include shot.html caption="The Overlaps tab" shows="A sector's 3D view with the Overlaps tab open: rows grouped as Neighbours, Other levels and Global, each row with its Off, Ghost and Shown switch and an open icon, one row set to Ghost and its things drawn see-through in light blue around the opened sector." %}
+{% include shot.html src="/assets/shots/redcode/sectors-the-overlaps-tab.png" caption="The Overlaps tab" shows="A sector's 3D view with the Overlaps tab open: rows grouped as Neighbours, Other levels and Global, each row with its Off, Ghost and Shown switch and an open icon, one row set to Ghost and its things drawn see-through in light blue around the opened sector." %}
 
 ## Changing many at once: the Properties tab
 
@@ -229,4 +229,4 @@ export default {
 
 Tested by REDcode's developer, Debug and the requests included.
 
-{% include shot.html caption="The Scripts menu" shows="The Scripts menu open over a sector's 3D view: the project's scripts, your scripts and the three examples, the row buttons Run on Selection, Debug, Edit and Remove on the highlighted one, and New Script… and Open Scripts Folder at the bottom." %}
+{% include shot.html src="/assets/shots/redcode/sectors-the-scripts-menu.png" caption="The Scripts menu" shows="The Scripts menu open over a sector's 3D view: the project's scripts, your scripts and the three examples, the row buttons Run on Selection, Debug, Edit and Remove on the highlighted one, and New Script… and Open Scripts Folder at the bottom." %}
