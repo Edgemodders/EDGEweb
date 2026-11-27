@@ -2078,6 +2078,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": "owner",
      "note": "Waits for a REDbridge release with #25 and REDcode raising its minimum"
+    },
+    {
+     "name": "window-check.mjs (#22) on the 0.20.0 release",
+     "steps": null,
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-26 23:51, EDGEweb's nightly run on the dev PC with the release zip: All passed. A run earlier that day failed at 'the webview is found by UI Automation' (0.19.0's code too), so the failure comes and goes on this PC; cause open"
     }
    ],
    "ownerSpotTests": [],
@@ -2148,7 +2155,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-20"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (REDbridge #25 built on main, probe passed; not released)"
+   "checkedBy": "REDnode session, 2026-11-26 (window-check.mjs passed on the 0.20.0 release in EDGEweb's nightly run; #25 built on main, not released)"
   },
   {
    "name": "EDGEdeck",
