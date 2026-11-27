@@ -2467,8 +2467,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "PV",
-      "title": "Explorer and the Preview switch, Pick under the cursor (drawer at the screen left, solid or not), Previews drawer, the Library in a drawer, Drop at click with the object own outline, the Library drawer width buttons, Import file picker, About tab as a Markdown quickstart, a picture details before Drop, the Objects drawer eye with Drop a copy, Explorer width arrows and reveal, Show tooltip, pick spinner (0.14.0)",
-      "status": "built, tests pending"
+      "title": "Previews, the Explorer and the Preview switch, Pick under the cursor (drawer at the screen's left, Solid and Collision data lines, Show tooltip at the cursor, a right tap unpicks), the Library and Objects out of the window, Drop at click's outline: released in 0.14.0 on 2026-11-27 (its in-game test passed, 67 steps)",
+      "status": "done"
      },
      {
       "id": "B2d-2",
@@ -2477,7 +2477,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "ST",
-      "title": "Sector Tools under World (S1 Sectors released in 0.13.2; Open in REDcode built for 0.14.0, EDGEbuilder #11; S2 3D view, S3 previews; EDGEbuilder #9)",
+      "title": "Sector Tools under World (S1 Sectors released in 0.13.2; Open in REDcode built, switched off in 0.14.0 until its test with REDcode 0.10.18 passes; S2 3D view, S3 previews; EDGEbuilder #9)",
       "status": "in progress"
      },
      {
@@ -2492,7 +2492,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G1",
-      "title": "Generated scenes: the format contract and a command line (check, bake, game closed); first slice merged into main on 2026-11-27 for 0.14.0, its test passed on 2026-11-27; the cosmic branch retired, work on main",
+      "title": "Generated scenes: the format contract and a command line (check, bake, game closed); the first slice released in 0.14.0 on 2026-11-27 (its test passed, 11 steps); more of G1 as the team asks",
       "status": "in progress"
      },
      {
@@ -2553,18 +2553,19 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": "0.14.0",
+    "version": "0.14.1",
     "needs": [
-     "0.14.0 in-game test: step 66 (a right-button tap unpicks the world object), on test 25"
+     "Open in REDcode's test (5 steps, in game with REDcode 0.10.18, not out yet), then switch it on (Features in src/protocol.ts and the manifest's calls)",
+     "T0 Tools probe's test (10 steps, in game), then switch Tools on"
     ]
    },
    "handTests": [
     {
      "name": "Previews, Explorer, Pick under the cursor, Library drawer, Drop at click outline, Import file picker, About guide (0.14.0, in game)",
      "steps": 66,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Steps 1 to 35 passed in game on 2026-11-24 on the morning build (dbb20bf). Added the same day at the owner ask, checked in REDnode host: picture details before Drop, right button tap or hold in Drop at click, the Objects drawer eye, Explorer widths and reveal, Preview drawer headers, Show tooltip, pick spinner, and the Drop a copy cursor fix. Steps 36 to 59, and 6, 9, 11 and 33 again, to run on the newest build. Fixed 2026-11-24 from the G0 look: Solid and Collision data lines, a click picks instanced destructibles (a bake's solid objects), raycasts ask the Dynamic group so Drop at click lands on solid bakes, the drawer closes in place. Deployed 2026-11-25 (test-17). Added 2026-11-25 at the owner ask, checked in REDnode host, deployed 2026-11-25 as test-18 with the panels renamed (Selected Asset, Object, Scene, Node; step 59); test-19 deployed 2026-11-25 with Bring V on the Save row and minimize on every Selected panel (step 57): the Scene tab's Objects title with out of the window, one click previews and two fly, Selected minimizes, Bring V (steps 53 to 59) Added on 2026-11-27 from the owner's run: steps 60 (F10 takes the outlines off) and 61 (Settings, A picked object's card) in 7e4bba2, the world tooltip following the cursor (steps 48 and 49 changed) in 199222d, and 62 and 63 (the Scene tab rows' eye and Delete; a row click no longer opens the card) in 80e2b4e, and 64 (the Library tab's Collapse all and Expand all) in 792e406; deployed on 2026-11-27 as test 21. Steps 36 to 59 passed in game on 2026-11-27 (the owner, on test 20). 6, 9, 11 and 33 again passed the same day on test 21; 60 on test 21; 61 to 64, and 48 and 49 again, on test 22 (bdebc9d). All 64 steps passed on 2026-11-27. Step 65 (the Bake tab's headline, b31567c) added after, at the owner's ask: passed on test 23. Step 66 (a quick right-button tap unpicks the world object, b8492d5) added during the release check: to run on test 25, deployed on 2026-11-27."
+     "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Steps 1 to 35 passed in game on 2026-11-24 on the morning build (dbb20bf). Added the same day at the owner ask, checked in REDnode host: picture details before Drop, right button tap or hold in Drop at click, the Objects drawer eye, Explorer widths and reveal, Preview drawer headers, Show tooltip, pick spinner, and the Drop a copy cursor fix. Steps 36 to 59, and 6, 9, 11 and 33 again, to run on the newest build. Fixed 2026-11-24 from the G0 look: Solid and Collision data lines, a click picks instanced destructibles (a bake's solid objects), raycasts ask the Dynamic group so Drop at click lands on solid bakes, the drawer closes in place. Deployed 2026-11-25 (test-17). Added 2026-11-25 at the owner ask, checked in REDnode host, deployed 2026-11-25 as test-18 with the panels renamed (Selected Asset, Object, Scene, Node; step 59); test-19 deployed 2026-11-25 with Bring V on the Save row and minimize on every Selected panel (step 57): the Scene tab's Objects title with out of the window, one click previews and two fly, Selected minimizes, Bring V (steps 53 to 59) Added on 2026-11-27 from the owner's run: steps 60 (F10 takes the outlines off) and 61 (Settings, A picked object's card) in 7e4bba2, the world tooltip following the cursor (steps 48 and 49 changed) in 199222d, and 62 and 63 (the Scene tab rows' eye and Delete; a row click no longer opens the card) in 80e2b4e, and 64 (the Library tab's Collapse all and Expand all) in 792e406; deployed on 2026-11-27 as test 21. Steps 36 to 59 passed in game on 2026-11-27 (the owner, on test 20). 6, 9, 11 and 33 again passed the same day on test 21; 60 on test 21; 61 to 64, and 48 and 49 again, on test 22 (bdebc9d). All 64 steps passed on 2026-11-27. Step 65 (the Bake tab's headline, b31567c) added after, at the owner's ask: passed on test 23. Step 66 (a quick right-button tap unpicks the world object, b8492d5) added during the release check: to run on test 25, deployed on 2026-11-27. Steps 66 and 67 passed on test 26; all 67 steps passed on 2026-11-27, and 0.14.0 was released the same day."
     },
     {
      "name": "G1 The command line and the scene contract (0.14.0; steps 1 to 8 without the game, 9 to 11 in game)",
@@ -2679,18 +2680,25 @@ window.EDGE_STATUS = {
      "note": "2026-11-12 on 0.10.9, the owner's laptop"
     },
     {
-     "name": "Open in REDcode (0.14.0, in game with REDcode 0.10.18)",
+     "name": "Open in REDcode (built, switched off in 0.14.0; in game with REDcode 0.10.18)",
      "steps": 5,
      "status": "not run",
      "ranBy": "owner",
      "note": "Built 2026-11-25 (EDGEbuilder #11, part 1): an arrow in the Sector drawer and a button in Selected Node call REDcode openSector; the manifest lists redcode.openSector in calls, so REDnode asks once. Checked in REDnode host with REDcode package 0.4.0 from its checkout: the Mod Manager hint until allowed, the request carries the sector and entry 288, no-window and opened answers. Not deployed; the game steps need REDcode 0.10.18 released"
     },
     {
-     "name": "T0 Tools probe (in game)",
+     "name": "T0 Tools probe (built, switched off in 0.14.0; in game)",
      "steps": 10,
      "status": "not run",
      "ranBy": "owner",
      "note": "2026-11-24: checked in REDnode's host; the newest 0.14.0 build and edgebuilder-tool-probe deployed 2026-11-25, the game steps not run"
+    },
+    {
+     "name": "0.14.0 release check: Open in REDcode and Tools switched off (in game)",
+     "steps": 3,
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Passed on 2026-11-27 on test 24: no Open in REDcode in the Sector drawer or Selected Node, no Tools panel in Settings with the tool probe installed, no Calls section in REDnode's Mod Manager."
     }
    ],
    "ownerSpotTests": [
