@@ -4,7 +4,7 @@ nav_title: Playing in the game
 section: EDGEdir
 order: 8
 description: "Playing an EDGEdir scene in the running game with EDGE Director: its window, opening a scene, Play, Stop, Start Again, the playhead and Loop, the cast and Go There, Play in Game from VS Code, and what the game will not play as the preview shows."
-reviewed: 2026-11-25
+reviewed: 2026-11-26
 ---
 
 # Playing in the <span class="y">game</span>
@@ -109,7 +109,7 @@ The preview and the game are two different players. Today the game differs in th
 | **In**: a clip starts inside its animation | The clip starts from the animation's beginning |
 | **Speed** | The clip plays at normal speed |
 | A clip trimmed short, or looped | Works: EDGE Director moves the actor on, or starts the clip again, on time |
-| An animation made in EDGEfab | Left out; the clip before it goes on |
+| A made animation (from REDcode) | Left out; the clip before it goes on |
 | V acts | V's track is left out |
 | A walk moves along | Nobody moves from their mark: an animation's own movement is not applied |
 | Muted tracks | Left out |

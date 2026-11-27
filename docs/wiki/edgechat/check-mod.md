@@ -4,7 +4,7 @@ nav_title: When a mod doesn't work
 section: EDGEchat
 order: 5
 description: "/edge:check-mod looks at a mod's files, the logs, the running game and EDGEdeck at once, changes nothing, and lists what is wrong with a fix for each."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # When a mod <span class="y">doesn't work</span>

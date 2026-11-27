@@ -45,7 +45,7 @@ The words this wiki uses, in plain language. Every term has its own address, so 
 | <a id="activity-bar"></a>Activity bar | The strip of icons down the left edge of VS Code and EDGEkit. One icon per tool; click one to open that tool's panel |
 | <a id="command-palette"></a>Command palette | A search box for every command in the editor. Press **Ctrl+Shift+P** and type a tool's name |
 | <a id="edgekit"></a>EDGEkit | The EDGEmodders editor: a free app for Windows that looks and works like VS Code, with the EDGE editor tools built in. See [EDGEkit](edgekit/) |
-| <a id="extension"></a>Extension | An add-on for VS Code or EDGEkit. REDcode, EDGEdeck, EDGEmat, EDGEwave, EDGEquest and EDGEhack are extensions |
+| <a id="extension"></a>Extension | An add-on for VS Code or EDGEkit. REDcode, EDGEdeck, EDGEmat, EDGEwave, EDGEquest, EDGEhack and EDGEfab are extensions |
 | <a id="extension-pack"></a>Extension pack | An extension that only installs other extensions. EDGEkit's pack installs the EDGE tools in VS Code in one go |
 | <a id="open-vsx"></a><a id="vs-code-marketplace"></a>VS Code Marketplace, Open VSX | The two stores editors install extensions from. VS Code uses Microsoft's Marketplace; EDGEkit and VSCodium use Open VSX |
 | <a id="vs-code"></a>VS Code | Visual Studio Code, a free editor from Microsoft. Most EDGE tools run inside it or inside EDGEkit |

@@ -39,7 +39,7 @@ In VS Code's settings, search for `edgedir`. All three can stay empty when REDco
 | **Desk** | Your scenes and sequences; scenes opened from elsewhere under Recent |
 | **Sets** | EDGEbuilder scenes in the EDGE Library and the open REDcode project |
 | **Library** | Empty in this version |
-| **Animations** | The game's animations, and ones made in EDGEfab |
+| **Animations** | The game's animations, and ones made in REDcode |
 
 ## Commands
 

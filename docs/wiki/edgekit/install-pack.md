@@ -4,7 +4,7 @@ nav_title: Install the extension pack
 section: EDGEkit
 order: 3
 description: "Install the EDGEkit extension pack in VS Code or VSCodium to get the EDGE tools there in one go: what it installs in each editor, first steps, updates and uninstalling."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # Install the <span class="y">EDGEkit</span> extension pack
@@ -30,12 +30,13 @@ The EDGEkit extension pack is one extension that installs the published EDGE ext
 | [EDGEmat](../edgemat/) | The material editor: find a garment's materials, recolor them, make new ones from your words | Yes | Yes |
 | [EDGEwave](../edgewave/) | The sound studio: edit, mix and re-voice the game's sounds | Yes | Yes |
 | [EDGEquest](../edgequest/) | The quest maker: read the game's quests, write your own | Yes | Yes |
-| [EDGEhack](../edgehack/) | The quickhack editor | Not yet: see [Install and set up EDGEhack](../edgehack/install.html) | Yes |
+| [EDGEhack](../edgehack/) | The quickhack editor | Yes (from pack 0.7.1) | Yes |
+| [EDGEfab](../edgefab/) | The asset maker: props from a 3D model or your words | Yes | Yes |
 | [REDsave](https://edgemodders.github.io/REDsave/) | The save game manager | Yes | Yes |
 | REDnode HUD | A dark theme in the EDGE house style | Yes | Yes |
 | Redscript IDE, by jac3km4 | Language support for redscript, the game's scripting language | Yes | No |
 
-The two editors get their extensions from different places: VS Code from Microsoft's Marketplace, VSCodium from [Open VSX](https://open-vsx.org/). The pack lists only what each place has. EDGEhack isn't on the Marketplace yet, and Redscript IDE isn't on Open VSX.
+The two editors get their extensions from different places: VS Code from Microsoft's Marketplace, VSCodium from [Open VSX](https://open-vsx.org/). The pack lists only what each place has: Redscript IDE isn't on Open VSX.
 
 New EDGE tools join the pack as they are published. If you installed an older pack, your editor updates it and installs what was added.
 
@@ -47,7 +48,7 @@ New EDGE tools join the pack as they are published. If you installed an older pa
 2. Search for **EDGEkit** and pick the one published by Edgemodders (id `edgemodders.edgekit`).
 3. Press **Install**. VS Code installs the pack and every extension in it.
 
-When it finishes, each tool has its own icon in the activity bar, the strip down the left edge of the window: REDcode, EDGEdeck, EDGEmat, EDGEwave, EDGEquest and REDsave.
+When it finishes, each tool has its own icon in the activity bar, the strip down the left edge of the window: REDcode, EDGEdeck, EDGEmat, EDGEwave, EDGEquest, EDGEhack, EDGEfab and REDsave.
 
 Or install it from a terminal:
 
@@ -71,11 +72,12 @@ The pack installs the extensions; each still has its own first steps.
 | EDGEwave | Needs REDcode set up and a REDcode project. See [Install and set up EDGEwave](../edgewave/install.html) |
 | EDGEquest | See [Install and set up EDGEquest](../edgequest/install.html) |
 | EDGEhack | Needs REDcode set up. See [Install and set up EDGEhack](../edgehack/install.html) |
+| EDGEfab | Needs Windows x64. A Tripo key only to make props from words. See [Install EDGEfab](../edgefab/install.html) |
 | REDnode HUD | Optional: pick it with **Preferences: Color Theme** |
 
 ## Updates
 
-Each extension updates itself, as VS Code extensions normally do. When a new EDGE tool is published, a new version of the pack adds it. The latest pack is 0.6.0 (2026-11-12).
+Each extension updates itself, as VS Code extensions normally do. When a new EDGE tool is published, a new version of the pack adds it. The latest pack is 0.7.1 (2026-11-20): 0.7.0 added EDGEfab, and 0.7.1 EDGEhack in VS Code.
 
 ## Uninstalling
 

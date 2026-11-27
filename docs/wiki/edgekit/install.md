@@ -4,7 +4,7 @@ nav_title: Install the app
 section: EDGEkit
 order: 1
 description: "Download and install the EDGEkit app: what you need, the Windows warning, the installer's Nexus Mods box, the first start, updating and uninstalling."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # Install the <span class="y">EDGEkit</span> app
@@ -42,6 +42,8 @@ On Nexus Mods, each file has a **Mod manager download** button. Only one program
 
 The installer asks once. Later updates leave your choice alone. You can change it at any time: see [Nexus Mods in EDGEdeck](../edgedeck/nexus.html#download-links).
 
+**Update to 1.143.2 if you ticked this box in an older EDGEkit.** From 1.140.3 to 1.143.1 the box set up a small PowerShell link handler, and a crafted Nexus link opened from a web page could use it to run its own commands on your PC. From 1.143.2 Windows starts EDGEkit directly with the link, and installing or updating EDGEkit, **Restart to Update** included, replaces the old handler. EDGEdeck 0.33.0 and later replace it too, the first time they start. If Vortex or another program holds the links, nothing changes.
+
 {% include shot.html caption="The installer's Nexus links box" shows="EDGEkit's installer on the Select Additional Tasks page, with the box Send Nexus Mods download links (Mod manager download) to EDGEdeck." %}
 
 ## 3. The first start
@@ -58,6 +60,8 @@ Start EDGEkit. Three things happen, in this order:
 **Claude Code installs.** When the welcome screens close, EDGEkit installs Claude Code, Anthropic's AI assistant. EDGEkit asks first: "Do you trust the publisher Anthropic?" Say yes to install it. The dialog calls Anthropic "not verified"; that is how the extension registry EDGEkit uses labels most publishers. Say no and EDGEkit works without Claude Code.
 
 **One question about EDGEchat.** Once Claude Code is in, EDGEkit asks: "Set up Claude Code for EDGE?" EDGEchat is the add-on that makes Claude Code a modding assistant. **Set Up** starts it, **No, Thanks** skips it, and you can do it later. What happens next is in [Your first session](first-session.html#claude-code-and-edgechat).
+
+The built-in tools may show notifications of their own at the bottom right while this happens, such as REDcode offering to install REDbridge. They appear in front of the welcome screens (from 1.143.1), so you can answer them straight away.
 
 Then the **Welcome** page shows, with EDGEkit's own walkthrough. That is where [Your first session](first-session.html) picks up.
 

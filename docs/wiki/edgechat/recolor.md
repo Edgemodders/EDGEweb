@@ -4,7 +4,7 @@ nav_title: Recolor a jacket
 section: EDGEchat
 order: 3
 description: "A clothing mod the way most are made: Claude makes a WolvenKit project with EDGEmat, packs it, and EDGEdeck puts it in the game. The NCPD badge coat, in red."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # Recolor a <span class="y">jacket</span>

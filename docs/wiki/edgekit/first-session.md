@@ -4,7 +4,7 @@ nav_title: Your first session
 section: EDGEkit
 order: 2
 description: "Find your way around EDGEkit: the window, where each EDGE tool lives, the first steps each one needs, the Welcome walkthrough, and Claude Code with EDGEchat."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # Your first session in <span class="y">EDGEkit</span>
@@ -36,6 +36,7 @@ Each built-in tool has its own icon in the activity bar. Hover over an icon to s
 | **EDGEwave** | Sounds and Game Assets | [EDGEwave](../edgewave/) |
 | **EDGEquest** | Project Quests and Game Quests | [EDGEquest](../edgequest/) |
 | **EDGEhack** | The Desk, the Library and Quickhacks | [EDGEhack](../edgehack/) |
+| **EDGEfab** (the **EF** icon) | The Desk and the Library: your props | [EDGEfab](../edgefab/) |
 | **REDsave** | **Saves**: your save games | [REDsave's docs](https://edgemodders.github.io/REDsave/) |
 
 Claude Code adds its own icon once it is installed.
@@ -44,8 +45,8 @@ Claude Code adds its own icon once it is installed.
 
 The tools are installed, but two of them need a first step before anything else works, because every tool reads the game through them.
 
-1. **Tell REDcode where the game is.** On the Welcome page, open the step **Point REDcode at the game** and press **Set Game Folder**. Pick your Cyberpunk 2077 folder. You do this once.
-2. **Get REDbridge.** REDbridge is the engine that reads the game's files. Press **Ctrl+Shift+P**, type `REDcode: Install REDbridge` and press Enter. REDcode downloads it. More in [Install and set up REDcode](../redcode/install.html).
+1. **Get REDbridge.** REDbridge is the engine that reads the game's files. At the first start REDcode offers it in a notification at the bottom right ("REDcode needs REDbridge"): say yes, and REDcode downloads it. Missed it? Press **Ctrl+Shift+P**, type `REDcode: Install REDbridge` and press Enter. More in [Install and set up REDcode](../redcode/install.html).
+2. **Tell REDcode where the game is.** Once REDbridge runs, REDcode looks for the game itself, and asks if it can't find it. If REDcode's views still say **Set Game Folder**, open the Welcome page's step **Point REDcode at the game**, press **Set Game Folder** and pick your Cyberpunk 2077 folder. You do this once.
 3. **Set up EDGEdeck**, if you want to manage mods. Click the EDGEdeck icon and follow its **Set up** steps. See [Install and set up EDGEdeck](../edgedeck/install.html).
 
 The other tools set themselves up the first time you use them:
@@ -56,6 +57,7 @@ The other tools set themselves up the first time you use them:
 | EDGEwave | Needs a REDcode project open. See [Install and set up EDGEwave](../edgewave/install.html) |
 | EDGEquest | See [Install and set up EDGEquest](../edgequest/install.html) |
 | EDGEhack | Reads the game's quickhacks the first time its view opens, about 15 seconds. See [Install and set up EDGEhack](../edgehack/install.html) |
+| EDGEfab | Works with a 3D model you bring. To make props from your words it needs a Tripo key, which it asks for the first time. See [Install EDGEfab](../edgefab/install.html) |
 
 ## The Welcome walkthrough
 
@@ -87,7 +89,7 @@ Claude Code is Anthropic's AI assistant: a chat panel in EDGEkit that can read f
 
 {% include shot.html caption="Set up Claude Code for EDGE" shows="EDGEkit's one-time question Set up Claude Code for EDGE?, with its Set Up and No, Thanks buttons, and Claude Code's plugin dialog open on EDGEchat." %}
 
-This passed the developer's test on a fresh install of EDGEkit 1.140.2.
+This passed the developer's test on a fresh install of EDGEkit 1.140.2. The first start as a whole, REDbridge's notification and the game found included, passed again on a fresh install of 1.143.1.
 
 ## Try it
 

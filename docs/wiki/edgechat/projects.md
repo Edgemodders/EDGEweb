@@ -4,7 +4,7 @@ nav_title: Keep a project easy to work on
 section: EDGEchat
 order: 6
 description: "/edge:init-project writes a CLAUDE.md into your mod's folder, so every later Claude Code session knows the mod's layout, where it deploys and how to test it."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # Keep a project <span class="y">easy to work on</span>

@@ -1491,6 +1491,12 @@ window.EDGE_STATUS = {
     "note": "Built 2026-11-26: the clip index (14,016 files, 146,814 clips, about two minutes to read once), its unit check, the search over the real index (10 to 30 ms), and the form in Chrome on the timeline harness; not run in VS Code (docs/testing.md, S1 to S8)"
    },
    {
+    "name": "Sector search (released in 0.10.17 without a test)",
+    "steps": 5,
+    "status": "not run",
+    "note": "Written 2026-11-26 from the wiki's list of what is not yet tested: the search box on a sector's 3D view selecting what it finds, Back, and a mesh's search in Tree (docs/testing.md, SR1 to SR5)"
+   },
+   {
      "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
      "steps": 12,
      "status": "not run",

@@ -4,7 +4,7 @@ nav_title: Change it while you play
 section: EDGEchat
 order: 4
 description: "Swap a changed mod into the running game in seconds through REDswap, then bring EDGEdeck back in step with install and restore."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # Change it while <span class="y">you play</span>

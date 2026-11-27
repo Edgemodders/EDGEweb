@@ -66,6 +66,6 @@ These are not faults. They are not built yet, or wait on another tool.
 | **In** and **Speed** are the preview's | A clip in the game has no start point and no speed |
 | Sound and camera tracks do nothing | Planned next |
 | A scene cannot be packed into a mod | Planned: today a scene plays on your own PC through EDGE Director |
-| Animations made in EDGEfab do not play in the game | They must first be turned into the game's format |
+| Made animations (from REDcode) do not play in the game from EDGEdir | Not built yet: EDGEdir leaves them out of the game and says so |
 | A pin cannot be renamed | Remove it and drop a new one |
 | Bodies are grey, with no clothes' colours or faces | The preview is for timing and poses |

@@ -3,8 +3,8 @@ title: Actors and animations
 nav_title: Actors and animations
 section: EDGEdir
 order: 4
-description: "Choosing who acts on a track from the game's characters or V, the Animations view with its search and filters, putting an animation on a track, why an animation must fit the actor's rig, and animations made in EDGEfab."
-reviewed: 2026-11-21
+description: "Choosing who acts on a track from the game's characters or V, the Animations view with its search and filters, putting an animation on a track, why an animation must fit the actor's rig, and animations made in REDcode."
+reviewed: 2026-11-26
 ---
 
 # Actors and <span class="y">animations</span>
@@ -19,7 +19,7 @@ An **actor** is a character of the game chosen for a track. An **animation** is 
 | [Animations](#animations) | The Animations view, search and filters |
 | [Putting an animation on a track](#putting-an-animation-on-a-track) | |
 | [The rig rule](#the-rig-rule) | Why some animations do not fit |
-| [Animations made in EDGEfab](#animations-made-in-edgefab) | |
+| [Made animations](#animations-made-in-edgefab) | Clips made in REDcode |
 
 ## Actors
 
@@ -40,7 +40,7 @@ V in a scene:
 | Where | What happens |
 |---|---|
 | The preview | V shows as the game's base body for V's rig, without a head: your V's own head and looks cannot be read from the game's files |
-| The game | **V does not play in the game yet.** V's track is left out, and EDGEdir says so before it plays. It waits on work in REDnode |
+| The game | **V does not play in the game yet.** V's track is left out, and EDGEdir says so before it plays. REDnode tried it in the game on 2026-11-23: V can be put into the game's own player poses, but the animations of the game's other people do not play on V, whose skeleton is another one. So V will need animations made for V's own skeleton; how EDGEdir offers that is not designed yet |
 
 ## Animations
 
@@ -49,8 +49,8 @@ The **Animations** view lists what EDGEdir read from your game.
 | Group | Holds |
 |---|---|
 | **Game** | The game's animation files, about 14,000, by folder. Open a file to see the animations in it, each with its length |
-| **Project** | Animations made in EDGEfab in the open REDcode project |
-| **Library** | Animations made in EDGEfab and kept in your EDGE Library |
+| **Project** | Animations made in REDcode in the open REDcode project |
+| **Library** | Made animations kept in your EDGE Library |
 
 {% include shot.html src="/assets/shots/edgedir/animations-view.png" caption="The Animations view" shows="The Animations view with a search typed: a list of the game's animations that match, each with its length and its file, and a + at the right of the row under the mouse." %}
 
@@ -81,8 +81,8 @@ Every animation is made for one **rig**, a skeleton. Most women of the game shar
 
 Turning on **Only What Fits the Selected Actor** keeps unfit animations out of sight.
 
-## Animations made in EDGEfab
+## Made animations {#animations-made-in-edgefab}
 
-[EDGEfab](../edgefab/) is the EDGE tool for making single animations, for instance from a video. An animation it stores shows here under **Project** or **Library**, and goes onto a lane with **+** like the game's.
+[REDcode](../redcode/) is the EDGE tool that makes and edits single animations, from a file or from words. A clip it stores in the open project, or one kept in your EDGE Library, is meant to show here under **Project** or **Library**, and to go onto a lane with **+** like the game's.
 
-Two limits for now. EDGEfab does not store animations yet, so these groups are normally empty. And **a made animation does not play in the game yet**: EDGEdir leaves such a clip out of the game and says so, and the clip before it goes on.
+Two limits for now. EDGEdir's reading of these clips was built before REDcode made any, and has been tried only with a hand-written one: **not tested with a clip REDcode made**. And **a made animation does not play in the game from EDGEdir yet**: EDGEdir leaves such a clip out of the game and says so, and the clip before it goes on.

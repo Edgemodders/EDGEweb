@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEkit
 order: 4
 description: "Fixes for the EDGEkit app: the Windows warning, the GitHub sign-in, Claude Code and EDGEchat, Nexus Mods links, updates and missing extensions. Its command and where it keeps things."
-reviewed: 2026-11-13
+reviewed: 2026-11-26
 ---
 
 # Troubleshooting <span class="y">EDGEkit</span>
@@ -16,7 +16,8 @@ This page covers the EDGEkit app itself. A problem inside one tool belongs to th
 | You see | Do this |
 |---|---|
 | "Windows protected your PC" when you run the installer | The installer isn't signed yet. Choose **More info**, then **Run anyway** |
-| The GitHub sign-in on the welcome screens seems to do nothing (1.140.6) | The sign-in shows a one-time code in a small notification, and in 1.140.6 the welcome screens cover it. The **Copy & Continue to Browser** button has already copied the code: paste it on the GitHub page that opened. Or skip the sign-in; it is optional. Fixed in the next release |
+| The GitHub sign-in on the welcome screens seems to do nothing (1.140.6) | The sign-in shows a one-time code in a small notification, and in 1.140.6 the welcome screens cover it. The **Copy & Continue to Browser** button has already copied the code: paste it on the GitHub page that opened. Or skip the sign-in; it is optional. Fixed in 1.143.1: update |
+| REDcode's views say **Set Game Folder** after the first start (1.140.6) | The welcome screens hid REDcode's notification offering REDbridge, so it never installed. Run `REDcode: Install REDbridge` from **Ctrl+Shift+P**. Fixed in 1.143.1, where notifications show in front of the welcome screens |
 | No welcome screens after installing again | Your settings from the earlier install were kept. That is expected. For a clean start, uninstall, delete `%APPDATA%\EDGEkit` and the `.edgekit` folder in your user folder, and install again |
 | A tool's icon is missing from the activity bar | Right-click the activity bar and tick the tool's name. If it isn't listed, open the **Extensions** view (**Ctrl+Shift+X**) and check that the tool is there and enabled |
 
@@ -36,6 +37,7 @@ This page covers the EDGEkit app itself. A problem inside one tool belongs to th
 |---|---|
 | **Mod manager download** on Nexus opens Vortex, or another program | That program holds the links. Vortex and Mod Organizer take them back when they start. Open the Welcome page (**Help**, then **Welcome**) and press the button in **Get mods from Nexus Mods**, or use EDGEdeck's **Handle Nexus download links** row |
 | The button does nothing | See [Nexus Mods in EDGEdeck](../edgedeck/nexus.html#download-links) |
+| You ticked the installer's Nexus box in EDGEkit 1.140.3 to 1.143.1 | Update to 1.143.2 or later (**Restart to Update**, or run the new installer). It replaces the old link handler, which a crafted link could misuse. See [Install the app](install.html#2-the-nexus-mods-box) |
 
 ## Updates and extensions
 
