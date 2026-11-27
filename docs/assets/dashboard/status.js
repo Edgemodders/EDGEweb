@@ -3043,17 +3043,17 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "Wardrobe Designer: window fixes (in game)",
-     "steps": 8,
+     "steps": 10,
      "status": "not run",
      "ranBy": null,
-     "note": "Built 2026-11-27 (owner's ask): the Reshape test's other faults (window size, following V's clothes every 4 s, the larger picture in the window, the see-through lower part). Built into the app after the dropdown test"
+     "note": "Built 2026-11-27 (owner's ask): the Reshape test's other faults (window size, following V's clothes every 4 s, the larger picture in the window, the see-through lower part), and Back taking a made change off V; built into the app 2026-11-27"
     },
     {
      "name": "Wardrobe Designer: the Clothing dropdown (in game)",
      "steps": 9,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-27 (owner's ask): one Clothing dropdown in place of the item buttons, for Equipment-EX's many slots; Refresh keeps the pick. Needs REDnode 0.68.0. REDnode's log already shows Equipment-EX's slots read"
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "Passed 2026-11-27 (owner, REDnode 0.76.2, Equipment-EX 1.3.3). A Reshape tried after it found Back left a made cap on V, fixed the same day (test Wardrobe Designer: window fixes)"
     },
     {
      "name": "Messages name EDGEmat (#15)",
@@ -3159,7 +3159,7 @@ window.EDGE_STATUS = {
    "ownerActions": [
     {
      "ref": "EM8",
-     "what": "Run the in-game test \"Wardrobe Designer: the Clothing dropdown\" (docs/testing.md; Equipment-EX outfit on, several pieces)",
+     "what": "Run the in-game test \"Wardrobe Designer: window fixes\" (docs/testing.md; a hat on V, one GPT Image change and one Make it)",
      "since": "2026-11-27"
     },
     {
@@ -3203,7 +3203,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-27 (Wardrobe Designer: Clothing dropdown and the Reshape test's window fixes built, their in-game tests open; Messages name EDGEmat partly run by script, two differences fixed; next: shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-27 (Wardrobe Designer: the Clothing dropdown passed; window fixes and Back after Make it built into the app, their in-game test open; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
