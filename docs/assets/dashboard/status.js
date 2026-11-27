@@ -1327,11 +1327,7 @@ window.EDGE_STATUS = {
     "name": "Roadmap C0 to C7, and animation steps A1 to A3",
     "source": "docs/index.md, docs/testing.md",
     "phases": [
-     {
-      "id": "BD",
-      "title": "Bodies (docs/design/bodies.md, draft 0.1, 2026-11-26): a clip on every main build's body and V's, the Bodies tab, each body's deformation graph (probe built: within 1.7 cm; the game's numbers next, through REDnode #62), EDGEfab's bodies",
-      "status": "planned"
-     },
+     {"id": "BD", "title": "Bodies (docs/design/bodies.md, agreed 2026-11-26): B2a done in REDcode, the base bodies' deformation graph matched to the game (median 1.6 mm, the bulges' rule open) and wired in with Muscles, hand test pending; then B1 the Bodies tab, B2b, B1b, B3", "status": "in progress"},
      {
       "id": "SO",
       "title": "Sector overlaps and the world index (a modder's report; docs/design/sector-overlaps.md, agreed 2026-11-26): O1 thing-to-thing matching (built 2026-11-26), then O2 draw only matches, O3 proxies, W0 to W3 a local world index (built after asking, with progress)",
@@ -1476,6 +1472,12 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+{
+ "name": "Body deformation graph (Muscles on the base bodies)",
+ "steps": 5,
+ "status": "not run",
+ "note": "Matched to the game by script (REDnode 0.76.1's reads: median 1.6 mm, twist exact, curves within 2 mm; the bulges up to 3 cm, their rule open); the look in REDcode is the owner's (docs/testing.md)"
+},
     {
      "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
      "steps": 12,
@@ -1730,11 +1732,7 @@ window.EDGE_STATUS = {
    ],
    "ownerSpotTests": [],
    "waitingOn": [
-    {
-     "who": "REDnode",
-     "what": "#62 world_bones (in 0.76.0, deployed): a game session with the bone reader, to match REDcode's run of a body's deformation graph to the game (Bodies B2a)",
-     "ref": "https://github.com/Edgemodders/REDnode/issues/62"
-    },
+    
     {
      "who": "EDGEbuilder",
      "what": "Sector Tools: Open in REDcode buttons in its Sector drawer, now that the redcode REDnode package 0.4.0 has openSector (built on REDcode's main, not released; REDcode's L1 hand test H1 to H9 with the game first)",
@@ -1763,10 +1761,12 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     {
-     "ref": "RC13",
-     "what": "Agree the Bodies page (docs/design/bodies.md: retargeting by rotations on another build, which bodies the tab lists, the deformation graph on by default, B2a first), and run the game once for REDnode's bone reader (#62)",
-     "since": "2026-11-26"
-    },
+ "ref": "RC13",
+ "what": "Agree the Bodies page (docs/design/bodies.md: retargeting by rotations on another build, which bodies the tab lists, the deformation graph on by default, B2a first), and run the game once for REDnode's bone reader (#62)",
+ "since": "2026-11-26",
+ "done": "2026-11-26",
+ "outcome": "Agreed with all four recommendations; the game ran with REDnode 0.76.1 and its reads matched REDcode's graph within a median 1.6 mm"
+},
     {
      "ref": "RC12",
      "what": "Agree the Sector overlaps and the world index page (docs/design/sector-overlaps.md, five decisions: helpers out, proxies by default, layers draw only matches, a shared index folder, when to ask); the modder reads it too",
