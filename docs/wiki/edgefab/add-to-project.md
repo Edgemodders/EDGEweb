@@ -4,7 +4,7 @@ nav_title: Add to Project
 section: EDGEfab
 order: 6
 description: "Add to Project turns a prop on the Desk into game files in your mod project: what it writes and where, collision, getting the prop into the game, and game materials on a part."
-reviewed: 2026-11-17
+reviewed: 2026-11-26
 ---
 
 # Add to <span class="y">Project</span>
@@ -18,7 +18,7 @@ reviewed: 2026-11-17
 | [Collision](#collision) | How the prop is solid |
 | [Into the game](#into-the-game) | Pack, then place |
 | [Changing a prop that's already in](#changing-a-prop-thats-already-in) | |
-| [Game materials on a part](#game-materials-on-a-part) | By asking Claude, for now |
+| [Game materials on a part](#game-materials-on-a-part) | Through EDGEmat, or by asking Claude |
 
 ## How
 

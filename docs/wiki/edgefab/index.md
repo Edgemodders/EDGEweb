@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEfab
 order: 0
 description: "EDGEfab, the EDGE platform's asset maker for Cyberpunk 2077: turn a 3D model, or your own words, into a prop the game can use, in VS Code or by asking an AI assistant."
-reviewed: 2026-11-25
+reviewed: 2026-11-26
 ---
 
 # EDGE<span class="y">fab</span>
@@ -96,9 +96,9 @@ EDGEfab comes with no game files, and it never changes your game: it writes into
 |---|---|
 | **Works, and seen in the game** | Props made from words and from a GLB, added to a project and placed with EDGEbuilder: solid, facing the right way, levels of detail clean, back after a game restart. Painted lights that glow. Bumps shaded the right way round |
 | **Works, tested in VS Code** | Every command: the Desk, the Pictures tab, Generate 3D Model, Set Size, the glow, Rename, Add to Project, the Library, Connect an Assistant |
-| **Works by asking Claude, seen in the game once** | One of the game's own materials on a prop's part, through EDGEmat's tools. There are no buttons for it yet |
-| **Not there yet** | FBX and Blender files. Clothing and animated props. Changing a finished prop's shape by words. Buttons for game materials on a part |
-| **Coming next** | FBX and `.blend` files through Blender, then props made in named parts with a material planned for each: see the [build plan](https://edgemodders.github.io/EDGEfab/plan.html) |
+| **Works with EDGEmat, seen in the game** | One of the game's own materials on a prop's part: **Open in EDGEmat** on the prop, then EDGEmat 0.3.3's **Use a Game Surface...** or **Use a Game Material...** on the part, or by asking Claude ([Game materials on a part](add-to-project.html#game-materials-on-a-part)) |
+| **Not there yet** | FBX and Blender files. Clothing, NPC looks and animated props. Changing a finished prop's shape by words |
+| **Coming next** | FBX and `.blend` files through Blender (being built), then clothing (a game garment reshaped by words, then new clothing fitted to both bodies), then props made in named parts with a material planned for each, then NPC looks: see the [build plan](https://edgemodders.github.io/EDGEfab/plan.html) |
 
 Each version's changes are in EDGEfab's [changelog](https://edgemodders.github.io/EDGEfab/changelog.html), and every test with its result is on its [Tests page](https://edgemodders.github.io/EDGEfab/testing.html).
 
