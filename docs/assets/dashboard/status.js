@@ -3059,9 +3059,9 @@ window.EDGE_STATUS = {
     {
      "name": "Messages name EDGEmat (#15)",
      "steps": 5,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-25: every message starts with EDGEmat:, and Add to Project and the part commands on a project mesh offer Reveal in REDcode. #15 stays open until it passes. For 0.3.5"
+     "status": "partly run",
+     "ranBy": "EDGEweb session, by script, 2026-11-26",
+     "note": "Steps 2 to 4 as expected. Steps 1 (glow blue found nothing in Use a Game Material) and 5 (a progress notice without EDGEmat:) differed; both fixed 2026-11-27 (e5ab604), to run again. #15 stays open until it passes. For 0.3.5"
     },
     {
      "name": "Game materials on a Desk mesh",
@@ -3199,7 +3199,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-25 (#9 and #13 built, checked and closed, for EDGEfab through edgemat-core at 0.3.5; #15 built, its hand test open; part commands for game meshes on the Desk built, hand test open; next: shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-27 (Messages name EDGEmat partly run by script, its two differences fixed in e5ab604; Game materials on a Desk mesh and Connect step 3 not run yet; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
