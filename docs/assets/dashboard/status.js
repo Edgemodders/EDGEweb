@@ -3913,8 +3913,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F3",
-      "title": "Blender sources",
-      "status": "planned"
+      "title": "Blender sources: F3a .blend, FBX and OBJ onto the Desk (built 2026-11-26), F3b Fix Mesh, F3c Edit in Blender, F3d assistants in Blender",
+      "status": "in progress"
      },
      {
       "id": "F4a",
@@ -3966,11 +3966,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.2.2",
     "needs": [
-     "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus): the MCP server takes EDGEFAB_REDBRIDGE for game files too (EDGEchat #5). Nothing under Unreleased yet",
-     "Next work: F3 Blender sources, then clothing (F4a, F4b), F2, NPC looks (FN) and bodies (FB) (the order agreed with the owner 2026-11-26; 1.0 is props, clothing and NPC looks); a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
+     "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus). Unreleased: props from .blend, FBX and OBJ files through Blender (F3a), and the Blender Path setting. Its VS Code steps must pass before a release",
+     "Next work: F3b Fix Mesh, F3c Edit in Blender, F3d assistants in Blender, then clothing (F4a, F4b), F2, NPC looks (FN) and bodies (FB) (the order agreed with the owner 2026-11-26; 1.0 is props, clothing and NPC looks); a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
    "handTests": [
+    {
+     "name": "F3a Blender files onto the Desk (.blend, FBX, OBJ through Blender in the background)",
+     "steps": 5,
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "Part A offline by Claude passed 2026-11-26 (35 checks with Blender 5.3.0, Add to Project included). Part B, 5 VS Code steps, not run"
+    },
     {
      "name": "Keys in REDcode's Keys (EDGEfab #10): moved, asked, read over MCP, changed, cleared, Don't Allow",
      "steps": 6,
@@ -4069,6 +4076,11 @@ window.EDGE_STATUS = {
      "ref": "EF2",
      "what": "Two wiki screenshots are yours: Claude Code using EDGEfab, and the prop in the game",
      "since": "2026-11-18"
+    },
+    {
+     "ref": "EF5",
+     "what": "F3a: run the 5 VS Code steps (testing.md, \"F3a: Blender files onto the Desk\", part B), and say whether Blender models and GLBs, which face the entity's back, are turned to face forward by default",
+     "since": "2026-11-26"
     }
    ],
    "risks": [
