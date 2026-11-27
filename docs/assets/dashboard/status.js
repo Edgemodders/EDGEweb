@@ -3910,12 +3910,12 @@ window.EDGE_STATUS = {
      },
      {
       "id": "FN",
-      "title": "NPC looks: an NPC assembled, its parts swapped, a new look that spawns (proposed 2026-11-26)",
+      "title": "NPC looks: an NPC assembled, its parts swapped, a new look that spawns (proposed 2026-11-26; before FB and in 1.0, the owner)",
       "status": "planned"
      },
      {
       "id": "FB",
-      "title": "Bodies: a body for V or an NPC, with its own refitter for clothing (proposed 2026-11-26)",
+      "title": "Bodies: a body for V or an NPC, with its own refitter for clothing (proposed 2026-11-26; after FN and 1.0, the owner)",
       "status": "planned"
      },
      {
@@ -4049,7 +4049,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EF4",
-     "what": "Agree the plan changes (plan.md, \"Clothing: where it falls\" and \"Bodies and NPC looks\"): clothing right after F3 as F4a and F4b; FN NPC looks and FB Bodies after F2 (or FB first); F7a narrowed to a prop's rig; V's face stays the character creator's; 1.0 as props, clothing and NPC looks",
+     "what": "Agree the rest of the plan change (plan.md, \"Clothing: where it falls\"): clothing right after F3 as F4a and F4b, before F2; F7a kept narrowed to a prop's rig, or dropped. Settled 2026-11-26: FN before FB, V's face stays the character creator's, 1.0 as props, clothing and NPC looks",
      "since": "2026-11-25"
     }
    ],
