@@ -2298,6 +2298,27 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "With the test build before 0.34.0, 2026-11-23"
+    },
+    {
+     "name": "40 Project re-sync keeps the game folder as it was",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Since 0.34.1. Run by script on 2026-11-26 on a scratch profile (EDGEweb), as expected; waiting for the owner"
+    },
+    {
+     "name": "41 Unpacking after a background update (7za gone)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Since 0.34.2. Run by script on 2026-11-26 on a scratch profile (EDGEweb), as expected; waiting for the owner"
+    },
+    {
+     "name": "42 FOMOD messages for a mod without a version",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Since 0.34.3. Run by script on 2026-11-26 on a scratch profile (EDGEweb), as expected; waiting for the owner"
     }
    ],
    "ownerSpotTests": [
@@ -2359,7 +2380,7 @@ window.EDGE_STATUS = {
     "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed in 0.33.0 (advisory GHSA-crv2-8m58-wxvv), players on older versions stay exposed until they update",
     "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
    ],
-   "checkedBy": "EDGEdeck session, 2026-11-26"
+   "checkedBy": "EDGEdeck session, 2026-11-27"
   },
   {
    "name": "EDGEbuilder",
