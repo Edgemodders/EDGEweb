@@ -1475,8 +1475,8 @@ window.EDGE_STATUS = {
 {
  "name": "Body deformation graph (Muscles on the base bodies)",
  "steps": 5,
- "status": "not run",
- "note": "Matched to the game by script (REDnode 0.76.1's reads: median 1.6 mm, twist exact, curves within 2 mm; the bulges up to 3 cm, their rule open); the look in REDcode is the owner's (docs/testing.md)"
+ "status": "passed",
+ "note": "Passed 2026-11-26 by the owner, steps 1 to 5 (\"It looks a lot better\"); matched to the game by script within a median 1.6 mm, the bulges' rule open (docs/testing.md)"
 },
     {
      "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
@@ -1503,11 +1503,11 @@ window.EDGE_STATUS = {
      "note": "Passed 2026-11-25 by EDGEweb's session by script (L2-1 to L3-6, no game, nothing judged by eye), and the retest of its three fixes (docs/testing.md, Sector layers L2 and L3)"
     },
     {
-     "name": "Animation Timeline TL2 to TL4",
-     "steps": 11,
-     "status": "partly run",
-     "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Built the same day from the owner's run, checked in Chrome, retests not run: R1 to R3 (Move, Turn and Let Go in the view's corner, the tracks scroll, Pause, Stop to the start), R4 Curl and Fist, R5 Remove Track, R6 to R9 the Bones tab, a move's block selecting its bone, New Track Above and Below, Move Clip Up and Down, tracks and clips dragged; R10 to R12 the Bones tree, Add Clip, the ruler's grab cursor; G1 to G6 a game clip's fist on the fingers only. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
-    },
+ "name": "Animation Timeline TL2 to TL4",
+ "steps": 11,
+ "status": "partly run",
+ "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Built the same day from the owner's run, checked in Chrome, retests not run: R1 to R3 (Move, Turn and Let Go in the view's corner, the tracks scroll, Pause, Stop to the start), R4 Curl and Fist, R5 Remove Track, R6 to R9 the Bones tab, a move's block selecting its bone, New Track Above and Below, Move Clip Up and Down, tracks and clips dragged; R10 to R12 the Bones tree, Add Clip, the ruler's grab cursor; G1 to G6 a game clip's fist on the fingers only. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
+},
     {
      "name": "Sector layers L4 and Sector Tools L1",
      "steps": 9,
