@@ -1311,7 +1311,7 @@ window.EDGE_STATUS = {
   {
    "name": "REDcode",
    "code": "RC",
-   "ownerSeq": 12,
+   "ownerSeq": 13,
    "group": "Core toolkits",
    "role": "The IDE: a VS Code extension for the game's files, on WolvenKit's engine through REDbridge",
    "stage": "released",
@@ -1328,6 +1328,11 @@ window.EDGE_STATUS = {
     "name": "Roadmap C0 to C7, and animation steps A1 to A3",
     "source": "docs/index.md, docs/testing.md",
     "phases": [
+     {
+      "id": "BD",
+      "title": "Bodies (docs/design/bodies.md, draft 0.1, 2026-11-26): a clip on every main build's body and V's, the Bodies tab, each body's deformation graph (probe built: within 1.7 cm; the game's numbers next, through REDnode #62), EDGEfab's bodies",
+      "status": "planned"
+     },
      {
       "id": "SO",
       "title": "Sector overlaps and the world index (a modder's report; docs/design/sector-overlaps.md, agreed 2026-11-26): O1 thing-to-thing matching (built 2026-11-26), then O2 draw only matches, O3 proxies, W0 to W3 a local world index (built after asking, with progress)",
@@ -1472,18 +1477,18 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
-{
- "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
- "steps": 12,
- "status": "not run",
- "note": "Built 2026-11-26: checked by unit checks, against the game (o1-check.mjs: the modder's example no longer listed) and in Chrome over the real REDbridge (docs/testing.md)"
-},
-{
- "name": "The tree in its own tab (To Tab, the Sector view)",
- "steps": 9,
- "status": "passed",
- "note": "Passed 2026-11-26 by the owner (F5, \"looks good\"); the bottom panel's tab renamed from REDcode Tree to Sector after it; in sector-view.md part 4 (docs/testing.md)"
-},
+    {
+     "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
+     "steps": 12,
+     "status": "not run",
+     "note": "Built 2026-11-26: checked by unit checks, against the game (o1-check.mjs: the modder's example no longer listed) and in Chrome over the real REDbridge (docs/testing.md)"
+    },
+    {
+     "name": "The tree in its own tab (To Tab, the Sector view)",
+     "steps": 9,
+     "status": "passed",
+     "note": "Passed 2026-11-26 by the owner (F5, \"looks good\"); the bottom panel's tab renamed from REDcode Tree to Sector after it; in sector-view.md part 4 (docs/testing.md)"
+    },
     {
      "name": "The mesh viewer's EDGEmat materials (#6)",
      "steps": 5,
@@ -1497,11 +1502,11 @@ window.EDGE_STATUS = {
      "note": "Passed 2026-11-25 by EDGEweb's session by script (L2-1 to L3-6, no game, nothing judged by eye), and the retest of its three fixes (docs/testing.md, Sector layers L2 and L3)"
     },
     {
- "name": "Animation Timeline TL2 to TL4",
- "steps": 11,
- "status": "partly run",
- "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Built the same day from the owner's run, checked in Chrome, retests not run: R1 to R3 (Move, Turn and Let Go in the view's corner, the tracks scroll, Pause, Stop to the start), R4 Curl and Fist, R5 Remove Track, R6 to R9 the Bones tab, a move's block selecting its bone, New Track Above and Below, Move Clip Up and Down, tracks and clips dragged; R10 to R12 the Bones tree, Add Clip, the ruler's grab cursor; G1 to G6 a game clip's fist on the fingers only. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
-},
+     "name": "Animation Timeline TL2 to TL4",
+     "steps": 11,
+     "status": "partly run",
+     "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Built the same day from the owner's run, checked in Chrome, retests not run: R1 to R3 (Move, Turn and Let Go in the view's corner, the tracks scroll, Pause, Stop to the start), R4 Curl and Fist, R5 Remove Track, R6 to R9 the Bones tab, a move's block selecting its bone, New Track Above and Below, Move Clip Up and Down, tracks and clips dragged; R10 to R12 the Bones tree, Add Clip, the ruler's grab cursor; G1 to G6 a game clip's fist on the fingers only. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
+    },
     {
      "name": "Sector layers L4 and Sector Tools L1",
      "steps": 9,
@@ -1727,6 +1732,11 @@ window.EDGE_STATUS = {
    "ownerSpotTests": [],
    "waitingOn": [
     {
+     "who": "REDnode",
+     "what": "#62 world_bones (in 0.76.0, deployed): a game session with the bone reader, to match REDcode's run of a body's deformation graph to the game (Bodies B2a)",
+     "ref": "https://github.com/Edgemodders/REDnode/issues/62"
+    },
+    {
      "who": "EDGEbuilder",
      "what": "Sector Tools: Open in REDcode buttons in its Sector drawer, now that the redcode REDnode package 0.4.0 has openSector (built on REDcode's main, not released; REDcode's L1 hand test H1 to H9 with the game first)",
      "ref": "https://github.com/Edgemodders/EDGEbuilder/issues/9"
@@ -1753,6 +1763,11 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerActions": [
+    {
+     "ref": "RC13",
+     "what": "Agree the Bodies page (docs/design/bodies.md: retargeting by rotations on another build, which bodies the tab lists, the deformation graph on by default, B2a first), and run the game once for REDnode's bone reader (#62)",
+     "since": "2026-11-26"
+    },
     {
      "ref": "RC12",
      "what": "Agree the Sector overlaps and the world index page (docs/design/sector-overlaps.md, five decisions: helpers out, proxies by default, layers draw only matches, a shared index folder, when to ask); the modder reads it too",
@@ -4066,7 +4081,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEdir",
    "code": "DR",
-   "ownerSeq": 12,
+   "ownerSeq": 13,
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
@@ -4340,7 +4355,8 @@ window.EDGE_STATUS = {
      "id": "I",
      "feature": "Sound: in the editor, then in the game (9 steps)",
      "status": "not run",
-     "since": "2026-11-26"
+     "since": "2026-11-26",
+     "ref": "DR13"
     }
    ],
    "waitingOn": [
@@ -4626,7 +4642,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmods",
    "code": "MD",
-   "ownerSeq": 6,
+   "ownerSeq": 7,
    "group": "In development",
    "role": "The EDGE mod registry: mods in their authors' own git repos, a website and a planned extension",
    "stage": "early build",
@@ -4855,6 +4871,7 @@ window.EDGE_STATUS = {
      "since": "2026-11-23"
     },
     {
+     "ref": "MD7",
      "what": "Run the R4c hand test: install the test mod through EDGEdeck 0.34 from the website on this PC (docs/design.md, \"R4c hand test\")",
      "since": "2026-11-26"
     }
