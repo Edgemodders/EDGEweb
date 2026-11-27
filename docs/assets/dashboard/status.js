@@ -3735,9 +3735,9 @@ window.EDGE_STATUS = {
     ]
    },
    "nextRelease": {
-    "version": null,
+    "version": "0.2.2",
     "needs": [
-     "edgedeck-mcp 0.34.2 (out after the 0.2.1 tests) raised and checked",
+     "Built: edgedeck-mcp 0.34.3, its wrapper probe passed 2026-11-26; released when the owner asks",
      "The next feature: EDGEguide's G4 once EDGEguide G1 to G3 exist"
     ]
    },
@@ -3819,7 +3819,7 @@ window.EDGE_STATUS = {
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-25 (0.2.1 released: GitHub v0.2.1 and Nexus; the wiki brought up to it, EDGEweb fed1c18 and b4b8f65; #3, #4, #5 closed)"
+   "checkedBy": "EDGEchat session, 2026-11-26 (0.2.2 built: edgedeck-mcp 0.34.3, probe passed; no open hand tests; .gitattributes LF and the shared rule on writing files)"
   },
   {
    "name": "REDsave",
