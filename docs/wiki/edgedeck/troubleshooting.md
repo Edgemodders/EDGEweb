@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEdeck
 order: 15
 description: "What to do when EDGEdeck can't find the game, a deploy stops, Vortex is in the way, Nexus downloads or updates fail, a mod doesn't show in the game, or the game won't start."
-reviewed: 2026-11-25
+reviewed: 2026-11-27
 ---
 
 # Troubleshooting <span class="y">EDGEdeck</span>
@@ -28,7 +28,7 @@ EDGEdeck updates itself, and many problems are fixed in a newer version. If some
 |---|---|
 | No EDGEdeck icon in the activity bar after installing | Press `Ctrl+Shift+P`, type `Developer: Reload Window` and press Enter. Still missing: right-click the activity bar and check that **EDGEdeck** is ticked. EDGEdeck runs on Windows only |
 | **No mods yet**, and no Set up group | Normal for an empty list. The set-up steps are the buttons under the text, and **Get the frameworks...** is in the **`...`** menu. See [The Set up steps](install.html#the-set-up-steps) |
-| `EDGEdeck: game not found` in the status bar | EDGEdeck couldn't find Cyberpunk 2077 through Steam, GOG or Epic. Click the status bar, or **Find the game folder**, and pick the folder that contains `bin`, `archive` and `r6`. If the game *is* in a Steam library the [log](#anything-else) lists, please [report it](https://github.com/Edgemodders/EDGEdeck/issues) with those lines |
+| `EDGEdeck: game not found` in the status bar | EDGEdeck couldn't find Cyberpunk 2077 through Steam, GOG or Epic. Click the status bar, or **Find the game folder**, and pick the folder that contains `bin`, `archive` and `r6`. If the game *is* in a Steam library the [log](#anything-else) lists, please [report it](https://github.com/Edgemodders/EDGEdeck/issues) with those lines. `Cyberpunk 2077, version unknown` (0.34.4 and later) means the folder is right but the game's version couldn't be read: deploys still work |
 | <a id="no-conflicts-inside-archives"></a>No conflicts inside archives | Those need REDbridge. Look at the EDGEdeck page's footer. A **green dot** and a REDbridge version: it's running, and you may simply have no such conflicts. A **Get REDbridge** button: press it. It also installs the .NET 10 runtime REDbridge needs, for your Windows user |
 | Deploy copies files instead of using hardlinks | Your library is on a different drive from the game. Use **Move library...**, or the **Move the library to the game's drive** step, then deploy once. See [Moving the library](library.html#moving-the-library) |
 
@@ -39,7 +39,7 @@ EDGEdeck updates itself, and many problems are fixed in a newer version. If some
 | Adding or updating a mod fails with `spawn ...7za.exe ENOENT`, or EDGEdeck says it was updated while the window was open | VS Code updated EDGEdeck in the background and removed the old version's files while this window still ran it. Press **Reload window**, or `Ctrl+Shift+P` and `Developer: Reload Window`, then try again. Nothing was added, and finished downloads are not downloaded again. EDGEdeck 0.34.2 and later use an installed 7-Zip instead, when you have one |
 | A `.rar` file won't add | EDGEdeck opens zip and 7z on its own, but a rar needs [7-Zip](https://7-zip.org) or WinRAR installed. Install one, or pack the files again as a zip |
 | "Nothing in ... looks like a Cyberpunk mod file" | The download holds no file EDGEdeck knows a place for. Check that it is a Cyberpunk 2077 mod, and that you picked the download itself, not a readme |
-| "... files EDGEdeck did not know where to put were left out" | The mod was added without those files. The [log](#anything-else) names them. Often they are readmes or pictures and don't matter |
+| "... files EDGEdeck did not know where to put were left out" | The mod was added without those files. The [log](#anything-else) names them. Often they are readmes or pictures and don't matter. Before 0.34.4, files in folders under `r6` such as `r6\storages\...\DEFAULT.json` were left out too, and the mod could miss its settings: update EDGEdeck, then remove the mod and add it again. Its download is kept, so Nexus doesn't download it twice |
 | Mods I installed by hand aren't in the list | The list shows only mods in EDGEdeck's library. Add their original downloads with **Add mod**. See [Mods you installed by hand](deploying.html#mods-you-installed-by-hand) |
 | The list is empty, but I had mods | EDGEdeck may be looking at another library folder. Check the setting `edgedeck.libraryPath`: see [Moving the library](library.html#moving-the-library) |
 

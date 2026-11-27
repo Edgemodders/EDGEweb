@@ -24,7 +24,7 @@ EDGE is a family of toolkits. Five of them cover the whole life of a mod, and th
 | Ask | [REDagent](redagent/) | An AI assistant inside the game, powered by Claude. It writes, runs, checks and fixes mods with you while you play | 0.4.1 |
 | Create | [REDcode](redcode/) | An editor for the game's files, built on VS Code. Browse the game's files, change them and pack your mod | 0.10.17, a preview |
 | Build | [REDbridge](redbridge/) | The helper that reads and writes the game's files for the other tools, with WolvenKit's own code. The tools download it for you | 0.12.1 |
-| Deploy | [EDGEdeck](edgedeck/) | A mod manager. Add mods, turn them on or off, deploy them to the game, and undo | 0.34.3, a preview |
+| Deploy | [EDGEdeck](edgedeck/) | A mod manager. Add mods, turn them on or off, deploy them to the game, and undo | 0.34.4, a preview |
 | Run | [REDnode](rednode/) | The part that runs in the game. Mods load and reload while you play, and draw their windows over the game | 0.67.3 |
 
 More toolkits build on those five for particular jobs:

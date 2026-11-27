@@ -4,7 +4,7 @@ nav_title: Adding and removing mods
 section: EDGEdeck
 order: 4
 description: "Add mods to EDGEdeck from zip, 7z and rar files, single mod files, folders, Nexus Mods and Vortex; pick a FOMOD installer's options; keep several versions; remove a mod; and how EDGEdeck decides where each file goes."
-reviewed: 2026-11-21
+reviewed: 2026-11-27
 ---
 
 # Adding and removing <span class="y">mods</span>
@@ -130,7 +130,8 @@ Mod downloads from Nexus aren't consistent. Some are laid out from the game fold
 | `init.lua` or a `cyber_engine_tweaks/mods/` folder | `cet` | `bin/x64/plugins/cyber_engine_tweaks/mods/<mod name>/` |
 | A `rednode-app.json` (a REDnode app or mod) | `rednode` | `red4ext/plugins/REDnode/apps/<id>/` |
 | `red4ext/plugins/`, or a `.dll` with no `.exe` beside it | `red4ext` | `red4ext/plugins/<mod name>/` |
-| `r6/audioware/`, `r6/input/`, `r6/config/`, `engine/config/` or `.asi` files | `audioware`, `input`, `config`, `asi` | The same path in the game folder |
+| `r6/audioware/`, `r6/input/`, `r6/config/`, `r6/storages/`, `engine/config/` or `.asi` files | `audioware`, `input`, `config`, `asi` | The same path in the game folder |
+| Any other folder under `r6/`, except the game's own `r6/cache/` and `r6/logs/` (since 0.34.4) | `other` | The same path in the game folder |
 | A framework's own files (RED4ext, CET, redscript, ArchiveXL, TweakXL and others) | `framework` | The same path, shown in the Frameworks group |
 
 ### When EDGEdeck asks
