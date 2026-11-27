@@ -4,7 +4,7 @@ nav_title: Troubleshooting
 section: EDGEmat
 order: 15
 description: "What to do when EDGEmat can't find the game or REDbridge, Find finds nothing, the color map looks scrambled, a save finds no mesh, a change doesn't show in the game, an image service refuses, the 3D view is flat, or Claude doesn't see the tools."
-reviewed: 2026-11-22
+reviewed: 2026-11-26
 ---
 
 # Troubleshooting <span class="y">EDGEmat</span>
@@ -109,6 +109,7 @@ Open it with **Show Log** in Game Materials' **`...`** menu, or **View**, **Outp
 
 | You see | Do this |
 |---|---|
+| "EDGEmat: Claude Code's claude command isn't on the PATH" | Claude Code's own installer puts `claude.exe` in `%USERPROFILE%\.local\bin`, which is often not on the Windows PATH. Either add that folder to your user PATH in Windows' environment variables, restart VS Code and press **Connect Claude Code** again; or press **Copy the Command**, paste it in a terminal and put the full path `%USERPROFILE%\.local\bin\claude.exe` (in quotes) in place of the first word, `claude` |
 | Claude doesn't see EDGEmat's tools | Start a **new** Claude Code session after connecting. Run `claude mcp list` in a terminal: `edgemat` should show as connected. If it isn't listed, run **Connect an Assistant (MCP)...** › **Connect Claude Code** again |
 | Every EDGEmat tool is listed twice | Both EDGEchat and Connect Claude Code added a server. Keep one: [The easy way: EDGEchat](assistants.html#the-easy-way-edgechat) |
 | Claude has no `mat_desk` or `mat_restyle` | Its server is the earlier one that comes with EDGEchat or REDnode. The [newer tools](assistants.html#newer-tools) need the server connected from EDGEmat |

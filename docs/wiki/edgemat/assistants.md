@@ -4,7 +4,7 @@ nav_title: Assistants
 section: EDGEmat
 order: 13
 description: "Let an AI assistant such as Claude use EDGEmat for you: what to ask, the easy way to connect it with EDGEchat, connecting Claude Code yourself, the key for new materials, and every tool."
-reviewed: 2026-11-25
+reviewed: 2026-11-26
 ---
 
 # EDGEmat and <span class="y">assistants</span>
@@ -59,15 +59,15 @@ All the EDGE servers, side by side: [Connect Claude Code](../connect-claude-code
 The server comes with the EDGEmat extension. You need Claude Code installed.
 
 1. In VS Code, open EDGEmat's **Game Materials** view, press **`...`** at its top right and choose **Connect an Assistant (MCP)...**. Or run it from the command palette (`Ctrl+Shift+P`).
-2. Choose **Connect Claude Code**. If you have set an image service key in EDGEmat, it asks "Give the assistant your image service key too?" Say yes to let Claude make materials from words. See [A key for new materials](#a-key-for-new-materials) first.
+2. Choose **Connect Claude Code**. With REDcode 0.10.16 or later it asks nothing about keys: the server reads them from REDcode's Keys view itself. With an older REDcode, if you have set an image service key in EDGEmat, it asks "Give the assistant your image service key too?" Say yes to let Claude make materials from words. See [A key for new materials](#a-key-for-new-materials) first.
 3. Start a **new** Claude Code session. A session that was already open doesn't see the new tools.
 
 | What you should see | |
 |---|---|
-| After step 2 | "EDGEmat is connected to Claude Code. Start a new Claude Code session and ask it about a garment's materials." |
+| After step 2 | "EDGEmat is connected to Claude Code, reading your image service and Tripo keys from REDcode's Keys. Start a new Claude Code session and ask it about a garment's materials." (Without the part about keys with an older REDcode.) |
 | After step 3 | Ask "Which EDGEmat tools do you have?": Claude lists tools whose names start with `mat_`. Or run `claude mcp list` in a terminal: `edgemat` shows as connected |
 
-This connects EDGEmat for every Claude Code session on your PC, whichever folder you start it in. If you connected an older EDGEmat before, this replaces that connection. You don't need to install anything else: if you don't have [Node.js](https://nodejs.org/), the server runs with the copy built into VS Code. If EDGEmat can't find Claude Code's `claude` command, it offers to copy the line for you to run yourself.
+This connects EDGEmat for every Claude Code session on your PC, whichever folder you start it in. If you connected an older EDGEmat before, this replaces that connection. You don't need to install anything else: if you don't have [Node.js](https://nodejs.org/), the server runs with the copy built into VS Code. If EDGEmat can't find Claude Code's `claude` command, it offers to copy the line for you to run yourself: see [Troubleshooting](troubleshooting.html#assistants).
 
 The server finds your game and REDbridge the same way the extension does, so on a PC with REDcode set up it needs nothing more. It shares the extension's Game Materials list and Desk. If that list has never been built, ask the assistant: "Build the EDGEmat library." It can take a minute or two.
 
@@ -121,7 +121,7 @@ These tools came with the last few releases. They are in the server you connect 
 | `mat_parts` | Lists a prop's parts in your project and what each wears: the model's own texture, a game surface and its color, a game material, or one made in the project. Change one with `mat_apply` | Nothing extra | Outside VS Code with a test script. The same code passed in the game through the Desk's buttons |
 | `mat_materials` | Finds the game's materials that suit any shape, for a prop's part: glass, glows, tiling metals, woods and more, by words such as "glass" or "glow blue". Decals and materials painted for one mesh are left out. The first search reads them from your game once | Nothing extra | As `mat_parts` |
 | `mat_restyle` | Restyles a whole clothing item in one go. Asked about an item, it returns the item's look in plain words. Given changes in words ("red", "denim", "glossy"), it saves the changed setups into a project, with the item's meshes. It can also put a print such as "woodland camo" over a whole material | A print needs your Gemini or OpenAI key | From a test client, outside the game. The same code passed in the game inside Wardrobe Designer, below |
-| `mat_reshape` | A first version, experimental. Changes a garment's **shape** by words, a step at a time: it draws the item from four sides, an image service changes the picture, and Tripo, a service that makes 3D models from pictures, builds the new shape, which is fitted onto the garment. The new shape keeps the game's own materials, so every look of the item keeps its colors and can still be restyled; small parts on top, such as a hat's band and buckle, stay the game's own, bent onto the new shape. Ask for Tripo's painted texture instead and it uses that (`wears: "tripo"`). Only garments that move with one bone, such as hats, helmets and glasses, can be fitted so far. Others say so before anything is paid | An image service key (OpenAI's GPT Image by default) and your own Tripo key, `TRIPO_API_KEY`. One model costs about 60 Tripo credits | The method was seen working in the game on a cowboy hat, in three of its looks with the game's own materials (the band a little bent by the fit). The tool has not had a full test of its own |
+| `mat_reshape` | A first version, experimental. Changes a garment's **shape** by words, a step at a time: it draws the item from four sides, an image service changes the picture, and Tripo, a service that makes 3D models from pictures, builds the new shape, which is fitted onto the garment. The new shape keeps the game's own materials, so every look of the item keeps its colors and can still be restyled; small parts on top, such as a hat's band and buckle, stay the game's own, bent onto the new shape. Ask for Tripo's painted texture instead and it uses that (`wears: "tripo"`). Only garments that move with one bone, such as hats, helmets and glasses, can be fitted so far. Others say so before anything is paid | An image service key (OpenAI's GPT Image by default) and your own Tripo key, in REDcode's Keys view or as `TRIPO_API_KEY`. One model costs about 60 Tripo credits | The method was seen working in the game on a cowboy hat, in three of its looks with the game's own materials (the band a little bent by the fit). The tool has not had a full test of its own |
 | `mat_from_model` | Makes game materials from a textured 3D model (a `.glb` file) or from texture files: color, roughness, metal, bumps and glow. Made for EDGEfab, the asset maker, which is still being built | Nothing extra | Outside the game only. Not yet seen in the game |
 
 **Wardrobe Designer** is an app for players that runs in the game, on REDnode: pick a piece V is wearing, type how it should look, and it changes on V. It is built in EDGEmat's repo and uses the same code as `mat_restyle` and `mat_reshape`. It was tested in the game, but it is not released yet, so these pages don't cover it.
@@ -136,7 +136,7 @@ For advanced setups. The server reads the game folder and REDbridge from VS Code
 | `--bridge <path>` | `REDBRIDGE_EXE` | `REDbridge.exe`, or its folder |
 | `--cache <folder>` | `EDGEMAT_CACHE` | Where Game Materials and the Desk live, `%LOCALAPPDATA%\EDGEmat` by default |
 
-The server file is at `%LOCALAPPDATA%\EDGEmat\mcp\edgemat-mcp.cjs`, the same path for every version. Each update of the extension refreshes it, so a connection keeps working. **Reveal the server file** in the Connect list shows it. The server reads keys from its environment only: `GEMINI_API_KEY`, `OPENAI_API_KEY` and `TRIPO_API_KEY`.
+The server file is at `%LOCALAPPDATA%\EDGEmat\mcp\edgemat-mcp.cjs`, the same path for every version. Each update of the extension refreshes it, so a connection keeps working. **Reveal the server file** in the Connect list shows it. The server reads keys from its environment first (`GEMINI_API_KEY`, `OPENAI_API_KEY` and `TRIPO_API_KEY`), then from REDcode's Keys view at each call (REDcode 0.10.16 or later; before EDGEmat 0.3.4 from its environment only).
 
 ## Good to know
 
