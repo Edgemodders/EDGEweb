@@ -1014,16 +1014,16 @@ window.EDGE_STATUS = {
     "version": null,
     "needs": [
      "SC1, the Scene spike: its in-game test (docs/world.md, 'SC1 test', 17 steps), moved after 0.75.0 at the owner's word",
-     "#62 Bones: its in-game test (docs/world.md, 'Bones test', 7 steps), REDnode 0.76.0"
+     "#62 Bones: step 5 of its retest (MCP world_bones), REDnode 0.76.1"
     ]
    },
    "handTests": [
     {
-     "name": "Bones (#62), REDnode 0.76.0",
-     "steps": 7,
-     "status": "not run",
+     "name": "Bones (#62), REDnode 0.76.0 and 0.76.1",
+     "steps": 6,
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "docs/world.md, 'Bones test'. world.bones and MCP world_bones for REDcode, from a static reading of 2.5's exe; built 2026-11-26, unit test passed (made-up code and the real exe), deployed to the dev PC 2026-11-26"
+     "note": "docs/world.md, 'Bones test' and its retest. 0.76.0 read the rigs' bind pose (fixed); 0.76.1 on 2026-11-26: steps 1 to 4 passed (the live pose, arms crossed, about 70 ms a read; helpers keep their bind pose past about 20 m); step 5, MCP world_bones, not run (no session had the tool after the deploy). REDcode matched 116 helpers at a median 1.6 mm"
     },
     {
      "name": "Load modded saves without the mod check, REDnode 0.75.0",
@@ -1306,7 +1306,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (REDnode 0.76.0 deployed to the dev PC for the #62 Bones test)"
+   "checkedBy": "REDnode session, 2026-11-26 (#62 Bones retest on 0.76.1: steps 1 to 4 passed, step 5 not run)"
   },
   {
    "name": "REDcode",
