@@ -1016,11 +1016,11 @@ window.EDGE_STATUS = {
      "note": "docs/game-tests.md, 'Saves spike: test'. Run 2026-11-26 (0.74.0, Saves spike 0.1.1): steps 1 to 4 pass (940 saves listed in 11 ms at the main menu, every name matches a folder, LoadSavedGame loads the save picked from the main menu in 3.7 s and from a game in 5.0 s); step 5 found that LoadLastCheckpoint does nothing at the main menu for a modded save (the game's Continue uses LoadModdedSave(0) then); step 6 passed (LoadLastCheckpoint(true) in a game, 3.6 s); all six steps passed 2026-11-26"
     },
     {
-     "name": "The scene spike (SC1), Scene spike 0.1.1 on REDnode 0.73.1 or later",
+     "name": "The scene spike (SC1), Scene spike 0.1.2 on REDnode 0.76.2",
      "steps": 17,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "docs/world.md, 'SC1 test'. First run 2026-11-27 (0.1.0): step 1 passed; step 2 failed, the Trauma Team paramedic left the world 0.5 s after the walk cancelled his hold (cause unverified). 0.1.1 walks a plain citizen by default; run step 2 again, then steps 3 to 17. Save before step 12"
+     "note": "docs/world.md, 'SC1 test'. 2026-11-27: steps 1 and 6 passed; step 9 found that nothing moves or turns a person during a workspot; step 2 failed twice (the walk's target reached the game empty), fixed in REDnode 0.76.2, deployed, not yet tried. Next: step 2 again, 3 to 5, 7, 8, 9b, then 10 to 17. Save before step 12"
     },
     {
      "name": "Fight events (#61), REDnode 0.73.0 and 0.73.1",
@@ -1275,7 +1275,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-27 (SC1 first run: step 2 failed, Scene spike 0.1.1 built)"
+   "checkedBy": "REDnode session, 2026-11-27 (SC1 partly run; REDnode 0.76.2 deployed for its walk)"
   },
   {
    "name": "REDcode",
