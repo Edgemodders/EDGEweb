@@ -2557,7 +2557,7 @@ window.EDGE_STATUS = {
     "needs": [
      "0.14.0 in-game test: Previews, the Explorer and the Preview switch, Pick under the cursor, the Library drawer, Drop at click outline, Library drawer widths, Import file picker, About guide, a picture details before Drop, Objects eye, Explorer widths and reveal, Show tooltip, pick spinner, the Scene tab's list, minimize and Bring V (59 steps, P1 to P7; steps 1 to 35 passed, 36 to 59 and four rechecks to run)",
      "G0's look in the game (the owner)",
-     "G1 test: the command line and the scene contract (11 steps; 1 to 8 need no running game), a release gate"
+     "G1 test, a release gate: steps 1 to 8 passed by script on 2026-11-27; steps 9 to 11 in game (the owner) to run"
     ]
    },
    "handTests": [
@@ -2571,9 +2571,9 @@ window.EDGE_STATUS = {
     {
      "name": "G1 The command line and the scene contract (0.14.0; steps 1 to 8 without the game, 9 to 11 in game)",
      "steps": 11,
-     "status": "not run",
+     "status": "partly run",
      "ranBy": "script + owner",
-     "note": "Added 2026-11-27 when G1 was merged into main: check and bake from the command line (exit codes, reports, --dry-run, --pack, --project), then a command-line bake in game and the editor keeping generator and meta out of the bake. The smoke test passes. A release gate for 0.14.0"
+     "note": "Added 2026-11-27 when G1 was merged into main. Steps 1 to 8 (the command line, no game) passed on 2026-11-27, run by script by EDGEweb's session with REDbridge 0.20.0; its one finding (bake --offline without --out named the missing --out) fixed the same day in 98d8d1c. Steps 9 to 11 in the game (the owner) to run. A release gate for 0.14.0"
     },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
