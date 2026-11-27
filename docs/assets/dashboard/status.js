@@ -2492,7 +2492,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G1",
-      "title": "Generated scenes: the format contract and a command line (check, bake, game closed); first slice built, merged into main on 2026-11-27, ships in 0.14.0",
+      "title": "Generated scenes: the format contract and a command line (check, bake, game closed); first slice merged into main on 2026-11-27 for 0.14.0, its test a release gate; the cosmic branch retired, work on main",
       "status": "in progress"
      },
      {
@@ -2557,7 +2557,7 @@ window.EDGE_STATUS = {
     "needs": [
      "0.14.0 in-game test: Previews, the Explorer and the Preview switch, Pick under the cursor, the Library drawer, Drop at click outline, Library drawer widths, Import file picker, About guide, a picture details before Drop, Objects eye, Explorer widths and reveal, Show tooltip, pick spinner, the Scene tab's list, minimize and Bring V (59 steps, P1 to P7; steps 1 to 35 passed, 36 to 59 and four rechecks to run)",
      "G0's look in the game (the owner)",
-     "G1's first slice, merged into main on 2026-11-27 (done; ships in 0.14.0)"
+     "G1 test: the command line and the scene contract (11 steps; 1 to 8 need no running game), a release gate"
     ]
    },
    "handTests": [
@@ -2567,6 +2567,13 @@ window.EDGE_STATUS = {
      "status": "partly run",
      "ranBy": "owner",
      "note": "Built 2026-11-23 on main; checked in REDnode host with REDbridge 0.18.0 (Previews pictures, the Explorer's folders and counts, a crate's 3D preview with drag and zoom, a filter, Drop; the Preview switch for search results; the search box clear button; Pick under the cursor (its switch only: the pick needs the game); the Library drawer). The crosshair and the object's outline need the game. Steps 1 to 35 passed in game on 2026-11-24 on the morning build (dbb20bf). Added the same day at the owner ask, checked in REDnode host: picture details before Drop, right button tap or hold in Drop at click, the Objects drawer eye, Explorer widths and reveal, Preview drawer headers, Show tooltip, pick spinner, and the Drop a copy cursor fix. Steps 36 to 59, and 6, 9, 11 and 33 again, to run on the newest build. Fixed 2026-11-24 from the G0 look: Solid and Collision data lines, a click picks instanced destructibles (a bake's solid objects), raycasts ask the Dynamic group so Drop at click lands on solid bakes, the drawer closes in place. Deployed 2026-11-25 (test-17). Added 2026-11-25 at the owner ask, checked in REDnode host, deployed 2026-11-25 as test-18 with the panels renamed (Selected Asset, Object, Scene, Node; step 59); test-19 deployed 2026-11-25 with Bring V on the Save row and minimize on every Selected panel (step 57): the Scene tab's Objects title with out of the window, one click previews and two fly, Selected minimizes, Bring V (steps 53 to 59)"
+    },
+    {
+     "name": "G1 The command line and the scene contract (0.14.0; steps 1 to 8 without the game, 9 to 11 in game)",
+     "steps": 11,
+     "status": "not run",
+     "ranBy": "script + owner",
+     "note": "Added 2026-11-27 when G1 was merged into main: check and bake from the command line (exit codes, reports, --dry-run, --pack, --project), then a command-line bake in game and the editor keeping generator and meta out of the bake. The smoke test passes. A release gate for 0.14.0"
     },
     {
      "name": "G0 Generated scenes probe (offline bake, then in game)",
