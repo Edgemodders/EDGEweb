@@ -2824,7 +2824,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "#13 speakLine with timings: hand test passed but for step 3, which waits for the Lip Sync tab in REDcode",
+     "#13 speakLine with timings: hand test passed but for step 3, runnable since REDcode 0.10.17's Lip Sync tab (its Add a Line, the same run as REDcode's Lip Sync L1 step 9)",
+     "Pack and Play's new name in Add to Project's message (#10), on main",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
      "The .wem voice route through Wwise, not yet seen in the game"
     ]
@@ -2877,7 +2878,7 @@ window.EDGE_STATUS = {
      "steps": 8,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-22: every step but 3 passed (1, 1b, 2, 4, 5, 6, 7); step 3 waits for the Lip Sync tab in REDcode (moving from EDGEfab, after REDcode's next release)"
+     "note": "2026-11-22: every step but 3 passed (1, 1b, 2, 4, 5, 6, 7); step 3 (a character with no voice) runnable since REDcode 0.10.17 (2026-11-25) brought the Lip Sync tab; not run yet"
     },
     {
      "name": "Shared keys (#12, #14)",
@@ -2893,11 +2894,6 @@ window.EDGE_STATUS = {
      "who": "REDnode",
      "what": "Sound API steps S2 to S4, for the in-game features (A6)",
      "ref": "REDnode docs/sound.md"
-    },
-    {
-     "who": "REDcode",
-     "what": "The Lip Sync tab, moving from EDGEfab into REDcode (a branch, merged after REDcode's next release), for #13 hand test step 3",
-     "ref": "EDGEwave docs/testing.md, Speaking a line with timings"
     }
    ],
    "ownerActions": [
@@ -2915,7 +2911,7 @@ window.EDGE_STATUS = {
    "risks": [
     "Voice lines have no route into the game yet (the .wem route)"
    ],
-   "checkedBy": "EDGEwave session, 2026-11-22"
+   "checkedBy": "EDGEwave session, 2026-11-26 (nightly routine: #6, #7, #9, #11 closed as released; #10 renamed on main; #13 step 3 runnable)"
   },
   {
    "name": "EDGEmat",
