@@ -2555,8 +2555,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.14.0",
     "needs": [
-     "0.14.0 in-game test: step 65 (the Bake tab's headline, added after the other 64 passed on 2026-11-27), on test 23",
-     "G0's look in the game (the owner)"
+     "0.14.0 in-game test: step 65 (the Bake tab's headline, added after the other 64 passed on 2026-11-27), on test 23"
     ]
    },
    "handTests": [
@@ -2579,7 +2578,7 @@ window.EDGE_STATUS = {
      "steps": 8,
      "status": "partly run",
      "ranBy": "script + owner",
-     "note": "2026-11-22, offline half: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene was refused without bounds. 2026-11-23: their second sample has bounds for their own files, and all 4,965 objects baked in 7.5 s. In game, 2026-11-23: steps 1 and 2 passed (the club map baked by the command line loads and draws), step 7 in part (an archive swap in 89 ms, no crash); steps 3, 4, 6 and 8 to run. Not walkable without the team's collision boxes (B5-4). Status for the team: https://edgemodders.github.io/EDGEbuilder/arena.html"
+     "note": "2026-11-22, offline half: a modding team's own scene (4,965 objects) read as format 1; the 3,774 objects on the game's files baked in 9.0 s and packed, REDbridge 0.17.0; the whole scene was refused without bounds. 2026-11-23: their second sample has bounds for their own files, and all 4,965 objects baked in 7.5 s. In game, 2026-11-23: steps 1 and 2 passed (the club map baked by the command line loads and draws), step 7 in part (an archive swap in 89 ms, no crash); steps 3, 4, 6 and 8 to run. Not walkable without the team's collision boxes (B5-4). Status for the team: https://edgemodders.github.io/EDGEbuilder/arena.html Not a release gate for 0.14.0 (the owner, 2026-11-27): it runs after the release."
     },
     {
      "name": "D2 Open, close, lock (0.13.0 and 0.13.1, in game)",
