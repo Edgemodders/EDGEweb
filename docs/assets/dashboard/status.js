@@ -1,6 +1,6 @@
 // The EDGE dashboard's data. See CLAUDE.md, Dashboard. Plain JSON after the equals sign.
 window.EDGE_STATUS = {
- "asOf": "2026-11-26",
+ "asOf": "2026-11-27",
  "ownerSummary": {
   "url": "https://claude.ai/artifact/2DWnvpnWxwxYkSgvLWDa2w",
   "refs": [
@@ -15,12 +15,12 @@ window.EDGE_STATUS = {
   ]
  },
  "shots": {
-  "asOf": "2026-11-26",
+  "asOf": "2026-11-27",
   "dossier": "https://claude.ai/artifact/4vDocr9pddxgabrHEfL6Ru",
-  "taken": 211,
-  "missing": 115,
+  "taken": 217,
+  "missing": 109,
   "game": 62,
-  "editor": 53,
+  "editor": 47,
   "byTool": [
    {
     "tool": "REDnode",
@@ -35,12 +35,7 @@ window.EDGE_STATUS = {
    {
     "tool": "REDcode",
     "game": 2,
-    "editor": 9
-   },
-   {
-    "tool": "EDGEdir",
-    "game": 6,
-    "editor": 4
+    "editor": 7
    },
    {
     "tool": "EDGEbuilder",
@@ -55,6 +50,11 @@ window.EDGE_STATUS = {
    {
     "tool": "REDagent",
     "game": 7,
+    "editor": 0
+   },
+   {
+    "tool": "EDGEdir",
+    "game": 6,
     "editor": 0
    },
    {
@@ -147,16 +147,6 @@ window.EDGE_STATUS = {
    "updated": "2026-11-24"
   },
   {
-   "repo": "EDGEdeck",
-   "number": 16,
-   "title": "EDGEmods: open edgemods: links, and install a list of downloaded mods all or nothing",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-22",
-   "updated": "2026-11-23"
-  },
-  {
    "repo": "EDGEfab",
    "number": 3,
    "title": "Fit a generated mesh onto a game garment, replacing it (Wardrobe Designer's Reshape)",
@@ -164,7 +154,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-10-31",
-   "updated": "2026-11-26"
+   "updated": "2026-11-27"
   },
   {
    "repo": "EDGEguide",
@@ -182,7 +172,7 @@ window.EDGE_STATUS = {
     "watch"
    ],
    "created": "2026-10-15",
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "repo": "EDGEkit",
@@ -302,16 +292,6 @@ window.EDGE_STATUS = {
   },
   {
    "repo": "EDGEquest",
-   "number": 8,
-   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-18",
-   "updated": "2026-11-18"
-  },
-  {
-   "repo": "EDGEquest",
    "number": 9,
    "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
    "labels": [
@@ -340,53 +320,13 @@ window.EDGE_STATUS = {
   },
   {
    "repo": "EDGEwave",
-   "number": 6,
-   "title": "Open Sound in EDGEwave shows on every REDcode project file: match projectFile.sound",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-10-21",
-   "updated": "2026-10-21"
-  },
-  {
-   "repo": "EDGEwave",
-   "number": 7,
-   "title": "Music and sound for quests: find, hear and make sound events (for EDGEquest Q4)",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-10-24",
-   "updated": "2026-11-03"
-  },
-  {
-   "repo": "EDGEwave",
-   "number": 9,
-   "title": "Release workflow: Update Nexus Mods, as the other EDGE tools",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-10-26",
-   "updated": "2026-10-26"
-  },
-  {
-   "repo": "EDGEwave",
    "number": 10,
    "title": "REDcode's Pack and Try is now Pack and Play",
    "labels": [
     "request"
    ],
    "created": "2026-10-27",
-   "updated": "2026-10-27"
-  },
-  {
-   "repo": "EDGEwave",
-   "number": 11,
-   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-18",
-   "updated": "2026-11-18"
+   "updated": "2026-11-27"
   },
   {
    "repo": "EDGEwave",
@@ -396,7 +336,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-21",
-   "updated": "2026-11-22"
+   "updated": "2026-11-27"
   },
   {
    "repo": "EDGEweb",
@@ -456,7 +396,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-24",
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
   },
   {
    "repo": "REDbridge",
@@ -466,7 +406,17 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-24",
-   "updated": "2026-11-25"
+   "updated": "2026-11-26"
+  },
+  {
+   "repo": "REDbridge",
+   "number": 25,
+   "title": "sector.nodes: the copies of occluders and other buffer nodes, a box per instanced copy, and where each box came from (from REDcode)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-26",
+   "updated": "2026-11-27"
   },
   {
    "repo": "REDcode",
@@ -477,6 +427,26 @@ window.EDGE_STATUS = {
    ],
    "created": "2026-11-23",
    "updated": "2026-11-26"
+  },
+  {
+   "repo": "REDcode",
+   "number": 36,
+   "title": "A redscript language server in REDcode (the redscript-ide extension keeps crashing)",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-26",
+   "updated": "2026-11-27"
+  },
+  {
+   "repo": "REDcode",
+   "number": 37,
+   "title": "Animation Editor on a prop's rig made in EDGEfab: a rig that isn't human, a clip from nothing, the handoff",
+   "labels": [
+    "request"
+   ],
+   "created": "2026-11-27",
+   "updated": "2026-11-27"
   },
   {
    "repo": "REDnode",
@@ -608,8 +578,8 @@ window.EDGE_STATUS = {
    "version": "0.4.4",
    "lastTag": "v0.4.6",
    "lastTagDate": "2026-11-25",
-   "lastCommit": "2026-11-25",
-   "commitsSinceTag": 1,
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 3,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
    ],
@@ -775,10 +745,10 @@ window.EDGE_STATUS = {
    "role": "The runtime: a Node.js API and an in-game HTML overlay for scripting the game, with REDswap for hot archive swaps",
    "stage": "released",
    "version": "0.75.0",
-   "lastTag": "v0.73.1",
-   "lastTagDate": "2026-11-25",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 4,
+   "lastTag": "v0.75.0",
+   "lastTagDate": "2026-11-26",
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 7,
    "sessions": [
     "REDnode, EDGEHack & REDagent",
     "rednode-95"
@@ -1317,8 +1287,8 @@ window.EDGE_STATUS = {
    "version": "0.10.17",
    "lastTag": "v0.10.17",
    "lastTagDate": "2026-11-25",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 23,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 58,
    "sessions": [
     "REDcode"
    ],
@@ -1327,7 +1297,11 @@ window.EDGE_STATUS = {
     "name": "Roadmap C0 to C7, and animation steps A1 to A3",
     "source": "docs/index.md, docs/testing.md",
     "phases": [
-     {"id": "BD", "title": "Bodies (docs/design/bodies.md, agreed 2026-11-26): B2a done in REDcode, the base bodies' deformation graph matched to the game (median 1.6 mm, the bulges' rule open) and wired in with Muscles, hand test pending; then B1 the Bodies tab, B2b, B1b, B3", "status": "in progress"},
+     {
+      "id": "BD",
+      "title": "Bodies (docs/design/bodies.md, agreed 2026-11-26): B2a done in REDcode, the base bodies' deformation graph matched to the game (median 1.6 mm, the bulges' rule open) and wired in with Muscles, hand test pending; then B1 the Bodies tab, B2b, B1b, B3",
+      "status": "in progress"
+     },
      {
       "id": "SO",
       "title": "Sector overlaps and the world index (a modder's report; docs/design/sector-overlaps.md, agreed 2026-11-26): O1 thing-to-thing matching (built 2026-11-26), then O2 draw only matches, O3 proxies, W0 to W3 a local world index (built after asking, with progress)",
@@ -1472,31 +1446,31 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
-{
- "name": "Body deformation graph (Muscles on the base bodies)",
- "steps": 5,
- "status": "passed",
- "note": "Passed 2026-11-26 by the owner, steps 1 to 5 (\"It looks a lot better\"); matched to the game by script within a median 1.6 mm, the bulges' rule open (docs/testing.md)"
-},
     {
-    "name": "Use in Timeline (a game clip onto the made clip's timeline)",
-    "steps": 5,
-    "status": "not run",
-    "note": "Built 2026-11-26: type and unit checks; not run in VS Code, as it crosses two tabs (docs/testing.md, U1 to U5)"
-   },
-   {
-    "name": "Clip search (find game clips by words)",
-    "steps": 8,
-    "status": "not run",
-    "note": "Built 2026-11-26: the clip index (14,016 files, 146,814 clips, about two minutes to read once), its unit check, the search over the real index (10 to 30 ms), and the form in Chrome on the timeline harness; not run in VS Code (docs/testing.md, S1 to S8)"
-   },
-   {
-    "name": "Sector search (released in 0.10.17 without a test)",
-    "steps": 5,
-    "status": "not run",
-    "note": "Written 2026-11-26 from the wiki's list of what is not yet tested: the search box on a sector's 3D view selecting what it finds, Back, and a mesh's search in Tree (docs/testing.md, SR1 to SR5)"
-   },
-   {
+     "name": "Body deformation graph (Muscles on the base bodies)",
+     "steps": 5,
+     "status": "passed",
+     "note": "Passed 2026-11-26 by the owner, steps 1 to 5 (\"It looks a lot better\"); matched to the game by script within a median 1.6 mm, the bulges' rule open (docs/testing.md)"
+    },
+    {
+     "name": "Use in Timeline (a game clip onto the made clip's timeline)",
+     "steps": 5,
+     "status": "not run",
+     "note": "Built 2026-11-26: type and unit checks; not run in VS Code, as it crosses two tabs (docs/testing.md, U1 to U5)"
+    },
+    {
+     "name": "Clip search (find game clips by words)",
+     "steps": 8,
+     "status": "not run",
+     "note": "Built 2026-11-26: the clip index (14,016 files, 146,814 clips, about two minutes to read once), its unit check, the search over the real index (10 to 30 ms), and the form in Chrome on the timeline harness; not run in VS Code (docs/testing.md, S1 to S8)"
+    },
+    {
+     "name": "Sector search (released in 0.10.17 without a test)",
+     "steps": 5,
+     "status": "not run",
+     "note": "Written 2026-11-26 from the wiki's list of what is not yet tested: the search box on a sector's 3D view selecting what it finds, Back, and a mesh's search in Tree (docs/testing.md, SR1 to SR5)"
+    },
+    {
      "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
      "steps": 12,
      "status": "not run",
@@ -1521,11 +1495,11 @@ window.EDGE_STATUS = {
      "note": "Passed 2026-11-25 by EDGEweb's session by script (L2-1 to L3-6, no game, nothing judged by eye), and the retest of its three fixes (docs/testing.md, Sector layers L2 and L3)"
     },
     {
- "name": "Animation Timeline TL2 to TL4",
- "steps": 11,
- "status": "partly run",
- "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Built the same day from the owner's run, checked in Chrome, retests not run: R1 to R3 (Move, Turn and Let Go in the view's corner, the tracks scroll, Pause, Stop to the start), R4 Curl and Fist, R5 Remove Track, R6 to R9 the Bones tab, a move's block selecting its bone, New Track Above and Below, Move Clip Up and Down, tracks and clips dragged; R10 to R12 the Bones tree, Add Clip, the ruler's grab cursor; G1 to G6 a game clip's fist on the fingers only. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
-},
+     "name": "Animation Timeline TL2 to TL4",
+     "steps": 11,
+     "status": "partly run",
+     "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Built the same day from the owner's run, checked in Chrome, retests not run: R1 to R3 (Move, Turn and Let Go in the view's corner, the tracks scroll, Pause, Stop to the start), R4 Curl and Fist, R5 Remove Track, R6 to R9 the Bones tab, a move's block selecting its bone, New Track Above and Below, Move Clip Up and Down, tracks and clips dragged; R10 to R12 the Bones tree, Add Clip, the ruler's grab cursor; G1 to G6 a game clip's fist on the fingers only. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
+    },
     {
      "name": "Sector layers L4 and Sector Tools L1",
      "steps": 9,
@@ -1750,7 +1724,6 @@ window.EDGE_STATUS = {
    ],
    "ownerSpotTests": [],
    "waitingOn": [
-    
     {
      "who": "EDGEbuilder",
      "what": "Sector Tools: Open in REDcode buttons in its Sector drawer, now that the redcode REDnode package 0.4.0 has openSector (built on REDcode's main, not released; REDcode's L1 hand test H1 to H9 with the game first)",
@@ -1779,12 +1752,12 @@ window.EDGE_STATUS = {
    ],
    "ownerActions": [
     {
- "ref": "RC13",
- "what": "Agree the Bodies page (docs/design/bodies.md: retargeting by rotations on another build, which bodies the tab lists, the deformation graph on by default, B2a first), and run the game once for REDnode's bone reader (#62)",
- "since": "2026-11-26",
- "done": "2026-11-26",
- "outcome": "Agreed with all four recommendations; the game ran with REDnode 0.76.1 and its reads matched REDcode's graph within a median 1.6 mm"
-},
+     "ref": "RC13",
+     "what": "Agree the Bodies page (docs/design/bodies.md: retargeting by rotations on another build, which bodies the tab lists, the deformation graph on by default, B2a first), and run the game once for REDnode's bone reader (#62)",
+     "since": "2026-11-26",
+     "done": "2026-11-26",
+     "outcome": "Agreed with all four recommendations; the game ran with REDnode 0.76.1 and its reads matched REDcode's graph within a median 1.6 mm"
+    },
     {
      "ref": "RC12",
      "what": "Agree the Sector overlaps and the world index page (docs/design/sector-overlaps.md, five decisions: helpers out, proxies by default, layers draw only matches, a shared index folder, when to ask); the modder reads it too",
@@ -1868,9 +1841,9 @@ window.EDGE_STATUS = {
    "role": "The engine host: WolvenKit's libraries behind JSON-RPC for REDcode, EDGEdeck, REDnode and the rest (GPL-3.0)",
    "stage": "released",
    "version": "0.20.0",
-   "lastTag": "v0.19.0",
-   "lastTagDate": "2026-11-22",
-   "lastCommit": "2026-11-26",
+   "lastTag": "v0.20.0",
+   "lastTagDate": "2026-11-26",
+   "lastCommit": "2026-11-27",
    "commitsSinceTag": 5,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
@@ -2165,9 +2138,9 @@ window.EDGE_STATUS = {
    "role": "Mod manager: a library of mods outside the game folder, deployed with hardlinks; extension, command line and MCP server",
    "stage": "released",
    "version": "0.34.3",
-   "lastTag": "v0.34.2",
+   "lastTag": "v0.34.3",
    "lastTagDate": "2026-11-26",
-   "lastCommit": "2026-11-26",
+   "lastCommit": "2026-11-27",
    "commitsSinceTag": 2,
    "sessions": [
     "EDGEdeck"
@@ -2393,7 +2366,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.13.2",
    "lastTagDate": "2026-11-23",
    "lastCommit": "2026-11-26",
-   "commitsSinceTag": 42,
+   "commitsSinceTag": 44,
    "sessions": [
     "EDGEbuilder"
    ],
@@ -2805,8 +2778,8 @@ window.EDGE_STATUS = {
    "version": "0.3.0",
    "lastTag": "v0.3.0",
    "lastTagDate": "2026-11-22",
-   "lastCommit": "2026-11-22",
-   "commitsSinceTag": 4,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 8,
    "sessions": [],
    "wiki": "wiki/edgewave/",
    "plan": {
@@ -2977,8 +2950,8 @@ window.EDGE_STATUS = {
    "version": "0.3.4",
    "lastTag": "v0.3.4",
    "lastTagDate": "2026-11-22",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 6,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 10,
    "sessions": [
     "EDGEmat"
    ],
@@ -3211,8 +3184,8 @@ window.EDGE_STATUS = {
    "version": "0.1.1",
    "lastTag": "v0.1.1",
    "lastTagDate": "2026-11-06",
-   "lastCommit": "2026-11-17",
-   "commitsSinceTag": 4,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 8,
    "sessions": [],
    "wiki": "wiki/edgequest/",
    "plan": {
@@ -3423,8 +3396,8 @@ window.EDGE_STATUS = {
    "version": "0.1.3",
    "lastTag": "v0.1.3",
    "lastTagDate": "2026-11-22",
-   "lastCommit": "2026-11-22",
-   "commitsSinceTag": 0,
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 2,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
    ],
@@ -3596,10 +3569,10 @@ window.EDGE_STATUS = {
    "role": "The Edgemodders editor: a branded Code - OSS build with the EDGE extensions built in, and an extension pack",
    "stage": "released",
    "version": "1.143.2",
-   "lastTag": "v1.143.1",
-   "lastTagDate": "2026-11-19",
-   "lastCommit": "2026-11-20",
-   "commitsSinceTag": 5,
+   "lastTag": "v1.143.2",
+   "lastTagDate": "2026-11-26",
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 2,
    "sessions": [],
    "wiki": "wiki/edgekit/",
    "plan": {
@@ -3744,8 +3717,8 @@ window.EDGE_STATUS = {
    "version": "0.2.1",
    "lastTag": "v0.2.1",
    "lastTagDate": "2026-11-26",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 4,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 8,
    "sessions": [],
    "wiki": "wiki/edgechat/",
    "plan": {
@@ -3881,8 +3854,8 @@ window.EDGE_STATUS = {
    "version": "0.1.1",
    "lastTag": "v0.1.1",
    "lastTagDate": "2026-11-08",
-   "lastCommit": "2026-11-17",
-   "commitsSinceTag": 2,
+   "lastCommit": "2026-11-26",
+   "commitsSinceTag": 4,
    "sessions": [],
    "plan": {
     "name": "Phases S0 to S4",
@@ -3959,8 +3932,8 @@ window.EDGE_STATUS = {
    "version": "0.2.1",
    "lastTag": "v0.2.1",
    "lastTagDate": "2026-11-26",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 4,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 11,
    "sessions": [
     "EDGEfab"
    ],
@@ -4167,7 +4140,7 @@ window.EDGE_STATUS = {
    "version": "0.0.34",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-26",
+   "lastCommit": "2026-11-27",
    "commitsSinceTag": 0,
    "sessions": [
     "edgedir-49"
@@ -4514,7 +4487,7 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-26",
+   "lastCommit": "2026-11-27",
    "commitsSinceTag": 0,
    "sessions": [
     "EDGEmobile"
@@ -4728,7 +4701,7 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-26",
+   "lastCommit": "2026-11-27",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -4968,10 +4941,10 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Lets Claude Code show a modder the EDGE tools in the editor: open views, select items, point at buttons",
    "stage": "early build",
-   "version": null,
+   "version": "0.0.1",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-25",
+   "lastCommit": "2026-11-26",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -5059,7 +5032,7 @@ window.EDGE_STATUS = {
    "version": null,
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-17",
+   "lastCommit": "2026-11-26",
    "commitsSinceTag": 0,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
@@ -5300,8 +5273,8 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 480,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 538,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"

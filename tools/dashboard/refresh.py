@@ -69,7 +69,7 @@ def owner_refs(data, today, first_seen=None):
 
 
 def write(text, start, data):
-    FILE.write_text(text[:start] + json.dumps(data, indent=1, ensure_ascii=False) + ";\n", encoding="utf-8")
+    FILE.write_text(text[:start] + json.dumps(data, indent=1, ensure_ascii=False) + ";\n", encoding="utf-8", newline="\n")
 
 
 def main():

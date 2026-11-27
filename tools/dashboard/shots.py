@@ -124,14 +124,14 @@ def main():
         if k == "ownerSummary":
             out["shots"] = new
     out.setdefault("shots", new)
-    STATUS.write_text(text[:start] + json.dumps(out, indent=1, ensure_ascii=False) + ";\n", encoding="utf-8")
+    STATUS.write_text(text[:start] + json.dumps(out, indent=1, ensure_ascii=False) + ";\n", encoding="utf-8", newline="\n")
     print(f'{new["missing"]} missing ({new["game"]} in the game, {new["editor"]} in the editor), {taken} taken')
     if "--html" in args:
         target = pathlib.Path(args[args.index("--html") + 1])
         for s in shots:
             s.pop("key")
         payload = json.dumps({"asOf": today, "inbox": INBOX, "taken": taken, "shots": shots}, ensure_ascii=False)
-        target.write_text(PAGE.read_text(encoding="utf-8").replace("/*DATA*/null", payload.replace("</", "<\\/")), encoding="utf-8")
+        target.write_text(PAGE.read_text(encoding="utf-8").replace("/*DATA*/null", payload.replace("</", "<\\/")), encoding="utf-8", newline="\n")
         print("dossier page:", target)
 
 
