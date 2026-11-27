@@ -1020,7 +1020,7 @@ window.EDGE_STATUS = {
      "steps": 17,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "docs/world.md, 'SC1 test'. 2026-11-27: steps 1 and 6 passed; step 9 found that nothing moves or turns a person during a workspot; step 2 failed twice (the walk's target reached the game empty), fixed in REDnode 0.76.2, deployed, not yet tried. Next: step 2 again, 3 to 5, 7, 8, 9b, then 10 to 17. Save before step 12"
+     "note": "docs/world.md, 'SC1 test'. 2026-11-27: steps 1 to 6 passed (REDnode 0.76.2 fixed the walk's empty target; a place target ignores the stop distance, an entity target keeps it; Run walks outside combat; ignoreNavigation still avoids; Face V holds for the whole walk); step 9 found that nothing moves or turns a person during a workspot. Next: 7, 8, 9b, then 10 to 17. Save before step 12"
     },
     {
      "name": "Fight events (#61), REDnode 0.73.0 and 0.73.1",
@@ -1275,7 +1275,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-27 (SC1 partly run; REDnode 0.76.2 deployed for its walk)"
+   "checkedBy": "REDnode session, 2026-11-27 (SC1 partly run: steps 1 to 6 passed on 0.76.2)"
   },
   {
    "name": "REDcode",
