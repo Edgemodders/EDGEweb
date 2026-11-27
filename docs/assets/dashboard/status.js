@@ -1023,7 +1023,7 @@ window.EDGE_STATUS = {
      "steps": 7,
      "status": "not run",
      "ranBy": "owner",
-     "note": "docs/world.md, 'Bones test'. world.bones and MCP world_bones for REDcode, from a static reading of 2.5's exe; built 2026-11-26, unit test passed (made-up code and the real exe), not deployed yet"
+     "note": "docs/world.md, 'Bones test'. world.bones and MCP world_bones for REDcode, from a static reading of 2.5's exe; built 2026-11-26, unit test passed (made-up code and the real exe), deployed to the dev PC 2026-11-26"
     },
     {
      "name": "Load modded saves without the mod check, REDnode 0.75.0",
@@ -1306,7 +1306,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-26 (#62 world.bones built in REDnode 0.76.0, awaiting its in-game test)"
+   "checkedBy": "REDnode session, 2026-11-26 (REDnode 0.76.0 deployed to the dev PC for the #62 Bones test)"
   },
   {
    "name": "REDcode",
