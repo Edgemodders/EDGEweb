@@ -3661,23 +3661,23 @@ window.EDGE_STATUS = {
     {
      "name": "Self-update 1.140.1 to 1.140.2",
      "steps": null,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "script",
-     "note": "Restart to Update was never clicked"
+     "note": "Restart to Update was not clicked in this one; the click itself passed on 2026-11-27 (1.143.1 to 1.143.2, the test above)"
     },
     {
      "name": "Restart to Update on an older real install",
      "steps": null,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Listed as the next step since 1.140.1"
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-27, by EDGEweb's session at the owner's go: 1.143.1 installed over 1.143.2, the update offered within about 3 minutes, the gear's Restart to Update clicked, back as 1.143.2 (f5548b3) within 10 s; link handlers unchanged"
     },
     {
      "name": "Install beside VS Code",
      "steps": null,
-     "status": "not run",
-     "ranBy": null,
-     "note": ""
+     "status": "passed",
+     "ranBy": "script",
+     "note": "2026-11-27, by EDGEweb's session at the owner's go: 1.143.2's installer silent; VS Code's settings, keybindings, extensions, code command, registry keys, PATH and the link handlers all the same; VS Code opened a folder after"
     },
     {
      "name": "1.143.1 smoke test (K5)",
@@ -3711,7 +3711,8 @@ window.EDGE_STATUS = {
     {
      "ref": "EK2",
      "what": "Click Restart to Update on an older install (the laptop's 1.140.6 should offer 1.143.2): the first real click",
-     "since": "2026-11-19"
+     "since": "2026-11-19",
+     "done": "2026-11-27"
     },
     {
      "ref": "EK3",

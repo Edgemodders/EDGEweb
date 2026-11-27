@@ -4,7 +4,7 @@ nav_title: Install the app
 section: EDGEkit
 order: 1
 description: "Download and install the EDGEkit app: what you need, the Windows warning, the installer's Nexus Mods box, the first start, updating and uninstalling."
-reviewed: 2026-11-26
+reviewed: 2026-11-27
 ---
 
 # Install the <span class="y">EDGEkit</span> app
@@ -71,7 +71,7 @@ Then the **Welcome** page shows, with EDGEkit's own walkthrough. That is where [
 
 EDGEkit checks for a new release when it starts, and then every hour. When one is out, open the gear menu at the bottom left of the window and choose **Restart to Update**.
 
-This button hasn't been confirmed in a released copy yet. If it doesn't appear or doesn't work, download the new installer and run it over the old one; your settings and mods stay.
+An **Update** button may show in the title bar too, and the gear shows a badge. Click **Restart to Update**: EDGEkit closes and comes back on the new version within seconds (tested from 1.143.1 to 1.143.2). If it doesn't appear or doesn't work, download the new installer and run it over the old one; your settings and mods stay.
 
 The EDGE tools inside EDGEkit update themselves between releases, so you rarely need a new EDGEkit to get a fix.
 

@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEkit
 order: 0
 description: "EDGEkit, the EDGEmodders editor: one free app for Windows with the EDGE modding tools already installed, and an extension pack that installs them in VS Code."
-reviewed: 2026-11-26
+reviewed: 2026-11-27
 ---
 
 # EDGE<span class="y">kit</span>
@@ -70,7 +70,7 @@ EDGEkit and the EDGE tools are free and open source. Claude Code is Anthropic's,
 |---|---|
 | **The app** | A preview. The latest is 1.143.2 (2026-11-26), for Windows x64: a security fix for Nexus Mods download links (see [Install the app](install.html#2-the-nexus-mods-box)). 1.143.1 (2026-11-19) moved to a newer Code - OSS and added EDGEfab |
 | **The extension pack** | A preview. The latest is 0.7.1 (2026-11-20), on the VS Code Marketplace and Open VSX |
-| **Good to know** | The installer isn't signed yet, so Windows may warn before it runs. Updating with **Restart to Update** was tested on the developer's PC, by running what the button runs; a click on the button in a released copy is not confirmed yet |
+| **Good to know** | The installer isn't signed yet, so Windows may warn before it runs. Updating with **Restart to Update** is tested: a released 1.143.1 updated itself to 1.143.2 with one click (2026-11-27) |
 | **Next** | Following newer releases of Code - OSS, the open-source editor EDGEkit is built from. A Linux build may come later |
 
 ## In this section
