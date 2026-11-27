@@ -4488,6 +4488,10 @@ window.EDGE_STATUS = {
      "ref": "DR4",
      "what": "Wiki screenshots: five placeholders in EDGEdir's wiki section wait for shots, four from the game and one of a mod manager (save them into EDGEweb's docs/assets/shots/inbox/); the four from VS Code were taken by EDGEweb on 2026-11-26",
      "since": "2026-11-18"
+    },
+    {
+     "what": "Run Test J in the game: the camera spike (11 steps, 15 minutes, needs none of the other tests); ask the EDGEdir session to copy the spike package in first. D6c Camera is built from its answers",
+     "since": "2026-11-27"
     }
    ],
    "risks": [
@@ -4498,9 +4502,9 @@ window.EDGE_STATUS = {
     "The first read of the game is slow: about 3.5 minutes for the animation index",
     "Which way an actor's Turn turns against the game is unverified until D5",
     "How the game's own join at a jump compares with the preview's transitions is not measured yet",
-    "Unverified: that a person in a workspot can be moved while they play (Adjust in the game)"
+    "Known (REDnode's scene spike, 2026-11-27): a person cannot be moved while they play a workspot, so EDGE Director's Adjust does not move a playing actor in the game; the change is saved and holds at the next Play. To be rebuilt as stop, move, play again after REDnode's next spike"
    ],
-   "checkedBy": "EDGEdir session, 2026-11-26"
+   "checkedBy": "EDGEdir session, 2026-11-27"
   },
   {
    "name": "EDGEmobile",

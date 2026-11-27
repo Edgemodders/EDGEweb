@@ -4,7 +4,7 @@ nav_title: Adjusting and pins
 section: EDGEdir
 order: 9
 description: "Putting an EDGEdir scene right while standing in it: moving an actor to where V stands, nudging and turning them, fixing the scene to a spot in the world, and pins, named places that actors and the scene can follow, in the game and in VS Code."
-reviewed: 2026-11-21
+reviewed: 2026-11-27
 ---
 
 # Adjusting and <span class="y">pins</span>
@@ -13,7 +13,7 @@ reviewed: 2026-11-21
 
 The 3D preview is good for timing. Where people should stand is easier to judge in the place itself. EDGE Director lets you put that right while you stand there: each change is saved into the scene's file at once, and the scene open in VS Code follows.
 
-**Untested in the game**, like most of EDGE Director; its steps passed by script against a stand-in for the game. Moving a person while they play an animation is one of the things the first tests must show.
+**Untested in the game**, like most of EDGE Director; its steps passed by script against a stand-in for the game. **Known not to work yet:** REDnode found in the game on 2026-11-27 that a person cannot be moved while they play an animation. So **Move to V**, the nudges and the turns do not move an actor who is playing; the change is still saved to the scene, and the actor stands there at the next **Play**. Moving them at once is to be rebuilt as stop, move, play again.
 
 {% include shot.html src="/assets/shots/edgedir/director-adjust.png" caption="Adjust and Pins in EDGE Director" shows="EDGE Director's window with an actor chosen: the header says the scene is at the pin Stairs; Adjust shows the actor's mark with Move to V, Left, Right, Forward, Back and the two Turn buttons; Pins lists two pins with what follows each, their distance, and Go There, the actor Here, Scene Here, Drop Again and Remove." %}
 
