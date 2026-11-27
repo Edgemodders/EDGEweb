@@ -2948,7 +2948,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmat",
    "code": "EM",
-   "ownerSeq": 7,
+   "ownerSeq": 8,
    "group": "Specialist toolkits",
    "role": "Material editor: read, edit, generate and apply game materials, and the Wardrobe Designer app",
    "stage": "released",
@@ -3034,6 +3034,13 @@ window.EDGE_STATUS = {
     ]
    },
    "handTests": [
+    {
+     "name": "Wardrobe Designer: the Clothing dropdown (in game)",
+     "steps": 9,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Built 2026-11-27 (owner's ask): one Clothing dropdown in place of the item buttons, for Equipment-EX's many slots; Refresh keeps the pick. Needs REDnode 0.68.0. REDnode's log already shows Equipment-EX's slots read"
+    },
     {
      "name": "Messages name EDGEmat (#15)",
      "steps": 5,
@@ -3137,6 +3144,11 @@ window.EDGE_STATUS = {
    "waitingOn": [],
    "ownerActions": [
     {
+     "ref": "EM8",
+     "what": "Run the in-game test \"Wardrobe Designer: the Clothing dropdown\" (docs/testing.md; Equipment-EX outfit on, several pieces)",
+     "since": "2026-11-27"
+    },
+    {
      "ref": "EM1",
      "what": "Install EDGEmat 0.3.4 from the Marketplace in a normal VS Code, then Connect an assistant",
      "since": "2026-11-22"
@@ -3177,7 +3189,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-27 (Messages name EDGEmat partly run by script, its two differences fixed in e5ab604; Game materials on a Desk mesh and Connect step 3 not run yet; next: shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-27 (Wardrobe Designer: Clothing dropdown built, its in-game test open; Messages name EDGEmat partly run by script, two differences fixed in e5ab604; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
