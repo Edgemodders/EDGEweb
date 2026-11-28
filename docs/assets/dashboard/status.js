@@ -939,6 +939,11 @@ window.EDGE_STATUS = {
       "id": "P3-P4",
       "title": "Rules, and sync interceptors",
       "status": "planned"
+     },
+     {
+      "id": "MP1",
+      "title": "Maps: new 3D city maps, spike MP1 (Hong Kong on the game's map)",
+      "status": "built, tests pending"
      }
     ]
    },
@@ -1145,6 +1150,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "Passed in game 2026-11-23 (dev PC), all 7 steps; #56 closed"
+    },
+    {
+     "name": "Maps: Hong Kong on the game's map (MP1)",
+     "steps": 8,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "A test archive that replaces Night City's map while installed; not deployed yet. docs/maps.md, \"MP1 test\""
     }
    ],
    "ownerSpotTests": [],
@@ -1245,7 +1257,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-28 (0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
+   "checkedBy": "REDnode session, 2026-11-28 (maps spike MP1 built, its test not run; 0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
   },
   {
    "name": "REDcode",
