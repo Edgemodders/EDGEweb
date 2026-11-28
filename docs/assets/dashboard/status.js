@@ -5023,7 +5023,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Lets Claude Code show a modder the EDGE tools in the editor: open views, select items, point at buttons",
    "stage": "early build",
-   "version": "0.0.3",
+   "version": "0.0.4",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-28",
@@ -5050,7 +5050,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G3",
-      "title": "Hints (started 2026-11-28 at the owner's ask: ui_tour and the Steps panel, with Back, Next and Close (0.0.2), past tours with Replay (0.0.3); the note beside the button in EDGEkit is left)",
+      "title": "Hints (started 2026-11-28 at the owner's ask: ui_tour and the Steps panel, with Back, Next and Close (0.0.2), past tours with Replay (0.0.3), named by the modder's question (0.0.4); the note beside the button in EDGEkit is left)",
       "status": "in progress"
      },
      {
@@ -5063,7 +5063,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "A Deploy that completes (G1's last step), and the tours' Back and Close and the past tours' Replay (0.0.3)",
+     "A Deploy that completes (G1's last step), the tours' Back and Close, and the question titles (0.0.4)",
      "The note drawn beside the button in EDGEkit (edgekit.pointAt), with the Steps panel kept for VS Code",
      "Calls going to the focused window (still the listening window)",
      "G2 built and tested; it needs the edgeguide key and a reveal command in REDcode, EDGEdeck, EDGEmat and EDGEwave (through their sessions)"
@@ -5093,6 +5093,13 @@ window.EDGE_STATUS = {
     },
     {
      "name": "Past tours (0.0.3): the finished panel lists past tours, numbered, and Replay shows one again",
+     "steps": "EDGEguide design, \"Tours\", row Past tours",
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-28 on the owner's laptop: \"works well\""
+    },
+    {
+     "name": "Question titles (0.0.4): each past tour is named by the question asked, or a short summary",
      "steps": "EDGEguide design, \"Tours\", row Past tours",
      "status": "not run",
      "ranBy": "owner",
