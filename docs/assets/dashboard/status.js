@@ -5023,7 +5023,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Lets Claude Code show a modder the EDGE tools in the editor: open views, select items, point at buttons",
    "stage": "early build",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-28",
@@ -5050,8 +5050,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G3",
-      "title": "Hints",
-      "status": "planned"
+      "title": "Hints (started 2026-11-28 at the owner's ask: ui_tour and the Steps panel built in 0.0.2, with Back, Next and Close; the note beside the button in EDGEkit is left)",
+      "status": "in progress"
      },
      {
       "id": "G4",
@@ -5063,9 +5063,10 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "The G1 hand test in the editor (owner)",
+     "A Deploy that completes (G1's last step) and the tours test (0.0.2)",
+     "The note drawn beside the button in EDGEkit (edgekit.pointAt), with the Steps panel kept for VS Code",
      "Calls going to the focused window (still the listening window)",
-     "G2 and G3 built and tested; G2 needs the edgeguide key and a reveal command in REDcode, EDGEdeck, EDGEmat and EDGEwave (through their sessions)"
+     "G2 built and tested; it needs the edgeguide key and a reveal command in REDcode, EDGEdeck, EDGEmat and EDGEwave (through their sessions)"
     ]
    },
    "handTests": [
@@ -5075,6 +5076,20 @@ window.EDGE_STATUS = {
      "status": "partly run",
      "ranBy": "script",
      "note": "2026-11-27, by EDGEweb's session at the owner's go, in EDGEkit 1.143.2: sign-in, the Mods view and the ask before ui_run worked (No ran nothing, Yes started Deploy); the Deploy stopped at EDGEdeck's own \"Quit the game first\" with the game running, so a Deploy that completes is left"
+    },
+    {
+     "name": "Laptop: EDGEguide opens views, and Claude uses it for a plain how-to question without being told to",
+     "steps": "EDGEguide design, \"G1 as built\", \"On the owner's laptop\"",
+     "status": "passed",
+     "ranBy": "owner",
+     "note": "2026-11-28, 0.0.1 by hand: the Mods view opened and ui_state answered; a plain question was walked through unprompted, with long replies (which led to tours)"
+    },
+    {
+     "name": "Tours (0.0.2): a plain how-to question shows a short tour in the Steps panel; Next, Back and Close work",
+     "steps": "EDGEguide design, \"Tours\"",
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "The zip was sent to the owner's laptop on 2026-11-28"
     }
    ],
    "ownerSpotTests": [],
@@ -5100,11 +5115,11 @@ window.EDGE_STATUS = {
     }
    ],
    "risks": [
-    "Built from the EDGEkit session (no session of its own); only unit-tested so far",
+    "Built from the EDGEkit session (no session of its own)",
     "The other windows do not pass calls yet: the first window opened answers, focused or not",
     "With EDGEchat, Claude Code also has edgedeck_deploy, so a plain \"deploy\" may skip EDGEguide; which path Claude takes is for G2, with EDGEchat"
    ],
-   "checkedBy": "EDGEkit session (EDGEguide), 2026-11-27"
+   "checkedBy": "EDGEkit session (EDGEguide), 2026-11-28"
   },
   {
    "name": "VATS",
