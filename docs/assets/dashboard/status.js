@@ -2868,10 +2868,10 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "#13 speakLine with timings: hand test passed but for step 3, runnable since REDcode 0.10.17's Lip Sync tab (its Add a Line, the same run as REDcode's Lip Sync L1 step 9)",
+     "#13 speakLine with timings: step 3 ran by script 2026-11-27 (EDGEweb), every part as expected; what is heard (sound, mouth) waits for the owner",
      "Pack and Play's new name in Add to Project's message (#10), on main",
      "Add to Project's Pick a game sound to replace… row: agreed 2026-11-06, not built",
-     "The .wem step (V2 step 5), built on main 2026-11-27 and checked with the real Wwise 2023.1.14 by script: hand test V2 steps 14 to 16 (editor) not run; 17 (heard in the game) waits for EDGEquest's voice-over map writer"
+     "The .wem step (V2 step 5), built on main 2026-11-27 and checked with the real Wwise 2023.1.14 by script: hand test V2 steps 14 to 16 ran by script 2026-11-27 (EDGEweb), two findings fixed 2026-11-28, 15 and 16 to retest; 17 (heard in the game) waits for EDGEquest's voice-over map writer"
     ]
    },
    "handTests": [
@@ -2901,7 +2901,7 @@ window.EDGE_STATUS = {
      "steps": 17,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "Steps 1 to 13 passed 2026-11-06, with EDGEquest; steps 14 to 17, the .wem step (added 2026-11-27), not run: 14 to 16 in the editor, 17 in the game with EDGEquest's voice-over map"
+     "note": "Steps 1 to 13 passed 2026-11-06, with EDGEquest. The .wem step: 14 to 16 ran by script 2026-11-27 (EDGEweb's nightly run); 14 as expected; findings in 15 (one take's change remade both of a line's .wem) and 16 (Look Again did not redraw) fixed 2026-11-28, to retest; 17 in the game waits for EDGEquest's voice-over map"
     },
     {
      "name": "EDGEwave Voice for REDnode (in game)",
@@ -2922,7 +2922,7 @@ window.EDGE_STATUS = {
      "steps": 8,
      "status": "partly run",
      "ranBy": "owner",
-     "note": "2026-11-22: every step but 3 passed (1, 1b, 2, 4, 5, 6, 7); step 3 (a character with no voice) runnable since REDcode 0.10.17 (2026-11-25) brought the Lip Sync tab; not run yet"
+     "note": "2026-11-22: every step but 3 passed (1, 1b, 2, 4, 5, 6, 7); step 3 (a character with no voice) ran by script 2026-11-27 (EDGEweb, REDcode 0.10.17's Lip Sync tab): every part as expected, the credits question after the picker by design (step text corrected); the sound and mouth not judged, for the owner"
     },
     {
      "name": "Shared keys (#12, #14)",
@@ -2960,7 +2960,7 @@ window.EDGE_STATUS = {
    "risks": [
     "A quest's .wem files are made (2026-11-27) but no game has played one yet: unverified until V2 step 17"
    ],
-   "checkedBy": "EDGEwave session, 2026-11-27 (V2 step 5, the .wem step, built at the owner's go; checked with the real Wwise; hand test steps 14 to 17 added)"
+   "checkedBy": "EDGEwave session, 2026-11-28 (EDGEweb's script run recorded: #13 step 3 as expected but unheard; V2 14 to 16 with two findings, fixed on main)"
   },
   {
    "name": "EDGEmat",
