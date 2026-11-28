@@ -2485,8 +2485,13 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
+      "id": "B3d",
+      "title": "Vehicles: a vehicle kind in scenes for EDGEdir's sets (EDGEbuilder #6, agreed 2026-11-28); V0 passed the same day, a car spawned from its Vehicle record stands where put; after B5-4, before S2",
+      "status": "planned"
+     },
+     {
       "id": "B3b",
-      "title": "World objects, inspector",
+      "title": "World objects, inspector, with assemblies (EDGEbuilder #11 part 2, taken 2026-11-28)",
       "status": "planned"
      },
      {
@@ -2540,7 +2545,8 @@ window.EDGE_STATUS = {
     "version": "0.14.1",
     "needs": [
      "Open in REDcode's test (5 steps, in game with REDcode 0.10.18, not out yet), then switch it on (Features in src/protocol.ts and the manifest's calls)",
-     "T0 Tools probe's test (10 steps, in game), then switch Tools on"
+     "T0 Tools probe's test (10 steps, in game), then switch Tools on",
+     "Scene id's test (6 steps, in game)"
     ]
    },
    "handTests": [
@@ -2683,6 +2689,13 @@ window.EDGE_STATUS = {
      "status": "passed",
      "ranBy": "owner",
      "note": "Passed on 2026-11-27 on test 24: no Open in REDcode in the Sector drawer or Selected Node, no Tools panel in Settings with the tool probe installed, no Calls section in REDnode's Mod Manager."
+    },
+    {
+     "name": "Scene id (in game, 0.14.1)",
+     "steps": 6,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Built 2026-11-28 (EDGEbuilder #6 ask 2): a scene file's own id, kept through rename and move, new for Save as; in the service and bake.json, so Bake again finds a moved Library scene. The smoke test covers the file and schemas; not deployed yet"
     }
    ],
    "ownerSpotTests": [
@@ -2752,9 +2765,9 @@ window.EDGE_STATUS = {
      "since": "2026-11-23"
     },
     {
-     "ref": "EB3",
-     "what": "Decide two requests: EDGEbuilder #6 (a vehicle kind and a scene id, for EDGEdir) and #11 part 2 (whether EDGEbuilder owns assemblies); neither is planned yet",
-     "since": "2026-11-25"
+     "ref": "EB4",
+     "what": "Wiki screenshots for EDGEbuilder from the shot list: 5 missing (importing's import.webp shows broken now), 9 new for 0.14.0, 19 to retake; saved into EDGEweb's docs/assets/shots/inbox/",
+     "since": "2026-11-27"
     }
    ],
    "risks": [
@@ -2763,7 +2776,7 @@ window.EDGE_STATUS = {
     "Tripo models look rough up close in the game: EDGEfab's quality research, not a B2d blocker",
     "EDGEbuilder #3 (quest places) waits on purpose: it is phase B4c, planned with EDGEquest's Q4"
    ],
-   "checkedBy": "EDGEbuilder session, 2026-11-27"
+   "checkedBy": "EDGEbuilder session, 2026-11-28"
   },
   {
    "name": "EDGEwave",
