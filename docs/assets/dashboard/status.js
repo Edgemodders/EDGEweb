@@ -5023,7 +5023,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Lets Claude Code show a modder the EDGE tools in the editor: open views, select items, point at buttons",
    "stage": "early build",
-   "version": "0.0.2",
+   "version": "0.0.3",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-28",
@@ -5050,7 +5050,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G3",
-      "title": "Hints (started 2026-11-28 at the owner's ask: ui_tour and the Steps panel built in 0.0.2, with Back, Next and Close; the note beside the button in EDGEkit is left)",
+      "title": "Hints (started 2026-11-28 at the owner's ask: ui_tour and the Steps panel, with Back, Next and Close (0.0.2), past tours with Replay (0.0.3); the note beside the button in EDGEkit is left)",
       "status": "in progress"
      },
      {
@@ -5063,7 +5063,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "A Deploy that completes (G1's last step) and the tours test (0.0.2)",
+     "A Deploy that completes (G1's last step), and the tours' Back and Close and the past tours' Replay (0.0.3)",
      "The note drawn beside the button in EDGEkit (edgekit.pointAt), with the Steps panel kept for VS Code",
      "Calls going to the focused window (still the listening window)",
      "G2 built and tested; it needs the edgeguide key and a reveal command in REDcode, EDGEdeck, EDGEmat and EDGEwave (through their sessions)"
@@ -5087,6 +5087,13 @@ window.EDGE_STATUS = {
     {
      "name": "Tours (0.0.2): a plain how-to question shows a short tour in the Steps panel; Next, Back and Close work",
      "steps": "EDGEguide design, \"Tours\"",
+     "status": "partly run",
+     "ranBy": "owner",
+     "note": "2026-11-28 on the owner's laptop: the tour showed in the Steps panel and went through to its last step (\"looks good\"); Back and Close not reported"
+    },
+    {
+     "name": "Past tours (0.0.3): the finished panel lists past tours, numbered, and Replay shows one again",
+     "steps": "EDGEguide design, \"Tours\", row Past tours",
      "status": "not run",
      "ranBy": "owner",
      "note": "The zip was sent to the owner's laptop on 2026-11-28"
