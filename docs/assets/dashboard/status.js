@@ -3988,7 +3988,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "F3",
-      "title": "Blender sources: F3a .blend, FBX and OBJ onto the Desk (built 2026-11-26), F3b Fix Mesh, F3c Edit in Blender, F3d assistants in Blender",
+      "title": "Blender sources: F3a .blend, FBX and OBJ onto the Desk (built 2026-11-26), F3b Fix Mesh (built 2026-11-28), F3c Edit in Blender, F3d assistants in Blender",
       "status": "in progress"
      },
      {
@@ -4041,11 +4041,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.2.2",
     "needs": [
-     "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus). Unreleased: props from .blend, FBX and OBJ files through Blender (F3a), the Blender Path setting, named parts for a few named pieces, and Blender models and GLBs turned to face forward. Its VS Code steps must pass before a release",
-     "Next work: F3b Fix Mesh, F3c Edit in Blender, F3d assistants in Blender, then clothing (F4a, F4b), F2, NPC looks (FN) and bodies (FB) (the order agreed with the owner 2026-11-26; 1.0 is props, clothing and NPC looks); a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
+     "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus). Unreleased: props from .blend, FBX and OBJ files through Blender (F3a), the Blender Path setting, named parts for a few named pieces, Blender models and GLBs turned to face forward, and Fix Mesh with Undo (F3b, fab_fix). F3a's and F3b's VS Code steps must pass before a release",
+     "Next work: F3c Edit in Blender, F3d assistants in Blender, then clothing (F4a, F4b), F2, NPC looks (FN) and bodies (FB) (the order agreed with the owner 2026-11-26; 1.0 is props, clothing and NPC looks); a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
    "handTests": [
+    {
+     "name": "F3b Fix Mesh (Fix Mesh and Undo Fix Mesh on a Desk prop, Blender in the background)",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner, or steps 1 to 4 by EDGEweb script",
+     "note": "Part A offline by Claude passed 2026-11-28 (34 checks: a test model with every fault, a Tripo prop's copy, Add to Library through REDbridge, fab_fix through the MCP server), after a fix found by drawing it: the model's own normals are kept. Build 903b317 (dist/edgefab-0.2.1-903b317.vsix). Part B not run; step 5 is in the game"
+    },
     {
      "name": "F3a Blender files onto the Desk (.blend, FBX, OBJ through Blender in the background)",
      "steps": 5,
@@ -4154,7 +4161,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EF5",
-     "what": "F3a: run step 5 (testing.md, \"F3a: Blender files onto the Desk\", part B: Add to Project, then the crate in the game, its front the way the entity faces)",
+     "what": "In the game: F3a's step 5 (testing.md, \"F3a: Blender files onto the Desk\": the crate added, its front the way the entity faces) and F3b's step 5 (\"F3b: Fix Mesh\": a fixed Tripo prop added, no worse than before)",
      "since": "2026-11-26"
     }
    ],
