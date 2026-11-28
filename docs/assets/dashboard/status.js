@@ -945,10 +945,18 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "SC1, the Scene spike: its in-game test (docs/world.md, 'SC1 test', 17 steps), moved after 0.75.0 at the owner's word"
+     "SC1, the Scene spike: its in-game test (docs/world.md, 'SC1 test', 17 steps), moved after 0.75.0 at the owner's word",
+     "The launcher closes after a name click and an app opened from it takes the keyboard, REDnode 0.77.0: its in-game test (docs/testing.md, 5 steps), not deployed yet"
     ]
    },
    "handTests": [
+    {
+     "name": "The launcher closes, the Mod Manager's search, REDnode 0.77.0",
+     "steps": 5,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "docs/testing.md, 'The launcher closes, the Mod Manager's search (0.77.0)'. Asked for by the owner 2026-11-28: a click on a package's name closes the launcher and clears its filter; a package switched on from the launcher or the Mod Manager takes the keyboard when its window opens; the Mod Manager's search box has it at start. Built and pushed, not packaged or deployed"
+    },
     {
      "name": "Bones (#62), REDnode 0.76.0 and 0.76.1",
      "steps": 6,
@@ -1237,7 +1245,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-27 (SC1 partly run: steps 1 to 6 passed on 0.76.2)"
+   "checkedBy": "REDnode session, 2026-11-28 (0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
   },
   {
    "name": "REDcode",
