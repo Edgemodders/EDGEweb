@@ -4041,7 +4041,7 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": "0.2.2",
     "needs": [
-     "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus). Unreleased: props from .blend, FBX and OBJ files through Blender (F3a), and the Blender Path setting. Its VS Code steps must pass before a release",
+     "0.2.1 released 2026-11-25 (Marketplace, Open VSX, GitHub, npm, Nexus). Unreleased: props from .blend, FBX and OBJ files through Blender (F3a), the Blender Path setting, named parts for a few named pieces, and Blender models and GLBs turned to face forward. Its VS Code steps must pass before a release",
      "Next work: F3b Fix Mesh, F3c Edit in Blender, F3d assistants in Blender, then clothing (F4a, F4b), F2, NPC looks (FN) and bodies (FB) (the order agreed with the owner 2026-11-26; 1.0 is props, clothing and NPC looks); a rename that closes a prop's tabs in every window; a part's game material carried back to the Desk and the Library"
     ]
    },
@@ -4051,7 +4051,7 @@ window.EDGE_STATUS = {
      "steps": 5,
      "status": "partly run",
      "ranBy": "EDGEweb script (steps 1 to 4), owner (step 5)",
-     "note": "Part A offline by Claude passed again 2026-11-28 (37 checks, Add to Project included). Part B steps 1 to 4 ran by script 2026-11-27 on e38806c, as expected except the parts came unnamed (crate_00...); fixed 2026-11-28 (d2bf8ad: a few named pieces keep their names as parts). Step 2 to see again on the fixed build; step 5 (in the game) not run"
+     "note": "Part A offline by Claude passed again 2026-11-28 (47 checks with Add to Project, and the facing check 3 of 3). Part B steps 1 to 4 ran by script 2026-11-27 on e38806c, as expected except the parts came unnamed (crate_00...); fixed 2026-11-28 (d2bf8ad). The same day, at the owner's word, Blender models and GLBs are turned to face forward (8bfc76b). Step 2 to see again on that build; step 5 (in the game) not run"
     },
     {
      "name": "Keys in REDcode's Keys (EDGEfab #10): moved, asked, read over MCP, changed, cleared, Don't Allow",
@@ -4154,7 +4154,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EF5",
-     "what": "F3a: run step 5 (testing.md, \"F3a: Blender files onto the Desk\", part B: Add to Project, then the crate in the game), and say whether Blender models and GLBs, which face the entity's back, are turned to face forward by default",
+     "what": "F3a: run step 5 (testing.md, \"F3a: Blender files onto the Desk\", part B: Add to Project, then the crate in the game, its front the way the entity faces)",
      "since": "2026-11-26"
     }
    ],
