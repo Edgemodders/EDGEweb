@@ -942,8 +942,8 @@ window.EDGE_STATUS = {
      },
      {
       "id": "MP",
-      "title": "Maps: new 3D city maps (spikes: MP1 Hong Kong on the game's map, done; MP5 a screen of its own from the hub)",
-      "status": "built, tests pending"
+      "title": "Maps: new 3D city maps (spikes MP1 and MP5 done: Hong Kong on a map screen of its own from the hub; next its districts and pins, then the maps API)",
+      "status": "in progress"
      }
     ]
    },
@@ -1161,9 +1161,9 @@ window.EDGE_STATUS = {
     {
      "name": "Maps: Hong Kong on a screen of its own (MP5)",
      "steps": 8,
-     "status": "not run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "Deployed through EDGEdeck 2026-11-28 (hong-kong-map, maps-test-2). docs/maps.md, \"MP5 test\""
+     "note": "Passed in game 2026-11-28 (dev PC), all 8 steps: the hub's HONG KONG button opens the map on Hong Kong; Night City's map unchanged. docs/maps.md, \"MP5 test: results\""
     }
    ],
    "ownerSpotTests": [],
@@ -1264,7 +1264,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-28 (maps: MP1 passed, MP5 built and deployed, its test not run; 0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
+   "checkedBy": "REDnode session, 2026-11-28 (maps: MP1 and MP5 passed in game; 0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
   },
   {
    "name": "REDcode",
