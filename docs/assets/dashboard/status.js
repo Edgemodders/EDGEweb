@@ -4836,7 +4836,7 @@ window.EDGE_STATUS = {
      {
       "id": "RN3",
       "title": "Signing in from the game (device code)",
-      "status": "in progress"
+      "status": "built, tests pending"
      },
      {
       "id": "RN4",
@@ -4998,11 +4998,6 @@ window.EDGE_STATUS = {
      "ref": "MD7",
      "what": "Run the R4c hand test: install the test mod through EDGEdeck 0.34 from the website on this PC (docs/design.md, \"R4c hand test\")",
      "since": "2026-11-26"
-    },
-    {
-     "ref": "MD8",
-     "what": "Auth0 step 10: the in-game application with the Device Code grant, and EDGEMODS_AUTH0_REDNODE_CLIENT_ID in .env (docs/auth0-setup.md)",
-     "since": "2026-11-27"
     },
     {
      "ref": "MD9",
