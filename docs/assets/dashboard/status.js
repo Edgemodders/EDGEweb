@@ -1468,7 +1468,7 @@ window.EDGE_STATUS = {
      "name": "Animation Timeline TL2 to TL4",
      "steps": 11,
      "status": "partly run",
-     "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); T2 and T3 pass (the owner, 2026-11-26); retests R1 to R13 and trimming a move's end pass (EDGEweb by script, 2026-11-27), with one fix from it not run again (the Fist slider back to 0 after Undo). The looks are the owner's; G1 to G6 not run; T11 needs the game (docs/testing.md)"
+     "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); T2 and T3 pass (the owner, 2026-11-26); retests R1 to R13 and trimming a move's end pass (EDGEweb by script, 2026-11-27), with one fix from it not run again (the Fist slider back to 0 after Undo). Saved as you go (unapplied steps kept in the clip's record, the owner's choice of 2026-11-28) built, D1 to D7 not run. The looks are the owner's; G1 to G6 not run; T11 needs the game (docs/testing.md)"
     },
     {
      "name": "Sector layers L4 and Sector Tools L1",
