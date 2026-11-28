@@ -172,7 +172,7 @@ window.EDGE_STATUS = {
     "watch"
    ],
    "created": "2026-10-15",
-   "updated": "2026-11-26"
+   "updated": "2026-11-27"
   },
   {
    "repo": "EDGEkit",
@@ -316,7 +316,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-10-21",
-   "updated": "2026-10-24"
+   "updated": "2026-11-27"
   },
   {
    "repo": "EDGEwave",
@@ -476,7 +476,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-16",
-   "updated": "2026-11-23"
+   "updated": "2026-11-27"
   },
   {
    "repo": "REDnode",
@@ -578,8 +578,8 @@ window.EDGE_STATUS = {
    "version": "0.4.4",
    "lastTag": "v0.4.6",
    "lastTagDate": "2026-11-25",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 3,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 4,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
    ],
@@ -748,7 +748,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.75.0",
    "lastTagDate": "2026-11-26",
    "lastCommit": "2026-11-27",
-   "commitsSinceTag": 7,
+   "commitsSinceTag": 13,
    "sessions": [
     "REDnode, EDGEHack & REDagent",
     "rednode-95"
@@ -2138,10 +2138,10 @@ window.EDGE_STATUS = {
    "role": "Mod manager: a library of mods outside the game folder, deployed with hardlinks; extension, command line and MCP server",
    "stage": "released",
    "version": "0.34.4",
-   "lastTag": "v0.34.3",
-   "lastTagDate": "2026-11-26",
+   "lastTag": "v0.34.4",
+   "lastTagDate": "2026-11-27",
    "lastCommit": "2026-11-27",
-   "commitsSinceTag": 2,
+   "commitsSinceTag": 1,
    "sessions": [
     "EDGEdeck"
    ],
@@ -2363,10 +2363,10 @@ window.EDGE_STATUS = {
    "role": "World builder on REDnode: pick game or mod assets, place them in the running game, bake scenes into the world",
    "stage": "released",
    "version": "0.14.0",
-   "lastTag": "v0.13.2",
-   "lastTagDate": "2026-11-23",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 44,
+   "lastTag": "v0.14.0",
+   "lastTagDate": "2026-11-27",
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 2,
    "sessions": [
     "EDGEbuilder"
    ],
@@ -2792,7 +2792,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.3.0",
    "lastTagDate": "2026-11-22",
    "lastCommit": "2026-11-27",
-   "commitsSinceTag": 8,
+   "commitsSinceTag": 12,
    "sessions": [],
    "wiki": "wiki/edgewave/",
    "plan": {
@@ -2969,7 +2969,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.3.4",
    "lastTagDate": "2026-11-22",
    "lastCommit": "2026-11-27",
-   "commitsSinceTag": 10,
+   "commitsSinceTag": 14,
    "sessions": [
     "EDGEmat"
    ],
@@ -3608,8 +3608,8 @@ window.EDGE_STATUS = {
    "version": "1.143.2",
    "lastTag": "v1.143.2",
    "lastTagDate": "2026-11-26",
-   "lastCommit": "2026-11-26",
-   "commitsSinceTag": 2,
+   "lastCommit": "2026-11-27",
+   "commitsSinceTag": 3,
    "sessions": [],
    "wiki": "wiki/edgekit/",
    "plan": {
@@ -3829,7 +3829,7 @@ window.EDGE_STATUS = {
      "steps": null,
      "status": "partly run",
      "ranBy": "script",
-     "note": "The CLI update passed; the form in VS Code was not seen"
+     "note": "The CLI update passed (again 2026-11-27, Claude Code 2.1.332, scratch config); the form in VS Code was not seen"
     },
     {
      "name": "OAuth token exchange from the CLI",
@@ -3873,7 +3873,7 @@ window.EDGE_STATUS = {
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
    ],
-   "checkedBy": "EDGEchat session, 2026-11-26 (0.2.2 built: edgedeck-mcp 0.34.3, probe passed; no open hand tests; .gitattributes LF and the shared rule on writing files)"
+   "checkedBy": "EDGEchat session, 2026-11-27 (Update from GitHub: the CLI half run again in a scratch config, pass; the VS Code half handed to EDGEweb's nightly run)"
   },
   {
    "name": "REDsave",
@@ -4164,7 +4164,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEdir",
    "code": "DR",
-   "ownerSeq": 13,
+   "ownerSeq": 14,
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
@@ -4496,6 +4496,7 @@ window.EDGE_STATUS = {
      "since": "2026-11-18"
     },
     {
+     "ref": "DR14",
      "what": "Run Test J in the game: the camera spike (11 steps, 15 minutes, needs none of the other tests); ask the EDGEdir session to copy the spike package in first. D6c Camera is built from its answers",
      "since": "2026-11-27"
     }
@@ -4729,7 +4730,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEmods",
    "code": "MD",
-   "ownerSeq": 7,
+   "ownerSeq": 9,
    "group": "In development",
    "role": "The EDGE mod registry: mods in their authors' own git repos, a website and a planned extension",
    "stage": "early build",
@@ -4995,10 +4996,12 @@ window.EDGE_STATUS = {
      "since": "2026-11-26"
     },
     {
+     "ref": "MD8",
      "what": "Auth0 step 10: the in-game application with the Device Code grant, and EDGEMODS_AUTH0_REDNODE_CLIENT_ID in .env (docs/auth0-setup.md)",
      "since": "2026-11-27"
     },
     {
+     "ref": "MD9",
      "what": "Say yes to a public REDnode test mod repository, then run the RN4 hand test in the game (docs/design.md, \"RN4 hand test\")",
      "since": "2026-11-27"
     }
@@ -5019,7 +5022,7 @@ window.EDGE_STATUS = {
    "version": "0.0.1",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-26",
+   "lastCommit": "2026-11-27",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -5351,7 +5354,7 @@ window.EDGE_STATUS = {
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
    "lastCommit": "2026-11-27",
-   "commitsSinceTag": 538,
+   "commitsSinceTag": 571,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"
