@@ -1154,9 +1154,9 @@ window.EDGE_STATUS = {
     {
      "name": "Maps: Hong Kong on the game's map (MP1)",
      "steps": 8,
-     "status": "not run",
+     "status": "partly run",
      "ranBy": "owner",
-     "note": "A test archive that replaces Night City's map while installed; not deployed yet. docs/maps.md, \"MP1 test\""
+     "note": "2026-11-28 (dev PC): the map opens and shows Hong Kong's meshes with the game's map materials; the flat pink building material is too bright. Camera feel, flicker, the cursor's height and the opening hitch not reported. The archive is still in the game folder. docs/maps.md, \"MP1 test: first run\""
     }
    ],
    "ownerSpotTests": [],
@@ -1257,7 +1257,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-28 (maps spike MP1 built, its test not run; 0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
+   "checkedBy": "REDnode session, 2026-11-28 (maps spike MP1 partly run: Hong Kong shows on the game's map; 0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
   },
   {
    "name": "REDcode",
