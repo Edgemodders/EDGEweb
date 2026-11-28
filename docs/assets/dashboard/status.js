@@ -94,7 +94,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-10-21",
-   "updated": "2026-11-04"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEbuilder",
@@ -104,7 +104,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-17",
-   "updated": "2026-11-17"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEbuilder",
@@ -114,7 +114,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-19",
-   "updated": "2026-11-25"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEbuilder",
@@ -124,7 +124,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-20",
-   "updated": "2026-11-25"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEbuilder",
@@ -134,7 +134,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-24",
-   "updated": "2026-11-24"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEfab",
@@ -152,7 +152,7 @@ window.EDGE_STATUS = {
    "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
    "labels": [],
    "created": "2026-11-21",
-   "updated": "2026-11-21"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEkit",
@@ -166,21 +166,11 @@ window.EDGE_STATUS = {
   },
   {
    "repo": "EDGEkit",
-   "number": 4,
-   "title": "Keep a changelog that feeds the release notes and Nexus (convention for every Edgemodders repo)",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-10-19",
-   "updated": "2026-10-19"
-  },
-  {
-   "repo": "EDGEkit",
    "number": 6,
    "title": "Let Claude Code show the EDGE tools in the editor: a local 'show me' MCP server",
    "labels": [],
    "created": "2026-10-26",
-   "updated": "2026-10-26"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEkit",
@@ -190,17 +180,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-04",
-   "updated": "2026-11-04"
-  },
-  {
-   "repo": "EDGEkit",
-   "number": 8,
-   "title": "Nexus changelogs: a short summary, now required by EDGErepo's Nexus tool",
-   "labels": [
-    "request"
-   ],
-   "created": "2026-11-18",
-   "updated": "2026-11-18"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEkit",
@@ -210,7 +190,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-21",
-   "updated": "2026-11-21"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEmat",
@@ -220,7 +200,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-19",
-   "updated": "2026-11-26"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEquest",
@@ -336,7 +316,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-04",
-   "updated": "2026-11-04"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEweb",
@@ -346,7 +326,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-19",
-   "updated": "2026-11-19"
+   "updated": "2026-11-28"
   },
   {
    "repo": "EDGEweb",
@@ -356,7 +336,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-21",
-   "updated": "2026-11-21"
+   "updated": "2026-11-28"
   },
   {
    "repo": "REDbridge",
@@ -406,7 +386,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-26",
-   "updated": "2026-11-27"
+   "updated": "2026-11-28"
   },
   {
    "repo": "REDcode",
@@ -446,7 +426,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-10-30",
-   "updated": "2026-10-30"
+   "updated": "2026-11-28"
   },
   {
    "repo": "REDnode",
@@ -496,7 +476,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-20",
-   "updated": "2026-11-26"
+   "updated": "2026-11-28"
   },
   {
    "repo": "REDnode",
@@ -506,7 +486,7 @@ window.EDGE_STATUS = {
     "request"
    ],
    "created": "2026-11-20",
-   "updated": "2026-11-20"
+   "updated": "2026-11-28"
   },
   {
    "repo": "REDnode",
@@ -545,14 +525,6 @@ window.EDGE_STATUS = {
    "labels": [
     "request"
    ],
-   "created": "2026-11-21",
-   "updated": "2026-11-21"
-  },
-  {
-   "repo": "VATS",
-   "number": 1,
-   "title": "Update EDGEweb's wiki pages about the tool at each release (convention for every Edgemodders repo)",
-   "labels": [],
    "created": "2026-11-21",
    "updated": "2026-11-21"
   }
@@ -1277,8 +1249,8 @@ window.EDGE_STATUS = {
    "version": "0.10.17",
    "lastTag": "v0.10.17",
    "lastTagDate": "2026-11-25",
-   "lastCommit": "2026-11-27",
-   "commitsSinceTag": 58,
+   "lastCommit": "2026-11-28",
+   "commitsSinceTag": 59,
    "sessions": [
     "REDcode"
    ],
@@ -1833,8 +1805,8 @@ window.EDGE_STATUS = {
    "version": "0.20.0",
    "lastTag": "v0.20.0",
    "lastTagDate": "2026-11-26",
-   "lastCommit": "2026-11-27",
-   "commitsSinceTag": 5,
+   "lastCommit": "2026-11-28",
+   "commitsSinceTag": 6,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
    ],
@@ -2130,8 +2102,8 @@ window.EDGE_STATUS = {
    "version": "0.34.4",
    "lastTag": "v0.34.4",
    "lastTagDate": "2026-11-27",
-   "lastCommit": "2026-11-27",
-   "commitsSinceTag": 1,
+   "lastCommit": "2026-11-28",
+   "commitsSinceTag": 2,
    "sessions": [
     "EDGEdeck"
    ],
@@ -2795,8 +2767,8 @@ window.EDGE_STATUS = {
    "version": "0.3.0",
    "lastTag": "v0.3.0",
    "lastTagDate": "2026-11-22",
-   "lastCommit": "2026-11-27",
-   "commitsSinceTag": 12,
+   "lastCommit": "2026-11-28",
+   "commitsSinceTag": 15,
    "sessions": [],
    "wiki": "wiki/edgewave/",
    "plan": {
@@ -3612,8 +3584,8 @@ window.EDGE_STATUS = {
    "version": "1.143.2",
    "lastTag": "v1.143.2",
    "lastTagDate": "2026-11-26",
-   "lastCommit": "2026-11-27",
-   "commitsSinceTag": 3,
+   "lastCommit": "2026-11-28",
+   "commitsSinceTag": 4,
    "sessions": [],
    "wiki": "wiki/edgekit/",
    "plan": {
@@ -3752,8 +3724,8 @@ window.EDGE_STATUS = {
    "version": "0.2.1",
    "lastTag": "v0.2.1",
    "lastTagDate": "2026-11-26",
-   "lastCommit": "2026-11-27",
-   "commitsSinceTag": 8,
+   "lastCommit": "2026-11-28",
+   "commitsSinceTag": 10,
    "sessions": [],
    "wiki": "wiki/edgechat/",
    "plan": {
@@ -4181,7 +4153,7 @@ window.EDGE_STATUS = {
    "version": "0.0.35",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-27",
+   "lastCommit": "2026-11-28",
    "commitsSinceTag": 0,
    "sessions": [
     "edgedir-49"
@@ -4747,7 +4719,7 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-27",
+   "lastCommit": "2026-11-28",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -5032,7 +5004,7 @@ window.EDGE_STATUS = {
    "version": "0.0.1",
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-27",
+   "lastCommit": "2026-11-28",
    "commitsSinceTag": 0,
    "sessions": [],
    "plan": {
@@ -5122,7 +5094,7 @@ window.EDGE_STATUS = {
    "version": null,
    "lastTag": null,
    "lastTagDate": null,
-   "lastCommit": "2026-11-26",
+   "lastCommit": "2026-11-28",
    "commitsSinceTag": 0,
    "sessions": [
     "REDnode, EDGEHack & REDagent"
@@ -5363,8 +5335,8 @@ window.EDGE_STATUS = {
    "version": "0.1.0",
    "lastTag": "v0.1.0",
    "lastTagDate": "2026-11-12",
-   "lastCommit": "2026-11-27",
-   "commitsSinceTag": 571,
+   "lastCommit": "2026-11-28",
+   "commitsSinceTag": 582,
    "sessions": [
     "EDGEweb",
     "edgeweb-6c"
