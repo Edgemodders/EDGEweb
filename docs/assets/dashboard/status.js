@@ -4028,8 +4028,8 @@ window.EDGE_STATUS = {
      "name": "F3a Blender files onto the Desk (.blend, FBX, OBJ through Blender in the background)",
      "steps": 5,
      "status": "partly run",
-     "ranBy": "owner",
-     "note": "Part A offline by Claude passed 2026-11-26 (35 checks with Blender 5.3.0, Add to Project included). Part B, 5 VS Code steps, not run"
+     "ranBy": "EDGEweb script (steps 1 to 4), owner (step 5)",
+     "note": "Part A offline by Claude passed again 2026-11-28 (37 checks, Add to Project included). Part B steps 1 to 4 ran by script 2026-11-27 on e38806c, as expected except the parts came unnamed (crate_00...); fixed 2026-11-28 (d2bf8ad: a few named pieces keep their names as parts). Step 2 to see again on the fixed build; step 5 (in the game) not run"
     },
     {
      "name": "Keys in REDcode's Keys (EDGEfab #10): moved, asked, read over MCP, changed, cleared, Don't Allow",
@@ -4132,7 +4132,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EF5",
-     "what": "F3a: run the 5 VS Code steps (testing.md, \"F3a: Blender files onto the Desk\", part B), and say whether Blender models and GLBs, which face the entity's back, are turned to face forward by default",
+     "what": "F3a: run step 5 (testing.md, \"F3a: Blender files onto the Desk\", part B: Add to Project, then the crate in the game), and say whether Blender models and GLBs, which face the entity's back, are turned to face forward by default",
      "since": "2026-11-26"
     }
    ],
@@ -4141,7 +4141,7 @@ window.EDGE_STATUS = {
     "Generate from Words uses paid AI services with the modder's own keys; it is optional, and the rest needs no key",
     "A part's game material lives in the project only: the Desk and Library copies keep the model's textures"
    ],
-   "checkedBy": "EDGEfab session, 2026-11-26"
+   "checkedBy": "EDGEfab session, 2026-11-28"
   },
   {
    "name": "EDGEdir",
