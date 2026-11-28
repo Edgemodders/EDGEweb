@@ -35,7 +35,7 @@ Choose an actor: click their name at the left of the strip, or their row in **Ca
 | **Left**, **Right**, **Forward**, **Back** | Moves the mark 10 cm |
 | **Turn -15**, **Turn +15** | Turns them 15 degrees |
 
-An actor who is in the game moves at once and plays on. With nothing playing, the mark still changes in the file.
+The mark changes in the scene's file at once, playing or not. An actor who is playing in the game is meant to move at once and play on; as said above, that does not work yet, and they stand at the new mark from the next **Play**.
 
 {% include shot.html src="/assets/shots/edgedir/adjust-in-game.png" caption="Moving an actor in the game" shows="The game with a scene playing: an actor with a pin of their name over them, standing where V stood a moment ago, and EDGE Director's Adjust section with Move to V beside them." %}
 
@@ -72,7 +72,7 @@ For each pin:
 | **Go There** | Puts V at the pin |
 | The chosen actor's name and **Here** | That actor stands at this pin, and follows it. Choose an actor first |
 | **Scene Here** | The scene's place is this pin, and follows it |
-| **Drop Again** | Moves the pin to where V stands now. Whatever follows it moves with it: an actor in the game at once |
+| **Drop Again** | Moves the pin to where V stands now. Whatever follows it moves with it in the scene's file; an actor who is playing in the game stands there from the next **Play** (see the note at the top) |
 | **Remove** | Takes the pin away. What followed it stays where it is |
 
 **Following** is the point of a pin. An actor "at the pin Doorway" keeps standing at that pin when you move it, in the game and in the file. A mark you nudge or type by hand lets go of its pin.

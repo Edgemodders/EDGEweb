@@ -4,14 +4,14 @@ nav_title: Settings, commands and keys
 section: EDGEdir
 order: 12
 description: "Every setting, view, command and key of EDGEdir in VS Code, the buttons of EDGE Director's window, and where EDGEdir keeps its files on your PC."
-reviewed: 2026-11-26
+reviewed: 2026-11-27
 ---
 
 # Settings, commands and <span class="y">keys</span>
 
 **EDGEdir is not released yet.** This page describes what is built on its `main`, for review before the first release; see the [Overview](./) for what has been tested.
 
-A reference for EDGEdir 0.0.33 and EDGE Director 0.7.0.
+A reference for EDGEdir 0.0.34 and EDGE Director 0.7.1.
 
 | On this page | |
 |---|---|
