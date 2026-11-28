@@ -3741,7 +3741,7 @@ window.EDGE_STATUS = {
   {
    "name": "EDGEchat",
    "code": "EC",
-   "ownerSeq": 1,
+   "ownerSeq": 4,
    "group": "Specialist toolkits",
    "role": "The EDGE plugin for Claude Code: modding skills, commands and the EDGE MCP servers in one install",
    "stage": "released",
@@ -3829,7 +3829,7 @@ window.EDGE_STATUS = {
      "steps": null,
      "status": "partly run",
      "ranBy": "script",
-     "note": "The CLI update passed (again 2026-11-27, Claude Code 2.1.332, scratch config); the form in VS Code was not seen"
+     "note": "The CLI update passed (again 2026-11-27, Claude Code 2.1.332, scratch config); the VS Code half stopped at the scratch config's sign-in (EDGEweb's nightly run, 2026-11-27): waits on EC4"
     },
     {
      "name": "OAuth token exchange from the CLI",
@@ -3868,7 +3868,13 @@ window.EDGE_STATUS = {
      "ref": "CLAUDE.md"
     }
    ],
-   "ownerActions": [],
+   "ownerActions": [
+    {
+     "ref": "EC4",
+     "what": "Sign in to Claude Code once in a VS Code started with the scratch CLAUDE_CONFIG_DIR of the \"Update from GitHub\" test (EDGEchat docs/testing.md), so the nightly run can see whether the settings form opens after an update; or run that update yourself",
+     "since": "2026-11-27"
+    }
+   ],
    "risks": [
     "The check-mod and new-mod skills do not fire on plain prompts",
     "The eval judge is flaky"
