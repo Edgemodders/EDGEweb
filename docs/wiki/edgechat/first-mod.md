@@ -79,7 +79,7 @@ Before writing the code, Claude looks up the game functions it needs, so it uses
 
 With **Hot reload** on, REDnode loads the package as soon as its files are written. Claude checks its own work: that the package runs, that it logged no errors, and often a screenshot of the game. Then it tells you what to look at, such as "the top right corner should show your money".
 
-{% include shot.html caption="The money widget" shows="The game with a small HUD widget in the top right corner showing V's money, made with /edge:new-mod." %}
+{% include shot.html caption="The money widget" src="/assets/shots/edgechat/first-mod-the-money-widget.png" alt="The game with a small window at the right of the screen, under the quest tracker, showing V's money: 539,168 eddies." shows="The game with a small HUD widget in the top right corner showing V's money, made with /edge:new-mod." %}
 
 Switch to the game and look.
 

@@ -72,7 +72,7 @@ You need a save with the UI Workbench switched on and its admin permission allow
 8. The count beside **Reset all** says **4 change(s) tried**.
 9. Press **Reset**. The text, its colour, its opacity and its place come back as they were, and the count says **nothing tried**.
 
-{% include shot.html caption="Try on a HUD text" shows="The quest tracker's objective line on the HUD changed by Try: it reads Hello from REDnode, in red, shifted to the right, with the Workbench's Try part showing the before line." %}
+{% include shot.html caption="Try on a HUD text" src="/assets/shots/rednode/ui-tools-try-try-on-a-hud-text.png" alt="The quest tracker's objective line on the HUD reading Hello from REDnode! in red, with the Workbench's Try part showing the tint, text, font size, size and margin fields and 1 change(s) tried." shows="The quest tracker's objective line on the HUD changed by Try: it reads Hello from REDnode, in red, shifted to the right, with the Workbench's Try part showing the before line." %}
 
 Now try two changes on two different widgets, and press **Reset all**: both come back. Try one more, then switch the Workbench off in the launcher: that one comes back too as it closes.
 

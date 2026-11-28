@@ -54,7 +54,7 @@ Click a sector. A drawer opens to the left of the window with everything that se
 | ×12 | One entry that places twelve copies of the same model |
 | The eye | Hides the entry until EDGEbuilder stops. It is not kept in your scene |
 
-{% include shot.html caption="The Sector drawer" shows="EDGEbuilder with the World tab on Sectors and the Sector drawer open to its left on exterior_-22_19_1_0: the filter box, rows of entries with their numbers, kinds and files, the streamed-in dots and eyes, and entry 288, V's door, picked." %}
+{% include shot.html caption="The Sector drawer" src="/assets/shots/edgebuilder/sectors-the-sector-drawer.png" alt="EDGEbuilder's World tab on Sectors with the Sector drawer open to its left on exterior_-22_19_1_0: the filter box, numbered entries with an eye on each, entry 288, single_door.ent, picked, and the Selected Node panel with its quest warning and Remove from world." shows="EDGEbuilder with the World tab on Sectors and the Sector drawer open to its left on exterior_-22_19_1_0: the filter box, rows of entries with their numbers, kinds and files, the streamed-in dots and eyes, and entry 288, V's door, picked." %}
 
 ## What you can do with an entry
 

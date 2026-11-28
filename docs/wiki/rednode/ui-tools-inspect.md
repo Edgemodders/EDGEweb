@@ -13,7 +13,7 @@ The **Inspect** tab shows the game's own UI the way a browser's developer tools 
 
 New to the words? The game's UI is made of **widgets** (panels, texts, images), grouped into **layers** (the HUD, the menus, notifications), and each piece of the HUD is a **HUD entry**. [Native UI: ink markup](ink-markup.html) explains them.
 
-{% include shot.html caption="The Inspect tab" shows="The UI Workbench's Inspect tab: the bar with Refresh, Pick and Pick inside and the status line saying how many layers and the ink size; the tree at the left with the HUD layer open on its HUD entries; the details of a selected text widget at the right." %}
+{% include shot.html caption="The Inspect tab" src="/assets/shots/rednode/ui-tools-inspect-the-inspect-tab.png" alt="The UI Workbench's Inspect tab: Refresh, Pick and Pick inside with the status line, the tree of the HUD layer at the left with CounterHolder selected and outlined on the HUD, and the list of widgets under the cursor at the right." shows="The UI Workbench's Inspect tab: the bar with Refresh, Pick and Pick inside and the status line saying how many layers and the ink size; the tree at the left with the HUD layer open on its HUD entries; the details of a selected text widget at the right." %}
 
 ## The bar
 
@@ -58,7 +58,7 @@ Picking is the quickest way to find a widget.
 3. Move the cursor over the HUD or a menu. The widget under it is **outlined** and **named** in a tip beside the cursor as you move.
 4. Click. The tree opens down to that widget and selects it, and the details list everything under that point.
 
-{% include shot.html caption="Pick" shows="The HUD while picking: a thin outline around the quest tracker's objective text, a small tip beside the cursor with the widget's name and class, and the hint line at the top of the screen." %}
+{% include shot.html caption="Pick" src="/assets/shots/rednode/ui-tools-inspect-pick.png" alt="The game's menu while picking: a thin dashed outline around the word Inventory, and a small tip beside the cursor with the widget's name and class, txtValue Text." shows="The HUD while picking: a thin outline around the quest tracker's objective text, a small tip beside the cursor with the widget's name and class, and the hint line at the top of the screen." %}
 
 | What Pick can pick | Why |
 |---|---|

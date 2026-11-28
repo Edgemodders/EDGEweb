@@ -68,7 +68,7 @@ The controls are in an overlay window because native panels can't take clicks ye
 
 ## The Edit tab
 
-{% include shot.html caption="The Edit tab" shows="The UI Workbench's Edit tab: the project's name with an unsaved dot, Save, Run, Stop and Export, and the markup and the script side by side with highlighting, an error line in the markup's header, and the splitter between them." %}
+{% include shot.html caption="The Edit tab" src="/assets/shots/rednode/ui-tools-projects-the-edit-tab.png" alt="The UI Workbench's Edit tab on the Export Test project: Save, Run, Stop and Export, and the markup, panel.ink.html, and the script, mod.mjs, side by side with highlighting." shows="The UI Workbench's Edit tab: the project's name with an unsaved dot, Save, Run, Stop and Export, and the markup and the script side by side with highlighting, an error line in the markup's header, and the splitter between them." %}
 
 | Part | Does |
 |---|---|

@@ -93,7 +93,7 @@ Press **Remove from world** in the panel, or **Delete**. The door goes, and so d
 | Any time | **Restore** next to it in the **World edits** list on the Scene tab, under the scene's name and counts. Or pick the door again and press **Restore** in the panel |
 | For now, without changing the scene | **Close** the scene on the Scene tab. Its doors come back; open the scene again and they go again |
 
-{% include shot.html caption="World edits on the Scene tab" shows="The Scene tab of a scene that removes two doors: the count 0 added, 2 removed, and the World edits list with V's door and the elevator door, each with a Restore button." %}
+{% include shot.html caption="World edits on the Scene tab" src="/assets/shots/edgebuilder/doors-world-edits-on-the-scene-tab.png" alt="EDGEbuilder's Scene tab on a scene named Removed Doors: the count 0 added, 2 removed, and the World edits list with a door and a sliding door's mesh, each with a Restore button." shows="The Scene tab of a scene that removes two doors: the count 0 added, 2 removed, and the World edits list with V's door and the elevator door, each with a Restore button." %}
 
 The Scene tab counts what a scene does to the world: **"3 added, 2 removed"** means three objects of yours and two of the game's removed. The Library tab shows the same as **+3 −2**.
 

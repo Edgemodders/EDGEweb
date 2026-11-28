@@ -258,7 +258,7 @@ Here is a complete one, a strip at the top of the screen with V's position. It i
 
 You should see a dark strip at the top middle of the screen while you play, with V's position changing as you walk. Open the map or the inventory and it hides; close it and it is back.
 
-{% include shot.html caption="A HUD widget" shows="Normal gameplay, not interactive mode, with the My coords strip at the top middle of the screen showing V's X, Y and Z position." %}
+{% include shot.html caption="A HUD widget" src="/assets/shots/rednode/overlay-apps-a-hud-widget.png" alt="The game with a strip at the top middle of the screen showing V's X, Y and Z position." shows="Normal gameplay, not interactive mode, with the My coords strip at the top middle of the screen showing V's X, Y and Z position." %}
 
 `hideWith` says when the game should hide the widget:
 

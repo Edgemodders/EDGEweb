@@ -44,7 +44,7 @@ To remove the pack, remove it in your mod manager or delete the two folders. RED
 
 One row per running package, refreshed every second. **1 s**, **5 s** and **Pause** change how often. Click a column to sort by it.
 
-{% include shot.html caption="The Task Manager" shows="The Task Manager window over the game: one row per running package with its status, CPU, memory, thread, heap, game calls and uptime, one row selected, and the End task and Restart buttons." %}
+{% include shot.html caption="The Task Manager" src="/assets/shots/rednode/admin-tools-the-task-manager.png" alt="The Task Manager window over the game: 45 running packages, one row each with its status, CPU, memory, thread, heap, game calls, service and uptime, and the refresh buttons at the top right." shows="The Task Manager window over the game: one row per running package with its status, CPU, memory, thread, heap, game calls and uptime, one row selected, and the End task and Restart buttons." %}
 
 | Column | Shows |
 |---|---|
@@ -79,7 +79,7 @@ REDnode's own windows, such as the Mod Manager and the Mod log, are listed but c
 
 Every tool an AI assistant can see through REDnode's [MCP server](agents.html), the way Claude Code and REDagent see it: REDnode's own tools first, then each running mod's. Each row says what the tool does and whether it **reads** (runs without asking), **asks first** or **acts**. Since 0.2.0 it also decides which of your other mods may call each mod's tools.
 
-{% include shot.html caption="The Tools Manager" shows="The Tools Manager window over the game: REDnode's tools as the first group, then a mod's tools, each row with its switch and whether it reads or asks first, and one tool selected with its description." %}
+{% include shot.html caption="The Tools Manager" src="/assets/shots/rednode/admin-tools-the-tools-manager.png" alt="The Tools Manager window over the game: 85 of 85 tools on, REDnode's 34 tools as the first group, each row with its switch and Reads, Acts or Asks first, and at the right the connected assistants and the recent calls of mods' tools." shows="The Tools Manager window over the game: REDnode's tools as the first group, then a mod's tools, each row with its switch and whether it reads or asks first, and one tool selected with its description." %}
 
 | Control | Does |
 |---|---|

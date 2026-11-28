@@ -71,7 +71,7 @@ You do this once. The connection lasts across game restarts, until you press **R
 
 {% include shot.html caption="MCP server switch" src="/assets/shots/rednode/agents-mcp-server-switch.png" alt="REDnode&rsquo;s Settings drawer with the MCP server switch on, the Copy setup button, and Claude Code under Connected assistants with Revoke." shows="The REDnode launcher's Settings drawer with the MCP server switch on, Copy setup, and Connected assistants with Revoke." %}
 
-{% include shot.html caption="The Connect window" shows="The game with REDnode's Connect window: the assistant's name, Claude Code, the code to compare with the browser's, and the Allow and Deny buttons." %}
+{% include shot.html caption="The Connect window" src="/assets/shots/rednode/agents-the-connect-window.png" alt="The game with REDnode's window An assistant asks to connect: Claude Code (plugin:edge:rednode), the code NVE-8615, 95 seconds left, and the Deny and Allow buttons." shows="The game with REDnode's Connect window: the assistant's name, Claude Code, the code to compare with the browser's, and the Allow and Deny buttons." %}
 
 If it doesn't connect, see [Troubleshooting](troubleshooting.html#claude-code). [Connect Claude Code](../connect-claude-code.html) covers REDnode beside the other EDGE tools' servers.
 

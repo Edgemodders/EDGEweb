@@ -167,7 +167,7 @@ HUD widgets, and other windows that ask for it, hide by themselves:
 
 Mods, AI assistants and you can put **pins** in the world: glowing posts with a label and the distance, drawn by REDnode over the game. The **Pins** window lists them all and lets you drop your own. Switch on **Pins** in the launcher.
 
-{% include shot.html caption="The Pins window" shows="The Pins window at the right of the screen: a few pins listed nearest first, each with its colour, where it comes from and its distance, a Go there button on each, the name box with Drop a pin here, and two of the pins visible in the world behind it." %}
+{% include shot.html caption="The Pins window" src="/assets/shots/rednode/overlay-the-pins-window.png" alt="The Pins window at the right of the screen: five pins listed nearest first, each with its colour, set, distance and a Go there button, the name box with Drop a pin here, and two of the pins standing in the world behind it." shows="The Pins window at the right of the screen: a few pins listed nearest first, each with its colour, where it comes from and its distance, a Go there button on each, the name box with Drop a pin here, and two of the pins visible in the world behind it." %}
 
 | Part | Does |
 |---|---|
@@ -220,7 +220,7 @@ The **Console** is a command line for the game, built into REDnode. It does the 
 
 Switch on **Console** in the launcher: its window opens at the top of the screen. Type a line at the bottom and press Enter; the answer shows above.
 
-{% include shot.html caption="The Console" shows="The Console window at the top of the screen after typing addItem with the trousers' id: its answer, 1 × Items.Pants_01_basic_01 added, and the line to type in below." %}
+{% include shot.html caption="The Console" src="/assets/shots/rednode/overlay-the-console.png" alt="The Console window over the game: addItem typed twice with the trousers' id, each answered 1 × Items.Pants_01_basic_01 added, and the line to type in below." shows="The Console window at the top of the screen after typing addItem with the trousers' id: its answer, 1 × Items.Pants_01_basic_01 added, and the line to type in below." %}
 
 ### Try it: your first command
 

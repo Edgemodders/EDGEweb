@@ -17,6 +17,7 @@ How to keep it:
 
 **New**
 
+- Wiki and platform page: 22 screenshots taken in the game. REDnode's Console, Pins window, Connect window, Task Manager, Tools Manager, Sound Tracer and UI Workbench; EDGEbuilder's Sector drawer, world edits, asset search and gizmo; EDGEchat's money widget; EDGEfab's prop in Night City: https://edgemodders.ai/wiki/rednode/ui-tools.html
 - EDGEfab, the asset maker, has a card on the landing page and a section and a benefits row on the platform page: https://edgemodders.ai/platform.html#edgefab
 - Platform page: nineteen empty picture slots now show screenshots from the wiki, for REDcode, EDGEdeck, REDbridge, EDGEwave, EDGEmat, EDGEquest, EDGEhack and EDGEkit: https://edgemodders.ai/platform.html
 - Dashboard: a Missing screenshots section (07) counts the placeholders left on the wiki and the platform page, by tool and by who takes them, and links the owner's image dossier. `tools/dashboard/shots.py` writes the count and the dossier's page.

@@ -48,7 +48,7 @@ Also there: a filter over both columns, **Pause** and **Resume**, **Clear**, a b
 
 **▶** is greyed for an event with no recording of its own, such as one that stops a sound.
 
-{% include shot.html caption="The Sound Tracer" shows="The Sound Tracer over the game while V draws a katana: the Played column on the left with named events, the Loaded column on the right, and the play buttons on each row." %}
+{% include shot.html caption="The Sound Tracer" src="/assets/shots/rednode/sound-tools-the-sound-tracer.png" alt="The Sound Tracer over the game with a katana in V's hand: the Played column on the left with named events, the Loaded column on the right, and the play buttons on each row." shows="The Sound Tracer over the game while V draws a katana: the Played column on the left with named events, the Loaded column on the right, and the play buttons on each row." %}
 
 ## Sound Search
 

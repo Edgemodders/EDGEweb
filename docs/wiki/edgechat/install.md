@@ -138,7 +138,7 @@ The `rednode` connection works only while the game runs. You allow it once, from
 5. Your browser opens a page titled **Approve in Cyberpunk 2077**, with a code. In the game, a **Connect** window shows a code too. Check that the two codes match, so you know the request you are about to allow is your own.
 6. In the game, press **F10** to get the mouse cursor, then press **Allow** in the Connect window. You have two minutes.
 
-{% include shot.html caption="Allow Claude Code in the game" shows="The game with REDnode's Connect window asking to allow Claude Code, its code matching the code on the Approve in Cyberpunk 2077 page in the browser beside it." %}
+{% include shot.html caption="Allow Claude Code in the game" src="/assets/shots/edgechat/install-allow-claude-code-in-the-game.png" alt="The game with REDnode's window An assistant asks to connect: Claude Code (plugin:edge:rednode), the code XBA-6192 to compare with the browser's, and the Deny and Allow buttons." shows="The game with REDnode's Connect window asking to allow Claude Code, its code matching the code on the Approve in Cyberpunk 2077 page in the browser beside it." %}
 
 | You should see | Where |
 |---|---|

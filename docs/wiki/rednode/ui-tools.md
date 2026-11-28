@@ -23,7 +23,7 @@ reviewed: 2026-11-13
 
 *Native UI* means UI the game draws itself, with its own widgets, fonts and colours, as opposed to REDnode's [overlay windows](overlay-apps.html), which are web pages drawn on top. The game's UI system is called **ink**. If the words are new, read [Native UI: ink markup](ink-markup.html) first; the Workbench writes that markup for you.
 
-{% include shot.html caption="The UI Workbench in the game" shows="The game's HUD with the UI Workbench open in interactive mode: the Inspect tab with the layer tree at the left, the details of a picked widget at the right, and the picked widget outlined on the HUD behind the window." %}
+{% include shot.html caption="The UI Workbench in the game" src="/assets/shots/rednode/ui-tools-the-ui-workbench-in-the-game.png" alt="The game's HUD with the UI Workbench open: the Inspect tab with the layer tree at the left, the details of the quest tracker's objective text at the right, and that text outlined on the HUD behind the window." shows="The game's HUD with the UI Workbench open in interactive mode: the Inspect tab with the layer tree at the left, the details of a picked widget at the right, and the picked widget outlined on the HUD behind the window." %}
 
 ## Why you'd want it
 

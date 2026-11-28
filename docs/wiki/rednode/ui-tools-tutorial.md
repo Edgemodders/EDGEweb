@@ -173,7 +173,7 @@ Your markup now reads (after the comment):
 
 Change `style="small"` on your new line to `style="tiny"`. Within a moment the header says `line 14: style: "tiny" is not one of: title, subtitle, heading, body, label, value, small, fluff`, and the word is underlined. That list is every style you can use. Put it back to `small`. A mistake like this never reaches the game: REDnode checks the whole file first.
 
-{% include shot.html caption="A mistake shown in the editor" shows="The UI Workbench's Edit tab with the markup's header showing the error line 14: style: tiny is not one of the styles, and the word tiny underlined in the markup." %}
+{% include shot.html caption="A mistake shown in the editor" src="/assets/shots/rednode/ui-tools-tutorial-a-mistake-shown-in-the-editor.png" alt="The UI Workbench's Edit tab with the markup's header showing the error for line 14, style: small tiny is not one of the styles, a red dot beside line 14 and the word tiny underlined." shows="The UI Workbench's Edit tab with the markup's header showing the error line 14: style: tiny is not one of the styles, and the word tiny underlined in the markup." %}
 
 ## 6. Change when it turns to warning
 

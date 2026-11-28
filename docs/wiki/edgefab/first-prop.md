@@ -105,7 +105,7 @@ In the game:
 3. Type `neon_vending`. Your prop shows with its size and your project's name.
 4. Face an open spot and press **Drop where I look**. Press F10 to close the overlay.
 
-{% include shot.html caption="The vending machine in Night City" src="/assets/shots/edgefab/first-prop-in-game.png" shows="The finished vending machine standing on a street at night, its shelves glowing, V beside it." %}
+{% include shot.html caption="The vending machine in Night City" src="/assets/shots/edgefab/first-prop-in-game.png" alt="A dark vending machine with glowing blue shelves standing beside a road in the fog, V next to it." shows="The finished vending machine standing on a street at night, its shelves glowing, V beside it." %}
 
 Walk into it: V stops. Jump on it. Walk away and back: it looks the same as the detail drops. EDGEbuilder keeps it there in your scene: [EDGEbuilder](../edgebuilder/).
 

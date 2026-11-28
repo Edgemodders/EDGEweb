@@ -15,27 +15,22 @@ window.EDGE_STATUS = {
   ]
  },
  "shots": {
-  "asOf": "2026-11-27",
+  "asOf": "2026-11-28",
   "dossier": "https://claude.ai/artifact/4vDocr9pddxgabrHEfL6Ru",
-  "taken": 238,
-  "missing": 91,
-  "game": 62,
+  "taken": 260,
+  "missing": 69,
+  "game": 40,
   "editor": 29,
   "byTool": [
    {
-    "tool": "REDnode",
-    "game": 26,
-    "editor": 1
-   },
-   {
     "tool": "EDGEchat",
-    "game": 6,
+    "game": 4,
     "editor": 10
    },
    {
-    "tool": "EDGEbuilder",
-    "game": 8,
-    "editor": 0
+    "tool": "REDnode",
+    "game": 13,
+    "editor": 1
    },
    {
     "tool": "REDagent",
@@ -63,9 +58,9 @@ window.EDGE_STATUS = {
     "editor": 0
    },
    {
-    "tool": "EDGEfab",
-    "game": 2,
-    "editor": 1
+    "tool": "EDGEbuilder",
+    "game": 3,
+    "editor": 0
    },
    {
     "tool": "EDGEmat",
@@ -81,6 +76,11 @@ window.EDGE_STATUS = {
     "tool": "REDbridge",
     "game": 0,
     "editor": 2
+   },
+   {
+    "tool": "EDGEfab",
+    "game": 0,
+    "editor": 1
    }
   ]
  },
