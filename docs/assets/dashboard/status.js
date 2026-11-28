@@ -2282,6 +2282,20 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": null,
      "note": "Since 0.34.3. Run by script on 2026-11-26 on a scratch profile (EDGEweb), as expected; waiting for the owner"
+    },
+    {
+     "name": "43 Files under r6 are placed (r6/storages, the players' HUD Painter report)",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Since 0.34.4. Run by script on 2026-11-27 with the released vsix on a scratch profile (EDGEweb), as expected; the real HUD Painter not run; waiting for the owner"
+    },
+    {
+     "name": "44 Game label 'version unknown' and the archive log",
+     "steps": null,
+     "status": "not run",
+     "ranBy": null,
+     "note": "Since 0.34.4. Run by script on 2026-11-27 on a scratch profile (EDGEweb), as expected; waiting for the owner"
     }
    ],
    "ownerSpotTests": [
@@ -4920,10 +4934,10 @@ window.EDGE_STATUS = {
     },
     {
      "name": "An assistant (an agent in VS Code, or Claude Code) finds the test mod, its details and its install plan through the EDGEmods MCP server (R4d, first part)",
-     "steps": "docs/design.md, after R4d's first part (\"Scripted run, 2026-11-25\")",
+     "steps": "docs/design.md, after R4d's first part (\"Scripted run, 2026-11-25\" and \"Scripted run, 2026-11-27\")",
      "status": "partly run",
      "ranBy": "script",
-     "note": "2026-11-25, EDGEweb's session with its own MCP client, at the owner's request: all six checks passed (tools, search, details, no repository shown, plan, errors). Not seen: the entry in VS Code's MCP servers list and a real assistant's run; mods_install, built 2026-11-26, is in the R4c hand test"
+     "note": "Scripted runs by EDGEweb's session with its own MCP client: 2026-11-25 (six checks) and 2026-11-27 at e07c678 (the six again with four tools, mods_install's annotations, a rednode search, mods_install refusing an unknown mod and sending the test mod's link, the editor asking to sign in). Not seen: the entry in VS Code's MCP servers list, a real assistant's run, the case without EDGEdeck"
     },
     {
      "name": "Install the test mod through EDGEdeck from the website's Mod manager button, deploy it and see it in the game; install it again (already there); ask Claude Code to install it with mods_install (R4c)",
@@ -5006,7 +5020,7 @@ window.EDGE_STATUS = {
     "No release and no live site yet; the design is still a proposal",
     "Auth0 marks a GitHub sign-in's email unverified, so admin sign-in works through Google or email for now"
    ],
-   "checkedBy": "EDGEmods session, 2026-11-27"
+   "checkedBy": "EDGEmods session, 2026-11-28"
   },
   {
    "name": "EDGEguide",
