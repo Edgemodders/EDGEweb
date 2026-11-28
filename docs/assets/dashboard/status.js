@@ -2357,7 +2357,7 @@ window.EDGE_STATUS = {
     "0.27.0 to 0.32.0: a crafted nxm:// link could run code through EDGEdeck's PowerShell forwarder; fixed in 0.33.0 (advisory GHSA-crv2-8m58-wxvv), players on older versions stay exposed until they update",
     "The FOMOD installer (a contributor's PR) was released before the owner ran any of tests 31 to 35"
    ],
-   "checkedBy": "EDGEdeck session, 2026-11-27"
+   "checkedBy": "EDGEdeck session, 2026-11-28"
   },
   {
    "name": "EDGEbuilder",
