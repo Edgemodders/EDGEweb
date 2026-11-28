@@ -3040,16 +3040,16 @@ window.EDGE_STATUS = {
     {
      "name": "Messages name EDGEmat (#15)",
      "steps": 5,
-     "status": "partly run",
-     "ranBy": "EDGEweb session, by script, 2026-11-26",
-     "note": "Steps 2 to 4 as expected. Steps 1 (glow blue found nothing in Use a Game Material) and 5 (a progress notice without EDGEmat:) differed; both fixed 2026-11-27 (e5ab604), to run again. #15 stays open until it passes. For 0.3.5"
+     "status": "passed",
+     "ranBy": "EDGEweb session, by script, 2026-11-26 and 2026-11-27",
+     "note": "Steps 2 to 4 on 2026-11-26; steps 1 and 5 again on 2026-11-27 (e5ab604), as expected. #15 closed. For 0.3.5"
     },
     {
      "name": "Game materials on a Desk mesh",
      "steps": 12,
-     "status": "not run",
-     "ranBy": null,
-     "note": "Built 2026-11-25 (owner's next step from 2026-11-22): Use a Game Surface, Use a Game Material and Back to the Game's Material on a game mesh on the Desk; Add to Project carries the changed mesh and its files. npm run desk-parts-check passed (Claude, on the s1_055 sneakers). For 0.3.5"
+     "status": "partly run",
+     "ranBy": "EDGEweb session, by script, 2026-11-27",
+     "note": "Steps 1 to 10 by script on e5ab604: as expected but step 3 (the eye opens REDcode's 3D view on the mesh's first look; EDGEmat can't name the look, asked as REDcode #38; the step now says to pick it). Step 7's notice fixed 2026-11-28. Steps 11 and 12 are in the game, the owner's. For 0.3.5"
     },
     {
      "name": "Glow and tint in the 3D view",
@@ -3137,7 +3137,13 @@ window.EDGE_STATUS = {
     }
    ],
    "ownerSpotTests": [],
-   "waitingOn": [],
+   "waitingOn": [
+    {
+     "who": "REDcode",
+     "what": "Open the 3D view on a given look, so View in 3D shows the look clicked (until then a status-bar hint)",
+     "ref": "REDcode #38"
+    }
+   ],
    "ownerActions": [
     {
      "ref": "EM8",
@@ -3166,12 +3172,7 @@ window.EDGE_STATUS = {
     },
     {
      "ref": "EM6",
-     "what": "Run the hand test \"Game materials on a Desk mesh\" (docs/testing.md; the sneakers on the Desk, then in the game)",
-     "since": "2026-11-25"
-    },
-    {
-     "ref": "EM7",
-     "what": "Run the hand test \"Messages name EDGEmat\" (docs/testing.md; EDGEmat #15, on EDGEmat_PropParts)",
+     "what": "Run steps 11 and 12 of \"Game materials on a Desk mesh\" in the game (docs/testing.md; steps 1 to 10 ran by script)",
      "since": "2026-11-25"
     },
     {
@@ -3185,7 +3186,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-27 (Wardrobe Designer: the Clothing dropdown passed; window fixes, Back after Make it and a progress bar built into the app, their in-game test open; next: shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-28 (EDGEweb's nightly run recorded: Messages name EDGEmat passed by script, #15 closed; Game materials on a Desk mesh partly run, step 3 waits on REDcode #38; Wardrobe Designer window fixes in-game test open; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
