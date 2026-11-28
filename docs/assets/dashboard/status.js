@@ -5023,7 +5023,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Lets Claude Code show a modder the EDGE tools in the editor: open views, select items, point at buttons",
    "stage": "early build",
-   "version": "0.0.5",
+   "version": "0.0.6",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-28",
@@ -5050,7 +5050,7 @@ window.EDGE_STATUS = {
      },
      {
       "id": "G3",
-      "title": "Hints (started 2026-11-28 at the owner's ask: ui_tour and the Steps panel, with Back, Next and Close (0.0.2), past tours with Replay (0.0.3), named by the modder's question (0.0.4), with Delete (0.0.5); the note beside the button in EDGEkit is left)",
+      "title": "Hints (started 2026-11-28 at the owner's ask: ui_tour and the Steps panel (0.0.2), past tours with Replay, question titles and Delete (0.0.3 to 0.0.5), every toolbar and ... menu item with a copy of the step's button to press, asking OK before a change (0.0.6); in EDGEkit, opening the ... menu and the note beside the button are left)",
       "status": "in progress"
      },
      {
@@ -5063,8 +5063,8 @@ window.EDGE_STATUS = {
    "nextRelease": {
     "version": null,
     "needs": [
-     "A Deploy that completes (G1's last step), the tours' Back and Close, the question titles (0.0.4) and Delete (0.0.5)",
-     "The note drawn beside the button in EDGEkit (edgekit.pointAt), with the Steps panel kept for VS Code",
+     "A Deploy that completes (G1's last step); the tours' Back and Close, question titles (0.0.4), Delete (0.0.5) and Press it here (0.0.6)",
+     "In EDGEkit: the ... menu opened with the item marked, and the note beside the button (edgekit.pointAt); the Steps panel kept for VS Code",
      "Calls going to the focused window (still the listening window)",
      "G2 built and tested; it needs the edgeguide key and a reveal command in REDcode, EDGEdeck, EDGEmat and EDGEwave (through their sessions)"
     ]
@@ -5104,6 +5104,13 @@ window.EDGE_STATUS = {
      "status": "not run",
      "ranBy": "owner",
      "note": "The 0.0.5 zip was sent to the owner's laptop on 2026-11-28"
+    },
+    {
+     "name": "Press it here (0.0.6): a step about a ... menu item shows its button in the panel; pressing Deploy there asks OK first, Save as new loadout... opens its name box",
+     "steps": "EDGEguide design, \"Tours\", rows Every menu item and Pressing a step's button",
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "The zip was sent to the owner's laptop on 2026-11-28"
     }
    ],
    "ownerSpotTests": [],
