@@ -3046,10 +3046,10 @@ window.EDGE_STATUS = {
    "handTests": [
     {
      "name": "Wardrobe Designer: window fixes (in game)",
-     "steps": 10,
+     "steps": 12,
      "status": "not run",
      "ranBy": null,
-     "note": "Built 2026-11-27 (owner's ask): the Reshape test's other faults (window size, following V's clothes every 4 s, the larger picture in the window, the see-through lower part), Back taking a made change off V, and a progress bar while it works (owner's ask); built into the app 2026-11-27"
+     "note": "Built 2026-11-27 (owner's ask): the Reshape test's other faults (window size, following V's clothes every 4 s, the larger picture in the window, the see-through lower part), Back taking a made change off V, and a progress bar while it works (owner's ask). 2026-11-28: the list follows V's clothes again after the window is closed and shown with F11, and a Refresh the list button (owner's finding, steps 10 and 11); built into the app"
     },
     {
      "name": "Wardrobe Designer: the Clothing dropdown (in game)",
@@ -3207,7 +3207,7 @@ window.EDGE_STATUS = {
     "The Marketplace token lasts to about February 2027, and the next renewal may need Entra ID publishing",
     "The 3D view shows color only: car paint looks flat and glass shows REDcode's swatch there. Shine (roughness, metal) is next, at the owner's request"
    ],
-   "checkedBy": "EDGEmat session, 2026-11-28 (EDGEweb's nightly run recorded: Messages name EDGEmat passed by script, #15 closed; Game materials on a Desk mesh partly run, step 3 waits on REDcode #38; Wardrobe Designer window fixes in-game test open; next: shine in the 3D view)"
+   "checkedBy": "EDGEmat session, 2026-11-28 (Wardrobe Designer: the Clothing list follows V again after the window is closed and shown with F11, and a Refresh the list button, both in the open window fixes test; earlier the same day EDGEweb's nightly run recorded, #15 closed, Desk mesh test partly run, step 3 waits on REDcode #38; next: shine in the 3D view)"
   },
   {
    "name": "EDGEquest",
