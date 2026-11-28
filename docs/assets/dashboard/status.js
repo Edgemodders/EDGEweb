@@ -17,9 +17,9 @@ window.EDGE_STATUS = {
  "shots": {
   "asOf": "2026-11-27",
   "dossier": "https://claude.ai/artifact/4vDocr9pddxgabrHEfL6Ru",
-  "taken": 217,
-  "missing": 109,
-  "game": 62,
+  "taken": 219,
+  "missing": 110,
+  "game": 63,
   "editor": 47,
   "byTool": [
    {
@@ -73,6 +73,11 @@ window.EDGE_STATUS = {
     "editor": 5
    },
    {
+    "tool": "EDGEfab",
+    "game": 2,
+    "editor": 1
+   },
+   {
     "tool": "REDbridge",
     "game": 0,
     "editor": 3
@@ -86,11 +91,6 @@ window.EDGE_STATUS = {
     "tool": "EDGEhack",
     "game": 1,
     "editor": 2
-   },
-   {
-    "tool": "EDGEfab",
-    "game": 1,
-    "editor": 1
    }
   ]
  },
@@ -3957,7 +3957,7 @@ window.EDGE_STATUS = {
    "name": "EDGEfab",
    "code": "EF",
    "ownerSeq": 4,
-   "group": "In development",
+   "group": "Specialist toolkits",
    "role": "Asset maker for props and clothing: turns a GLB or a text prompt into game-ready props (clothing next, proposed), added to a REDcode project or the EDGE Library",
    "stage": "released",
    "version": "0.2.1",
