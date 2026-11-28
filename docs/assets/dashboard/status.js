@@ -941,8 +941,8 @@ window.EDGE_STATUS = {
       "status": "planned"
      },
      {
-      "id": "MP1",
-      "title": "Maps: new 3D city maps, spike MP1 (Hong Kong on the game's map)",
+      "id": "MP",
+      "title": "Maps: new 3D city maps (spikes: MP1 Hong Kong on the game's map, done; MP5 a screen of its own from the hub)",
       "status": "built, tests pending"
      }
     ]
@@ -1154,9 +1154,16 @@ window.EDGE_STATUS = {
     {
      "name": "Maps: Hong Kong on the game's map (MP1)",
      "steps": 8,
-     "status": "partly run",
+     "status": "passed",
      "ranBy": "owner",
-     "note": "2026-11-28 (dev PC): the map opens and shows Hong Kong's meshes with the game's map materials; the flat pink building material is too bright. Camera feel, flicker, the cursor's height and the opening hitch not reported. The archive is still in the game folder. docs/maps.md, \"MP1 test: first run\""
+     "note": "Passed in game 2026-11-28 (dev PC): Hong Kong's meshes show on the game's map with its own materials, camera as Night City's, no flicker, no hitch; the flat pink building material is too bright. docs/maps.md, \"MP1 test: first run\""
+    },
+    {
+     "name": "Maps: Hong Kong on a screen of its own (MP5)",
+     "steps": 8,
+     "status": "not run",
+     "ranBy": "owner",
+     "note": "Deployed through EDGEdeck 2026-11-28 (hong-kong-map, maps-test-2). docs/maps.md, \"MP5 test\""
     }
    ],
    "ownerSpotTests": [],
@@ -1257,7 +1264,7 @@ window.EDGE_STATUS = {
      "done": "2026-11-25"
     }
    ],
-   "checkedBy": "REDnode session, 2026-11-28 (maps spike MP1 partly run: Hong Kong shows on the game's map; 0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
+   "checkedBy": "REDnode session, 2026-11-28 (maps: MP1 passed, MP5 built and deployed, its test not run; 0.77.0 built: the launcher closes after a name click, the Mod Manager's search takes the keyboard; SC1 partly run)"
   },
   {
    "name": "REDcode",
