@@ -1417,26 +1417,26 @@ window.EDGE_STATUS = {
     {
      "name": "Use in Timeline (a game clip onto the made clip's timeline)",
      "steps": 5,
-     "status": "not run",
-     "note": "Built 2026-11-26: type and unit checks; not run in VS Code, as it crosses two tabs (docs/testing.md, U1 to U5)"
+     "status": "partly run",
+     "note": "EDGEweb by script, 2026-11-27: U1 to U4 pass; U5 said \"Webview is disposed\" (a closed tab stayed listed as a timeline), fixed the same day, not run again (docs/testing.md)"
     },
     {
      "name": "Clip search (find game clips by words)",
      "steps": 8,
-     "status": "not run",
-     "note": "Built 2026-11-26: the clip index (14,016 files, 146,814 clips, about two minutes to read once), its unit check, the search over the real index (10 to 30 ms), and the form in Chrome on the timeline harness; not run in VS Code (docs/testing.md, S1 to S8)"
+     "status": "passed",
+     "note": "Passed 2026-11-27 by EDGEweb's session by script (S1 to S8; the read took 138 s). Two fixes from it, not run again: Cancel answers the form at once, and the line after Read Clips is no longer in the error colour (docs/testing.md)"
     },
     {
      "name": "Sector search (released in 0.10.17 without a test)",
      "steps": 5,
-     "status": "not run",
-     "note": "Written 2026-11-26 from the wiki's list of what is not yet tested: the search box on a sector's 3D view selecting what it finds, Back, and a mesh's search in Tree (docs/testing.md, SR1 to SR5)"
+     "status": "passed",
+     "note": "Passed 2026-11-27 by EDGEweb's session by script (SR1 to SR5), after the fix its first run raised on 2026-11-26: classes and cooked or instanced meshes are found too (docs/testing.md)"
     },
     {
      "name": "Sector overlaps O1 (thing-to-thing matching, Why, Area)",
      "steps": 12,
-     "status": "not run",
-     "note": "Built 2026-11-26: checked by unit checks, against the game (o1-check.mjs: the modder's example no longer listed) and in Chrome over the real REDbridge (docs/testing.md)"
+     "status": "partly run",
+     "note": "EDGEweb by script, 2026-11-27: steps 1 to 7, 9 and 11 pass (the modder's example no longer listed; Why, Helpers, Proxies, Nearby, Area by Camera and by numbers); not run: dragging the area box's handles, a layer still listed staying on, most of step 12 (docs/testing.md)"
     },
     {
      "name": "The tree in its own tab (To Tab, the Sector view)",
@@ -1460,7 +1460,7 @@ window.EDGE_STATUS = {
      "name": "Animation Timeline TL2 to TL4",
      "steps": 11,
      "status": "partly run",
-     "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); the owner 2026-11-26: T2 and T3 pass, T4 not found (Turn was only in the timeline's bar). Built the same day from the owner's run, checked in Chrome, retests not run: R1 to R3 (Move, Turn and Let Go in the view's corner, the tracks scroll, Pause, Stop to the start), R4 Curl and Fist, R5 Remove Track, R6 to R9 the Bones tab, a move's block selecting its bone, New Track Above and Below, Move Clip Up and Down, tracks and clips dragged; R10 to R12 the Bones tree, Add Clip, the ruler's grab cursor; G1 to G6 a game clip's fist on the fingers only. Trimming a move's end not run again; T11 needs the game (docs/testing.md)"
+     "note": "T1 to T10 pass (EDGEweb by script, 2026-11-25); T2 and T3 pass (the owner, 2026-11-26); retests R1 to R13 and trimming a move's end pass (EDGEweb by script, 2026-11-27), with one fix from it not run again (the Fist slider back to 0 after Undo). The looks are the owner's; G1 to G6 not run; T11 needs the game (docs/testing.md)"
     },
     {
      "name": "Sector layers L4 and Sector Tools L1",
@@ -1793,7 +1793,7 @@ window.EDGE_STATUS = {
    "risks": [
     "REDbridge answers one call at a time"
    ],
-   "checkedBy": "REDcode session, 2026-11-26"
+   "checkedBy": "REDcode session, 2026-11-28"
   },
   {
    "name": "REDbridge",
