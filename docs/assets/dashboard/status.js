@@ -17,10 +17,10 @@ window.EDGE_STATUS = {
  "shots": {
   "asOf": "2026-11-27",
   "dossier": "https://claude.ai/artifact/4vDocr9pddxgabrHEfL6Ru",
-  "taken": 219,
-  "missing": 110,
-  "game": 63,
-  "editor": 47,
+  "taken": 238,
+  "missing": 91,
+  "game": 62,
+  "editor": 29,
   "byTool": [
    {
     "tool": "REDnode",
@@ -33,19 +33,9 @@ window.EDGE_STATUS = {
     "editor": 10
    },
    {
-    "tool": "REDcode",
-    "game": 2,
-    "editor": 7
-   },
-   {
     "tool": "EDGEbuilder",
     "game": 8,
     "editor": 0
-   },
-   {
-    "tool": "EDGEdeck",
-    "game": 0,
-    "editor": 8
    },
    {
     "tool": "REDagent",
@@ -53,24 +43,24 @@ window.EDGE_STATUS = {
     "editor": 0
    },
    {
+    "tool": "REDcode",
+    "game": 2,
+    "editor": 5
+   },
+   {
+    "tool": "EDGEdeck",
+    "game": 0,
+    "editor": 6
+   },
+   {
     "tool": "EDGEdir",
     "game": 6,
     "editor": 0
    },
    {
-    "tool": "EDGEmat",
-    "game": 1,
-    "editor": 5
-   },
-   {
     "tool": "EDGEquest",
     "game": 4,
-    "editor": 2
-   },
-   {
-    "tool": "EDGEkit",
-    "game": 0,
-    "editor": 5
+    "editor": 0
    },
    {
     "tool": "EDGEfab",
@@ -78,18 +68,18 @@ window.EDGE_STATUS = {
     "editor": 1
    },
    {
+    "tool": "EDGEmat",
+    "game": 1,
+    "editor": 2
+   },
+   {
+    "tool": "EDGEkit",
+    "game": 0,
+    "editor": 2
+   },
+   {
     "tool": "REDbridge",
     "game": 0,
-    "editor": 3
-   },
-   {
-    "tool": "EDGEwave",
-    "game": 0,
-    "editor": 3
-   },
-   {
-    "tool": "EDGEhack",
-    "game": 1,
     "editor": 2
    }
   ]

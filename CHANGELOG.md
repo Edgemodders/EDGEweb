@@ -18,6 +18,7 @@ How to keep it:
 **New**
 
 - EDGEfab, the asset maker, has a card on the landing page and a section and a benefits row on the platform page: https://edgemodders.ai/platform.html#edgefab
+- Platform page: nineteen empty picture slots now show screenshots from the wiki, for REDcode, EDGEdeck, REDbridge, EDGEwave, EDGEmat, EDGEquest, EDGEhack and EDGEkit: https://edgemodders.ai/platform.html
 - Dashboard: a Missing screenshots section (07) counts the placeholders left on the wiki and the platform page, by tool and by who takes them, and links the owner's image dossier. `tools/dashboard/shots.py` writes the count and the dossier's page.
 - Wiki: REDcode follows 0.10.17 and redcode-mcp 0.7.0 (2026-11-25): a page for the new Lip Sync editor, a page of its own for the sector view (Overlaps, the Properties tab, search that selects, Back and Forward, sector scripts), editing made animations in REDcode and in Blender, the animation view's Clip, Edit and Animations tabs and its media buttons, a sector's nodeData and instanced mesh buffers in the CR2W editor, and the new tools for assistants: https://edgemodders.ai/wiki/redcode/lipsync.html
 - Dashboard: an ID in "Waiting on the owner" links to that item's entry in the Owner Summary when it has one (a private page, which opens for the owner only).
