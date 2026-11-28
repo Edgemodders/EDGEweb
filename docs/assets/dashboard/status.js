@@ -4174,7 +4174,7 @@ window.EDGE_STATUS = {
    "group": "In development",
    "role": "Animation director: timelines that put the game's animations onto actors, as sequences and scenes",
    "stage": "early build",
-   "version": "0.0.34",
+   "version": "0.0.35",
    "lastTag": null,
    "lastTagDate": null,
    "lastCommit": "2026-11-27",

@@ -4,7 +4,7 @@ nav_title: Actors and animations
 section: EDGEdir
 order: 4
 description: "Choosing who acts on a track from the game's characters or V, the Animations view with its search and filters, putting an animation on a track, why an animation must fit the actor's rig, and animations made in REDcode."
-reviewed: 2026-11-26
+reviewed: 2026-11-27
 ---
 
 # Actors and <span class="y">animations</span>
@@ -83,6 +83,6 @@ Turning on **Only What Fits the Selected Actor** keeps unfit animations out of s
 
 ## Made animations {#animations-made-in-edgefab}
 
-[REDcode](../redcode/) is the EDGE tool that makes and edits single animations, from a file or from words. A clip it stores in the open project, or one kept in your EDGE Library, is meant to show here under **Project** or **Library**, and to go onto a lane with **+** like the game's.
+[REDcode](../redcode/) is the EDGE tool that makes and edits single animations, from a file or from words. A clip it stores in the open project shows here under **Project**, and goes onto a lane with **+** like the game's; one kept in your EDGE Library is meant to show under **Library**.
 
-Two limits for now. EDGEdir's reading of these clips was built before REDcode made any, and has been tried only with a hand-written one: **not tested with a clip REDcode made**. And **a made animation does not play in the game from EDGEdir yet**: EDGEdir leaves such a clip out of the game and says so, and the clip before it goes on.
+Two limits for now. A clip REDcode made in a project was read and put on a track in a test by script on 2026-11-27; **a Library clip REDcode made has not been tried** (only a hand-written one). And **a made animation does not play in the game from EDGEdir yet**: EDGEdir leaves such a clip out of the game and says so, and the clip before it goes on.

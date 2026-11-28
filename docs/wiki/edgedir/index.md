@@ -4,7 +4,7 @@ nav_title: Overview
 section: EDGEdir
 order: 0
 description: "EDGEdir, a director's tool for Cyberpunk 2077: lay out what the game's people do over time on a timeline in VS Code, watch it in 3D, and play and adjust it in the running game with EDGE Director. What it is, what it can do, and where it stands."
-reviewed: 2026-11-26
+reviewed: 2026-11-27
 ---
 
 # EDGE<span class="y">dir</span>
@@ -88,7 +88,7 @@ Not built yet: camera tracks, packing a scene into a mod other players install, 
 
 ## Status
 
-**Version 0.0.34 with EDGE Director 0.7.1, not released (2026-11-26).**
+**Version 0.0.35 with EDGE Director 0.7.1, not released (2026-11-27).**
 
 | Part | Built | Tested |
 |---|---|---|
